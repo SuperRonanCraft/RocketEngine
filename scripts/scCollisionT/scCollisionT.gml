@@ -25,10 +25,9 @@ if (vsp > 0)
 else
 	bbox_side = bbox_top;
 if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + vsp) != 0 || tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + vsp) != 0) {
-	if (vsp > 0) {
+	if (vsp > 0)
 		y = y - (y mod height) + (height - 1) - (bbox_bottom - y);
-		standing = true;
-	} else
+	else
 		y = y - (y mod height) - (bbox_top - y);
 	vsp = 0;
 } else
