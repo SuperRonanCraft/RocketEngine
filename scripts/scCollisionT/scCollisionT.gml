@@ -1,4 +1,5 @@
 /// @desc Tile Collision
+/// @arg grounded
 
 //vsp += grv;
 var bbox_side;
@@ -31,7 +32,7 @@ if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + vsp) != 0 || tilemap_g
 		y = y - (y mod height) - (bbox_top - y);
 	vsp = 0;
 } else
-	//Not on tile
+	//Not on tile or object
 	grounded = false;
 
 return grounded;

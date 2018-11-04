@@ -11,6 +11,8 @@ if (place_meeting(x + hsp, y, oWall)) {
 if (place_meeting(x, y + vsp, oWall)) {
 	while (!place_meeting(x, y + sign(vsp), oWall))
 		y = y + sign(vsp);
+	//while (place_meeting(x, y + sign(vsp), oWall))
+	//	y = y - sign(vsp);
 	vsp = 0;
 } else
 	//Not on ground

@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "5031bddf-467b-439f-b129-a1e09a131fec",
+            "Value": {
+                "id": "76c2fc6c-0655-47b7-a393-ba18b05ef75d",
+                "resourcePath": "objects\\oEnemy\\oEnemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5496fe6f-bff7-48df-8863-b091b0466f81",
             "Value": {
                 "id": "b0e5cccc-e97b-45ec-af21-cf8a63007557",
@@ -156,6 +164,14 @@
                 "id": "1c039e1f-b62a-4913-a54b-75081b91caee",
                 "resourcePath": "views\\6faef6f4-1600-4237-a30c-a46a36d582e0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "73916b9e-7998-48c3-a569-71fa392c6841",
+            "Value": {
+                "id": "786d2bd9-b04e-49d1-b3fc-02c4e14a6b7f",
+                "resourcePath": "scripts\\scGravityStart\\scGravityStart.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -263,11 +279,27 @@
             }
         },
         {
+            "Key": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
+            "Value": {
+                "id": "32c5c48b-d442-4fb5-9494-f6371a95a5c9",
+                "resourcePath": "objects\\pShootable\\pShootable.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e0595cdc-4686-4768-8203-b048336087ae",
             "Value": {
                 "id": "79d314bf-e133-49c5-944b-9fb48e0e2f83",
                 "resourcePath": "views\\e0595cdc-4686-4768-8203-b048336087ae.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e999552c-0203-4d93-8f4b-ac3ceb6cc170",
+            "Value": {
+                "id": "7fa208d0-41de-4589-83a6-9269c4aa6647",
+                "resourcePath": "sprites\\sEnemy\\sEnemy.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -289,10 +321,11 @@
     ],
     "script_order": [
         "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
-        "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "eebea94a-d6b8-4c3a-9d37-c85d47cff959",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
         "3efcc4f5-4735-41dd-a322-8a466c2c2873",
+        "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
+        "73916b9e-7998-48c3-a569-71fa392c6841",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b"
     ],
     "tutorial": ""
