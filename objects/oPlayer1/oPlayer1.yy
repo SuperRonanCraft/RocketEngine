@@ -25,7 +25,7 @@
             "m_owner": "20513aa7-8b82-4929-ba2f-346ad2ca271a"
         },
         {
-            "id": "8099ee9e-1fc3-4963-a49f-0aa73450ba8b",
+            "id": "1702cc15-f33d-4e9d-8cea-024a14f2b6a1",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -95,6 +95,20 @@
             "value": "1.5",
             "varName": "grv",
             "varType": 0
+        },
+        {
+            "id": "e1a53a2b-193b-4789-b69b-cdb68c1ea966",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "facing",
+            "varType": 1
         }
     ],
     "solid": false,

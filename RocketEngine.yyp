@@ -95,14 +95,6 @@
             }
         },
         {
-            "Key": "3efcc4f5-4735-41dd-a322-8a466c2c2873",
-            "Value": {
-                "id": "764088ad-52e1-4379-aae4-2321d82a5235",
-                "resourcePath": "scripts\\scCollision\\scCollision.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "4759b713-eb08-488a-9c4b-d95704bcc0e5",
             "Value": {
                 "id": "1ff1cd7b-89ec-4dab-95fc-05f5ebd25b77",
@@ -247,6 +239,14 @@
             }
         },
         {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "b57651a9-c2b2-446c-a47e-3c59b6ce76e2",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
             "Key": "b268a4d1-5ee6-47d6-bafd-dd1450ec304e",
             "Value": {
                 "id": "4ef1f6d0-1a19-4c10-8732-45f6ba4fbb56",
@@ -327,11 +327,11 @@
             }
         },
         {
-            "Key": "eebea94a-d6b8-4c3a-9d37-c85d47cff959",
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
-                "id": "6d921139-2513-49c7-a418-c62b405ffb8a",
-                "resourcePath": "scripts\\scCollisionT\\scCollisionT.yy",
-                "resourceType": "GMScript"
+                "id": "b5e92e48-3975-4d1a-8ff6-306fe8529bf6",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         },
         {
@@ -345,9 +345,7 @@
     ],
     "script_order": [
         "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
-        "eebea94a-d6b8-4c3a-9d37-c85d47cff959",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
-        "3efcc4f5-4735-41dd-a322-8a466c2c2873",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b"

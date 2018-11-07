@@ -1,6 +1,5 @@
-/// @description Draw sprite
+/// @description Animation/Sprite
+// You can write your code in this editor
 
-//draws the sprite with extra variable
-//allowing us to flip, rotate, and even change the color
-//this removes the ability to effectively use image.yscale/image.yscale, however
+//Draws sprite with modified direction
 scDirection();
