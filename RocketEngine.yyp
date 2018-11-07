@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0f11ad53-e677-43ea-9b19-bdcdc1fbdb21",
+            "Value": {
+                "id": "696592c2-db7c-48bf-8192-8844a5cd6163",
+                "resourcePath": "objects\\oPlatMoving\\oPlatMoving.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "14c4078b-f092-479f-909a-69267fc05e22",
             "Value": {
                 "id": "316a42dd-92ba-4cad-a09f-acf9d59cff98",
@@ -50,7 +58,7 @@
             "Key": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
             "Value": {
                 "id": "c60d4a81-7a9a-48ef-bd75-73210f16085a",
-                "resourcePath": "objects\\oPlayer1\\oPlayer1.yy",
+                "resourcePath": "objects\\oPlayer\\oPlayer.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -90,7 +98,7 @@
             "Key": "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
             "Value": {
                 "id": "ccbf0b1a-1fca-40f0-9dfc-f9672a37e043",
-                "resourcePath": "scripts\\scKeyboardControls\\scKeyboardControls.yy",
+                "resourcePath": "scripts\\scKeybindsControls\\scKeybindsControls.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -327,6 +335,22 @@
             }
         },
         {
+            "Key": "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
+            "Value": {
+                "id": "47a4d274-cfec-46c6-a87b-5471b92610f0",
+                "resourcePath": "scripts\\scKeybindsSet\\scKeybindsSet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f2fb6cef-551e-48ee-82a9-9d5362748527",
+            "Value": {
+                "id": "dc803959-bd65-4a95-ab2f-7e2ad49e09c9",
+                "resourcePath": "sprites\\sPlatform\\sPlatform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "b5e92e48-3975-4d1a-8ff6-306fe8529bf6",
@@ -348,7 +372,8 @@
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
-        "4c2ebf23-69d3-4519-9343-37c5a8edf95b"
+        "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
+        "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb"
     ],
     "tutorial": ""
 }

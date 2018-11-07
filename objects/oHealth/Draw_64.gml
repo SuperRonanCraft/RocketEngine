@@ -1,6 +1,6 @@
 /// @desc Display Health
 healthscale = max(healthscale * 0.95, 1);
-if (instance_exists(oPlayer1))
+if (instance_exists(oPlayer))
 	var hp = 10; //oPlayer1.hp;
 else
 	var hp = 10;

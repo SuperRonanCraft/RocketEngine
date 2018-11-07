@@ -1,44 +1,32 @@
 {
-    "id": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
+    "id": "0f11ad53-e677-43ea-9b19-bdcdc1fbdb21",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oPlayer1",
+    "name": "oPlatMoving",
     "eventList": [
         {
-            "id": "8d1b5c90-5e34-4d9d-b819-59772d8115cb",
+            "id": "4723d451-3eb6-420d-976a-e395257707b9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "20513aa7-8b82-4929-ba2f-346ad2ca271a"
+            "m_owner": "0f11ad53-e677-43ea-9b19-bdcdc1fbdb21"
         },
         {
-            "id": "bae292f6-f777-4c48-a852-a6088ad1470b",
+            "id": "66e0b7e0-4ed6-4384-a7fc-d26424890bfb",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "20513aa7-8b82-4929-ba2f-346ad2ca271a"
-        },
-        {
-            "id": "1702cc15-f33d-4e9d-8cea-024a14f2b6a1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "20513aa7-8b82-4929-ba2f-346ad2ca271a"
+            "m_owner": "0f11ad53-e677-43ea-9b19-bdcdc1fbdb21"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        
-    ],
+    "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -55,7 +43,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "b0f091e1-5216-407a-b693-86cb238b4d8c",
+            "id": "971b9777-906d-48e5-83d1-6f8df1fb55e5",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -64,12 +52,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "6",
-            "varName": "walksp",
+            "value": "2",
+            "varName": "y_speed",
             "varType": 0
         },
         {
-            "id": "0283d571-0e5a-4cfd-b6a9-af60e1b71b5f",
+            "id": "5766ed9d-97e2-4170-aa7f-3752eb0a9b53",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -78,12 +66,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "25",
-            "varName": "jump_height",
+            "value": "0",
+            "varName": "x_speed",
             "varType": 0
         },
         {
-            "id": "bddd4545-e38b-4f81-8eff-5b0f766182c2",
+            "id": "81c1e3d4-b173-4c3a-973a-519e07ce244e",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -92,12 +80,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1.5",
-            "varName": "grv",
+            "value": "100",
+            "varName": "y_max",
             "varType": 0
         },
         {
-            "id": "e1a53a2b-193b-4789-b69b-cdb68c1ea966",
+            "id": "6afd994b-55b5-474a-a09a-84a41e3ece85",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -106,12 +94,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
-            "varName": "facing",
-            "varType": 1
+            "value": "0",
+            "varName": "x_max",
+            "varType": 0
         }
     ],
     "solid": false,
-    "spriteId": "90ce5129-0a73-467a-b73e-c8676261b117",
+    "spriteId": "f2fb6cef-551e-48ee-82a9-9d5362748527",
     "visible": true
 }
