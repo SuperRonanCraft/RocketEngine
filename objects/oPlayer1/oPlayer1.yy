@@ -54,7 +54,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "4",
+            "value": "6",
             "varName": "walksp",
             "varType": 0
         },
@@ -68,7 +68,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "16",
+            "value": "25",
             "varName": "jump_height",
             "varType": 0
         },
@@ -82,7 +82,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
+            "value": "1.5",
             "varName": "grv",
             "varType": 0
         }

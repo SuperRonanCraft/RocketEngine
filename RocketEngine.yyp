@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "59bf2b31-05d8-43d2-b0a0-3329c1bf2f3a",
+            "Value": {
+                "id": "9d350514-5e86-4909-ba4b-2d3c7e71db6d",
+                "resourcePath": "sprites\\sHealth\\sHealth.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5a761304-5768-4df4-95b6-e65069c278ff",
             "Value": {
                 "id": "ac392071-448e-4ea5-a3f7-09321d5d2288",
@@ -188,6 +196,14 @@
                 "id": "d0f89216-c845-4767-a9cf-e9d978999408",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "84739fbc-2495-494d-ac00-fb95c9490caf",
+            "Value": {
+                "id": "f219de10-56b0-4e35-b1c0-09c14aceb53b",
+                "resourcePath": "objects\\oHealth\\oHealth.yy",
+                "resourceType": "GMObject"
             }
         },
         {
