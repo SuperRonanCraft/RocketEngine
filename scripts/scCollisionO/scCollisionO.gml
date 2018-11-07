@@ -1,6 +1,5 @@
 /// @desc Object oWall Collision
 
-var grounded = false;
 var touching = instance_place(x + hsp, y, oWall); //Instance of wall touching
 
 //If touching a wall in the horizontal
@@ -23,4 +22,4 @@ if (touching != noone) {
 	vsp = 0;
 }
 	
-return grounded;
+return place_meeting(x, y + 1, oWall);
