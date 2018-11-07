@@ -1,5 +1,5 @@
 if (vsp <= jump_height * 2)
 	vsp += grv;
-scCollision();
+standing = scCollisionO();
 x += hsp;
 y += vsp;

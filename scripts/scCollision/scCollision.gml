@@ -1,3 +1,3 @@
 var collisionO = scCollisionO();
-var collisionT = scCollisionT();
-standing = (collisionO || collisionT);
+//var collisionT = scCollisionT();
+return collisionO;// || collisionT);

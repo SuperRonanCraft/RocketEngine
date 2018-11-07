@@ -1,21 +1,26 @@
 /// @desc Object oWall Collision
 
-var grounded = true;
+var grounded = false;
+var touching = instance_place(x + hsp, y, oWall); //Instance of wall touching
 
-if (place_meeting(x + hsp, y, oWall)) {
-	while (!place_meeting(x + sign(hsp), y, oWall))
-		x = x + sign(hsp);
+//If touching a wall in the horizontal
+if (touching != noone) {
+	if (hsp > 0)
+		x = touching.x - (bbox_right - x) - 1;
+	else if (hsp < 0)
+		x = (touching.x + (touching.bbox_right - touching.x)) + (x - bbox_left) + 1;
 	hsp = 0;
 }
 
-if (place_meeting(x, y + vsp, oWall)) {
-	while (!place_meeting(x, y + sign(vsp), oWall))
-		y = y + sign(vsp);
-	//while (place_meeting(x, y + sign(vsp), oWall))
-	//	y = y - sign(vsp);
+touching = instance_place(x, y + vsp, oWall);
+//If touching a wall in the vertical
+if (touching != noone) {
+	if (vsp > 0) {
+		y = touching.y - (bbox_bottom - y) - 1;
+		grounded = true;
+	} else if (vsp < 0)
+		y = (touching.y + (touching.bbox_bottom - touching.y)) + (y - bbox_top) + 1;
 	vsp = 0;
-} else
-	//Not on ground
-	grounded = false;
+}
 	
 return grounded;
