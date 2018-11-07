@@ -13,3 +13,4 @@ enum DISPLAYTYPE {
 
 //Default side to display health
 side = SIDE.LEFT;
+display = DISPLAYTYPE.NONE;

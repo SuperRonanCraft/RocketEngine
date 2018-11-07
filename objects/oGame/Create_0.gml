@@ -14,5 +14,5 @@ global.key_p2_shoot = vk_down;
 global.players = 0;
 
 //The resolution the game will run at
-#macro RES_W = 960;
-#macro RES_H = 540;
+#macro RES_W 1024
+#macro RES_H 768
