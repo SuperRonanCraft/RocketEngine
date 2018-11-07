@@ -37,9 +37,16 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        
+        {
+            "id": "aea6a497-865c-4f83-8a89-17d233238131",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "84739fbc-2495-494d-ac00-fb95c9490caf",
+            "propertyId": "3cdda24a-90a1-4a52-9998-e1acfa00fc8d",
+            "value": "10"
+        }
     ],
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -95,20 +102,6 @@
             "value": "1.5",
             "varName": "grv",
             "varType": 0
-        },
-        {
-            "id": "e1a53a2b-193b-4789-b69b-cdb68c1ea966",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "1",
-            "varName": "facing",
-            "varType": 1
         }
     ],
     "solid": false,
