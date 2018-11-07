@@ -1,3 +1,7 @@
-//Direction
+/// @desc Sprite look Direction
+
 if (hsp != 0)
-	image_xscale = sign(hsp);
+	facing = sign(hsp);
+
+//Draw sprite with modified direction
+draw_sprite_ext(sprite_index, image_index, x, y, facing, 1, 0, c_white, 1);
