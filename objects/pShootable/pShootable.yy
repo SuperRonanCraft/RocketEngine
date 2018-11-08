@@ -5,13 +5,33 @@
     "name": "pShootable",
     "eventList": [
         {
-            "id": "d764c9a2-4d1e-4f27-9d87-4f1d7a9eab23",
+            "id": "35f0e0d9-9d9d-453a-a64b-5c4d81e20c63",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
+            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
+        },
+        {
+            "id": "16765e16-974a-4d5a-960f-38465a71c1c6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
+        },
+        {
+            "id": "623a7769-6640-48d4-a1c5-10c277293c81",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 64,
+            "eventtype": 8,
             "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
         }
     ],
@@ -48,6 +68,6 @@
         }
     ],
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "59bf2b31-05d8-43d2-b0a0-3329c1bf2f3a",
     "visible": true
 }

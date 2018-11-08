@@ -20,14 +20,17 @@ var touching = instance_place(x + hsp, y, oWall); //get the instance of the wall
 //If touching a wall in the horizontal
 if (touching != noone) //If not touching a wall in the horizontal
 	if (hsp != 0) { //Skip if no momentum
-		if (standing && touching.owner != noone) { //Check if standing, and if the owner is set (owner SHOULD be oPlatMoving)
-			if ((bbox_bottom + (-touching.owner.y_speed + sign(touching.owner.y_speed))) < touching.bbox_top) //Check if the obj bottom bbox is higher than the walls top
+		if (touching.owner != noone) { //Check if touching a platform (owner SHOULD be oPlatMoving)
+			if (bbox_bottom > touching.bbox_top && bbox_bottom < touching.bbox_bottom) { //Check if touching side of wall
 				if (hsp > 0)
 					x = ceil(touching.x - (bbox_right - x) - 1);
 				else
 					x = floor((touching.x + (touching.bbox_right - touching.x)) + (x - bbox_left) + 1);
 				hsp = 0;
+				show_debug_message("TOUCHING SIDE OF PLATFORM");
+			}
 		} else {
+			//Normal wall collision
 			if (hsp > 0) //Right
 				x = ceil(touching.x - (bbox_right - x) - 1);
 			else //Left
@@ -38,11 +41,13 @@ if (touching != noone) //If not touching a wall in the horizontal
 
 touching = instance_place(x, y + vsp, oWall); //get the instance of the wall in the future in the vertical
 if (touching != noone) { //If touching a wall in the vertical
+	//Cannot skip if no momentum incase of a moving wall
 	var offset = 1;
 	if (touching.owner != noone) //Offset the amount to deny moving into the next frame of the wall, owner should be (oPlatMoving)
 		offset = -touching.owner.y_speed + sign(touching.owner.y_speed);
 	else if (vsp < 0)
 		offset = -1;
+	//Normal wall collision
 	if (vsp > 0) //Falling
 		y = floor(touching.y - (bbox_bottom - y) - offset);
 	else if (vsp < 0) //Going up
@@ -51,4 +56,4 @@ if (touching != noone) { //If touching a wall in the vertical
 }
 	
 //check to see if a wall is 1 pixel under, then you are standing, and return that variable
-return (instance_place(x, y + vsp + 1, oWall) != noone) ;
+return (instance_place(x, y + 1, oWall) != noone) ;

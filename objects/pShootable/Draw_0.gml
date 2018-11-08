@@ -1,0 +1,1 @@
+/// @desc Overriding so it does not draw sprite

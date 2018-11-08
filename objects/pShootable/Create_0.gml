@@ -1,11 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
-myhealth = instance_create_layer(x, y, layer, oHealth);
-with (myhealth) {
-	if (other.object_index == oPlayer)
-		display = DISPLAYTYPE.SCREEN;
-	else
-		display = DISPLAYTYPE.BAR;
-	hp = other.hp;
-	//code to indicate which corner of screen
+scale = 1;
+
+enum SIDE {
+	LEFT, RIGHT
 }
+
+//How to display the health
+enum DISPLAYTYPE {
+	NONE, BAR, SCREEN
+}
+
+//Default side to display health
+side = SIDE.LEFT;
+display = DISPLAYTYPE.NONE;
+wait = 0;
+
+//Sprite the use as health
+sprite = sHealth;
+height = sprite_get_height(sprite);
+width = sprite_get_width(sprite);

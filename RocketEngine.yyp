@@ -207,14 +207,6 @@
             }
         },
         {
-            "Key": "84739fbc-2495-494d-ac00-fb95c9490caf",
-            "Value": {
-                "id": "f219de10-56b0-4e35-b1c0-09c14aceb53b",
-                "resourcePath": "objects\\oHealth\\oHealth.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "90ce5129-0a73-467a-b73e-c8676261b117",
             "Value": {
                 "id": "9a3a9eae-3b7b-4623-a319-517fe1405221",
