@@ -25,4 +25,4 @@ if (key_jump && standing) {
 
 //Weapon
 if (key_shoot)
-	scShootRocket();
+	scRocketShoot();

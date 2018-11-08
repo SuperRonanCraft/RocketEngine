@@ -159,19 +159,19 @@
             }
         },
         {
-            "Key": "498b1194-ca6a-4acd-bcb3-4b0ed850fc77",
-            "Value": {
-                "id": "a06e15f6-3de3-4185-bb5c-cc89070ccb14",
-                "resourcePath": "objects\\oWeapon\\oWeapon.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "49b7cf3b-0bf3-4992-ab55-3d8c00f2af4b",
             "Value": {
                 "id": "f80d3bb0-458e-4112-b132-e9946567ac22",
                 "resourcePath": "sprites\\sRocket_Default\\sRocket_Default.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
+            "Value": {
+                "id": "edfbdb6c-db6b-48d5-b7d8-7d6cf7b3c7da",
+                "resourcePath": "scripts\\scRocketProgress\\scRocketProgress.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -290,7 +290,7 @@
             "Key": "82456896-61ba-4055-9bf6-e6a1b3875d73",
             "Value": {
                 "id": "d17bbf27-2bc8-458e-bf7b-75ad93b566a2",
-                "resourcePath": "objects\\oWeaponPickup\\oWeaponPickup.yy",
+                "resourcePath": "objects\\oRocketPickup\\oRocketPickup.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "ab738f93-ad7a-45aa-a119-240062d21cca",
+            "Value": {
+                "id": "a76767ee-cfbc-4303-85f7-1976f4b65f81",
+                "resourcePath": "scripts\\scRockets\\scRockets.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b268a4d1-5ee6-47d6-bafd-dd1450ec304e",
             "Value": {
                 "id": "4ef1f6d0-1a19-4c10-8732-45f6ba4fbb56",
@@ -346,7 +354,7 @@
             "Key": "b72d9a10-c703-4ec3-8452-1f97282890c0",
             "Value": {
                 "id": "a5380136-d5ac-48be-8f8e-cebefa40fb3b",
-                "resourcePath": "scripts\\scShootRocket\\scShootRocket.yy",
+                "resourcePath": "scripts\\scRocketShoot\\scRocketShoot.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -496,6 +504,8 @@
         "02b336b5-7467-4576-8a97-db9d380154a7",
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
+        "ab738f93-ad7a-45aa-a119-240062d21cca",
+        "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b"
     ],
     "tutorial": ""

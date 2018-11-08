@@ -1,3 +1,6 @@
+/// @desc Load all rockets and set the default rocket
+/// @arg default-rocket
+
 weapons[0] = ds_map_create();
 //Unarmed
 ds_map_add(weapons[0], "recoil", 0);
@@ -26,7 +29,7 @@ ds_map_add(weapons[1], "reload_time", 120);
 weapons[2] = ds_map_create();
 ds_map_add(weapons[2], "recoil", 3);
 ds_map_add(weapons[2], "damage", 1);
-ds_map_add(weapons[2], "projectile", sRocket_Default);
+ds_map_add(weapons[2], "projectile", sRocket_Fast);
 ds_map_add(weapons[2], "cooldown", 2);
 ds_map_add(weapons[2], "startup", 0);
 ds_map_add(weapons[2], "bulletspeed", 40);
@@ -38,12 +41,9 @@ enum ROCKET {
 	NONE = 0, DEFAULT = 1, FAST = 2
 }
 
-scChangeRocket(ROCKET.DEFAULT);
+scChangeRocket(argument0);
 
 current_cd = 0;
 current_delay = -1;
 current_recoil = 0;
 current_reload = 0;
-
-//Owner of the weapon
-owner = noone;

@@ -2,7 +2,7 @@
     "id": "82456896-61ba-4055-9bf6-e6a1b3875d73",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oWeaponPickup",
+    "name": "oRocketPickup",
     "eventList": [
         {
             "id": "8f289fa7-daf6-4997-9f8c-bb8721d7a5df",
@@ -13,10 +13,32 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
+        },
+        {
+            "id": "a035193a-d810-49a1-8d0f-c2591db3a799",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
+        },
+        {
+            "id": "5d904a46-3c2d-4d88-930a-36e10d61948f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
+    "overriddenProperties": [
+        
+    ],
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -33,7 +55,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "5b06d934-fd65-48ca-90ed-b400715da672",
+            "id": "514a08f7-1d70-4570-a665-c5b01ba37c70",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -42,9 +64,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
-            "varName": "weapon",
-            "varType": 0
+            "value": "ROCKET.FAST",
+            "varName": "rocket",
+            "varType": 4
         }
     ],
     "solid": false,
