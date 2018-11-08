@@ -14,9 +14,11 @@ enum DISPLAYTYPE {
 //Default side to display health
 side = SIDE.LEFT;
 display = DISPLAYTYPE.NONE;
-wait = 0;
 
 //Sprite the use as health
 sprite = sHealth;
 height = sprite_get_height(sprite);
 width = sprite_get_width(sprite);
+
+//Save the original health
+hp_original = hp;

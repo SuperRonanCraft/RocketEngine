@@ -4,9 +4,9 @@
 //BUGS
 //BUGS
 /*
-Jumping on a platform and moving sideways, as its going up will teleport the player to the side of the platform (side opposite of players hsp)
+Standing on platform with both x and y speeds while changing directions will cause to teleport to the edge of platform
 
-No testing has been done on hozizontaly moving platforms
+If platform is moving down and has horizontal speed, player just stays in same x pos
 
 If standing and a platform comes in, you can get stuck
 */
@@ -33,7 +33,7 @@ if (touching != noone){ //If not touching a wall in the horizontal
 			}
 			hsp = 0;
 		} else //On top of platform
-			hsp += touching.owner.x_speed
+			hsp += touching.owner.x_speed;
 	} else {
 		//Normal wall collision
 		if (hsp > 0) //Right
