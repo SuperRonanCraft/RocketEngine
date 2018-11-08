@@ -4,12 +4,13 @@ if (projectile == -1 || owner == noone)
 //Rocket
 if (current_delay == 0) {
 	if (ammo != 0) {
-		with (instance_create_depth(x + lengthdir_x(length, direction), y + lengthdir_y(length, direction), depth - 1, oBullet)) {
+		with (instance_create_depth(x + lengthdir_x(offset, direction), y + lengthdir_y(offset, direction), depth - 1, oRocket)) {
 			sprite_index = other.projectile;
 			direction = other.owner.direction;
 			image_angle = direction;
 			spd = other.bulletspeed;
 			owner = other.owner;
+			damage = other.damage;
 		}
 		ammo -= 1;
 		//Recoil code
