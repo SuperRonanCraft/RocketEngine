@@ -7,6 +7,6 @@ if (y != y_original)
 x += x_speed;
 y += y_speed;
 with (mywall) {
-	x = other.bbox_left;
-	y = other.bbox_top;
+	x = other.x;
+	y = other.y;
 }

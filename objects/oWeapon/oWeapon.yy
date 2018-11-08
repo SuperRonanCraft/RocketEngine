@@ -1,18 +1,28 @@
 {
-    "id": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
+    "id": "498b1194-ca6a-4acd-bcb3-4b0ed850fc77",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oWall",
+    "name": "oWeapon",
     "eventList": [
         {
-            "id": "7db5a995-6562-40fd-bb56-9338de3763fe",
+            "id": "19d91b37-f6ae-462d-bfe9-a2e96231a6c6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "4fca9eee-4c85-49f5-93ac-df838edbdc8d"
+            "m_owner": "498b1194-ca6a-4acd-bcb3-4b0ed850fc77"
+        },
+        {
+            "id": "3dc082b5-6b36-415d-b0a5-ef3c13b9c37f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "498b1194-ca6a-4acd-bcb3-4b0ed850fc77"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,7 +43,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "687f2548-fe1e-45be-a83e-37bd1bc51a86",
+            "id": "aa771207-d4bf-4d71-8203-5b308441d3e6",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -42,12 +52,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "True",
-            "varName": "shootable",
-            "varType": 3
+            "value": "1",
+            "varName": "weapon",
+            "varType": 0
         }
     ],
     "solid": false,
-    "spriteId": "a62224e9-3086-4752-8803-ac9e07f57b35",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

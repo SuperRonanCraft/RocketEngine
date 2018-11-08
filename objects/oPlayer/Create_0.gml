@@ -10,3 +10,7 @@ if (playerid == 1)
 	side = SIDE.LEFT;
 else
 	side = SIDE.RIGHT;
+myweapon = instance_create_depth(x, y, depth - 1, oWeapon);
+with (myweapon) {
+	owner = other;
+}

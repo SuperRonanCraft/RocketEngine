@@ -1,18 +1,18 @@
 {
-    "id": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
+    "id": "7195dc8f-dbfc-42b3-8700-b609300cde6e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oWall",
+    "name": "oSeperator",
     "eventList": [
         {
-            "id": "7db5a995-6562-40fd-bb56-9338de3763fe",
+            "id": "175c7737-4d2b-4e76-8dbd-85d42bb9ed2d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "4fca9eee-4c85-49f5-93ac-df838edbdc8d"
+            "m_owner": "7195dc8f-dbfc-42b3-8700-b609300cde6e"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -31,23 +31,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "687f2548-fe1e-45be-a83e-37bd1bc51a86",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "True",
-            "varName": "shootable",
-            "varType": 3
-        }
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "a62224e9-3086-4752-8803-ac9e07f57b35",
+    "spriteId": "6d5d87ef-47f5-45b8-adf1-b44e88d739c4",
     "visible": true
 }
