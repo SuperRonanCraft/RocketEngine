@@ -18,3 +18,5 @@ global.players = 0;
 #macro RES_H 768
 
 changeres = true;
+
+global.player[0] = ds_map_create();

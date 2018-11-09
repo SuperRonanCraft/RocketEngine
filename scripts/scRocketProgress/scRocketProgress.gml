@@ -1,16 +1,30 @@
+/// @desc Check when to shoot a tocket
+/// @arg player-id-(-1-to-disable)
+
+
 if (projectile == -1)
 	return;
+
+//Set the direction of the rocket
+var dir = direction;
+if (argument0 != -1)
+	dir = argument0 == 1 ? 0 : 180;
 
 //Rocket
 if (current_delay == 0) {
 	if (ammo != 0) {
-		with (instance_create_depth(x + lengthdir_x(offset, direction), y + lengthdir_y(offset, direction), depth - 1, oRocket)) {
+		with (instance_create_depth(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth - 1, oRocket)) {
 			sprite_index = other.projectile;
-			direction = other.direction;
+			direction = dir;
 			image_angle = direction;
 			spd = other.bulletspeed;
 			owner = other;
 			damage = other.damage;
+			aimbot = other.aimbot;
+			if (aimbot)
+				for (var i = 0; i < instance_number(oPlayer); i += 1)
+					if (instance_find(oPlayer, i) != owner)
+						target = instance_find(oPlayer, i);
 		}
 		ammo -= 1;
 		//Recoil code
