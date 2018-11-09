@@ -4,5 +4,6 @@
 //Draws sprite with modified direction
 draw_set_color(c_black);
 draw_text(x, y - 30, string(playerid));
+draw_text(x,y-70, string(vsp));
 draw_set_color(c_white);
 scDirection();

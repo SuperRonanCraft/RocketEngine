@@ -9,4 +9,7 @@ y += y_speed;
 with (mywall) {
 	x = other.bbox_left;
 	y = other.bbox_top;
+	moving = true;
+	hsp = other.x_speed;
+	vsp = other.y_speed;
 }
