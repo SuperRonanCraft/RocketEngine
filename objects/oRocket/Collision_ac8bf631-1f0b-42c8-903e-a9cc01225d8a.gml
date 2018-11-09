@@ -1,4 +1,7 @@
 /// @desc hit another rocket
-instance_change(oHitSpark, true);
-with (other)
+//If the rocket is not from the same shooter
+if (other.owner != owner) {
 	instance_change(oHitSpark, true);
+	with (other)
+		instance_change(oHitSpark, true);
+}

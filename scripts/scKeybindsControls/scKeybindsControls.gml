@@ -17,7 +17,9 @@ if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(co
 
 //Horizontal
 var move = key_right - key_left;
-hsp = move * walksp;
+//Friction, here cause it's easier...
+hsp = clamp(lerp(hsp, 0, 0.2) + move, -walksp, walksp);
+//hsp = move * walksp;
 
 //Vertical
 if (key_jump && standing) {

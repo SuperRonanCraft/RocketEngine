@@ -1,9 +1,7 @@
 /// @desc Move Rocket
-x += lengthdir_x(spd, direction);
-y += lengthdir_y(spd, direction);
+//Run special scripts
+if (specials != noone)
+	script_execute(specials);
 
-//Homing missle code
-if (aimbot && target != noone) {
-	direction = point_direction(x, y, target.x, target.y);
-	image_angle = direction;
-}
+x += lengthdir_x(bulletspeed, direction);
+y += lengthdir_y(bulletspeed, direction);

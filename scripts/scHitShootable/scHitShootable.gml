@@ -9,4 +9,6 @@ if (argument0 != id) {
 	if (argument1)
 		instance_destroy(other.id);
 	hpscale = 2;
+	//if (hp <= 0)
+	//Death code
 }

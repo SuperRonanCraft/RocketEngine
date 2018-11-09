@@ -11,4 +11,4 @@ startup = wp_map[? "startup"]; //Delay between clicking the shoot key and launch
 clip = wp_map[? "clip"]; //How much 
 ammo = clip;
 reload_time = wp_map[? "reload_time"];
-aimbot = wp_map[? "aimbot"];
+specials = wp_map[? "specials"];

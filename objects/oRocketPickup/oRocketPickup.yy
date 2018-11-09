@@ -67,6 +67,20 @@
             "value": "ROCKET.HOMING",
             "varName": "rocket",
             "varType": 4
+        },
+        {
+            "id": "cd4184c3-d166-4117-9d93-d78fe912dd71",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "destory",
+            "varType": 3
         }
     ],
     "solid": false,

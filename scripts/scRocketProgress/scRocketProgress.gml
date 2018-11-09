@@ -17,14 +17,12 @@ if (current_delay == 0) {
 			sprite_index = other.projectile;
 			direction = dir;
 			image_angle = direction;
-			spd = other.bulletspeed;
+			bulletspeed = other.bulletspeed;
 			owner = other;
 			damage = other.damage;
-			aimbot = other.aimbot;
-			if (aimbot)
-				for (var i = 0; i < instance_number(oPlayer); i += 1)
-					if (instance_find(oPlayer, i) != owner)
-						target = instance_find(oPlayer, i);
+			specials = other.specials;
+			owner.rockets++;
+				
 		}
 		ammo -= 1;
 		//Recoil code
