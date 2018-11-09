@@ -64,7 +64,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET.FAST",
+            "value": "ROCKET.HOMING",
             "varName": "rocket",
             "varType": 4
         }

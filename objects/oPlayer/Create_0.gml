@@ -6,7 +6,7 @@ playerid = global.players;
 //Load gravity variables
 scGravityStart();
 //Load keybinds
-scKeybindsSet(global.players);
+scKeybindsSet(playerid);
 //Load rocket
 scRockets(ROCKET.DEFAULT);
 //Display health
