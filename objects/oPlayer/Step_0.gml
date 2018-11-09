@@ -3,3 +3,4 @@
 scGravity();
 scKeybindsControls();
 scDirection();
+scRocketProgress();

@@ -31,7 +31,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "687f2548-fe1e-45be-a83e-37bd1bc51a86",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "shootable",
+            "varType": 3
+        }
+    ],
     "solid": false,
     "spriteId": "a62224e9-3086-4752-8803-ac9e07f57b35",
     "visible": true

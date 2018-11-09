@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-scale = 1;
+hpscale = 1;
 
 enum SIDE {
 	LEFT, RIGHT
