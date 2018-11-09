@@ -17,7 +17,7 @@ If standing and a platform comes in, you can get stuck
 var touching = instance_place(x, y + vsp, oWall); //get the instance of the wall in the future in the vertical
 
 //The id of the object we stand on (noone default)
-var standingOn = instance_place(x, y + vsp + 1, oWall);
+var standingOn = instance_place(x-hsp, y + vsp + 1, oWall);
 
 if (touching != noone) { //If touching a wall in the vertical
 	offset = 1;
@@ -36,11 +36,6 @@ if (touching != noone) { //If touching a wall in the vertical
 	
 		vsp = 0;		
 		
-		//Move with the platform
-		hsp += touching.hsp;
-		
-		vsp += touching.vsp;
-		
 	}
 	
 	else{
@@ -55,6 +50,14 @@ if (touching != noone) { //If touching a wall in the vertical
 		vsp = 0;
 	}
 	
+}
+
+if(standingOn != noone){
+	if(standingOn.moving){
+		//Move with the platform
+		
+		vsp += standingOn.vsp;	
+	}
 }
 
 touching = instance_place(x + hsp, y, oWall); //get the instance of the wall in the future in the horizontal
@@ -94,6 +97,14 @@ if (touching != noone){ //If not touching a wall in the horizontal
 		else if(hsp < 0)//Left
 			x = floor((touching.x + (touching.bbox_right - touching.x)) + (x - bbox_left) + offset);
 		hsp = 0;
+	}
+}
+
+if(standingOn != noone){
+	if(standingOn.moving){
+		//Move with the platform
+		
+		hsp += standingOn.hsp;	
 	}
 }
 	
