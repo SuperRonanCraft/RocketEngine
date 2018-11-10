@@ -21,8 +21,8 @@ for (var i = 0; i < menu_items; i++) {
 	draw_text(xx + offset, yy + offset, txt);
 	draw_set_color(col);
 	draw_text(xx, yy, txt);
-	//if (changed)
-	//	audio_play_sound(snHover, 1, false)
+	if (changed)
+		audio_play_sound(snHover, 1, false)
 }
 draw_set_color(c_black);
 draw_rectangle(gui_width, gui_height - 600, gui_width + 200, gui_height - 200, false);

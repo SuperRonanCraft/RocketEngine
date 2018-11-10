@@ -1,44 +1,44 @@
 {
-    "id": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
+    "id": "97c654c9-dda0-4c9f-862a-39f5aa1191fc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "pShootable",
+    "name": "oMusic",
     "eventList": [
         {
-            "id": "35f0e0d9-9d9d-453a-a64b-5c4d81e20c63",
+            "id": "0867a2b4-9344-4d6f-b544-2e1b3f6cbd52",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
+            "m_owner": "97c654c9-dda0-4c9f-862a-39f5aa1191fc"
         },
         {
-            "id": "16765e16-974a-4d5a-960f-38465a71c1c6",
+            "id": "402a1cb9-8421-4f40-986e-acfb67e9a046",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
+            "enumb": 72,
+            "eventtype": 7,
+            "m_owner": "97c654c9-dda0-4c9f-862a-39f5aa1191fc"
         },
         {
-            "id": "623a7769-6640-48d4-a1c5-10c277293c81",
+            "id": "ebccdf77-0e02-4e70-977b-a5a5fc139ce5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "97c654c9-dda0-4c9f-862a-39f5aa1191fc"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": false,
+    "persistent": true,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
@@ -53,7 +53,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "84ebbbe5-1821-46a4-bfd0-4ad86da8e85b",
+            "id": "41e98aa4-a0e3-4c83-9514-5b03f44806a4",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -62,9 +62,37 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "10",
-            "varName": "hp",
-            "varType": 0
+            "value": "0",
+            "varName": "music",
+            "varType": 3
+        },
+        {
+            "id": "849e9221-c2ac-44b1-aa99-fb88c09b9846",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "effects",
+            "varType": 3
+        },
+        {
+            "id": "f862f84f-9f4e-4a9b-bcc3-9dca5a462b28",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "footsteps",
+            "varType": 3
         }
     ],
     "solid": false,

@@ -1,1 +1,2 @@
-/// @desc Overriding so it does not draw sprite
+/// @desc Flash when hit
+flash = scFlash(flash);

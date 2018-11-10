@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 hpscale = 1;
+flash = 0;
 
 enum SIDE {
 	LEFT, RIGHT

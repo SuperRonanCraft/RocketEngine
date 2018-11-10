@@ -12,11 +12,11 @@ if (!mouse_check_button(mb_left))
 	selected = false;
 
 if (selected) {
-	sound_played = false;
 	value = clamp((mouse_x - x + (sprite_width / 2)) / sprite_width, 0, max_value);
 	event_user(0);
-} else if (is_sound && !sound_played) {
-	//var snd = audio_play_sound(snShoot, 1, false);
-	//audio_sound_gain(snd, value, 0);
+	sound_played = false;
+} else if (!sound_played) {
+	event_user(0);
+	audio_play_sound(snHover, 1, false);
 	sound_played = true;
 }
