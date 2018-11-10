@@ -21,8 +21,8 @@ if (current_delay == 0) {
 			owner = other;
 			damage = other.damage;
 			specials = other.specials;
+			timer = other.timer;
 			owner.rockets++;
-				
 		}
 		ammo -= 1;
 		//Recoil code

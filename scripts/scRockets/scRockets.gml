@@ -34,13 +34,13 @@ weapons[2] = ds_map_create();
 ds_map_add(weapons[2], "recoil", 3);
 ds_map_add(weapons[2], "damage", 1);
 ds_map_add(weapons[2], "projectile", sRocket_Fast);
-ds_map_add(weapons[2], "cooldown", 25);
+ds_map_add(weapons[2], "cooldown", 2);
 ds_map_add(weapons[2], "startup", 0);
 ds_map_add(weapons[2], "bulletspeed", 25);
 ds_map_add(weapons[2], "offset", 10);
-ds_map_add(weapons[2], "clip", -1);
-ds_map_add(weapons[2], "reload_time", -1);
-ds_map_add(weapons[2], "timer", 6);
+ds_map_add(weapons[2], "clip", 5);
+ds_map_add(weapons[2], "reload_time", 30);
+ds_map_add(weapons[2], "timer", -1);
 ds_map_add(weapons[2], "specials", noone);
 
 //HOMING
@@ -49,12 +49,12 @@ ds_map_add(weapons[3], "recoil", 5);
 ds_map_add(weapons[3], "damage", 2);
 ds_map_add(weapons[3], "projectile", sRocket_Homing);
 ds_map_add(weapons[3], "cooldown", 30);
-ds_map_add(weapons[3], "startup", 0);
+ds_map_add(weapons[3], "startup", 30);
 ds_map_add(weapons[3], "bulletspeed", 5);
 ds_map_add(weapons[3], "offset", 10);
 ds_map_add(weapons[3], "clip", -1);
 ds_map_add(weapons[3], "reload_time", -1);
-ds_map_add(weapons[3], "timer", 6);
+ds_map_add(weapons[3], "timer", 60);
 ds_map_add(weapons[3], "specials", scRocketSpecialHoming);
 
 //REVERSE
@@ -68,7 +68,7 @@ ds_map_add(weapons[4], "bulletspeed", 5);
 ds_map_add(weapons[4], "offset", 10);
 ds_map_add(weapons[4], "clip", -1);
 ds_map_add(weapons[4], "reload_time", -1);
-ds_map_add(weapons[4], "timer", 6);
+ds_map_add(weapons[4], "timer", 180);
 ds_map_add(weapons[4], "specials", scRocketSpecialReverse);
 
 enum ROCKET {

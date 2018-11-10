@@ -1,12 +1,9 @@
 /// @desc Move Rocket
 //Run special scripts
-if (specials != noone)
-	script_execute(specials);
-
 x += lengthdir_x(bulletspeed, direction);
 y += lengthdir_y(bulletspeed, direction);
 
-if (uptime > 0)
-	uptime--;
-else
+if (timer > 0)
+	timer--;
+else if (timer == 0)
 	instance_change(oHitSpark, true);

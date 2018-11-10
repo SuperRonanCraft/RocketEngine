@@ -13,6 +13,10 @@ global.key_p2_shoot = vk_down;
 //Amount of player entities in the room
 global.players = 0;
 
+//Teams
+global.team1 = ds_list_create();
+global.team2 = ds_list_create();
+
 //The resolution the game will run at
 #macro RES_W 1024
 #macro RES_H 768

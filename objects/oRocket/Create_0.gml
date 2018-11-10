@@ -9,4 +9,4 @@ target = noone;
 //Special Scripts
 specials = noone;
 //Maximum up-time
-uptime = 100;
+timer = 100;

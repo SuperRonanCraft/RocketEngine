@@ -12,3 +12,4 @@ clip = wp_map[? "clip"]; //How much
 ammo = clip;
 reload_time = wp_map[? "reload_time"];
 specials = wp_map[? "specials"];
+timer = wp_map[? "timer"];
