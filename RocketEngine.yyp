@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "2102a0b2-b9b0-4414-8797-2a9abb3574b2",
+            "Value": {
+                "id": "3cac6024-0be8-4ac2-81c7-7440be04d166",
+                "resourcePath": "sprites\\sSliderButton\\sSliderButton.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "211744ac-2838-42e5-9ae4-1e5d0e82a37f",
             "Value": {
                 "id": "701538b7-a44f-4e7e-8e3d-2adf31dcea4c",
@@ -172,6 +180,14 @@
                 "id": "ccbf0b1a-1fca-40f0-9dfc-f9672a37e043",
                 "resourcePath": "scripts\\scKeybindsControls\\scKeybindsControls.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3de677d5-770c-4736-8a50-571432b014b1",
+            "Value": {
+                "id": "86db97f7-eb0f-4984-9056-a086bc594952",
+                "resourcePath": "objects\\oSliderEffects\\oSliderEffects.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -343,6 +359,14 @@
             }
         },
         {
+            "Key": "7541f76c-d44e-477f-b836-62a1810d7f45",
+            "Value": {
+                "id": "b6ca67e1-830a-4b98-9f07-399d88e09bb2",
+                "resourcePath": "views\\7541f76c-d44e-477f-b836-62a1810d7f45.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "763e6093-5c3f-4c39-b725-9ac41b730067",
             "Value": {
                 "id": "d0f89216-c845-4767-a9cf-e9d978999408",
@@ -367,6 +391,14 @@
             }
         },
         {
+            "Key": "83c3dc67-7890-4ac3-9115-b99ed4f62f1d",
+            "Value": {
+                "id": "6b14e4ca-f59f-404d-b60b-f87cd323c24e",
+                "resourcePath": "objects\\pSlider\\pSlider.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90ce5129-0a73-467a-b73e-c8676261b117",
             "Value": {
                 "id": "9a3a9eae-3b7b-4623-a319-517fe1405221",
@@ -380,6 +412,14 @@
                 "id": "81071876-b187-4114-853f-89f1f329b9ca",
                 "resourcePath": "views\\9278d265-943b-4de9-b437-c1e6581ab284.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "95586f1f-f258-4f45-8315-aec50e1786b1",
+            "Value": {
+                "id": "943208f5-0687-4144-9cbc-75eef18f152d",
+                "resourcePath": "scripts\\scDrawSetupText\\scDrawSetupText.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -428,6 +468,14 @@
                 "id": "a76767ee-cfbc-4303-85f7-1976f4b65f81",
                 "resourcePath": "scripts\\scRockets\\scRockets.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "af7e5d3c-ebb7-457a-941d-927a45d5f935",
+            "Value": {
+                "id": "6b03c4fa-3fdf-49a8-b116-ed13fed552fd",
+                "resourcePath": "sprites\\sSliderBar\\sSliderBar.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -583,6 +631,14 @@
             }
         },
         {
+            "Key": "f74e855f-7270-473f-ae23-e4dc3dc8a292",
+            "Value": {
+                "id": "1b0e6cea-1d33-4932-b425-79bdaa515afb",
+                "resourcePath": "views\\f74e855f-7270-473f-ae23-e4dc3dc8a292.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f8d62db7-630b-4ff0-b4dd-935e41c38777",
             "Value": {
                 "id": "cdb32856-9112-4fbf-ab05-a86e83a87eca",
@@ -622,7 +678,8 @@
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "7de4ea95-a832-4f43-add4-b4762a37018d",
-        "a6070534-903b-4493-b956-7c258781b24d"
+        "a6070534-903b-4493-b956-7c258781b24d",
+        "95586f1f-f258-4f45-8315-aec50e1786b1"
     ],
     "tutorial": ""
 }

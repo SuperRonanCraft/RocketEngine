@@ -35,22 +35,22 @@ if (menu_control) {
 			else
 				menu[2] = "Fullscreen";
 			menu_committed = -1;
-			deleting = false;
+			obj_deleting = false;
 			menu_control = true;
 			menu_x_target = gui_width - gui_margin;
 			break;
 		case 1:
 			menu_committed = -1;
-			deleting = false;
+			obj_deleting = false;
 			menu_control = true;
 			menu_x_target = gui_width - gui_margin;
 			break;
 		case 0: 
-			deleting = true;
+			obj_deleting = true;
 			instance_change(oMenu, true);
 			break;
 		default:
-			deleting = true;
+			obj_deleting = true;
 			SlideTransition(TRANS_MODE.RESTART);
 			break;
 	}
@@ -65,7 +65,7 @@ if (!(menu_x > gui_width + 160 && menu_committed != -1))
 			} else 
 				obj[i].x = menu_x;
 	}
-else if (deleting) {
+else if (obj_deleting) {
 	for (var i = 0; i < obj_items; i++) {
 		if (obj_created[i])
 			instance_destroy(obj[i]);
