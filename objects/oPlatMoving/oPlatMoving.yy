@@ -26,8 +26,17 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": [
+        {
+            "id": "80213c32-9672-41b8-a46d-dab674ac16f9",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
+            "propertyId": "9ef7b6bc-83bd-4077-96e2-a22d3d0b9e78",
+            "value": "2"
+        }
+    ],
+    "parentObjectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -42,34 +51,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "971b9777-906d-48e5-83d1-6f8df1fb55e5",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "2",
-            "varName": "y_speed",
-            "varType": 0
-        },
-        {
-            "id": "5766ed9d-97e2-4170-aa7f-3752eb0a9b53",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "2",
-            "varName": "x_speed",
-            "varType": 0
-        },
         {
             "id": "81c1e3d4-b173-4c3a-973a-519e07ce244e",
             "modelName": "GMObjectProperty",

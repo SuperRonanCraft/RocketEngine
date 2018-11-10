@@ -1,7 +1,7 @@
 //Direction
 
 //Change direction of xscale depending on where we're facing
-if (hsp != 0)
+if (hsp != 0 && hsp_move != 0)
 	facing = sign(hsp);
 	
 //Draw sprite with modified direction

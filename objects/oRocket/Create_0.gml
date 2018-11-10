@@ -8,3 +8,5 @@ damage = 0;
 target = noone;
 //Special Scripts
 specials = noone;
+//Maximum up-time
+uptime = 100;
