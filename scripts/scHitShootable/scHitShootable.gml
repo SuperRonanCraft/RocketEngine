@@ -1,5 +1,5 @@
 /// @desc Hit a shootable
-/// @arg instance
+/// @arg shooter-instance
 /// @arg delete
 
 if (argument0 != id) {
