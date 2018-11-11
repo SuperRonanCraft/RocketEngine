@@ -16,7 +16,7 @@ menu_cursor_old = menu_cursor;
 menu_control = true;
 
 menu = 0;
-menu[2] = "1v1";
+menu[2] = "Play";
 menu[1] = "Options";
 menu[0] = "Quit";
 

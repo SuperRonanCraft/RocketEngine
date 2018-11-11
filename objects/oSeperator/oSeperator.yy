@@ -4,20 +4,20 @@
     "mvc": "1.0",
     "name": "oSeperator",
     "eventList": [
-        {
-            "id": "175c7737-4d2b-4e76-8dbd-85d42bb9ed2d",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "7195dc8f-dbfc-42b3-8700-b609300cde6e"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": [
+        {
+            "id": "722b8e98-ef9f-4116-b41e-56ea1672af17",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
+            "propertyId": "687f2548-fe1e-45be-a83e-37bd1bc51a86",
+            "value": "False"
+        }
+    ],
+    "parentObjectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

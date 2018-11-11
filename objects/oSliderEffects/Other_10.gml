@@ -1,1 +1,1 @@
-audio_group_set_gain(agEffects, value, false);
+audio_group_set_gain(agEffects, value * value_original, false);

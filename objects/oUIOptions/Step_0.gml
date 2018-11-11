@@ -5,7 +5,7 @@ menu_x += (menu_x_target - menu_x) / menu_speed;
 
 //Mouse moving / selection
 if (menu_control) {
-	var current_mouse_y = device_mouse_y_to_gui(0)
+	var current_mouse_y = mouse_y;
 	if (mouse_y_gui == current_mouse_y)
 		mouse_moving = 0;
 	else {
@@ -47,7 +47,7 @@ if (menu_control) {
 			break;
 		case 0: 
 			obj_deleting = true;
-			instance_change(oMenu, true);
+			instance_change(oUIMain, true);
 			break;
 		default:
 			obj_deleting = true;

@@ -11,5 +11,5 @@ if (audio_group_is_loaded(agFootsteps)) {
 	audio_group_set_gain(agFootsteps, 1.0, false);
 }*/
 
-//if (audio_group_is_loaded(agEffects))
-//	audio_group_set_gain(agEffects, 1.0, false);
+if (audio_group_is_loaded(agEffects))
+	audio_group_set_gain(agEffects, 0.25, false);
