@@ -19,15 +19,42 @@
         "b7fdc0ca-2b35-410f-b88c-9497e5bc2ac5",
         "81d72d42-de5e-4b29-8359-e9e60d5ec275",
         "b360d3df-d927-41c7-a36c-2a140cd932af",
-        "b545f876-8b73-4cde-b8ad-cb33a9299b07"
+        "b545f876-8b73-4cde-b8ad-cb33a9299b07",
+        "58bf4781-99bf-42e1-bb17-d34a44b1707a"
     ],
     "IsDnD": false,
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Game",
+            "id": "fe158c7d-82a6-4fef-b5e0-79eb3f41aeda",
+            "depth": 0,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_49F98D20","id": "58bf4781-99bf-42e1-bb17-d34a44b1707a","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_49F98D20","objId": "f1afdbc9-f9a5-42f1-81b3-77c4a3b60be2","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 0,"y": 0}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Entities",
             "id": "3d31db75-cd3f-403c-949a-73a36d2d3b3d",
-            "depth": 0,
+            "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -53,7 +80,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Instances",
             "id": "1f1c5267-f2fb-4321-967b-0c8e5bf619fb",
-            "depth": 100,
+            "depth": 200,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -93,7 +120,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967226 },
-            "depth": 200,
+            "depth": 300,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
