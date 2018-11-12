@@ -22,6 +22,7 @@ if (current_delay == 0) {
 			damage = other.damage;
 			specials = other.specials;
 			timer = other.timer;
+			ignore_wall = other.ignore_wall;
 			owner.rockets++;
 		}
 		ammo -= 1;

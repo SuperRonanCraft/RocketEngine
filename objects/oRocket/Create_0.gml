@@ -10,3 +10,5 @@ target = noone;
 specials = noone;
 //Maximum up-time
 timer = 100;
+//Ignore walls
+ignore_wall = false;
