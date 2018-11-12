@@ -1,6 +1,7 @@
 sprite = sprite_index;
 height = sprite_height;
 sprite_index = -1;
+//Progress
 selected = false;
 hovering = false;
 //Animations

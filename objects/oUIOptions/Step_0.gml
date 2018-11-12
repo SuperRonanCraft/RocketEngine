@@ -28,23 +28,23 @@ if (menu_control) {
 	}
 } else if (menu_x > gui_width + 160 && menu_committed != -1) 
 	switch (menu_committed) {
-		case 2:
+		case 1:
 			window_set_fullscreen(!window_get_fullscreen());
 			if (window_get_fullscreen())
-				menu[2] = "Windowed";
+				menu[1] = "Windowed";
 			else
-				menu[2] = "Fullscreen";
+				menu[1] = "Fullscreen";
 			menu_committed = -1;
 			obj_deleting = false;
 			menu_control = true;
 			menu_x_target = gui_width - gui_margin;
 			break;
-		case 1:
+		/*case 1:
 			menu_committed = -1;
 			obj_deleting = false;
 			menu_control = true;
 			menu_x_target = gui_width - gui_margin;
-			break;
+			break;*/
 		case 0: 
 			obj_deleting = true;
 			instance_change(oUIMain, true);

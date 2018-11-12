@@ -1,9 +1,9 @@
 /// @desc Move barrier
-if (x != x_original)
-	if (x > (x_original + x_max) || x < (x_original - y_max))
+if (x != xstart)
+	if (x > (xstart + x_max) || x < (xstart - ystart))
 		hsp = -hsp;
-if (y != y_original)
-	if (y > (y_original + y_max) || y < (y_original - y_max))
+if (y != ystart)
+	if (y > (ystart + y_max) || y < (ystart - y_max))
 		vsp = -vsp;
 x += hsp;
 y += vsp;

@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1326f1d8-2223-445a-aa10-6eeafe756cfa",
+            "Value": {
+                "id": "226237e8-ccce-4b45-b562-ffa96b944935",
+                "resourcePath": "sprites\\sSelectButtonB\\sSelectButtonB.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14c4078b-f092-479f-909a-69267fc05e22",
             "Value": {
                 "id": "316a42dd-92ba-4cad-a09f-acf9d59cff98",
@@ -311,6 +319,14 @@
             }
         },
         {
+            "Key": "56d8456b-7284-437a-be82-955f6209b9dc",
+            "Value": {
+                "id": "663593ec-189e-43b3-9f75-1450c1dd3816",
+                "resourcePath": "rooms\\r1v1Stage3\\r1v1Stage3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "59bf2b31-05d8-43d2-b0a0-3329c1bf2f3a",
             "Value": {
                 "id": "9d350514-5e86-4909-ba4b-2d3c7e71db6d",
@@ -379,6 +395,14 @@
             "Value": {
                 "id": "065699ea-a46c-4496-9b78-a18db96513e2",
                 "resourcePath": "objects\\oUIMain\\oUIMain.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6bf38d94-b56d-4cee-85ed-cd7081e4edeb",
+            "Value": {
+                "id": "45754016-222f-43b5-9127-5558b8ace9f7",
+                "resourcePath": "objects\\oStageSButtonB\\oStageSButtonB.yy",
                 "resourceType": "GMObject"
             }
         },

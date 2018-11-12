@@ -15,8 +15,7 @@ menu_control = true;
 
 //Menu items to display
 menu = 0;
-menu[2] = "Fullscreen";
-menu[1] = "Keybinds"
+menu[1] = "Fullscreen";
 menu[0] = "Back";
 
 menu_items = array_length_1d(menu);
