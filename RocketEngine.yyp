@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "3d9d1734-de3d-4754-8164-2a8911a8656a",
+            "Value": {
+                "id": "de4fa8b2-bd9b-4e84-a3a6-ca4af779a5aa",
+                "resourcePath": "rooms\\rvTargetStage2\\rvTargetStage2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "3de677d5-770c-4736-8a50-571432b014b1",
             "Value": {
                 "id": "86db97f7-eb0f-4984-9056-a086bc594952",
@@ -450,7 +458,7 @@
             "Key": "7ff6352f-9859-456d-b82b-539d7ee73f36",
             "Value": {
                 "id": "6d0c9a04-a51d-4276-a170-fc9d036ce853",
-                "resourcePath": "objects\\oBarrierSpin\\oBarrierSpin.yy",
+                "resourcePath": "objects\\oBarrier\\oBarrier.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -748,14 +756,6 @@
                 "id": "9e46a1b5-e397-469b-b078-0f189ae30ce9",
                 "resourcePath": "sprites\\sRocket_Homing\\sRocket_Homing.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "cb1fa2dc-3889-40db-8975-6b47262b71b3",
-            "Value": {
-                "id": "ce03439d-1e6d-4120-814f-53fa22035184",
-                "resourcePath": "rooms\\rvTargetStage2\\rvTargetStage2.yy",
-                "resourceType": "GMRoom"
             }
         },
         {

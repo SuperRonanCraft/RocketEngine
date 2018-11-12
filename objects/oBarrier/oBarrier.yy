@@ -2,7 +2,7 @@
     "id": "7ff6352f-9859-456d-b82b-539d7ee73f36",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oBarrierSpin",
+    "name": "oBarrier",
     "eventList": [
         {
             "id": "98a486f1-102c-47b5-99b6-ba22dc821d9e",
@@ -15,19 +15,28 @@
             "m_owner": "7ff6352f-9859-456d-b82b-539d7ee73f36"
         },
         {
-            "id": "6bbb2265-5cbc-404b-be8a-e979fb3ef512",
+            "id": "ca815b99-ae2b-43a1-93e1-3bb974cef8ec",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "f34242a3-26d8-4545-ac48-27e72e82b69c",
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 4,
+            "eventtype": 0,
             "m_owner": "7ff6352f-9859-456d-b82b-539d7ee73f36"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": [
+        {
+            "id": "a16d24dc-b46e-45a9-870b-449a028645ac",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
+            "propertyId": "7f74fcf1-195e-4ea0-b1a3-de4b9e172f31",
+            "value": "2"
+        }
+    ],
+    "parentObjectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -43,7 +52,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "c0d68b05-aafe-426a-9cc9-b88e631d6368",
+            "id": "738890ba-b3c7-4be0-bc10-ec8318cd44bf",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -52,8 +61,22 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "2",
-            "varName": "spin_speed",
+            "value": "100",
+            "varName": "x_max",
+            "varType": 0
+        },
+        {
+            "id": "8ca41c9d-1b81-4da6-abb2-56ce1fe4ad55",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "150",
+            "varName": "y_max",
             "varType": 0
         }
     ],
