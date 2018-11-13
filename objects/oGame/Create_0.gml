@@ -28,3 +28,6 @@ global.player[0] = ds_map_create();
 //Pausing
 pause = false;
 background = noone;
+
+
+

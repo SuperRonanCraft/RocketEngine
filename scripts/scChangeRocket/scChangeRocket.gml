@@ -28,3 +28,15 @@ if (ds_map_exists(wp_map, "timer"))
 	timer = wp_map[? "timer"]; //Up-time
 if (ds_map_exists(wp_map, "ignore_wall"))
 	ignore_wall = wp_map[? "ignore_wall"]; //allow wall clipping
+if (ds_map_exists(wp_map, "name"))
+	name = wp_map[? "name"]; //name of rocket
+
+//Collision checks	
+if (ds_map_exists(wp_map, "specialCollideRocket"))
+	specialCollideRocket = wp_map[? "specialCollideRocket"]; //Define action for rocket collision
+	
+if (ds_map_exists(wp_map, "specialCollideWall"))
+	specialCollideWall = wp_map[? "specialCollideWall"]; //Define action for wall collision
+	
+if (ds_map_exists(wp_map, "specialCollideShootable"))
+	specialCollideShootable = wp_map[? "specialCollideShootable"]; //Define action for shootable collision

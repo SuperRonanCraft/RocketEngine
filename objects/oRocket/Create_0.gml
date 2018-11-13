@@ -12,3 +12,6 @@ specials = noone;
 timer = 100;
 //Ignore walls
 ignore_wall = false;
+
+//Destroy variable for explosions
+destroy = false;

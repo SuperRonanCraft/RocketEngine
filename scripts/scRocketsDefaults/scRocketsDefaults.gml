@@ -11,3 +11,9 @@ reload_time = -1; //Reload time
 specials = noone; //Special scripts
 timer = -1; //Up-time
 ignore_wall = false; //allow wall clipping
+name = "default";
+
+//Collision Checks
+specialCollideWall = noone;
+specialCollideRocket = noone;
+specialCollideShootable = noone;

@@ -17,12 +17,16 @@ if (current_delay == 0) {
 			sprite_index = other.projectile;
 			direction = dir;
 			image_angle = direction;
+			name = other.name;
 			bulletspeed = other.bulletspeed;
 			owner = other;
 			damage = other.damage;
 			specials = other.specials;
 			timer = other.timer;
 			ignore_wall = other.ignore_wall;
+			specialCollideRocket = other.specialCollideRocket;
+			specialCollideShootable = other.specialCollideShootable;
+			specialCollideWall = other.specialCollideWall;
 			owner.rockets++;
 		}
 		ammo -= 1;
