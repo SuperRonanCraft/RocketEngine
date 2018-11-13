@@ -1,9 +1,11 @@
-//Direction
+/// @desc change direction respection movement
+/// @arg face-movement
 
 //Change direction of xscale depending on where we're facing
-if (hsp != 0 && hsp_move != 0)
-	facing = sign(hsp);
+if (argument0)
+	if (hsp != 0 && hsp_move != 0)
+		facing = sign(hsp);
 	
 //Draw sprite with modified direction
 //TEMPORARY
-draw_sprite_ext(sprite_index, image_index, x, y, facing, 1, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x, y, argument0 ? facing : image_xscale, 1, 0, c_white, 1);

@@ -1,2 +1,2 @@
 /// @desc Flash when hit
-flash = scFlash(flash);
+flash = scFlash(flash, face_movement);

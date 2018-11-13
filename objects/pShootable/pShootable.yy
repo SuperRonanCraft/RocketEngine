@@ -65,6 +65,48 @@
             "value": "10",
             "varName": "hp",
             "varType": 0
+        },
+        {
+            "id": "c1b97869-8689-47e0-9c67-9ae2decb7eb3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "face_movement",
+            "varType": 3
+        },
+        {
+            "id": "37d965f5-27ac-4926-91ba-60c462f2c454",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "DISPLAYTYPE.NONE",
+            "varName": "display",
+            "varType": 4
+        },
+        {
+            "id": "59d96c29-113a-444a-b05f-f6b2de848117",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "facing",
+            "varType": 0
         }
     ],
     "solid": false,

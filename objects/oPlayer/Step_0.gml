@@ -2,5 +2,4 @@
 // You can write your code in this editor
 scGravity();
 scKeybindsControls();
-scDirection();
 scRocketProgress(playerid);

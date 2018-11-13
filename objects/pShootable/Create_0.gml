@@ -14,7 +14,6 @@ enum DISPLAYTYPE {
 
 //Default side to display health
 side = SIDE.LEFT;
-display = DISPLAYTYPE.NONE;
 
 //Sprite the use as health
 sprite = sHealth;

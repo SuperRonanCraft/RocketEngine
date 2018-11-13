@@ -71,11 +71,27 @@
             }
         },
         {
+            "Key": "068cb5e8-8976-4f96-8ca4-ab010e68c51c",
+            "Value": {
+                "id": "81d93384-71a3-468e-8371-221ae0f9b9d1",
+                "resourcePath": "views\\068cb5e8-8976-4f96-8ca4-ab010e68c51c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "08efb6e9-47da-4024-9f40-72386f03a1fb",
             "Value": {
                 "id": "dc6ec60d-5038-41ef-9814-d035f490bc2a",
                 "resourcePath": "sprites\\sRocket_Fast\\sRocket_Fast.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0c36d4b4-730f-4bba-b8a5-a713f04089dc",
+            "Value": {
+                "id": "b2a5955f-1421-4e1c-805d-a38718788f4d",
+                "resourcePath": "objects\\oTargetBomb\\oTargetBomb.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -131,6 +147,14 @@
             "Value": {
                 "id": "e9ec5a6f-d257-4042-bb3d-1b1bd630b857",
                 "resourcePath": "objects\\oTarget\\oTarget.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "1fb09528-73a5-41bd-b7f4-5e1e9b8d9359",
+            "Value": {
+                "id": "35d3c821-411b-4fac-a9a2-90bb8f4a28ac",
+                "resourcePath": "objects\\pTarget\\pTarget.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -351,6 +375,14 @@
             }
         },
         {
+            "Key": "5ab24f02-d802-48d4-a30d-74d483660c19",
+            "Value": {
+                "id": "751ff228-ca65-4895-8453-341ba73c5f46",
+                "resourcePath": "sprites\\sTargetBomb\\sTargetBomb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5cd62f0a-d0f1-4c9f-aa45-4ab4d79ecd51",
             "Value": {
                 "id": "d51b45ca-fcfb-42d6-b1bf-4b7dbd57764e",
@@ -500,6 +532,14 @@
                 "id": "92f90c15-a1b8-45fc-aa7a-f0a2f1c4a164",
                 "resourcePath": "rooms\\rvTargetStage1\\rvTargetStage1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "822463af-75c0-4740-b109-3696c806301d",
+            "Value": {
+                "id": "d4ca4564-7a33-4622-b92b-0423f036fcb1",
+                "resourcePath": "notes\\JOHN!.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
