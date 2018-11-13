@@ -24,6 +24,8 @@ if (current_delay == 0) {
 			timer = other.timer;
 			ignore_wall = other.ignore_wall;
 			owner.rockets++;
+			//Shot sound effect
+			audio_play_sound(other.projectile_sound, 10, false);
 		}
 		ammo -= 1;
 		//Recoil code

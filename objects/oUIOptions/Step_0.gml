@@ -46,30 +46,26 @@ if (menu_control) {
 			menu_x_target = gui_width - gui_margin;
 			break;*/
 		case 0: 
+			instance_change(owner, true);
 			obj_deleting = true;
-			instance_change(oUIMain, true);
 			break;
 		default:
-			obj_deleting = true;
 			SlideTransition(TRANS_MODE.RESTART);
 			break;
 	}
 else if (oTransition.mode == TRANS_MODE.RESTART)
 	menu_x_target = gui_width + 200;
-if (!(menu_x > gui_width + 160 && menu_committed != -1))
-	for (var i = 0; i < obj_items; i++) {
+if (!(menu_x > gui_width + 160 && menu_committed != -1)) {
+	for (var i = 0; i < obj_items; i++)
 		if (obj[i] != noone)
 			if (!obj_created[i]) {
-				instance_create_layer(menu_x, menu_y + (i * 50) + 50, layer, obj[i]);
+				instance_create_depth(menu_x, menu_y + (i * 50) + 50, depth, obj[i]);
 				obj_created[i] = true;
 			} else 
 				obj[i].x = menu_x;
-	}
-else if (obj_deleting) {
-	for (var i = 0; i < obj_items; i++) {
-		if (obj_created[i])
+} else if (obj_deleting)
+	for (var i = 0; i < obj_items; i++)
+		if (obj_created[i]) {
+			obj_created[i] = false;
 			instance_destroy(obj[i]);
-	}
-}
-//layer_x(oCamera.mountainLayer, 1);
-//layer_x(oCamera.treesLayer, 4);
+		}
