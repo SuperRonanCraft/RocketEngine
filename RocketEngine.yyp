@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "12f54edf-5527-4ddb-9dda-dc5099ad848c",
+            "Value": {
+                "id": "a45e158f-f6b9-47fd-bfc1-e1f05534a337",
+                "resourcePath": "scripts\\scSoundManager\\scSoundManager.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1326f1d8-2223-445a-aa10-6eeafe756cfa",
             "Value": {
                 "id": "226237e8-ccce-4b45-b562-ffa96b944935",
@@ -1001,7 +1009,8 @@
         "7de4ea95-a832-4f43-add4-b4762a37018d",
         "a6070534-903b-4493-b956-7c258781b24d",
         "95586f1f-f258-4f45-8315-aec50e1786b1",
-        "8b3f6bba-da8b-4db7-9049-70ff5341c04b"
+        "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
+        "12f54edf-5527-4ddb-9dda-dc5099ad848c"
     ],
     "tutorial": ""
 }

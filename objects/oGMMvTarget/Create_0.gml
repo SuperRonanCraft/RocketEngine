@@ -9,4 +9,16 @@ enum DIFFICULTY {
 }
 
 //Score
+gui_width = RES_W;
+points_x = gui_width + 100;
+points_y = 10;
+points_x_target = gui_width - 50;
+points_speed = 15; //lower is faster
+points_font = fPixel;
+points_scale = 1;
+points_itemheight = font_get_size(points_font);
 points = 0;
+points_current = points;
+points_str_pre = "Score ";
+points_str = points_str_pre + string(points);
+points_top = points_y - (points_itemheight * 1.5);

@@ -8,4 +8,4 @@ if (argument0)
 	
 //Draw sprite with modified direction
 //TEMPORARY
-draw_sprite_ext(sprite_index, image_index, x, y, argument0 ? facing : image_xscale, 1, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x, y, argument0 ? facing : image_xscale, argument0 ? 1 : image_yscale, 0, c_white, image_alpha);

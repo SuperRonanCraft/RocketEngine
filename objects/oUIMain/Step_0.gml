@@ -23,7 +23,7 @@ if (menu_control) {
 		menu_committed = menu_cursor;
 		//ScreenShake(4, 30);
 		menu_control = false;
-		audio_play_sound(snSelect, 10, false);
+		audio_play_sound(SOUND.UI_SELECT, 10, false);
 	}
 //Committed a selection
 } else if (menu_x > gui_width + 160 && menu_committed != -1)

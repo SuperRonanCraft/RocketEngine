@@ -11,7 +11,6 @@ scKeybindsSet(playerid);
 scRockets(ROCKET.DEFAULT);
 //Display health
 event_inherited();
-display = DISPLAYTYPE.SCREEN;
 if (playerid == 1)
 	side = SIDE.LEFT;
 else

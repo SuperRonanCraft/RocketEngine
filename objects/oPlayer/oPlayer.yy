@@ -47,7 +47,14 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        
+        {
+            "id": "21a83d12-68f6-4455-9d79-bb7497d1a3b9",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
+            "propertyId": "37d965f5-27ac-4926-91ba-60c462f2c454",
+            "value": "DISPLAYTYPE.SCREEN"
+        }
     ],
     "parentObjectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
     "persistent": false,

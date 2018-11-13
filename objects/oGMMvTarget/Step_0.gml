@@ -10,3 +10,8 @@ if (targets_created < targets)
 		owner = other;
 		timer = other.diff * 3;
 	}
+
+//Item ease in the score
+points_x += (points_x_target - points_x) / points_speed;
+//Lower scale slowly
+points_scale = max(points_scale * 0.95, 1);
