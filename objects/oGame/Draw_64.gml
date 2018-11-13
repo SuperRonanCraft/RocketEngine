@@ -4,6 +4,3 @@
 	draw_text(view_wport[0]/2, view_hport[0]/8 + 20, "hsp " + string(hsp));
 	draw_set_color(c_white);
 }*/
-
-if (global.pause && background != noone)
-	draw_sprite(background, 0, 0, 0);

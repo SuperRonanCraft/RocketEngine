@@ -7,4 +7,5 @@ if (shootable) {
 	//No sound effect as the score handles that!
 	flash = 10;
 	shootable = false;
+	timer = 10;
 }

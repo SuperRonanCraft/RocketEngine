@@ -1,4 +1,4 @@
 with (other)
 	scChangeRocket(other.rocket);
-if (destroy)
+if (destory)
 	instance_destroy();

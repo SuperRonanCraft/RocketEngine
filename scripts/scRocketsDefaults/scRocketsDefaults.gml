@@ -1,7 +1,6 @@
 recoil = 0; //Amount of recoil to push the player back
 damage = 1; //Damage count
 projectile = -1; //Sprite to show
-projectile_sound = SOUND.GP_SHOOT; //Rocket shoot sound
 cooldown = 0; //Cooldown between shots
 bulletspeed = 0; //Speed of rocket
 offset = 10; //offset to spawn the rocket
