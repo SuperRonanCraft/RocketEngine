@@ -28,6 +28,8 @@ if (current_delay == 0) {
 			specialCollideShootable = other.specialCollideShootable;
 			specialCollideWall = other.specialCollideWall;
 			owner.rockets++;
+			//Shot sound effect
+			audio_play_sound(other.projectile_sound, 10, false);
 		}
 		ammo -= 1;
 		//Recoil code

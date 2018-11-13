@@ -9,6 +9,8 @@ if (ds_map_exists(wp_map, "damage"))
 	damage = wp_map[? "damage"]; //Damage count
 if (ds_map_exists(wp_map, "projectile"))
 	projectile = wp_map[? "projectile"]; //Sprite to show
+if (ds_map_exists(wp_map, "projectile_sound"))
+	projectile_sound = wp_map[? "projectile_sound"]; //Rocket shoot sound (default SOUND.GP_SHOOT)
 if (ds_map_exists(wp_map, "cooldown"))
 	cooldown = wp_map[? "cooldown"]; //Cooldown between shots
 if (ds_map_exists(wp_map, "bulletspeed"))
