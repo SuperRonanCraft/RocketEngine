@@ -1,7 +1,5 @@
-/// @desc hit remove hp
+/// @desc touch explosion radius
 if (shootable) {
-	with (other)
-		instance_change(oHitSpark, true);
 	//Bomb sound effect
 	audio_play_sound(SOUND.GP_TARGET_BOMB, 1, false);
 	with (oPlayer)
