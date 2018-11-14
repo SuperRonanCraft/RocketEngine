@@ -29,13 +29,17 @@ if (menu_control) {
 	}
 } else if (menu_x > gui_width + 160 && menu_committed != -1) 
 	switch (menu_committed) {
-		case 2: 
+		case 3: 
 			obj_deleting = true;
 			SlideTransition(TRANS_MODE.GOTO, r1v1Select);
 			break;
-		case 1: 
+		case 2: 
 			obj_deleting = true;
 			SlideTransition(TRANS_MODE.GOTO, rvTargetSelect);
+			break;
+		case 1:
+			obj_deleting = true;
+			SlideTransition(TRANS_MODE.GOTO, rKnockOutSelect);
 			break;
 		case 0: 
 			obj_deleting = true;
