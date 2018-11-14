@@ -32,18 +32,22 @@ if (menu_control) {
 		case 3: 
 			obj_deleting = true;
 			SlideTransition(TRANS_MODE.GOTO, r1v1Select);
+			global.gamemode = global.gamemodes[0];
 			break;
 		case 2: 
 			obj_deleting = true;
 			SlideTransition(TRANS_MODE.GOTO, rvTargetSelect);
+			global.gamemode = global.gamemodes[1];
 			break;
 		case 1:
 			obj_deleting = true;
 			SlideTransition(TRANS_MODE.GOTO, rKnockOutSelect);
+			global.gamemode = global.gamemodes[2];
 			break;
 		case 0: 
 			obj_deleting = true;
 			instance_change(oUIMain, true);
+			global.gamemode = -1;
 			break;
 		default:
 			obj_deleting = true;

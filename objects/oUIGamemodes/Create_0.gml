@@ -15,10 +15,9 @@ menu_control = true;
 
 //Menu items to display
 menu = 0;
-menu[3] = "One v One"
-menu[2] = "Target"
-menu[1] = "Knock Out"
 menu[0] = "Back";
+for (var i = array_length_1d(global.gamemodes); i > 0; i--)
+	menu[ array_length_1d(menu)] = global.gamemodes[i - 1];
 
 menu_items = array_length_1d(menu);
 menu_top = menu_y - ((menu_itemheight * 1.5) * menu_items);

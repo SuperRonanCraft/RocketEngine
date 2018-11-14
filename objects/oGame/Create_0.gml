@@ -31,3 +31,10 @@ background = noone;
 global.pause = false;
 background = noone;
 pause_obj = noone;
+
+//Gamemodes
+global.gamemodes[0] = "1v1";
+global.gamemodes[1] = "vTarget";
+global.gamemodes[2] = "KnockOut";
+
+global.gamemode = -1;
