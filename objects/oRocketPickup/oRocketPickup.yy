@@ -89,7 +89,7 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "True",
-            "varName": "destroy",
+            "varName": "destory",
             "varType": 3
         }
     ],

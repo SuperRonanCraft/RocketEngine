@@ -87,14 +87,6 @@
             }
         },
         {
-            "Key": "0a7d6bfd-936c-4bc7-aa85-cacb3dc24941",
-            "Value": {
-                "id": "7d17ad7d-9eda-4e5e-bca8-22a08820bb16",
-                "resourcePath": "objects\\oUIPaused\\oUIPaused.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "0c36d4b4-730f-4bba-b8a5-a713f04089dc",
             "Value": {
                 "id": "b2a5955f-1421-4e1c-805d-a38718788f4d",
@@ -255,14 +247,6 @@
             }
         },
         {
-            "Key": "2c8b4186-f3b4-43be-b61c-fd8b73e85cb3",
-            "Value": {
-                "id": "fc156230-e0ed-4ad0-b2dd-56bf0f780528",
-                "resourcePath": "rooms\\rKnockOutStage1\\rKnockOutStage1.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "31bdddd3-b75a-47f6-9159-c173f5598dbc",
             "Value": {
                 "id": "a9f395f5-41cc-4514-83b4-4d96c9f4509d",
@@ -271,11 +255,19 @@
             }
         },
         {
+<<<<<<< HEAD
             "Key": "363a5db1-8180-4888-8a14-c237d2282b53",
             "Value": {
                 "id": "4043a392-2c7b-436a-9274-6c48386a3a35",
                 "resourcePath": "views\\363a5db1-8180-4888-8a14-c237d2282b53.yy",
                 "resourceType": "GMFolder"
+=======
+            "Key": "339c5c1e-c527-4a76-b057-9931162ac4ad",
+            "Value": {
+                "id": "1cb99bee-e9cf-4c33-a3e8-b39860982131",
+                "resourcePath": "scripts\\scRocketSpecialIce_Rocket\\scRocketSpecialIce_Rocket.yy",
+                "resourceType": "GMScript"
+>>>>>>> 104a2b1cc2d448bc87a9a9e3c74b5cb49c57eecd
             }
         },
         {
@@ -455,14 +447,6 @@
             }
         },
         {
-            "Key": "6201f7a2-ce07-43c5-bc17-dffa9e9dbf33",
-            "Value": {
-                "id": "46e9cfe2-0e87-4cea-b447-ba9a50f911ba",
-                "resourcePath": "rooms\\rKnockOutSelect\\rKnockOutSelect.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "634f229d-75af-49d3-9742-8557fcb349e1",
             "Value": {
                 "id": "f4b6e219-11d6-42d1-a96d-1456b819ef92",
@@ -527,14 +511,6 @@
             }
         },
         {
-            "Key": "7469acba-8653-4372-9c6a-f60deebd91b5",
-            "Value": {
-                "id": "9e625e0b-caca-417d-aa35-81c0fc741288",
-                "resourcePath": "objects\\oPit\\oPit.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "74999e60-f66b-4ad3-a200-57ea6fcbbe8d",
             "Value": {
                 "id": "44dc9335-9e13-40bc-ba6e-f3416f9ffba4",
@@ -564,14 +540,6 @@
                 "id": "afb2ace4-568e-4f41-bd84-191c0ed8cb77",
                 "resourcePath": "scripts\\scChangeTeam\\scChangeTeam.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "7f9dcbd0-7fd9-4ac7-8e4f-d8da8e8a66b9",
-            "Value": {
-                "id": "4a732a53-906f-4712-a22f-c1a28fbbd05e",
-                "resourcePath": "sprites\\sPitFire\\sPitFire.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

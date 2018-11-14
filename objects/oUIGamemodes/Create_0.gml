@@ -15,9 +15,8 @@ menu_control = true;
 
 //Menu items to display
 menu = 0;
-menu[3] = "One v One"
-menu[2] = "Target"
-menu[1] = "Knock Out"
+menu[2] = "1 vs. 1"
+menu[1] = "vs. Target"
 menu[0] = "Back";
 
 menu_items = array_length_1d(menu);

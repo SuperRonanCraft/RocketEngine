@@ -6,4 +6,5 @@ if (shootable) {
 		scHitShootable(other, false, false);
 	flash = 10;
 	shootable = false;
+	timer = 10;
 }

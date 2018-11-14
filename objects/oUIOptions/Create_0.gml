@@ -22,7 +22,6 @@ menu_items = array_length_1d(menu);
 menu_top = menu_y - ((menu_itemheight * 1.5) * menu_items);
 
 //Special object to spawn in (sliders)
-obj = 0;
 obj[0] = oSliderEffects;
 obj_created = 0;
 
