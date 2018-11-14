@@ -8,12 +8,14 @@ var dsBuff = argument1;
 //define the internal clock
 var clock = dsBuff[?"clock"];
 
-if(clock == 0){
-	owner.walksp /= 2;	
+if(clock == 0){	
+	dsBuff[?"slow"] = owner.walksp/2;
+	owner.move_adj -= dsBuff[?"slow"];
+	
 }
 
 if(clock > dsBuff[?"time"]*game_get_speed(gamespeed_fps)){
-	owner.walksp = 6;	
+	owner.move_adj += dsBuff[?"slow"];	
 	removeBuff(owner.buffs, dsBuff);
 }
 else{

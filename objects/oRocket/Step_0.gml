@@ -3,6 +3,7 @@
 x += lengthdir_x(bulletspeed, direction);
 y += lengthdir_y(bulletspeed, direction);
 
+
 if (timer > 0)
 	timer--;
 else if (timer == 0)

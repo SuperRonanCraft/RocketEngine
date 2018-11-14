@@ -14,6 +14,7 @@ event_inherited();
 
 //Buffs/Debuffs
 buffs = ds_list_create();
+move_adj = 0;
 
 
 if (playerid == 1)
