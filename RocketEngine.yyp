@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "0a7d6bfd-936c-4bc7-aa85-cacb3dc24941",
+            "Value": {
+                "id": "054f43ec-d66a-49b6-bccb-33c1c6c16771",
+                "resourcePath": "objects\\oUIPaused\\oUIPaused.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0c36d4b4-730f-4bba-b8a5-a713f04089dc",
             "Value": {
                 "id": "b2a5955f-1421-4e1c-805d-a38718788f4d",
@@ -155,6 +163,14 @@
             "Value": {
                 "id": "e64dfc62-68da-4eb1-aea0-5ca4f0247079",
                 "resourcePath": "objects\\oExplosion\\oExplosion.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "18b4b631-f4fc-46ba-aa87-fb7633aca269",
+            "Value": {
+                "id": "9913449d-d512-4a32-8e62-38b84b2cc723",
+                "resourcePath": "objects\\oGMMKnockOut\\oGMMKnockOut.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -551,6 +567,14 @@
             }
         },
         {
+            "Key": "6e52a032-a5be-48b9-b022-59a84b38e5f7",
+            "Value": {
+                "id": "6985bac6-fe8a-4d59-95b4-87121bfb4b7f",
+                "resourcePath": "notes\\JOHN!.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "6faef6f4-1600-4237-a30c-a46a36d582e0",
             "Value": {
                 "id": "1c039e1f-b62a-4913-a54b-75081b91caee",
@@ -615,6 +639,14 @@
             }
         },
         {
+            "Key": "7657031c-7e46-494a-9731-878269c139a0",
+            "Value": {
+                "id": "09ea1c36-b976-4e41-b5bf-8712ec42929d",
+                "resourcePath": "objects\\oGMM1v1\\oGMM1v1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "784a4a93-ac57-4b98-b80c-e12207fda320",
             "Value": {
                 "id": "5bb64ce7-81f5-4700-a858-85d7a95e5e7a",
@@ -650,7 +682,7 @@
             "Key": "822463af-75c0-4740-b109-3696c806301d",
             "Value": {
                 "id": "d4ca4564-7a33-4622-b92b-0423f036fcb1",
-                "resourcePath": "notes\\JOHN!.yy",
+                "resourcePath": "notes\\To-Do.yy",
                 "resourceType": "GMNotes"
             }
         },

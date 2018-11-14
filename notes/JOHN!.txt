@@ -1,18 +1,4 @@
-GUI THINGS:
-- Show what rocket is available to shoot at the moment
-- Show to cooldown of the rocket
-- Show the amount of time you will have your rocket
-
-Camera:
-- Fix pausing when room is bigger than camera
-- Camara shake when someone dies? (Might be an issue as camera is the same size as room
-
-Things to do:
-- Upgrades system, damage, speed, rockets, cooldowns, etc
-- Gamemode manager for 1v1 mode (requires the upgrade system)
-- Higher resolution?
-
-Future things to think about:
-- Full tileset compatability
-- Ability to add sound effects and background music (music engine)
-
+What i've worked on:
+- Pause menu, no bugs as of yet (could use an outro animation)
+- Added gamemode managers for each gamemode type
+- vTarget gameplay is done, just need to add a timer and some gui changes.
