@@ -14,6 +14,16 @@
                     "groupName": "agEffects",
                     "targets": 461609314234257646
                 }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "a8ca789a-a915-407a-bb5c-9381f8cde27f",
+                    "modelName": "GMAudioGroup",
+                    "mvc": "1.0",
+                    "groupName": "agMusic",
+                    "targets": 461609314234257646
+                }
             }
         ],
         "Checksum": "濑Ⱥ朦씁ᬄ縈",

@@ -815,6 +815,14 @@
             }
         },
         {
+            "Key": "91ff5475-440a-4436-8673-384888ce0e45",
+            "Value": {
+                "id": "ac0a4101-586c-4651-aa42-8b863cefa0e6",
+                "resourcePath": "notes\\Known Bugs- Issues.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "9278d265-943b-4de9-b437-c1e6581ab284",
             "Value": {
                 "id": "81071876-b187-4114-853f-89f1f329b9ca",
