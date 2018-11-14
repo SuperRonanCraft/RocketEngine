@@ -26,14 +26,8 @@ changeres = true;
 global.player[0] = ds_map_create();
 
 //Pausing
-<<<<<<< HEAD
 pause = false;
 background = noone;
-
-
-
-=======
 global.pause = false;
 background = noone;
 pause_obj = noone;
->>>>>>> 25f527f6f2fcd41aad4990ebb28868c099df5b75
