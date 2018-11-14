@@ -16,3 +16,6 @@ switch (buffName) {
         return scBuff_Chilled;
         break;
 }
+//This will grow the more buffs are added. However, it should generally
+//follow the same format as Chilled.
+//Make sure the name is EXACTLY the same!
