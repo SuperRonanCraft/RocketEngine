@@ -7,9 +7,6 @@ var hit = argument0;
 
 //If you're hitting a wall that you shoot
 if(hit.shootable && !ignore_wall){
-	scRocketSpecialIce_Explode(1);
+	scRocketSpecialIce_Explode(2);
 }
 
-if(destroy){
-	instance_destroy();	
-}

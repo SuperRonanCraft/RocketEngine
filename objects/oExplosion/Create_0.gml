@@ -9,3 +9,6 @@ parent = noone;
 hitList = ds_list_create();
 
 stepScript = noone;
+
+//If it can hurt/affect the owner
+friendlyFire = false;

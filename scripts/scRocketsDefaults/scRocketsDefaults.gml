@@ -14,7 +14,9 @@ timer = -1; //Up-time
 ignore_wall = false; //allow wall clipping
 name = "default";
 
-//Collision Checks
+//Special Collision Checks
+//Determine what a rocket does when it collides with either object
+//If kept at noone, does default action
 specialCollideWall = noone;
 specialCollideRocket = noone;
 specialCollideShootable = noone;

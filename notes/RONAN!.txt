@@ -1,4 +1,10 @@
 Here lies the documentation for what I worked on
 				---11/13/2018---
 
+--Buff system is in place
+--New rocket handling infrastructure being implemented, will document for
+	easier readability and implementation
+--New sprites!
 
+				---11/14/2018---
+--Documentation time

@@ -17,7 +17,7 @@ if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(co
 
 //Horizontal
 var move = key_right - key_left;
-hsp_move = move * walksp;
+hsp_move = (move * walksp) + (move_adj*move);
 
 //Vertical
 if (key_jump && standing) {
