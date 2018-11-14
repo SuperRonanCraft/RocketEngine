@@ -2,3 +2,8 @@ What i've worked on:
 - Pause menu, no bugs as of yet (could use an outro animation)
 - Added gamemode managers for each gamemode type
 - vTarget gameplay is done, just need to add a timer and some gui changes.
+- Completely new User Interface, allowing for rebinds, volume rockers, and scripts
+
+Bugs/Not Implemented:
+- UI not allowing mouse input
+- Variables are stored locally for volume, fullscreen and resolution 

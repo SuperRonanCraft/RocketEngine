@@ -2,7 +2,7 @@
     "id": "c8bd8213-d88b-407f-a7cc-f9f8d8db6d28",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oUIOptions",
+    "name": "oUIOptionsNULLED",
     "eventList": [
         {
             "id": "696bd823-a18f-4f82-aeba-651577f989b9",

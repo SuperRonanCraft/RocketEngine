@@ -1,24 +1,6 @@
-enum menu_page {
-	main,
-	settings,
-	audio,
-	graphics,
-	controls,
-	height
-}
-
-enum menu_element_type {
-	script_runner,
-	page_transfer,
-	slider,
-	shift,
-	toggle,
-	input
-}
-
 ds_menu_main = scCreateMenuPage(
 	["RESUME",		menu_element_type.script_runner,	resume_game],
-	["SETTING",		menu_element_type.page_transfer,	menu_page.settings],
+	["SETTINGS",	menu_element_type.page_transfer,	menu_page.settings],
 	["EXIT",		menu_element_type.script_runner,	exit_game],
 );
 

@@ -31,6 +31,7 @@ background = noone;
 global.pause = false;
 background = noone;
 pause_obj = noone;
+global.inmenu = true;
 
 //Gamemodes
 global.gamemodes[0] = "1v1";

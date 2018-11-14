@@ -106,7 +106,7 @@
             "Key": "0a7d6bfd-936c-4bc7-aa85-cacb3dc24941",
             "Value": {
                 "id": "054f43ec-d66a-49b6-bccb-33c1c6c16771",
-                "resourcePath": "objects\\oUIPaused\\oUIPaused.yy",
+                "resourcePath": "objects\\oUIPausedNULLED\\oUIPausedNULLED.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -618,7 +618,7 @@
             "Key": "63c2c208-a250-47cc-9232-e48444aa883c",
             "Value": {
                 "id": "065699ea-a46c-4496-9b78-a18db96513e2",
-                "resourcePath": "objects\\oUIMain\\oUIMain.yy",
+                "resourcePath": "objects\\oUIMainNULLED\\oUIMainNULLED.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -628,6 +628,14 @@
                 "id": "45754016-222f-43b5-9127-5558b8ace9f7",
                 "resourcePath": "objects\\oStageSButtonB\\oStageSButtonB.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6c94f478-e681-4d26-bb6c-476da0da1b53",
+            "Value": {
+                "id": "9c234ef3-ef88-49f5-96e7-f3f307c545d1",
+                "resourcePath": "scripts\\quit_game\\quit_game.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -831,6 +839,14 @@
             }
         },
         {
+            "Key": "8d2d766b-965e-4c94-b73d-d1463640f783",
+            "Value": {
+                "id": "7e7d8408-a634-443a-9756-99a04ca79ff6",
+                "resourcePath": "objects\\oUIMain\\oUIMain.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8eb1e42e-31f2-4ba7-ab96-32b57bbaa21c",
             "Value": {
                 "id": "0524a60c-d2ae-43d3-9614-35ae16fcd092",
@@ -930,7 +946,7 @@
             "Key": "9ae622cc-2f4a-4707-9830-5b90dceab7bb",
             "Value": {
                 "id": "2d40545c-1834-479f-baaa-7eed1c1d3f5b",
-                "resourcePath": "objects\\oUIGamemodes\\oUIGamemodes.yy",
+                "resourcePath": "objects\\oUIGamemodesNULLED\\oUIGamemodesNULLED.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -970,7 +986,7 @@
             "Key": "a87afcfc-675e-4015-9f8d-658d11071cd5",
             "Value": {
                 "id": "af371376-e123-447d-83ba-29d00cb97df0",
-                "resourcePath": "objects\\oUIAll\\oUIAll.yy",
+                "resourcePath": "objects\\oUIPause\\oUIPause.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1138,7 +1154,7 @@
             "Key": "c8bd8213-d88b-407f-a7cc-f9f8d8db6d28",
             "Value": {
                 "id": "0cfcaa68-1bb2-4047-a5fe-0eb53baf7365",
-                "resourcePath": "objects\\oUIOptions\\oUIOptions.yy",
+                "resourcePath": "objects\\oUIOptionsNULLED\\oUIOptionsNULLED.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1364,7 +1380,8 @@
         "0302c78d-63c7-4a1b-a186-ec4494652c18",
         "629e7bea-6edd-4695-8e76-70aed14f0001",
         "4feff080-c2ca-471c-a07b-d3e79032357b",
-        "af1bfdd2-1334-40aa-8444-ddb713405383"
+        "af1bfdd2-1334-40aa-8444-ddb713405383",
+        "6c94f478-e681-4d26-bb6c-476da0da1b53"
     ],
     "tutorial": ""
 }
