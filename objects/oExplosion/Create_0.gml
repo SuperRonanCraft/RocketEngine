@@ -7,6 +7,7 @@ size = 0;
 parent = noone;
 
 hitList = ds_list_create();
+confirmList = ds_list_create();
 
 stepScript = noone;
 

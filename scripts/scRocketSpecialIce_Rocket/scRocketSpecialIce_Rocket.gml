@@ -18,6 +18,11 @@ if(hit.owner != owner){
 		scRocketSpecialIce_Explode(3);
 	}
 	
+	//But if you hit a fire rocket, minimize your explosion.
+	else if(hit.name == "Fire Rocket"){
+		scRocketSpecialIce_Explode(0);	
+	}
+	
 	//Otherwise, a smaller explosion mostly to show what happened
 	//This can still hurt/affect the opposing player if they are close enough
 	else{

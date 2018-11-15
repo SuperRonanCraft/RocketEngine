@@ -56,8 +56,30 @@ ds_map_add(weapons[5], "specialCollideRocket", scRocketSpecialIce_Rocket);
 ds_map_add(weapons[5], "specialCollideWall",scRocketSpecialIce_Wall);
 ds_map_add(weapons[5], "specialCollideShootable", scRocketSpecialIce_Shootable);
 
+//FIRE
+weapons[6] = ds_map_create();
+
+ds_map_add(weapons[6], "name", "Fire Rocket");
+ds_map_add(weapons[6], "recoil", 5);
+ds_map_add(weapons[6], "projectile", sRocket_Fire);
+ds_map_add(weapons[6], "cooldown", 50);
+ds_map_add(weapons[6], "bulletspeed", 13);
+ds_map_add(weapons[6], "damage", 1);
+ds_map_add(weapons[6], "timer", 180);
+ds_map_add(weapons[6], "specials", scRocketSpecialFire);
+ds_map_add(weapons[6], "specialCollideRocket", scRocketSpecialFire_Rocket);
+ds_map_add(weapons[6], "specialCollideWall",scRocketSpecialFire_Wall);
+ds_map_add(weapons[6], "specialCollideShootable", scRocketSpecialFire_Shootable);
+
+
 enum ROCKET {
-	NONE = 0, DEFAULT = 1, FAST = 2, HOMING = 3, REVERSE = 4, ICE = 5
+	NONE = 0,
+	DEFAULT = 1, 
+	FAST = 2,
+	HOMING = 3, 
+	REVERSE = 4, 
+	ICE = 5,
+	FIRE = 6
 }
 
 //Rocket progress
