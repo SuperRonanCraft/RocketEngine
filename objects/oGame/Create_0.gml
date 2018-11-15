@@ -39,3 +39,9 @@ global.gamemodes[1] = "vTarget";
 global.gamemodes[2] = "KnockOut";
 
 global.gamemode = -1;
+
+//Other
+global.vol_master = 1;
+global.vol_music = 1;
+global.vol_sounds = 1;
+global.fullscreen = false;

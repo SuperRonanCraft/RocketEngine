@@ -1,3 +1,4 @@
+event_inherited();
 //MUST BE IN ORDER
 enum menu_page {
 	main,
@@ -9,16 +10,6 @@ enum menu_page {
 	height
 }
 
-enum menu_element_type {
-	script_runner,
-	page_transfer,
-	slider,
-	shift,
-	toggle,
-	input,
-	goto_room,
-}
-
 ds_menu_main = scCreateMenuPage(
 	["PLAY",			menu_element_type.page_transfer,	menu_page.gamemodes],
 	["SETTINGS",		menu_element_type.page_transfer,	menu_page.settings],
@@ -26,9 +17,9 @@ ds_menu_main = scCreateMenuPage(
 );
 
 ds_gamemodes = scCreateMenuPage(
-	["ONE V ONE",		menu_element_type.goto_room,		r1v1Select,			"Play vs another player"],
-	["V TARGET",		menu_element_type.goto_room,		rvTargetSelect,		"Shoot targets, not bombs..."],
-	["KNOCK OUT",		menu_element_type.goto_room,		rKnockOutSelect,	"Knock the other player off the platform!"],
+	["ONE V ONE",		menu_element_type.goto_room,		r1v1Select,			"Play  vs.  another  player"],
+	["V TARGET",		menu_element_type.goto_room,		rvTargetSelect,		"Shoot  targets,  not  bombs..."],
+	["KNOCK OUT",		menu_element_type.goto_room,		rKnockOutSelect,	"Knock  them  off!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
 );
 
@@ -40,15 +31,14 @@ ds_settings = scCreateMenuPage(
 );
 
 ds_menu_audio = scCreateMenuPage(
-	["MASTER",			menu_element_type.slider,			change_volume,		1,		[0,1]],
-	["SOUNDS",			menu_element_type.slider,			change_volume,		1,		[0,1]],
-	["MUSIC",			menu_element_type.slider,			change_volume,		1,		[0,1]],
+	["MASTER",			menu_element_type.slider,			change_volume,		"vol_master",	global.vol_master],
+	["SOUNDS",			menu_element_type.slider,			change_volume,		"vol_sounds",	global.vol_sounds],
+	["MUSIC",			menu_element_type.slider,			change_volume,		"vol_music",	global.vol_music],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
 ds_menu_graphics = scCreateMenuPage(
-	["RESOLUTION",		menu_element_type.shift,			change_resolution,	0,		["512 x 374", "1024 x 748"]],
-	["FULLSCREEN",		menu_element_type.toggle,			change_window_mode,	1,		["FULLSCREEN", "WINDOWED"]],
+	["FULLSCREEN",		menu_element_type.toggle,			change_window_mode,	"fullscreen",	global.fullscreen],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
@@ -64,10 +54,7 @@ ds_menu_controls = scCreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
-page = 0;
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	menu_option[i] = 0;
-depth -= 1;
-inputting = false;

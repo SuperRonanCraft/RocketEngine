@@ -6,10 +6,7 @@
     "children": [
         "a87afcfc-675e-4015-9f8d-658d11071cd5",
         "8d2d766b-965e-4c94-b73d-d1463640f783",
-        "63c2c208-a250-47cc-9232-e48444aa883c",
-        "c8bd8213-d88b-407f-a7cc-f9f8d8db6d28",
-        "0a7d6bfd-936c-4bc7-aa85-cacb3dc24941",
-        "9ae622cc-2f4a-4707-9830-5b90dceab7bb",
+        "30c67dd4-3558-4028-9cd1-77b2cd963526",
         "5cd62f0a-d0f1-4c9f-aa45-4ab4d79ecd51",
         "97c654c9-dda0-4c9f-862a-39f5aa1191fc",
         "c9db60d0-710e-4892-9a89-02f5195caf98",

@@ -1,2 +1,2 @@
-if (room != rMenu)
-	SlideTransition(TRANS_MODE.GOTO, rMenu);
+resume_game();
+SlideTransition(TRANS_MODE.RESTART);
