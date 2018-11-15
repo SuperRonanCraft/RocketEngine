@@ -16,7 +16,7 @@ var newBuff = ds_map_create();
 
 //Set up parameter variables.
 newBuff[? "name"] = name;
-newBuff[? "time"] = time;
+newBuff[? "time"] = time*game_get_speed(gamespeed_fps);
 newBuff[? "stackable"] = stackable;
 newBuff[? "check"] = check;
 
@@ -30,7 +30,7 @@ newBuff[? "stepScript"] = checkBuffStepScript(newBuff, name);
 //Check it out for more details.
 
 //If the buff doesn't stack with itself and it isn't in the list, add it to the list
-if(!stackable && !findBuff(targ.buffs, newBuff)){
+if(!stackable && !findBuff(targ.buffs, newBuff[?"name"])){
 	ds_list_add(targ.buffs, newBuff);
 }
 //This part is still under construction. For now, stick to non-stacking buffs

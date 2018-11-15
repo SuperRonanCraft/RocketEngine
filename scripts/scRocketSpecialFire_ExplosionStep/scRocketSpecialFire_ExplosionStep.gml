@@ -26,7 +26,7 @@ if(size > 0){
 	    if(ds_list_find_index(confirmList,hitList[|c]) == -1 && hitList[|c] != parent || friendlyFire){
 			
 			hurtPlayer(parent, hitList[|c]);
-			
+			addBuff(hitList[|c],"Burn Rush",1.5,false,0);
 			
 			
 			ds_list_add(confirmList, hitList[|c]);

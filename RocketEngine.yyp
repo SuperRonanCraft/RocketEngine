@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "03a26806-17fd-4171-842e-d47ae969bf8e",
+            "Value": {
+                "id": "eac138ab-4423-45dd-a1cd-24ba7a5e45a2",
+                "resourcePath": "sprites\\s_abilityIcon_BurnRush\\s_abilityIcon_BurnRush.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "040a2e33-1952-4830-a6e9-57958423acf6",
             "Value": {
                 "id": "d29402b2-3b3f-4507-bc3a-6496df7dda23",
@@ -479,6 +487,14 @@
             }
         },
         {
+            "Key": "44c28303-58ea-4815-8165-1b0b52b58b16",
+            "Value": {
+                "id": "5b54ca02-ecd4-4e13-8106-6914149a498f",
+                "resourcePath": "views\\44c28303-58ea-4815-8165-1b0b52b58b16.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "46cce38f-93e0-424b-b8e7-3f985e610dd3",
             "Value": {
                 "id": "7a15564a-8199-4e11-84bf-ea8f2a43390d",
@@ -647,6 +663,14 @@
             }
         },
         {
+            "Key": "61185937-10d0-4483-975e-8027d5ec6c64",
+            "Value": {
+                "id": "5a49799b-5d4b-4f11-acc7-df3f7bbcf951",
+                "resourcePath": "scripts\\scBuff_BurnRush\\scBuff_BurnRush.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "615f401f-a7ba-49d1-95d2-a58d471e5cd5",
             "Value": {
                 "id": "cb7645d3-9b9e-4ba8-9b21-59b9248bda4d",
@@ -812,6 +836,14 @@
                 "id": "6d0c9a04-a51d-4276-a170-fc9d036ce853",
                 "resourcePath": "objects\\oBarrier\\oBarrier.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "81258dde-2461-4811-bb0e-dc6467d2ad75",
+            "Value": {
+                "id": "3ead021d-d167-4568-ad94-c74a106119f0",
+                "resourcePath": "sprites\\s_psmoke1\\s_psmoke1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1263,6 +1295,14 @@
             }
         },
         {
+            "Key": "d6dc0ad1-0453-4f7b-8312-32c99d49ce73",
+            "Value": {
+                "id": "ece58c8e-688a-41db-8c09-c845cd989e5f",
+                "resourcePath": "sprites\\s_abilityIcon_Chilled\\s_abilityIcon_Chilled.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dae4c3ec-814e-4cb3-b038-7ad88abede03",
             "Value": {
                 "id": "33eb3336-1b2b-491c-9510-c77fecd13d38",
@@ -1468,6 +1508,7 @@
         "2152ff89-1fcc-4607-bb5e-fb5693d32e76",
         "c4b11554-703d-4171-bdd1-9aa1aa8e8ff3",
         "72d86524-e805-4e07-94d8-d379c54c52ed",
+        "61185937-10d0-4483-975e-8027d5ec6c64",
         "b17816a8-3eb8-4061-8a86-aceed38a2d14",
         "489b407b-a42c-4beb-8c73-472d932fec9e",
         "5238e325-fb37-4c36-b216-e884eaababf9",

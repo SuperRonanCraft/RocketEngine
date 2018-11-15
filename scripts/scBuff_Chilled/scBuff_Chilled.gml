@@ -18,7 +18,7 @@ if(clock == 0){
 }
 
 //If the internal clock reaches the time in seconds, expire
-if(clock > dsBuff[?"time"]*game_get_speed(gamespeed_fps)){
+if(findBuff(owner.buffs,"Burn Rush") || clock > dsBuff[?"time"]){
 	//Return to normal speed
 	owner.move_adj += dsBuff[?"slow"];	
 	

@@ -8,7 +8,7 @@ var hit = argument0;
 //Make sure you aren't hurting yourself
 if(hit != owner){
 	
-	addBuff(hit, "Chilled",3,false,0);
+	addBuff(hit, "Burn Rush",3,false,0);
 	
 	scRocketSpecialFire_Explode(1);
 	

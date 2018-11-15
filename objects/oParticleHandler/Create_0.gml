@@ -50,3 +50,11 @@ part_type_sprite(partEmber,s_pember,false,false,true);
 part_type_speed(partEmber,0.1,0.2,-0.02,0);
 part_type_size(partEmber,0.4,0.5,-0.1,0);
 part_type_life(partEmber,5,8);
+
+partSmoke1 = part_type_create();
+part_type_sprite(partSmoke1,s_psmoke1, false,false,true);
+part_type_alpha2(partSmoke1,0.5,1);
+part_type_speed(partSmoke1,1.5,3,0.5,0);
+part_type_size(partSmoke1,0.1,0.2,0.01,0.02);
+part_type_direction(partSmoke1,80,110,0,0);
+part_type_life(partSmoke1,10,15);

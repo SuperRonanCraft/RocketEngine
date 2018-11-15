@@ -11,6 +11,8 @@ switch (buffName) {
 	default:
 		return noone;
 		break;
+	case "Burn Rush":
+		return scBuff_BurnRush;
 		
     case "Chilled":
         return scBuff_Chilled;
