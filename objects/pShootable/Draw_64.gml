@@ -1,4 +1,4 @@
-/// @desc Display Health
+/// @desc Display Health and rocket
 if (display != DISPLAYTYPE.SCREEN)
 	exit;
 hpscale = max(hpscale * 0.95, 1);

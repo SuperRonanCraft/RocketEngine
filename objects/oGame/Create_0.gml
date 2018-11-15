@@ -23,22 +23,25 @@ global.team2 = ds_list_create();
 
 changeres = true;
 
-global.player[0] = ds_map_create();
-
 //Pausing
-pause = false;
+//Screenshot of all sprites before disabling them
 background = noone;
 global.pause = false;
-background = noone;
-pause_obj = noone;
-global.inmenu = true;
 
 //Gamemodes
+//Preset
 global.gamemodes[0] = "1v1";
 global.gamemodes[1] = "vTarget";
 global.gamemodes[2] = "KnockOut";
-
+//Set when a gamemode is selected in oUIMain
 global.gamemode = -1;
+
+//Stages
+//Set on every StageSelect room
+global.stages = -1;
+//Saved after a stage is selected to play
+global.stage_selected = -1;
+global.play = false;
 
 //Other
 global.vol_master = 1;
