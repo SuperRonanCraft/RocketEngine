@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "136e1036-3526-4b29-b1a4-28f5cdd3ab17",
+            "Value": {
+                "id": "a99ab972-d056-4f65-8744-e83a1dd4c194",
+                "resourcePath": "sprites\\s_psparkle\\s_psparkle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14c4078b-f092-479f-909a-69267fc05e22",
             "Value": {
                 "id": "316a42dd-92ba-4cad-a09f-acf9d59cff98",

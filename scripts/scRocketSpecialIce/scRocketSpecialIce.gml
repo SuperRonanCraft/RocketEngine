@@ -5,7 +5,11 @@
 
 
 //Particle emitter first gets placed around the back of the rocket
-part_emitter_region(global.ParticleSystem1,global.Emitter1,x-(x - bbox_left)-5,x-5,y-5,y+5,ps_shape_ellipse,ps_distr_gaussian)
+var facing = 1;
+if(direction > 90 && direction < 270){
+	facing = -1;
+}
+part_emitter_region(global.ParticleSystem1,global.Emitter1,x- (facing*((x - bbox_left)-5)), x- (facing*5),y-5,y+5,ps_shape_ellipse,ps_distr_gaussian)
 
 //Then bursts with the defined particle over at oParticleHandler
 part_emitter_burst(global.ParticleSystem1,global.Emitter1,oParticleHandler.partIce,4);

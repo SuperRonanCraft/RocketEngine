@@ -19,3 +19,10 @@ part_type_size(partIce,0.3,0.5,0,0);
 part_type_direction(partIce,0,360,0,0);
 part_type_speed(partIce,0.8,1,0,0);
 part_type_life(partIce,5,15);
+
+partSparkle = part_type_create();
+part_type_sprite(partSparkle,s_psparkle,true,false,false);
+part_type_size(partSparkle,0.1,0.2,0,0);
+part_type_direction(partSparkle,0,360,0,0);
+part_type_speed(partSparkle,1,1.3,0.1,0);
+part_type_life(partSparkle,15,30);
