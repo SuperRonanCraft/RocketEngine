@@ -3,13 +3,14 @@
 ///@arg name Name of buff
 ///@arg time Time to expire
 ///@arg stackable If the buff stacks with itself
-///@arg buff If the buff is good for you [1 for buff / -1 for debuff / 0 for neutral]
+///@arg buff If the buff is good for you [1/-1/0 buff/debuff/neutral]
 
-var targ = argument0;
-var name = argument1;
-var time = argument2;
-var stackable = argument3;
-var check = argument4;
+
+var targ = argument[0];
+var name = argument[1];
+var time = argument[2];
+var stackable = argument[3];
+var check = argument[4];
 
 //Create the DS Map of the buff
 var newBuff = ds_map_create();
@@ -23,6 +24,9 @@ newBuff[? "check"] = check;
 //Internal clock counting steps from creation
 newBuff[? "clock"] = 0;
 //Useful for checking when a buff is added, how long until it expires, etc.
+
+//Icon for name of buff
+newBuff[? "icon"] = checkIconSprite(newBuff, name);
 
 //Script for every step (important part)
 newBuff[? "stepScript"] = checkBuffStepScript(newBuff, name);

@@ -879,6 +879,14 @@
             }
         },
         {
+            "Key": "82d7d54d-edd9-419d-a750-edcc510bbcba",
+            "Value": {
+                "id": "f4323561-551a-4c41-9465-71587e871d32",
+                "resourcePath": "scripts\\checkIconSprite\\checkIconSprite.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "83c3dc67-7890-4ac3-9115-b99ed4f62f1d",
             "Value": {
                 "id": "6b14e4ca-f59f-404d-b60b-f87cd323c24e",
@@ -1523,6 +1531,7 @@
         "9ce9edda-6c78-4832-acaa-45cf7f65a365",
         "2152ff89-1fcc-4607-bb5e-fb5693d32e76",
         "c4b11554-703d-4171-bdd1-9aa1aa8e8ff3",
+        "82d7d54d-edd9-419d-a750-edcc510bbcba",
         "72d86524-e805-4e07-94d8-d379c54c52ed",
         "61185937-10d0-4483-975e-8027d5ec6c64",
         "b17816a8-3eb8-4061-8a86-aceed38a2d14",
