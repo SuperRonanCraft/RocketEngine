@@ -12,9 +12,6 @@ enum DISPLAYTYPE {
 	NONE, BAR, SCREEN
 }
 
-//Default side to display health
-side = SIDE.LEFT;
-
 //Sprite the use as health
 sprite = sHealth;
 height = sprite_get_height(sprite);

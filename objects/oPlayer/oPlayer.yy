@@ -153,9 +153,23 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "global.team1",
             "varName": "team",
-            "varType": 0
+            "varType": 4
+        },
+        {
+            "id": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "KEYBIND.PLAYER1",
+            "varName": "keys",
+            "varType": 4
         }
     ],
     "solid": false,

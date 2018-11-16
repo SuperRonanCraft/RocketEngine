@@ -1,3 +1,7 @@
 --Bugs--
+CURRENT:
+- Smoke particles for "Burn Rush" appears in front of player, as well as explosion
 
-Playing a game of knockout and returning to the menu to play a game of 1v1 results in a crash.
+FIXED:
+- Playing a game of knockout and returning to the menu to play a game of 1v1 results in a crash.
+

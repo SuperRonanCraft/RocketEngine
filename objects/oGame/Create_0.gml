@@ -10,12 +10,12 @@ global.key_p2_right = vk_right;
 global.key_p2_jump = vk_up;
 global.key_p2_shoot = vk_down;
 
-//Amount of player entities in the room
+//Players id
 global.players = 0;
 
 //Teams
-global.team1 = ds_list_create();
-global.team2 = ds_list_create();
+global.team1 = 0;
+global.team2 = 0;
 
 //The resolution the game will run at
 #macro RES_W 1024
@@ -48,3 +48,8 @@ global.vol_master = 1;
 global.vol_music = 1;
 global.vol_sounds = 1;
 global.fullscreen = false;
+
+//Keybinds
+enum KEYBIND {
+	PLAYER1, PLAYER2, PLAYER3, PLAYER4
+}

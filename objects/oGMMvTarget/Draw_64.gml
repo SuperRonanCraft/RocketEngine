@@ -1,4 +1,5 @@
 /// @desc draw score
+event_inherited();
 draw_set_font(points_font);
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);

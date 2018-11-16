@@ -1,4 +1,5 @@
 /// @desc Spawn targets config
+event_inherited();
 diff = DIFFICULTY.EASY;
 targets = 0;
 targets_created = 0;

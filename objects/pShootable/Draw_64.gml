@@ -5,10 +5,10 @@ hpscale = max(hpscale * 0.95, 1);
 var offset = 0;
 //Left by default
 var sidepos = width * 11 - 2;
-if (side == SIDE.RIGHT)
+if (team == TEAM.RIGHT)
 	sidepos = (RES_W - width * 2);
 
-//Display the health
+//Display health
 for (var i = 0; i < hp_original; i++) {
 	if (i mod 10 == 0)
 		offset++;
@@ -19,3 +19,5 @@ for (var i = 0; i < hp_original; i++) {
 	else
 		draw_sprite_ext(sHealth, 1, xpos, ypos, hpscale, hpscale, 0, c_white, 1);
 }
+//Display debuffs
+//code...

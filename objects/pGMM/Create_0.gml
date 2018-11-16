@@ -1,4 +1,4 @@
-/// @desc a 1v1 stage has begun
+/// @desc a stage has begun
 timer = STAGE_TIMER.DEFAULT;//global.stage_timer;
 enum STAGE_TIMER {
 	DEFAULT = 90, DEDICATED = 120, SCARED = 180
