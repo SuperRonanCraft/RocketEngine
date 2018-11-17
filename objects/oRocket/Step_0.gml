@@ -1,7 +1,7 @@
 /// @desc Move Rocket
 //Run special scripts
-x += lengthdir_x(bulletspeed, direction);
-y += lengthdir_y(bulletspeed, direction);
+x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED], direction);
+y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);
 
 
 if (timer > 0)

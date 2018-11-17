@@ -153,7 +153,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "global.team1",
+            "value": "TEAM.LEFT",
             "varName": "team",
             "varType": 4
         },

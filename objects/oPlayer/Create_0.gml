@@ -32,6 +32,3 @@ if (ds_map_exists(ds_map, "players")) {
 } else 
 	ds_map_add(ds_map, "players", [self]);*/
 	
-enum TEAM {
-	LEFT, RIGHT
-}

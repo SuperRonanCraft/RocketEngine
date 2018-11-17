@@ -3,73 +3,81 @@
 
 //UNARMED
 weapons[0] = ds_map_create();
-ds_map_add(weapons[0], "damage", 0);
+ds_map_add(weapons[0], ROCKET_MAP.DAMAGE, 0);
 
 //DEFAULT
 weapons[1] = ds_map_create();
-ds_map_add(weapons[1], "recoil", 2);
-ds_map_add(weapons[1], "projectile", sRocket_Default);
-ds_map_add(weapons[1], "cooldown", 20);
-ds_map_add(weapons[1], "bulletspeed", 10);
+ds_map_add(weapons[1], ROCKET_MAP.RECOIL, 2);
+ds_map_add(weapons[1], ROCKET_MAP.PROJECTILE, sRocket_Default);
+ds_map_add(weapons[1], ROCKET_MAP.COOLDOWN, 20);
+ds_map_add(weapons[1], ROCKET_MAP.SPEED, 10);
 
 //FAST
 weapons[2] = ds_map_create();
-ds_map_add(weapons[2], "recoil", 3);
-ds_map_add(weapons[2], "projectile", sRocket_Fast);
-ds_map_add(weapons[2], "cooldown", 5);
-ds_map_add(weapons[2], "bulletspeed", 22);
-ds_map_add(weapons[2], "clip", 5);
-ds_map_add(weapons[2], "reload_time", 60);
+ds_map_add(weapons[2], ROCKET_MAP.RECOIL, 3);
+ds_map_add(weapons[2], ROCKET_MAP.PROJECTILE, sRocket_Fast);
+ds_map_add(weapons[2], ROCKET_MAP.COOLDOWN, 5);
+ds_map_add(weapons[2], ROCKET_MAP.SPEED, 22);
+ds_map_add(weapons[2], ROCKET_MAP.CLIP, 5);
+ds_map_add(weapons[2], ROCKET_MAP.RELOAD_TIME, 60);
 
 //HOMING
 weapons[3] = ds_map_create();
-ds_map_add(weapons[3], "recoil", 5);
-ds_map_add(weapons[3], "damage", 2);
-ds_map_add(weapons[3], "projectile", sRocket_Homing);
-ds_map_add(weapons[3], "cooldown", 60);
-ds_map_add(weapons[3], "bulletspeed", 5);
-ds_map_add(weapons[3], "timer", 120);
-ds_map_add(weapons[3], "specials", scRocketSpecialHoming);
-ds_map_add(weapons[3], "ignore_wall", true);
+ds_map_add(weapons[3], ROCKET_MAP.RECOIL, 5);
+ds_map_add(weapons[3], ROCKET_MAP.DAMAGE, 2);
+ds_map_add(weapons[3], ROCKET_MAP.PROJECTILE, sRocket_Homing);
+ds_map_add(weapons[3], ROCKET_MAP.COOLDOWN, 60);
+ds_map_add(weapons[3], ROCKET_MAP.SPEED, 5);
+ds_map_add(weapons[3], ROCKET_MAP.TIMER, 120);
+ds_map_add(weapons[3], ROCKET_MAP.SPECIALS, scRocketSpecialHoming);
+ds_map_add(weapons[3], ROCKET_MAP.IGNORE_WALL, true);
 
 //REVERSE
 weapons[4] = ds_map_create();
-ds_map_add(weapons[4], "recoil", 5);
-ds_map_add(weapons[4], "projectile", sRocket_Reverse);
-ds_map_add(weapons[4], "cooldown", 40);
-ds_map_add(weapons[4], "bulletspeed", 5);
-ds_map_add(weapons[4], "offset", 10);
-ds_map_add(weapons[4], "timer", 180);
-ds_map_add(weapons[4], "specials", scRocketSpecialReverse);
-ds_map_add(weapons[4], "ignore_wall", true);
+ds_map_add(weapons[4], ROCKET_MAP.RECOIL, 5);
+ds_map_add(weapons[4], ROCKET_MAP.PROJECTILE, sRocket_Reverse);
+ds_map_add(weapons[4], ROCKET_MAP.COOLDOWN, 40);
+ds_map_add(weapons[4], ROCKET_MAP.SPEED, 5);
+ds_map_add(weapons[4], ROCKET_MAP.OFFSET, 10);
+ds_map_add(weapons[4], ROCKET_MAP.TIMER, 180);
+ds_map_add(weapons[4], ROCKET_MAP.SPECIALS, scRocketSpecialReverse);
+ds_map_add(weapons[4], ROCKET_MAP.IGNORE_WALL, true);
 
 //ICE
 weapons[5] = ds_map_create();
-ds_map_add(weapons[5], "name", "Ice Rocket");
-ds_map_add(weapons[5], "recoil", 5);
-ds_map_add(weapons[5], "projectile", sRocket_Ice);
-ds_map_add(weapons[5], "cooldown", 40);
-ds_map_add(weapons[5], "bulletspeed", 10);
-ds_map_add(weapons[5], "timer", 180);
-ds_map_add(weapons[5], "specials", scRocketSpecialIce);
-ds_map_add(weapons[5], "specialCollideRocket", scRocketSpecialIce_Rocket);
+ds_map_add(weapons[5], ROCKET_MAP.NAME, "Ice Rocket");
+ds_map_add(weapons[5], ROCKET_MAP.RECOIL, 5);
+ds_map_add(weapons[5], ROCKET_MAP.PROJECTILE, sRocket_Ice);
+ds_map_add(weapons[5], ROCKET_MAP.COOLDOWN, 40);
+ds_map_add(weapons[5], ROCKET_MAP.SPEED, 10);
+ds_map_add(weapons[5], ROCKET_MAP.TIMER, 180);
+ds_map_add(weapons[5], ROCKET_MAP.SPECIALS, scRocketSpecialChilled);
+ds_map_add(weapons[5], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.ICE]);
+ds_map_add(weapons[5], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.WINTER]);
+ds_map_add(weapons[5], ROCKET_MAP.BUFF, BUFFTYPE.CHILLED);
+ds_map_add(weapons[5], ROCKET_MAP.EXPLOSION, sexplosion_Ice);
+/*ds_map_add(weapons[5], "specialCollideRocket", scRocketSpecialIce_Rocket);
 ds_map_add(weapons[5], "specialCollideWall",scRocketSpecialIce_Wall);
-ds_map_add(weapons[5], "specialCollideShootable", scRocketSpecialIce_Shootable);
+ds_map_add(weapons[5], "specialCollideShootable", scRocketSpecialIce_Shootable);*/
 
 //FIRE
 weapons[6] = ds_map_create();
 
-ds_map_add(weapons[6], "name", "Fire Rocket");
-ds_map_add(weapons[6], "recoil", 5);
-ds_map_add(weapons[6], "projectile", sRocket_Fire);
-ds_map_add(weapons[6], "cooldown", 50);
-ds_map_add(weapons[6], "bulletspeed", 13);
-ds_map_add(weapons[6], "damage", 1);
-ds_map_add(weapons[6], "timer", 180);
-ds_map_add(weapons[6], "specials", scRocketSpecialFire);
-ds_map_add(weapons[6], "specialCollideRocket", scRocketSpecialFire_Rocket);
+ds_map_add(weapons[6], ROCKET_MAP.NAME, "Fire Rocket");
+ds_map_add(weapons[6], ROCKET_MAP.RECOIL, 5);
+ds_map_add(weapons[6], ROCKET_MAP.PROJECTILE, sRocket_Fire);
+ds_map_add(weapons[6], ROCKET_MAP.COOLDOWN, 50);
+ds_map_add(weapons[6], ROCKET_MAP.SPEED, 13);
+ds_map_add(weapons[6], ROCKET_MAP.DAMAGE, 1);
+ds_map_add(weapons[6], ROCKET_MAP.TIMER, 180);
+ds_map_add(weapons[6], ROCKET_MAP.SPECIALS, scRocketSpecialBurnRush);
+ds_map_add(weapons[6], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.EMBER]);
+ds_map_add(weapons[6], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.FIRE2]);
+ds_map_add(weapons[6], ROCKET_MAP.BUFF, BUFFTYPE.BURNRUSH);
+ds_map_add(weapons[6], ROCKET_MAP.EXPLOSION, sexplosion_Fire);
+/*ds_map_add(weapons[6], "specialCollideRocket", scRocketSpecialFire_Rocket);
 ds_map_add(weapons[6], "specialCollideWall",scRocketSpecialFire_Wall);
-ds_map_add(weapons[6], "specialCollideShootable", scRocketSpecialFire_Shootable);
+ds_map_add(weapons[6], "specialCollideShootable", scRocketSpecialFire_Shootable);*/
 
 
 enum ROCKET {
@@ -82,12 +90,18 @@ enum ROCKET {
 	FIRE = 6
 }
 
+enum ROCKET_MAP {
+	RECOIL, DAMAGE, PROJECTILE, PROJECTILE_SOUND, COOLDOWN, SPEED, OFFSET, STARTUP, CLIP,
+	RELOAD_TIME, SPECIALS, TIMER, IGNORE_WALL, NAME, BUFF, EXPLOSION, PARTICLE_TRAIL, PARTICLE_EXPLOSION
+}
+
 //Rocket progress
 current_cd = 0;
 current_delay = -1;
 current_recoil = 0;
 current_reload = 0;
 rockets = 0;
+rocket_map = 0;
 
 //Setup the default rocket type
 scChangeRocket(argument0);

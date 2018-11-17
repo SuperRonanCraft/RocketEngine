@@ -2,7 +2,7 @@
 /// @arg player-id-(-1-to-disable)
 
 
-if (projectile == -1)
+if (rocket_map[? ROCKET_MAP.PROJECTILE] == -1)
 	return;
 
 //Set the direction of the rocket
@@ -13,23 +13,20 @@ if (argument0 != -1)
 //Rocket
 if (current_delay == 0) {
 	if (ammo != 0) {
+		var offset = rocket_map[? ROCKET_MAP.OFFSET];
 		with (instance_create_depth(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth - 1, oRocket)) {
-			sprite_index = other.projectile;
 			direction = dir;
 			image_angle = direction;
-			name = other.name;
-			bulletspeed = other.bulletspeed;
+			sprite_index = other.rocket_map[? ROCKET_MAP.PROJECTILE];
 			owner = other;
-			damage = other.damage;
-			specials = other.specials;
-			timer = other.timer;
-			ignore_wall = other.ignore_wall;
-			specialCollideRocket = other.specialCollideRocket;
+			rocket_map = other.rocket_map;
+			timer = other.rocket_map[? ROCKET_MAP.TIMER];
+			/*specialCollideRocket = other.specialCollideRocket;
 			specialCollideShootable = other.specialCollideShootable;
-			specialCollideWall = other.specialCollideWall;
+			specialCollideWall = other.specialCollideWall;*/
 			owner.rockets++;
 			//Shot sound effect
-			audio_play_sound(other.projectile_sound, 10, false);
+			audio_play_sound(other.rocket_map[? ROCKET_MAP.PROJECTILE_SOUND], 10, false);
 		}
 		ammo -= 1;
 		//Recoil code
@@ -54,7 +51,7 @@ current_recoil = max(0, floor(current_recoil * 0.8));
 //Reload
 if (ammo == 0)
 	if (current_reload > reload_time) {
-		ammo = clip;
+		ammo = rocket_map[? ROCKET_MAP.CLIP];
 		current_reload = 0;
 	} else
 		current_reload++;

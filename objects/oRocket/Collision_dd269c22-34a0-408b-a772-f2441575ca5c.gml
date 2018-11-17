@@ -1,11 +1,7 @@
-//Hit a shootable object
+/// @desc Hit a shootable
 
-if(specialCollideShootable != noone){
-	script_execute(specialCollideShootable, other);	
-}
-
-else{
-	with (other)
-		scHitShootable(other.owner, true, true);
-	
+if (owner != other.id) {
+	if (rocket_map[? ROCKET_MAP.BUFF] != noone)
+		scAddBuff(rocket_map[? ROCKET_MAP.BUFF], other);
+	event_user(0);
 }

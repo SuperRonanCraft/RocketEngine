@@ -3,7 +3,7 @@
 hpscale = 1;
 flash = 0;
 
-enum SIDE {
+enum TEAM {
 	LEFT, RIGHT
 }
 

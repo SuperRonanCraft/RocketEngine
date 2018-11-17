@@ -1,0 +1,1 @@
+///@desc Special step event for burn rush
