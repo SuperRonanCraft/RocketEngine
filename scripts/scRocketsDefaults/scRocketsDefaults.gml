@@ -14,9 +14,13 @@ rocket_map[? ROCKET_MAP.TIMER] = -1; //Up-time
 rocket_map[? ROCKET_MAP.IGNORE_WALL] = false; //allow wall clipping
 rocket_map[? ROCKET_MAP.NAME] = "default";
 rocket_map[? ROCKET_MAP.BUFF] = noone;
-rocket_map[? ROCKET_MAP.EXPLOSION] = sHit_Spark;
 rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone;
+rocket_map[? ROCKET_MAP.EXPLOSION_SPRITE] = sHit_Spark;
+rocket_map[? ROCKET_MAP.EXPLOSION_ROCKET] = noone;
+rocket_map[? ROCKET_MAP.EXPLOSION_WALL] = noone;
+rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = noone;
+rocket_map[? ROCKET_MAP.EXPLOSION_STEP] = noone;
 
 //Special Collision Checks
 //Determine what a rocket does when it collides with either object

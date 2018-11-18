@@ -1,1 +1,2 @@
-instance_destroy();
+//if (destroy)
+	instance_destroy();

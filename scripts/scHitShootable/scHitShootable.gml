@@ -4,7 +4,7 @@
 /// @arg play-sound-hit
 
 if (argument0 != id) {
-	hp -= other.damage;
+	hp -= other.rocket_map[? ROCKET_MAP.DAMAGE];
 	flash = 3;
 	hitfrom = other.direction;
 	if (argument1)

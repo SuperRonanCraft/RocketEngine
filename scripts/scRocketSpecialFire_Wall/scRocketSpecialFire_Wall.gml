@@ -4,9 +4,8 @@
 //initialize variables
 var hit = argument0;
 
-
 //If you're hitting a wall that you shoot
-if(hit.shootable && !ignore_wall){
+if(hit.shootable && !rocket_map[? ROCKET_MAP.IGNORE_WALL]){
 
 	scRocketSpecialFire_Explode(2);
 }

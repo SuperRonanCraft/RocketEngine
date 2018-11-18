@@ -15,15 +15,3 @@ part_emitter_region(global.ParticleSystem1,global.Emitter1,x- (facing*((x - bbox
 part_emitter_burst(global.ParticleSystem1,global.Emitter1,oParticleHandler.partIce,4);
 
 //This bit is useful for ensuring no crash occurs by instance destruction
-if(destroy){
-	
-	//If the rocket needs to check an instance (like another rocket)
-	//collideRocket is set to 1 to destroy AFTER the checks are done
-	if(collideRocket > 0){
-		collideRocket--;	
-	}
-	
-	else{
-		instance_destroy();	
-	}
-}

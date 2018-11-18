@@ -1,8 +1,9 @@
 /// @desc Explosion
 var xplo = instance_create_depth(x, y, 10, oExplosion);
-xplo.damage = rocket_map[? ROCKET_MAP.DAMAGE];
-xplo.sprite_index = rocket_map[? ROCKET_MAP.EXPLOSION];
+xplo.sprite_index = rocket_map[? ROCKET_MAP.EXPLOSION_SPRITE];
 xplo.image_speed = 1.5;
+xplo.image_xscale = size;
+xplo.image_yscale = size;
 xplo.parent = owner;
 xplo.buff = rocket_map[? ROCKET_MAP.BUFF];
 var part = rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION];

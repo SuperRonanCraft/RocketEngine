@@ -12,12 +12,14 @@ target = noone;
 //specials = noone;
 //Maximum up-time
 timer = 100;
+//Size of explosion
+size = 1;
 //Ignore walls
 //ignore_wall = false;
 //Rocket buff type
 //buff = noone;
 //Destroy variable for explosions
-//destroy = false;
+destroy = false;
 
 //Simple check for rocket collisions (doubles as a timer)
-//collideRocket = 0;
+collideRocket = 0;
