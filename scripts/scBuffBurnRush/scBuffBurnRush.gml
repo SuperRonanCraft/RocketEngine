@@ -21,17 +21,14 @@ if(scFindBuff(owner.buffs, BUFFTYPE.CHILLED) || clock > dsBuff[? "time"]){
 	owner.move_adj -= dsBuff[? "overallSpeed"];	
 	//Remove Burn Rush
 	scRemoveBuff(owner.buffs, dsBuff);
-}
-else{
+} else {
 	//Create a new item in the DS Map so that it isn't saved to the object
-	dsBuff[? "speedup"] = owner.walksp* (1 - ( (clock)/(dsBuff[? "time"])));
+	dsBuff[? "speedup"] = owner.walksp * (1 - (clock / (dsBuff[? "time"])));
 	owner.move_adj -= dsBuff[? "overallSpeed"];
 	owner.move_adj += dsBuff[? "speedup"];
 	dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];
-	
-	
 	//Otherwise, the buff is still active, and create a visual indicator
-	part_particles_create(global.ParticleSystem1,x + irandom_range(-10,10), y + irandom_range(-15,15) , dsBuff[? "particle"],(abs( (clock - dsBuff[? "time"]) ) + 1) );
+	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), dsBuff[? "particle"], (abs(clock - dsBuff[? "time"]) + 1) );
 	//Also, increaase the clock. Essential for every buff.
 	dsBuff[? "clock"]++;
 }

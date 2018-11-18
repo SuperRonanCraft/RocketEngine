@@ -84,6 +84,23 @@ ds_map_add(weapons[6], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialFire_Rocket);
 ds_map_add(weapons[6], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
 ds_map_add(weapons[6], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
 
+//SAND
+weapons[7] = ds_map_create();
+ds_map_add(weapons[7], ROCKET_MAP.TYPE, ROCKET.SAND);
+ds_map_add(weapons[7], ROCKET_MAP.NAME, "Sandy Rocket");
+ds_map_add(weapons[7], ROCKET_MAP.RECOIL, 5);
+ds_map_add(weapons[7], ROCKET_MAP.PROJECTILE, sRocket_Sand);
+ds_map_add(weapons[7], ROCKET_MAP.COOLDOWN, 100);
+ds_map_add(weapons[7], ROCKET_MAP.SPEED, 5);
+ds_map_add(weapons[7], ROCKET_MAP.DAMAGE, 0);
+ds_map_add(weapons[7], ROCKET_MAP.TIMER, 180);
+ds_map_add(weapons[7], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
+ds_map_add(weapons[7], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
+//ds_map_add(weapons[7], ROCKET_MAP.BUFF, [BUFFTYPE.BURNRUSH]);
+ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Sand);
+//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialFire_Rocket);
+//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
+//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
 
 enum ROCKET {
 	NONE = 0,
@@ -92,7 +109,8 @@ enum ROCKET {
 	HOMING = 3, 
 	REVERSE = 4, 
 	ICE = 5,
-	FIRE = 6
+	FIRE = 6,
+	SAND = 7
 }
 
 enum ROCKET_MAP {

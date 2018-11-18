@@ -14,9 +14,7 @@ if (clock == 0) {
 	dsBuff[? "slow"] = owner.walksp/2;
 	owner.move_adj -= dsBuff[? "slow"];
 	//This way it does not get changed/affected in any other way
-	
 }
-
 //If the internal clock reaches the time in seconds, expire
 if (scFindBuff(owner.buffs, BUFFTYPE.BURNRUSH) || clock > dsBuff[? "time"]) {
 	//Return to normal speed
@@ -27,8 +25,8 @@ if (scFindBuff(owner.buffs, BUFFTYPE.BURNRUSH) || clock > dsBuff[? "time"]) {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0) {
 		//One particle for each foot!
-		part_particles_create(global.ParticleSystem1,owner.x - ((owner.x - owner.bbox_right)/2),owner.y + (owner.bbox_bottom - owner.y), dsBuff[? "particle"], 1);
-		part_particles_create(global.ParticleSystem1,owner.x + ((owner.x - owner.bbox_right)/2),owner.y + (owner.bbox_bottom - owner.y), dsBuff[? "particle"], 1);
+		part_particles_create(global.ParticleSystem1, owner.x - ((owner.x - owner.bbox_right)/2), owner.y + (owner.bbox_bottom - owner.y), dsBuff[? "particle"], 1);
+		part_particles_create(global.ParticleSystem1, owner.x + ((owner.x - owner.bbox_right)/2), owner.y + (owner.bbox_bottom - owner.y), dsBuff[? "particle"], 1);
 	}
 	//Also, increaase the clock. Essential for every buff.
 	dsBuff[? "clock"]++;
