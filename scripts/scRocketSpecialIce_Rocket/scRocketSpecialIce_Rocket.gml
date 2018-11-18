@@ -12,22 +12,16 @@ if(hit.owner != owner){
 	//rocket finishes it's checks on (this) rocket.
 	//Basically: Always include it in rocket-rocket collisions
 	collideRocket = 1;
-	
 	//If you hit an ice rocket, explode 3x as much
-	if(hit.name == "Ice Rocket"){
+	if(hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
 		scRocketSpecialIce_Explode(3);
-	}
-	
 	//But if you hit a fire rocket, minimize your explosion.
-	else if(hit.name == "Fire Rocket"){
+	else if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
 		scRocketSpecialIce_Explode(0);	
-	}
-	
 	//Otherwise, a smaller explosion mostly to show what happened
 	//This can still hurt/affect the opposing player if they are close enough
-	else{
+	else
 		scRocketSpecialIce_Explode(1.5);	
-	}
 }
 
 //This script runs if the object hits another rocket object.

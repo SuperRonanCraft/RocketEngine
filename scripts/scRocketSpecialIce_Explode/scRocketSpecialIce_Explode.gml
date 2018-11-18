@@ -17,10 +17,10 @@ xplo.image_xscale = size;
 xplo.image_yscale = size;
 xplo.image_speed = 1.5;
 xplo.parent = owner;
-xplo.friendlyFire = friendlyFire;
+ds_map_copy(xplo.rocket_map, rocket_map);
 
 //All variables before this should be standard for all rockets. The one difference typically lies here:
-xplo.stepScript = scRocketSpecialIce_ExplosionStep;
+//xplo.stepScript = scRocketSpecialIce_ExplosionStep;
 //This script describes how the explosion behaves. It is essential, otherwise it will not do anything.
 //Check the above script for more details.
 

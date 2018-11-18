@@ -50,7 +50,7 @@ current_recoil = max(0, floor(current_recoil * 0.8));
 
 //Reload
 if (ammo == 0)
-	if (current_reload > reload_time) {
+	if (current_reload > rocket_map[? ROCKET_MAP.RELOAD_TIME]) {
 		ammo = rocket_map[? ROCKET_MAP.CLIP];
 		current_reload = 0;
 	} else

@@ -3,7 +3,7 @@
 
 //parent shooter (player that shot)
 parent = noone;
-rocket_map = 0;
+rocket_map = ds_map_create();
 
 hitList = ds_list_create();
 confirmList = ds_list_create();
@@ -13,4 +13,3 @@ confirmList = ds_list_create();
 //If it can hurt/affect the owner
 //friendlyFire = false;
 destroy = false;
-buff = noone;

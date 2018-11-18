@@ -5,7 +5,7 @@ xplo.image_speed = 1.5;
 xplo.image_xscale = size;
 xplo.image_yscale = size;
 xplo.parent = owner;
-xplo.buff = rocket_map[? ROCKET_MAP.BUFF];
+ds_map_copy(xplo.rocket_map, rocket_map);
 var part = rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION];
 //All variables before this should be standard for all rockets. The one difference typically lies here:
 //xplo.stepScript = scRocketSpecialIce_ExplosionStep;

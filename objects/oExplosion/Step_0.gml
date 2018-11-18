@@ -5,8 +5,8 @@ for (var i = 0; i < ds_list_size(hitList); i++)
 		ds_list_add(confirmList, hitList[| i]);
 		with (hitList[| i])
 			scHitShootable(other.parent, false, true);
-		if (buff != noone)
-			scAddBuff(buff, hitList[| i]);
+		if (rocket_map[? ROCKET_MAP.BUFF] != noone)
+			scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
 	}
 if (rocket_map[? ROCKET_MAP.EXPLOSION_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_STEP]);

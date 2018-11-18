@@ -19,7 +19,7 @@ xplo.image_xscale = size;
 xplo.image_yscale = size;
 xplo.image_speed = 1.5;
 xplo.parent = owner;
-xplo.buff = rocket_map[? ROCKET_MAP.BUFF];
+ds_map_copy(xplo.rocket_map, rocket_map);
 //xplo.friendlyFire = friendlyFire;
 
 //All variables before this should be standard for all rockets. The one difference typically lies here:
