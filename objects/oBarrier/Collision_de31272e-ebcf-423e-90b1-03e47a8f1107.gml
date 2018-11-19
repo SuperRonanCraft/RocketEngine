@@ -1,3 +1,4 @@
 /// @desc hit a rocket
-with (other)
-	instance_change(oHitSpark, true);
+if (!other.rocket_map[? ROCKET_MAP.IGNORE_WALL])
+	with (other)
+		event_user(0);

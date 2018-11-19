@@ -1,10 +1,11 @@
 /// @desc Hit a shootable
 /// @arg shooter-instance
-/// @arg delete
+/// @arg delete-the-hitting-object
 /// @arg play-sound-hit
+/// @arg damage
 
 if (argument0 != id) {
-	hp -= other.rocket_map[? ROCKET_MAP.DAMAGE];
+	hp -= argument3;
 	flash = 3;
 	hitfrom = other.direction;
 	if (argument1)

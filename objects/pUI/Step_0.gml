@@ -73,6 +73,7 @@ if (inputting) {
 		mouse_y_old = device_mouse_y_to_gui(0);
 		mouse_moving = true;
 	}
+	//Mouse support
 	if (mouse_moving) {
 		var centered = false;
 		var old_menu_option = menu_option[page];
@@ -95,6 +96,7 @@ if (inputting) {
 	}
 }
 
+//If Enter or Left-Clicking (both are set as enter) and we have a selection, execute the action
 if (key_enter && menu_option[page] != -1) {
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.script_runner: script_execute(ds_grid[# 2, menu_option[page]]); break;

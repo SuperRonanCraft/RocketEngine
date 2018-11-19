@@ -151,14 +151,6 @@
             }
         },
         {
-            "Key": "1326f1d8-2223-445a-aa10-6eeafe756cfa",
-            "Value": {
-                "id": "226237e8-ccce-4b45-b562-ffa96b944935",
-                "resourcePath": "sprites\\sSelectButtonB\\sSelectButtonB.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "136e1036-3526-4b29-b1a4-28f5cdd3ab17",
             "Value": {
                 "id": "a99ab972-d056-4f65-8744-e83a1dd4c194",
@@ -372,14 +364,6 @@
                 "id": "7b76da97-95cb-42d1-ae24-a85b59b09bb3",
                 "resourcePath": "views\\2c28dadb-53b8-4739-9267-93d099dd8ddd.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "2c585708-e6d6-4c5f-8dee-111dc32d1d20",
-            "Value": {
-                "id": "b344f35d-5e2d-4054-8f05-7b24fbf8dd66",
-                "resourcePath": "objects\\oHitSpark\\oHitSpark.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1531,6 +1515,14 @@
             "Value": {
                 "id": "881cbbe1-0b92-426a-a3d3-3afad3005c1f",
                 "resourcePath": "sprites\\sTitle\\sTitle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ec83a333-8351-4303-a669-d76f5b8d237a",
+            "Value": {
+                "id": "10bbfc0c-9a62-49fb-a55e-81403a726938",
+                "resourcePath": "sprites\\sSelectButtonB\\sSelectButtonB.yy",
                 "resourceType": "GMSprite"
             }
         },

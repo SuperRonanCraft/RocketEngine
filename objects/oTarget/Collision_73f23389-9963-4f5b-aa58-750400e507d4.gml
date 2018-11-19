@@ -1,7 +1,7 @@
 /// @desc hit add score
 if (shootable) {
 	with (other)
-		instance_change(oHitSpark, true);
+		event_user(0);
 	with (owner) {
 		points++;
 		points_scale += 1;
