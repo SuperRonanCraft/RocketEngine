@@ -1,8 +1,9 @@
+/// @desc Wait delay before starting stage, if allowed to play, call countdown delay every second
 if (wait_timer > 0) {
 	wait_timer_current--;
 	if (wait_timer_current == 0) {
 		wait_timer--;
-		wait_timer_scale = 2;
+		wait_timer_scale = 3;
 		wait_timer_current = room_speed;
 	}
 	wait_timer_scale = max(wait_timer_scale * 0.95, 1);

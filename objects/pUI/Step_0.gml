@@ -1,6 +1,6 @@
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
-var key_enter = keyboard_check_pressed(vk_enter);
+var key_enter = keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
 
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
 
@@ -61,20 +61,45 @@ if (inputting) {
 	}
 	var ochange = key_down - key_up;
 	if (ochange != 0) {
+		mouse_moving = false;
 		menu_option[page] += ochange;
 		if (menu_option[page] > ds_height - 1)
 			menu_option[page] = 0;
 		else if (menu_option[page] < 0)
 			menu_option[page] = ds_height - 1;
 		audio_play_sound(SOUND.UI_HOVER, 5, false);
+	} else if (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) {
+		mouse_x_old = device_mouse_x_to_gui(0);
+		mouse_y_old = device_mouse_y_to_gui(0);
+		mouse_moving = true;
+	}
+	if (mouse_moving) {
+		var centered = false;
+		var old_menu_option = menu_option[page];
+		for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+		if (menu_pages[page] == menu_pages_centered[i])
+			centered = true;
+		var set = false;
+		for (var i = 0; i < ds_grid_height(menu_pages[page]); i++) {
+			var yoffset = (y_buffer / 3);
+			var ycheck = i * y_buffer;
+			if (mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
+				menu_option[page] = i;
+				set = true;
+			}
+		}
+		if (!set)
+			menu_option[page] = -1;
+		else if (old_menu_option != menu_option[page])
+			audio_play_sound(SOUND.UI_HOVER, 5, false);
 	}
 }
 
-if (key_enter) {
+if (key_enter && menu_option[page] != -1) {
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.script_runner: script_execute(ds_grid[# 2, menu_option[page]]); break;
 		case menu_element_type.goto_room: SlideTransition(TRANS_MODE.GOTO, ds_grid[# 2, menu_option[page]]); break;
-		case menu_element_type.page_transfer: page = ds_grid[# 2, menu_option[page]]; break;
+		case menu_element_type.page_transfer: page = ds_grid[# 2, menu_option[page]]; menu_option[page] = -1; break;
 		case menu_element_type.slider:
 		case menu_element_type.shift:
 		case menu_element_type.toggle: if (inputting) {

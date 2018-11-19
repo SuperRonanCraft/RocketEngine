@@ -13,6 +13,7 @@ rocket_map[? ROCKET_MAP.SPECIALS] = noone; //Special scripts
 rocket_map[? ROCKET_MAP.TIMER] = -1; //Up-time
 rocket_map[? ROCKET_MAP.IGNORE_WALL] = false; //allow wall clipping
 rocket_map[? ROCKET_MAP.NAME] = "default";
+rocket_map[? ROCKET_MAP.TYPE] = ROCKET.NONE;
 rocket_map[? ROCKET_MAP.BUFF] = noone;
 rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone;

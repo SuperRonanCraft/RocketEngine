@@ -49,5 +49,5 @@ menu_pages = [ds_menu_main, ds_settings, ds_menu_audio, ds_menu_graphics, ds_men
 menu_pages_centered = [ds_menu_main, ds_settings];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
-	menu_option[i] = 0;
+	menu_option[i] = -1;
 depth -= 1;

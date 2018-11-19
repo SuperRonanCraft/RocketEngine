@@ -1,4 +1,5 @@
 /// @desc Count down
-timer_current--;
-if (enabled && timer_current <= 0)
+if (timer_current > 0)
+	timer_current--;
+else if (enabled)
 	global.play = false;

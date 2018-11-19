@@ -1,5 +1,6 @@
 /// @desc Player died? Are there more on their team alive?
 // No? Declare who won, go to stage select
+// Should be called from the (scHitShootable script)
 /// @arg player-inst
 
 //var player = argument0

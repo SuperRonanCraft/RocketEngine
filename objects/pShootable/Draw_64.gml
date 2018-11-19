@@ -7,7 +7,7 @@ var sidepos = team == TEAM.LEFT ? hpwidth * 11 - 2 : RES_W - hpwidth * 2 ;
 //Display health
 var offset = 0;
 for (var i = 0; i < hp_original; i++) {
-	//Offset ever 10 hearts
+	//Offset every 10 hearts
 	if (i mod 10 == 0)
 		offset++;
 	//Weird math
@@ -15,11 +15,11 @@ for (var i = 0; i < hp_original; i++) {
 	//Change every 10 hearts
 	var ypos = offset * (hpheight + 2);
 	if (hp > i)
-		draw_sprite_ext(sHealth, 0, xpos, ypos, hpscale, hpscale, 0, c_white, 1);
+		draw_sprite_ext(hpsprite, 0, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
 	else
-		draw_sprite_ext(sHealth, 1, xpos, ypos, hpscale, hpscale, 0, c_white, 1);
+		draw_sprite_ext(hpsprite, 1, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
 }
-//Display buffs
+//Display Buffs
 for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Display in a straight line down
 	var ds_list = buffs[| i];
@@ -33,4 +33,17 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	var xpos = team == TEAM.LEFT ? 2 : RES_W - (w / 2) - 2;
 	var ypos = i * (h / 2 + 2) + 50;
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 1 - (alpha / 100));
+}
+//Display Rocket Equipped
+if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
+	//The icon set in the buff
+	var sprite = rocket_map[? ROCKET_MAP.PROJECTILE];
+	//Dimentions
+	var w = sprite_get_width(sprite);
+	var h = sprite_get_height(sprite);
+	//Weird math
+	var xpos = team == TEAM.LEFT ? RES_W / 4 - w / 3 : RES_W / 2 + RES_W / 4 + w / 3;
+	var ypos = h / 2;
+	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
+	prj_scale = max(prj_scale * 0.95, 1);
 }

@@ -1,7 +1,7 @@
 draw_set_font(fPixel);
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
-var y_buffer = 64, x_buffer = 32;
-var start_y = (RES_H / 2) - ((((ds_height - 1) / 2 ) * y_buffer)), start_x = RES_W / 2;
+start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer);
+start_x = RES_W / 2;
 
 // Draw Pause
 var c = c_black;
@@ -10,14 +10,16 @@ var c = c_black;
 // Draw left
 draw_set_valign(fa_middle);
 draw_set_halign(fa_right);
-var ltx = start_x - x_buffer, lty, xo;
+var ltx = start_x - x_buffer, lty, xo, scale;
 var yy = 0; repeat (ds_height) {
+	scale = 1;
 	lty = start_y + (yy * y_buffer);
 	c = c_gray;
 	c2 = c_black;
 	xo = 0;
 	if (yy == menu_option[page]) {
 		c = c_orange;
+		scale = 1.2;
 		xo = -(x_buffer / 2);
 	}
 	var centered = false;
@@ -26,8 +28,8 @@ var yy = 0; repeat (ds_height) {
 			centered = true;
 	if (centered) {
 		draw_set_halign(fa_middle);
-		draw_text_color(start_x + 2, lty + 2, ds_grid[# 0, yy], c2, c2, c2, c2, 1);
-		draw_text_color(start_x, lty, ds_grid[# 0, yy], c, c, c, c, 1);
+		draw_text_transformed_color(start_x + 2, lty + 2, ds_grid[# 0, yy], scale, scale, 0, c2, c2, c2, c2, 1);
+		draw_text_transformed_color(start_x, lty, ds_grid[# 0, yy], scale, scale, 0, c, c, c, c, 1);
 		draw_set_halign(fa_right);
 	} else {
 		draw_text_color(ltx + xo + 2, lty + 2, ds_grid[# 0, yy], c2, c2, c2, c2, 1);

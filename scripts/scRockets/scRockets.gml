@@ -3,11 +3,12 @@
 
 //UNARMED
 weapons[0] = ds_map_create();
+ds_map_add(weapons[0], ROCKET_MAP.TYPE, ROCKET.NONE);
 ds_map_add(weapons[0], ROCKET_MAP.DAMAGE, 0);
 
 //DEFAULT
 weapons[1] = ds_map_create();
-ds_map_add(weapons[1], ROCKET_MAP.TYPE, ROCKET.NONE);
+ds_map_add(weapons[1], ROCKET_MAP.TYPE, ROCKET.DEFAULT);
 ds_map_add(weapons[1], ROCKET_MAP.RECOIL, 2);
 ds_map_add(weapons[1], ROCKET_MAP.PROJECTILE, sRocket_Default);
 ds_map_add(weapons[1], ROCKET_MAP.COOLDOWN, 20);

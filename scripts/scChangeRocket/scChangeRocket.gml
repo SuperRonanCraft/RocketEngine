@@ -15,3 +15,4 @@ for (var i = 0; i <	ds_map_size(wp_map); i++) {
 	show_debug_message(string(key));
 }
 ammo = rocket_map[? ROCKET_MAP.CLIP];
+prj_scale = 2;
