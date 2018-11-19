@@ -13,10 +13,6 @@ global.key_p2_shoot = vk_down;
 //Players id
 global.players = 0;
 
-//Teams
-global.team1 = 0;
-global.team2 = 0;
-
 //The resolution the game will run at
 #macro RES_W 1024
 #macro RES_H 768
@@ -52,4 +48,12 @@ global.fullscreen = false;
 //Keybinds
 enum KEYBIND {
 	PLAYER1, PLAYER2, PLAYER3, PLAYER4
+}
+
+//Teams
+global.teamLeft = ds_list_create();
+global.teamRight = ds_list_create();
+
+enum TEAM {
+	PLAYERID, LEFT, RIGHT
 }

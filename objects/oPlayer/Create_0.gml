@@ -12,6 +12,7 @@ scKeybindsSet(keys);
 scRockets(ROCKET.DEFAULT);
 //Display health
 event_inherited();
+scTeamAdd(id, team);
 
 //Buffs/Debuffs
 buffs = ds_list_create();

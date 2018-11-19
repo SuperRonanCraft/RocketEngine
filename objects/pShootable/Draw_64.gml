@@ -3,7 +3,7 @@ if (display != DISPLAYTYPE.SCREEN)
 	exit;
 hpscale = max(hpscale * 0.95, 1);
 //Left by default
-var sidepos = team == TEAM.LEFT ? width * 11 - 2 : RES_W - width * 2 ;
+var sidepos = team == TEAM.LEFT ? hpwidth * 11 - 2 : RES_W - hpwidth * 2 ;
 //Display health
 var offset = 0;
 for (var i = 0; i < hp_original; i++) {
@@ -11,9 +11,9 @@ for (var i = 0; i < hp_original; i++) {
 	if (i mod 10 == 0)
 		offset++;
 	//Weird math
-	var xpos = (sidepos - (width * 10)) + (i mod 10) * (width + 2);
+	var xpos = (sidepos - (hpwidth * 10)) + (i mod 10) * (hpwidth + 2);
 	//Change every 10 hearts
-	var ypos = offset * (height + 2);
+	var ypos = offset * (hpheight + 2);
 	if (hp > i)
 		draw_sprite_ext(sHealth, 0, xpos, ypos, hpscale, hpscale, 0, c_white, 1);
 	else
