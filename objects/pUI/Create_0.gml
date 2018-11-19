@@ -13,3 +13,7 @@ menu_option = 0;
 inputting = false;
 depth -= 1;
 checked = false;
+
+//Mouse control
+mouse_x_old = 0;
+mouse_y_old = 0;

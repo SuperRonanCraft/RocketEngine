@@ -14,8 +14,6 @@ ds_menu_main = scCreateMenuPage(
 	["EXIT  TO  TITLE",	menu_element_type.script_runner,	exit_game],
 );
 
-ds_gamemodes = 0;
-
 ds_settings = scCreateMenuPage(
 	["AUDIO",			menu_element_type.page_transfer,	pause_page.audio],
 	["GRAPHICS",		menu_element_type.page_transfer,	pause_page.graphics],
@@ -47,6 +45,8 @@ ds_menu_controls = scCreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	pause_page.settings],
 );
 menu_pages = [ds_menu_main, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls];
+
+menu_pages_centered = [ds_menu_main, ds_settings];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	menu_option[i] = 0;

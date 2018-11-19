@@ -4,8 +4,8 @@
 hp_original = hp;
 hpscale = 1;
 hpsprite = sHealth;
-hpheight = sprite_get_height(sprite);
-hpwidth = sprite_get_width(sprite);
+hpheight = sprite_get_height(hpsprite);
+hpwidth = sprite_get_width(hpsprite);
 
 //Show when hit
 flash = 0;

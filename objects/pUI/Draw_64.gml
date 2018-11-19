@@ -20,7 +20,11 @@ var yy = 0; repeat (ds_height) {
 		c = c_orange;
 		xo = -(x_buffer / 2);
 	}
-	if (menu_pages[page] == ds_gamemodes || menu_pages[page] == ds_menu_main || menu_pages[page] == ds_settings) {
+	var centered = false;
+	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+		if (menu_pages[page] == menu_pages_centered[i])
+			centered = true;
+	if (centered) {
 		draw_set_halign(fa_middle);
 		draw_text_color(start_x + 2, lty + 2, ds_grid[# 0, yy], c2, c2, c2, c2, 1);
 		draw_text_color(start_x, lty, ds_grid[# 0, yy], c, c, c, c, 1);
@@ -33,7 +37,11 @@ var yy = 0; repeat (ds_height) {
 }
 
 // Draw line
-if (menu_pages[page] != ds_gamemodes && menu_pages[page] != ds_menu_main && menu_pages[page] != ds_settings) {
+var centered = false;
+	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+		if (menu_pages[page] == menu_pages_centered[i])
+			centered = true;
+if (!centered) {
 	draw_set_color(c_black);
 	draw_line_width(start_x, start_y - y_buffer, start_x, lty + y_buffer, 2);
 }
