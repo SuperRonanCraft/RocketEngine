@@ -7,7 +7,7 @@ rocket_map = ds_map_create();
 
 hitList = ds_list_create();
 confirmList = ds_list_create();
-image_angle = choose(0, 90, 180, 360);
+image_angle = choose(0, 90, 180, 270);
 
 //stepScript = noone;
 

@@ -10,7 +10,7 @@ ds_map_add(weapons[0], ROCKET_MAP.DAMAGE, 0);
 weapons[1] = ds_map_create();
 ds_map_add(weapons[1], ROCKET_MAP.TYPE, ROCKET.DEFAULT);
 ds_map_add(weapons[1], ROCKET_MAP.RECOIL, 2);
-ds_map_add(weapons[1], ROCKET_MAP.PROJECTILE, sRocket_Default);
+ds_map_add(weapons[1], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.DEFAULT);
 ds_map_add(weapons[1], ROCKET_MAP.COOLDOWN, 20);
 ds_map_add(weapons[1], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[1], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
@@ -20,7 +20,7 @@ ds_map_add(weapons[1], ROCKET_MAP.SHAKE_FRAMES, 10);
 weapons[2] = ds_map_create();
 ds_map_add(weapons[2], ROCKET_MAP.TYPE, ROCKET.FAST);
 ds_map_add(weapons[2], ROCKET_MAP.RECOIL, 3);
-ds_map_add(weapons[2], ROCKET_MAP.PROJECTILE, sRocket_Fast);
+ds_map_add(weapons[2], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.FAST);
 ds_map_add(weapons[2], ROCKET_MAP.COOLDOWN, 5);
 ds_map_add(weapons[2], ROCKET_MAP.SPEED, 22);
 ds_map_add(weapons[2], ROCKET_MAP.CLIP, 5);
@@ -33,7 +33,7 @@ weapons[3] = ds_map_create();
 ds_map_add(weapons[3], ROCKET_MAP.TYPE, ROCKET.HOMING);
 ds_map_add(weapons[3], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[3], ROCKET_MAP.DAMAGE, 2);
-ds_map_add(weapons[3], ROCKET_MAP.PROJECTILE, sRocket_Homing);
+ds_map_add(weapons[3], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
 ds_map_add(weapons[3], ROCKET_MAP.COOLDOWN, 60);
 ds_map_add(weapons[3], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[3], ROCKET_MAP.TIMER, 120);
@@ -46,7 +46,7 @@ ds_map_add(weapons[3], ROCKET_MAP.SHAKE_FRAMES, 15);
 weapons[4] = ds_map_create();
 ds_map_add(weapons[4], ROCKET_MAP.TYPE, ROCKET.REVERSE);
 ds_map_add(weapons[4], ROCKET_MAP.RECOIL, 5);
-ds_map_add(weapons[4], ROCKET_MAP.PROJECTILE, sRocket_Reverse);
+ds_map_add(weapons[4], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.REVERSE);
 ds_map_add(weapons[4], ROCKET_MAP.COOLDOWN, 40);
 ds_map_add(weapons[4], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[4], ROCKET_MAP.OFFSET, 10);
@@ -61,7 +61,7 @@ weapons[5] = ds_map_create();
 ds_map_add(weapons[5], ROCKET_MAP.TYPE, ROCKET.ICE);
 ds_map_add(weapons[5], ROCKET_MAP.NAME, "Ice Rocket");
 ds_map_add(weapons[5], ROCKET_MAP.RECOIL, 5);
-ds_map_add(weapons[5], ROCKET_MAP.PROJECTILE, sRocket_Ice);
+ds_map_add(weapons[5], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.ICE);
 ds_map_add(weapons[5], ROCKET_MAP.COOLDOWN, 40);
 ds_map_add(weapons[5], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[5], ROCKET_MAP.TIMER, 180);
@@ -81,7 +81,7 @@ weapons[6] = ds_map_create();
 ds_map_add(weapons[6], ROCKET_MAP.TYPE, ROCKET.FIRE);
 ds_map_add(weapons[6], ROCKET_MAP.NAME, "Fire Rocket");
 ds_map_add(weapons[6], ROCKET_MAP.RECOIL, 5);
-ds_map_add(weapons[6], ROCKET_MAP.PROJECTILE, sRocket_Fire);
+ds_map_add(weapons[6], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.FIRE);
 ds_map_add(weapons[6], ROCKET_MAP.COOLDOWN, 50);
 ds_map_add(weapons[6], ROCKET_MAP.SPEED, 13);
 ds_map_add(weapons[6], ROCKET_MAP.DAMAGE, 1);
@@ -102,7 +102,7 @@ weapons[7] = ds_map_create();
 ds_map_add(weapons[7], ROCKET_MAP.TYPE, ROCKET.SAND);
 ds_map_add(weapons[7], ROCKET_MAP.NAME, "Sandy Rocket");
 ds_map_add(weapons[7], ROCKET_MAP.RECOIL, 5);
-ds_map_add(weapons[7], ROCKET_MAP.PROJECTILE, sRocket_Sand);
+ds_map_add(weapons[7], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SAND);
 ds_map_add(weapons[7], ROCKET_MAP.COOLDOWN, 100);
 ds_map_add(weapons[7], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[7], ROCKET_MAP.DAMAGE, 0);
@@ -126,6 +126,11 @@ enum ROCKET {
 	ICE = 5,
 	FIRE = 6,
 	SAND = 7
+}
+
+enum ROCKET_SPRITE {
+	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
+	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand
 }
 
 enum ROCKET_MAP {

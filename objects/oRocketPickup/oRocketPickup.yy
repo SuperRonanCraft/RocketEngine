@@ -74,7 +74,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET.HOMING",
+            "value": "ROCKET_SPRITE.DEFAULT",
             "varName": "rocket",
             "varType": 4
         },

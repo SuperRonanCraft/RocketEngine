@@ -1,3 +1,2 @@
-scRockets(rocket);
-sprite = rocket_map[? ROCKET_MAP.PROJECTILE]
+sprite = rocket
 mask_index = sprite;
