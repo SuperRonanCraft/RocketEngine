@@ -9,6 +9,10 @@ draw_set_valign(fa_middle);
 draw_set_halign(fa_right);
 var ltx = start_x - x_buffer, lty, xo, scale;
 var yy = 0;
+var centered = false;
+	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+		if (menu_pages[page] == menu_pages_centered[i])
+			centered = true;
 repeat (ds_height) {
 	var c3 = c_gray;
 	scale = 1;
@@ -19,15 +23,10 @@ repeat (ds_height) {
 		scale = 1.2;
 		xo = -(x_buffer / 2);
 	}
-	var centered = false;
-	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
-		if (menu_pages[page] == menu_pages_centered[i])
-			centered = true;
 	if (centered) {
 		draw_set_halign(fa_middle);
 		draw_text_transformed_color(start_x + 2, lty + 2, ds_grid[# 0, yy], scale, scale, 0, c, c, c, c, 1);
 		draw_text_transformed_color(start_x, lty, ds_grid[# 0, yy], scale, scale, 0, c3, c3, c3, c3, 1);
-		draw_set_halign(fa_right);
 	} else {
 		draw_text_color(ltx + xo + 2, lty + 2, ds_grid[# 0, yy], c, c, c, c, 1);
 		draw_text_color(ltx + xo, lty, ds_grid[# 0, yy], c3, c3, c3, c3, 1);
@@ -36,12 +35,8 @@ repeat (ds_height) {
 }
 
 // Draw line
-var centered = false;
-	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
-		if (menu_pages[page] == menu_pages_centered[i])
-			centered = true;
 if (!centered) 
-	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 2, c, c);
+	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 3, c, c);
 
 // Draw right
 draw_set_halign(fa_left);
@@ -96,7 +91,7 @@ repeat (ds_height) {
 				default: string_val = chr(current_val); break;
 			}
 			c = c_ltgray;
-			if (inputting && yy == menu_option[page]) c = c_yellow;
+			if (inputting && yy == menu_option[page]){ c = c_yellow; string_val = string_val + " | Press any key!"}
 			c2 = c_black
 			draw_text_transformed_color(rtx + 2, rty + 2, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 			draw_text_transformed_color(rtx, rty, string_val, 0.6, 0.6, 0, c, c, c, c, 1);

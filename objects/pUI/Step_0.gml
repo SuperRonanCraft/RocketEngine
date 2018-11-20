@@ -24,9 +24,28 @@ if (inputting) {
 				case 2: 
 			}*/
 			var hinput = keyboard_check(vk_right) - keyboard_check(vk_left);
+			//mouse_moving = false;
 			if (hinput != 0) {
 				var val = ds_grid[# 4, menu_option[page]] + hinput * 0.01;
 				ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
+			/*	mouse_moving = false;
+				break;
+			} else if (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) {
+				mouse_x_old = device_mouse_x_to_gui(0);
+				mouse_y_old = device_mouse_y_to_gui(0);
+				mouse_move = true;
+			}
+			//Mouse support
+			if (mouse_moving) {
+				var xleft = start_x + x_buffer;
+				if (mouse_x_old >= xleft) {
+					var ycheck = i * y_buffer;
+					if (mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
+						menu_option[page] = i;
+						set = true;
+					}
+				}
+			}*/
 			}
 			break;
 		case menu_element_type.toggle:
@@ -38,8 +57,10 @@ if (inputting) {
 			}
 			break;
 		case menu_element_type.input:
-			var key = keyboard_lastkey;
-			if (key != vk_enter && key != variable_global_get(ds_grid[# 2, menu_option[page]])) {
+			var key = noone;
+			if (keyboard_check_pressed(vk_anykey))
+				key = keyboard_lastkey;
+			if (key != noone && key != vk_enter && key != variable_global_get(ds_grid[# 2, menu_option[page]])) {
 				//AUDIO
 				variable_global_set(ds_grid[# 2, menu_option[page]], key);
 				for (var i = 0; i < instance_number(oPlayer); i ++)
