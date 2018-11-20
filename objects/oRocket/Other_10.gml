@@ -18,4 +18,5 @@ if (part != noone) {
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, 15*1);
 }
 //Delete this instance of oRocket
-instance_destroy();
+//instance_destroy();
+destroy = true;

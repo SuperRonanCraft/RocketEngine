@@ -1,3 +1,5 @@
 /// @desc hit a rocket
+
+//ABSOLUTELY 100% TEMPORARY
 with (other)
-	instance_change(oHitSpark, true);
+	instance_change(oExplosion, true);

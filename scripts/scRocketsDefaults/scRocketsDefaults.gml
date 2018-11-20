@@ -23,7 +23,7 @@ rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone;
 rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 rocket_map[? ROCKET_MAP.SHAKE_FRAMES] = 8;
 //EXPLOSIONS
-rocket_map[? ROCKET_MAP.EXPLOSION_SPRITE] = sHit_Spark;
+rocket_map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Default;
 rocket_map[? ROCKET_MAP.EXPLOSION_ROCKET] = noone;
 rocket_map[? ROCKET_MAP.EXPLOSION_WALL] = noone;
 rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = noone;
