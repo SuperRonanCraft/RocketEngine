@@ -1,3 +1,6 @@
+if (!control)
+	exit;
+
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
 var key_enter = keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
@@ -46,6 +49,7 @@ if (inputting) {
 			break;
 	}
 } else {
+	//Reload global vars
 	if (!checked) {
 		for (var a = 0; a < array_length_1d(menu_pages); a++)
 			var ds_g_main = menu_pages[a];
@@ -59,6 +63,7 @@ if (inputting) {
 			}
 		checked = true;
 	}
+	//Key controls
 	var ochange = key_down - key_up;
 	if (ochange != 0) {
 		mouse_moving = false;
@@ -100,8 +105,15 @@ if (inputting) {
 if (key_enter && menu_option[page] != -1) {
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.script_runner: script_execute(ds_grid[# 2, menu_option[page]]); break;
-		case menu_element_type.goto_room: SlideTransition(TRANS_MODE.GOTO, ds_grid[# 2, menu_option[page]]); break;
-		case menu_element_type.page_transfer: page = ds_grid[# 2, menu_option[page]]; menu_option[page] = -1; break;
+		case menu_element_type.goto_room: SlideTransition(TRANS_MODE.GOTO, ds_grid[# 2, menu_option[page]]); control = false; break;
+		case menu_element_type.page_transfer: 
+			for (var i = 0; i < array_length_1d(menu_pages_index); i++)
+				if (menu_pages_index[i] == ds_grid[# 2, menu_option[page]]) {
+					menu_option[page] = -1;
+					page = i;
+					break;
+				}
+			break;
 		case menu_element_type.slider:
 		case menu_element_type.shift:
 		case menu_element_type.toggle: if (inputting) {

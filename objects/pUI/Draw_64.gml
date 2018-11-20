@@ -3,22 +3,19 @@ var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
 start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer);
 start_x = RES_W / 2;
 
-// Draw Pause
 var c = c_black;
-//draw_rectangle_color(0, 0, RES_W, RES_H, c, c, c, c, false);
-
 // Draw left
 draw_set_valign(fa_middle);
 draw_set_halign(fa_right);
 var ltx = start_x - x_buffer, lty, xo, scale;
-var yy = 0; repeat (ds_height) {
+var yy = 0;
+repeat (ds_height) {
+	var c3 = c_gray;
 	scale = 1;
 	lty = start_y + (yy * y_buffer);
-	c = c_gray;
-	c2 = c_black;
 	xo = 0;
 	if (yy == menu_option[page]) {
-		c = c_orange;
+		c3 = c_orange;
 		scale = 1.2;
 		xo = -(x_buffer / 2);
 	}
@@ -28,12 +25,12 @@ var yy = 0; repeat (ds_height) {
 			centered = true;
 	if (centered) {
 		draw_set_halign(fa_middle);
-		draw_text_transformed_color(start_x + 2, lty + 2, ds_grid[# 0, yy], scale, scale, 0, c2, c2, c2, c2, 1);
-		draw_text_transformed_color(start_x, lty, ds_grid[# 0, yy], scale, scale, 0, c, c, c, c, 1);
+		draw_text_transformed_color(start_x + 2, lty + 2, ds_grid[# 0, yy], scale, scale, 0, c, c, c, c, 1);
+		draw_text_transformed_color(start_x, lty, ds_grid[# 0, yy], scale, scale, 0, c3, c3, c3, c3, 1);
 		draw_set_halign(fa_right);
 	} else {
-		draw_text_color(ltx + xo + 2, lty + 2, ds_grid[# 0, yy], c2, c2, c2, c2, 1);
-		draw_text_color(ltx + xo, lty, ds_grid[# 0, yy], c, c, c, c, 1);
+		draw_text_color(ltx + xo + 2, lty + 2, ds_grid[# 0, yy], c, c, c, c, 1);
+		draw_text_color(ltx + xo, lty, ds_grid[# 0, yy], c3, c3, c3, c3, 1);
 	}
 	yy++;
 }
@@ -43,15 +40,14 @@ var centered = false;
 	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
 		if (menu_pages[page] == menu_pages_centered[i])
 			centered = true;
-if (!centered) {
-	draw_set_color(c_black);
-	draw_line_width(start_x, start_y - y_buffer, start_x, lty + y_buffer, 2);
-}
+if (!centered) 
+	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 2, c, c);
 
 // Draw right
 draw_set_halign(fa_left);
 var rtx = start_x + x_buffer, rty;
-yy = 0; repeat (ds_height) {
+yy = 0;
+repeat (ds_height) {
 	rty = start_y + (yy * y_buffer);
 	switch (ds_grid[# 1, yy]) {
 		case menu_element_type.shift:
@@ -73,8 +69,7 @@ yy = 0; repeat (ds_height) {
 			c = c_ltgray;
 			c2 = c_black;
 			if (inputting && yy == menu_option[page]) c = c_yellow;
-			draw_set_color(c);
-			draw_line_width(rtx, rty, rtx + len, rty, 4);
+			draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
 			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
 			draw_text_transformed_color(rtx + (len * 1.2) + 2, rty + 2, string(floor(circle_pos * 100)) + "%", 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 			draw_text_transformed_color(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", 0.6, 0.6, 0, c, c, c, c, 1);

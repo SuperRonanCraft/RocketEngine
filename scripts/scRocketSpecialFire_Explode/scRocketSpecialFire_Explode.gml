@@ -23,8 +23,8 @@ ds_map_copy(xplo.rocket_map, rocket_map);
 //xplo.friendlyFire = friendlyFire;
 
 //All variables before this should be standard for all rockets. The one difference typically lies here:
-xplo.stepScript = scRocketSpecialFire_ExplosionStep;
-instance_destroy();
+//xplo.stepScript = scRocketSpecialFire_ExplosionStep;
+//instance_destroy();
 
 
 part_emitter_region(global.ParticleSystem1,global.Emitter1,x-(size*30),x+(size*30),y- (size*10),y+(size*10),ps_shape_ellipse,ps_distr_gaussian);
