@@ -8,4 +8,7 @@ timer_room = 0;
 wait_timer = 3;
 wait_timer_current = room_speed + 10;
 wait_timer_scale = 1;
+//Kinda like pausing, but for specific objects like a player
 global.play = false;
+//Create a camera object for the screen shake and ability to manipulate viewport
+instance_create_depth(0,0, depth, oCamera);

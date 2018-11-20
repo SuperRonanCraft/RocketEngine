@@ -13,6 +13,7 @@ if (argument0 != -1)
 //Rocket
 if (current_delay == 0) {
 	if (ammo != 0) {
+		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
 		with (instance_create_depth(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth - 1, oRocket)) {
 			direction = dir;
@@ -21,10 +22,10 @@ if (current_delay == 0) {
 			owner = other;
 			rocket_map = other.rocket_map;
 			timer = other.rocket_map[? ROCKET_MAP.TIMER];
-			/*specialCollideRocket = other.specialCollideRocket;
-			specialCollideShootable = other.specialCollideShootable;
-			specialCollideWall = other.specialCollideWall;*/
 			owner.rockets++;
+			//Run custom creation script for rocket, no instances of shooter as "owner" is already same variable
+			if (rocket_map[? ROCKET_MAP.CREATE_SCRIPT] != noone)
+				script_execute(rocket_map[? ROCKET_MAP.CREATE_SCRIPT]);
 			//Shot sound effect
 			audio_play_sound(other.rocket_map[? ROCKET_MAP.PROJECTILE_SOUND], 10, false);
 		}
