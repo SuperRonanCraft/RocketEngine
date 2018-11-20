@@ -17,6 +17,7 @@ if (part != noone) {
 	part_emitter_region(global.ParticleSystem1, global.Emitter1, x - (1*30), x + (1*30), y - (1*10), y + (1*10), ps_shape_ellipse, ps_distr_gaussian)
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, 15*1);
 }
+scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 //Delete this instance of oRocket
 //instance_destroy();
 destroy = true;

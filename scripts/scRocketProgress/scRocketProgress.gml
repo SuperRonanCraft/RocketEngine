@@ -35,7 +35,6 @@ if (current_delay == 0) {
 		//current_recoil = recoil;
 		
 		//Sound effects and screen shaking
-		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 		var sound = rocket_map[? ROCKET_MAP.PROJECTILE_SOUND];
 		audio_sound_pitch(sound, random_range(0.8, 1.2));
 		audio_play_sound(sound, 10, false);

@@ -75,6 +75,20 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "ROCKET_SPRITE.DEFAULT",
+            "varName": "rocket_sprite",
+            "varType": 4
+        },
+        {
+            "id": "d74013e5-7eb6-4832-90e8-1112bc012149",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "ROCKET.DEFAULT",
             "varName": "rocket",
             "varType": 4
         },

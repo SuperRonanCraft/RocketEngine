@@ -1,2 +1,1 @@
-sprite = rocket
-mask_index = sprite;
+mask_index = rocket_sprite;

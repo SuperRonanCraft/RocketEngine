@@ -27,6 +27,7 @@ ds_map_copy(xplo.rocket_map, rocket_map);
 //Particle explosion to look pretty.
 part_emitter_region(global.ParticleSystem1, global.Emitter1,x - (size*30),x + (size*30),y - (size*10),y + (size*10), ps_shape_ellipse, ps_distr_gaussian)
 part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SPARKLE],15*size);
+scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 sprite_index = noone;
 destroy = true;
 
