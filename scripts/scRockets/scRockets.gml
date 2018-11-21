@@ -125,9 +125,29 @@ ds_map_add(weapons[8], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[8], ROCKET_MAP.DAMAGE, 2);
 ds_map_add(weapons[8], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[8], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialLaser_Create);
-ds_map_add(weapons[8], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME]);
+ds_map_add(weapons[8], ROCKET_MAP.BUFF, [BUFFTYPE.COOLDOWN]);
 ds_map_add(weapons[8], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[8], ROCKET_MAP.SHAKE_FRAMES, 12);
+
+//SLIME
+weapons[9] = ds_map_create();
+ds_map_add(weapons[9], ROCKET_MAP.TYPE, ROCKET.SLIME);
+ds_map_add(weapons[9], ROCKET_MAP.NAME, "Slime Rocket");
+ds_map_add(weapons[9], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SLIME);
+ds_map_add(weapons[9], ROCKET_MAP.SPEED, 10);
+ds_map_add(weapons[9], ROCKET_MAP.DAMAGE, 0);
+ds_map_add(weapons[9], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME]);
+ds_map_add(weapons[9], ROCKET_MAP.COOLDOWN, 30);
+ds_map_add(weapons[9], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
+ds_map_add(weapons[9], ROCKET_MAP.SHAKE_FRAMES, 5);
+ds_map_add(weapons[9], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialSlime_Create);
+ds_map_add(weapons[9], ROCKET_MAP.ROCKET_STEP, scRocketSpecialSlime_Step);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_SPRITE, s_pSmokeScreen);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_CREATE, scRocketSpecialSlime_Exp_Create);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_STEP, scRocketSpecialSlime_Exp_Step);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialSlime_Exp_Shootable);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialSlime_Exp_Wall);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialSlime_Exp_Rocket);
 
 enum ROCKET {
 	NONE = 0,
@@ -138,13 +158,14 @@ enum ROCKET {
 	ICE = 5,
 	FIRE = 6,
 	SAND = 7,
-	LASER = 8
+	LASER = 8,
+	SLIME = 9
 }
 
 enum ROCKET_SPRITE {
 	//Mostly used to save memory on oRocketPickup, or to insta grab a rocket sprite
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
-	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser
+	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Laser
 }
 
 enum ROCKET_MAP {
