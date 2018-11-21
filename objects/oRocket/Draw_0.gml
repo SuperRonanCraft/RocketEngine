@@ -10,5 +10,5 @@ if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone) {
 	//Then bursts with the defined particle over at oParticleHandler
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, rocket_map[? ROCKET_MAP.PARTICLE_TRAIL], 1);
 }
-if (sprite_index != noone && !destroy)
+if (sprite_index != noone)
 	draw_self();
