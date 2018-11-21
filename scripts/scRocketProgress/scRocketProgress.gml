@@ -14,7 +14,7 @@ if (argument0 != -1)
 if (current_delay == 0) {
 	if (ammo != 0) {
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
-		with (instance_create_depth(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth - 1, oRocket)) {
+		with (instance_create_depth(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, oRocket)) {
 			direction = dir;
 			image_angle = direction;
 			sprite_index = other.rocket_map[? ROCKET_MAP.PROJECTILE];
@@ -23,8 +23,8 @@ if (current_delay == 0) {
 			timer = other.rocket_map[? ROCKET_MAP.TIMER];
 			owner.rockets++;
 			//Run custom creation script for rocket, no instances of shooter as "owner" is already same variable
-			if (rocket_map[? ROCKET_MAP.CREATE_SCRIPT] != noone)
-				script_execute(rocket_map[? ROCKET_MAP.CREATE_SCRIPT]);
+			if (rocket_map[? ROCKET_MAP.ROCKET_CREATE] != noone)
+				script_execute(rocket_map[? ROCKET_MAP.ROCKET_CREATE]);
 		}
 		ammo -= 1;
 		//Recoil code

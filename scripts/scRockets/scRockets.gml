@@ -37,7 +37,7 @@ ds_map_add(weapons[3], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
 ds_map_add(weapons[3], ROCKET_MAP.COOLDOWN, 60);
 ds_map_add(weapons[3], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[3], ROCKET_MAP.TIMER, 120);
-ds_map_add(weapons[3], ROCKET_MAP.SPECIALS, scRocketSpecialHoming);
+ds_map_add(weapons[3], ROCKET_MAP.ROCKET_STEP, scRocketSpecialHoming_Step);
 ds_map_add(weapons[3], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[3], ROCKET_MAP.SHAKE_MAGNITUDE, 7);
 ds_map_add(weapons[3], ROCKET_MAP.SHAKE_FRAMES, 15);
@@ -51,7 +51,8 @@ ds_map_add(weapons[4], ROCKET_MAP.COOLDOWN, 40);
 ds_map_add(weapons[4], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[4], ROCKET_MAP.OFFSET, 10);
 ds_map_add(weapons[4], ROCKET_MAP.TIMER, 180);
-ds_map_add(weapons[4], ROCKET_MAP.SPECIALS, scRocketSpecialReverse);
+ds_map_add(weapons[4], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialReverse_Create);
+ds_map_add(weapons[4], ROCKET_MAP.ROCKET_STEP, scRocketSpecialReverse_Step);
 ds_map_add(weapons[4], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[4], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[4], ROCKET_MAP.SHAKE_FRAMES, 6);
@@ -65,7 +66,6 @@ ds_map_add(weapons[5], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.ICE);
 ds_map_add(weapons[5], ROCKET_MAP.COOLDOWN, 40);
 ds_map_add(weapons[5], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[5], ROCKET_MAP.TIMER, 180);
-ds_map_add(weapons[5], ROCKET_MAP.SPECIALS, scRocketSpecialChilled);
 ds_map_add(weapons[5], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.ICE]);
 ds_map_add(weapons[5], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.WINTER]);
 ds_map_add(weapons[5], ROCKET_MAP.BUFF, [BUFFTYPE.CHILLED]);
@@ -86,7 +86,6 @@ ds_map_add(weapons[6], ROCKET_MAP.COOLDOWN, 50);
 ds_map_add(weapons[6], ROCKET_MAP.SPEED, 13);
 ds_map_add(weapons[6], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[6], ROCKET_MAP.TIMER, 180);
-ds_map_add(weapons[6], ROCKET_MAP.SPECIALS, scRocketSpecialBurnRush);
 ds_map_add(weapons[6], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.EMBER]);
 ds_map_add(weapons[6], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.FIRE2]);
 ds_map_add(weapons[6], ROCKET_MAP.BUFF, [BUFFTYPE.BURNRUSH]);
@@ -109,11 +108,7 @@ ds_map_add(weapons[7], ROCKET_MAP.DAMAGE, 0);
 ds_map_add(weapons[7], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[7], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[7], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
-//ds_map_add(weapons[7], ROCKET_MAP.BUFF, [BUFFTYPE.BURNRUSH]);
 ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Sand);
-//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialFire_Rocket);
-//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
-//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
 ds_map_add(weapons[7], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[7], ROCKET_MAP.SHAKE_FRAMES, 5);
 
@@ -127,11 +122,8 @@ ds_map_add(weapons[8], ROCKET_MAP.COOLDOWN, 50);
 ds_map_add(weapons[8], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[8], ROCKET_MAP.DAMAGE, 2);
 ds_map_add(weapons[8], ROCKET_MAP.IGNORE_WALL, true);
-ds_map_add(weapons[8], ROCKET_MAP.CREATE_SCRIPT, scRocketSpecialLaser_Create);
+ds_map_add(weapons[8], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialLaser_Create);
 ds_map_add(weapons[8], ROCKET_MAP.BUFF, [BUFFTYPE.COOLDOWN]);
-//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialFire_Rocket);
-//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
-//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
 ds_map_add(weapons[8], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[8], ROCKET_MAP.SHAKE_FRAMES, 12);
 
@@ -148,6 +140,7 @@ enum ROCKET {
 }
 
 enum ROCKET_SPRITE {
+	//Mostly used to save memory on oRocketPickup, or to insta grab a rocket sprite
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
 	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser
 }
@@ -155,7 +148,9 @@ enum ROCKET_SPRITE {
 enum ROCKET_MAP {
 	//BASIC VARIABLES
 	RECOIL, DAMAGE, PROJECTILE, PROJECTILE_SOUND, COOLDOWN, SPEED, OFFSET, STARTUP, CLIP,
-	RELOAD_TIME, SPECIALS, TIMER, IGNORE_WALL, NAME, BUFF, TYPE, CREATE_SCRIPT,
+	RELOAD_TIME, TIMER, IGNORE_WALL, NAME, BUFF, TYPE, 
+	//ROCKET EVENTS
+	ROCKET_CREATE, ROCKET_STEP,
 	//PARTICLES
 	PARTICLE_TRAIL, PARTICLE_EXPLOSION,
 	//CAMERA SHAKE

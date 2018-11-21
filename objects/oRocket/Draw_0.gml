@@ -1,5 +1,5 @@
-if (rocket_map[? ROCKET_MAP.SPECIALS] != noone)
-	script_execute(rocket_map[? ROCKET_MAP.SPECIALS]);
+if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
+	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
 if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone) {
 	//Particle emitter first gets placed around the back of the rocket
 	var facing = 1;

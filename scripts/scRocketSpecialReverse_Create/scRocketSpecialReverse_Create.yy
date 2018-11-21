@@ -1,8 +1,8 @@
 {
-    "id": "3088ea03-05a9-4d3b-b087-36b4e3976fb6",
+    "id": "52387e9e-387e-489a-aed1-d4b727d19097",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scRocketSpecialBurnRush",
+    "name": "scRocketSpecialReverse_Create",
     "IsCompatibility": false,
     "IsDnD": false
 }
