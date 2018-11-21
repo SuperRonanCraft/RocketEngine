@@ -13,4 +13,4 @@ image_angle = choose(0, 90, 180, 270);
 
 //If it can hurt/affect the owner
 //friendlyFire = false;
-destroy = false;
+destroy = true;
