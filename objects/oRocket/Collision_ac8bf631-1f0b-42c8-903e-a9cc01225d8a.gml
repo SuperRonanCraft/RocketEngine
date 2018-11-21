@@ -1,6 +1,5 @@
 /// @desc collide with rocket
 
-collideRocket = 1;
 //If the rocket is not from the same shooter
 if (other.owner != owner && !destroy) {
 	//Custom Explosion with another rocket script?
