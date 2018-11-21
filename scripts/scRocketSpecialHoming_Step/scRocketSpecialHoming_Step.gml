@@ -9,3 +9,5 @@ if (target != noone) {
 	for (var i = 0; i < instance_number(oPlayer); i += 1)
 		if (instance_find(oPlayer, i) != owner)
 			target = instance_find(oPlayer, i);
+x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED], direction);
+y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);

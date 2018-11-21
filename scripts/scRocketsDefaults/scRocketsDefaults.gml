@@ -15,8 +15,9 @@ rocket_map[? ROCKET_MAP.NAME] = "default";
 rocket_map[? ROCKET_MAP.TYPE] = ROCKET.NONE;
 rocket_map[? ROCKET_MAP.BUFF] = noone;
 //ROCKET EVENTS
-rocket_map[? ROCKET_MAP.ROCKET_CREATE] = noone;
-rocket_map[? ROCKET_MAP.ROCKET_STEP] = noone; //Special scripts
+rocket_map[? ROCKET_MAP.ROCKET_CREATE] = noone; //Event when a rocket is created (adds)
+rocket_map[? ROCKET_MAP.ROCKET_STEP] = noone; //Step event (overrides movement)
+rocket_map[? ROCKET_MAP.ROCKET_DRAW] = noone; //Draw event for rockets (adds)
 //PARTICLES
 rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone;

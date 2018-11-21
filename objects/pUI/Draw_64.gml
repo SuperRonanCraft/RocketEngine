@@ -1,7 +1,9 @@
 draw_set_font(fPixel);
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
-start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer);
+start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer) + (animated ? spawn_y : 0);
 start_x = RES_W / 2;
+if (animated)
+	spawn_y = max(spawn_y * 0.90, 0);
 
 var c = c_black;
 // Draw left

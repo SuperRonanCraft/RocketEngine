@@ -1,5 +1,6 @@
 /// @desc Toggle Pause
-if (!global.pause)
-	event_user(2);
-else
-	event_user(1);
+if (room != rMenu)
+	if (!global.pause)
+		event_user(2);
+	else
+		event_user(1);

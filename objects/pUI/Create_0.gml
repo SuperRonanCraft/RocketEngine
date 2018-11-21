@@ -87,6 +87,8 @@ x_buffer = 32;
 //Updates on each page
 start_y = 0;
 start_x = 0;
+spawn_x = RES_W / 4;
+spawn_y = RES_H / 2;
 //Is the mouse moving?
 mouse_moving = false;
 
