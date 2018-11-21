@@ -791,6 +791,14 @@
             }
         },
         {
+            "Key": "6530c244-fc42-42ec-bd1b-67a43f3c863c",
+            "Value": {
+                "id": "f37051f1-94f6-427e-953d-bf7cee0e1633",
+                "resourcePath": "sprites\\sTimerBar\\sTimerBar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6bf38d94-b56d-4cee-85ed-cd7081e4edeb",
             "Value": {
                 "id": "45754016-222f-43b5-9127-5558b8ace9f7",

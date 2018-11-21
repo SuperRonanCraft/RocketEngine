@@ -1,4 +1,4 @@
-/// @desc Display Health and Buff
+/// @desc Display Health, Buff n' Rocket
 if (display != DISPLAYTYPE.SCREEN)
 	exit;
 hpscale = max(hpscale * 0.95, 1);
@@ -20,7 +20,11 @@ for (var i = 0; i < hp_original; i++) {
 		draw_sprite_ext(hpsprite, 1, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
 }
 //Display Buffs
+offset = 0;
 for (var i = 0; i < ds_list_size(buffs); i++) {
+	//Offset every 10 buffs
+	if (i mod 10 == 0)
+		offset++;
 	//Display in a straight line down
 	var ds_list = buffs[| i];
 	//The icon set in the buff
@@ -30,8 +34,8 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	var h = sprite_get_height(sprite);
 	//Alpha to display icon (kidna like a timer to wear off)
 	var alpha = (ds_list[? "clock"] / ds_list[? "time"]) * 100;
-	var xpos = team == TEAM.LEFT ? 2 : RES_W - (w / 2) - 2;
-	var ypos = i * (h / 2 + 2) + 50;
+	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 4) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 4) * i);
+	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 1 - (alpha / 100));
 }
 //Display Rocket Equipped
