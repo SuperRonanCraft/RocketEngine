@@ -4,10 +4,10 @@
     "mvc": "1.1",
     "name": "aae2a45c-336d-40db-bf42-d0e9c0e20a52",
     "children": [
-        "61b25b39-b5fc-45e8-b3cb-5bcf5b0e6ab7"
+        "cd4b082d-2f94-4f5e-aa15-324b2078ecc9"
     ],
     "filterType": "GMScript",
-    "folderName": "FireSpecial",
+    "folderName": "Laser",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

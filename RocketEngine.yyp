@@ -735,10 +735,10 @@
             }
         },
         {
-            "Key": "61b25b39-b5fc-45e8-b3cb-5bcf5b0e6ab7",
+            "Key": "61a3a3c1-f3cb-46f8-a290-1ea6cb5be30a",
             "Value": {
-                "id": "6aa2d97e-462c-4088-a606-1850d40742a6",
-                "resourcePath": "scripts\\scRocketSpecialFirev2\\scRocketSpecialFirev2.yy",
+                "id": "48109f0d-7584-4760-b936-14ba96478588",
+                "resourcePath": "scripts\\scBuffCooldown\\scBuffCooldown.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -868,6 +868,14 @@
                 "id": "b6ca67e1-830a-4b98-9f07-399d88e09bb2",
                 "resourcePath": "views\\7541f76c-d44e-477f-b836-62a1810d7f45.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "75ce28a9-7ae7-40dd-a296-6a1db45a28be",
+            "Value": {
+                "id": "e01fdc61-51a8-430e-906f-a998f47ada2d",
+                "resourcePath": "sprites\\sRocket_Laser\\sRocket_Laser.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1423,6 +1431,14 @@
             }
         },
         {
+            "Key": "ca4ca391-4762-4920-b448-577d3377474e",
+            "Value": {
+                "id": "7cb1c388-1bb4-4d52-8c55-ba403602c54f",
+                "resourcePath": "sprites\\s_abilityIcon_Cooldown\\s_abilityIcon_Cooldown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cb0b55a2-e411-4a24-8296-3f4604ecea71",
             "Value": {
                 "id": "9e46a1b5-e397-469b-b078-0f189ae30ce9",
@@ -1436,6 +1452,14 @@
                 "id": "25284558-be7e-4f46-b887-0233339ad0df",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
+            "Value": {
+                "id": "17252d7e-243b-47cd-9efe-69c419107b36",
+                "resourcePath": "scripts\\scRocketSpecialLaser_Create\\scRocketSpecialLaser_Create.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1668,7 +1692,7 @@
         "b6293fa8-4b1a-4637-b3cc-244c977a20c2",
         "406b5267-371b-4e3f-9dae-0f35be661e37",
         "dc25a1f0-fd73-4ae4-afaf-7d97a3185d1c",
-        "61b25b39-b5fc-45e8-b3cb-5bcf5b0e6ab7",
+        "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "7de4ea95-a832-4f43-add4-b4762a37018d",
         "a6070534-903b-4493-b956-7c258781b24d",
@@ -1695,6 +1719,7 @@
         "508da282-5360-414c-896e-c0369ddbf32e",
         "93c0f3dd-0605-48de-811a-2a13bed0930c",
         "81fccae6-6512-41e0-b599-64f5af50f932",
+        "61a3a3c1-f3cb-46f8-a290-1ea6cb5be30a",
         "0033a082-dcb1-4a07-8188-4124602da24c",
         "52bf7011-b434-455b-b401-3945ebf3821b"
     ],

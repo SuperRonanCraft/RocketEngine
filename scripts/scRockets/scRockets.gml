@@ -114,8 +114,26 @@ ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Sand);
 //ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialFire_Rocket);
 //ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
 //ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
-ds_map_add(weapons[6], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
-ds_map_add(weapons[6], ROCKET_MAP.SHAKE_FRAMES, 5);
+ds_map_add(weapons[7], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
+ds_map_add(weapons[7], ROCKET_MAP.SHAKE_FRAMES, 5);
+
+//LASER
+weapons[8] = ds_map_create();
+ds_map_add(weapons[8], ROCKET_MAP.TYPE, ROCKET.LASER);
+ds_map_add(weapons[8], ROCKET_MAP.NAME, "Laser Rocket");
+ds_map_add(weapons[8], ROCKET_MAP.RECOIL, 5);
+ds_map_add(weapons[8], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.LASER);
+ds_map_add(weapons[8], ROCKET_MAP.COOLDOWN, 50);
+ds_map_add(weapons[8], ROCKET_MAP.SPEED, 5);
+ds_map_add(weapons[8], ROCKET_MAP.DAMAGE, 2);
+ds_map_add(weapons[8], ROCKET_MAP.IGNORE_WALL, true);
+ds_map_add(weapons[8], ROCKET_MAP.CREATE_SCRIPT, scRocketSpecialLaser_Create);
+ds_map_add(weapons[8], ROCKET_MAP.BUFF, [BUFFTYPE.COOLDOWN]);
+//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialFire_Rocket);
+//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
+//ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
+ds_map_add(weapons[8], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
+ds_map_add(weapons[8], ROCKET_MAP.SHAKE_FRAMES, 12);
 
 enum ROCKET {
 	NONE = 0,
@@ -125,12 +143,13 @@ enum ROCKET {
 	REVERSE = 4, 
 	ICE = 5,
 	FIRE = 6,
-	SAND = 7
+	SAND = 7,
+	LASER = 8
 }
 
 enum ROCKET_SPRITE {
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
-	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand
+	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser
 }
 
 enum ROCKET_MAP {

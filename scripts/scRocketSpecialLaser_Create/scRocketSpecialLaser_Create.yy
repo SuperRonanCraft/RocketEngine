@@ -1,8 +1,8 @@
 {
-    "id": "61b25b39-b5fc-45e8-b3cb-5bcf5b0e6ab7",
+    "id": "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scRocketSpecialFirev2",
+    "name": "scRocketSpecialLaser_Create",
     "IsCompatibility": false,
     "IsDnD": false
 }
