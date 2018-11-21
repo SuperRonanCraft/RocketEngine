@@ -22,4 +22,4 @@ size = 1;
 destroy = false;
 
 //Simple check for rocket collisions (doubles as a timer)
-collideRocket = 0;
+//collideRocket = 0;

@@ -13,9 +13,4 @@ if (x > RES_W + 20 || x < -20 || y > RES_H || y < -20)
 	event_user(0);
 	
 if (destroy)
-	//If the rocket needs to check an instance (like another rocket)
-	//collideRocket is set to 1 to destroy AFTER the checks are done
-	if (collideRocket > 0)
-		collideRocket--;	
-	else
-		instance_destroy();
+	instance_destroy();
