@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0037f48f-fa68-4284-9328-98450ac10730",
+            "Value": {
+                "id": "b3f3ab1b-ed39-46fe-ab2e-1cee2983a11c",
+                "resourcePath": "sprites\\sPlayer_fall\\sPlayer_fall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02b336b5-7467-4576-8a97-db9d380154a7",
             "Value": {
                 "id": "8a378eb8-518b-4164-80f8-461f844ca2bc",
@@ -735,6 +743,14 @@
             }
         },
         {
+            "Key": "6d3cac0e-6125-4a2f-a14e-c505a35a81bc",
+            "Value": {
+                "id": "f1b23373-0d58-4ab0-a421-39fba930e570",
+                "resourcePath": "views\\6d3cac0e-6125-4a2f-a14e-c505a35a81bc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6d5d87ef-47f5-45b8-adf1-b44e88d739c4",
             "Value": {
                 "id": "221b73cc-4312-4998-bd6f-cac0a30a347c",
@@ -1403,6 +1419,14 @@
             "Value": {
                 "id": "ece58c8e-688a-41db-8c09-c845cd989e5f",
                 "resourcePath": "sprites\\s_abilityIcon_Chilled\\s_abilityIcon_Chilled.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d9014ee8-e1aa-4d07-800f-7bb82a6e734a",
+            "Value": {
+                "id": "160f2e73-1f99-41ca-bb74-4fa44679917c",
+                "resourcePath": "sprites\\sPlayer_idle\\sPlayer_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
