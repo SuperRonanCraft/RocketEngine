@@ -3,10 +3,13 @@
 for (var i = 0; i < ds_list_size(hitList); i++)
 	if (ds_list_find_index(confirmList, hitList[| i]) == -1) {
 		ds_list_add(confirmList, hitList[| i]);
-		with (hitList[| i])
-			scHitShootable(other.parent, false, true, other.rocket_map[? ROCKET_MAP.DAMAGE]);
-		if (rocket_map[? ROCKET_MAP.BUFF] != noone)
+		if (doing_damage)
+			with (hitList[| i])
+				scHitShootable(other.parent, false, true, other.rocket_map[? ROCKET_MAP.DAMAGE]);
+		if (doing_buff && rocket_map[? ROCKET_MAP.BUFF] != noone)
 			scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
 	}
 if (rocket_map[? ROCKET_MAP.EXPLOSION_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_STEP]);
+if (destroy && image_speed == 0)
+	instance_destroy();

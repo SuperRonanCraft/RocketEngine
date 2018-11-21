@@ -8,7 +8,8 @@
         "ffdeba03-db60-410a-99d7-c321e58398ff",
         "bd26d61e-04df-42ee-8ec5-f5855cf1c5b3",
         "aae2a45c-336d-40db-bf42-d0e9c0e20a52",
-        "eb9ec683-23e2-4402-b780-13546037f978"
+        "eb9ec683-23e2-4402-b780-13546037f978",
+        "fe1033fc-a994-419a-8fb7-cda81cf69839"
     ],
     "filterType": "GMScript",
     "folderName": "Specials",

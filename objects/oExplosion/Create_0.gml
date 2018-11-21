@@ -14,3 +14,6 @@ image_angle = choose(0, 90, 180, 270);
 //If it can hurt/affect the owner
 //friendlyFire = false;
 destroy = true;
+//If damage will be delt
+doing_damage = true;
+doing_buff = true;

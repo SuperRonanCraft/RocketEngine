@@ -109,6 +109,8 @@ ds_map_add(weapons[7], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[7], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[7], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Sand);
+ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_CREATE, scRocketSpecialSand_ExplodeCreate);
+ds_map_add(weapons[7], ROCKET_MAP.EXPLOSION_STEP, scRocketSpecialSand_ExplodeStep);
 ds_map_add(weapons[7], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[7], ROCKET_MAP.SHAKE_FRAMES, 5);
 
@@ -156,7 +158,7 @@ enum ROCKET_MAP {
 	//CAMERA SHAKE
 	SHAKE_MAGNITUDE, SHAKE_FRAMES,
 	//EXPLOSION SCRIPTS
-	EXPLOSION_SPRITE, EXPLOSION_ROCKET, EXPLOSION_WALL, EXPLOSION_SHOOTABLE, EXPLOSION_STEP
+	EXPLOSION_SPRITE, EXPLOSION_ROCKET, EXPLOSION_WALL, EXPLOSION_SHOOTABLE, EXPLOSION_STEP, EXPLOSION_CREATE
 }
 
 //Rocket progress

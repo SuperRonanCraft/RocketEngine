@@ -5,6 +5,7 @@ xplo.image_speed = 1.5;
 xplo.image_xscale = size;
 xplo.image_yscale = size;
 xplo.parent = owner;
+xplo.rocket_map = ds_map_create();
 ds_map_copy(xplo.rocket_map, rocket_map);
 var part = rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION];
 //All variables before this should be standard for all rockets. The one difference typically lies here:
@@ -21,3 +22,8 @@ scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.
 //Delete this instance of oRocket
 //instance_destroy();
 destroy = true;
+
+//Do something special if no rocket/shootable or wall event for a rocket, do something with just the explosion
+//giving it an instance of the explosion
+if (rocket_map[? ROCKET_MAP.EXPLOSION_CREATE] != noone)
+	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_CREATE], xplo);
