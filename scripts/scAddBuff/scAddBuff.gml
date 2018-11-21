@@ -39,6 +39,12 @@ for (var i = 0; i < array_length_1d(buffs); i++) {
 			ds_map[? "step"] = scBuffCooldown;
 			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SPARKLE];
 			break;
+		case BUFFTYPE.SLIME:
+			ds_map[? "name"] = "Slime";
+			ds_map[? "icon"] = s_pSmokeScreen; //NEEDS A NEW ONE
+			ds_map[? "step"] = scBuffSlime; 
+			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SPARKLE]; //COULD USE A NEW ONE
+			break;
 	}
 
 	if(!ds_map[? "stackable"] && !scFindBuff(targ.buffs, buffs[i])){
@@ -47,5 +53,5 @@ for (var i = 0; i < array_length_1d(buffs); i++) {
 }
 
 enum BUFFTYPE {
-	BURNRUSH, CHILLED, COOLDOWN
+	BURNRUSH, CHILLED, COOLDOWN, SLIME
 }

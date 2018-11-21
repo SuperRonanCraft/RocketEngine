@@ -21,7 +21,7 @@ hsp_move = (move * walksp) + (move_adj*move);
 
 //Vertical
 if (key_jump && standing) {
-	vsp_move = -jump_height;
+	vsp_move = -jump_height - jump_adj;
 	standing = false;
 }
 

@@ -125,7 +125,7 @@ ds_map_add(weapons[8], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[8], ROCKET_MAP.DAMAGE, 2);
 ds_map_add(weapons[8], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[8], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialLaser_Create);
-ds_map_add(weapons[8], ROCKET_MAP.BUFF, [BUFFTYPE.COOLDOWN]);
+ds_map_add(weapons[8], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME]);
 ds_map_add(weapons[8], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[8], ROCKET_MAP.SHAKE_FRAMES, 12);
 

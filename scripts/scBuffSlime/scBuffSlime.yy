@@ -1,8 +1,8 @@
 {
-    "id": "72d86524-e805-4e07-94d8-d379c54c52ed",
+    "id": "d6ba92e2-a45a-49aa-bdbf-5ab91afc2838",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scBuff_Chilled",
+    "name": "scBuffSlime",
     "IsCompatibility": false,
     "IsDnD": false
 }

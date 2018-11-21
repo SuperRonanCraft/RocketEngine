@@ -11,7 +11,7 @@
         "63cb8c47-1fd9-4b41-9db3-1ccab46ef2da"
     ],
     "filterType": "GMScript",
-    "folderName": "leBuffv2",
+    "folderName": "Buffs\/Debuffs",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

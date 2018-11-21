@@ -12,11 +12,12 @@ scKeybindsSet(keys);
 scRockets(ROCKET.DEFAULT);
 //Display health
 event_inherited();
-scTeamAdd(id, team);
+//scTeamAdd(id, team);
 
 //Buffs/Debuffs
 buffs = ds_list_create();
 move_adj = 0;
+jump_adj = 0;
 
 //Teams thing
 /*var ds_map = team;
