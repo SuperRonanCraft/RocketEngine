@@ -76,6 +76,16 @@ part_type_speed(partSand, 0.8, 1, 0, 0);
 part_type_life(partSand, 5, 15);
 ds_map_add(ds_part, PARTICLES.SAND, partSand);
 
+var partSlime = part_type_create();
+part_type_sprite(partSlime,s_pslime,false,false,true);
+part_type_size(partSlime,0.1,0.2,0,0);
+part_type_speed(partSlime,2,4,1,0.5);
+part_type_life(partSlime,10,15);
+part_type_direction(partSlime,270,270,0,0);
+ds_map_add(ds_part,PARTICLES.SLIME,partSlime);
+
+
 enum PARTICLES {
-	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SAND
+	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SAND,
+	SLIME
 }

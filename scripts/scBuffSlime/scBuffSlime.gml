@@ -9,7 +9,7 @@ var dsBuff = argument1;
 var clock = dsBuff[? "clock"];
 
 if (clock = 0){	
-	dsBuff[? "jump"] = owner.jump_height * 0.75;
+	dsBuff[? "jump"] = owner.jump_height * 0.25;
 	owner.jump_adj -= dsBuff[? "jump"];
 }
 
@@ -21,7 +21,7 @@ if (clock > dsBuff[? "time"]) {
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0)
-		part_particles_create(global.ParticleSystem1, owner.x, owner.y, dsBuff[? "particle"], 5);
-	//Also, increaase the clock. Essential for every buff.
+		part_particles_create(global.ParticleSystem1, owner.x + irandom_range(-15,15), owner.y, dsBuff[? "particle"], 5);
+	//Also, increase the clock. Essential for every buff.
 	dsBuff[? "clock"]++;
 }

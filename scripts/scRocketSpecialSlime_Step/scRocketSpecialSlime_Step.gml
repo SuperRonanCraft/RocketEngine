@@ -2,4 +2,6 @@
 //Step scripts dont have arguments
 
 //sine wave script?
-y = sin(x);
+//No, SLIME wave script
+//haha
+y += 5*sin(x);
