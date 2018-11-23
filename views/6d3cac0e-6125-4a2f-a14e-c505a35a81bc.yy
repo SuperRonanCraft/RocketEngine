@@ -6,7 +6,8 @@
     "children": [
         "90ce5129-0a73-467a-b73e-c8676261b117",
         "d9014ee8-e1aa-4d07-800f-7bb82a6e734a",
-        "0037f48f-fa68-4284-9328-98450ac10730"
+        "0037f48f-fa68-4284-9328-98450ac10730",
+        "f28d02be-b4a6-46e8-aa27-a22eb5eefaac"
     ],
     "filterType": "GMSprite",
     "folderName": "PlayerAnimation",

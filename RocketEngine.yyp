@@ -1663,6 +1663,14 @@
             }
         },
         {
+            "Key": "f28d02be-b4a6-46e8-aa27-a22eb5eefaac",
+            "Value": {
+                "id": "43ade389-4cc3-4efb-ae0f-58920071b78c",
+                "resourcePath": "sprites\\sPlayer_rise\\sPlayer_rise.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f2fb6cef-551e-48ee-82a9-9d5362748527",
             "Value": {
                 "id": "dc803959-bd65-4a95-ab2f-7e2ad49e09c9",
