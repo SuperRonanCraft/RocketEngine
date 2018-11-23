@@ -135,6 +135,8 @@ ds_map_add(weapons[9], ROCKET_MAP.TYPE, ROCKET.SLIME);
 ds_map_add(weapons[9], ROCKET_MAP.NAME, "Slime Rocket");
 ds_map_add(weapons[9], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SLIME);
 ds_map_add(weapons[9], ROCKET_MAP.SPEED, 10);
+ds_map_add(weapons[9], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SLIME]);
+ds_map_add(weapons[9], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SLIME]);
 ds_map_add(weapons[9], ROCKET_MAP.DAMAGE, 0);
 ds_map_add(weapons[9], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME]);
 ds_map_add(weapons[9], ROCKET_MAP.COOLDOWN, 30);
@@ -142,12 +144,13 @@ ds_map_add(weapons[9], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[9], ROCKET_MAP.SHAKE_FRAMES, 5);
 ds_map_add(weapons[9], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialSlime_Create);
 ds_map_add(weapons[9], ROCKET_MAP.ROCKET_STEP, scRocketSpecialSlime_Step);
-ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_SPRITE, s_pSmokeScreen);
+ds_map_add(weapons[9], ROCKET_MAP.ROCKET_DRAW, scRocketSpecialSlime_Draw);
+ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Slime);
 ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_CREATE, scRocketSpecialSlime_Exp_Create);
-ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_STEP, scRocketSpecialSlime_Exp_Step);
-ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialSlime_Exp_Shootable);
-ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialSlime_Exp_Wall);
-ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialSlime_Exp_Rocket);
+//ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_STEP, scRocketSpecialSlime_Exp_Step);
+//ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialSlime_Exp_Shootable);
+//ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialSlime_Exp_Wall);
+//ds_map_add(weapons[9], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialSlime_Exp_Rocket);
 
 enum ROCKET {
 	NONE = 0,
