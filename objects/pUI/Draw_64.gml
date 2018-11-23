@@ -1,9 +1,7 @@
 draw_set_font(fPixel);
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
-start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer) + (animated ? spawn_y : 0);
+start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer);
 start_x = RES_W / 2;
-if (animated)
-	spawn_y = max(spawn_y * 0.90, 0);
 
 var c = c_black;
 // Draw left
@@ -18,6 +16,9 @@ var centered = false;
 repeat (ds_height) {
 	var c3 = c_gray;
 	scale = 1;
+	//Slowly move into the screen
+	if (animated && menu_pages_index[page] == menu_page.main)
+		start_y += (RES_H / 2 * (1 - unfold[yy]));
 	lty = start_y + (yy * y_buffer);
 	xo = 0;
 	if (yy == menu_option[page]) {
