@@ -14,6 +14,16 @@ scRockets(starting_weapon);
 event_inherited();
 //scTeamAdd(id, team);
 
+//Load animation states
+animationVar = 0;
+overrideAnimation = false;
+currentSprite = sprite_index;
+enum ANIMATIONSTATE{
+	STANDING,RISING,FALLING,WALKING	
+}
+
+animState = ANIMATIONSTATE.STANDING;
+
 //Buffs/Debuffs
 buffs = ds_list_create();
 move_adj = 0;
