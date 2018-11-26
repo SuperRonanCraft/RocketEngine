@@ -1,3 +1,4 @@
+/// @desc Spawn targets
 event_inherited();
 if (global.play) { //If game play is enabled
 	if (targets < diff && spawn_time < 0 && random_range(0, 1)) {

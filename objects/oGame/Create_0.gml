@@ -29,6 +29,7 @@ global.pause = false;
 global.gamemodes[0] = "1v1";
 global.gamemodes[1] = "vTarget";
 global.gamemodes[2] = "KnockOut";
+global.gamemodes[3] = "Nuke'm";
 //Set when a gamemode is selected in oUIMain
 global.gamemode = -1;
 

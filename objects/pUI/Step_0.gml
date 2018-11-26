@@ -46,25 +46,26 @@ if (inputting) {
 			if (hinput != 0) {
 				var val = ds_grid[# 4, menu_option[page]] + hinput * 0.01;
 				ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
-			/*	mouse_moving = false;
+				mouse_moving = false;
 				break;
 			} else if (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) {
 				mouse_x_old = device_mouse_x_to_gui(0);
 				mouse_y_old = device_mouse_y_to_gui(0);
-				mouse_move = true;
+				mouse_moving = true;
 			}
 			//Mouse support
 			if (mouse_moving) {
 				var xleft = start_x + x_buffer;
 				if (mouse_x_old >= xleft) {
-					var ycheck = i * y_buffer;
-					if (mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
-						menu_option[page] = i;
+					var ycheck = y_buffer;
+					var val = ds_grid[# 4, menu_option[page]];
+					if (mouse_x_old > start_x && mouse_x_old < start_x + 128) {
+						ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
 						set = true;
 					}
 				}
-			}*/
 			}
+			//}
 			break;
 		case menu_element_type.toggle:
 			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);

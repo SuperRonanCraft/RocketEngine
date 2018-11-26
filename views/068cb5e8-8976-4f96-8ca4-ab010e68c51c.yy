@@ -9,7 +9,7 @@
         "0c36d4b4-730f-4bba-b8a5-a713f04089dc"
     ],
     "filterType": "GMObject",
-    "folderName": "Target",
+    "folderName": "vTarget",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

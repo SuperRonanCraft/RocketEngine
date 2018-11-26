@@ -2,6 +2,7 @@
 enum menu_page {
 	main,
 	gamemodes,
+	more_gamemodes,
 	settings,
 	audio,
 	graphics,
