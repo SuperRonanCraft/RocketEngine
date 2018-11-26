@@ -1,2 +1,4 @@
 /// @desc Hit a wall
-event_user(0);
+if (other.shootable)
+	if (!destroy)
+		event_user(0);

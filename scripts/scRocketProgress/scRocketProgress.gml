@@ -2,9 +2,7 @@
 /// @arg player-id-(-1-to-disable)
 
 
-if (rocket_map[? ROCKET_MAP.PROJECTILE] == -1)
-	return;
-
+if (rocket_map[? ROCKET_MAP.PROJECTILE] == -1 || rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
 //Set the direction of the rocket
 var dir = direction;
 if (argument0 != -1)

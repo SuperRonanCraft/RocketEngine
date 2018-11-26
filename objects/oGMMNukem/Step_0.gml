@@ -7,7 +7,9 @@ if (global.play) { //If game play is enabled
 	} else
 		spawn_time--;
 	if (nukes_created < nukes)
-		with (instance_create_layer(random_range(50, RES_W - 50), -50, layer, oNuke))
+		with (instance_create_layer(random_range(50, RES_W - 50), -50, layer, oNuke)) {
 			other.nukes_created++;
+			owner = other;
+		}
 }
 
