@@ -4,6 +4,7 @@ var key_right = keyboard_check(keyright);
 var key_jump = keyboard_check_pressed(keyjump);
 var key_shoot = keyboard_check(keyshoot);
 
+//Gamepad
 if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(controller)) {
 	if (abs(gamepad_axis_value(controller, gp_axislh)) > 0.2){
 		key_left = abs(min(gamepad_axis_value(controller, gp_axislh), 0));
@@ -15,16 +16,20 @@ if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(co
 		key_shoot = 1;
 }
 
-//Horizontal
-var move = key_right - key_left;
-hsp_move = (move * walksp) + (move_adj*move);
+//Check if can control
+if(canControl){
+	//Horizontal
+	var move = key_right - key_left;
+	hsp_move = (move * walksp) + (move_adj*move);
 
-//Vertical
-if (key_jump && standing) {
-	vsp_move = -jump_height - jump_adj;
-	standing = false;
+	//Vertical
+	if (key_jump && standing) {
+		vsp_move = -jump_height - jump_adj;
+		standing = false;
+	}
+
+	//Weapon
+	if (key_shoot)
+		scRocketShoot();
+	
 }
-
-//Weapon
-if (key_shoot)
-	scRocketShoot();

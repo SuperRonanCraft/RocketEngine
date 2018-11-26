@@ -1,9 +1,16 @@
 ///@desc Draw the correct sprites for each animation state
 ///@arg state The state to use
 
+var overwrite = false;
+
 var state = argument[0];
 
 switch (state) {
+	
+	case ANIMATIONSTATE.DEAD:
+		overwrite = true;
+		scSpecialAnimation(sPlayer_dead1, 0);
+		break;
 	
 	case ANIMATIONSTATE.WALKING:
 		currentSprite = sPlayer_walk;	
@@ -23,5 +30,11 @@ switch (state) {
         break;
 }
 
-//draw sprite
-draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing,1,0,c_white,1);	
+//draw sprite normally
+if(!overwrite){
+	animationVar += image_speed;
+	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing,1,0,c_white,1);	
+}
+
+
+

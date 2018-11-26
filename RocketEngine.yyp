@@ -887,6 +887,14 @@
             }
         },
         {
+            "Key": "6e1af632-6685-40a9-b0e7-653f1b415768",
+            "Value": {
+                "id": "0f8d4462-8558-4f43-8fb4-487a33ac50bb",
+                "resourcePath": "scripts\\scStateCheck\\scStateCheck.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6e52a032-a5be-48b9-b022-59a84b38e5f7",
             "Value": {
                 "id": "6985bac6-fe8a-4d59-95b4-87121bfb4b7f",
@@ -1100,6 +1108,14 @@
                 "id": "3a74ffcc-874b-4ced-80dd-f65d0687dce0",
                 "resourcePath": "views\\87277db2-23a9-4787-a0de-c145c35b9454.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "88211932-9cea-4adc-a0a3-3b8613abe868",
+            "Value": {
+                "id": "e3b4dcdb-dcf8-4211-93d9-c51f500beba2",
+                "resourcePath": "scripts\\scSpecialAnimation\\scSpecialAnimation.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1471,6 +1487,14 @@
             }
         },
         {
+            "Key": "becb47ca-0c0e-484f-8cc6-9fbf3f8bc4b6",
+            "Value": {
+                "id": "05933a0b-c2db-4672-b57a-833733e397fb",
+                "resourcePath": "views\\becb47ca-0c0e-484f-8cc6-9fbf3f8bc4b6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
             "Value": {
                 "id": "a2e89772-0ba7-4b9c-99cf-9053ab31df19",
@@ -1492,6 +1516,14 @@
                 "id": "ce250ad5-3634-43b6-ba98-3fb84555bbb4",
                 "resourcePath": "views\\c0f3ed0e-31e3-4ab8-b434-72cf3cac1d29.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c1f5c5d0-ce30-4762-b35e-8dd3ca8f0bdf",
+            "Value": {
+                "id": "256e8426-23dd-45b4-95cc-aa172dc85efd",
+                "resourcePath": "sprites\\sPlayer_dead1\\sPlayer_dead1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1914,7 +1946,9 @@
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",
-        "6a93ce55-0209-4047-baf0-4b4265f30278"
+        "6a93ce55-0209-4047-baf0-4b4265f30278",
+        "88211932-9cea-4adc-a0a3-3b8613abe868",
+        "6e1af632-6685-40a9-b0e7-653f1b415768"
     ],
     "tutorial": ""
 }

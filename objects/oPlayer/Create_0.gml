@@ -14,12 +14,21 @@ scRockets(starting_weapon);
 event_inherited();
 //scTeamAdd(id, team);
 
+//Load player states
+
+canControl = true;
+enum PLAYERSTATE{
+	NORMAL,DEAD,
+}
+playerState = PLAYERSTATE.NORMAL;
+
 //Load animation states
+alive = true;
 animationVar = 0;
 overrideAnimation = false;
 currentSprite = sprite_index;
 enum ANIMATIONSTATE{
-	STANDING,RISING,FALLING,WALKING	
+	STANDING,RISING,FALLING,WALKING,DEAD
 }
 
 animState = ANIMATIONSTATE.STANDING;
