@@ -16,9 +16,9 @@ if(loop == 0){
 	if(floor(animationVar) >= sprite_get_number(sprite)-1){
 		animationVar = sprite_get_number(sprite)-1;	
 	}
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing,1,0,c_white,1);
+	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing*image_xscale,image_yscale,0,c_white,1);
 }
 else{
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing,1,0,c_white,1);	
+	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing*image_xscale,image_yscale,0,c_white,1);	
 }
 animationVar += image_speed;

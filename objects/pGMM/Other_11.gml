@@ -1,12 +1,11 @@
-/// @desc Player died? Are there more on their team alive?
-// No? Declare who won, go to stage select
-// Should be called from the (scHitShootable script)
-/// @arg player-inst
-
-//var player = argument0
-
-for (var i = 0; i < ds_list_size(global.team1); i++) {
-	var ds_map = global.team1[| i];
-//	if (ds_map[? TEAM.PLAYER] == player)
-//		exit; //PLAYER DIED
+/// @desc Should be called from the (scHitShootable script)
+var pamt = instance_number(oPlayer);
+for (var i = 0; i < pamt; i++) {
+	var p = instance_find(oPlayer, i);
+	if (p.hp <= 0)
+		global.loser = p.team;
+	else
+		global.winner = p.team;
 }
+endgame = true;
+//End game sound...

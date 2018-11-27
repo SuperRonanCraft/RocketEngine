@@ -33,7 +33,7 @@ switch (state) {
 //draw sprite normally
 if(!overwrite){
 	animationVar += image_speed;
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing,1,0,c_white,1);	
+	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing * image_xscale,image_yscale,0,c_white,1);	
 }
 
 

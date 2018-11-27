@@ -12,3 +12,8 @@ wait_timer_scale = 1;
 global.play = false;
 //Create a camera object for the screen shake and ability to manipulate viewport
 instance_create_depth(0,0, depth, oCamera);
+//Endgame
+endgame = false;
+endgame_delay = 2 * room_speed;
+winner = noone;
+loser = noone;

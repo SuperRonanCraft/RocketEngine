@@ -1,9 +1,9 @@
 /// @desc spawn nuke
 event_inherited();
 if (global.play) { //If game play is enabled
-	if (nukes < diff && spawn_time < 0 && random_range(0, 1)) {
+	if (nukes < nukes_max && spawn_time < 0 && random_range(0, 1)) {
 		nukes++;
-		spawn_time = diff;
+		spawn_time = 60;
 	} else
 		spawn_time--;
 	if (nukes_created < nukes)

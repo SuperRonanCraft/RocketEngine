@@ -6,7 +6,7 @@ for (var i = 0; i < instance_number(oPlayer); i++) {
 		hp_original = hp;
 	}
 }
-diff = 50;
+nukes_max = 2;
 nukes = 0;
 nukes_created = 0;
 spawn_time = 60;
@@ -18,4 +18,5 @@ for (var i = 0; i < pamt; i++) {
 	p.rocket_map[? ROCKET_MAP.DAMAGE] = 0;
 }
 
+//Inherit the default gamemode setup
 event_inherited();
