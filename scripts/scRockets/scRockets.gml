@@ -57,7 +57,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.OFFSET, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialReverse_Create);
-//ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialReverse_Step);
+ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialReverse_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 6);

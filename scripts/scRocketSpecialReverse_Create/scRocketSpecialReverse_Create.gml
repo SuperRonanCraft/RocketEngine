@@ -5,3 +5,5 @@ if (owner.playerid == 1 && direction != 180) {
 	direction = 0;
 	image_angle = direction;
 }
+teleported = false;
+teleporting = false;
