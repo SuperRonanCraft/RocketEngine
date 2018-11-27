@@ -9,7 +9,7 @@ var dsBuff = argument1;
 var clock = dsBuff[? "clock"];
 
 //If the internal clock reaches the time in seconds, expire
-if (clock > dsBuff[? "time"] || dsBuff[? "disabled"]) {
+if (clock > dsBuff[? "time"]) {
 	//Remove NoCooldowns
 	scRemoveBuff(owner, dsBuff);
 } else {

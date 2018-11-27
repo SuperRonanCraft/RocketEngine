@@ -47,18 +47,9 @@ for (var i = 0; i < array_length_1d(buff); i++) {
 			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 			break;
 	}
-	//Check if a buff from the target is the same TYPE, if so, delete it syncronously
-	if (scFindBuff(targ, ds_map[? "type"])) {
-		//Find the buffs
-		for (var b = 0; b < ds_list_size(targ.buffs); b++) {
-			var currentbuff = targ.buffs[| b];
-			//Disable the buffs
-			if (currentbuff[? "type"] == ds_map[? "type"])
-				currentbuff[? "disabled"] = true;
-		}
-	}
-	//if(!ds_map[? "stackable"])
-	ds_list_add(targ.buffs, ds_map);
+	//Check if a buff from the target is the same TYPE, if not, add it, or if its stackable, just add it
+	if (!scFindBuff(targ, ds_map[? "type"]) || ds_map[? "stackable"])
+		ds_list_add(targ.buffs, ds_map);
 }
 
 enum BUFFTYPE {

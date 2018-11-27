@@ -25,8 +25,7 @@ offset = 0;
 for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Grab the buff map
 	var ds_list = buffs[| i];
-	if (ds_list[? "disabled"])
-		continue;
+	//Offset every 10 buffs
 	if (i mod 10 == 0)
 		offset++;
 	//The icon set in the buff
@@ -37,7 +36,6 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Alpha of icon (wearing off after 75% of the buff has progressed)
 	var per = (ds_list[? "clock"] / ds_list[? "time"])
 	var alpha = (per > 0.75) ? (per - 0.75) * 400 : 0;
-	//Offset every 10 buffs
 	//Determine side and offset related to how many buffs to display (2 pixels between each icon) (mirrored)
 	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 2) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 2) * i);
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);

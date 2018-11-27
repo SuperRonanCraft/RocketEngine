@@ -16,7 +16,7 @@ if (clock == 0) {
 	//This way it does not get changed/affected in any other way
 }
 //If the internal clock reaches the time in seconds, expire
-if (scFindBuff(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? "time"] || dsBuff[? "disabled"]) {
+if (scFindBuff(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? "time"]) {
 	//Return to normal speed
 	owner.move_adj += dsBuff[? "slow"];	
 	//Remove Chilled
