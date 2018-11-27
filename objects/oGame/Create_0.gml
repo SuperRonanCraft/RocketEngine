@@ -58,3 +58,6 @@ global.teamRight = ds_list_create();
 enum TEAM {
 	PLAYERID, LEFT, RIGHT
 }
+
+//Randomize gameplay
+randomize();
