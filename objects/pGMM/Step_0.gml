@@ -19,25 +19,5 @@ if (wait_timer > 0) {
 		event_user(0);
 }
 //End of game event
-if (endgame) {
-	if (endgame_delay <= 0) {
-		with (winner) {
-			var scale = min(image_xscale + 0.05, 5);
-			image_xscale = scale;
-			image_yscale = scale;
-			image_speed = 0;
-		}
-		with (loser) {
-			var scale = min(image_xscale + 0.05, 5);
-			image_xscale = scale;
-			image_yscale = scale;
-			image_speed = 0;
-			//move_towards_point(RES_W / 2 + RES_W / 4, RES_H / 2, 2);
-		}
-		if (endgame_delay == 0) {
-			global.play = false;
-			endgame_delay--;
-		}
-	} else
-		endgame_delay--;
-}
+if (endgame) 
+	event_user(2);

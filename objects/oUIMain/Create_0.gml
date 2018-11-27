@@ -3,6 +3,7 @@ event_inherited();
 ds_menu_main = scCreateMenuPage(
 	["PLAY",			menu_element_type.page_transfer,	menu_page.gamemodes],
 	["SETTINGS",		menu_element_type.page_transfer,	menu_page.settings],
+	["INFO",			menu_element_type.page_transfer,	menu_page.rocketinfo],
 	["QUIT",			menu_element_type.script_runner,	quit_game],
 );
 
@@ -19,9 +20,14 @@ ds_other_gamemodes = scCreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	menu_page.gamemodes],
 );
 
-menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls, ds_other_gamemodes];
+ds_rocketinfo = scCreateMenuPage(
+	["",		menu_element_type.rocket_list],
+	["BACK",	menu_element_type.page_transfer,	menu_page.main],
+);
+
+menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls, ds_other_gamemodes, ds_rocketinfo];
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
-	menu_page.controls, menu_page.more_gamemodes];
+	menu_page.controls, menu_page.more_gamemodes, menu_page.rocketinfo];
 menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
@@ -29,3 +35,5 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 	
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
 	unfold[i] = 0;
+	
+scRockets(0);

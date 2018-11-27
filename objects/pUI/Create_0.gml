@@ -7,6 +7,7 @@ enum menu_page {
 	audio,
 	graphics,
 	controls,
+	rocketinfo,
 	height
 }
 
@@ -26,6 +27,8 @@ enum menu_element_type {
 	input,
 	//Go to a room
 	goto_room,
+	//List all rockets
+	rocket_list,
 }
 
 //Default Menus

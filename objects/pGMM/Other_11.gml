@@ -9,3 +9,4 @@ for (var i = 0; i < pamt; i++) {
 }
 endgame = true;
 //End game sound...
+//audio_play_sound(SOUND.GP_ENDGAME, 1, false);
