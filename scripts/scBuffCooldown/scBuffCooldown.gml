@@ -11,7 +11,7 @@ var clock = dsBuff[? "clock"];
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? "time"]) {
 	//Remove NoCooldowns
-	scRemoveBuff(owner.buffs, dsBuff);
+	scRemoveBuff(owner, dsBuff);
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0)
