@@ -14,7 +14,7 @@ if (clock = 0){
 }
 
 //If the internal clock reaches the time in seconds, expire
-if (clock > dsBuff[? "time"]) {
+if (clock > dsBuff[? "time"] || dsBuff[? "disabled"]) {
 	owner.jump_adj += dsBuff[? "jump"];	
 	//Remove Slime
 	scRemoveBuff(owner, dsBuff);

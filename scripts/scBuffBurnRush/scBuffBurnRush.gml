@@ -16,7 +16,7 @@ if(clock = 0){
 
 //If the internal clock reaches the time in seconds, expire
 //Or if you are chilled
-if(scFindBuff(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? "time"]){
+if(scFindBuff(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? "time"] || dsBuff[? "disabled"]){
 	//Return to normal speed
 	owner.move_adj -= dsBuff[? "overallSpeed"];	
 	//Remove Burn Rush

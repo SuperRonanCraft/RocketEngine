@@ -20,6 +20,7 @@ for (var i = 0; i < array_length_1d(buff); i++) {
 	ds_map[? "time"] = time * game_get_speed(gamespeed_fps);
 	ds_map[? "type"] = buff[i];
 	ds_map[? "stackable"] = stackable;
+	ds_map[? "disabled"] = false;
 	switch (buff[i]) {
 		case BUFFTYPE.BURNRUSH:
 			ds_map[? "name"] = "Burn Rush";
@@ -42,23 +43,19 @@ for (var i = 0; i < array_length_1d(buff); i++) {
 		case BUFFTYPE.SLIME:
 			ds_map[? "name"] = "Slimed";
 			ds_map[? "icon"] = s_abilityIcon_Slimed; 
-			ds_map[? "step"] = scbufflime; 
+			ds_map[? "step"] = scBuffSlime; 
 			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 			break;
 	}
 	//Check if a buff from the target is the same TYPE, if so, delete it syncronously
 	if (scFindBuff(targ, ds_map[? "type"])) {
-		var listof = ds_list_create();
 		//Find the buffs
 		for (var b = 0; b < ds_list_size(targ.buffs); b++) {
 			var currentbuff = targ.buffs[| b];
+			//Disable the buffs
 			if (currentbuff[? "type"] == ds_map[? "type"])
-				ds_list_add(listof, currentbuff);
+				currentbuff[? "disabled"] = true;
 		}
-		//Delete the buffs
-		for (var a = 0; a < ds_map_size(listof); a++)
-			scRemoveBuff(targ, listof[| a]);
-		ds_list_destroy(listof);
 	}
 	//if(!ds_map[? "stackable"])
 	ds_list_add(targ.buffs, ds_map);
