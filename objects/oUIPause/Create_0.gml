@@ -11,7 +11,7 @@ menu_pages_index = [menu_page.main, menu_page.settings, menu_page.audio, menu_pa
 menu_pages_centered = [ds_menu_main, ds_settings];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
-	menu_option[i] = -1;
+	menu_option[i] = 0;
 depth -= 1;
 
 var btns = ds_grid_height(menu_pages[menu_page.main]);

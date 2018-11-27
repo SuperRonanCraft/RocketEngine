@@ -25,7 +25,7 @@ menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, men
 menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
-	menu_option[i] = -1;
+	menu_option[i] = 0;
 	
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
 	unfold[i] = 0;

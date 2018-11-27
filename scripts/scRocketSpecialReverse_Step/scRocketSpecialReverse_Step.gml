@@ -10,7 +10,7 @@ else if (x > RES_W - 50 && direction == 0) {
 if (!teleported) {
 	if (teleporting) {
 		if (image_xscale != 0)
-			image_xscale = max(image_xscale - 0.05, 0);
+			image_xscale = max(image_xscale - 0.1, 0);
 		else {
 			if (side)
 				x = RES_W - 50;
@@ -24,7 +24,7 @@ if (!teleported) {
 	}
 } else {
 	if (image_xscale != 1)
-		image_xscale = min(image_xscale + 0.05, 1);
+		image_xscale = min(image_xscale + 0.1, 1);
 	else {
 		teleported = false;
 		teleporting = false;

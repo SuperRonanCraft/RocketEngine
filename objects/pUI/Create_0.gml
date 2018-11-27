@@ -79,8 +79,8 @@ checked = false;
 control = true;
 
 ///Mouse control
-mouse_x_old = 0;
-mouse_y_old = 0;
+mouse_x_old = device_mouse_x_to_gui(0);
+mouse_y_old = device_mouse_y_to_gui(0);
 //Spacing between buttons
 y_buffer = 64;
 //Spaving between left value, the center line and the right values (does not affect centered pages)
