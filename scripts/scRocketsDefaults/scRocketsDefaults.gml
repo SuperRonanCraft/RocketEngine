@@ -1,6 +1,5 @@
 rocket_map = ds_map_create();
 rocket_map[? ROCKET_MAP.RECOIL] = 0; //Amount of recoil to push the player back
-rocket_map[? ROCKET_MAP.DAMAGE] = 1; //Damage count
 rocket_map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.NONE; //Sprite to show
 rocket_map[? ROCKET_MAP.PROJECTILE_SOUND] = SOUND.GP_SHOOT; //Rocket shoot sound
 rocket_map[? ROCKET_MAP.COOLDOWN] = 0; //Cooldown between shots
@@ -14,6 +13,10 @@ rocket_map[? ROCKET_MAP.IGNORE_WALL] = false; //allow wall clipping
 rocket_map[? ROCKET_MAP.NAME] = "default";
 rocket_map[? ROCKET_MAP.TYPE] = ROCKET.NONE;
 rocket_map[? ROCKET_MAP.BUFF] = noone;
+//DAMAGES
+rocket_map[? ROCKET_MAP.DAMAGE] = 1; //Base damage
+rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket
+rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 0; //Damage by explosion splash
 //ROCKET EVENTS
 rocket_map[? ROCKET_MAP.ROCKET_CREATE] = noone; //Event when a rocket is created (adds)
 rocket_map[? ROCKET_MAP.ROCKET_STEP] = noone; //Step event (overrides movement)

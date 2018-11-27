@@ -41,6 +41,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 60);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 15);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 120);
+ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialHoming_Create);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialHoming_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 7);
@@ -113,6 +114,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SAND);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 100);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
+ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE_ROCKET, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
@@ -186,8 +188,10 @@ enum ROCKET_SPRITE {
 
 enum ROCKET_MAP {
 	//BASIC VARIABLES
-	RECOIL, DAMAGE, PROJECTILE, PROJECTILE_SOUND, COOLDOWN, SPEED, OFFSET, STARTUP, CLIP,
+	RECOIL, PROJECTILE, PROJECTILE_SOUND, COOLDOWN, SPEED, OFFSET, STARTUP, CLIP,
 	RELOAD_TIME, TIMER, IGNORE_WALL, NAME, BUFF, TYPE, 
+	//DAMAGE TYPES
+	DAMAGE, DAMAGE_ROCKET, DAMAGE_EXPLOSION,
 	//ROCKET EVENTS
 	ROCKET_CREATE, ROCKET_STEP, ROCKET_DRAW,
 	//PARTICLES

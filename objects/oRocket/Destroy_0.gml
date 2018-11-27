@@ -1,3 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc Clean up list and remove owners rocket amount
 owner.rockets--;
+ds_list_destroy(hitList);
+ds_list_destroy(confirmList);
+//ds_list_destroy(rocket_map);

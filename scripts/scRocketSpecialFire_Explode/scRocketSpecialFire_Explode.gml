@@ -20,6 +20,7 @@ xplo.image_yscale = size;
 xplo.image_speed = 1.5;
 xplo.parent = owner;
 ds_map_copy(xplo.rocket_map, rocket_map);
+ds_list_copy(xplo.confirmList, hitList);
 //xplo.friendlyFire = friendlyFire;
 
 //All variables before this should be standard for all rockets. The one difference typically lies here:

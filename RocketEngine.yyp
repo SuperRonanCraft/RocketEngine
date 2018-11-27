@@ -1239,6 +1239,14 @@
             }
         },
         {
+            "Key": "92ed85dc-7eeb-436d-85ce-b5ac325a0898",
+            "Value": {
+                "id": "a1efe53a-c7f6-416a-98b1-f6d917d504a1",
+                "resourcePath": "scripts\\scRocketSpecialHoming_Create\\scRocketSpecialHoming_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "93c0f3dd-0605-48de-811a-2a13bed0930c",
             "Value": {
                 "id": "08128d37-7896-453f-836d-eaf4b78d832f",
@@ -1919,6 +1927,7 @@
         "b6293fa8-4b1a-4637-b3cc-244c977a20c2",
         "406b5267-371b-4e3f-9dae-0f35be661e37",
         "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
+        "92ed85dc-7eeb-436d-85ce-b5ac325a0898",
         "72ac3948-6fc8-469f-8d16-843aa1bf49f5",
         "7c30ad4e-9edc-423c-8c2b-2c1415d78451",
         "7a5bd777-6d09-42a2-ad95-9dd69ef5f2de",

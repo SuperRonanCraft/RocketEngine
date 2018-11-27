@@ -9,11 +9,8 @@ hitList = ds_list_create();
 confirmList = ds_list_create();
 image_angle = choose(0, 90, 180, 270);
 
-//stepScript = noone;
-
 //If it can hurt/affect the owner
 //friendlyFire = false;
 destroy = true;
-//If damage will be delt
+//Do damage while explosion animation is going on
 doing_damage = true;
-doing_buff = true;
