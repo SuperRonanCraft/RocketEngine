@@ -26,7 +26,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.FAST);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 22);
-ds_map_add(weapons[roc], ROCKET_MAP.CLIP, 5);
+ds_map_add(weapons[roc], ROCKET_MAP.CLIP, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.RELOAD_TIME, 60);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 3);
@@ -36,7 +36,7 @@ var roc = ROCKET.HOMING;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
-ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 20);
+ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 60);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 15);
@@ -57,7 +57,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.OFFSET, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialReverse_Create);
-ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialReverse_Step);
+//ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialReverse_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 6);
@@ -112,7 +112,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SAND);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 100);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 5);
-ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 0);
+ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
@@ -147,7 +147,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SLIME);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SLIME]);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SLIME]);
-ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 0);
+ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME]);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 30);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
@@ -173,6 +173,8 @@ enum ROCKET {
 	SAND,
 	LASER,
 	SLIME,
+	
+	//KEEP LAST
 	LENGHT
 }
 
