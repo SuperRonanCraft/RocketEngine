@@ -8,10 +8,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 0);
 
 //DEFAULT
-var roc = ROCKET.DEFAULT;
+roc = ROCKET.DEFAULT;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Default");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Explosive  device");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.DEFAULT);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 20);
@@ -20,10 +21,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
 
 //FAST
-var roc = ROCKET.FAST;
+roc = ROCKET.FAST;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Fast");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Super  sonic!");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.FAST);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 5);
@@ -34,10 +36,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 3);
 
 //HOMING
-var roc = ROCKET.HOMING;
+roc = ROCKET.HOMING;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Homing");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "I  will  find  you!");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
@@ -51,10 +54,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 7);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 15);
 
 //REVERSE
-var roc = ROCKET.REVERSE;
+roc = ROCKET.REVERSE;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Reverse");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Ima  go  this  way");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.REVERSE);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 40);
@@ -68,10 +72,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 6);
 
 //ICE
-var roc = ROCKET.ICE;
+roc = ROCKET.ICE;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Ice");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "It's  cold  outside");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.ICE);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 40);
@@ -88,10 +93,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 8);
 
 //FIRE
-var roc = ROCKET.FIRE;
+roc = ROCKET.FIRE;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Fire");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Run  like... faster");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.FIRE);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 50);
@@ -109,10 +115,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 4);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
 
 //SAND
-var roc = ROCKET.SAND;
+roc = ROCKET.SAND;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Sandy");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Dusty  but  laggy");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SAND);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 100);
@@ -129,10 +136,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 5);
 
 //LASER
-var roc = ROCKET.LASER;
+roc = ROCKET.LASER;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Laser");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Just  don't  afk");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.LASER);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 50);
@@ -145,10 +153,11 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 12);
 
 //SLIME
-var roc = ROCKET.SLIME;
+roc = ROCKET.SLIME;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Slime");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "A  slime... rocket...");
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SLIME);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SLIME]);
@@ -193,7 +202,7 @@ enum ROCKET_SPRITE {
 enum ROCKET_MAP {
 	//BASIC VARIABLES
 	RECOIL, PROJECTILE, PROJECTILE_SOUND, COOLDOWN, SPEED, OFFSET, STARTUP, CLIP,
-	RELOAD_TIME, TIMER, IGNORE_WALL, NAME, BUFF, TYPE, 
+	RELOAD_TIME, TIMER, IGNORE_WALL, NAME, DESCRIPTION, BUFF, TYPE, 
 	//DAMAGE TYPES
 	DAMAGE, DAMAGE_ROCKET, DAMAGE_EXPLOSION,
 	//ROCKET EVENTS

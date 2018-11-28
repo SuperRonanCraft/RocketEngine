@@ -2,6 +2,9 @@ draw_set_font(fPixel);
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
 start_y = (RES_H / 2) - (((ds_height - 1) / 2 ) * y_buffer);
 start_x = RES_W / 2;
+//Make the back button for rocket list to spawn lower
+if (ds_grid[# 1, 0] == menu_element_type.rocket_list || ds_grid[# 1, 0] == menu_element_type.rocket_buffs)
+	start_y = RES_H / 4 + RES_H / 2;
 
 var c = c_black;
 // Draw left
@@ -108,8 +111,9 @@ repeat (ds_height) {
 			draw_text_transformed_color(start_x, rty + 20, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
 			break;
 		case menu_element_type.rocket_list:
-			c = c_ltgray;
+			c = c_white;
 			c2 = c_black
+			c3 = c_yellow;
 			var amt = ROCKET.LENGHT;
 			var columns = 3;
 			var offset = 0;
@@ -119,14 +123,49 @@ repeat (ds_height) {
 					offset++;
 				var map = weapons[i];
 				var spr = map[? ROCKET_MAP.PROJECTILE];
-				var string_val = map[? ROCKET_MAP.NAME];
-				var rx = ((RES_W / 4) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * offset));
-				var ry = offset * 120 + 50
-				draw_text_transformed_color(rx + 2, ry, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(rx, ry + 2, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
+				var name = map[? ROCKET_MAP.NAME];
+				var desc = map[? ROCKET_MAP.DESCRIPTION];
+				var rx = ((RES_W / 4) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
+				var ry = offset * 120 + 50;
+				//Name
+				draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
+				//Sprite
 				draw_sprite(spr, 0, rx, ry + 30);
-				show_debug_message(string(offset) + " text " + string_val);
+				//Description
+				draw_text_transformed_color(rx + 2, ry + 62, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				draw_text_transformed_color(rx, ry + 60, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
 			}
+			break;
+		case menu_element_type.rocket_buffs:
+			c = c_white;
+			c2 = c_black
+			c3 = c_yellow;
+			var amt = BUFFTYPE.LENGHT;
+			var columns = 3;
+			var offset = 0;
+			draw_set_halign(fa_middle);
+			for (var i = 1; i < amt; i++) {
+				if ((i - 1) mod columns == 0)
+					offset++;
+				var map = ds_map_create();
+				scGetBuff(i, map);
+				var spr = map[? "icon"];
+				var name = map[? "name"];
+				var desc = map[? "description"];
+				var rx = ((RES_W / 4) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
+				var ry = offset * 120 + 50;
+				//Name
+				draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
+				//Sprite
+				draw_sprite(spr, 0, rx - sprite_get_width(spr) / 2, ry + 30);
+				//Description
+				draw_text_transformed_color(rx + 2, ry + 122, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				draw_text_transformed_color(rx, ry + 120, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
+				ds_map_destroy(map);
+			}
+			break;
 	}
 	yy++;
 }

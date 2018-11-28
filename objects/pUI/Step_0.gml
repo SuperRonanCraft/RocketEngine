@@ -107,12 +107,15 @@ if (inputting) {
 	var ochange = key_down - key_up;
 	if (ochange != 0) {
 		mouse_moving = false;
-		menu_option[page] += ochange;
-		if (menu_option[page] > ds_height - 1)
-			menu_option[page] = 0;
-		else if (menu_option[page] < 0)
-			menu_option[page] = ds_height - 1;
-		audio_play_sound(SOUND.UI_HOVER, 5, false);
+		var newoption = menu_option[page] + ochange;
+		if (newoption > ds_height - 1)
+			newoption = 0;
+		else if (newoption < 0)
+			newoption = ds_height - 1;
+		if (ds_grid[# 1, newoption] != menu_element_type.rocket_list && ds_grid[# 1, newoption] != menu_element_type.rocket_buffs) {
+			menu_option[page] = newoption;
+			audio_play_sound(SOUND.UI_HOVER, 5, false);
+		}
 	} else if (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) {
 		mouse_x_old = device_mouse_x_to_gui(0);
 		mouse_y_old = device_mouse_y_to_gui(0);
@@ -123,16 +126,17 @@ if (inputting) {
 		var centered = false;
 		var old_menu_option = menu_option[page];
 		for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
-		if (menu_pages[page] == menu_pages_centered[i])
-			centered = true;
+			if (menu_pages[page] == menu_pages_centered[i])
+				centered = true;
 		var set = false;
-		for (var i = 0; i < ds_grid_height(menu_pages[page]); i++) {
+		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 			var yoffset = (y_buffer / 3);
 			var ycheck = i * y_buffer;
-			if (mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
-				menu_option[page] = i;
-				set = true;
-			}
+			if (ds_grid[# 1, i] != menu_element_type.rocket_list && ds_grid[# 1, i] != menu_element_type.rocket_buffs)
+				if (mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
+					menu_option[page] = i;
+					set = true;
+				}
 		}
 		if (!set)
 			menu_option[page] = -1;

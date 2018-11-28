@@ -1647,6 +1647,14 @@
             }
         },
         {
+            "Key": "d2a4648a-e27d-4dc9-a722-27c9258bae07",
+            "Value": {
+                "id": "3b1df15a-0237-48ea-aa8a-2159d5bd9e8f",
+                "resourcePath": "scripts\\scGetBuff\\scGetBuff.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d6ba92e2-a45a-49aa-bdbf-5ab91afc2838",
             "Value": {
                 "id": "d8d7b9f2-9aca-4831-95a0-60e899fb42fa",
@@ -1945,6 +1953,7 @@
         "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
         "19bb796d-1000-4d06-9411-9602588f1e07",
+        "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
         "54ba9aef-e374-4001-9b0e-b1fbe4a46f4d",
         "508da282-5360-414c-896e-c0369ddbf32e",

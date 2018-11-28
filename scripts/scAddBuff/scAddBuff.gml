@@ -21,37 +21,15 @@ for (var i = 0; i < array_length_1d(buff); i++) {
 	ds_map[? "type"] = buff[i];
 	ds_map[? "stackable"] = stackable;
 	ds_map[? "disabled"] = false;
-	switch (buff[i]) {
-		case BUFFTYPE.BURNRUSH:
-			ds_map[? "name"] = "Burn Rush";
-			ds_map[? "icon"] = s_abilityIcon_BurnRush;
-			ds_map[? "step"] = scBuffBurnRush;
-			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
-			break;
-		case BUFFTYPE.CHILLED:
-			ds_map[? "name"] = "Chilled";
-			ds_map[? "icon"] = s_abilityIcon_Chilled;
-			ds_map[? "step"] = scBuffChilled;
-			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.WINTER];
-			break;
-		case BUFFTYPE.COOLDOWN:
-			ds_map[? "name"] = "Cooldowns";
-			ds_map[? "icon"] = s_abilityIcon_Cooldown;
-			ds_map[? "step"] = scBuffCooldown;
-			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SPARKLE];
-			break;
-		case BUFFTYPE.SLIME:
-			ds_map[? "name"] = "Slimed";
-			ds_map[? "icon"] = s_abilityIcon_Slimed; 
-			ds_map[? "step"] = scBuffSlime; 
-			ds_map[? "particle"] = oParticleHandler.ds_part[? PARTICLES.SLIME];
-			break;
-	}
+	scGetBuff(buff[i], ds_map);
 	//Check if a buff from the target is the same TYPE, if not, add it, or if its stackable, just add it
 	if (!scFindBuff(targ, ds_map[? "type"]) || ds_map[? "stackable"])
 		ds_list_add(targ.buffs, ds_map);
 }
 
 enum BUFFTYPE {
-	BURNRUSH, CHILLED, COOLDOWN, SLIME
+	BURNRUSH, CHILLED, COOLDOWN, SLIME,
+	
+	//PUT LAST
+	LENGHT
 }

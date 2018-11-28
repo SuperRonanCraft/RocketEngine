@@ -8,6 +8,7 @@ enum menu_page {
 	graphics,
 	controls,
 	rocketinfo,
+	rocketbuffs,
 	height
 }
 
@@ -29,6 +30,7 @@ enum menu_element_type {
 	goto_room,
 	//List all rockets
 	rocket_list,
+	rocket_buffs
 }
 
 //Default Menus

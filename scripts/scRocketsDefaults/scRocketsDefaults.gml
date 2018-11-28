@@ -11,6 +11,7 @@ rocket_map[? ROCKET_MAP.RELOAD_TIME] = -1; //Reload time
 rocket_map[? ROCKET_MAP.TIMER] = -1; //Up-time
 rocket_map[? ROCKET_MAP.IGNORE_WALL] = false; //allow wall clipping
 rocket_map[? ROCKET_MAP.NAME] = "default";
+rocket_map[? ROCKET_MAP.DESCRIPTION] = "Uh... Nothing?";
 rocket_map[? ROCKET_MAP.TYPE] = ROCKET.NONE;
 rocket_map[? ROCKET_MAP.BUFF] = noone;
 //DAMAGES

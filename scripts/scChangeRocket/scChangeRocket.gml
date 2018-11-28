@@ -6,6 +6,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != weapon) {
 	rocket_map = 0;
 	//All default values
 	scRocketsDefaults();
+	//Grab custom weapon keys
 	var wp_map = weapons[weapon];
 	var key = ds_map_find_first(wp_map);
 	for (var i = 0; i <	ds_map_size(wp_map); i++) {
