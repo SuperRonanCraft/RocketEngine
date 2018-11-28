@@ -115,7 +115,7 @@ repeat (ds_height) {
 			c2 = c_black
 			c3 = c_yellow;
 			var amt = ROCKET.LENGHT;
-			var columns = 3;
+			var columns = 4;
 			var offset = 0;
 			draw_set_halign(fa_middle);
 			for (var i = 1; i < amt; i++) {
@@ -125,13 +125,24 @@ repeat (ds_height) {
 				var spr = map[? ROCKET_MAP.PROJECTILE];
 				var name = map[? ROCKET_MAP.NAME];
 				var desc = map[? ROCKET_MAP.DESCRIPTION];
-				var rx = ((RES_W / 4) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
-				var ry = offset * 120 + 50;
+				var buffs = map[? ROCKET_MAP.BUFF];
+				var rx = ((RES_W / 8) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
+				var ry = offset * 130 + 40;
 				//Name
 				draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 				draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
 				//Sprite
 				draw_sprite(spr, 0, rx, ry + 30);
+				//Buffs of rocket
+				if (!is_undefined(buffs)) {
+					var bamt = array_length_1d(buffs);
+					for (var b = 0; b < bamt; b++) {
+						var map = ds_map_create();
+						scGetBuff(buffs[b], map);
+						draw_sprite_ext(map[? "icon"], 0, rx - (bamt * 20) + (40 * b) + 4, ry + 70, 0.5, 0.5, 0, c_white, 1);
+						ds_map_destroy(map);
+					}
+				}
 				//Description
 				draw_text_transformed_color(rx + 2, ry + 62, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 				draw_text_transformed_color(rx, ry + 60, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
@@ -145,24 +156,27 @@ repeat (ds_height) {
 			var columns = 3;
 			var offset = 0;
 			draw_set_halign(fa_middle);
-			for (var i = 1; i < amt; i++) {
-				if ((i - 1) mod columns == 0)
+			for (var i = 0; i < amt; i++) {
+				if (i mod columns == 0)
 					offset++;
 				var map = ds_map_create();
 				scGetBuff(i, map);
 				var spr = map[? "icon"];
 				var name = map[? "name"];
 				var desc = map[? "description"];
-				var rx = ((RES_W / 4) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
-				var ry = offset * 120 + 50;
+				var part = map[? "particle"];
+				var rx = ((RES_W / 4) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
+				var ry = offset * 150 + 10;
 				//Name
 				draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 				draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
 				//Sprite
-				draw_sprite(spr, 0, rx - sprite_get_width(spr) / 2, ry + 30);
+				part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - (1*30), rx + (1*30), ry - (1*10) + sprite_get_height(spr) + 20, ry + (1*10) + sprite_get_height(spr) + 20, ps_shape_ellipse, ps_distr_gaussian)
+				part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, 15*1);
+				draw_sprite(spr, 0, rx - sprite_get_width(spr) / 2, ry + 20);
 				//Description
-				draw_text_transformed_color(rx + 2, ry + 122, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(rx, ry + 120, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
+				draw_text_transformed_color(rx + 2, ry + 112, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				draw_text_transformed_color(rx, ry + 110, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
 				ds_map_destroy(map);
 			}
 			break;

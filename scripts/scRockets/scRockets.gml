@@ -157,7 +157,7 @@ roc = ROCKET.SLIME;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Slime");
-ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "A  slime... rocket...");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "A  slimy  mess");
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.SLIME);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SLIME]);
@@ -177,6 +177,20 @@ ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSpecialSlime_Exp_C
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialSlime_Exp_Wall);
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialSlime_Exp_Rocket);
 
+//TESTING
+roc = ROCKET.OP;
+weapons[roc] = ds_map_create();
+ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
+ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Overpowered");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "You  wont  live...");
+ds_map_add(weapons[roc], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME, BUFFTYPE.COOLDOWN, BUFFTYPE.BURNRUSH]);
+ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 2);
+ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.OP);
+ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 20);
+ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 10);
+ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
+ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
+
 enum ROCKET {
 	NONE,
 	DEFAULT, 
@@ -188,6 +202,7 @@ enum ROCKET {
 	SAND,
 	LASER,
 	SLIME,
+	OP,
 	
 	//KEEP LAST
 	LENGHT
@@ -196,7 +211,7 @@ enum ROCKET {
 enum ROCKET_SPRITE {
 	//Mostly used to save memory on oRocketPickup, or to insta grab a rocket sprite
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
-	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime
+	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime, OP = sRocket_Default
 }
 
 enum ROCKET_MAP {

@@ -1,4 +1,5 @@
 ///@desc Strictly remove a buff from the list and destroy the DS Map. Returns false if not found.
+///Should only be called by a buff itself
 ///@arg target the targets instance
 ///@arg buff The DS Map buff to delete by type
 

@@ -4,9 +4,6 @@
 //Animate the player in their current state
 scAnimationState();
 
-
-
-
 //Draws sprite with modified direction
 draw_set_color(c_black);
 
