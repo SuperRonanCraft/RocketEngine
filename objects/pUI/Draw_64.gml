@@ -110,13 +110,22 @@ repeat (ds_height) {
 		case menu_element_type.rocket_list:
 			c = c_ltgray;
 			c2 = c_black
-			for (var i = 1; i < ROCKET.LENGHT; i++) {
+			var amt = ROCKET.LENGHT;
+			var columns = 3;
+			var offset = 0;
+			draw_set_halign(fa_middle);
+			for (var i = 1; i < amt; i++) {
+				if ((i - 1) mod columns == 0)
+					offset++;
 				var map = weapons[i];
 				var spr = map[? ROCKET_MAP.PROJECTILE];
 				var string_val = map[? ROCKET_MAP.NAME];
-				draw_text_transformed_color(start_x + 2, rty + (50 * i), string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(start_x, rty + ((50 * i) + 2), string_val, 0.6, 0.6, 0, c, c, c, c, 1);
-				draw_sprite(spr, 0, start_x, rty + ((50 * i) + 30));
+				var rx = ((RES_W / 4) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * offset));
+				var ry = offset * 120 + 50
+				draw_text_transformed_color(rx + 2, ry, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				draw_text_transformed_color(rx, ry + 2, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
+				draw_sprite(spr, 0, rx, ry + 30);
+				show_debug_message(string(offset) + " text " + string_val);
 			}
 	}
 	yy++;
