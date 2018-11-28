@@ -68,7 +68,7 @@ if (inputting) {
 			//}
 			break;
 		case menu_element_type.toggle:
-			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+			var hinput = keyboard_check_pressed(vk_left) - keyboard_check_pressed(vk_right);
 			if (hinput != 0) {
 				//AUDIO
 				var val = ds_grid[# 4, menu_option[page]] + hinput;

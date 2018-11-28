@@ -15,5 +15,5 @@ instance_create_depth(0,0, depth, oCamera);
 //Endgame
 endgame = false;
 endgame_delay = 2 * room_speed;
-winner = noone;
-loser = noone;
+global.winner = noone;
+global.loser = noone;

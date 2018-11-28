@@ -31,12 +31,9 @@ repeat (ds_height) {
 	}
 	if (centered) {
 		draw_set_halign(fa_middle);
-		draw_text_transformed_color(start_x + 2, lty + 2, ds_grid[# 0, yy], scale, scale, 0, c, c, c, c, 1);
-		draw_text_transformed_color(start_x, lty, ds_grid[# 0, yy], scale, scale, 0, c3, c3, c3, c3, 1);
-	} else {
-		draw_text_color(ltx + xo + 2, lty + 2, ds_grid[# 0, yy], c, c, c, c, 1);
-		draw_text_color(ltx + xo, lty, ds_grid[# 0, yy], c3, c3, c3, c3, 1);
-	}
+		scDrawText(start_x, lty, ds_grid[# 0, yy], c3, scale);
+	} else
+		scDrawText(ltx + xo, lty, ds_grid[# 0, yy], c3, scale);
 	yy++;
 }
 
@@ -61,8 +58,9 @@ repeat (ds_height) {
 			c = c_ltgray;
 			c2 = c_black;
 			if (inputting && yy == menu_option[page]) c = c_yellow;
-			draw_text_transformed_color(rtx + 2, rty + 2, left_shift + current_array[current_val] + right_shift, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-			draw_text_transformed_color(rtx, rty, left_shift + current_array[current_val] + right_shift, 0.6, 0.6, 0, c, c, c, c, 1);
+			scDrawText(rtx, rty, left_shift + current_array[current_val] + right_shift, c2, 0.6);
+			//draw_text_transformed_color(rtx + 2, rty + 2, left_shift + current_array[current_val] + right_shift, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+			//draw_text_transformed_color(rtx, rty, left_shift + current_array[current_val] + right_shift, 0.6, 0.6, 0, c, c, c, c, 1);
 			break;
 		case menu_element_type.slider:
 			var len = 128;
@@ -72,19 +70,22 @@ repeat (ds_height) {
 			if (inputting && yy == menu_option[page]) c = c_yellow;
 			draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
 			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
-			draw_text_transformed_color(rtx + (len * 1.2) + 2, rty + 2, string(floor(circle_pos * 100)) + "%", 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-			draw_text_transformed_color(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", 0.6, 0.6, 0, c, c, c, c, 1);
+			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, 0.6);
+			//draw_text_transformed_color(rtx + (len * 1.2) + 2, rty + 2, string(floor(circle_pos * 100)) + "%", 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+			//draw_text_transformed_color(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", 0.6, 0.6, 0, c, c, c, c, 1);
 			break;
 		case menu_element_type.toggle:
-			var current_val = ds_grid[# 3, yy];
+			var current_val = ds_grid[# 4, yy];
 			var c1, c2, c = c_ltgray, c3 = c_black;
 			if (inputting && yy == menu_option[page]) c = c_yellow;
-			if (current_val == 0) { c1 = c; c2 = c_dkgray;
+			if (current_val == 1) { c1 = c; c2 = c_dkgray;
 			} else { c1 = c_dkgray; c2 = c;}
-			draw_text_transformed_color(rtx + 2, rty + 2, "ON", 0.6, 0.6, 0, c3, c3, c3, c3, 1);
-			draw_text_transformed_color(rtx, rty, "ON", 0.6, 0.6, 0, c1, c1, c1, c1, 1);
-			draw_text_transformed_color(rtx + 96 + 2, rty + 2, "OFF", 0.6, 0.6, 0, c3, c3, c3, c3, 1);
-			draw_text_transformed_color(rtx + 96, rty, "OFF", 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+			scDrawText(rtx, rty, "ON", c1, 0.6);
+			scDrawText(rtx + 96 , rty, "OFF", c2, 0.6);
+			//draw_text_transformed_color(rtx + 2, rty + 2, "ON", 0.6, 0.6, 0, c3, c3, c3, c3, 1);
+			//draw_text_transformed_color(rtx, rty, "ON", 0.6, 0.6, 0, c1, c1, c1, c1, 1);
+			//draw_text_transformed_color(rtx + 96 + 2, rty + 2, "OFF", 0.6, 0.6, 0, c3, c3, c3, c3, 1);
+			//draw_text_transformed_color(rtx + 96, rty, "OFF", 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 			break;
 		case menu_element_type.input:
 			var current_val = variable_global_get(ds_grid[# 2, yy]);
@@ -96,24 +97,24 @@ repeat (ds_height) {
 				case vk_down: string_val = "DOWN KEY"; break;
 				default: string_val = chr(current_val); break;
 			}
-			c = c_ltgray;
 			if (inputting && yy == menu_option[page]){ c = c_yellow; string_val = string_val + " | Press any key!"}
-			c2 = c_black
-			draw_text_transformed_color(rtx + 2, rty + 2, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-			draw_text_transformed_color(rtx, rty, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
+			scDrawText(rtx, rty, string_val, c_ltgray, 0.6);
+			//draw_text_transformed_color(rtx + 2, rty + 2, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+			//draw_text_transformed_color(rtx, rty, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
 			break;
 		case menu_element_type.goto_room:
 			draw_set_halign(fa_middle);
 			var string_val = ds_grid[# 3, yy];
-			c = c_ltgray;
-			c2 = c_black
-			draw_text_transformed_color(start_x + 2, rty + 22, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-			draw_text_transformed_color(start_x, rty + 20, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
+			//c = c_ltgray;
+			//c2 = c_black
+			scDrawText(start_x, rty + 20, string_val, c_ltgray, 0.6);
+			//draw_text_transformed_color(start_x + 2, rty + 22, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+			//draw_text_transformed_color(start_x, rty + 20, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
 			break;
 		case menu_element_type.rocket_list:
-			c = c_white;
-			c2 = c_black
-			c3 = c_yellow;
+			//c = c_white;
+			//c2 = c_black
+			//c3 = c_yellow;
 			var amt = ROCKET.LENGHT;
 			var columns = 4;
 			var offset = 0;
@@ -129,8 +130,9 @@ repeat (ds_height) {
 				var rx = ((RES_W / 8) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
 				var ry = offset * 130 + 40;
 				//Name
-				draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
+				scDrawText(rx, ry, name, c_white, 0.6);
+				//draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				//draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
 				//Sprite
 				draw_sprite(spr, 0, rx, ry + 30);
 				//Buffs of rocket
@@ -144,14 +146,15 @@ repeat (ds_height) {
 					}
 				}
 				//Description
-				draw_text_transformed_color(rx + 2, ry + 62, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(rx, ry + 60, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
+				scDrawText(rx, ry + 60, desc, c_yellow, 0.6);
+				//draw_text_transformed_color(rx + 2, ry + 62, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				//draw_text_transformed_color(rx, ry + 60, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
 			}
 			break;
 		case menu_element_type.rocket_buffs:
-			c = c_white;
-			c2 = c_black
-			c3 = c_yellow;
+			//c = c_white;
+			//c2 = c_black
+			//c3 = c_yellow;
 			var amt = BUFFTYPE.LENGHT;
 			var columns = 3;
 			var offset = 0;
@@ -168,15 +171,17 @@ repeat (ds_height) {
 				var rx = ((RES_W / 4) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
 				var ry = offset * 150 + 10;
 				//Name
-				draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
+				scDrawText(rx, ry, name, c_white, 0.6);
+				//draw_text_transformed_color(rx + 2, ry + 2, name, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				//draw_text_transformed_color(rx, ry, name, 0.6, 0.6, 0, c, c, c, c, 1);
 				//Sprite
 				part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - (1*30), rx + (1*30), ry - (1*10) + sprite_get_height(spr) + 20, ry + (1*10) + sprite_get_height(spr) + 20, ps_shape_ellipse, ps_distr_gaussian)
 				part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, 15*1);
 				draw_sprite(spr, 0, rx - sprite_get_width(spr) / 2, ry + 20);
 				//Description
-				draw_text_transformed_color(rx + 2, ry + 112, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
-				draw_text_transformed_color(rx, ry + 110, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
+				scDrawText(rx, ry + 110, desc, c_yellow, 0.6);
+				//draw_text_transformed_color(rx + 2, ry + 112, desc, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
+				//draw_text_transformed_color(rx, ry + 110, desc, 0.6, 0.6, 0, c3, c3, c3, c3, 1);
 				ds_map_destroy(map);
 			}
 			break;

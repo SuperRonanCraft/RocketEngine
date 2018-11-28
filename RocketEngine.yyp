@@ -159,14 +159,6 @@
             }
         },
         {
-            "Key": "12c06223-916a-4b9d-b97c-3db563a1f43e",
-            "Value": {
-                "id": "e3b09671-3294-4569-b0ec-c817c74fb41e",
-                "resourcePath": "sounds\\snHit_Default\\snHit_Default.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "12f54edf-5527-4ddb-9dda-dc5099ad848c",
             "Value": {
                 "id": "a45e158f-f6b9-47fd-bfc1-e1f05534a337",
@@ -1258,7 +1250,7 @@
             "Key": "95586f1f-f258-4f45-8315-aec50e1786b1",
             "Value": {
                 "id": "943208f5-0687-4144-9cbc-75eef18f152d",
-                "resourcePath": "scripts\\scDrawSetupText\\scDrawSetupText.yy",
+                "resourcePath": "scripts\\scDrawText\\scDrawText.yy",
                 "resourceType": "GMScript"
             }
         },

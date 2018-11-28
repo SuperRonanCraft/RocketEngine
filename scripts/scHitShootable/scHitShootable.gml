@@ -17,6 +17,6 @@ if (argument0 != id) {
 	if (hp <= 0) {
 		alive = false;
 		playerState = PLAYERSTATE.DEAD;
-		scPlayerDied()
+		scPlayerDied();
 	}
 }
