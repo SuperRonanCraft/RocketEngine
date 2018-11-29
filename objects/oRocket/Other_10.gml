@@ -20,7 +20,7 @@ if (part != noone) {
 }
 scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 //Delete this instance of oRocket
-//instance_destroy();
+
 destroy = true;
 
 //Do something special if no rocket/shootable or wall event for a rocket, do something with just the explosion

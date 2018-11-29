@@ -15,9 +15,8 @@ if (argument[0] != id && argument[3] > 0) {
 	/*if (hp >= 0)
 		if (argument2) //Play hit sound effect?
 			audio_play_sound(SOUND.GP_HIT, 1, false);*/
-	if (hp <= 0) {
-		alive = false;
-		playerState = PLAYERSTATE.DEAD;
-		scPlayerDied();
+	
+	if(hp > 0 || alive){
+		scData_ConfirmHit();
 	}
 }
