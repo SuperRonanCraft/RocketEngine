@@ -153,14 +153,15 @@ if (key_enter && menu_option[page] != -1) {
 		case menu_element_type.script_runner: script_execute(ds_grid[# 2, menu_option[page]]); break;
 		case menu_element_type.goto_room: SlideTransition(TRANS_MODE.GOTO, ds_grid[# 2, menu_option[page]]); control = false; break;
 		case menu_element_type.page_transfer: 
-			for (var i = 0; i < array_length_1d(menu_pages_index); i++)
-				if (menu_pages_index[i] == ds_grid[# 2, menu_option[page]]) {
-					menu_option[page] = -1;
-					page = i;
-					break;
-				}
+			for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
+				if (menu_pages_index[i] != ds_grid[# 2, menu_option[page]]) continue;
+				menu_option[page] = -1; page = i; break;}
 			break;
-		case menu_element_type.slider:
+		//Input elements
+		case menu_element_type.slider: if (inputting) {
+			script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]], menu_option[page]);
+			variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]); 
+			inputting = !inputting; break;}
 		case menu_element_type.shift:
 		case menu_element_type.toggle: if (inputting) {
 			script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);

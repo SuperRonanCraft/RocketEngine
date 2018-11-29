@@ -1895,6 +1895,14 @@
             }
         },
         {
+            "Key": "fd5f9e2d-aab8-4026-8d3c-80bd3e096f2f",
+            "Value": {
+                "id": "45545c77-c6fd-4aea-ba6a-4d776cfd6f66",
+                "resourcePath": "objects\\oStageSBack\\oStageSBack.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fe1033fc-a994-419a-8fb7-cda81cf69839",
             "Value": {
                 "id": "010b635e-ad17-49b6-9407-7c8c4f6f1c5b",

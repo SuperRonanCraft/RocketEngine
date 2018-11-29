@@ -26,10 +26,10 @@ global.pause = false;
 
 //Gamemodes
 //Preset
-global.gamemodes[0] = "1v1";
-global.gamemodes[1] = "vTarget";
-global.gamemodes[2] = "KnockOut";
-global.gamemodes[3] = "Nuke'm";
+global.gamemodes[0] = "One v One";
+global.gamemodes[1] = "Targets";
+global.gamemodes[2] = "Knock  Out";
+global.gamemodes[3] = "Nuked";
 //Set when a gamemode is selected in oUIMain
 global.gamemode = -1;
 

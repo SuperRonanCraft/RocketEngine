@@ -8,15 +8,15 @@ ds_menu_main = scCreateMenuPage(
 );
 
 ds_gamemodes = scCreateMenuPage(
-	["ONE V ONE",		menu_element_type.goto_room,		r1v1Select,					"Play  vs.  another  player"],
-	["V TARGET",		menu_element_type.goto_room,		rvTargetSelect,				"Shoot  targets,  not  bombs..."],
-	["KNOCK OUT",		menu_element_type.goto_room,		rKnockOutSelect,			"Knock  them  off!"],
+	[global.gamemodes[0],		menu_element_type.goto_room,		r1v1Select,					"Play  vs.  another  player"],
+	[global.gamemodes[1],		menu_element_type.goto_room,		rvTargetSelect,				"Shoot  targets,  not  bombs..."],
+	[global.gamemodes[2],		menu_element_type.goto_room,		rKnockOutSelect,			"Knock  them  off!"],
 	["MORE...",			menu_element_type.page_transfer,	menu_page.more_gamemodes],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
 );
 
 ds_other_gamemodes = scCreateMenuPage(
-	["NUKED",			menu_element_type.goto_room,		rNukemSelect,		"Duke  Nuke'm!"],
+	[global.gamemodes[3],			menu_element_type.goto_room,		rNukemSelect,		"Duke  Nuke'm!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.gamemodes],
 );
 
