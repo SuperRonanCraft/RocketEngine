@@ -1,6 +1,7 @@
 /// @desc draw end game text
+if (!calculated) exit;
 var c = c_red, c2 = c_green, c3 = c_yellow;
-if (array_length_1d(global.loser) <= 1) {
+if ((array_length_1d(global.winner) > 0 && array_length_1d(global.winner) <= 1) || (array_length_1d(global.loser) <= 1 && array_length_1d(global.loser) > 0)) {
 	for (var i = 0; i < array_length_1d(global.winner); i++) {
 		if (global.winner[i] == noone) continue;
 		var xx = (global.winner[i] == TEAM.LEFT ? RES_W / 4 : RES_W / 2 + RES_W / 4);

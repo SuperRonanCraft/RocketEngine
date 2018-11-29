@@ -1,5 +1,5 @@
 /// @desc a stage has begun
-timer = STAGE_TIMER.DEFAULT;//global.stage_timer;
+timer = 5;//STAGE_TIMER.DEFAULT;//global.stage_timer;
 enum STAGE_TIMER {
 	DEFAULT = 90, DEDICATED = 120, SCARED = 180
 }
@@ -15,5 +15,8 @@ instance_create_depth(0,0, depth, oCamera);
 //Endgame
 endgame = false;
 endgame_delay = 2 * room_speed;
+//Winners and losers list
 global.winner = noone;
 global.loser = noone;
+//If the winner/losers have been calculated
+calculated = false;
