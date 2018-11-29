@@ -7,3 +7,5 @@ scBuffHandler();
 scGravity();
 scKeybindsControls();
 scRocketProgress(playerid);
+
+scCheckHealth();

@@ -1,8 +1,7 @@
 /// @desc 1v1 Gamemode has started
 
 //Log new 1v1 game
-oDataCollector.games++;
-scAddData("1v1 GAME " + string(oDataCollector.games) + ":");
+scData_StartCount()
 
 //Max amount of oRocketPickup
 pickups_max = 4;

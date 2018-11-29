@@ -26,10 +26,5 @@ calculated = true;
 global.play = false;
 		
 //Print out winner
-scAddData("OUTCOME:");
-if(!tie)
-	scAddData("WINNER: " + string(global.winner));
-else
-	scAddData("TIE");	
-//Check if game ended in timeout, add to data
-scAddData("TIMEOUT: " + string(timer_current <= 0));
+
+scData_PrintOutcome();

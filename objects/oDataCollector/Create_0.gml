@@ -6,3 +6,7 @@ file_text_writeln(file);
 file_text_close(file);
 
 games = 0;
+
+timeToHit = ds_list_create();
+timer = 0;
+beginCount = false;
