@@ -178,18 +178,20 @@ ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSpecialSlime_Exp_C
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialSlime_Exp_Rocket);
 
 //TESTING
-/*roc = ROCKET.OP;
+roc = ROCKET.RANDOM;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
-ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Overpowered");
-ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "You  wont  live...");
-ds_map_add(weapons[roc], ROCKET_MAP.BUFF, [BUFFTYPE.SLIME, BUFFTYPE.COOLDOWN, BUFFTYPE.BURNRUSH]);
+ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Obsolete");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "RNG  isn't  fun");
+ds_map_add(weapons[roc], ROCKET_MAP.BUFF, [choose(BUFFTYPE.SLIME, BUFFTYPE.COOLDOWN, BUFFTYPE.BURNRUSH)]);
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 2);
-ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.OP);
+ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.RANDOM);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 20);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
-ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);*/
+ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
+ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialRandom_Step);
+ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialRandom_Create);
 
 enum ROCKET {
 	NONE,
@@ -202,7 +204,7 @@ enum ROCKET {
 	SAND,
 	LASER,
 	SLIME,
-	//OP,
+	RANDOM,
 	
 	//KEEP LAST
 	LENGHT
@@ -211,7 +213,7 @@ enum ROCKET {
 enum ROCKET_SPRITE {
 	//Mostly used to save memory on oRocketPickup, or to insta grab a rocket sprite
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
-	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime//, OP = sRocket_Default
+	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime, RANDOM = sRocket_Random
 }
 
 enum ROCKET_MAP {

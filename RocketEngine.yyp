@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "037c67b2-d3b0-4f60-922a-f2bcebecdef0",
+            "Value": {
+                "id": "4796cbfc-b96b-4ee1-9f3e-0f09ede5b7db",
+                "resourcePath": "views\\037c67b2-d3b0-4f60-922a-f2bcebecdef0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "03a26806-17fd-4171-842e-d47ae969bf8e",
             "Value": {
                 "id": "eac138ab-4423-45dd-a1cd-24ba7a5e45a2",
@@ -487,6 +495,14 @@
             }
         },
         {
+            "Key": "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
+            "Value": {
+                "id": "ee6269fa-3fbb-49a9-8abe-401f595c785c",
+                "resourcePath": "scripts\\scRocketSpecialRandom_Step\\scRocketSpecialRandom_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "37e98b2e-8015-4140-86a4-beff0ddc13b5",
             "Value": {
                 "id": "c14bdcd0-9bc2-4f12-a179-96f18ee54e7f",
@@ -775,6 +791,14 @@
             }
         },
         {
+            "Key": "5c320603-4784-4110-97d0-f25729940237",
+            "Value": {
+                "id": "8077b590-40c1-4955-a560-0a02476c2112",
+                "resourcePath": "scripts\\scRocketSpecialRandom_Create\\scRocketSpecialRandom_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5cd62f0a-d0f1-4c9f-aa45-4ab4d79ecd51",
             "Value": {
                 "id": "d51b45ca-fcfb-42d6-b1bf-4b7dbd57764e",
@@ -932,6 +956,14 @@
                 "id": "1c039e1f-b62a-4913-a54b-75081b91caee",
                 "resourcePath": "views\\6faef6f4-1600-4237-a30c-a46a36d582e0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7011ea75-1c0e-4183-9a61-4d653bd65535",
+            "Value": {
+                "id": "52170d64-86bc-43a1-bbd6-317ef4c2292b",
+                "resourcePath": "sprites\\sRocket_Random\\sRocket_Random.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1995,6 +2027,8 @@
         "b78cfcc2-8e40-44d2-a0f8-ac9159cc0aa6",
         "3ca8b2f6-b0d5-4ba6-a968-dd51de4880aa",
         "1fd940af-afa7-47d9-9819-2f6ab960e911",
+        "5c320603-4784-4110-97d0-f25729940237",
+        "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
         "7de4ea95-a832-4f43-add4-b4762a37018d",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",

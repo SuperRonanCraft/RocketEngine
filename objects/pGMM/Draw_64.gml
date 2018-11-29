@@ -17,11 +17,13 @@ var w = sprite_get_width(sTimerBar) * (timer_current / timer);
 var h = sprite_get_height(sTimerBar);
 draw_sprite_part_ext(sTimerBar, 0, 0, 0, w, h, xpos, ypos, 1, 1, c_white, 0.8);
 draw_sprite_ext(sTimerBar, 1, xpos, ypos, 1, 1, 0, 0, 0.8);
-//draw_line_width_color(RES_W / 4 - 2, 20, (RES_W / 2 + RES_W / 4) + 2, 20, 14, c2, c2);
-//draw_line_width_color(RES_W / 4, 20,  (RES_W / 4) + ((RES_W / 2) * (timer_current / timer)), 20, 10, c_red, c_green);
 //Time
 scDrawText(RES_W / 2, 25, string(timer_current), c_black, 1, c_ltgray);
-//draw_text_color(RES_W / 2 + 2, 25 + 2, string(timer_current), c2, c2, c2, c2, 1);
-//draw_text_color(RES_W / 2, 25, string(timer_current), c, c, c, c, 1);
-if (endgame && endgame_delay <= 0)
-	event_user(4);
+
+//Game end draw events
+if (endgame) {
+	//Game has ended
+	scDrawText(RES_W / 2, RES_H / 2, "GAME OVER!", c_red, 2);
+	if (endgame_delay <= 0) //The moment a game ended
+		event_user(4);
+}
