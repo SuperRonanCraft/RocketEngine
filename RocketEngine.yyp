@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "1de80af4-8cc0-4f11-ae4e-6837c20849df",
+            "Value": {
+                "id": "614b881f-64e9-4748-887e-96c7ec2c52bd",
+                "resourcePath": "views\\1de80af4-8cc0-4f11-ae4e-6837c20849df.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1fb09528-73a5-41bd-b7f4-5e1e9b8d9359",
             "Value": {
                 "id": "35d3c821-411b-4fac-a9a2-90bb8f4a28ac",
@@ -1055,6 +1063,14 @@
             }
         },
         {
+            "Key": "7f62856a-bec2-481f-9f97-54b81fe9fd31",
+            "Value": {
+                "id": "da0e0c8a-bcd8-49d4-84e9-747c8578ea5e",
+                "resourcePath": "scripts\\scIncreaseGames\\scIncreaseGames.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7ff6352f-9859-456d-b82b-539d7ee73f36",
             "Value": {
                 "id": "6d0c9a04-a51d-4276-a170-fc9d036ce853",
@@ -1775,6 +1791,14 @@
             }
         },
         {
+            "Key": "e4036cee-d48b-4622-8a29-c1a6a35bf7d0",
+            "Value": {
+                "id": "c6768326-404c-4ba9-8b4f-84a0ab0c4981",
+                "resourcePath": "scripts\\scAddData\\scAddData.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e548dccd-2aee-41c3-9d98-d85d53df5f21",
             "Value": {
                 "id": "3e97b057-8dd9-41cf-a6b0-ebde1e3afe13",
@@ -2008,7 +2032,9 @@
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
         "95586f1f-f258-4f45-8315-aec50e1786b1",
         "a6070534-903b-4493-b956-7c258781b24d",
-        "8b67ca91-d986-48e9-92e2-cc2063238cf1"
+        "8b67ca91-d986-48e9-92e2-cc2063238cf1",
+        "e4036cee-d48b-4622-8a29-c1a6a35bf7d0",
+        "7f62856a-bec2-481f-9f97-54b81fe9fd31"
     ],
     "tutorial": ""
 }

@@ -1,5 +1,9 @@
 /// @desc 1v1 Gamemode has started
 
+//Number of games increases
+scIncreaseGames();
+scAddData("GAME " + string(oDataCollector.games) + ":");
+show_debug_message("game started");
 //Max amount of oRocketPickup
 pickups_max = 4;
 //Pickups that should spawn
