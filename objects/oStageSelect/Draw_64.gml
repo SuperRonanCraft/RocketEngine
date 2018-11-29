@@ -1,3 +1,10 @@
 /// @desc gamemode stage selection draw gui event
 //Current gamemode text
-scDrawText(RES_W / 2, RES_H / 4, global.gamemodes[gamemode], c_ltgray, 1);
+draw_set_halign(fa_middle);
+draw_set_valign(fa_middle);
+var text = global.gamemodes[gamemode];
+var len = string_length(text) * (2 * 10);
+var xx = RES_W / 2;
+var yy = RES_H / 4;
+scDrawText(xx, yy, text, c_gray, 2);
+draw_line_width_color(xx - len, yy + 50, xx + len, yy + 50, 2, c_black, c_black);
