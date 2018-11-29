@@ -1823,6 +1823,14 @@
             }
         },
         {
+            "Key": "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
+            "Value": {
+                "id": "a225d6f3-be33-4c84-ac10-ececd9ad1e93",
+                "resourcePath": "scripts\\scAddData\\scAddData.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ec83a333-8351-4303-a669-d76f5b8d237a",
             "Value": {
                 "id": "10bbfc0c-9a62-49fb-a55e-81403a726938",
@@ -1927,6 +1935,14 @@
             }
         },
         {
+            "Key": "fedb5019-57a5-4a30-ae5a-b41dc25e535b",
+            "Value": {
+                "id": "9a47749f-5acb-40b4-908f-f95a1bd2b8a2",
+                "resourcePath": "views\\fedb5019-57a5-4a30-ae5a-b41dc25e535b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ffab6ebf-25c8-42bf-bc34-c56c705ffd7e",
             "Value": {
                 "id": "7412aec8-e1d0-476b-95d9-71afd0eccc70",
@@ -2008,7 +2024,8 @@
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
         "95586f1f-f258-4f45-8315-aec50e1786b1",
         "a6070534-903b-4493-b956-7c258781b24d",
-        "8b67ca91-d986-48e9-92e2-cc2063238cf1"
+        "8b67ca91-d986-48e9-92e2-cc2063238cf1",
+        "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea"
     ],
     "tutorial": ""
 }

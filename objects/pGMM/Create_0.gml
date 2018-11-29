@@ -20,3 +20,4 @@ global.winner = noone;
 global.loser = noone;
 //If the winner/losers have been calculated
 calculated = false;
+tie = false;

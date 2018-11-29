@@ -23,6 +23,19 @@ if (endgame_delay <= 0) {
 		endgame_delay--;
 		//Display end of game event
 		event_user(3);
+		
+		//Print out winner
+		scAddData("OUTCOME:");
+		if(!tie){
+			scAddData("WINNER: " + string(global.winner[0]));
+		}
+		else{
+			scAddData("TIE");	
+		}
+		//Check if game ended in timeout, add to data
+		scAddData("TIMEOUT: " + string(timer_current <= 0));		
 	}
+	
+	
 } else
 	endgame_delay--;

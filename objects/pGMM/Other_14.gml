@@ -16,5 +16,9 @@ if ((array_length_1d(global.winner) > 0 && array_length_1d(global.winner) <= 1) 
 } else {
 	var xx = RES_W / 2;
 	var yy = RES_H / 4;
+	
+	//Variable for easier access
+	tie = true;
+	
 	scDrawText(xx, yy, "Tie!", c3, 1);
 }

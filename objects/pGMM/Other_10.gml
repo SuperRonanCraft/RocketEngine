@@ -5,4 +5,5 @@ else if (enabled) {
 	//Timer is 0, end the game
 	global.play = false;
 	event_user(1);
+	
 }
