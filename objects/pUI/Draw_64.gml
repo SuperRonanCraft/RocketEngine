@@ -66,7 +66,6 @@ repeat (ds_height) {
 			var len = 128;
 			var circle_pos = ds_grid[# 4, yy];
 			c = c_ltgray;
-			c2 = c_black;
 			if (inputting && yy == menu_option[page]) c = c_yellow;
 			draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
 			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
@@ -76,7 +75,7 @@ repeat (ds_height) {
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, yy];
-			var c1, c2, c = c_ltgray, c3 = c_black;
+			var c1, c2, c = c_ltgray;
 			if (inputting && yy == menu_option[page]) c = c_yellow;
 			if (current_val == 1) { c1 = c; c2 = c_dkgray;
 			} else { c1 = c_dkgray; c2 = c;}
@@ -88,17 +87,10 @@ repeat (ds_height) {
 			//draw_text_transformed_color(rtx + 96, rty, "OFF", 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 			break;
 		case menu_element_type.input:
-			var current_val = variable_global_get(ds_grid[# 2, yy]);
-			var string_val;
-			switch (current_val) {
-				case vk_up: string_val = "UP KEY"; break;
-				case vk_left: string_val = "LEFT KEY"; break;
-				case vk_right: string_val = "RIGHT KEY"; break;
-				case vk_down: string_val = "DOWN KEY"; break;
-				default: string_val = chr(current_val); break;
-			}
+			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, yy]));
+			c = c_ltgray;
 			if (inputting && yy == menu_option[page]){ c = c_yellow; string_val = string_val + " | Press any key!"}
-			scDrawText(rtx, rty, string_val, c_ltgray, 0.6);
+			scDrawText(rtx, rty, string_val, c, 0.6);
 			//draw_text_transformed_color(rtx + 2, rty + 2, string_val, 0.6, 0.6, 0, c2, c2, c2, c2, 1);
 			//draw_text_transformed_color(rtx, rty, string_val, 0.6, 0.6, 0, c, c, c, c, 1);
 			break;

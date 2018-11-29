@@ -54,32 +54,34 @@ if (inputting) {
 				mouse_moving = true;
 			}
 			//Mouse support
-			if (mouse_moving) {
+			if (mouse_moving && mouse_check_button(mb_right)) {
 				var xleft = start_x + x_buffer;
-				if (mouse_x_old >= xleft) {
-					var ycheck = y_buffer;
-					var val = ds_grid[# 4, menu_option[page]];
-					if (mouse_x_old > start_x && mouse_x_old < start_x + 128) {
-						ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
-						set = true;
-					}
+				var ycheck = start_y + y_buffer * menu_option[page];
+				if (mouse_x_old > xleft - 10 && mouse_x_old < xleft + 138 && mouse_y_old > ycheck - 10 && mouse_y_old < ycheck + 10) {
+					var val = (mouse_x_old - xleft) / 128;
+					ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
+					set = true;
 				}
 			}
 			//}
 			break;
 		case menu_element_type.toggle:
 			var hinput = keyboard_check_pressed(vk_left) - keyboard_check_pressed(vk_right);
+			var val = ds_grid[# 4, menu_option[page]];
 			if (hinput != 0) {
+				val = clamp(val + hinput, 0, 1);
+			} else if (mouse_check_button_pressed(mb_right))
+				val = !val;
+			if (val != ds_grid[# 4, menu_option[page]]) {
 				//AUDIO
-				var val = ds_grid[# 4, menu_option[page]] + hinput;
-				ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
+				ds_grid[# 4, menu_option[page]] = val;
 			}
 			break;
 		case menu_element_type.input:
 			var key = noone;
 			if (keyboard_check_pressed(vk_anykey))
 				key = keyboard_lastkey;
-			if (key != noone && key != vk_enter && key != variable_global_get(ds_grid[# 2, menu_option[page]])) {
+			if (scKeyToString(key) != -1 && key != variable_global_get(ds_grid[# 2, menu_option[page]])) {
 				//AUDIO
 				variable_global_set(ds_grid[# 2, menu_option[page]], key);
 				for (var i = 0; i < instance_number(oPlayer); i ++)

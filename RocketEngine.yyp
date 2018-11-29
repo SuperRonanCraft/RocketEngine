@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "22340016-76dd-4ca3-9586-882cef09cf3d",
+            "Value": {
+                "id": "12df552d-f965-4b6c-aa64-fdfbd28de021",
+                "resourcePath": "scripts\\scKeyToString\\scKeyToString.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "23ad50eb-6c8d-4e74-9c49-4a90a5ad4635",
             "Value": {
                 "id": "c829b8d7-f8ab-41ed-a1ef-2bc44ec4b763",
@@ -1967,7 +1975,8 @@
         "6a93ce55-0209-4047-baf0-4b4265f30278",
         "88211932-9cea-4adc-a0a3-3b8613abe868",
         "6e1af632-6685-40a9-b0e7-653f1b415768",
-        "8b67ca91-d986-48e9-92e2-cc2063238cf1"
+        "8b67ca91-d986-48e9-92e2-cc2063238cf1",
+        "22340016-76dd-4ca3-9586-882cef09cf3d"
     ],
     "tutorial": ""
 }

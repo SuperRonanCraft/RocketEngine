@@ -1,12 +1,13 @@
 /// @desc draw end game text
 var c = c_red, c2 = c_green;
-if (global.winner != noone) {
-	var xx = (global.winner == TEAM.LEFT ? RES_W / 4 : RES_W / 2 + RES_W / 4);
+for (var i = 0; i < array_length_1d(global.winner); i++) {
+	if (global.winner[i] == noone) continue;
+	var xx = (global.winner[i] == TEAM.LEFT ? RES_W / 4 : RES_W / 2 + RES_W / 4);
 	var yy = RES_H / 4;
 	scDrawText(xx, yy, "Winner!", c2, 1);
 }
-if (global.loser != noone) {
-	var xx = (global.loser == TEAM.LEFT ? RES_W / 4 : RES_W / 2 + RES_W / 4);
+for (var i = 0; i < array_length_1d(global.loser); i++) {
+	var xx = (global.loser[i] == TEAM.LEFT ? RES_W / 4 : RES_W / 2 + RES_W / 4);
 	var yy = RES_H / 4;
 	scDrawText(xx, yy, "Loser!", c, 1);
 }
