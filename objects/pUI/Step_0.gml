@@ -21,7 +21,7 @@ if (menu_pages_index[page] == menu_page.main) {
 
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
-var key_enter = keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
+var key_enter = keyboard_check_released(vk_enter) || mouse_check_button_released(mb_left);
 
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
 
