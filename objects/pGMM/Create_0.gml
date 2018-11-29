@@ -1,5 +1,5 @@
 /// @desc a stage has begun
-timer = 5;//STAGE_TIMER.DEFAULT;//global.stage_timer;
+timer = STAGE_TIMER.DEFAULT;//global.stage_timer;
 enum STAGE_TIMER {
 	DEFAULT = 90, DEDICATED = 120, SCARED = 180
 }
@@ -21,3 +21,9 @@ global.loser = noone;
 //If the winner/losers have been calculated
 calculated = false;
 tie = false;
+
+//list of players in gamemode
+p_list = ds_list_create();
+
+with (oPlayer)
+	ds_list_add(other.p_list, id);

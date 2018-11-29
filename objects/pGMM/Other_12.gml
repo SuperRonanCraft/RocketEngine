@@ -2,6 +2,7 @@
 //Created for 1v1
 if (endgame_delay <= 0) {
 	var pamt = instance_number(oPlayer);
+	//Move players slowy to the center of their team
 	for (var i = 0; i < pamt; i++) {
 		var p = instance_find(oPlayer, i);
 		with (p) {
@@ -22,20 +23,7 @@ if (endgame_delay <= 0) {
 		global.play = false;
 		endgame_delay--;
 		//Display end of game event
-		event_user(3);
-		
-		//Print out winner
-		scAddData("OUTCOME:");
-		if(!tie){
-			scAddData("WINNER: " + string(global.winner[0]));
-		}
-		else{
-			scAddData("TIE");	
-		}
-		//Check if game ended in timeout, add to data
-		scAddData("TIMEOUT: " + string(timer_current <= 0));		
+		event_user(3);		
 	}
-	
-	
 } else
 	endgame_delay--;

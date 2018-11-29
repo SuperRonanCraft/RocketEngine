@@ -4,7 +4,7 @@
 /// @arg play-sound-hit
 /// @arg damage
 
-if (argument[0] != id) {
+if (argument[0] != id && argument[3] > 0) {
 	hp -= argument[3];
 	flash = 3;
 	hitfrom = other.direction;

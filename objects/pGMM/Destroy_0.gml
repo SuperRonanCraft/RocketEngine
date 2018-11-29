@@ -1,3 +1,2 @@
-/// @desc clean winner and losers
-global.winners = 0;
-global.losers = 0;
+/// @desc clean player list
+ds_list_destroy(p_list);
