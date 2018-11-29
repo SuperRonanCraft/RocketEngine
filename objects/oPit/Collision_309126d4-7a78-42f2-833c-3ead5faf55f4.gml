@@ -1,5 +1,5 @@
-/// @desc hit a rocket
+/// @desc touching a player
 
-//ABSOLUTELY 100% TEMPORARY
 with (other)
-	instance_change(oExplosion, true);
+	if (hp > 0)
+		scHitShootable(other, false, false, 1);

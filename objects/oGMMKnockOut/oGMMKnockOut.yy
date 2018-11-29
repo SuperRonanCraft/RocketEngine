@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oGMMKnockOut",
     "eventList": [
-        
+        {
+            "id": "b3b254b0-c04e-421b-a0d0-4cb52e4cafdf",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "18b4b631-f4fc-46ba-aa87-fb7633aca269"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

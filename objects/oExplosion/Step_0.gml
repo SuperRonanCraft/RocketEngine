@@ -5,7 +5,7 @@ if (doing_damage)
 		if (ds_list_find_index(confirmList, hitList[| i]) == -1) {
 			ds_list_add(confirmList, hitList[| i]);
 			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
-			if (rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
+			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			with (hitList[| i]) 
 				scHitShootable(other.parent, false, true, dmg);
