@@ -135,6 +135,20 @@
             "value": "True",
             "varName": "enabled",
             "varType": 3
+        },
+        {
+            "id": "78b3389c-ec6a-456a-bc80-ddd7076a3c44",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "GAMEMODE.ONEVONE",
+            "varName": "gamemode",
+            "varType": 4
         }
     ],
     "solid": false,

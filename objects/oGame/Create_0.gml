@@ -26,12 +26,20 @@ global.pause = false;
 
 //Gamemodes
 //Preset
-global.gamemodes[0] = "One v One";
-global.gamemodes[1] = "Targets";
-global.gamemodes[2] = "Knock  Out";
-global.gamemodes[3] = "Nuked";
-//Set when a gamemode is selected in oUIMain
-global.gamemode = -1;
+enum GAMEMODE {
+	ONEVONE = 0, TARGETS = 1, KNOCKOUT = 2, NUKED = 3
+}
+global.gamemodes[GAMEMODE.ONEVONE] = "One v One";
+global.gamemodes[GAMEMODE.TARGETS] = "Targets";
+global.gamemodes[GAMEMODE.KNOCKOUT] = "Knockout";
+global.gamemodes[GAMEMODE.NUKED] = "Nuked";
+//Set when a select room is activated
+global.gamemode = noone;
+//Gamemode rooms
+global.gamemodeSRoom[GAMEMODE.ONEVONE] = r1v1Select;
+global.gamemodeSRoom[GAMEMODE.TARGETS] = rvTargetSelect;
+global.gamemodeSRoom[GAMEMODE.KNOCKOUT] = rKnockOutSelect;
+global.gamemodeSRoom[GAMEMODE.NUKED] = rNukemSelect;
 
 //Stages
 //Set on every StageSelect room

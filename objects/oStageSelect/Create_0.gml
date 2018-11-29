@@ -11,8 +11,8 @@ mouse_moving = false;
 mouse_y_gui = 0;
 
 switch (room) {
-	case r1v1Select: gamemode = 0; break;
-	case rvTargetSelect: gamemode = 1; break;
-	case rKnockOutSelect: gamemode = 2; break;
-	case rNukemSelect: gamemode = 3; break;
+	case r1v1Select: global.gamemode = global.gamemodes[GAMEMODE.ONEVONE]; break;
+	case rvTargetSelect: global.gamemode = global.gamemodes[GAMEMODE.TARGETS]; break;
+	case rKnockOutSelect: global.gamemode = global.gamemodes[GAMEMODE.KNOCKOUT]; break;
+	case rNukemSelect: global.gamemode = global.gamemodes[GAMEMODE.NUKED]; break;
 }

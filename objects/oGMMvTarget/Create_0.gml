@@ -1,5 +1,4 @@
 /// @desc Spawn targets config
-event_inherited();
 diff = DIFFICULTY.EASY;
 targets = 0;
 targets_created = 0;
@@ -23,3 +22,5 @@ points_current = points;
 points_str_pre = "Score ";
 points_str = points_str_pre + string(points);
 points_top = points_y - (points_itemheight * 1.5);
+
+event_inherited();

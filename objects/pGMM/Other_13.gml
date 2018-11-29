@@ -1,6 +1,9 @@
 /// @desc Game End cooldown has stopped, identify loser and winner
+
+//Get all players
 var pamt = instance_number(oPlayer);
 var maxhp = 0;
+//Are they dead? 100% lost
 for (var i = 0; i < pamt; i++) {
 	var p = instance_find(oPlayer, i);
 	if (p.hp <= 0) {
@@ -12,6 +15,7 @@ for (var i = 0; i < pamt; i++) {
 	} else
 		maxhp = p.hp;
 }
+//Check if their hp is the same
 for (var i = 0; i < pamt; i++) {
 	var p = instance_find(oPlayer, i);
 	if (maxhp == p.hp) {
@@ -25,4 +29,5 @@ for (var i = 0; i < pamt; i++) {
 }
 //Hick back to main screen
 alarm_set(0, 300);
+//Variable to allow showing winners and losers text
 calculated = true;

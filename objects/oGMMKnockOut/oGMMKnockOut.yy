@@ -16,7 +16,16 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
+    "overriddenProperties": [
+        {
+            "id": "a2569f3e-2454-4198-ac35-bd910befcf9e",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "908b93c2-a679-4239-a92c-162de84ac11e",
+            "propertyId": "78b3389c-ec6a-456a-bc80-ddd7076a3c44",
+            "value": "GAMEMODE.KNOCKOUT"
+        }
+    ],
     "parentObjectId": "908b93c2-a679-4239-a92c-162de84ac11e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -31,7 +40,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "6574ea0b-c596-41b6-8ef2-200e988b1c8d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "hp_start",
+            "varType": 1
+        }
+    ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true

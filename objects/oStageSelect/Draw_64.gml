@@ -2,7 +2,7 @@
 //Current gamemode text
 draw_set_halign(fa_middle);
 draw_set_valign(fa_middle);
-var text = global.gamemodes[gamemode];
+var text = global.gamemode;
 var len = string_length(text) * (2 * 10);
 var xx = RES_W / 2;
 var yy = RES_H / 4;

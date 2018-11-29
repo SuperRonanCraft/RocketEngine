@@ -1,4 +1,5 @@
 /// @desc Nukem gamemode started
+//Set players hp to the gamemodes default health start
 for (var i = 0; i < instance_number(oPlayer); i++) {
 	var ins = instance_find(oPlayer, i);
 	with (ins) {
