@@ -6,7 +6,7 @@ var owner = argument0;
 var dsBuff = argument1;
 
 //define the internal clock
-var clock = dsBuff[? "clock"];
+var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 //When the buff firt starts, apply the slow
 if (clock == 0) {	
@@ -16,7 +16,7 @@ if (clock == 0) {
 	//This way it does not get changed/affected in any other way
 }
 //If the internal clock reaches the time in seconds, expire
-if (scFindBuff(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? "time"]) {
+if (scFindBuff(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[?  BUFF_MAP.TIME]) {
 	//Return to normal speed
 	owner.move_adj += dsBuff[? "slow"];	
 	//Remove Chilled
@@ -25,9 +25,9 @@ if (scFindBuff(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? "time"]) {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0) {
 		//One particle for each foot!
-		part_particles_create(global.ParticleSystem1, owner.x - ((owner.x - owner.bbox_right)/2), owner.y + (owner.bbox_bottom - owner.y), dsBuff[? "particle"], 1);
-		part_particles_create(global.ParticleSystem1, owner.x + ((owner.x - owner.bbox_right)/2), owner.y + (owner.bbox_bottom - owner.y), dsBuff[? "particle"], 1);
+		part_particles_create(global.ParticleSystem1, owner.x - ((owner.x - owner.bbox_right)/2), owner.y + (owner.bbox_bottom - owner.y), dsBuff[? BUFF_MAP.PARTICLE], 1);
+		part_particles_create(global.ParticleSystem1, owner.x + ((owner.x - owner.bbox_right)/2), owner.y + (owner.bbox_bottom - owner.y), dsBuff[? BUFF_MAP.PARTICLE], 1);
 	}
 	//Also, increaase the clock. Essential for every buff.
-	dsBuff[? "clock"]++;
+	dsBuff[? BUFF_MAP.CLOCK]++;
 }

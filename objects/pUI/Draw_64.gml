@@ -118,7 +118,7 @@ repeat (ds_height) {
 					for (var b = 0; b < bamt; b++) {
 						var map = ds_map_create();
 						scGetBuff(buffs[b], map);
-						draw_sprite_ext(map[? "icon"], 0, rx - (bamt * 20) + (40 * b) + 4, ry + 70, 0.5, 0.5, 0, c_white, 1);
+						draw_sprite_ext(map[? BUFF_MAP.ICON], 0, rx - (bamt * 20) + (40 * b) + 4, ry + 70, 0.5, 0.5, 0, c_white, 1);
 						ds_map_destroy(map);
 					}
 				}
@@ -137,10 +137,10 @@ repeat (ds_height) {
 					offset++;
 				var map = ds_map_create();
 				scGetBuff(i, map);
-				var spr = map[? "icon"];
-				var name = map[? "name"];
-				var desc = map[? "description"];
-				var part = map[? "particle"];
+				var spr = map[? BUFF_MAP.ICON];
+				var name = map[? BUFF_MAP.NAME];
+				var desc = map[? BUFF_MAP.DESCRIPTION];
+				var part = map[? BUFF_MAP.PARTICLE];
 				var rx = ((RES_W / 4) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
 				//show_debug_message(string(i) + " " + string(amt mod columns));
 				//if (i >= amt - (amt mod columns))

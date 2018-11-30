@@ -1399,6 +1399,14 @@
             }
         },
         {
+            "Key": "a7ca8cd0-00a6-4b72-a693-7234534e258f",
+            "Value": {
+                "id": "e80e9fb2-758f-448f-9777-c8a9742b2503",
+                "resourcePath": "views\\a7ca8cd0-00a6-4b72-a693-7234534e258f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a8615d81-d453-4895-91f1-52b35fed0118",
             "Value": {
                 "id": "f0a3924e-fc76-46d3-b0de-79b9d73579aa",
@@ -1660,6 +1668,14 @@
                 "id": "26a8978d-a1cd-406f-b752-cba26a344958",
                 "resourcePath": "scripts\\scRocketSpecialFire_Shootable\\scRocketSpecialFire_Shootable.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c8f90e58-3e63-4553-9bab-f4e1cb98baa1",
+            "Value": {
+                "id": "0c2230cf-b4ae-4eaf-bbfc-770c9c714dae",
+                "resourcePath": "objects\\oBuffPickup\\oBuffPickup.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -1,2 +1,3 @@
 /// @desc count down target count
-owner.targets_created--;
+with (owner)
+	targets_created--;

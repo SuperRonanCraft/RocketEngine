@@ -10,7 +10,7 @@ var buff = argument1;
 for (var i = 0; i < ds_list_size(targ.buffs); i++) {
     var currentBuff = targ.buffs[| i];
 	//If the types are equal
-	if (currentBuff[? "type"] == buff)
+	if (currentBuff[? BUFF_MAP.TYPE] == buff)
 		return true;	
 }
 
