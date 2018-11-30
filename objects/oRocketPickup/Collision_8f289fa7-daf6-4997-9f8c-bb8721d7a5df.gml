@@ -1,3 +1,4 @@
+if (!checked || !global.play) exit;
 with (other)
 	scChangeRocket(other.rocket);
 if (destroy)
