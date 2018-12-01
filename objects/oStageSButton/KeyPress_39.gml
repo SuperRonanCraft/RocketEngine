@@ -1,3 +1,3 @@
 /// @desc Selected
-hovering = true;
+//hovering = true;
 selected_key = true;
