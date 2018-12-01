@@ -1,4 +1,4 @@
-/// @desc draw timer and count down
+/// @desc draw timer and count down and endgame
 
 //var c = c_black, c2 = c_gray;
 draw_set_halign(fa_middle);

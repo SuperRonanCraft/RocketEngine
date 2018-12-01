@@ -1,4 +1,7 @@
 /// @desc End the game (called from scHitShootable when a player hp <= 0) and when timer reaches 0
+//Triggered once
+
+
 endgame = true;
 //Remove the ability to do damage
 for (var i = 0; i < ds_list_size(p_list); i++) {

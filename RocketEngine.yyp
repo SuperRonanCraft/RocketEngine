@@ -1082,7 +1082,7 @@
             "Key": "7a5bd777-6d09-42a2-ad95-9dd69ef5f2de",
             "Value": {
                 "id": "21cb7ddb-d87f-4100-8138-c6f03ce23ba3",
-                "resourcePath": "scripts\\scRocketSpecialSand_ExplodeCreate\\scRocketSpecialSand_ExplodeCreate.yy",
+                "resourcePath": "scripts\\scRocketSand_ExplodeCreate\\scRocketSand_ExplodeCreate.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1090,7 +1090,7 @@
             "Key": "7c30ad4e-9edc-423c-8c2b-2c1415d78451",
             "Value": {
                 "id": "f8d5f165-916d-4521-9c82-3665ece4280e",
-                "resourcePath": "scripts\\scRocketSpecialSand_ExplodeStep\\scRocketSpecialSand_ExplodeStep.yy",
+                "resourcePath": "scripts\\scRocketSand_ExplodeStep\\scRocketSand_ExplodeStep.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1319,6 +1319,14 @@
             }
         },
         {
+            "Key": "9507032a-38ac-4212-9e7f-6abdee2729e4",
+            "Value": {
+                "id": "ecc5d01a-57f4-4c7f-aa18-c6443c9ab3fb",
+                "resourcePath": "objects\\pPickup\\pPickup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "95586f1f-f258-4f45-8315-aec50e1786b1",
             "Value": {
                 "id": "943208f5-0687-4144-9cbc-75eef18f152d",
@@ -1468,6 +1476,14 @@
                 "id": "304887ad-bb0e-4d01-bcd1-8e7b165d9b2f",
                 "resourcePath": "rooms\\r1v1Stage1\\r1v1Stage1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "aed9174f-7283-46ef-9d55-8b06afc00451",
+            "Value": {
+                "id": "08aa5fd7-c27e-4a6d-90ec-1e70f1dbf246",
+                "resourcePath": "objects\\oHealthPickup\\oHealthPickup.yy",
+                "resourceType": "GMObject"
             }
         },
         {

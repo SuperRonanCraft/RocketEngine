@@ -1,28 +1,38 @@
 {
-    "id": "82456896-61ba-4055-9bf6-e6a1b3875d73",
+    "id": "aed9174f-7283-46ef-9d55-8b06afc00451",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oRocketPickup",
+    "name": "oHealthPickup",
     "eventList": [
         {
-            "id": "8f289fa7-daf6-4997-9f8c-bb8721d7a5df",
+            "id": "d403498f-c46d-488a-8f0f-1fffe92aedaf",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
             "enumb": 0,
             "eventtype": 4,
-            "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
+            "m_owner": "aed9174f-7283-46ef-9d55-8b06afc00451"
         },
         {
-            "id": "5d904a46-3c2d-4d88-930a-36e10d61948f",
+            "id": "d0a8570f-0ea2-4816-a5f7-14504e2486bc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
+            "m_owner": "aed9174f-7283-46ef-9d55-8b06afc00451"
+        },
+        {
+            "id": "81d3fee0-f7bc-4387-b39e-8470914076f1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 1,
+            "m_owner": "aed9174f-7283-46ef-9d55-8b06afc00451"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -45,7 +55,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "514a08f7-1d70-4570-a665-c5b01ba37c70",
+            "id": "edbd412d-d628-437c-8e66-24e526d99b67",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -54,12 +64,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET_SPRITE.DEFAULT",
-            "varName": "rocket_sprite",
+            "value": "BUFF_ICON.COOLDOWN",
+            "varName": "buff_sprite",
             "varType": 4
         },
         {
-            "id": "d74013e5-7eb6-4832-90e8-1112bc012149",
+            "id": "52a339a2-7b1a-4fc1-a009-323526d1bc9c",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -68,12 +78,26 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET.DEFAULT",
-            "varName": "rocket",
+            "value": "BUFFTYPE.COOLDOWN",
+            "varName": "buff",
             "varType": 4
+        },
+        {
+            "id": "0d02fe74-5ee0-4e62-ac3e-896411b1edbc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "hp_amount",
+            "varType": 1
         }
     ],
     "solid": false,
-    "spriteId": "49b7cf3b-0bf3-4992-ab55-3d8c00f2af4b",
+    "spriteId": "59bf2b31-05d8-43d2-b0a0-3329c1bf2f3a",
     "visible": true
 }

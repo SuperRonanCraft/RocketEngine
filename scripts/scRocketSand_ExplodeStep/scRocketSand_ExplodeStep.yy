@@ -1,8 +1,8 @@
 {
-    "id": "7a5bd777-6d09-42a2-ad95-9dd69ef5f2de",
+    "id": "7c30ad4e-9edc-423c-8c2b-2c1415d78451",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scRocketSpecialSand_ExplodeCreate",
+    "name": "scRocketSand_ExplodeStep",
     "IsCompatibility": false,
     "IsDnD": false
 }

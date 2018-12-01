@@ -23,43 +23,13 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "c8f90e58-3e63-4553-9bab-f4e1cb98baa1"
-        },
-        {
-            "id": "8974a3c7-5c86-403f-bb38-533e74ce4f7d",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "c8f90e58-3e63-4553-9bab-f4e1cb98baa1"
-        },
-        {
-            "id": "606e8803-bd20-48a0-bec5-44f5c276c990",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 1,
-            "m_owner": "c8f90e58-3e63-4553-9bab-f4e1cb98baa1"
-        },
-        {
-            "id": "7761131f-dd2e-475b-bd0d-383d76a73c2b",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "c8f90e58-3e63-4553-9bab-f4e1cb98baa1"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         
     ],
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "9507032a-38ac-4212-9e7f-6abdee2729e4",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -101,20 +71,6 @@
             "value": "BUFFTYPE.COOLDOWN",
             "varName": "buff",
             "varType": 4
-        },
-        {
-            "id": "08404585-f00a-45d5-bd36-7b39d283603c",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "True",
-            "varName": "destroy",
-            "varType": 3
         }
     ],
     "solid": false,
