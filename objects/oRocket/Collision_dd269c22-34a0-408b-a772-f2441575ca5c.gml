@@ -1,7 +1,7 @@
 /// @desc Hit a shootable
 
 //If the rocket is not from the same shooter
-if (global.play && owner != other.id) {
+if (owner != other.id) {
 	//Apply the rockets buffs by default
 	if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 		scAddBuff(rocket_map[? ROCKET_MAP.BUFF], other);

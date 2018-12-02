@@ -9,7 +9,7 @@ global.players[array_length_1d(global.players)] = self;
 playerid = array_length_1d(global.players);
 scKeybindsSet(keys);
 //Load rocket
-scRockets(ROCKET.SAND);//starting_weapon);
+scRockets(starting_weapon);
 //Display health
 event_inherited();
 //scTeamAdd(id, team);

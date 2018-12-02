@@ -5,16 +5,6 @@
     "name": "pPickup",
     "eventList": [
         {
-            "id": "b07c9997-d81a-4b22-8c93-4f9f9fec7ad5",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
-        },
-        {
             "id": "3d19ae3e-eef7-4f53-b404-356edbdef07c",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -52,6 +42,16 @@
             "collisionObjectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
             "enumb": 0,
             "eventtype": 4,
+            "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
+        },
+        {
+            "id": "430b8f09-3a02-4af0-92f0-4b6d861611b4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 76,
+            "eventtype": 8,
             "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
         }
     ],

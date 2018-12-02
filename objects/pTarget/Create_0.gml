@@ -8,3 +8,4 @@ flash = 0;
 flashing = false;
 shootable = true;
 image_alpha = 0;
+checked = false;
