@@ -4,5 +4,5 @@ background = sprite_create_from_surface(application_surface, 0, 0, RES_W, RES_H,
 instance_deactivate_all(true);
 instance_activate_object(oTransition);
 instance_activate_object(oUIPause);
-instance_activate_object(oUIMain);
+instance_activate_object(oMusic);
 global.pause = true;

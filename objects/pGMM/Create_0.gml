@@ -27,3 +27,5 @@ p_list = ds_list_create();
 
 with (oPlayer)
 	ds_list_add(other.p_list, id);
+with (oMusic)
+	event_user(1);

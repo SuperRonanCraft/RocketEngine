@@ -1,5 +1,5 @@
 /// @desc hurt the players in the hitlist
-/// run custom step event and destory 
+/// run custom step event and destroy 
 if (doing_damage)
 	for (var i = 0; i < ds_list_size(hitList); i++)
 		if (ds_list_find_index(confirmList, hitList[| i]) == -1) {

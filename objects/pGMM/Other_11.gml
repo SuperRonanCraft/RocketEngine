@@ -1,6 +1,7 @@
 /// @desc End the game (called from scHitShootable when a player hp <= 0) and when timer reaches 0
-//Triggered once
 
+//Triggered once
+if (endgame) exit;
 
 endgame = true;
 //Remove the ability to do damage
@@ -13,4 +14,5 @@ for (var i = 0; i < ds_list_size(p_list); i++) {
 		ds_map_set(p.weapons[a], ROCKET_MAP.DAMAGE, -1);
 }
 //End game sound...
-//audio_play_sound(SOUND.GP_ENDGAME, 1, false);
+with (oMusic)
+	event_user(2);

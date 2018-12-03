@@ -2,4 +2,4 @@
 if (destroy)
 	instance_destroy();
 //Pickup sound
-//audio_play_sound(SOUND.EFFECTS_PICKUP, 5, false);
+scPlaySound(SOUND.EFFECT_PICKUP);

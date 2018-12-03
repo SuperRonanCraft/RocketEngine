@@ -33,9 +33,7 @@ if (current_delay == 0) {
 		//current_recoil = recoil;
 		
 		//Sound effects and screen shaking
-		var sound = rocket_map[? ROCKET_MAP.PROJECTILE_SOUND];
-		audio_sound_pitch(sound, random_range(0.8, 1.2));
-		audio_play_sound(sound, 10, false);
+		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
 	}
 }
 //Cooldown

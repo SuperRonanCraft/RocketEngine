@@ -3,7 +3,7 @@ if (shootable) {
 	with (other)
 		event_user(0);
 	//Bomb sound effect
-	audio_play_sound(SOUND.GP_TARGET_BOMB, 1, false);
+	scPlaySound(SOUND.EFFECT_TARGET_BOMB);
 	with (oPlayer)
 		scHitShootable(other, false, false, 1);
 	flash = 10;

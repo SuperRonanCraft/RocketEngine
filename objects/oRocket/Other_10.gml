@@ -27,3 +27,4 @@ destroy = true;
 //giving it an instance of the explosion
 if (rocket_map[? ROCKET_MAP.EXPLOSION_CREATE] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_CREATE], xplo);
+scPlaySound(rocket_map[? ROCKET_MAP.SOUND_EXPLOSION]);
