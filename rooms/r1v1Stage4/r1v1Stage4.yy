@@ -30,8 +30,8 @@
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Game",
-            "id": "8df1b1f5-f906-4b86-9d4c-5ba91e1d7a22",
+            "name": "Entities",
+            "id": "55870517-b06b-40a6-bdcd-cd242b370390",
             "depth": 0,
             "grid_x": 32,
             "grid_y": 32,
@@ -42,7 +42,8 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_743D3499","id": "f2620d6e-cdd9-4afc-9d77-cb1410aef3b6","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_743D3499","objId": "7657031c-7e46-494a-9731-878269c139a0","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 32,"y": 0}
+{"name": "inst_4A04D325","id": "e31b3049-a2ee-47a1-882b-d1cc4da90945","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4A04D325","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 64,"y": 704},
+{"name": "inst_6C0395F2","id": "283f7b13-3316-46e3-98ea-09f1279e5870","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_6C0395F2","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "edc5acc4-3d70-48d3-b4b0-dc579da2572a","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b","mvc": "1.0","value": "KEYBIND.PLAYER2"},{"id": "6d14e26a-e886-4da2-a3d3-ccd81f1c85bd","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "93332b42-841c-42be-8f6a-3320d4bf6d13","mvc": "1.0","value": "TEAM.RIGHT"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 960,"y": 704}
             ],
             "layers": [
 
@@ -56,8 +57,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Entities",
-            "id": "55870517-b06b-40a6-bdcd-cd242b370390",
+            "name": "Game",
+            "id": "8df1b1f5-f906-4b86-9d4c-5ba91e1d7a22",
             "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
@@ -68,8 +69,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_4A04D325","id": "e31b3049-a2ee-47a1-882b-d1cc4da90945","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4A04D325","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 64,"y": 704},
-{"name": "inst_6C0395F2","id": "283f7b13-3316-46e3-98ea-09f1279e5870","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_6C0395F2","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "edc5acc4-3d70-48d3-b4b0-dc579da2572a","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b","mvc": "1.0","value": "KEYBIND.PLAYER2"},{"id": "6d14e26a-e886-4da2-a3d3-ccd81f1c85bd","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "93332b42-841c-42be-8f6a-3320d4bf6d13","mvc": "1.0","value": "TEAM.RIGHT"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 960,"y": 704}
+{"name": "inst_743D3499","id": "f2620d6e-cdd9-4afc-9d77-cb1410aef3b6","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_743D3499","objId": "7657031c-7e46-494a-9731-878269c139a0","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 32,"y": 0}
             ],
             "layers": [
 

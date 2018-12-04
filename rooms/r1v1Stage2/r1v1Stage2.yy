@@ -31,8 +31,8 @@
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Game",
-            "id": "a36f242d-05fa-4363-9f21-fd17ed5b981f",
+            "name": "Entities",
+            "id": "5095fe30-8460-4b8f-b212-69ab01e1bc35",
             "depth": 0,
             "grid_x": 32,
             "grid_y": 32,
@@ -43,7 +43,9 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_62DD7759","id": "a91125eb-8a0a-4e87-86a3-38aba28f8d32","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_62DD7759","objId": "7657031c-7e46-494a-9731-878269c139a0","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 32,"y": 0}
+{"name": "inst_2DA2EE7","id": "3f3cc3e5-fab3-4017-b39d-0d0b8ece1cdc","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2DA2EE7","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 96,"y": 64},
+{"name": "inst_1D663195","id": "e84f81da-d124-432d-81ea-925b255ddd56","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1D663195","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "c924903f-49c1-4869-8c23-0e5e0b2182ea","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b","mvc": "1.0","value": "KEYBIND.PLAYER2"},{"id": "370cd2d8-951c-4479-b52f-db60f7bc3f52","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "93332b42-841c-42be-8f6a-3320d4bf6d13","mvc": "1.0","value": "TEAM.RIGHT"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 928,"y": 64},
+{"name": "inst_3C19D651","id": "272ad951-bfc4-421c-ba6d-2fb6b50a5516","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3C19D651","objId": "7ff6352f-9859-456d-b82b-539d7ee73f36","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 6,"mvc": "1.0","x": 512,"y": 320}
             ],
             "layers": [
 
@@ -57,8 +59,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Entities",
-            "id": "5095fe30-8460-4b8f-b212-69ab01e1bc35",
+            "name": "Game",
+            "id": "a36f242d-05fa-4363-9f21-fd17ed5b981f",
             "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
@@ -69,9 +71,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_2DA2EE7","id": "3f3cc3e5-fab3-4017-b39d-0d0b8ece1cdc","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2DA2EE7","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 96,"y": 64},
-{"name": "inst_1D663195","id": "e84f81da-d124-432d-81ea-925b255ddd56","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1D663195","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "c924903f-49c1-4869-8c23-0e5e0b2182ea","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b","mvc": "1.0","value": "KEYBIND.PLAYER2"},{"id": "370cd2d8-951c-4479-b52f-db60f7bc3f52","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "93332b42-841c-42be-8f6a-3320d4bf6d13","mvc": "1.0","value": "TEAM.RIGHT"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 928,"y": 64},
-{"name": "inst_3C19D651","id": "272ad951-bfc4-421c-ba6d-2fb6b50a5516","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3C19D651","objId": "7ff6352f-9859-456d-b82b-539d7ee73f36","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 6,"mvc": "1.0","x": 512,"y": 320}
+{"name": "inst_62DD7759","id": "a91125eb-8a0a-4e87-86a3-38aba28f8d32","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_62DD7759","objId": "7657031c-7e46-494a-9731-878269c139a0","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 32,"y": 0}
             ],
             "layers": [
 
