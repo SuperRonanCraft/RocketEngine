@@ -13,12 +13,12 @@ if (!spawn) exit;
 //Generate a random number
 var rand = random_range(0, 1);
 //80% of the time its a rocket pickup, 15% is a buff, and 5% is health
-var obj = oBuffPickup;//oRocketPickup;
-/*if (rand >= 0.8)
+var obj = oRocketPickup;
+if (rand >= 0.8)
 	if (rand >= 0.95)
 		obj = oHealthPickup;
 	else
-		obj = oBuffPickup;*/
+		obj = oBuffPickup;
 var xx = random_range(50, RES_W - 50), yy = random_range(50, RES_H - 50);
 switch (obj) {
 	//Is a rocket pickup
