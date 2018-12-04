@@ -1,9 +1,11 @@
-Head on over to scRockets
+Head on over to "scRockets" under the "Rockets" group
 
 #1) Add a new Rocket to the enum before "LENGHT" (i know its misspelled)
 #2) Add the icon under "ROCKET_SPRITE"
-#3) under the last rocket, set 'roc' equal to your new ROCKET enum value
-#4) set atleast a rocket_map name, description and type to not have any errors
+#3) Under the last rocket, set 'roc' equal to your new ROCKET enum value
+#4) Define a new ds_map to the "weapons" array with the "roc" index.
+#4) Add to that weapons array, atleast a 'ROCKET_MAP' "NAME", "DESCRIPTION" and "TYPE"!
+#5) If adding custom scripts, add the scripts under the "Rockets.Specials" group, and create a new group named after your rocket!
 
 ---BLUEPRINT---
 	var roc = ROCKET.<VALUE>;
@@ -11,3 +13,17 @@ Head on over to scRockets
 	ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
 	ds_map_add(weapons[roc], ROCKET_MAP.NAME, "NAME");
 	ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "DESCRIPTION");
+
+---Available event scripts---
+
+For Rockets:
+- Create, Step and Draw
+For Rocket Collisions:
+- With another Rocket, a Wall or a Shootable (player) - (Overwrites default explosions)
+For Explosions:
+- Create and Step event - (Never called if custom rocket collision event)
+
+---Other Details---
+- Damage_Explosion and Damage_Rocket will overwrite default damage, but if default damage is -1 it will not do damage!
+- If setting a Rockets Explosion create event, you must push the "rocket_map" ds_map to the explosion with "ds_map_copy", and do your own particles!
+- If setting a Rockets Step event, it will NOT move! You must set the movement for that rocket!

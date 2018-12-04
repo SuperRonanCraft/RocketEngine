@@ -1,0 +1,20 @@
+Head on over to "scGetBuff" under "Buffs/Debuffs" group
+
+#1) Here add to the enum "BUFFTYPE" your buff type before "LENGTH"
+#2) Add the icon under "BUFF_ICON" in the same index position
+#3) Buff must have atleast a "NAME", "DESCRIPTION", "ICON" and "STEP"
+#4) Head on over to "Buffs/Debuffs.Buffs" and add your ste[ script here!
+
+---BLUEPRINT---
+	case BUFFTYPE.<VALUE>:
+		ds_map[? BUFF_MAP.NAME] = "NAME";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "DESCRIPTION";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.<VALUE>;
+		ds_map[? BUFF_MAP.STEP] = <SCRIPT>;
+		break;
+		
+---Other Details---
+- Each buff MUST keep track of its own time!
+- Each buff MUST emit its own particles!
+- Each buff MUST remove its own buffs/debuffs to the player once the timer has reached its clock time
+- Theres a bunch of enum values you can set to a buff so you dont have to define the value in the buffs step event

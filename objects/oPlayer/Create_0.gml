@@ -2,7 +2,7 @@
 facing = 1;
 //Id of the player
 
-//Load gravity variables
+//Load gravity and movement variables
 scGravityStart();
 //Load keybinds
 global.players[array_length_1d(global.players)] = self;
@@ -35,5 +35,3 @@ animState = ANIMATIONSTATE.STANDING;
 
 //Buffs/Debuffs
 buffs = ds_list_create();
-move_adj = 0;
-jump_adj = 0;

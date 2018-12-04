@@ -37,7 +37,14 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        
+        {
+            "id": "55a4296d-a712-4748-b19e-6e2a9f30715c",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "9507032a-38ac-4212-9e7f-6abdee2729e4",
+            "propertyId": "3790986e-0f30-46f3-9979-8c2dc270f43d",
+            "value": "PICKUP.HEALTH"
+        }
     ],
     "parentObjectId": "9507032a-38ac-4212-9e7f-6abdee2729e4",
     "persistent": false,

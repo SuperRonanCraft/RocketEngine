@@ -1,0 +1,12 @@
+First, head on over to "pGMM" under the "Triggers.GamemodeManagers" group
+
+#1) Create a new object and make "pGMM" as its parent
+#2) Create a new room, and in its own Object category, put that GamemodeManager in the room
+#3) Make sure this object activates before any other oPlayer objects
+#4) Do NOT make it persistent!
+#5) Go crazy with the Custom events, the step event is where you will want to inherit the parent event and use your own code!
+
+---Other Details---
+- Make sure if creating a new win condition to overwrite the default condition
+- There does NOT have to be a winner!
+- Please look under the default parent code, theres a ton of events for when a player dies, when the timer end and so on!

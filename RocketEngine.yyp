@@ -31,14 +31,6 @@
     },
     "resources": [
         {
-            "Key": "0033a082-dcb1-4a07-8188-4124602da24c",
-            "Value": {
-                "id": "c30188ba-1a65-4cc2-8517-6c9ce3a97939",
-                "resourcePath": "scripts\\scTeamAdd\\scTeamAdd.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "0037f48f-fa68-4284-9328-98450ac10730",
             "Value": {
                 "id": "b3f3ab1b-ed39-46fe-ab2e-1cee2983a11c",
@@ -164,6 +156,14 @@
                 "id": "687acf65-8d75-4ead-aaf1-9561a1408ce2",
                 "resourcePath": "sprites\\s_pice\\s_pice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0e47165d-9b76-4a8a-bdbb-4767d7d50217",
+            "Value": {
+                "id": "703bf3b9-492e-45d7-8b61-398eb1ddd104",
+                "resourcePath": "notes\\How to create a Buff.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
@@ -1175,14 +1175,6 @@
             }
         },
         {
-            "Key": "7de4ea95-a832-4f43-add4-b4762a37018d",
-            "Value": {
-                "id": "afb2ace4-568e-4f41-bd84-191c0ed8cb77",
-                "resourcePath": "scripts\\scChangeTeam\\scChangeTeam.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "7ff6352f-9859-456d-b82b-539d7ee73f36",
             "Value": {
                 "id": "6d0c9a04-a51d-4276-a170-fc9d036ce853",
@@ -1431,6 +1423,14 @@
             }
         },
         {
+            "Key": "956e8923-e739-4c17-90ab-a6890cbfc61f",
+            "Value": {
+                "id": "0ba0e9b8-74ea-41b1-b13e-791160244974",
+                "resourcePath": "notes\\How to create a Gamemode.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "96f4fa4e-a373-4236-8a98-48377515eb94",
             "Value": {
                 "id": "7c6d1ba6-f505-46a5-90e4-e747721e935c",
@@ -1508,6 +1508,14 @@
                 "id": "d0585570-333d-4252-a034-3779e657d905",
                 "resourcePath": "sprites\\sWall\\sWall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a671b5eb-f611-4d93-bc23-8b4da3fc550f",
+            "Value": {
+                "id": "e6c9afba-d9e8-4878-a4a3-09970a8ac403",
+                "resourcePath": "notes\\How to create a Particle.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
@@ -2252,7 +2260,6 @@
         "1fd940af-afa7-47d9-9819-2f6ab960e911",
         "5c320603-4784-4110-97d0-f25729940237",
         "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
-        "7de4ea95-a832-4f43-add4-b4762a37018d",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
@@ -2270,7 +2277,6 @@
         "4feff080-c2ca-471c-a07b-d3e79032357b",
         "af1bfdd2-1334-40aa-8444-ddb713405383",
         "6c94f478-e681-4d26-bb6c-476da0da1b53",
-        "0033a082-dcb1-4a07-8188-4124602da24c",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",
