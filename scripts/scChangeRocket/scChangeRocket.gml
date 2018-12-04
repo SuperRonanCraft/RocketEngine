@@ -15,5 +15,6 @@ if (rocket_map[? ROCKET_MAP.TYPE] != weapon) {
 		rocket_map[? key] = wp_map[? key];
 	}
 	ammo = rocket_map[? ROCKET_MAP.CLIP];
+	current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
 	prj_scale = 2;
 }
