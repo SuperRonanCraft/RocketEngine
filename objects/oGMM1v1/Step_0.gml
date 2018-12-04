@@ -13,12 +13,12 @@ if (!spawn) exit;
 //Generate a random number
 var rand = random_range(0, 1);
 //80% of the time its a rocket pickup, 15% is a buff, and 5% is health
-var obj = oRocketPickup;
-if (rand >= 0.8)
+var obj = oBuffPickup;//oRocketPickup;
+/*if (rand >= 0.8)
 	if (rand >= 0.95)
 		obj = oHealthPickup;
 	else
-		obj = oBuffPickup;
+		obj = oBuffPickup;*/
 var xx = random_range(50, RES_W - 50), yy = random_range(50, RES_H - 50);
 switch (obj) {
 	//Is a rocket pickup
@@ -38,19 +38,20 @@ switch (obj) {
 	//Is a buff pickup
 	case oBuffPickup:
 		var possible = 0;
+		var index = 0;
 		//Get a list of all possible good buffs
-		for (var i = 0; i < BUFFTYPE.LENGHT - 1; i++) {
+		for (var i = 0; i < BUFFTYPE.LENGHT; i++) {
 			var map = ds_map_create();
 			scGetBuff(i, map);
 			//If the buff good? Add it to the possible array
 			if (map[? BUFF_MAP.GOOD]) {
-				var len = array_length_1d(possible);
-				possible[(len == 0 ? 0 : len + 1)] = i;
+				possible[index] = i;
+				index++;
 			}
 			ds_map_destroy(map);
 		}
 		//Pick a random buff from the possibel good buffs array
-		var ind = possible[random_range(0, array_length_1d(possible) - 1)];
+		var ind = possible[irandom_range(0, array_length_1d(possible) - 1)];
 		//Spawn and give it default values
 		with (instance_create_layer(xx, yy, layer, obj)) {
 			var map = ds_map_create();

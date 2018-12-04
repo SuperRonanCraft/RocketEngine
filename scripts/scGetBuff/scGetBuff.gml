@@ -37,6 +37,22 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 		ds_map[? BUFF_MAP.GOOD] = false; 
 		break;
+	case BUFFTYPE.SPEED:
+		ds_map[? BUFF_MAP.NAME] = "Speed";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Gotta  go  fast!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.SPEED;
+		ds_map[? BUFF_MAP.STEP] = scBuffSpeed;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPEED];
+		ds_map[? BUFF_MAP.GOOD] = true;
+		break;
+	case BUFFTYPE.LOWGRAVITY:
+		ds_map[? BUFF_MAP.NAME] = "No  Gravity";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "You're  a  Wizard!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.LOWGRAVITY;
+		ds_map[? BUFF_MAP.STEP] = scBuffLowGravity;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.LOWGRAVITY];
+		ds_map[? BUFF_MAP.GOOD] = true;
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -49,11 +65,13 @@ enum BUFF_MAP {
 }
 
 enum BUFF_ICON {
-	BURNRUSH = s_abilityIcon_BurnRush, CHILLED = s_abilityIcon_Chilled, COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed
+	BURNRUSH = s_abilityIcon_BurnRush, CHILLED = s_abilityIcon_Chilled,
+	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
+	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity
 }
 
 enum BUFFTYPE {
-	BURNRUSH, CHILLED, COOLDOWN, SLIME,
+	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY,
 	
 	//PUT LAST
 	LENGHT

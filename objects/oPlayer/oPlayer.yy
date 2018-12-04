@@ -139,7 +139,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1.5",
+            "value": "1.8",
             "varName": "grv",
             "varType": 0
         },

@@ -84,8 +84,24 @@ part_type_life(parttype, 10, 15);
 part_type_direction(parttype, 270, 270, 0, 0);
 ds_map_add(ds_part, PARTICLES.SLIME, parttype);
 
+parttype = part_type_create();
+part_type_sprite(parttype, s_pspeed, false, false, true);
+part_type_size(parttype, 0.1, 0.2, 0.05, 0);
+part_type_speed(parttype, 2, 4, 1, 0.5);
+part_type_life(parttype, 9, 13);
+part_type_direction(parttype, 80, 100, 0, 0);
+ds_map_add(ds_part, PARTICLES.SPEED, parttype);
+
+parttype = part_type_create();
+part_type_sprite(parttype, s_plowgravity, false, false, true);
+part_type_size(parttype, 0.5, 0.8, 0, 0);
+part_type_speed(parttype, 1, 2, 0.5, 0.5);
+part_type_life(parttype, 10, 15);
+part_type_direction(parttype, 185, 355, 0, 0);
+ds_map_add(ds_part, PARTICLES.LOWGRAVITY, parttype);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SAND,
-	SLIME
+	SLIME, SPEED, LOWGRAVITY
 }
