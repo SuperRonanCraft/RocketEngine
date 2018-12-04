@@ -20,7 +20,7 @@ for (var i = 0; i < hp_original; i++) {
 	else
 		draw_sprite_ext(hpsprite, 1, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
 }
-//Display Buffs
+//Display Buffs and Time
 offset = 0;
 for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Grab the buff map
@@ -34,12 +34,17 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
 	//Alpha of icon (wearing off after 75% of the buff has progressed)
-	var per = (ds_list[? BUFF_MAP.CLOCK] / ds_list[? BUFF_MAP.TIME])
-	var alpha = (per > 0.75) ? (per - 0.75) * 400 : 0;
+	//var per = (ds_list[? BUFF_MAP.CLOCK] / ds_list[? BUFF_MAP.TIME])
+	//var alpha = (per > 0.75) ? (per - 0.75) * 400 : 0;
 	//Determine side and offset related to how many buffs to display (2 pixels between each icon) (mirrored)
-	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 2) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 2) * i);
+	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 15) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 15) * i);
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
-	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 1 - (alpha / 100));
+	//BUFF TIME
+	var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
+	var maxi = ds_list[? BUFF_MAP.TIME];
+	scDrawPie(xpos + (w / 4), ypos + (h / 4), time, maxi, c_dkgray, (w / 3) + 2, 0.8);
+	//BUFF ICON
+	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.8);// - (alpha / 100));
 }
 //Display Rocket Equipped and Cooldown
 if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
