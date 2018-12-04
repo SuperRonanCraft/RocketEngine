@@ -48,7 +48,6 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 }
 //Display Rocket Equipped and Cooldown
 if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
-	//ROCKET EQUIPPED
 	//The projectile sprite
 	var sprite = rocket_map[? ROCKET_MAP.PROJECTILE];
 	//Dimentions of sprite
@@ -57,10 +56,22 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	//determine side
 	var xpos = team == TEAM.LEFT ? RES_W / 4 - w / 3 : RES_W / 2 + RES_W / 4 + w / 3;
 	var ypos = h / 2;
+	
+	//ROCKET COOLDOWN
+	var c = c_dkgray;
+	for (var i = 0; i < ds_list_size(buffs); i++) {
+		//Grab the buff map
+		var ds_list = buffs[| i];
+		//Is the buff a cooldown?
+		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
+			c = c_green;
+	}
+	var cd = ammo == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
+	var curr_cd = ammo == 0 ? current_reload : current_cd;
+	scDrawPie(xpos + ( team == TEAM.LEFT ? -(w / 8) : (w / 8)), ypos, curr_cd, cd, c, w / 3, 0.8);
+	
+	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
 	//Make the scale smaller over time
 	prj_scale = max(prj_scale * 0.95, 1);
-	//ROCKET COOLDOWN
-	var cd = rocket_map[? ROCKET_MAP.COOLDOWN];
-	scDrawPie(xpos, ypos + 30, current_cd, cd, c_dkgray, 10, 1);
 }
