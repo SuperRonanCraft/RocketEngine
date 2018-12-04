@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "23bfdb5a-e3ab-4891-a48a-c02d2812d824",
+            "Value": {
+                "id": "0ddc5abb-6db0-4ec3-8cca-04cf6968a430",
+                "resourcePath": "notes\\How to create a Rocket.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "251d7a00-edec-47c6-8e7f-69dcae953141",
             "Value": {
                 "id": "b7e4c59d-ea89-4b98-8ed7-fb56bc3b5800",
@@ -1132,6 +1140,14 @@
                 "id": "09ea1c36-b976-4e41-b5bf-8712ec42929d",
                 "resourcePath": "objects\\oGMM1v1\\oGMM1v1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "76a74d79-104c-4428-8b8c-40da2d13ef2b",
+            "Value": {
+                "id": "ef89c135-11fa-4880-bcf1-d0d8d66aa493",
+                "resourcePath": "views\\76a74d79-104c-4428-8b8c-40da2d13ef2b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

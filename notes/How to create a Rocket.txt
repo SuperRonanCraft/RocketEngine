@@ -1,0 +1,13 @@
+Head on over to scRockets
+
+#1) Add a new Rocket to the enum before "LENGHT" (i know its misspelled)
+#2) Add the icon under "ROCKET_SPRITE"
+#3) under the last rocket, set 'roc' equal to your new ROCKET enum value
+#4) set atleast a rocket_map name, description and type to not have any errors
+
+---BLUEPRINT---
+	var roc = ROCKET.<VALUE>;
+	weapons[roc] = ds_map_create();
+	ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
+	ds_map_add(weapons[roc], ROCKET_MAP.NAME, "NAME");
+	ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "DESCRIPTION");

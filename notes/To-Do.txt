@@ -1,18 +1,28 @@
-GUI THINGS:
-- Show what rocket is available to shoot at the moment
-- Show to cooldown of the rocket
-- Show the amount of time you will have your rocket
-
-Camera:
-- Fix pausing when room is bigger than camera
-- Camara shake when someone dies? (Might be an issue as camera is the same size as room
-
 Things to do:
-- Upgrades system, damage, speed, rockets, cooldowns, etc
-- Gamemode manager for 1v1 mode (requires the upgrade system)
-- Higher resolution?
+- Full animations (in progress) - (John)**
+- AI system - (John)***
+- Knock Back system - (John)*
+- New Buff Icon art ;D - (John)**
+- Rocket speed buff - (Ronan)*
+- Powerups show in front of player - (Ronan)*
+- Bunch more of music magic - (Ronan)**
 
 Future things to think about:
-- Full tileset compatability
-- Ability to add sound effects and background music (music engine)
+- Full tileset compatability****
+- Rocket ultimates***
 
+Done:
+- Upgrades system, damage, speed, rockets, cooldowns, etc - (ronan)*
+- Gamemode manager for 1v1 mode (requires the upgrade system) - (ronan)*
+- Fix pausing when room is bigger than camera - (ronan)*
+- Camara shake - (ronan)*
+- Show what rocket is available and buff - (ronan)**
+- Ability to add sound effects and background music (music engine) - (ronan)*
+- Buffs system - (John)***
+- Particles system - (John)**
+
+----- Difficulty -----
+'*'		= Easy
+'**'	= Ehh, time consuming
+'***'	= Let me get back to you
+'****'	= Might as well take a vacation
