@@ -967,6 +967,14 @@
             }
         },
         {
+            "Key": "64974384-b881-4627-be8f-1d843b4f2392",
+            "Value": {
+                "id": "957c91d1-aff3-417a-a5d9-9af1e6e2b294",
+                "resourcePath": "scripts\\scDrawPie\\scDrawPie.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6530c244-fc42-42ec-bd1b-67a43f3c863c",
             "Value": {
                 "id": "f37051f1-94f6-427e-953d-bf7cee0e1633",
@@ -2291,6 +2299,7 @@
         "95586f1f-f258-4f45-8315-aec50e1786b1",
         "a6070534-903b-4493-b956-7c258781b24d",
         "8b67ca91-d986-48e9-92e2-cc2063238cf1",
+        "64974384-b881-4627-be8f-1d843b4f2392",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",

@@ -1,4 +1,4 @@
-/// @desc Display Health, Buff n' Rocket
+/// @desc Display Health, Buff, Rocket and Cooldowns
 if (display != DISPLAYTYPE.SCREEN)
 	exit;
 hpscale = max(hpscale * 0.95, 1);
@@ -41,8 +41,9 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 1 - (alpha / 100));
 }
-//Display Rocket Equipped
+//Display Rocket Equipped and Cooldown
 if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
+	//ROCKET EQUIPPED
 	//The projectile sprite
 	var sprite = rocket_map[? ROCKET_MAP.PROJECTILE];
 	//Dimentions of sprite
@@ -54,4 +55,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
 	//Make the scale smaller over time
 	prj_scale = max(prj_scale * 0.95, 1);
+	//ROCKET COOLDOWN
+	var cd = rocket_map[? ROCKET_MAP.COOLDOWN];
+	scDrawPie(xpos, ypos + 30, current_cd, cd, c_dkgray, 10, 1);
 }
