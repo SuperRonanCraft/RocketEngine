@@ -24,7 +24,7 @@ switch (obj) {
 	//Is a rocket pickup
 	case oRocketPickup:
 		//Grab a random rocket
-		var map = weapons[random_range(ROCKET.DEFAULT, ROCKET.LENGHT - 1)];
+		var map = weapons[irandom_range(ROCKET.DEFAULT, ROCKET.LENGHT - 1)];
 		//Spawn and give it default values
 		with (instance_create_layer(xx, yy, layer, obj)) {
 			if (x > RES_W / 2)
