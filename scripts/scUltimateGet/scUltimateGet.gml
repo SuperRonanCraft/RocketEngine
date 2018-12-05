@@ -9,6 +9,7 @@ switch (type) {
 	case ULTIMATE.DEFAULT:
 		ds_map[? ULTIMATE_MAP.NAME] = "Rockets Brigade";
 		ds_map[? ULTIMATE_MAP.DESCRIPTION] = "JUSTICE  RAINS  FROM  ABOVE!";
+		ds_map[? ULTIMATE_MAP.OBJECT] = oUltimateDefault;
 		break;
 }
 

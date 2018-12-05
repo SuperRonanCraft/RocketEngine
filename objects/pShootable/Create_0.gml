@@ -14,3 +14,12 @@ flash = 0;
 enum DISPLAYTYPE {
 	NONE, BAR, SCREEN
 }
+
+//Load Rockets
+scRockets(starting_weapon);
+
+//Load Ultimates
+scUltimateStart();
+
+//Buffs/Debuffs setup
+buffs = ds_list_create();

@@ -37,16 +37,16 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	//var per = (ds_list[? BUFF_MAP.CLOCK] / ds_list[? BUFF_MAP.TIME])
 	//var alpha = (per > 0.75) ? (per - 0.75) * 400 : 0;
 	//Determine side and offset related to how many buffs to display (2 pixels between each icon) (mirrored)
-	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 15) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 15) * i);
+	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 4) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 4) * i);
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	//BUFF TIME
 	var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
 	var maxi = ds_list[? BUFF_MAP.TIME];
-	scDrawPie(xpos + (w / 4), ypos + (h / 4), time, maxi, c_dkgray, (w / 3) + 2, 0.8);
+	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxi, c_dkgray, (w / 4) + 2, 0.8);
 	//BUFF ICON
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.8);// - (alpha / 100));
 }
-//Display Rocket Equipped and Cooldown
+//Display Rocket Equipped, Cooldown and Ultimate Charge
 if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	//The projectile sprite
 	var sprite = rocket_map[? ROCKET_MAP.PROJECTILE];
@@ -74,4 +74,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
 	//Make the scale smaller over time
 	prj_scale = max(prj_scale * 0.95, 1);
+	
+	//ULTIMATE CHARGE
+	scDrawPiePart(xpos, ypos + 50, ult_charge, 1, c_purple, 50, 0.8, 10);
 }

@@ -3,9 +3,6 @@
 if (!global.play) exit;
 
 scStateCheck();
-scBuffHandler();
-scGravity();
 scKeybindsControls();
-scRocketProgress(playerid);
-
+event_inherited();
 scCheckHealth();

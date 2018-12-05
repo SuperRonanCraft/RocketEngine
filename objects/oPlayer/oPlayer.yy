@@ -170,20 +170,6 @@
             "value": "KEYBIND.PLAYER1",
             "varName": "keys",
             "varType": 4
-        },
-        {
-            "id": "f0bcf028-f6da-43d2-a177-66dfce854696",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "ROCKET.DEFAULT",
-            "varName": "starting_weapon",
-            "varType": 4
         }
     ],
     "solid": false,

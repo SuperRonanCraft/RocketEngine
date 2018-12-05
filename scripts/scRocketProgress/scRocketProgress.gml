@@ -1,12 +1,12 @@
 /// @desc Check when to shoot a tocket
-/// @arg player-id-(-1-to-disable)
+/// @arg team (-1 to disable right team checking)
 
 
 if (rocket_map[? ROCKET_MAP.PROJECTILE] == -1 || rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
 //Set the direction of the rocket
 var dir = direction;
 if (argument0 != -1)
-	dir = argument0 == 1 ? 0 : 180;
+	dir = argument0 == TEAM.LEFT ? 0 : 180;
 
 //Rocket
 if (current_delay == 0) {
@@ -36,6 +36,7 @@ if (current_delay == 0) {
 		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
 	}
 }
+
 //Cooldown
 current_delay = max(-1, current_delay - 1);
 if (current_delay == -1)

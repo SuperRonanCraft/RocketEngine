@@ -33,6 +33,16 @@
             "enumb": 64,
             "eventtype": 8,
             "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
+        },
+        {
+            "id": "d121837e-c4ad-484a-bbb3-7200a7dec25c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -107,6 +117,20 @@
             "value": "1",
             "varName": "facing",
             "varType": 0
+        },
+        {
+            "id": "db9b1853-5c2e-4303-8ecd-2952eb879441",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "ROCKET.DEFAULT",
+            "varName": "starting_weapon",
+            "varType": 4
         }
     ],
     "solid": false,

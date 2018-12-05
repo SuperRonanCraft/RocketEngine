@@ -37,3 +37,5 @@ rocket_map[? ROCKET_MAP.EXPLOSION_STEP] = noone; //Explosion step event
 //SOUNDS
 rocket_map[? ROCKET_MAP.SOUND_SHOOT] = SOUND.EFFECT_SHOOT; //Rocket shoot sound
 rocket_map[? ROCKET_MAP.SOUND_EXPLOSION] = SOUND.EFFECT_EXP; //Rocket explode sound
+//ULTIMATE
+rocket_map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.DEFAULT;

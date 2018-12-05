@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "093e6d59-2a90-4ecf-82d1-506fe0325e2d",
+            "Value": {
+                "id": "6508cd1c-6f39-44f5-b6f5-28f71da6a59c",
+                "resourcePath": "scripts\\scDrawPieRect\\scDrawPieRect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0c36d4b4-730f-4bba-b8a5-a713f04089dc",
             "Value": {
                 "id": "b2a5955f-1421-4e1c-805d-a38718788f4d",
@@ -1207,6 +1215,14 @@
             }
         },
         {
+            "Key": "7efb0829-d3fc-42e3-bf5f-34fbafd2a0f8",
+            "Value": {
+                "id": "13b684e6-1c5d-4f82-8a97-7cf7ed62aa09",
+                "resourcePath": "views\\7efb0829-d3fc-42e3-bf5f-34fbafd2a0f8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7ff6352f-9859-456d-b82b-539d7ee73f36",
             "Value": {
                 "id": "6d0c9a04-a51d-4276-a170-fc9d036ce853",
@@ -1735,6 +1751,14 @@
             }
         },
         {
+            "Key": "ba2fd104-db50-45fd-a0a2-86b27ebc5fec",
+            "Value": {
+                "id": "66e39af9-a950-4b33-bc06-aeb6e260f654",
+                "resourcePath": "scripts\\scDrawPieRectSprite\\scDrawPieRectSprite.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bad5ec47-1e21-45a1-8411-9f1bb5506fc8",
             "Value": {
                 "id": "3d5edade-86e5-438c-8ff5-a877cf342f24",
@@ -1939,6 +1963,14 @@
             "Value": {
                 "id": "17252d7e-243b-47cd-9efe-69c419107b36",
                 "resourcePath": "scripts\\scRocketSpecialLaser_Create\\scRocketSpecialLaser_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d1260b08-a738-448f-8ec6-6767a0bcceb7",
+            "Value": {
+                "id": "84b17abc-747c-4d34-a72a-37c3175375e8",
+                "resourcePath": "scripts\\scDrawPiePart\\scDrawPiePart.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2207,6 +2239,14 @@
             }
         },
         {
+            "Key": "f9906abd-89f2-4820-a620-cff867398a48",
+            "Value": {
+                "id": "f3bcea54-9691-494f-b1b7-5f01813409be",
+                "resourcePath": "objects\\oUltimateDefault\\oUltimateDefault.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f9f10e60-74ad-4790-8a7b-9cc1e69ddcd0",
             "Value": {
                 "id": "73d2d617-8fb7-4e41-a761-90f8676aa1fa",
@@ -2343,6 +2383,9 @@
         "a6070534-903b-4493-b956-7c258781b24d",
         "8b67ca91-d986-48e9-92e2-cc2063238cf1",
         "64974384-b881-4627-be8f-1d843b4f2392",
+        "d1260b08-a738-448f-8ec6-6767a0bcceb7",
+        "ba2fd104-db50-45fd-a0a2-86b27ebc5fec",
+        "093e6d59-2a90-4ecf-82d1-506fe0325e2d",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",
