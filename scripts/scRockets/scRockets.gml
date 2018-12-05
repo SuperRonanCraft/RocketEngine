@@ -152,6 +152,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialLaser_Create);
 ds_map_add(weapons[roc], ROCKET_MAP.BUFF, [BUFFTYPE.COOLDOWN]);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 12);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.LASERS);
 
 //SLIME
 roc = ROCKET.SLIME;

@@ -78,6 +78,9 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
 	scDrawPiePart(xposcir, ypos, ult_charge, 1, c, 28, 0.8, 9);
 	
+	//ULTIMATE CASTTIME CIRCLE
+	scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_orange, 32, 0.9, 4);
+	
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
 	//Make the scale smaller over time

@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "1f21fc11-d952-4e84-9139-b99c6adc2365",
+            "Value": {
+                "id": "8957e3a8-6cee-41bf-b044-d868f0032468",
+                "resourcePath": "scripts\\scUltimateLasers\\scUltimateLasers.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1fb09528-73a5-41bd-b7f4-5e1e9b8d9359",
             "Value": {
                 "id": "35d3c821-411b-4fac-a9a2-90bb8f4a28ac",
@@ -956,6 +964,14 @@
                 "id": "88e80805-7986-49f2-a274-bf99398bb586",
                 "resourcePath": "rooms\\rKnockOutSelect\\rKnockOutSelect.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "62645431-2792-433f-8f9c-20e7fc3de003",
+            "Value": {
+                "id": "09be1474-7936-41ec-9d8c-2daa5181237e",
+                "resourcePath": "objects\\oUltimateLasers\\oUltimateLasers.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2368,6 +2384,7 @@
         "af87de2e-e23d-4887-875f-53947f1d38e3",
         "74f530e7-7b26-4f54-8398-0e146c4876c9",
         "abd65ccc-3624-4fdf-9f48-1d4fcc769ce2",
+        "1f21fc11-d952-4e84-9139-b99c6adc2365",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
