@@ -15,12 +15,16 @@ switch (type) {
 		break;
 	case ULTIMATE.LASERS: //Dodge the lasers!
 		ds_map[? ULTIMATE_MAP.NAME] = "Termination";
-		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateLasers;
+		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateLaser;
+		break;
+	case ULTIMATE.FAST: //Triple threat!
+		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
+		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateFast;
 		break;
 }
 
 enum ULTIMATE {
-	DEFAULT, LASERS,
+	DEFAULT, LASERS, FAST,
 	
 	//PUT LAST
 	LENGTH

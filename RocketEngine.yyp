@@ -298,7 +298,7 @@
             "Key": "1f21fc11-d952-4e84-9139-b99c6adc2365",
             "Value": {
                 "id": "8957e3a8-6cee-41bf-b044-d868f0032468",
-                "resourcePath": "scripts\\scUltimateLasers\\scUltimateLasers.yy",
+                "resourcePath": "scripts\\scUltimateLaser\\scUltimateLaser.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -868,6 +868,14 @@
                 "id": "9d350514-5e86-4909-ba4b-2d3c7e71db6d",
                 "resourcePath": "sprites\\sHealth\\sHealth.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
+            "Value": {
+                "id": "2952311c-66b5-46c3-ad61-8312d1715d11",
+                "resourcePath": "scripts\\scUltimateFast\\scUltimateFast.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2385,6 +2393,7 @@
         "74f530e7-7b26-4f54-8398-0e146c4876c9",
         "abd65ccc-3624-4fdf-9f48-1d4fcc769ce2",
         "1f21fc11-d952-4e84-9139-b99c6adc2365",
+        "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
