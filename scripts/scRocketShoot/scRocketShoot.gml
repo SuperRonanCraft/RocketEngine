@@ -1,5 +1,7 @@
 /// @desc checks the cooldown, if so, start the next cooldown
-if (current_cd == 0) {
+// @arg force the cooldown
+
+if (current_cd == 0 || (argument_count > 0 ? argument[0] : false)) {
 	x = other.x;
 	y = other.y;
 	current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];

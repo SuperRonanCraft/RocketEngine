@@ -6,10 +6,9 @@ var type = argument0;
 var ds_map = argument1;
 
 switch (type) {
-	case ULTIMATE.DEFAULT:
-		ds_map[? ULTIMATE_MAP.NAME] = "Rockets Brigade";
-		ds_map[? ULTIMATE_MAP.DESCRIPTION] = "JUSTICE  RAINS  FROM  ABOVE!";
-		ds_map[? ULTIMATE_MAP.OBJECT] = oUltimateDefault;
+	case ULTIMATE.DEFAULT: //Huge af cloned rocket
+		ds_map[? ULTIMATE_MAP.NAME] = "Mr.Huge!";
+		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateDefault;
 		break;
 }
 
@@ -21,5 +20,5 @@ enum ULTIMATE {
 }
 
 enum ULTIMATE_MAP {
-	NAME, DESCRIPTION, TYPE, OBJECT
+	NAME, SCRIPT
 }

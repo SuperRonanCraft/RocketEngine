@@ -2,4 +2,4 @@
 owner.rockets--;
 ds_list_destroy(hitList);
 ds_list_destroy(confirmList);
-//ds_list_destroy(rocket_map);
+ds_map_destroy(rocket_map);

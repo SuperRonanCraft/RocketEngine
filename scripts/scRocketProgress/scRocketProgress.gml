@@ -17,12 +17,10 @@ if (current_delay == 0) {
 			image_angle = direction;
 			sprite_index = other.rocket_map[? ROCKET_MAP.PROJECTILE];
 			owner = other;
-			rocket_map = other.rocket_map;
+			rocket_map = ds_map_create();
+			ds_map_copy(rocket_map, other.rocket_map);
 			timer = other.rocket_map[? ROCKET_MAP.TIMER];
 			owner.rockets++;
-			//Run custom creation script for rocket, no instances of shooter as "owner" is already same variable
-			if (rocket_map[? ROCKET_MAP.ROCKET_CREATE] != noone)
-				script_execute(rocket_map[? ROCKET_MAP.ROCKET_CREATE]);
 		}
 		ammo -= 1;
 		//Recoil code

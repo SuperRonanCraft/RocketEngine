@@ -11,3 +11,5 @@ destroy = false;
 //What this rocket has his, add it to its explosion
 hitList = ds_list_create();
 confirmList = ds_list_create();
+
+start_script = false;

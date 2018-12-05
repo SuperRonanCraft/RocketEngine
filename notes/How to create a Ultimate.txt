@@ -1,0 +1,14 @@
+Head on over to "scUltimateGet" in the "Rockets.Ultimates" group
+
+#1) Here add to the enum "ULTIMATE" your ultimate type
+#3) Ultimates must have atleast a "NAME" and a "SCRIPT"
+#4) Head on over to "Rockets.Ultimates.Ults" and add your script here!
+
+---BLUEPRINT---
+	case ULTIMATE.<VALUE>:
+		ds_map[? ULTIMATE_MAP.NAME] = "NAME";
+		ds_map[? ULTIMATE_MAP.SCRIPT] = <SCRIPT>;
+		break;
+		
+---Other Details---
+- Each Ultimate script is run along side the player, it will not be given any arguments!

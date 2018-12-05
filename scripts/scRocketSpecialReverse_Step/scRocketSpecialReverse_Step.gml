@@ -23,8 +23,8 @@ if (!teleported) {
 		y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);
 	}
 } else {
-	if (image_xscale != 1)
-		image_xscale = min(image_xscale + 0.1, 1);
+	if (image_xscale != org_xscale)
+		image_xscale = min(image_xscale + (0.1 * org_xscale), org_xscale);
 	else {
 		teleported = false;
 		teleporting = false;

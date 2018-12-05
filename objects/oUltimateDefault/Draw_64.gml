@@ -1,1 +1,0 @@
-scDrawText(x, y, "IT WORKIE", c_ltgray, 0.5);

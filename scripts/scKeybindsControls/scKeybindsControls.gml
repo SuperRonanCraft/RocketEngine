@@ -27,9 +27,7 @@ if(canControl){
 		vsp_move = -jump_height - jump_adj;
 		standing = false;
 	}
-
 	//Weapon
 	if (key_shoot)
 		scRocketShoot();
-	
 }

@@ -7,3 +7,4 @@ if (owner.playerid == 1 && direction != 180) {
 }
 teleported = false;
 teleporting = false;
+org_xscale = image_xscale;

@@ -8,8 +8,8 @@ var hit = argument0;
 collideRocket = 1;
 //If you hit an ice rocket, explode 3x as much
 if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
-	scRocketSpecialFire_Explode(3);
+	scRocketSpecialFire_Explode(3 * size);
 else if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
 	scRocketSpecialFire_Explode(0);	
 else
-	scRocketSpecialFire_Explode(1.5);
+	scRocketSpecialFire_Explode(1.5 * size);

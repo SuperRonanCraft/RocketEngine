@@ -57,7 +57,6 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	var xpos = team == TEAM.LEFT ? RES_W / 4 - w / 3 : RES_W / 2 + RES_W / 4 + w / 3;
 	var ypos = h / 2;
 	
-	//ROCKET COOLDOWN
 	var c = c_dkgray;
 	for (var i = 0; i < ds_list_size(buffs); i++) {
 		//Grab the buff map
@@ -68,13 +67,22 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	}
 	var cd = ammo == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
 	var curr_cd = ammo == 0 ? current_reload : current_cd;
-	scDrawPie(xpos + ( team == TEAM.LEFT ? -(w / 8) : (w / 8)), ypos, curr_cd, cd, c, w / 3, 0.8);
+	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
+	
+	//ROCKET COOLDOWN
+	scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
+	
+	//ULTIMATE CHARGE CIRCLE
+	//xpos = team == TEAM.LEFT ? 30 : RES_W - 30;
+	var charge = round(ult_charge * 100);
+	var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
+	scDrawPiePart(xposcir, ypos, ult_charge, 1, c, 28, 0.8, 9);
 	
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
 	//Make the scale smaller over time
 	prj_scale = max(prj_scale * 0.95, 1);
 	
-	//ULTIMATE CHARGE
-	scDrawPiePart(xpos, ypos + 50, ult_charge, 1, c_purple, 50, 0.8, 10);
+	//ULTIMATE CHARGE TEXT
+	scDrawText(xposcir, ypos * 2, string(charge) + string("%"), c_ltgray, 0.5, noone, 0.8);
 }
