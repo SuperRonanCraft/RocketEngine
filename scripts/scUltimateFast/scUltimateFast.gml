@@ -1,12 +1,12 @@
 /// @desc Triple rockets
 
-for (var i = 0; i < 9; i++) {
+for (var i = 0; i < 5; i++) {
 	var dir = 0;
 	//Set direction offset
 	if (team == TEAM.LEFT)
-		dir = 40 - (10 * i);
+		dir = 40 - (20 * i);
 	else
-		dir = 140 + (10 * i);
+		dir = 140 + (20 * i);
 	//Create the rocket with the new direction
 	with (instance_create_layer(x, y, layer, oRocket)) {
 		owner = other;

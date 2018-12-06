@@ -16,10 +16,12 @@ switch (type) {
 	case ULTIMATE.LASERS: //Dodge the lasers!
 		ds_map[? ULTIMATE_MAP.NAME] = "Termination";
 		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateLaser;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 60;
 		break;
 	case ULTIMATE.FAST: //Triple threat!
 		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
 		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateFast;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 40;
 		break;
 }
 
