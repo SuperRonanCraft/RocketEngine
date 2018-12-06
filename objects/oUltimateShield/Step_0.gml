@@ -1,0 +1,19 @@
+/// @desc follow owner
+
+if (!global.play) exit; //If game is at play
+
+x = owner.x;
+y = owner.y;
+
+//Collision
+if (!instance_exists(oRocket)) exit;
+var rlist = ds_list_create();
+collision_circle_list(x, y, radius, oRocket, false, true, rlist, false); //Find all rocket instances in collision area
+for (var i = 0; i < ds_list_size(rlist); i++) //Iterate through the rocket list
+	with (ds_list_find_value(rlist, i)) //Find it
+		if (owner != other.owner) {
+			event_user(0); //Explode it
+			scScreenShake(10, 30);
+			instance_destroy(other); //Destroy the shield
+		}
+ds_list_destroy(rlist);

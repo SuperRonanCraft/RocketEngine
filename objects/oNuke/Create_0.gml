@@ -16,3 +16,5 @@ owner = noone;
 var list = ds_list_create();
 collision_line_list(x, y, x, RES_H, oWall, true, true, list, true);
 wall = ds_list_find_value(list, 0);
+
+damage_done = false; //If it already touched a player

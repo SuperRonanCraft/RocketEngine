@@ -12,7 +12,7 @@ enum DIFFICULTY {
 gui_width = RES_W;
 points_x = gui_width + 100;
 points_y = 10;
-points_x_target = gui_width - 50;
+points_x_target = gui_width - gui_width / 8;
 points_speed = 15; //lower is faster
 points_font = fPixel;
 points_scale = 1;

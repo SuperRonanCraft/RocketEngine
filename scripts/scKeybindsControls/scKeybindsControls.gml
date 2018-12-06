@@ -19,8 +19,8 @@ if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(co
 //Check if can control
 if(canControl){
 	//Horizontal
-	var move = key_right - key_left;
-	hsp_move = (move * walksp) + (move_adj*move);
+	var move = (key_right - key_left) * (keydirection);
+	hsp_move = (move * walksp) + (move_adj * move);
 
 	//Vertical
 	if (key_jump && standing) {

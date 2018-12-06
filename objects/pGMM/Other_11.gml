@@ -7,11 +7,7 @@ endgame = true;
 //Remove the ability to do damage
 for (var i = 0; i < ds_list_size(p_list); i++) {
 	var p = p_list[| i];
-	//Current rocket
-	p.rocket_map[? ROCKET_MAP.DAMAGE] = -1;
-	//All rockets
-	for (var a = 0; a < array_length_1d(p.weapons); a++)
-		ds_map_set(p.weapons[a], ROCKET_MAP.DAMAGE, -1);
+	p.damage_take = false; //Remove the ability to take damage
 }
 //End game sound...
 with (oMusic)

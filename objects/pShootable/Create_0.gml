@@ -23,3 +23,5 @@ scUltimateStart();
 
 //Buffs/Debuffs setup
 buffs = ds_list_create();
+
+damage_take = true; //Ability to take damage

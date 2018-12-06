@@ -3,20 +3,16 @@
 /// @arg delete-the-hitting-object
 /// @arg play-sound-hit
 /// @arg damage
+/// @arg force-damage
 
-if (argument[0] != id && argument[3] > 0) {
+if ((damage_take || (argument_count >= 5 ? argument[4] : false)) && argument[0] != id && argument[3] > 0) {
 	hp -= argument[3];
 	flash = 3;
 	hitfrom = other.direction;
 	if (argument[1])
 		instance_destroy(other.id);
 	hpscale = 2;
-	//Disabled till sounds are fixed
-	/*if (hp >= 0)
-		if (argument2) //Play hit sound effect?
-			audio_play_sound(SOUND.GP_HIT, 1, false);*/
-	
-	if(hp > 0 || alive){
+	scPlaySound(SOUND.EFFECT_HIT);
+	if (hp > 0 || alive)
 		scData_ConfirmHit();
-	}
 }

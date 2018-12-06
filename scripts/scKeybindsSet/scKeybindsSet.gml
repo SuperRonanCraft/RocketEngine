@@ -10,5 +10,7 @@ if (argument0 == KEYBIND.PLAYER1) {
 	keyright = global.key_p2_right;
 	keyjump = global.key_p2_jump;
 	keyshoot = global.key_p2_shoot;
+	keydirection = 1;
 }
 controller = argument0 - 1;
+keydirection = 1;

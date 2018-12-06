@@ -53,6 +53,13 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.LOWGRAVITY];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		break;
+	case BUFFTYPE.REVERSECONTROLS:
+		ds_map[? BUFF_MAP.NAME] = "Reversed";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "You  have  no  power!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSECONTROLS;
+		ds_map[? BUFF_MAP.STEP] = scBuffReverseControls;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSECONTROLS];
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -67,11 +74,12 @@ enum BUFF_MAP {
 enum BUFF_ICON {
 	BURNRUSH = s_abilityIcon_BurnRush, CHILLED = s_abilityIcon_Chilled,
 	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
-	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity
+	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity,
+	REVERSECONTROLS = s_abilityIcon_ReverseControls
 }
 
 enum BUFFTYPE {
-	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY,
+	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS,
 	
 	//PUT LAST
 	LENGHT

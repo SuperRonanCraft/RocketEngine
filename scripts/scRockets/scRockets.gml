@@ -72,6 +72,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialReverse_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 6);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.REVERSE);
 
 //ICE
 roc = ROCKET.ICE;
@@ -136,6 +137,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSand_ExplodeCreate
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_STEP, scRocketSand_ExplodeStep);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 5);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SAND);
 
 //LASER
 roc = ROCKET.LASER;
@@ -175,6 +177,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialSlime_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_DRAW, scRocketSpecialSlime_Draw);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Slime);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSpecialSlime_Exp_Create);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SWIPE);
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_STEP, scRocketSpecialSlime_Exp_Step);
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialSlime_Exp_Shootable);
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialSlime_Exp_Wall);
@@ -196,6 +199,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialRandom_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialRandom_Create);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SHIELD);
 
 enum ROCKET {
 	NONE,
