@@ -36,10 +36,12 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Determine side and offset related to how many buffs to display (2 pixels between each icon) (mirrored)
 	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 4) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 4) * i);
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
+	
 	//BUFF TIME
 	var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
 	var maxtime = ds_list[? BUFF_MAP.TIME];
 	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 2, 0.8);
+	
 	//BUFF ICON
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.8);// - (alpha / 100));
 }
