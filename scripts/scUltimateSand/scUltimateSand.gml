@@ -1,4 +1,4 @@
 /// @desc Sand rocket Ultimate
 
-with (instance_create_layer(x, y, layer, oUltimateSand))
+with (instance_create_layer(RES_W / 2, 0, layer, oUltimateSand))
 	owner = other;

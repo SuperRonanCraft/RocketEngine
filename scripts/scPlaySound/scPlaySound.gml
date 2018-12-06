@@ -41,5 +41,7 @@ enum SOUND {
 	MUSIC_4 = snMusic4,
 	MUSIC_5 = snMusic5,
 	MUSIC_6 = snMusic6,
-	MUSIC_TITLE = snTitle
+	MUSIC_TITLE = snTitle,
+	//ULTIMATES
+	ULT_SHIELD_BREAK = noone
 }

@@ -6,17 +6,10 @@ owner = noone;
 //Whether we checked the side
 checked = false;
 //False if left, right is true
-side = false;
+side = false; //Target
 //Maximum alpha
-alpha_max = 0.85;
+alpha_max = 0.5;
 alpha_index = 0.025;
-
-//Cloud side set in Draw Begin method
-xpos1 = 0;
-xpos2 = 0;
-
-//Uptime
-timer = 10 * room_speed;
 
 fading = true;
 fading_time = 30;
@@ -25,4 +18,14 @@ fading_type = false;
 //The alpha that we are at
 fading_alpha = 0;
 
-depth -= 50;
+//Speed of the cloud
+cloud_speed = 5;
+cloud_width = 50;
+cloud_particle = oParticleHandler.ds_part[? PARTICLES.SAND];
+cloud_particle_amt = 50;
+color = c_orange;
+
+//Defaults
+x = RES_W / 2;
+xpos1 = x - cloud_width / 2;
+xpos2 = x + cloud_width / 2;

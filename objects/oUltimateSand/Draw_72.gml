@@ -2,11 +2,8 @@
 
 if (checked) exit; //Already checked? Just cancel
 
-//Check the side we are going to draw on
-if (owner.team != TEAM.LEFT)
+//Check the side we are going to go to
+if (owner.team != TEAM.LEFT) //False if left, true is right (target)
 	side = true;
-
-//Setup the cloud side
-xpos1 = side ? 0 : RES_W; xpos2 = RES_W / 2;
 
 checked = true;
