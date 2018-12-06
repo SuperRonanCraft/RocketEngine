@@ -15,10 +15,7 @@ for (var i = 0; i < hp_original; i++) {
 		RES_W - hpwidth - 20 - (((hpwidth / 2) + 1) * i) + (offset - 1 * (((hpwidth / 2) + 1) * i));
 	//Change every 10 hearts
 	var ypos = offset * (hpheight + 2);
-	if (hp > i)
-		draw_sprite_ext(hpsprite, 0, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
-	else
-		draw_sprite_ext(hpsprite, 1, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
+	draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
 }
 //Display Buffs and Time
 offset = 0;
@@ -41,8 +38,8 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	//BUFF TIME
 	var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
-	var maxi = ds_list[? BUFF_MAP.TIME];
-	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxi, c_dkgray, (w / 4) + 2, 0.8);
+	var maxtime = ds_list[? BUFF_MAP.TIME];
+	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 2, 0.8);
 	//BUFF ICON
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.8);// - (alpha / 100));
 }
