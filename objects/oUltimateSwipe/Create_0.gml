@@ -15,6 +15,8 @@ color = c_purple;
 //Will always cover the screen height wise
 y1 = 0;
 y2 = RES_H;
+x1 = x;
+x2 = x;
 
 //Fade in animation
 fading = true;

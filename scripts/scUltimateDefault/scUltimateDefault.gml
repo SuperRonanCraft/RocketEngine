@@ -5,6 +5,7 @@ with (instance_create_layer(x, y, layer, oRocket)) {
 	//Give it the map of the current rocket
 	rocket_map = ds_map_create(); 
 	ds_map_copy(rocket_map, other.rocket_map);
+	rocket_map[? ROCKET_MAP.DAMAGE] *= 3;
 	//Give it the map of the current rocket
 	sprite_index = other.rocket_map[? ROCKET_MAP.PROJECTILE];
 	//Give it the direction a rocket would fly in

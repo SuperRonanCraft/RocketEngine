@@ -1,7 +1,7 @@
 /// @descr Sounds loaded
 
 
-if (audio_group_is_loaded(agMusic)) {
+if (audio_group_is_loaded(agMusic) && current_sound != SOUND.MUSIC_TITLE) {
 	var sound = SOUND.MUSIC_TITLE;
 	audio_sound_gain(sound, 0, 0);
 	audio_play_sound(sound, 1000, true);

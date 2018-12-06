@@ -2,7 +2,7 @@ if (!ult_enabled) exit; //Is the system even enabled?
 
 if (ult_charge < 1) {ult_charge += 0.01; exit;} //Give charge, exit
 
-var key_shoot = keyboard_check(keyshoot);
+var key_shoot = keyboard_check(keyleft) && keyboard_check(keyright);
 
 var shoot = false;
 
@@ -14,7 +14,7 @@ if (key_shoot) { //Shoot key being held down
 			ult_cast_time--;
 		current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
 	} else {
-		if (!keyboard_check_pressed(keyshoot)) exit; //Did we JUST press the shoot key?
+		if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
 		var map = ds_map_create(); //Create an ult map
 		scUltimateGet(rocket_map[? ROCKET_MAP.ULTIMATE], map); //Grab the ult map
 		ult_casting = true;
