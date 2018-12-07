@@ -20,7 +20,7 @@ fading_alpha = 0;
 
 //Speed of the cloud
 cloud_speed = 5;
-cloud_width = 50;
+cloud_width = 75;
 cloud_particle = oParticleHandler.ds_part[? PARTICLES.SAND];
 cloud_particle_amt = 50;
 color = c_orange;

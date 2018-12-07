@@ -2,7 +2,7 @@
 
 var offset = 1;
 
-hsp = hsp_move + hsp_carry;
+hsp = hsp_override == 0 ? hsp_move + hsp_carry : hsp_override;
 vsp = vsp_move + vsp_carry;
 
 var touchingx = instance_place(x + hsp, y, oWall); //get the instance of the wall in the future in the horizontal

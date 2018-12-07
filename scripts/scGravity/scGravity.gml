@@ -7,3 +7,4 @@ x += hsp;
 y += vsp;
 hsp_carry = 0;
 vsp_carry = 0;
+hsp_override = 0;

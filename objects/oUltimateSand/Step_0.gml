@@ -5,12 +5,12 @@ collision_rectangle_list(xpos1, 0, xpos2, RES_W, oPlayer, false, true, plist, fa
 for (var i = 0; i < ds_list_size(plist); i++) //Iterate through the player list
 	with (ds_list_find_value(plist, i)) //Find it
 		if (self != other.owner)
-			hsp_carry += other.side ? -other.cloud_speed : other.cloud_speed; //Move with cloud
+			hsp_override += other.side ? -other.cloud_speed : other.cloud_speed; //Move with cloud
 ds_list_destroy(plist);
 
 if (!fading) {
 	x += side ? -other.cloud_speed : other.cloud_speed;
-	if (!side) { //Going left
+	if (side) { //Going left
 		if (x < 0) {
 			fading = true;
 			fading_type = true;
