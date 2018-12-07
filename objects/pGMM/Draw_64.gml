@@ -26,4 +26,6 @@ if (endgame) {
 	scDrawText(RES_W / 2, RES_H / 2, "GAME OVER!", c_red, 2);
 	if (endgame_delay <= 0) //The moment a game ended
 		event_user(4);
+	if (kick_timer_display >= kick_timer)
+		scDrawText(RES_W - RES_W / 8, RES_H - RES_H / 16, "Continuing in " + string(clamp(kick_timer, 1, kick_timer_display)) + "...", c_white, 0.6);
 }

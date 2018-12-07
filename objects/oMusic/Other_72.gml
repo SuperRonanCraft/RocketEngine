@@ -2,11 +2,16 @@
 
 
 if (audio_group_is_loaded(agMusic)) {
+	audio_group_set_gain(agMusic, global.vol_music, false);
 	var sound = SOUND.MUSIC_TITLE;
 	audio_sound_gain(sound, 0, 0);
 	audio_play_sound(sound, 1000, true);
-	audio_sound_gain(sound, 1, 2000);
+	audio_sound_gain(sound, global.vol_music, 2000);
 	current_sound = sound;
+}
+
+if (audio_group_is_loaded(agEffects)) {
+	audio_group_set_gain(agEffects, global.vol_sounds, false);
 }
 
 //Uncomment to enable the Footsteps audio ground

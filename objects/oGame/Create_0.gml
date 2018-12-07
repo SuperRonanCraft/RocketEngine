@@ -50,7 +50,7 @@ global.play = false;
 
 //Other
 global.vol_master = 1;
-global.vol_music = 1;
+global.vol_music = 0.5;
 global.vol_sounds = 1;
 global.fullscreen = false;
 

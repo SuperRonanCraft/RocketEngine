@@ -7,6 +7,7 @@ var ds_map = argument1;
 
 //The amount of time u need to press the shoot button to ult
 ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
+ds_map[? ULTIMATE_MAP.SOUND_CAST] = noone;
 
 switch (type) {
 	case ULTIMATE.DEFAULT: //Huge af cloned rocket
@@ -42,6 +43,7 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Youuuu shall not Passssss!";
 		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateShield;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 15;
+		ds_map[? ULTIMATE_MAP.SOUND_CAST] = SOUND.ULT_SHIELD_CAST;
 		break;
 }
 
@@ -53,5 +55,7 @@ enum ULTIMATE {
 }
 
 enum ULTIMATE_MAP {
-	NAME, SCRIPT, CAST_TIME
+	NAME, SCRIPT, CAST_TIME,
+	//SOUND
+	SOUND_CAST
 }

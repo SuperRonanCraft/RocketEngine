@@ -128,7 +128,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET.SAND",
+            "value": "ROCKET.RANDOM",
             "varName": "starting_weapon",
             "varType": 4
         }

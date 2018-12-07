@@ -1,11 +1,19 @@
 /// @desc manage sounds, play a sound
 /// @arg sound to play
+/// @arg pitch* of sound
+/// @arg cancel-sound* sound you would also like to cancel
 
 var sound = argument[0];
 if (sound != noone) {
-	if (argument_count > 1)
+	if (argument_count >= 2 && argument[1] != noone)
 		audio_sound_pitch(sound, argument[1]);
 	audio_play_sound(sound, 5, false);
+}
+//Cancel some sounds
+if (argument_count >= 3 && argument[2] != noone) {
+	var array = argument[2];
+	for (var i = 0; i < array_length_1d(array); i++)
+		audio_stop_sound(array[i]);
 }
 
 enum SOUND {
@@ -43,5 +51,6 @@ enum SOUND {
 	MUSIC_6 = snMusic6,
 	MUSIC_TITLE = snTitle,
 	//ULTIMATES
-	ULT_SHIELD_BREAK = noone
+	ULT_SHIELD_BREAK = snUltimateShieldBreak,
+	ULT_SHIELD_CAST = snUltimateShieldCast
 }

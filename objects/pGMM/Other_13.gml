@@ -19,12 +19,8 @@ if (ds_list_size(p_list) == 2) {
 	global.winner = p_list[| 0].team;
 }
 
-//Hick back to main screen
-alarm_set(0, 300);
 //Variable to allow showing winners and losers text
 calculated = true;
 global.play = false;
-		
-//Print out winner
 
 scData_PrintOutcome();

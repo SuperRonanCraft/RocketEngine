@@ -26,6 +26,11 @@ tie = false;
 p_list = ds_list_create();
 
 with (oPlayer)
-	ds_list_add(other.p_list, id);
+	ds_list_add(other.p_list, self);
 with (oMusic)
 	event_user(1);
+	
+//Kick back timer
+kick_timer = 10; //Time is seconds
+kick_timer_abs = kick_timer * room_speed; //Absolute timer value
+kick_timer_display = 3; //Display timer after this index is met

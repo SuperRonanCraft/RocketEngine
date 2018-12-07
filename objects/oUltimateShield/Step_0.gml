@@ -16,6 +16,6 @@ for (var i = 0; i < ds_list_size(rlist); i++) //Iterate through the rocket list
 			event_user(0); //Explode it
 			scScreenShake(10, 30);
 			instance_destroy(other); //Destroy the shield
-			scPlaySound(SOUND.ULT_SHIELD_BREAK);
+			scPlaySound(SOUND.ULT_SHIELD_BREAK, noone, [SOUND.ULT_SHIELD_CAST]);
 		}
 ds_list_destroy(rlist);
