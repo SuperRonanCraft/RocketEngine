@@ -1,10 +1,9 @@
-/// @desc Game has ended, execute event
+/// @desc Game has ended, execute event every step event
 //Created for 1v1
 if (endgame_delay <= 0) {
-	var pamt = instance_number(oPlayer);
 	//Move players slowy to the center of their team
-	for (var i = 0; i < pamt; i++) {
-		var p = instance_find(oPlayer, i);
+	for (var i = 0; i < ds_list_size(p_list); i++) {
+		var p = p_list[| i];
 		with (p) {
 			var scale = min(image_xscale + 0.05, 5);
 			image_xscale = scale;

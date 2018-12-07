@@ -1,14 +1,23 @@
 /// @desc Wait delay before starting stage, if allowed to play, call countdown delay every second
-if (wait_timer > 0) {
-	wait_timer_current--;
-	if (wait_timer_current == 0) {
-		wait_timer--;
+if (wait_timer_current >= 0) {
+	wait_timer_current_abs--;
+	if (wait_timer_current_abs == 0) {
+		wait_timer_current--;
 		wait_timer_scale = 3;
-		wait_timer_current = room_speed;
+		wait_timer_current_abs = room_speed;
+		wait_timer_text = string(wait_timer_current);
+		switch (wait_timer_current) {
+			case 2: wait_timer_color = c_orange; break;
+			case 1: wait_timer_color = c_yellow; break;
+			case 0: wait_timer_color = c_lime; wait_timer_text = wait_timer_go; break;
+		}
+		if (wait_timer_current < 0) //{
+			global.play = true;
+		//	scPlaySound(SOUND.UI_START);
+		//} else
+		//	scPlaySound(SOUND.UI_COUNTDOWN, choose(0.8, 1, 1.2));
 	}
 	wait_timer_scale = max(wait_timer_scale * 0.95, 1);
-	if (wait_timer == 0)
-		global.play = true;
 	exit;
 } else if (global.play && !endgame) {
 	if (timer_room <= 0) {
