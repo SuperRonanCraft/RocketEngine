@@ -1,4 +1,4 @@
-/// @desc follow owner
+/// @desc follow owner and collision checks
 
 if (!global.play) exit; //If game is at play
 

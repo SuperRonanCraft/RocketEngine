@@ -94,6 +94,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialIce_Wall);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialIce_Shootable);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 8);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.MIRROR);
 
 //FIRE
 roc = ROCKET.FIRE;

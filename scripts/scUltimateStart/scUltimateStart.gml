@@ -1,4 +1,5 @@
-ult_charge = 0;
+ult_charge = 2;
+ult_charge_max = 2;
 ult_enabled = true;
 
 key_old_shoot = false;

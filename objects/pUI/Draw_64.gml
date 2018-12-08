@@ -8,8 +8,6 @@ if (ds_grid[# 1, 0] == menu_element_type.rocket_list || ds_grid[# 1, 0] == menu_
 
 var c = c_black;
 // Draw left
-draw_set_valign(fa_middle);
-draw_set_halign(fa_right);
 var ltx = start_x - x_buffer, lty, xo, scale;
 var yy = 0;
 var centered = false;
@@ -29,11 +27,10 @@ repeat (ds_height) {
 		scale = 1.2;
 		xo = -(x_buffer / 2);
 	}
-	if (centered) {
-		draw_set_halign(fa_middle);
-		scDrawText(start_x, lty, ds_grid[# 0, yy], c3, scale);
-	} else
-		scDrawText(ltx + xo, lty, ds_grid[# 0, yy], c3, scale);
+	if (centered)
+		scDrawText(start_x, lty, ds_grid[# 0, yy], c3, scale, noone, noone, fa_middle);
+	else
+		scDrawText(ltx + xo, lty, ds_grid[# 0, yy], c3, scale, noone, noone, fa_right);
 	yy++;
 }
 
@@ -42,7 +39,6 @@ if (!centered)
 	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 3, c, c);
 
 // Draw right
-draw_set_halign(fa_left);
 var rtx = start_x + x_buffer, rty;
 yy = 0;
 repeat (ds_height) {
@@ -58,7 +54,7 @@ repeat (ds_height) {
 			c = c_ltgray;
 			c2 = c_black;
 			if (inputting && yy == menu_option[page]) c = c_yellow;
-			scDrawText(rtx, rty, left_shift + current_array[current_val] + right_shift, c2, 0.6);
+			scDrawText(rtx, rty, left_shift + current_array[current_val] + right_shift, c2, 0.6, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
 			var len = 128;
@@ -67,7 +63,7 @@ repeat (ds_height) {
 			if (inputting && yy == menu_option[page]) c = c_yellow;
 			draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
 			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
-			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, 0.6);
+			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, 0.6, noone, noone, fa_left);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, yy];
@@ -75,17 +71,16 @@ repeat (ds_height) {
 			if (inputting && yy == menu_option[page]) c = c_yellow;
 			if (current_val == 1) { c1 = c; c2 = c_dkgray;
 			} else { c1 = c_dkgray; c2 = c;}
-			scDrawText(rtx, rty, "ON", c1, 0.6);
-			scDrawText(rtx + 96 , rty, "OFF", c2, 0.6);
+			scDrawText(rtx, rty, "ON", c1, 0.6, noone, noone, fa_left);
+			scDrawText(rtx + 96 , rty, "OFF", c2, 0.6, noone, noone, fa_left);
 			break;
 		case menu_element_type.input:
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, yy]));
 			c = c_ltgray;
 			if (inputting && yy == menu_option[page]){ c = c_yellow; string_val = string_val + " | Press any key!"}
-			scDrawText(rtx, rty, string_val, c, 0.6);
+			scDrawText(rtx, rty, string_val, c, 0.6, noone, noone, fa_left);
 			break;
 		case menu_element_type.goto_room:
-			draw_set_halign(fa_middle);
 			var string_val = ds_grid[# 3, yy];
 			scDrawText(start_x, rty + 20, string_val, c_ltgray, 0.6);
 			break;
@@ -93,7 +88,6 @@ repeat (ds_height) {
 			var amt = ROCKET.LENGHT;
 			var columns = 4;
 			var offset = 0;
-			draw_set_halign(fa_middle);
 			for (var i = 1; i < amt; i++) {
 				if ((i - 1) mod columns == 0)
 					offset++;
@@ -131,7 +125,6 @@ repeat (ds_height) {
 			var amt = BUFFTYPE.LENGHT;
 			var columns = 3;
 			var offset = 0;
-			draw_set_halign(fa_middle);
 			for (var i = 0; i < amt; i++) {
 				if (i mod columns == 0)
 					offset++;
@@ -161,5 +154,3 @@ repeat (ds_height) {
 	}
 	yy++;
 }
-
-draw_set_valign(fa_top);

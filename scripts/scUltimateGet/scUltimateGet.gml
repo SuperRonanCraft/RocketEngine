@@ -45,10 +45,15 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 15;
 		ds_map[? ULTIMATE_MAP.SOUND_CAST] = SOUND.ULT_SHIELD_CAST;
 		break;
+	case ULTIMATE.MIRROR: //Oh, now its going this way
+		ds_map[? ULTIMATE_MAP.NAME] = "Magical mirror";
+		ds_map[? ULTIMATE_MAP.SCRIPT] = scUltimateMirror;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
+		break;
 }
 
 enum ULTIMATE {
-	DEFAULT, LASERS, FAST, SAND, REVERSE, SWIPE, SHIELD,
+	DEFAULT, LASERS, FAST, SAND, REVERSE, SWIPE, SHIELD, MIRROR,
 	
 	//PUT LAST
 	LENGTH

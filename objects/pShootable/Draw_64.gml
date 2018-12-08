@@ -72,9 +72,9 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
 	
 	//ULTIMATE CHARGE CIRCLE
-	var charge = round(ult_charge * 100);
+	var charge = round(ult_charge * (100 / ult_charge_max));
 	var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
-	scDrawPiePart(xposcir, ypos, ult_charge, 1, c, 28, 0.8, 9);
+	scDrawPiePart(xposcir, ypos, ult_charge, ult_charge_max, c, 28, 0.8, 9);
 	
 	//ULTIMATE CASTTIME CIRCLE
 	scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_purple, 32, 0.9, 4);

@@ -1,6 +1,6 @@
 if (!ult_enabled) exit; //Is the system even enabled?
 
-if (ult_charge < 1) {ult_charge += 0.01; exit;} //Give charge, exit
+if (ult_charge < ult_charge_max) {ult_charge = min(ult_charge + 0.001, ult_charge_max); exit;} //Give charge by time, exit
 
 var key_shoot = keyboard_check(keyleft) && keyboard_check(keyright);
 
