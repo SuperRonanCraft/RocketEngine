@@ -24,6 +24,7 @@ rocket_map[? ROCKET_MAP.ROCKET_DRAW] = noone; //Draw event for rockets (adds)
 //PARTICLES
 rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = noone; //rocket particle trail
 rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
+rocket_map[? ROCKET_MAP.PARTICLE_AMT] = 1; //rocket particle trail
 //SCREEN SHAKE
 rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2; //Screen shake magnitude
 rocket_map[? ROCKET_MAP.SHAKE_FRAMES] = 8; //Screen shake frame

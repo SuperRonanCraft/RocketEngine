@@ -12,7 +12,6 @@ var clock = dsBuff[? BUFF_MAP.CLOCK];
 if (clock = 0) {
 	//Switch controls
 	owner.keydirection *= -1;
-	clock++;
 }
 
 //If the internal clock reaches the time in seconds, expire

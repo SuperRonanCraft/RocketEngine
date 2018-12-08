@@ -3,13 +3,13 @@
 
 var charge = 0;
 if (argument[0] == DAMAGETYPE.DIRECT)
-	charge += 0.15;
+	charge += ult_charge_direct;
 else if (argument[0] == DAMAGETYPE.SPLASH)
-	charge += 0.075;
+	charge += ult_charge_splash;
 else if (argument[0] == DAMAGETYPE.INDIRECT)
-	charge += 0.01;
+	charge += ult_charge_indirect;
 
-ult_charge = min(ult_charge + charge, ult_charge_max);
+ult_charge = min(ult_charge + (charge* ult_charge_multiplier), ult_charge_max);
 
 enum DAMAGETYPE {
 	DIRECT, SPLASH, INDIRECT

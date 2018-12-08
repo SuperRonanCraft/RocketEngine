@@ -133,7 +133,8 @@ repeat (ds_height) {
 				var spr = map[? BUFF_MAP.ICON];
 				var name = map[? BUFF_MAP.NAME];
 				var desc = map[? BUFF_MAP.DESCRIPTION];
-				var part = map[? BUFF_MAP.PARTICLE];
+				var part = oParticleHandler.ds_part[? map[? BUFF_MAP.PARTICLE]];;
+				var part_amt = oParticleHandler.ds_part_amt[? map[? BUFF_MAP.PARTICLE]];
 				var rx = ((RES_W / 4) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
 				//show_debug_message(string(i) + " " + string(amt mod columns));
 				//if (i >= amt - (amt mod columns))
@@ -142,8 +143,10 @@ repeat (ds_height) {
 				//Name
 				scDrawText(rx, ry, name, c_ltgray, 0.6);
 				//Sprite
-				part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - (1*30), rx + (1*30), ry - (1*10) + sprite_get_height(spr) + 20, ry + (1*10) + sprite_get_height(spr) + 20, ps_shape_ellipse, ps_distr_gaussian)
-				part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, 15*1);
+				part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - (1*30), rx + (1*30),
+					ry - (1*10) + sprite_get_height(spr) + 20, ry + (1*10) + sprite_get_height(spr) + 20,
+					ps_shape_ellipse, ps_distr_gaussian)
+				part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
 				draw_sprite(spr, 0, rx - 32, ry + 20);
 				//Description
 				scDrawText(rx, ry + 110, desc, c_yellow, 0.6);

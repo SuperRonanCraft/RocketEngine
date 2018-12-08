@@ -15,7 +15,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0)
-		part_particles_create(global.ParticleSystem1, owner.x, owner.y, dsBuff[? BUFF_MAP.PARTICLE], 5);
+		part_particles_create(global.ParticleSystem1, owner.x, owner.y, dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
 	with (owner) {
 		if (current_cd > rocket_map[? ROCKET_MAP.COOLDOWN] / 2)
 			current_cd = rocket_map[? ROCKET_MAP.COOLDOWN] / 2;

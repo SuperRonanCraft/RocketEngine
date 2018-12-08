@@ -1167,6 +1167,14 @@
             }
         },
         {
+            "Key": "70e3eb22-06f6-4b42-a408-5f2e4869e836",
+            "Value": {
+                "id": "0262c2d1-6ebd-4f4f-98f8-eac7135936ca",
+                "resourcePath": "scripts\\scBuffUltCharge\\scBuffUltCharge.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7195dc8f-dbfc-42b3-8700-b609300cde6e",
             "Value": {
                 "id": "abad7146-1349-4bfb-bee9-dbc701341092",
@@ -1599,6 +1607,14 @@
             }
         },
         {
+            "Key": "995f5d96-3ef0-4abc-a7e2-f42c1b3ff66e",
+            "Value": {
+                "id": "2d590c8c-e4b6-4745-bc13-12555853d1b4",
+                "resourcePath": "sprites\\s_pultcharge\\s_pultcharge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
             "Value": {
                 "id": "e866da4d-33ac-436d-b15d-80cd9d93ef27",
@@ -1836,6 +1852,14 @@
                 "id": "440e2c6a-36ea-49ed-887b-2a9884ecdf55",
                 "resourcePath": "objects\\oStageSelect\\oStageSelect.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b3cc7e8e-b8e4-4c72-b70d-051f7296776f",
+            "Value": {
+                "id": "4745fce5-85b1-4d17-aa2c-2e6095c12326",
+                "resourcePath": "sprites\\s_abilityIcon_UltCharge\\s_abilityIcon_UltCharge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2549,6 +2573,7 @@
         "b64f6760-5397-42e0-8981-45efc7879f70",
         "a8a72bd7-3732-4cfe-b57d-e4f4dd832e45",
         "6751a009-9e34-4abb-84c2-f3003c527488",
+        "70e3eb22-06f6-4b42-a408-5f2e4869e836",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "0302c78d-63c7-4a1b-a186-ec4494652c18",
         "629e7bea-6edd-4695-8e76-70aed14f0001",

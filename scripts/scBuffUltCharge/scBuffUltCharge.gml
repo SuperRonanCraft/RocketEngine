@@ -1,4 +1,4 @@
-///@desc The "Speed" Buff
+///@desc The "UltCharge" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 
@@ -9,20 +9,14 @@ var dsBuff = argument1;
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 //When the buff firt starts, apply the buff
-if (clock = 0) {
-	//Save original gravity
-	dsBuff[? "grvOriginal"] = owner.grv;
-	//Generate the lowest gravity
-	dsBuff[? "grv"] = 1;
-}
+if (clock = 0)
+	owner.ult_charge_multiplier += dsBuff[? "multiplier"];
 
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
-	owner.grv = dsBuff[? "grvOriginal"];
+	owner.ult_charge_multiplier -= dsBuff[? "multiplier"];
 	scRemoveBuff(owner, dsBuff);
 } else {
-	//Lower gravity slowly
-	owner.grv = max(owner.grv - 0.05, dsBuff[? "grv"]);
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
 	dsBuff[? BUFF_MAP.PARTICLE], irandom_range(2,4));
 	dsBuff[? BUFF_MAP.CLOCK]++;

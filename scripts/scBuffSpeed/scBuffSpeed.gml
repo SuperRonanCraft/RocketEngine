@@ -7,10 +7,8 @@ var dsBuff = argument1;
 
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
-if (clock = 0) {	
+if (clock = 0)
 	dsBuff[? "overallSpeed"] = 0;
-	clock++;
-}
 
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {

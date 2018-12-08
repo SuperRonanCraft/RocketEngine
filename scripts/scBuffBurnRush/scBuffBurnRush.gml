@@ -9,14 +9,12 @@ var dsBuff = argument1;
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 //When the buff firt starts, apply the slow
-if(clock = 0){	
+if (clock = 0)
 	dsBuff[? "overallSpeed"] = 0;
-	clock++;
-}
 
 //If the internal clock reaches the time in seconds, expire
 //Or if you are chilled
-if(scFindBuff(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]){
+if (scFindBuff(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]){
 	//Return to normal speed
 	owner.move_adj -= dsBuff[? "overallSpeed"];	
 	//Remove Burn Rush
@@ -28,7 +26,8 @@ if(scFindBuff(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]){
 	owner.move_adj += dsBuff[? "speedup"];
 	dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];
 	//Otherwise, the buff is still active, and create a visual indicator
-	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), dsBuff[? BUFF_MAP.PARTICLE], (abs(clock - dsBuff[? BUFF_MAP.TIME]) + 1) );
+	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15),
+	dsBuff[? BUFF_MAP.PARTICLE], (abs(clock - dsBuff[? BUFF_MAP.TIME]) + 1));
 	//Also, increaase the clock. Essential for every buff.
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

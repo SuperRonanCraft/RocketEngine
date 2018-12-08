@@ -132,6 +132,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE_ROCKET, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
+ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_AMT, oParticleHandler.ds_part_amt[? PARTICLES.SAND]);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Sand);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSand_ExplodeCreate);
@@ -234,7 +235,7 @@ enum ROCKET_MAP {
 	//ROCKET EVENTS
 	ROCKET_CREATE, ROCKET_STEP, ROCKET_DRAW,
 	//PARTICLES
-	PARTICLE_TRAIL, PARTICLE_EXPLOSION,
+	PARTICLE_TRAIL, PARTICLE_EXPLOSION, PARTICLE_AMT,
 	//CAMERA SHAKE
 	SHAKE_MAGNITUDE, SHAKE_FRAMES,
 	//EXPLOSION SCRIPTS
