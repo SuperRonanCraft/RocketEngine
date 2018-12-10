@@ -13,3 +13,9 @@ if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone) {
 	//Then bursts with the defined particle over at oParticleHandler
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, rocket_map[? ROCKET_MAP.PARTICLE_TRAIL], rocket_map[? ROCKET_MAP.PARTICLE_AMT]);
 }
+
+//Grow into the stage
+if (image_xscale < original_xscale)
+	image_xscale = min(image_xscale + scale_speed, original_xscale);
+if (image_yscale < original_yscale)
+	image_yscale = min(image_yscale + scale_speed, original_yscale);

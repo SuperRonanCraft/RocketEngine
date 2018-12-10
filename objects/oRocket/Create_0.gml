@@ -12,4 +12,6 @@ destroy = false;
 hitList = ds_list_create();
 confirmList = ds_list_create();
 
-start_script = false;
+//Timing variables for first step and draw event
+first_step = false;
+first_draw = false;

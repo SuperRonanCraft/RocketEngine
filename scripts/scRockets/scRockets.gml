@@ -132,7 +132,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE_ROCKET, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_TRAIL, oParticleHandler.ds_part[? PARTICLES.SAND]);
-ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_AMT, oParticleHandler.ds_part_amt[? PARTICLES.SAND]);
+ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_AMT, oParticleHandler.ds_part_amt[? PARTICLES.SAND] * 10);
 ds_map_add(weapons[roc], ROCKET_MAP.PARTICLE_EXPLOSION, oParticleHandler.ds_part[? PARTICLES.SAND]);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_SPRITE, sexplosion_Sand);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSand_ExplodeCreate);
@@ -185,7 +185,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SWIPE);
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialSlime_Exp_Wall);
 //ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_ROCKET, scRocketSpecialSlime_Exp_Rocket);
 
-//TESTING
+//RANDOM
 roc = ROCKET.RANDOM;
 weapons[roc] = ds_map_create();
 ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
@@ -203,6 +203,22 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialRandom_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialRandom_Create);
 ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SHIELD);
 
+//INTERCEPTOR
+roc = ROCKET.INTERCEPT;
+weapons[roc] = ds_map_create();
+ds_map_add(weapons[roc], ROCKET_MAP.TYPE, roc);
+ds_map_add(weapons[roc], ROCKET_MAP.NAME, "Interceptor");
+ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Not another Sombra");
+ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 0);
+ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 2);
+ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.INTERCEPT);
+ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 18);
+ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 12);
+ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
+ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
+ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketIntercept_ExplodeCreate);
+ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_STEP, scRocketIntercept_ExplodeStep);
+
 enum ROCKET {
 	NONE,
 	DEFAULT, 
@@ -215,6 +231,7 @@ enum ROCKET {
 	LASER,
 	SLIME,
 	RANDOM,
+	INTERCEPT,
 	
 	//KEEP LAST
 	LENGHT
@@ -223,7 +240,8 @@ enum ROCKET {
 enum ROCKET_SPRITE {
 	//Mostly used to save memory on oRocketPickup, or to insta grab a rocket sprite
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
-	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime, RANDOM = sRocket_Random
+	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime,
+	RANDOM = sRocket_Random, INTERCEPT = sRocket_Interceptor
 }
 
 enum ROCKET_MAP {

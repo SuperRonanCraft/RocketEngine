@@ -1159,6 +1159,14 @@
             }
         },
         {
+            "Key": "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
+            "Value": {
+                "id": "bfb58431-e244-4472-a2fc-fc82b7199bc9",
+                "resourcePath": "scripts\\scRocketIntercept_ExplodeCreate\\scRocketIntercept_ExplodeCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7011ea75-1c0e-4183-9a61-4d653bd65535",
             "Value": {
                 "id": "52170d64-86bc-43a1-bbd6-317ef4c2292b",
@@ -1300,6 +1308,14 @@
                 "id": "21cb7ddb-d87f-4100-8138-c6f03ce23ba3",
                 "resourcePath": "scripts\\scRocketSand_ExplodeCreate\\scRocketSand_ExplodeCreate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7ba7f4a4-2968-4299-a5ba-1fa51cbcfe5f",
+            "Value": {
+                "id": "53f4c4b0-8262-4afc-b9b7-36f7708a5cb5",
+                "resourcePath": "sprites\\sRocket_Interceptor\\sRocket_Interceptor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1575,6 +1591,14 @@
             }
         },
         {
+            "Key": "95509e06-2ab1-4c1d-b570-f2b5360ab507",
+            "Value": {
+                "id": "bc724309-f384-47d5-bf13-20172ff865d8",
+                "resourcePath": "views\\95509e06-2ab1-4c1d-b570-f2b5360ab507.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "95586f1f-f258-4f45-8315-aec50e1786b1",
             "Value": {
                 "id": "943208f5-0687-4144-9cbc-75eef18f152d",
@@ -1668,6 +1692,14 @@
                 "id": "9132eb09-471b-4ee3-9703-690d08da4038",
                 "resourcePath": "views\\a398b639-3b0f-4dd7-9904-582859ef38d1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
+            "Value": {
+                "id": "812aca6b-08cb-467d-9098-54ac5c0607c1",
+                "resourcePath": "scripts\\scRocketIntercept_ExplodeStep\\scRocketIntercept_ExplodeStep.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2549,6 +2581,8 @@
         "1fd940af-afa7-47d9-9819-2f6ab960e911",
         "5c320603-4784-4110-97d0-f25729940237",
         "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
+        "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
+        "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "af87de2e-e23d-4887-875f-53947f1d38e3",
         "74f530e7-7b26-4f54-8398-0e146c4876c9",

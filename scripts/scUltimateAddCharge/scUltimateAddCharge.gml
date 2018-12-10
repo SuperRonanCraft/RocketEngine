@@ -2,15 +2,14 @@
 /// @arg damage-type
 
 var charge = 0;
-if (argument[0] == DAMAGETYPE.DIRECT)
-	charge += ult_charge_direct;
-else if (argument[0] == DAMAGETYPE.SPLASH)
-	charge += ult_charge_splash;
-else if (argument[0] == DAMAGETYPE.INDIRECT)
-	charge += ult_charge_indirect;
-
+switch (argument[0]) {
+	case DAMAGETYPE.DIRECT: charge += ult_charge_direct; break;
+	case DAMAGETYPE.SPLASH: charge += ult_charge_splash; break;
+	case DAMAGETYPE.INDIRECT: charge += ult_charge_indirect; break;
+	case DAMAGETYPE.TIME: charge += ult_charge_time; break;
+}
 ult_charge = min(ult_charge + (charge* ult_charge_multiplier), ult_charge_max);
 
 enum DAMAGETYPE {
-	DIRECT, SPLASH, INDIRECT
+	DIRECT, SPLASH, INDIRECT, TIME
 }
