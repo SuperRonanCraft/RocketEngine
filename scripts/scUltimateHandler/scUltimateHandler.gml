@@ -26,7 +26,7 @@ if (key_shoot) { //Shoot key being held down
 } else {
 	//Reset casting
 	ult_casting = false;
-	if (ult_cast_time > 0)
+	if (ult_cast_time < ult_cast_time_max)
 		ult_cast_time += 1;
 }
 
@@ -43,7 +43,7 @@ if (!shoot) exit; //Not shooting but we still have full ult charge!
 var map = ds_map_create(); //Create an ult map
 scUltimateGet(rocket_map[? ROCKET_MAP.ULTIMATE], map); //Grab the ult map
 
-script_execute(map[? ULTIMATE_MAP.SCRIPT]); //Run the ult script, no arguments as the player is the shooter
+script_execute(map[? ULTIMATE_MAP.SCRIPT_CASTED]); //Run the ult script, no arguments as the player is the shooter
 ult_charge = 0; //Reset the ult charge
 scPlaySound(map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound
 ds_map_destroy(map); //Delete the ult map

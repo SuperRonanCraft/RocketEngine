@@ -17,4 +17,5 @@ if (rocket_map[? ROCKET_MAP.TYPE] != weapon) {
 	ammo = rocket_map[? ROCKET_MAP.CLIP];
 	current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
 	prj_scale = 2;
+	ult_casting = false; //Reset the ult timer
 }
