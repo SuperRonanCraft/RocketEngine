@@ -84,6 +84,14 @@
             "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
             "propertyId": "37d965f5-27ac-4926-91ba-60c462f2c454",
             "value": "DISPLAYTYPE.SCREEN"
+        },
+        {
+            "id": "7f29be8e-b9be-4ebd-9329-fd43494ce0c7",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
+            "propertyId": "db9b1853-5c2e-4303-8ecd-2952eb879441",
+            "value": "ROCKET.HOMING"
         }
     ],
     "parentObjectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",

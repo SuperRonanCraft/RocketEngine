@@ -21,7 +21,13 @@ for (var i = 0; i < ds_list_size(rlist); i++) {
 	var r = ds_list_find_value(rlist, i);
 	if (r.owner == owner) continue; //Is your rocket
 	with (r) {
+		
+		if(target != noone){
+			target = owner;	
+		}
+		
 		owner = other.owner; //Change the owner
+		
 		direction = direction + 180; //Flip the rocket
 		image_angle = direction;
 	}

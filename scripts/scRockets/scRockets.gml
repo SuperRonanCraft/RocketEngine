@@ -45,7 +45,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "I  will  find  you!");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
-//ds_map_add(weapons[roc], ROCKET_MAP.CLIP, 60);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.HOMING);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 45);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 15);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 120);

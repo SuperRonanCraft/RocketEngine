@@ -51,10 +51,14 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateMirror;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
+	case ULTIMATE.HOMING: 
+		ds_map[? ULTIMATE_MAP.NAME] = "Rocket Barrage";
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateHoming;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 }
 
 enum ULTIMATE {
-	DEFAULT, LASERS, FAST, SAND, REVERSE, SWIPE, SHIELD, MIRROR,
+	DEFAULT, LASERS, FAST, SAND, REVERSE, SWIPE, SHIELD, MIRROR, HOMING,
 	
 	//PUT LAST
 	LENGTH

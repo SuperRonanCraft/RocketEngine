@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "30fd3536-1bc6-45d9-9728-3e1c11589e5a",
+            "Value": {
+                "id": "81889162-d84a-4d4b-b45f-eea8dfc4f03e",
+                "resourcePath": "scripts\\scUltimateHoming\\scUltimateHoming.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "310a2ec4-89ca-426d-b097-393285030a8e",
             "Value": {
                 "id": "9b167379-5f52-471c-8419-d50c557df809",
@@ -1407,6 +1415,14 @@
             }
         },
         {
+            "Key": "860ae2ce-2e5e-4c0f-9104-1231234f55fe",
+            "Value": {
+                "id": "46af4d14-57f6-4e52-8929-0640b463768f",
+                "resourcePath": "sprites\\sRocket_Homing_Ult\\sRocket_Homing_Ult.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "86cf25f3-b5b6-4523-b479-b6c396e8c840",
             "Value": {
                 "id": "4be2e694-a2c5-4acd-95e4-1c14c9443394",
@@ -2151,6 +2167,14 @@
             }
         },
         {
+            "Key": "ca94443c-3ecc-4924-93a2-08bd4c6189cf",
+            "Value": {
+                "id": "01b24ecd-c925-46c0-93d7-ed83370aacee",
+                "resourcePath": "objects\\oUltimateHoming\\oUltimateHoming.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cb0b55a2-e411-4a24-8296-3f4604ecea71",
             "Value": {
                 "id": "9e46a1b5-e397-469b-b078-0f189ae30ce9",
@@ -2519,6 +2543,14 @@
             }
         },
         {
+            "Key": "fec53fa2-f9a0-4286-99e6-6eed12f0a4d8",
+            "Value": {
+                "id": "b2476f3c-6d0f-4c20-94d0-863bacc92609",
+                "resourcePath": "scripts\\scRocketSpecialHomingUlt_Step\\scRocketSpecialHomingUlt_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fedb5019-57a5-4a30-ae5a-b41dc25e535b",
             "Value": {
                 "id": "9a47749f-5acb-40b4-908f-f95a1bd2b8a2",
@@ -2569,6 +2601,7 @@
         "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
         "92ed85dc-7eeb-436d-85ce-b5ac325a0898",
         "72ac3948-6fc8-469f-8d16-843aa1bf49f5",
+        "fec53fa2-f9a0-4286-99e6-6eed12f0a4d8",
         "7c30ad4e-9edc-423c-8c2b-2c1415d78451",
         "7a5bd777-6d09-42a2-ad95-9dd69ef5f2de",
         "3dedc9d0-41e6-411f-8949-1c71f9e8c831",
@@ -2595,6 +2628,7 @@
         "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",
         "52deab92-d816-42a2-a7e9-c1d27b700b3c",
+        "30fd3536-1bc6-45d9-9728-3e1c11589e5a",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
