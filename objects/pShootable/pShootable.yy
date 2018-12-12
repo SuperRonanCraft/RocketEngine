@@ -128,7 +128,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET.INTERCEPT",
+            "value": "ROCKET.DEFAULT",
             "varName": "starting_weapon",
             "varType": 4
         }

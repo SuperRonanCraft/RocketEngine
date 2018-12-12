@@ -38,6 +38,7 @@ if(timer %3 == 0 && timer < 25){
 		targetLocY = target.y + irandom_range(-30,30);
 		rocket_map[? ROCKET_MAP.SPEED] = .1;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
+		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;
 		
 	}
 	

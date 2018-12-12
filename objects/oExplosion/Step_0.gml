@@ -13,7 +13,8 @@ if (doing_damage)
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
-			scAddUltCharge(parent, DAMAGETYPE.SPLASH); //Add ult charge splash dmg
+			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
+				scAddUltCharge(parent, DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		}
 if (rocket_map[? ROCKET_MAP.EXPLOSION_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_STEP]);

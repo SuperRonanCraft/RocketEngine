@@ -89,9 +89,10 @@ repeat (ds_height) {
 			var columns = 4;
 			var offset = 0;
 			for (var i = 1; i < amt; i++) {
+				var map = weapons[i];
+				if (!is_undefined(map[? ROCKET_MAP.ENABLED]) && !map[? ROCKET_MAP.ENABLED]) continue; //Is it disabled?
 				if ((i - 1) mod columns == 0)
 					offset++;
-				var map = weapons[i];
 				var spr = map[? ROCKET_MAP.PROJECTILE];
 				var name = map[? ROCKET_MAP.NAME];
 				var desc = map[? ROCKET_MAP.DESCRIPTION];

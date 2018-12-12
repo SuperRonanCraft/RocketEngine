@@ -23,8 +23,18 @@ var xx = random_range(50, RES_W - 50), yy = random_range(50, RES_H - 50);
 switch (obj) {
 	//Is a rocket pickup
 	case oRocketPickup:
-		//Grab a random rocket
-		var map = weapons[irandom_range(ROCKET.DEFAULT, ROCKET.LENGHT - 1)];
+		var possible = 0;
+		var index = 0;
+		//Get a list of all enabled rockets
+		for (var i = ROCKET.DEFAULT; i < ROCKET.LENGHT; i++) {
+			var wp_map = weapons[i];
+			if (is_undefined(wp_map[? ROCKET_MAP.ENABLED]) || wp_map[? ROCKET_MAP.ENABLED]) {
+				possible[index] = i;
+				index++;
+			}
+		}
+		//Pick a random rocket from the possible array
+		var map = weapons[possible[irandom_range(0, array_length_1d(possible) - 1)]];
 		//Spawn and give it default values
 		with (instance_create_layer(xx, yy, layer, obj)) {
 			if (x > RES_W / 2)

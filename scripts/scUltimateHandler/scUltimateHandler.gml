@@ -12,7 +12,7 @@ if (key_shoot) { //Shoot key being held down
 			shoot = true;
 		else
 			ult_cast_time--;
-		current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
+		//current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
 		if (ult_cast_script != noone)
 			script_execute(ult_cast_script);
 	} else {

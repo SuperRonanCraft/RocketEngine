@@ -15,12 +15,13 @@ if (owner != other.id) {
 			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 			//Damage player
-			with (hitList[| i]) 
+			with (hitList[| i])
 				scHitShootable(other.owner, false, true, dmg);
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
-			scAddUltCharge(owner, DAMAGETYPE.DIRECT); //Add direct ult charge
+			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
+				scAddUltCharge(owner, DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		}
 	//Custom Explosion with a pShootable script
 	if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)

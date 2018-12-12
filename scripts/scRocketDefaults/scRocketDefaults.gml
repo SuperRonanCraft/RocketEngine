@@ -1,4 +1,7 @@
-rocket_map = ds_map_create();
+/// @desc Set all the default values for a Rockets ROCKET_MAP
+/// @arg ds_map The map to set all the values to
+
+var rocket_map = ds_map_create();
 rocket_map[? ROCKET_MAP.RECOIL] = 0; //Amount of recoil to push the player back
 rocket_map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.NONE; //Sprite to show
 rocket_map[? ROCKET_MAP.COOLDOWN] = 0; //Cooldown between shots
@@ -13,6 +16,7 @@ rocket_map[? ROCKET_MAP.NAME] = "default"; //Name of rocket (must have)
 rocket_map[? ROCKET_MAP.DESCRIPTION] = "Uh... Nothing?"; //Description of rocket (must have)
 rocket_map[? ROCKET_MAP.TYPE] = ROCKET.NONE; //Rocket type (must have)
 rocket_map[? ROCKET_MAP.BUFF] = noone; //The buffs a rocket has (array)
+rocket_map[? ROCKET_MAP.ENABLED] = true; //Is the rocket enabled in-game?
 //DAMAGES
 rocket_map[? ROCKET_MAP.DAMAGE] = 1; //Base damage
 rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket
@@ -39,4 +43,9 @@ rocket_map[? ROCKET_MAP.EXPLOSION_STEP] = noone; //Explosion step event
 rocket_map[? ROCKET_MAP.SOUND_SHOOT] = SOUND.EFFECT_SHOOT; //Rocket shoot sound
 rocket_map[? ROCKET_MAP.SOUND_EXPLOSION] = SOUND.EFFECT_EXP; //Rocket explode sound
 //ULTIMATE
-rocket_map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.DEFAULT;
+rocket_map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.DEFAULT; //The rockets ultimate power
+rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = true; //If the rocket should give ultcharge
+rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //Multiplier offset of a specific rocket 1 for none
+
+var map = argument0;
+map = rocket_map;

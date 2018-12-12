@@ -50,7 +50,7 @@
             "Key": "02b336b5-7467-4576-8a97-db9d380154a7",
             "Value": {
                 "id": "8a378eb8-518b-4164-80f8-461f844ca2bc",
-                "resourcePath": "scripts\\scChangeRocket\\scChangeRocket.yy",
+                "resourcePath": "scripts\\scRocketChange\\scRocketChange.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1211,6 +1211,14 @@
             "Value": {
                 "id": "24c04a18-35a4-4930-a0f5-b29238278dc4",
                 "resourcePath": "scripts\\scRocketSpecialHoming_Step\\scRocketSpecialHoming_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
+            "Value": {
+                "id": "b53dae57-c5ae-460f-8278-825f507e2068",
+                "resourcePath": "scripts\\scRocketGet\\scRocketGet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2378,7 +2386,7 @@
             "Key": "e9299095-87f4-4b5e-a689-8746fbc3f450",
             "Value": {
                 "id": "b9c339f1-7428-477c-b035-fb772b439c9b",
-                "resourcePath": "scripts\\scRocketsDefaults\\scRocketsDefaults.yy",
+                "resourcePath": "scripts\\scRocketDefaults\\scRocketDefaults.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2585,9 +2593,10 @@
         "ab738f93-ad7a-45aa-a119-240062d21cca",
         "02b336b5-7467-4576-8a97-db9d380154a7",
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
+        "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
+        "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "92c8ec42-71bb-4b65-968e-5de99090a6b7",
-        "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
         "e8958ecd-db37-4420-8365-d502b8a7a409",

@@ -218,6 +218,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketIntercept_ExplodeCreate);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_STEP, scRocketIntercept_ExplodeStep);
+ds_map_add(weapons[roc], ROCKET_MAP.ENABLED, false); //Do not allow rocket in-game
 
 enum ROCKET {
 	NONE,
@@ -247,7 +248,7 @@ enum ROCKET_SPRITE {
 enum ROCKET_MAP {
 	//BASIC VARIABLES
 	RECOIL, PROJECTILE, COOLDOWN, SPEED, OFFSET, STARTUP, CLIP,
-	RELOAD_TIME, TIMER, IGNORE_WALL, NAME, DESCRIPTION, BUFF, TYPE, 
+	RELOAD_TIME, TIMER, IGNORE_WALL, NAME, DESCRIPTION, BUFF, TYPE, ENABLED,
 	//DAMAGE TYPES
 	DAMAGE, DAMAGE_ROCKET, DAMAGE_EXPLOSION,
 	//ROCKET EVENTS
@@ -261,7 +262,7 @@ enum ROCKET_MAP {
 	//SOUND EFFECTS
 	SOUND_EXPLOSION, SOUND_SHOOT,
 	//ULTIMATE
-	ULTIMATE
+	ULTIMATE, ULTIMATE_CHARGE_GIVE, ULTIMATE_CHARGE_MULTIPLIER
 }
 
 //Rocket progress
@@ -270,7 +271,7 @@ current_delay = -1;
 current_recoil = 0;
 current_reload = 0;
 rockets = 0;
-rocket_map = 0;
+rocket_map = ds_map_create();
 
 //Setup the default rocket type
-scChangeRocket(argument0);
+scRocketChange(argument0);

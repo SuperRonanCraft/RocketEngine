@@ -22,6 +22,7 @@ offset = 0;
 for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Grab the buff map
 	var ds_list = buffs[| i];
+	show_debug_message(string(ds_list[? BUFF_MAP.NAME]));
 	//Offset every 10 buffs
 	if (i mod 10 == 0)
 		offset++;
