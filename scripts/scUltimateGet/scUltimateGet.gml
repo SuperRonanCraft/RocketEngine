@@ -6,8 +6,9 @@ var type = argument0;
 var ds_map = argument1;
 
 //The amount of time u need to press the shoot button to ult
-ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
-ds_map[? ULTIMATE_MAP.SOUND_CAST] = noone;
+ds_map[? ULTIMATE_MAP.CAST_TIME] = 25; //Defaulted to 25/60th of a second
+ds_map[? ULTIMATE_MAP.SCRIPT_CASTING] = noone; //Defaulted to aviod errors
+ds_map[? ULTIMATE_MAP.SOUND_CAST] = noone; //Default sound of the ultimate being casted
 
 switch (type) {
 	case ULTIMATE.DEFAULT: //Huge af cloned rocket

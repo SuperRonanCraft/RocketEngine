@@ -13,6 +13,8 @@ if (key_shoot) { //Shoot key being held down
 		else
 			ult_cast_time--;
 		current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
+		if (ult_cast_script != noone)
+			script_execute(ult_cast_script);
 	} else {
 		if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
 		var map = ds_map_create(); //Create an ult map
@@ -20,6 +22,7 @@ if (key_shoot) { //Shoot key being held down
 		ult_casting = true;
 		ult_cast_time = map[? ULTIMATE_MAP.CAST_TIME];
 		ult_cast_time_max = ult_cast_time;
+		ult_cast_script = map[? ULTIMATE_MAP.SCRIPT_CASTING];
 		ds_map_destroy(map); //Delete the ult map
 		exit;
 	}
