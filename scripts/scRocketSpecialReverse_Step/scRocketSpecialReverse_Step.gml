@@ -1,21 +1,30 @@
-//true = left, false = right
-var side = true;
-if (x < 50 && direction == 180)
-	teleporting = true;
-else if (x > RES_W - 50 && direction == 0) {
-	teleporting = true;
-	side = false;
-}
-//Animate 
+/// @desc Reverse rocket step script
+
+var teleported = rev_map[? "teleported"];
+var teleporting = rev_map[? "teleporting"];
+var org_xscale = rev_map[? "org_xscale"];
+var offset = rev_map[? "offset"];
+
+if (!teleporting)
+	if (x < offset && direction == 180)
+		teleporting = true;
+	else if (x > RES_W - offset && direction == 0) {
+		teleporting = true;
+		rev_map[? "side"] = false;
+	}
+
+var side = rev_map[? "side"];
+
+//Animate
 if (!teleported) {
 	if (teleporting) {
-		if (image_xscale != 0)
-			image_xscale = max(image_xscale - 0.1, 0);
+		if (original_xscale != 0)
+			original_xscale = max(original_xscale - (0.1 * org_xscale), 0);
 		else {
 			if (side)
-				x = RES_W - 50;
+				x = RES_W - offset;
 			else
-				x = 50;
+				x = offset;
 			teleported = true;
 		}
 	} else {
@@ -23,10 +32,13 @@ if (!teleported) {
 		y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);
 	}
 } else {
-	if (image_xscale != org_xscale)
-		image_xscale = min(image_xscale + (0.1 * org_xscale), org_xscale);
+	if (original_xscale != org_xscale)
+		original_xscale = min(original_xscale + (0.1 * org_xscale), org_xscale);
 	else {
 		teleported = false;
 		teleporting = false;
 	}
 }
+
+rev_map[? "teleported"] = teleported;
+rev_map[? "teleporting"] = teleporting;

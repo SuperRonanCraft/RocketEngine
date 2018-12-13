@@ -1887,6 +1887,14 @@
             }
         },
         {
+            "Key": "b207e289-366c-4794-9fc6-7166e3f11f20",
+            "Value": {
+                "id": "3dfd9f24-be6f-40b3-93f8-7b624ea1103a",
+                "resourcePath": "scripts\\scRocketSpecialReverse_Destroy\\scRocketSpecialReverse_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b268a4d1-5ee6-47d6-bafd-dd1450ec304e",
             "Value": {
                 "id": "4ef1f6d0-1a19-4c10-8732-45f6ba4fbb56",
@@ -2051,6 +2059,14 @@
             "Value": {
                 "id": "a2e89772-0ba7-4b9c-99cf-9053ab31df19",
                 "resourcePath": "scripts\\scCollisionO\\scCollisionO.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c00d9aec-4219-4441-8d7c-11b27b03bfd6",
+            "Value": {
+                "id": "88dc10f3-55c7-4266-8276-7600ee0ceee5",
+                "resourcePath": "scripts\\scSpawnRocket\\scSpawnRocket.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2599,6 +2615,7 @@
         "92c8ec42-71bb-4b65-968e-5de99090a6b7",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
+        "b207e289-366c-4794-9fc6-7166e3f11f20",
         "e8958ecd-db37-4420-8365-d502b8a7a409",
         "0378c52b-0d41-40b1-8b55-41b306c931ba",
         "339c5c1e-c527-4a76-b057-9931162ac4ad",
@@ -2675,6 +2692,7 @@
         "d1260b08-a738-448f-8ec6-6767a0bcceb7",
         "ba2fd104-db50-45fd-a0a2-86b27ebc5fec",
         "093e6d59-2a90-4ecf-82d1-506fe0325e2d",
+        "c00d9aec-4219-4441-8d7c-11b27b03bfd6",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",

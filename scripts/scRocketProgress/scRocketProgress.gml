@@ -2,26 +2,16 @@
 /// @arg team (-1 to disable right team checking)
 
 
-if (rocket_map[? ROCKET_MAP.PROJECTILE] == -1 || rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
+if (rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
 //Set the direction of the rocket
-var dir = direction;
-if (argument0 != -1)
-	dir = argument0 == TEAM.LEFT ? 0 : 180;
+var dir = argument0 == -1 ? direction : (argument0 == TEAM.LEFT ? 0 : 180);
 
 //Rocket
 if (current_delay == 0) {
 	if (ammo != 0) {
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
-		with (instance_create_depth(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, oRocket)) {
-			direction = dir;
-			image_angle = direction;
-			sprite_index = other.rocket_map[? ROCKET_MAP.PROJECTILE];
-			owner = other;
-			rocket_map = ds_map_create();
-			ds_map_copy(rocket_map, other.rocket_map);
-			timer = other.rocket_map[? ROCKET_MAP.TIMER];
-			owner.rockets++;
-		}
+		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, rocket_map);
+		rockets++;
 		ammo -= 1;
 		//Recoil code
 		//with (owner) {

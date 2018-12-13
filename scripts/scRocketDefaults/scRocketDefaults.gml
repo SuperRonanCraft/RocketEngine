@@ -25,6 +25,7 @@ rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 0; //Damage by explosion splash
 rocket_map[? ROCKET_MAP.ROCKET_CREATE] = noone; //Event when a rocket is created (adds)
 rocket_map[? ROCKET_MAP.ROCKET_STEP] = noone; //Step event (overrides movement)
 rocket_map[? ROCKET_MAP.ROCKET_DRAW] = noone; //Draw event for rockets (adds)
+rocket_map[? ROCKET_MAP.ROCKET_DESTROY] = noone; //The rocket destroy script (adds)
 //PARTICLES
 rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = noone; //rocket particle trail
 rocket_map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
