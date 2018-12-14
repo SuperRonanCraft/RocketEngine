@@ -114,7 +114,7 @@
             "Key": "06531bb4-4a0f-4beb-957d-0b1fd473e5c9",
             "Value": {
                 "id": "fe13898e-22b6-45ce-b82a-77ea868c6f18",
-                "resourcePath": "sprites\\sFloor\\sFloor.yy",
+                "resourcePath": "sprites\\sWallTile\\sWallTile.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -210,7 +210,7 @@
             "Key": "14c4078b-f092-479f-909a-69267fc05e22",
             "Value": {
                 "id": "316a42dd-92ba-4cad-a09f-acf9d59cff98",
-                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
+                "resourcePath": "tilesets\\tsWallHit\\tsWallHit.yy",
                 "resourceType": "GMTileSet"
             }
         },
@@ -372,6 +372,14 @@
                 "id": "12df552d-f965-4b6c-aa64-fdfbd28de021",
                 "resourcePath": "scripts\\scKeyToString\\scKeyToString.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2346ce06-a649-4f93-847f-7133ce3e9d82",
+            "Value": {
+                "id": "ea6c5904-83a6-47a9-9f6d-dc28c46ff7c6",
+                "resourcePath": "sprites\\sWallTileHit\\sWallTileHit.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1084,6 +1092,14 @@
                 "id": "1b409804-e99a-47e3-abb3-6d243dca6086",
                 "resourcePath": "scripts\\scBuffReverseControls\\scBuffReverseControls.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "68ee4ed2-cf73-4d63-9aa7-9a1cfe08aa62",
+            "Value": {
+                "id": "734ace4d-873a-4a59-a312-7423cc71e84e",
+                "resourcePath": "objects\\oEnvironmentHandler\\oEnvironmentHandler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1871,6 +1887,14 @@
             }
         },
         {
+            "Key": "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
+            "Value": {
+                "id": "133a4565-a280-4658-8a5f-c75d6430e03c",
+                "resourcePath": "scripts\\scExplosionTiles\\scExplosionTiles.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "af7e5d3c-ebb7-457a-941d-927a45d5f935",
             "Value": {
                 "id": "6b03c4fa-3fdf-49a8-b116-ed13fed552fd",
@@ -2455,6 +2479,14 @@
             }
         },
         {
+            "Key": "ec99208e-831b-436a-9828-becdd402917c",
+            "Value": {
+                "id": "aea2d528-9feb-4df5-98b9-d1f63996f2a6",
+                "resourcePath": "tilesets\\tsWall\\tsWall.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "f0f6ea54-a461-41d8-959e-eb211b1effd2",
             "Value": {
                 "id": "71661320-45a7-433d-9f60-3efdc67b620b",
@@ -2613,6 +2645,7 @@
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "92c8ec42-71bb-4b65-968e-5de99090a6b7",
+        "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
         "b207e289-366c-4794-9fc6-7166e3f11f20",

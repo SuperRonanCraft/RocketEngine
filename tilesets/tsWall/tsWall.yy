@@ -1,17 +1,17 @@
 {
-    "id": "14c4078b-f092-479f-909a-69267fc05e22",
+    "id": "ec99208e-831b-436a-9828-becdd402917c",
     "modelName": "GMTileSet",
     "mvc": "1.11",
-    "name": "tileset0",
+    "name": "tsWall",
     "auto_tile_sets": [
         
     ],
     "macroPageTiles": {
         "SerialiseData": null,
-        "SerialiseHeight": 1,
-        "SerialiseWidth": 1,
+        "SerialiseHeight": 0,
+        "SerialiseWidth": 0,
         "TileSerialiseData": [
-            1
+            
         ]
     },
     "out_columns": 1,
