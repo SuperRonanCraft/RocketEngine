@@ -19,13 +19,23 @@ for (var hei = 0; hei < h; hei++) {
 				var my = tilemap_get_cell_y_at_pixel(map_id, xval, yval);
 				var data = tilemap_get(map_id, mx, my);
 				var index = tile_get_index(data);
-				if (tile_get_empty(data)) continue; //Skip if already blank
-				ds_list_add(tile_hitx, xval);
-				ds_list_add(tile_hity, yval);
-				ds_list_add(tile_index, index);
-				ds_list_add(tile_time, tile_timer);
-				tilemap_set_at_pixel(map_id, tile_set_empty(data), xval, yval);
-				tilemap_set_at_pixel(tile_map, index, xval, yval);
+				if (tile_get_empty(data)) { //Skip if already blank
+					for (var i = 0; i < ds_list_size(tile_list); i++) {
+						var map = tile_list[| i]
+						if (map[? "x"] == mx && map[? "y"] == my) {
+							map[? "timer"] = tile_timer; break;
+						}
+					}
+				} else {
+					var map = ds_map_create();
+					ds_map_add(map, "x", mx);
+					ds_map_add(map, "y", my);
+					ds_map_add(map, "index", index);
+					ds_map_add(map, "timer", tile_timer);
+					ds_list_add(tile_list, map);
+					tilemap_set(map_id, tile_set_empty(data), mx, my);
+					tilemap_set(tile_map, index, mx, my);
+				}
 			}
 		}
 	}

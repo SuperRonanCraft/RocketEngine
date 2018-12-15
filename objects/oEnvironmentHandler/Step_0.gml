@@ -1,27 +1,21 @@
 /// @desc progress a tiles hit time
 
-//Not a list cause im lazy
-var removing = noone; //Remove the last tile to have a despawn timer
-for (var i = 0; i < ds_list_size(tile_hitx); i++) {
-	var timer = ds_list_find_value(tile_time, i); //Get the timer
-	show_debug_message(string(timer))
+var index = 0; //The current list index, not the current id
+for (var i = index; i < ds_list_size(tile_list); i++) {
+	var map = tile_list[| index];
+	var timer = map[? "timer"]; //Get the timer
 	if (timer <= 0) {
 		var lay_id = layer_get_id("Tiles");
 		var map_id = layer_tilemap_get_id(lay_id);
-		var xval =  ds_list_find_value(tile_hitx, i);
-		var yval =  ds_list_find_value(tile_hity, i);
-		tilemap_set_at_pixel(map_id, ds_list_find_value(tile_index, i), xval, yval);
-		tilemap_set_at_pixel(tile_map, 0, xval, yval);
-		removing = i;
-	} else
-		timer--;
-	ds_list_set(tile_time, i, timer); //Lower its timer
-}
-
-//Remove the list index
-if (removing != noone) {
-	ds_list_delete(tile_hitx, removing);
-	ds_list_delete(tile_hity, removing);
-	ds_list_delete(tile_index, removing);
-	ds_list_delete(tile_time, removing);
+		var mx = map[? "x"];
+		var my = map[? "y"];
+		//Set the tile back to normal
+		tilemap_set(map_id, map[? "index"], mx, my);
+		tilemap_set(tile_map, 0, mx, my);
+		ds_map_destroy(map); //Delete the map from memory
+		ds_list_delete(tile_list, index); //Remove the tile from the list
+	} else {
+		map[? "timer"] = timer - 1; //Lower the timer
+		index++;
+	}
 }
