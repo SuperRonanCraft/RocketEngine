@@ -27,10 +27,7 @@ repeat (ds_height) {
 		scale = 1.2;
 		xo = -(x_buffer / 2);
 	}
-	if (centered)
-		scDrawText(start_x, lty, ds_grid[# 0, yy], c3, scale, noone, noone, fa_middle);
-	else
-		scDrawText(ltx + xo, lty, ds_grid[# 0, yy], c3, scale, noone, noone, fa_right);
+	scDrawText(centered ? start_x : (ltx + xo), lty, ds_grid[# 0, yy], c3, scale, noone, noone, centered ? fa_middle : fa_right);
 	yy++;
 }
 
@@ -41,7 +38,7 @@ if (!centered)
 // Draw right
 var rtx = start_x + x_buffer, rty;
 yy = 0;
-repeat (ds_height) {
+repeat (ds_height) { //Iterate through each grid of the current page
 	rty = start_y + (yy * y_buffer);
 	switch (ds_grid[# 1, yy]) {
 		case menu_element_type.shift:
@@ -77,7 +74,7 @@ repeat (ds_height) {
 		case menu_element_type.input:
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, yy]));
 			c = c_ltgray;
-			if (inputting && yy == menu_option[page]){ c = c_yellow; string_val = string_val + " | Press any key!"}
+			if (inputting && yy == menu_option[page]) { c = c_yellow; string_val = string_val + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, 0.6, noone, noone, fa_left);
 			break;
 		case menu_element_type.goto_room:

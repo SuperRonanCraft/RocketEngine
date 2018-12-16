@@ -14,6 +14,5 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 	menu_option[i] = 0;
 depth -= 1;
 
-var btns = ds_grid_height(menu_pages[menu_page.main]);
-for (var i = 0; i < btns; i++)
-	unfold[i] = 0;
+//Disabled unfolding
+unfolding = false;

@@ -31,15 +31,18 @@ ds_rocketbuffs = scCreateMenuPage(
 	["BACK",	menu_element_type.page_transfer,	menu_page.rocketinfo],
 );
 
+//Pages of the menu
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls, ds_other_gamemodes, ds_rocketinfo, ds_rocketbuffs];
+//The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
 	menu_page.controls, menu_page.more_gamemodes, menu_page.rocketinfo, menu_page.rocketbuffs];
+//Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_rocketinfo, ds_rocketbuffs];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
-	menu_option[i] = 0;
+	menu_option[i] = -1; //Default selection for each page
 	
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
-	unfold[i] = 0;
+	unfold[i] = 0; //Position multiplier of page text
 	
-scRockets(0);
+scRockets(0); //Load in a copy of the rockets map for refrence

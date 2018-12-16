@@ -93,10 +93,8 @@ x_buffer = 32;
 //Updates on each page
 start_y = 0;
 start_x = 0;
-//Allow mouse control over unfolding gui
+//Is the current menu unfolding? Will lock mouse control
 unfolding = true;
-//Is the mouse moving?
-mouse_moving = false;
 
 ///Default things
 depth -= 1;
