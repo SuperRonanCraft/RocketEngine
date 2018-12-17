@@ -1,8 +1,8 @@
 {
-    "id": "629e7bea-6edd-4695-8e76-70aed14f0001",
+    "id": "5238e325-fb37-4c36-b216-e884eaababf9",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "change_window_mode",
+    "name": "scUICreateMenuPage",
     "IsCompatibility": false,
     "IsDnD": false
 }

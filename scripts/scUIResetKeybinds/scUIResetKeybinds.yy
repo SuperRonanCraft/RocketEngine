@@ -1,8 +1,8 @@
 {
-    "id": "af1bfdd2-1334-40aa-8444-ddb713405383",
+    "id": "bc52f200-8726-4ff9-ad86-55bb3c461b15",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "resume_game",
+    "name": "scUIResetKeybinds",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,8 +1,8 @@
 {
-    "id": "5238e325-fb37-4c36-b216-e884eaababf9",
+    "id": "629e7bea-6edd-4695-8e76-70aed14f0001",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scCreateMenuPage",
+    "name": "scUIToggleFullscreen",
     "IsCompatibility": false,
     "IsDnD": false
 }

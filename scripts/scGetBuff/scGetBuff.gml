@@ -6,8 +6,8 @@ var buff = argument0;
 var ds_map = argument1;
 switch (buff) {
 	case BUFFTYPE.BURNRUSH:
-		ds_map[? BUFF_MAP.NAME] = "Burn  Rush";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "Run  bro!";
+		ds_map[? BUFF_MAP.NAME] = "Burn Rush";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Run bro!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH;
 		ds_map[? BUFF_MAP.STEP] = scBuffBurnRush;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
@@ -15,7 +15,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.CHILLED:
 		ds_map[? BUFF_MAP.NAME] = "Chilled";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "It's  still  cold";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "It's still cold";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.CHILLED;
 		ds_map[? BUFF_MAP.STEP] = scBuffChilled;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.WINTER];
@@ -23,7 +23,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.COOLDOWN:
 		ds_map[? BUFF_MAP.NAME] = "Cooldowns";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "You  are  high!";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "You are high!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.COOLDOWN;
 		ds_map[? BUFF_MAP.STEP] = scBuffCooldown;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPARKLE];
@@ -32,7 +32,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.SLIME:
 		ds_map[? BUFF_MAP.NAME] = "Slimed";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "Knees  spaghetti";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Knees spaghetti";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.SLIME; 
 		ds_map[? BUFF_MAP.STEP] = scBuffSlime; 
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLIME];
@@ -40,7 +40,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.SPEED:
 		ds_map[? BUFF_MAP.NAME] = "Speed";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "Gotta  go  fast!";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Gotta go fast!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.SPEED;
 		ds_map[? BUFF_MAP.STEP] = scBuffSpeed;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPEED];
@@ -49,7 +49,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.LOWGRAVITY:
 		ds_map[? BUFF_MAP.NAME] = "No  Gravity";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "You're  a  Wizard!";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "You're a Wizard!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.LOWGRAVITY;
 		ds_map[? BUFF_MAP.STEP] = scBuffLowGravity;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.LOWGRAVITY];
@@ -58,7 +58,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.REVERSECONTROLS:
 		ds_map[? BUFF_MAP.NAME] = "Reversed";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "You  have  no  power!";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "You have no power!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSECONTROLS;
 		ds_map[? BUFF_MAP.STEP] = scBuffReverseControls;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSECONTROLS];

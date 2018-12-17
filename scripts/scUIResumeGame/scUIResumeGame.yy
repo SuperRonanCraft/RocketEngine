@@ -1,8 +1,8 @@
 {
-    "id": "4feff080-c2ca-471c-a07b-d3e79032357b",
+    "id": "af1bfdd2-1334-40aa-8444-ddb713405383",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "exit_game",
+    "name": "scUIResumeGame",
     "IsCompatibility": false,
     "IsDnD": false
 }

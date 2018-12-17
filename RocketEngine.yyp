@@ -58,7 +58,7 @@
             "Key": "0302c78d-63c7-4a1b-a186-ec4494652c18",
             "Value": {
                 "id": "e79aa4d3-d7bf-4691-b723-6bcf047cf0e0",
-                "resourcePath": "scripts\\change_volume\\change_volume.yy",
+                "resourcePath": "scripts\\scUIChangeVolume\\scUIChangeVolume.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -786,7 +786,7 @@
             "Key": "4feff080-c2ca-471c-a07b-d3e79032357b",
             "Value": {
                 "id": "5e4de785-9c52-49f8-9b36-2747cf448b54",
-                "resourcePath": "scripts\\exit_game\\exit_game.yy",
+                "resourcePath": "scripts\\scUIExitToTitle\\scUIExitToTitle.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -842,7 +842,7 @@
             "Key": "5238e325-fb37-4c36-b216-e884eaababf9",
             "Value": {
                 "id": "4a278fe0-3f5a-4557-9157-9fa43f317dde",
-                "resourcePath": "scripts\\scCreateMenuPage\\scCreateMenuPage.yy",
+                "resourcePath": "scripts\\scUICreateMenuPage\\scUICreateMenuPage.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -860,6 +860,14 @@
                 "id": "56392e6b-a563-4d5f-91f8-f71f6da2aead",
                 "resourcePath": "scripts\\scUltimateMirror\\scUltimateMirror.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "533240ff-5565-41cc-ac8f-63b214c10180",
+            "Value": {
+                "id": "504ff740-6b14-42c5-b48e-5b221ada53b1",
+                "resourcePath": "objects\\oTips\\oTips.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1042,7 +1050,7 @@
             "Key": "629e7bea-6edd-4695-8e76-70aed14f0001",
             "Value": {
                 "id": "34655e62-273d-4554-aa9b-7c846ae13cbf",
-                "resourcePath": "scripts\\change_window_mode\\change_window_mode.yy",
+                "resourcePath": "scripts\\scUIToggleFullscreen\\scUIToggleFullscreen.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1122,7 +1130,7 @@
             "Key": "6c94f478-e681-4d26-bb6c-476da0da1b53",
             "Value": {
                 "id": "9c234ef3-ef88-49f5-96e7-f3f307c545d1",
-                "resourcePath": "scripts\\quit_game\\quit_game.yy",
+                "resourcePath": "scripts\\scUIQuitGame\\scUIQuitGame.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1882,7 +1890,7 @@
             "Key": "af1bfdd2-1334-40aa-8444-ddb713405383",
             "Value": {
                 "id": "ff5f877f-c747-42ac-98e4-2f3313a3f726",
-                "resourcePath": "scripts\\resume_game\\resume_game.yy",
+                "resourcePath": "scripts\\scUIResumeGame\\scUIResumeGame.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2036,6 +2044,14 @@
                 "id": "4d8b973f-be3b-4800-8e36-0eabf87f46a7",
                 "resourcePath": "views\\bbd418f2-61ec-4512-8dee-f3c1bb07ab1f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bc52f200-8726-4ff9-ad86-55bb3c461b15",
+            "Value": {
+                "id": "2c2b78c9-d020-4c89-9c35-cbf539daa78f",
+                "resourcePath": "scripts\\scUIResetKeybinds\\scUIResetKeybinds.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2707,6 +2723,7 @@
         "4feff080-c2ca-471c-a07b-d3e79032357b",
         "af1bfdd2-1334-40aa-8444-ddb713405383",
         "6c94f478-e681-4d26-bb6c-476da0da1b53",
+        "bc52f200-8726-4ff9-ad86-55bb3c461b15",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",

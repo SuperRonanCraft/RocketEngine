@@ -9,7 +9,8 @@
         "629e7bea-6edd-4695-8e76-70aed14f0001",
         "4feff080-c2ca-471c-a07b-d3e79032357b",
         "af1bfdd2-1334-40aa-8444-ddb713405383",
-        "6c94f478-e681-4d26-bb6c-476da0da1b53"
+        "6c94f478-e681-4d26-bb6c-476da0da1b53",
+        "bc52f200-8726-4ff9-ad86-55bb3c461b15"
     ],
     "filterType": "GMScript",
     "folderName": "UserInterface",

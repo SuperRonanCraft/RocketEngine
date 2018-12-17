@@ -23,7 +23,7 @@ for (var hei = 0; hei < h; hei++) {
 					for (var i = 0; i < ds_list_size(tile_list); i++) {
 						var map = tile_list[| i]
 						if (map[? "x"] == mx && map[? "y"] == my) {
-							map[? "timer"] = tile_timer; break;
+							map[? "timer"] = tile_timer + irandom_range(tile_timer_randomize, -tile_timer_randomize); break;
 						}
 					}
 				} else {
@@ -31,7 +31,7 @@ for (var hei = 0; hei < h; hei++) {
 					ds_map_add(map, "x", mx);
 					ds_map_add(map, "y", my);
 					ds_map_add(map, "index", index);
-					ds_map_add(map, "timer", tile_timer);
+					ds_map_add(map, "timer", tile_timer + irandom_range(tile_timer_randomize, -tile_timer_randomize));
 					ds_list_add(tile_list, map);
 					tilemap_set(map_id, tile_set_empty(data), mx, my);
 					tilemap_set(tile_map, index, mx, my);

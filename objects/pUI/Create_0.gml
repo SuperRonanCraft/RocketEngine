@@ -6,6 +6,7 @@ enum menu_page {
 	settings,
 	audio,
 	graphics,
+	keybinds, keybinds2,
 	controls,
 	rocketinfo,
 	rocketbuffs,
@@ -30,30 +31,32 @@ enum menu_element_type {
 	goto_room,
 	//List all rockets
 	rocket_list,
-	rocket_buffs
+	rocket_buffs,
+	//Controls page
+	controls
 }
 
 //Default Menus
-ds_settings = scCreateMenuPage(
+ds_settings = scUICreateMenuPage(
 	["AUDIO",			menu_element_type.page_transfer,	menu_page.audio],
 	["GRAPHICS",		menu_element_type.page_transfer,	menu_page.graphics],
-	["CONTROLS",		menu_element_type.page_transfer,	menu_page.controls],
+	["KEYBINDS",		menu_element_type.page_transfer,	menu_page.keybinds],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
 );
 
-ds_menu_audio = scCreateMenuPage(
-	["MASTER",			menu_element_type.slider,			change_volume,		"vol_master",	global.vol_master],
-	["SOUNDS",			menu_element_type.slider,			change_volume,		"vol_sounds",	global.vol_sounds],
-	["MUSIC",			menu_element_type.slider,			change_volume,		"vol_music",	global.vol_music],
+ds_menu_audio = scUICreateMenuPage(
+	["MASTER",			menu_element_type.slider,			scUIChangeVolume,		"vol_master",	global.vol_master],
+	["SOUNDS",			menu_element_type.slider,			scUIChangeVolume,		"vol_sounds",	global.vol_sounds],
+	["MUSIC",			menu_element_type.slider,			scUIChangeVolume,		"vol_music",	global.vol_music],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
-ds_menu_graphics = scCreateMenuPage(
-	["FULLSCREEN",		menu_element_type.toggle,			change_window_mode,	"fullscreen",	global.fullscreen],
+ds_menu_graphics = scUICreateMenuPage(
+	["FULLSCREEN",		menu_element_type.toggle,			scUIToggleFullscreen,	"fullscreen",	global.fullscreen],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
-ds_menu_controls = scCreateMenuPage(
+ds_menu_keybinds = scUICreateMenuPage(
 	["JUMP P1",			menu_element_type.input,			"key_p1_jump",		global.key_p1_jump],
 	["LEFT P1",			menu_element_type.input,			"key_p1_left",		global.key_p1_left],
 	["RIGHT P1",		menu_element_type.input,			"key_p1_right",		global.key_p1_right],
@@ -62,6 +65,7 @@ ds_menu_controls = scCreateMenuPage(
 	["LEFT P2",			menu_element_type.input,			"key_p2_left",		global.key_p2_left],
 	["RIGHT P2",		menu_element_type.input,			"key_p2_right",		global.key_p2_right],
 	["SHOOT P2",		menu_element_type.input,			"key_p2_shoot",		global.key_p2_shoot],
+	["RESET KEYS",		menu_element_type.script_runner,	scUIResetKeybinds],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
@@ -95,6 +99,11 @@ start_y = 0;
 start_x = 0;
 //Is the current menu unfolding? Will lock mouse control
 unfolding = true;
+//Ignore specific menu elements from being selected
+menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls];
+menu_special_start_y = [RES_H / 4 + RES_H / 2, RES_H / 4 + RES_H / 2 - RES_H / 16, RES_H / 4 + RES_H / 2];
+//Update keybinds for players?
+keys_update = false;
 
 ///Default things
 depth -= 1;

@@ -15,7 +15,8 @@ if (unfolding && menu_pages_index[page] == menu_page.main) {
 		unfolding = true;
 	} else { //Stop the event and allow mouse control
 		unfolding = false;
-		menu_option[page] = 0;
+		if (menu_option[page] == -1)
+			menu_option[page] = 0;
 	}
 } else
 	unfolding = false;

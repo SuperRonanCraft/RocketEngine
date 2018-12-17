@@ -5,4 +5,6 @@ instance_deactivate_all(true);
 instance_activate_object(oTransition);
 instance_activate_object(oUIPause);
 instance_activate_object(oMusic);
+instance_activate_object(oTips);
 global.pause = true;
+global.play = false;

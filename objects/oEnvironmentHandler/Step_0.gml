@@ -10,8 +10,8 @@ for (var i = index; i < ds_list_size(tile_list); i++) {
 		var mx = map[? "x"];
 		var my = map[? "y"];
 		//Set the tile back to normal
-		tilemap_set(map_id, map[? "index"], mx, my);
-		tilemap_set(tile_map, 0, mx, my);
+		tilemap_set(map_id, map[? "index"], mx, my); //Normal tilemap
+		tilemap_set(tile_map, 0, mx, my); //Damage tilemap
 		ds_map_destroy(map); //Delete the map from memory
 		ds_list_delete(tile_list, index); //Remove the tile from the list
 	} else {

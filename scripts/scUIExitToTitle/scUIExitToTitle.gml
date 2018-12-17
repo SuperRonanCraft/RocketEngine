@@ -1,2 +1,2 @@
-resume_game();
+scUIResumeGame();
 SlideTransition(TRANS_MODE.RESTART);

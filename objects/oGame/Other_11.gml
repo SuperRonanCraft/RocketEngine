@@ -4,3 +4,4 @@ sprite_delete(background);
 background = noone;
 instance_activate_all();
 global.pause = false;
+global.play = true;
