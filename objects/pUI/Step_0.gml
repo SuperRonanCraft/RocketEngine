@@ -3,9 +3,8 @@ else event_user(0); //Reload global vars
 
 event_user(1); //Unfolding event
 
-var key_up = keyboard_check_pressed(vk_up);
-var key_down = keyboard_check_pressed(vk_down);
-var key_enter = keyboard_check_released(vk_enter) || mouse_check_button_released(mb_left);
+var key_up = keyboard_check_pressed(vk_up), key_down = keyboard_check_pressed(vk_down);
+var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left);
 
 //Grid that we are checking based off the page we are on
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
@@ -73,46 +72,41 @@ if (inputting) { //Are we inputting data?
 	var ochange = key_down - key_up;
 	if (ochange != 0) {
 		var newoption = menu_option[page] + ochange;
-		if (newoption > ds_height - 1)
-			newoption = 0;
-		else if (newoption < 0)
-			newoption = ds_height - 1;
+		if (newoption > ds_height - 1) newoption = 0;
+		else if (newoption < 0) newoption = ds_height - 1;
+		//Ignore special menu elements
 		for (var i = 0; i < array_length_1d(menu_special); i++)
-			if (ds_grid[# 1, newoption] == menu_special[i]) { //Ignore this element
-				if (ochange < 0)
-					newoption = ds_height - 1;
-				else
-					newoption += 1;
+			if (ds_grid[# 1, newoption] == menu_special[i]) { //Ignore this element, change the option
+				if (ochange < 0) newoption = ds_height - 1;
+				else newoption += 1;
 				break;
 			}
-		if (menu_option[page] != newoption) { //Not on the same selection
+		if (newoption != menu_option[page] ) { //Not on the same selection
 			menu_option[page] = newoption;
 			audio_play_sound(SOUND.UI_HOVER, 5, false);
 		}
-	} else if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old)) { //Not unfolding and mouse is moving
+	}
+	//Mouse Support
+	else if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old)) { //Not unfolding and mouse is moving
 		mouse_x_old = device_mouse_x_to_gui(0);
 		mouse_y_old = device_mouse_y_to_gui(0);
-		var newoption = menu_option[page];
+		var newoption = -1; //-1 means no option
 		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 			var yoffset = (y_buffer / 3), ycheck = i * y_buffer, ignore = false;
 			for (var a = 0; a < array_length_1d(menu_special); a++)
 				if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Ignore this element
 			if (!ignore && mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
-				newoption = i;
-				break;
-			} else
-				newoption = -1;
+				newoption = i; break;} //Set the new option, break away
 		}
-		if (newoption != menu_option[page]) { //New selection
+		if (newoption != menu_option[page]) { //Not on the same selection
 			menu_option[page] = newoption;
-			if (newoption != -1)
-				audio_play_sound(SOUND.UI_HOVER, 5, false);
+			if (newoption != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);
 		}
 	}
 }
 
-//If Enter or Left-Clicking (both are set as enter) and we have a selection, execute the action
-if (key_enter && menu_option[page] != -1) {
+//If Enter or Left-Clicking and we have a selection, execute the action
+if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.script_runner: //Run a script when selecting
 			script_execute(ds_grid[# 2, menu_option[page]]); break;
@@ -121,7 +115,7 @@ if (key_enter && menu_option[page] != -1) {
 		case menu_element_type.page_transfer: //Change the page
 			for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
 				if (menu_pages_index[i] != ds_grid[# 2, menu_option[page]]) continue; 
-				page = i; break; }
+				page = i; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse Was used to enter
 			break;
 		//Input elements
 		case menu_element_type.slider: //If its a slider and confirming

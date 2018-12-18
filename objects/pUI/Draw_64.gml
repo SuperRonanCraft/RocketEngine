@@ -1,28 +1,45 @@
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
-start_y = (RES_H / 2) - (((ds_height - 1) / 2) * y_buffer);
-start_x = RES_W / 2;
+var workingon = page_workingon;
+if (workingon != page) { //Only update once per page change
+	start_y = (RES_H / 2) - (((ds_height - 1) / 2) * y_buffer);
+	start_x = RES_W / 2;
+	page_workingon = page;
+}
 //Make the back button for rocket list/buffs to spawn lower than normal
 for (var i = 0; i < array_length_1d(menu_special); i++)
 	if (ds_grid[# 1, 0] == menu_special[i]) {start_y = menu_special_start_y[i]; break;}
 
-// Draw left
-var ltx = start_x - x_buffer, lty, xo, scale;
-var i = 0;
 var centered = false;
-	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
-		if (menu_pages[page] == menu_pages_centered[i])
-			centered = true;
-			
+for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+	if (menu_pages[page] == menu_pages_centered[i])
+		centered = true;
+
+//Scales
+if (workingon == page) {
+	for (var i = 0; i < ds_height; i++)
+		if (i == menu_option[page])
+			scale_option[i] = min(scale_option[i] + scale_change, scale_main_hovering);
+		else
+			scale_option[i] = max(scale_option[i] - scale_change, scale_main);
+} else {
+	scale_option = 0;
+	for (var i = 0; i < ds_height; i++)
+		scale_option[i] = scale_main;
+}
+
+var ltx = start_x - x_buffer, lty, xo, scale; //left-Xpos, left-Ypos, x-offset, text scale
+// Draw left
 for (var i = 0; i < ds_height; i++) {
-	var c_main = color_main, scale = scale_main;
+	var c_main = color_main, scale = scale_option[i];
+	var yy = start_y;
 	//Slowly move into the screen
-	if (animated && menu_pages_index[page] == menu_page.main)
-		start_y += (RES_H / 2 * (1 - unfold[i]));
 	lty = start_y + (i * y_buffer);
+	if (animated && menu_pages_index[page] == menu_page.main)
+		lty += (RES_H / 2 * (1 - unfold[i]));
 	xo = 0;
 	if (i == menu_option[page]) {
 		c_main = color_main_hovering;
-		scale = scale_main_hovering;
+		//scale = scale_main_hovering;
 		xo = -(x_buffer / 2);
 	}
 	scDrawText(centered ? start_x : (ltx + xo), lty, ds_grid[# 0, i], c_main, scale, noone, noone, centered ? fa_middle : fa_right);
@@ -33,7 +50,7 @@ if (!centered)
 	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 3, color_seperator, color_seperator);
 
 // Draw right
-var rtx = start_x + x_buffer, rty;
+var rtx = start_x + x_buffer, rty; //right-Xpos, right-Ypos
 for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current page
 	rty = start_y + (i * y_buffer);
 	switch (ds_grid[# 1, i]) {
@@ -141,12 +158,15 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					}
 					var btn_x = (a == 0 ? btn_x : btn_x + RES_W / 2);
 					draw_roundrect_color_ext(btn_x + width, btn_y + width, btn_x - width, btn_y - width, rad, rad, c_black, c_black, true);
-					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, 0.65); //Button text
+					var scale = 0.65;
+					if (keyboard_check(btn)) scale = 0.8; //Scale up if pressing button
+					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, scale); //Button text
 					scDrawText(btn_x, btn_y - width - 10, btn_reason, color_element, 0.7); //Button reason
 				}
 			}
 			//Ultimates
-			for (var a = 0; a < 2; a++) //Player ids
+			for (var a = 0; a < 2; a++) { //Player ids
+				var prev = false;
 				for (var i = 0; i < 2; i++) { //Amount of btns
 					switch (i) { //Which btn to work on
 						case 0: btn_x = left_x + width; btn_y = left_y + 150; break;
@@ -156,13 +176,16 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					switch (i) { //Which keybind
 						case 0: btn = (a == 0 ? global.key_p1_left : global.key_p2_left); break;
 						case 1: btn = (a == 0 ? global.key_p1_right : global.key_p2_right); break;}
-					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, 0.65); //Ult buttons
-					if (i == 0) { //Draw once per player
+					var scale = 0.65;
+					if (keyboard_check(btn)) {scale = 0.8; if (i == 0) prev = true;}
+					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, scale); //Ult buttons
+					if (i == 1) { //Draw once per player on the last button
 						btn_x = (a == 0 ? down_x : down_x + RES_W / 2)
 						scDrawText(btn_x, btn_y - 50, "ULTIMATE", color_element, ); //Ult text
-						scDrawText(btn_x, btn_y, "+", color_element_input, 0.65); //Plus text
+						scDrawText(btn_x, btn_y, "+", color_element_input, prev ? scale : 0.65); //Plus text
 					}
 				}
+			}
 			break;
 	}
 }

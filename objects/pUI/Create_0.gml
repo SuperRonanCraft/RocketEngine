@@ -72,19 +72,19 @@ ds_menu_keybinds = scUICreateMenuPage(
 ///Menu settings
 //The page we are on
 page = 0;
-//The option we have selected in a page
+//The option we have selected in a page (array)
 menu_option = 0;
-//All the pages we have loaded in a ui
+//All the pages we have loaded in a ui (array)
 menu_pages = 0;
-//The enum id of each page
-menu_pages_index = 0
-//All the pages we want centered (should only be a 'script_runner', 'page_transfer' or 'goto_room')
+//The enum id of each page (array)
+menu_pages_index = 0;
+//All the pages we want centered (should only include 'script_runner', 'page_transfer' or 'goto_room' elements)
 menu_pages_centered = 0;
-//If we are inputting values 'slider', 'shift', ;toggle' or 'input')
+//If we are inputting values 'slider', 'shift', 'toggle' or 'input')
 inputting = false;
 //If we have refreshed the values to global values, such as the keybinds, resolution and volume
 checked = false;
-//Enable manipulating the menu
+//Enable manipulating the menu (must always be true by default)
 control = true;
 
 ///Mouse control
@@ -111,6 +111,8 @@ scale_main_hovering = 1.2;
 scale_comment = 0.45;
 scale_element = 0.6;
 scale_description = 0.45;
+scale_option = noone; //An array of scales
+scale_change = 0.05;
 
 //Sizes
 slider_width = 128;
@@ -122,6 +124,9 @@ color_element = c_ltgray;
 color_element_input = c_yellow;
 color_element_input_unselected = c_black;
 color_seperator = c_black;
+
+//Used for scaling and knowing if we should work on a new pages variables
+page_workingon = noone;
 
 ///Default things
 depth -= 1;
