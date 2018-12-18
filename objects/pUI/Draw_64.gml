@@ -83,6 +83,8 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
+		case menu_element_type.script_runner:
+			if (ds_grid[# 3, i] == 0) break; //No text option
 		case menu_element_type.goto_room:
 			var string_val = ds_grid[# 3, i];
 			scDrawText(start_x, rty + 25, string_val, color_element, scale_description); //Description of button

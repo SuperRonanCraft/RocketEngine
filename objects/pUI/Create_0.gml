@@ -10,6 +10,7 @@ enum menu_page {
 	controls,
 	rocketinfo,
 	rocketbuffs,
+	confirm,
 	height
 }
 
