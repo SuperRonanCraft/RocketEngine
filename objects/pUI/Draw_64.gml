@@ -1,18 +1,21 @@
-var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
-var workingon = page_workingon;
+/// @desc Draw all element types
+
+//Grid values, grid length, page we're working on
+var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid), workingon = page_workingon;
 if (workingon != page) { //Only update once per page change
 	start_y = (RES_H / 2) - (((ds_height - 1) / 2) * y_buffer);
 	start_x = RES_W / 2;
 	page_workingon = page;
+	var centering = false;
+	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+		if (menu_pages[page] == menu_pages_centered[i])
+			centering = true;
+	centered = centering;
 }
-//Make the back button for rocket list/buffs to spawn lower than normal
+
+//Make the buttons for special menus to spawn lower than normal
 for (var i = 0; i < array_length_1d(menu_special); i++)
 	if (ds_grid[# 1, 0] == menu_special[i]) {start_y = menu_special_start_y[i]; break;}
-
-var centered = false;
-for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
-	if (menu_pages[page] == menu_pages_centered[i])
-		centered = true;
 
 //Scales
 if (workingon == page) {
@@ -22,32 +25,24 @@ if (workingon == page) {
 		else
 			scale_option[i] = max(scale_option[i] - scale_change, scale_main);
 } else {
-	scale_option = 0;
+	scale_option = 0; //Reset array
 	for (var i = 0; i < ds_height; i++)
-		scale_option[i] = scale_main;
+		scale_option[i] = scale_main; //Set default size for option
 }
 
-var ltx = start_x - x_buffer, lty, xo, scale; //left-Xpos, left-Ypos, x-offset, text scale
 // Draw left
 for (var i = 0; i < ds_height; i++) {
-	var c_main = color_main, scale = scale_option[i];
-	var yy = start_y;
-	//Slowly move into the screen
-	lty = start_y + (i * y_buffer);
+	//Color, Scale, Y-pos, X-offset
+	var c_main = color_main, scale = scale_option[i], lty = start_y + (i * y_buffer), xo = 0;
 	if (animated && menu_pages_index[page] == menu_page.main)
 		lty += (RES_H / 2 * (1 - unfold[i]));
-	xo = 0;
-	if (i == menu_option[page]) {
-		c_main = color_main_hovering;
-		//scale = scale_main_hovering;
-		xo = -(x_buffer / 2);
-	}
-	scDrawText(centered ? start_x : (ltx + xo), lty, ds_grid[# 0, i], c_main, scale, noone, noone, centered ? fa_middle : fa_right);
+	if (i == menu_option[page]) {c_main = color_main_hovering; xo = -(x_buffer / 2);}
+	scDrawText(centered ? start_x : (start_x - x_buffer + xo), lty, ds_grid[# 0, i], c_main, scale, noone, noone, centered ? fa_middle : fa_right);
 }
 
 // Draw center line
 if (!centered) 
-	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 3, color_seperator, color_seperator);
+	draw_line_width_color(start_x, start_y - y_buffer, start_x, (start_y + (ds_height * y_buffer)) + y_buffer, 3, color_seperator, color_seperator);
 
 // Draw right
 var rtx = start_x + x_buffer, rty; //right-Xpos, right-Ypos

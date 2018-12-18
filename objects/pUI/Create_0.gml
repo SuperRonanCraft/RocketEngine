@@ -128,6 +128,7 @@ color_seperator = c_black;
 
 //Used for scaling and knowing if we should work on a new pages variables
 page_workingon = noone;
+centered = true; //Is the whole page centered?
 
 ///Default things
 depth -= 1;

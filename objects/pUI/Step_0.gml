@@ -92,11 +92,13 @@ if (inputting) { //Are we inputting data?
 		mouse_y_old = device_mouse_y_to_gui(0);
 		var newoption = -1; //-1 means no option
 		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
-			var yoffset = (y_buffer / 3), ycheck = i * y_buffer, ignore = false;
+			var yoffset = (y_buffer / 3), ycheck = i * y_buffer, ignore = false, xoffset = string_width(ds_grid[# 0, i]) * scale_main_hovering;
 			for (var a = 0; a < array_length_1d(menu_special); a++)
 				if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Ignore this element
-			if (!ignore && mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) {
-				newoption = i; break;} //Set the new option, break away
+			if (!ignore && mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) //Y-Check
+				if (mouse_x_old > (centered ? start_x - (xoffset / 2) : start_x - x_buffer - xoffset - (x_buffer / 2)) //X-Check
+					&& mouse_x_old < (centered ? start_x + (xoffset / 2) : start_x - x_buffer)) {
+					newoption = i; break;} //Set the new option, break away
 		}
 		if (newoption != menu_option[page]) { //Not on the same selection
 			menu_option[page] = newoption;
@@ -124,8 +126,7 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 			if (inputting) { script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 				variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]); }
 		case menu_element_type.input: //Simply inputting a character
-			inputting = !inputting;
-			break;
+			inputting = !inputting; break;
 	}
 	audio_play_sound(SOUND.UI_SELECT, 5, false); //Confirm sound
 }

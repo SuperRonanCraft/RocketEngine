@@ -7,7 +7,7 @@ ds_menu_main = scUICreateMenuPage(
 );
 
 ds_confirm = scUICreateMenuPage(
-	["CONFIRM",		menu_element_type.script_runner,	scUIExitToTitle, "Are you sure?"], //Only script that has text
+	["CONFIRM",		menu_element_type.script_runner,	scUIExitToTitle, "Are you sure?"], //Only script that has text input
 	["CANCEL",		menu_element_type.page_transfer,	menu_page.main],
 );
 
@@ -20,7 +20,8 @@ menu_pages_centered = [ds_menu_main, ds_confirm, ds_settings];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	menu_option[i] = 0;
-depth -= 1;
+
+depth -= 1; //Draw in front of transition
 
 //Disabled unfolding
 unfolding = false;
