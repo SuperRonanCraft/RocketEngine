@@ -2,7 +2,7 @@
     "id": "6bf38d94-b56d-4cee-85ed-cd7081e4edeb",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oStageSButtonB",
+    "name": "oStageSButtonBack",
     "eventList": [
         {
             "id": "b142e311-78be-46f1-97fb-b291e305d942",

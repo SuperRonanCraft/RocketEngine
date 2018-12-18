@@ -751,6 +751,14 @@
             }
         },
         {
+            "Key": "4b1d6d73-1bb0-4ce9-aee2-ac47162ecbf6",
+            "Value": {
+                "id": "2829db37-f7cf-49f7-aca7-79b66751e846",
+                "resourcePath": "sprites\\sSelectButtonBack\\sSelectButtonBack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4b6f8e82-b26a-4d72-9b6f-f70dc68dfa01",
             "Value": {
                 "id": "02e5a3f2-3f25-4fce-a164-37cb1589e5f9",
@@ -1122,7 +1130,7 @@
             "Key": "6bf38d94-b56d-4cee-85ed-cd7081e4edeb",
             "Value": {
                 "id": "45754016-222f-43b5-9127-5558b8ace9f7",
-                "resourcePath": "objects\\oStageSButtonB\\oStageSButtonB.yy",
+                "resourcePath": "objects\\oStageSButtonBack\\oStageSButtonBack.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2282,7 +2290,7 @@
             "Key": "d1277ff7-864c-4427-885e-f243f99febfb",
             "Value": {
                 "id": "b71fb68d-c3c8-407c-969f-7d8f6366ae5a",
-                "resourcePath": "sprites\\sSelectButton\\sSelectButton.yy",
+                "resourcePath": "sprites\\sSelectButtonNext\\sSelectButtonNext.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2490,7 +2498,7 @@
             "Key": "ec83a333-8351-4303-a669-d76f5b8d237a",
             "Value": {
                 "id": "10bbfc0c-9a62-49fb-a55e-81403a726938",
-                "resourcePath": "sprites\\sSelectButtonB\\sSelectButtonB.yy",
+                "resourcePath": "sprites\\sSelectButtonPrev\\sSelectButtonPrev.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -16,3 +16,6 @@ switch (room) {
 	case rKnockOutSelect: global.gamemode = global.gamemodes[GAMEMODE.KNOCKOUT]; break;
 	case rNukemSelect: global.gamemode = global.gamemodes[GAMEMODE.NUKED]; break;
 }
+
+xx = RES_W / 2;
+yy = RES_H / 4;
