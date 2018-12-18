@@ -5,85 +5,73 @@ start_x = RES_W / 2;
 for (var i = 0; i < array_length_1d(menu_special); i++)
 	if (ds_grid[# 1, 0] == menu_special[i]) {start_y = menu_special_start_y[i]; break;}
 
-var c = c_black;
 // Draw left
 var ltx = start_x - x_buffer, lty, xo, scale;
-var yy = 0;
+var i = 0;
 var centered = false;
 	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
 		if (menu_pages[page] == menu_pages_centered[i])
 			centered = true;
-repeat (ds_height) {
-	var c3 = c_gray;
-	scale = 1;
+			
+for (var i = 0; i < ds_height; i++) {
+	var c_main = color_main, scale = scale_main;
 	//Slowly move into the screen
 	if (animated && menu_pages_index[page] == menu_page.main)
-		start_y += (RES_H / 2 * (1 - unfold[yy]));
-	lty = start_y + (yy * y_buffer);
+		start_y += (RES_H / 2 * (1 - unfold[i]));
+	lty = start_y + (i * y_buffer);
 	xo = 0;
-	if (yy == menu_option[page]) {
-		c3 = c_orange;
-		scale = 1.2;
+	if (i == menu_option[page]) {
+		c_main = color_main_hovering;
+		scale = scale_main_hovering;
 		xo = -(x_buffer / 2);
 	}
-	scDrawText(centered ? start_x : (ltx + xo), lty, ds_grid[# 0, yy], c3, scale, noone, noone, centered ? fa_middle : fa_right);
-	yy++;
+	scDrawText(centered ? start_x : (ltx + xo), lty, ds_grid[# 0, i], c_main, scale, noone, noone, centered ? fa_middle : fa_right);
 }
 
 // Draw center line
 if (!centered) 
-	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 3, c, c);
+	draw_line_width_color(start_x, start_y - y_buffer, start_x, lty + y_buffer, 3, color_seperator, color_seperator);
 
 // Draw right
 var rtx = start_x + x_buffer, rty;
-yy = 0;
-repeat (ds_height) { //Iterate through each grid of the current page
-	rty = start_y + (yy * y_buffer);
-	switch (ds_grid[# 1, yy]) {
+for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current page
+	rty = start_y + (i * y_buffer);
+	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift:
-			var current_val = ds_grid[# 3, yy];
-			var current_array = ds_grid[# 4, yy];
-			var left_shift = "<< ";
-			var right_shift = " >>";
+			var current_val = ds_grid[# 3, i], current_array = ds_grid[# 4, i], c = color_element;
+			var left_shift = "<< ", right_shift = " >>";
 			if (current_val == 0) left_shift = "";
-			else if (current_val == array_length_1d(ds_grid[# 4, yy]) - 1) right_shift = "";
-			c = c_ltgray;
-			c2 = c_black;
-			if (inputting && yy == menu_option[page]) c = c_yellow;
-			scDrawText(rtx, rty, left_shift + current_array[current_val] + right_shift, c2, 0.6, noone, noone, fa_left);
+			else if (current_val == array_length_1d(ds_grid[# 4, i]) - 1) right_shift = "";
+			if (inputting && i == menu_option[page]) c = color_element_input;
+			scDrawText(rtx, rty, left_shift + current_array[current_val] + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
-			var len = 128;
-			var circle_pos = ds_grid[# 4, yy];
-			c = c_ltgray;
-			if (inputting && yy == menu_option[page]) c = c_yellow;
+			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
+			if (inputting && i == menu_option[page]) c = c_yellow;
 			draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
 			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
-			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, 0.6, noone, noone, fa_left);
+			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.toggle:
-			var current_val = ds_grid[# 4, yy];
-			var c1, c2, c = c_ltgray;
-			if (inputting && yy == menu_option[page]) c = c_yellow;
-			if (current_val == 1) { c1 = c; c2 = c_dkgray;
-			} else { c1 = c_dkgray; c2 = c;}
-			scDrawText(rtx, rty, "ON", c1, 0.6, noone, noone, fa_left);
-			scDrawText(rtx + 96 , rty, "OFF", c2, 0.6, noone, noone, fa_left);
+			var current_val = ds_grid[# 4, i];
+			var c1, c2, c = color_element;
+			if (inputting && i == menu_option[page]) c = color_element_input;
+			if (current_val == 1) { c1 = c; c2 = color_element_input_unselected;
+			} else { c1 = color_element_input_unselected; c2 = c;}
+			scDrawText(rtx, rty, "ON", c1, scale_element, noone, noone, fa_left);
+			scDrawText(rtx + 96 , rty, "OFF", c2, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.input:
-			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, yy]));
-			c = c_ltgray;
-			if (inputting && yy == menu_option[page]) { c = c_yellow; string_val = string(string_val) + " | Press any key!"}
-			scDrawText(rtx, rty, string_val, c, 0.6, noone, noone, fa_left);
+			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, i])), c = color_element;
+			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
+			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.goto_room:
-			var string_val = ds_grid[# 3, yy];
-			scDrawText(start_x, rty + 25, string_val, c_ltgray, 0.6); //Description of button
+			var string_val = ds_grid[# 3, i];
+			scDrawText(start_x, rty + 25, string_val, color_element, scale_description); //Description of button
 			break;
 		case menu_element_type.rocket_list:
-			var amt = ROCKET.LENGHT;
-			var columns = 4;
-			var offset = 0;
+			var amt = ROCKET.LENGHT, columns = 4, offset = 0;
 			for (var i = 1; i < amt; i++) {
 				var map = weapons[i];
 				if (!is_undefined(map[? ROCKET_MAP.ENABLED]) && !map[? ROCKET_MAP.ENABLED]) continue; //Is it disabled?
@@ -95,7 +83,7 @@ repeat (ds_height) { //Iterate through each grid of the current page
 				var buffs = map[? ROCKET_MAP.BUFF];
 				var rx = ((RES_W / 8) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
 				var ry = offset * 130 + 40;
-				scDrawText(rx, ry, name, c_ltgray, 0.6); //Rocket name
+				scDrawText(rx, ry, name, color_element, scale_element); //Rocket name
 				draw_sprite(spr, 0, rx, ry + 30); //Rocket icon
 				if (!is_undefined(buffs)) { //Rocket buffs if exists
 					var bamt = array_length_1d(buffs);
@@ -106,7 +94,7 @@ repeat (ds_height) { //Iterate through each grid of the current page
 						ds_map_destroy(map);
 					}
 				}
-				scDrawText(rx, ry + 60, desc, c_yellow, 0.45); //Rocket Description
+				scDrawText(rx, ry + 60, desc, color_element_input, scale_description); //Rocket Description
 				draw_line_width_color(rx - 64, ry + 106, rx + 64, ry + 106, 2, c_black, c_black);
 			}
 			break;
@@ -124,14 +112,14 @@ repeat (ds_height) { //Iterate through each grid of the current page
 				var part_amt = map[? BUFF_MAP.PARTICLE_AMT]; //Grab the amount of particles
 				var rx = ((RES_W / 4) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
 				var ry = offset * 150 + 10;
-				scDrawText(rx, ry, name, c_ltgray, 0.6); //Buff name
+				scDrawText(rx, ry, name, color_element, scale_element); //Buff name
 				//Particles
 				part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - (1*30), rx + (1*30),
 					ry - (1*10) + sprite_get_height(spr) + 20, ry + (1*10) + sprite_get_height(spr) + 20,
 					ps_shape_ellipse, ps_distr_gaussian)
 				part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
 				draw_sprite(spr, 0, rx - 32, ry + 20); //Buff icon
-				scDrawText(rx, ry + 110, desc, c_yellow, 0.45); //Buff description
+				scDrawText(rx, ry + 110, desc, color_element_input, 0.45); //Buff description
 				draw_line_width_color(rx - 64, ry + 122, rx + 64, ry + 122, 2, c_black, c_black); //Seperator line
 				ds_map_destroy(map);
 			}
@@ -143,7 +131,7 @@ repeat (ds_height) { //Iterate through each grid of the current page
 			var btn_x, btn_y, btn, btn_reason;
 			//Keybinds
 			for (var a = 0; a < 2; a++) { //Playerid
-				scDrawText(a == 0 ? up_x : up_x + RES_W / 2, up_y - width - 50, a == 0 ? "Player 1" : "Player 2", c_ltgray, 1); //Player side
+				scDrawText(a == 0 ? up_x : up_x + RES_W / 2, up_y - width - 50, a == 0 ? "Player 1" : "Player 2", color_element, scale_element); //Player side
 				for (var i = 0; i < 4; i++) { //Amount of btns
 					switch (i) { //btn x/y, reason and id
 						case 0: btn_x = up_x; btn_y = up_y; btn = (a == 0 ? global.key_p1_jump : global.key_p2_jump); btn_reason = "JUMP"; break;
@@ -153,8 +141,8 @@ repeat (ds_height) { //Iterate through each grid of the current page
 					}
 					var btn_x = (a == 0 ? btn_x : btn_x + RES_W / 2);
 					draw_roundrect_color_ext(btn_x + width, btn_y + width, btn_x - width, btn_y - width, rad, rad, c_black, c_black, true);
-					scDrawText(btn_x, btn_y, scKeyToString(btn), c_yellow, 0.8); //Button text
-					scDrawText(btn_x, btn_y - width - 10, btn_reason, c_ltgray, 0.85); //Button reason
+					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, 0.65); //Button text
+					scDrawText(btn_x, btn_y - width - 10, btn_reason, color_element, 0.7); //Button reason
 				}
 			}
 			//Ultimates
@@ -168,14 +156,13 @@ repeat (ds_height) { //Iterate through each grid of the current page
 					switch (i) { //Which keybind
 						case 0: btn = (a == 0 ? global.key_p1_left : global.key_p2_left); break;
 						case 1: btn = (a == 0 ? global.key_p1_right : global.key_p2_right); break;}
-					scDrawText(btn_x, btn_y, scKeyToString(btn), c_yellow, 0.8); //Ult buttons
+					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, 0.65); //Ult buttons
 					if (i == 0) { //Draw once per player
 						btn_x = (a == 0 ? down_x : down_x + RES_W / 2)
-						scDrawText(btn_x, btn_y - 50, "ULTIMATE", c_ltgray, 0.85); //Ult text
-						scDrawText(btn_x, btn_y, "+", c_yellow, 0.8); //Plus text
+						scDrawText(btn_x, btn_y - 50, "ULTIMATE", color_element, ); //Ult text
+						scDrawText(btn_x, btn_y, "+", color_element_input, 0.65); //Plus text
 					}
 				}
 			break;
 	}
-	yy++;
 }

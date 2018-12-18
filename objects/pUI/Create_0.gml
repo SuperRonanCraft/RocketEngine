@@ -91,8 +91,8 @@ control = true;
 mouse_x_old = device_mouse_x_to_gui(0);
 mouse_y_old = device_mouse_y_to_gui(0);
 //Spacing between buttons
-y_buffer = 64;
-//Spaving between left value, the center line and the right values (does not affect centered pages)
+y_buffer = 60;
+//Spacing between left value, the center line and the right values (does not affect centered pages)
 x_buffer = 32;
 //Updates on each page
 start_y = 0;
@@ -104,6 +104,24 @@ menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, m
 menu_special_start_y = [RES_H / 4 + RES_H / 2, RES_H / 4 + RES_H / 2 - RES_H / 16, RES_H / 4 + RES_H / 2];
 //Update keybinds for players?
 keys_update = false;
+
+//Scale types
+scale_main = 1;
+scale_main_hovering = 1.2;
+scale_comment = 0.45;
+scale_element = 0.6;
+scale_description = 0.45;
+
+//Sizes
+slider_width = 128;
+
+//Colors
+color_main = c_gray;
+color_main_hovering = c_orange;
+color_element = c_ltgray;
+color_element_input = c_yellow;
+color_element_input_unselected = c_black;
+color_seperator = c_black;
 
 ///Default things
 depth -= 1;

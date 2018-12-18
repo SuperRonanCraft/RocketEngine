@@ -48,7 +48,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = true;
 		break;
 	case BUFFTYPE.LOWGRAVITY:
-		ds_map[? BUFF_MAP.NAME] = "No  Gravity";
+		ds_map[? BUFF_MAP.NAME] = "No Gravity";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "You're a Wizard!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.LOWGRAVITY;
 		ds_map[? BUFF_MAP.STEP] = scBuffLowGravity;

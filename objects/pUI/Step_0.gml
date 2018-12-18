@@ -31,19 +31,15 @@ if (inputting) { //Are we inputting data?
 			if (hinput != 0) {
 				var val = ds_grid[# 4, menu_option[page]] + hinput * 0.01;
 				ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
-				mouse_moving = false;
 				break;
-			} else if (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) {
+			} else if ((device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) 
+					&& mouse_check_button(mb_right)) { //Must be pressing right to move slider
 				mouse_x_old = device_mouse_x_to_gui(0);
 				mouse_y_old = device_mouse_y_to_gui(0);
-				mouse_moving = true;
-			}
-			//Mouse support
-			if (mouse_moving && mouse_check_button(mb_right)) { //Must be pressing right to move slider
 				var xleft = start_x + x_buffer;
 				var ycheck = start_y + y_buffer * menu_option[page];
-				if (mouse_x_old > xleft - 10 && mouse_x_old < xleft + 138 && mouse_y_old > ycheck - 10 && mouse_y_old < ycheck + 10) {
-					var val = (mouse_x_old - xleft) / 128; //128 is the slider width, so we devide by it here
+				if (mouse_x_old > xleft - 10 && mouse_x_old < xleft + slider_width + 10 && mouse_y_old > ycheck - 10 && mouse_y_old < ycheck + 10) {
+					var val = (mouse_x_old - xleft) / slider_width;
 					ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
 				}
 			}
