@@ -24,7 +24,7 @@ if (workingon != page) {
 		start_x[i] = centered ? start_x_default : start_x_default - x_buffer;
 		if (is_array(ds_grid[# 0, i])) {
 			var arr = ds_grid[# 0, i];
-			var bffr = (x_buffer * 3)
+			var bffr = (x_buffer * 4)
 			switch (arr[1]) {
 				case menu_centered.left:
 					start_x[i] -= bffr; break;

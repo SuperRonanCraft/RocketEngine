@@ -17,6 +17,7 @@ scDrawText(RES_W / 2, 25, string(timer_current), c_black, 1, c_ltgray);
 //Game end draw events
 if (endgame) {
 	//Game has ended
+	event_inherited();
 	scDrawText(RES_W / 2, RES_H / 2, "GAME OVER!", c_red, 2);
 	if (endgame_delay <= 0) //When the game delay has been reached
 		event_user(4);

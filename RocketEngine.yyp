@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "04ba6bb7-3b41-41d0-9988-cdd122a80c2d",
+            "Value": {
+                "id": "7406627c-a5f2-4859-8816-1693a55f78c4",
+                "resourcePath": "scripts\\scStageRestart\\scStageRestart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "05ab479d-09ff-4f4e-8da7-1e019610271c",
             "Value": {
                 "id": "b3ab3f09-86d9-40cc-b7a3-58108ac49dca",
@@ -2803,6 +2811,7 @@
         "0b6a16fd-15b1-4137-8d3e-d13448a2a58c",
         "86fc6873-f622-4a82-8614-0ee8be27cb34",
         "0b798dda-53ea-4630-ae0b-d3f1f9f039df",
+        "04ba6bb7-3b41-41d0-9988-cdd122a80c2d",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",

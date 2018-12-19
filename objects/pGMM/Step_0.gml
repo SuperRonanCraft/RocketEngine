@@ -30,6 +30,7 @@ if (wait_timer_current >= 0) {
 //End of game event
 if (endgame) {
 	event_user(2);
+	event_inherited();
 	kick_timer_abs--;
 	if (kick_timer_abs mod room_speed == 0)
 		kick_timer--;

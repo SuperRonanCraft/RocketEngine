@@ -39,3 +39,30 @@ with (oMusic)
 kick_timer = 10; //Time is seconds
 kick_timer_abs = kick_timer * room_speed; //Absolute timer value
 kick_timer_display = 3; //Display timer after this index is met
+
+
+//--------------
+//User Interface
+//--------------
+
+event_inherited();
+
+ds_menu_main = scUICreateMenuPage(
+	["RESTART",		menu_element_type.script_runner,	scStageRestart],
+	["EXIT",		menu_element_type.goto_room,		global.gamemodeSRoom[gamemode]],
+);
+
+//Pages of the menu
+menu_pages = [ds_menu_main];
+//The page index values (must be in order)
+menu_pages_index = [menu_page.main];
+//Pages that are centered and have no input side
+menu_pages_centered = [ds_menu_main];
+
+for (var i = 0; i < array_length_1d(menu_pages); i++)
+	menu_option[i] = 0;
+
+start_y_default = RES_H - RES_H / 4;
+
+//Disabled unfolding
+unfolding = false;

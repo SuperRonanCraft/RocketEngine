@@ -2,4 +2,4 @@
 
 with (other)
 	if (hp > 0)
-		scHitShootable(other, false, false, 1);
+		scHitShootable(other, false, false, 1, true);

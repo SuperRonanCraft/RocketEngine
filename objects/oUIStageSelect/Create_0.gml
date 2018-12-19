@@ -27,8 +27,8 @@ event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
 	["CONFIRM",		menu_element_type.script_runner,	scStageConfirm],
-	[["PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-	[["NEXT", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
 	["BACK",		menu_element_type.page_transfer,	menu_page.confirm],
 );
 

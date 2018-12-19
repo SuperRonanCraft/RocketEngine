@@ -14,12 +14,15 @@ tip_enabled = true; //Hide the tip, but fade first
 alpha = 0; //Default alpha
 alpha_change = 0.05; //Amount of alpha to ease in/out
 scale = 0.5; //Text size
+color_title = c_gray; //Color of sprite titles
+color_text = c_white; //Color of normal text
 
 tip_list = scUICreateMenuPage(
 	[tip_element.sprite, sRocket_Homing, "HOMING ROCKET", "A menacing soft-lock rocket!"],
 	[tip_element.sprite, sHealth, "HEALTH PICKUPS", "Low on health?\nPickup an extra life!"],
 	[tip_element.text, "Remember to use your left and right\nkeys to fire up ultimates!"],
-)
+	[tip_element.text, "Gain more ULTIMATE charge by shooting\nthe enemy or grabbing a buff!"],
+);
 
 tip_current = irandom_range(0, ds_grid_height(tip_list) - 1); //Randomize the first tip
 
