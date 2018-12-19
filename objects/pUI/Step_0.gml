@@ -1,7 +1,5 @@
 if (!control) exit; //Set when we move to another room
-else event_user(0); //Reload global vars
-
-event_user(1); //Unfolding event
+else scUIReloadGlobal(); //Reload global vars
 
 var key_up = keyboard_check_pressed(vk_up), key_down = keyboard_check_pressed(vk_down);
 var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left);

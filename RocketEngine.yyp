@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "2c533d0b-af1d-444f-b4c9-2892f0e1535d",
+            "Value": {
+                "id": "b0bd1407-ecbc-4b3c-b35a-c6c7f89604e7",
+                "resourcePath": "scripts\\scMovementWave\\scMovementWave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2c8b4186-f3b4-43be-b61c-fd8b73e85cb3",
             "Value": {
                 "id": "b40dfc2b-6660-400c-b166-7317cf1b8cfc",
@@ -1815,6 +1823,14 @@
             }
         },
         {
+            "Key": "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
+            "Value": {
+                "id": "2465bbbc-8037-474a-81cd-c3ba35c8df90",
+                "resourcePath": "scripts\\scUIUnfold\\scUIUnfold.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
             "Value": {
                 "id": "812aca6b-08cb-467d-9098-54ac5c0607c1",
@@ -2076,6 +2092,14 @@
                 "id": "c9f82ff8-bdcf-4f79-a601-7a0404297c09",
                 "resourcePath": "notes\\How to create a Ultimate.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "b888dc2c-40b4-4802-b8db-4d8c9e60095c",
+            "Value": {
+                "id": "4d7ea996-a360-44b0-8d89-d69a2425f1db",
+                "resourcePath": "scripts\\scUIReloadGlobal\\scUIReloadGlobal.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2804,6 +2828,8 @@
         "af1bfdd2-1334-40aa-8444-ddb713405383",
         "6c94f478-e681-4d26-bb6c-476da0da1b53",
         "bc52f200-8726-4ff9-ad86-55bb3c461b15",
+        "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
+        "b888dc2c-40b4-4802-b8db-4d8c9e60095c",
         "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
         "8eac4b42-f5ef-476d-8ae2-c418564eb9a1",
         "6a122f33-5cba-4db2-abd9-22528acd5997",
@@ -2831,6 +2857,7 @@
         "ba2fd104-db50-45fd-a0a2-86b27ebc5fec",
         "093e6d59-2a90-4ecf-82d1-506fe0325e2d",
         "c00d9aec-4219-4441-8d7c-11b27b03bfd6",
+        "2c533d0b-af1d-444f-b4c9-2892f0e1535d",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",

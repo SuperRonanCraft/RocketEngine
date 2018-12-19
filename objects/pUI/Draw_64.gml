@@ -49,15 +49,15 @@ if (workingon != page) {
 			scale_option[i] = max(scale_option[i] - scale_change, scale_main);
 }
 
+scUIUnfold(); //Unfolding event
+
 // Draw left
 for (var i = 0; i < ds_height; i++) {
 	//Color, Scale, Y-pos, X-offset
-	var c_main = color_main, scale = scale_option[i], lty = start_y[i], xo = 0;
-	if (unfolding && menu_pages_index[page] == menu_page.main)
-		lty += (RES_H / 2 * (1 - unfold[i]));
-	if (i == menu_option[page]) {c_main = color_main_hovering; xo = -(x_buffer / 2);}
-	var text = ds_grid[# 0, i]
-	scDrawText(centered ? start_x[i] : start_x[i] + xo, lty, is_array(text) ? text[0] : text, c_main, scale, noone, noone, centered ? fa_middle : fa_right);
+	var c_main = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i];
+	if (unfolding) lty += (RES_H / 2 * (1 - unfold[i]));
+	if (i == menu_option[page]) {ltx += scMovementWave(-4, 4, 2, 0); c_main = color_main_hovering; xo = -(x_buffer / 2);}
+	scDrawText(centered ? ltx : ltx + xo, lty, is_array(text) ? text[0] : text, c_main, scale, noone, noone, centered ? fa_middle : fa_right);
 }
 
 // Draw center line

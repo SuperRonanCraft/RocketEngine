@@ -1,6 +1,6 @@
-/// @desc Update the global variables
+/// @desc reload the global variables of a menu
 
-if (checked) exit;
+if (checked) exit; //Do we need to check?
 
 for (var a = 0; a < array_length_1d(menu_pages); a++) {
 	var ds_g = menu_pages[a]; //Grab the grid
