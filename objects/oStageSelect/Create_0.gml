@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
-event_inherited();
 stages = 0;
 stage_on = 0;
 stage_on_current = stage_on;
@@ -19,3 +17,25 @@ switch (room) {
 
 xx = RES_W / 2;
 yy = RES_H / 4;
+
+
+//Load ui stuff
+event_inherited();
+
+ds_menu_main = scUICreateMenuPage(
+	["CONFIRM",		menu_element_type.script_runner,	scUIResumeGame],
+	["PREV",		menu_element_type.multiselect,		menu_page.settings],
+);
+
+//Pages of the menu
+menu_pages = [ds_menu_main];
+//The page index values (must be in order)
+menu_pages_index = [menu_page.main];
+//Pages that are centered and have no input side
+menu_pages_centered = [ds_menu_main];
+
+for (var i = 0; i < array_length_1d(menu_pages); i++)
+	menu_option[i] = 0;
+
+//Disabled unfolding
+unfolding = false;

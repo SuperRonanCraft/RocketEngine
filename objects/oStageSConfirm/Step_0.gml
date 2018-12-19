@@ -10,5 +10,5 @@ with (oStageSelect) {
 		other.selected = false;
 	//Check if selected, confirm selections
 	if (other.selected)
-		event_user(0);
+		event_user(2);
 }

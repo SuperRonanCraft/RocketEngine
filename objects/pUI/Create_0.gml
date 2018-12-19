@@ -34,7 +34,9 @@ enum menu_element_type {
 	rocket_list,
 	rocket_buffs,
 	//Controls page
-	controls
+	controls,
+	//Select from multiple options
+	multiselect
 }
 
 //Default Menus
@@ -124,6 +126,7 @@ color_main_hovering = c_orange;
 color_element = c_ltgray;
 color_element_input = c_yellow;
 color_element_input_unselected = c_black;
+color_element_special = c_gray;
 color_seperator = c_black;
 
 //Used for scaling and knowing if we should work on a new pages variables

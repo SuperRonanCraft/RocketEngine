@@ -4,7 +4,7 @@ ds_menu_main = scUICreateMenuPage(
 	["PLAY",		menu_element_type.page_transfer,	menu_page.gamemodes],
 	["SETTINGS",	menu_element_type.page_transfer,	menu_page.settings],
 	["INFO",		menu_element_type.page_transfer,	menu_page.rocketinfo],
-	["QUIT",		menu_element_type.script_runner,	scUIQuitGame],
+	["QUIT",		menu_element_type.page_transfer,	menu_page.confirm],
 );
 
 ds_gamemodes = scUICreateMenuPage(
@@ -38,6 +38,11 @@ ds_rocketbuffs = scUICreateMenuPage(
 	["BACK",	menu_element_type.page_transfer,	menu_page.rocketinfo],
 );
 
+ds_confirm = scUICreateMenuPage(
+	["CONFIRM",		menu_element_type.script_runner,	scUIQuitGame, "Are you sure?"], //Only script that has text input
+	["CANCEL",		menu_element_type.page_transfer,	menu_page.main],
+);
+
 //Same as normal keybinds, just set the back button to the controls page
 ds_keybinds2 = ds_grid_create(ds_grid_width(ds_menu_keybinds), ds_grid_height(ds_menu_keybinds));
 ds_grid_copy(ds_keybinds2, ds_menu_keybinds);
@@ -46,13 +51,13 @@ ds_keybinds2[# 2, ds_grid_height(ds_keybinds2) - 1] = menu_page.controls;
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics,
 	ds_menu_keybinds, ds_other_gamemodes, ds_rocketinfo, ds_controls, ds_rocketbuffs,
-	ds_keybinds2];
+	ds_keybinds2, ds_confirm];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
 	menu_page.keybinds, menu_page.more_gamemodes, menu_page.rocketinfo, menu_page.controls, menu_page.rocketbuffs,
-	menu_page.keybinds2];
+	menu_page.keybinds2, menu_page.confirm];
 //Pages that are centered and have no input side
-menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_rocketinfo, ds_rocketbuffs, ds_controls];
+menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	for (var a = 0; a < array_length_1d(menu_special); a++) {

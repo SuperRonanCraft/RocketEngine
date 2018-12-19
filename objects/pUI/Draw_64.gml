@@ -34,7 +34,7 @@ if (workingon == page) {
 for (var i = 0; i < ds_height; i++) {
 	//Color, Scale, Y-pos, X-offset
 	var c_main = color_main, scale = scale_option[i], lty = start_y + (i * y_buffer), xo = 0;
-	if (animated && menu_pages_index[page] == menu_page.main)
+	if (unfolding && menu_pages_index[page] == menu_page.main)
 		lty += (RES_H / 2 * (1 - unfold[i]));
 	if (i == menu_option[page]) {c_main = color_main_hovering; xo = -(x_buffer / 2);}
 	scDrawText(centered ? start_x : (start_x - x_buffer + xo), lty, ds_grid[# 0, i], c_main, scale, noone, noone, centered ? fa_middle : fa_right);
@@ -145,7 +145,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var btn_x, btn_y, btn, btn_reason;
 			//Keybinds
 			for (var a = 0; a < 2; a++) { //Playerid
-				scDrawText(a == 0 ? up_x : up_x + RES_W / 2, up_y - width - 50, a == 0 ? "Player 1" : "Player 2", color_element, scale_element); //Player side
+				scDrawText(a == 0 ? up_x : up_x + RES_W / 2, up_y - width - 50, a == 0 ? "Player 1" : "Player 2", color_element_special, scale_main); //Player side
 				for (var i = 0; i < 4; i++) { //Amount of btns
 					switch (i) { //btn x/y, reason and id
 						case 0: btn_x = up_x; btn_y = up_y; btn = (a == 0 ? global.key_p1_jump : global.key_p2_jump); btn_reason = "JUMP"; break;
@@ -178,7 +178,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, scale); //Ult buttons
 					if (i == 1) { //Draw once per player on the last button
 						btn_x = (a == 0 ? down_x : down_x + RES_W / 2)
-						scDrawText(btn_x, btn_y - 50, "ULTIMATE", color_element, ); //Ult text
+						scDrawText(btn_x, btn_y - 50, "ULTIMATE", color_element_special, scale_main); //Ult text
 						scDrawText(btn_x, btn_y, "+", color_element_input, prev ? scale : 0.65); //Plus text
 					}
 				}

@@ -5,8 +5,5 @@ view_h = camera_get_view_height(cam);
 xTo = xstart;
 yTo = ystart;
 
-/*
-shake_lenght = 0;
-shake_magnitude = 0;
-shake_remain = 0;
-*/
+// Inherit the parent event
+event_inherited();

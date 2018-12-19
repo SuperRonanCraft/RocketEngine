@@ -14,5 +14,5 @@ if (stage_on_current != stage_on) {
 	yTo = wp_map[? "y"];
 	stage_on_current = stage_on;
 } 
-// Inherit the parent event
+
 event_inherited();
