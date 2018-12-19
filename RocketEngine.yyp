@@ -143,6 +143,22 @@
             }
         },
         {
+            "Key": "0b6a16fd-15b1-4137-8d3e-d13448a2a58c",
+            "Value": {
+                "id": "ce9fc7ed-df0a-406b-96fe-2f6262d1c321",
+                "resourcePath": "scripts\\scStageConfirm\\scStageConfirm.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0b798dda-53ea-4630-ae0b-d3f1f9f039df",
+            "Value": {
+                "id": "8c30000f-4752-47a7-a08a-bb28be1251f6",
+                "resourcePath": "scripts\\scStageBack\\scStageBack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0c36d4b4-730f-4bba-b8a5-a713f04089dc",
             "Value": {
                 "id": "b2a5955f-1421-4e1c-805d-a38718788f4d",
@@ -1119,6 +1135,14 @@
             }
         },
         {
+            "Key": "6a122f33-5cba-4db2-abd9-22528acd5997",
+            "Value": {
+                "id": "8ed52d4b-0433-4ba4-8a26-e5f6a7cc8402",
+                "resourcePath": "scripts\\scMenuControls\\scMenuControls.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6a93ce55-0209-4047-baf0-4b4265f30278",
             "Value": {
                 "id": "11447bd5-adbb-4164-975d-437cf3c36f44",
@@ -1343,6 +1367,14 @@
             }
         },
         {
+            "Key": "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
+            "Value": {
+                "id": "48c3fb6a-6f45-48be-ae44-5e48e49ba897",
+                "resourcePath": "scripts\\scMenuRocketList\\scMenuRocketList.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "784a4a93-ac57-4b98-b80c-e12207fda320",
             "Value": {
                 "id": "5bb64ce7-81f5-4700-a858-85d7a95e5e7a",
@@ -1471,6 +1503,14 @@
             }
         },
         {
+            "Key": "86fc6873-f622-4a82-8614-0ee8be27cb34",
+            "Value": {
+                "id": "4f998afd-6971-4eb9-a5a9-b8ecaa40c006",
+                "resourcePath": "scripts\\scStageNext\\scStageNext.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "87277db2-23a9-4787-a0de-c145c35b9454",
             "Value": {
                 "id": "3a74ffcc-874b-4ced-80dd-f65d0687dce0",
@@ -1556,6 +1596,14 @@
                 "id": "766af5ff-62c0-4034-958b-6a42de954956",
                 "resourcePath": "sprites\\sRocket_Fire\\sRocket_Fire.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8eac4b42-f5ef-476d-8ae2-c418564eb9a1",
+            "Value": {
+                "id": "e03b8599-3a1f-4520-9b38-87d7f5ed443c",
+                "resourcePath": "scripts\\scMenuRocketBuffs\\scMenuRocketBuffs.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1732,6 +1780,14 @@
                 "id": "2abdaf02-1798-42c0-95ae-a361eae8a4fa",
                 "resourcePath": "sounds\\snUltimateShieldBreak\\snUltimateShieldBreak.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "9f9f6ac5-b899-4c62-812b-9c6165f073a6",
+            "Value": {
+                "id": "b38a9de5-d3ae-4f4c-85a2-0f98b452a87b",
+                "resourcePath": "scripts\\scStageChange\\scStageChange.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1954,7 +2010,7 @@
             "Key": "b2b4af88-61a3-4c16-8dd5-7c15a848ef6e",
             "Value": {
                 "id": "440e2c6a-36ea-49ed-887b-2a9884ecdf55",
-                "resourcePath": "objects\\oStageSelect\\oStageSelect.yy",
+                "resourcePath": "objects\\oUIStageSelect\\oUIStageSelect.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2111,6 +2167,14 @@
             }
         },
         {
+            "Key": "bfa1a57e-e2a7-437b-96c1-32a39495e76d",
+            "Value": {
+                "id": "9f6828fb-65e8-4ff0-a223-a08a4a5ce569",
+                "resourcePath": "views\\bfa1a57e-e2a7-437b-96c1-32a39495e76d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c00d9aec-4219-4441-8d7c-11b27b03bfd6",
             "Value": {
                 "id": "88dc10f3-55c7-4266-8276-7600ee0ceee5",
@@ -2180,14 +2244,6 @@
                 "id": "3de464a5-1dde-40b0-9344-ede059ce82a3",
                 "resourcePath": "views\\c52067ed-8fd0-4eec-9ce7-727d3d6e393d.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "c70d60ca-cd17-4aef-87d0-90de9af4c68e",
-            "Value": {
-                "id": "ec9ba4a0-bb4c-40b2-a879-80c51806b3f0",
-                "resourcePath": "objects\\oUIStageCamera\\oUIStageCamera.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -2276,6 +2332,14 @@
                 "id": "17252d7e-243b-47cd-9efe-69c419107b36",
                 "resourcePath": "scripts\\scRocketSpecialLaser_Create\\scRocketSpecialLaser_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cf24d61a-7e62-4e1a-a0be-171825ab4f9b",
+            "Value": {
+                "id": "2586a234-1ac4-4910-9b15-63f69fb90b25",
+                "resourcePath": "views\\cf24d61a-7e62-4e1a-a0be-171825ab4f9b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2732,6 +2796,13 @@
         "af1bfdd2-1334-40aa-8444-ddb713405383",
         "6c94f478-e681-4d26-bb6c-476da0da1b53",
         "bc52f200-8726-4ff9-ad86-55bb3c461b15",
+        "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
+        "8eac4b42-f5ef-476d-8ae2-c418564eb9a1",
+        "6a122f33-5cba-4db2-abd9-22528acd5997",
+        "9f9f6ac5-b899-4c62-812b-9c6165f073a6",
+        "0b6a16fd-15b1-4137-8d3e-d13448a2a58c",
+        "86fc6873-f622-4a82-8614-0ee8be27cb34",
+        "0b798dda-53ea-4630-ae0b-d3f1f9f039df",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",

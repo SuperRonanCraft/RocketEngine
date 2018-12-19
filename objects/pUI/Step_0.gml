@@ -35,8 +35,8 @@ if (inputting) { //Are we inputting data?
 					&& mouse_check_button(mb_right)) { //Must be pressing right to move slider
 				mouse_x_old = device_mouse_x_to_gui(0);
 				mouse_y_old = device_mouse_y_to_gui(0);
-				var xleft = start_x + x_buffer;
-				var ycheck = start_y + y_buffer * menu_option[page];
+				var xleft = start_x[menu_option[page]] + (x_buffer * 2);
+				var ycheck = start_y[menu_option[page]];
 				if (mouse_x_old > xleft - 10 && mouse_x_old < xleft + slider_width + 10 && mouse_y_old > ycheck - 10 && mouse_y_old < ycheck + 10) {
 					var val = (mouse_x_old - xleft) / slider_width;
 					ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1);
@@ -91,15 +91,18 @@ if (inputting) { //Are we inputting data?
 		mouse_x_old = device_mouse_x_to_gui(0);
 		mouse_y_old = device_mouse_y_to_gui(0);
 		var newoption = -1; //-1 means no option
-		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
-			var yoffset = (y_buffer / 3), ycheck = i * y_buffer, ignore = false, xoffset = string_width(ds_grid[# 0, i]) * scale_main_hovering;
-			for (var a = 0; a < array_length_1d(menu_special); a++)
-				if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Ignore this element
-			if (!ignore && mouse_y_old > start_y + ycheck - yoffset && mouse_y_old < start_y + ycheck + yoffset) //Y-Check
-				if (mouse_x_old > (centered ? start_x - (xoffset / 2) : start_x - x_buffer - xoffset - (x_buffer / 2)) //X-Check
-					&& mouse_x_old < (centered ? start_x + (xoffset / 2) : start_x - x_buffer)) {
-					newoption = i; break;} //Set the new option, break away
-		}
+		if (page_workingon == page) //Make sure we are working on the current page
+			for (var i = 0; i < ds_grid_height(ds_grid); i++) {
+				var yoffset = (y_buffer / 3), ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val, xoffset = string_width(text) * scale_main_hovering;
+				for (var a = 0; a < array_length_1d(menu_special); a++)
+					if (ds_grid[# 1, i] == menu_special[a]) {
+						ignore = true; break; //Ignore this element
+					}
+				if (!ignore && mouse_y_old > start_y[i] - yoffset && mouse_y_old < start_y[i] + yoffset) //Y-Check
+					if (mouse_x_old > (centered ? start_x[i] - (xoffset / 2) : start_x[i] - xoffset - (x_buffer / 2)) //X-Check
+						&& mouse_x_old < (centered ? start_x[i] + (xoffset / 2) : start_x[i])) {
+						newoption = i; break;} //Set the new option, break away
+			}
 		if (newoption != menu_option[page]) { //Not on the same selection
 			menu_option[page] = newoption;
 			if (newoption != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);

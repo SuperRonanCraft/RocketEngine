@@ -34,9 +34,13 @@ enum menu_element_type {
 	rocket_list,
 	rocket_buffs,
 	//Controls page
-	controls,
-	//Select from multiple options
-	multiselect
+	controls
+}
+
+enum menu_centered {
+	left,
+	centered,
+	right
 }
 
 //Default Menus
@@ -100,11 +104,14 @@ x_buffer = 32;
 //Updates on each page
 start_y = 0;
 start_x = 0;
+start_x_default = RES_W / 2;
+start_y_default = RES_H / 2;
 //Is the current menu unfolding? Will lock mouse control
 unfolding = true;
 //Ignore specific menu elements from being selected
 menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls];
-menu_special_start_y = [RES_H / 4 + RES_H / 2, RES_H / 4 + RES_H / 2 - RES_H / 16, RES_H / 4 + RES_H / 2];
+var pos = RES_H - RES_H / 8 - RES_H / 16;
+menu_special_start_y = [pos, pos, pos];
 //Update keybinds for players?
 keys_update = false;
 

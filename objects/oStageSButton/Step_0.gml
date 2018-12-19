@@ -12,9 +12,7 @@ with (oStageSelect) {
 		other.selected = false;
 	//Check if clicked, change the stage selection
 	if (other.selected) {
-		stage_on++;
-		if (stage_on >= stages)
-			stage_on = 0;
+		
 		other.selected_key = false;
 	}
 }

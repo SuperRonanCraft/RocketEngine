@@ -1,3 +1,5 @@
+/// @desc setup stage list
+
 stages = array_length_1d(global.stages);
 if (stages > 0) {
 	var wp_map = global.stages[0];
