@@ -66,45 +66,50 @@ if (inputting) { //Are we inputting data?
 			break;
 	}
 } else { //Not inputting
-	//Keyboard support
-	var ochange = key_down - key_up;
-	if (ochange != 0) {
-		var newoption = menu_option[page] + ochange;
-		if (newoption > ds_height - 1) newoption = 0;
-		else if (newoption < 0) newoption = ds_height - 1;
-		//Ignore special menu elements
-		for (var i = 0; i < array_length_1d(menu_special); i++)
-			if (ds_grid[# 1, newoption] == menu_special[i]) { //Ignore this element, change the option
-				if (ochange < 0) newoption = ds_height - 1;
-				else newoption += 1;
-				break;
-			}
-		if (newoption != menu_option[page] ) { //Not on the same selection
-			menu_option[page] = newoption;
-			audio_play_sound(SOUND.UI_HOVER, 5, false);
-		}
-	}
+	var newoption = menu_option[page];
 	//Mouse Support
-	else if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old)) { //Not unfolding and mouse is moving
+	if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old)) { //Not unfolding and mouse is moving
 		mouse_x_old = device_mouse_x_to_gui(0);
 		mouse_y_old = device_mouse_y_to_gui(0);
-		var newoption = -1; //-1 means no option
 		if (page_workingon == page) //Make sure we are working on the current page
 			for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 				var yoffset = (y_buffer / 3), ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val, xoffset = string_width(text) * scale_main_hovering;
 				for (var a = 0; a < array_length_1d(menu_special); a++)
-					if (ds_grid[# 1, i] == menu_special[a]) {
-						ignore = true; break; //Ignore this element
-					}
-				if (!ignore && mouse_y_old > start_y[i] - yoffset && mouse_y_old < start_y[i] + yoffset) //Y-Check
-					if (mouse_x_old > (centered ? start_x[i] - (xoffset / 2) : start_x[i] - xoffset - (x_buffer / 2)) //X-Check
-						&& mouse_x_old < (centered ? start_x[i] + (xoffset / 2) : start_x[i])) {
-						newoption = i; break;} //Set the new option, break away
+					if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
+				if (!ignore && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered)) {
+					newoption = i; break;} //Set the new option, break away
+				else newoption = -1;
 			}
-		if (newoption != menu_option[page]) { //Not on the same selection
-			menu_option[page] = newoption;
-			if (newoption != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);
+	} else {
+		//Keyboard support
+		var ochange = key_down - key_up;
+		if (ochange != 0) {
+			newoption += ochange;
+			if (newoption > ds_height - 1) newoption = 0;
+			else if (newoption < 0) newoption = ds_height - 1;
+			//Ignore special menu elements
+			for (var i = 0; i < array_length_1d(menu_special); i++)
+				if (ds_grid[# 1, newoption] == menu_special[i]) { //Ignore this element, change the option
+					if (ochange < 0) newoption = ds_height - 1;
+					else newoption += 1;
+					break;
+				}
 		}
+		 //Left and right support on horizontally aligned buttons
+		else {
+			ochange = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+			if (ochange != 0) {
+				var option = menu_option[page];
+				if (option >= 0 && option + ochange >= 0 && option + ochange < ds_height)
+					if (start_y[option] == start_y[option + ochange])
+						newoption = option + ochange;
+			}
+		}
+	}
+	//Sounds and update selection
+	if (newoption != menu_option[page]) { //Not on the same selection
+		menu_option[page] = newoption; //-1 means no option
+		if (newoption != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);
 	}
 }
 

@@ -10,8 +10,12 @@ for (var i = 1; i < amt; i++) {
 	var buffs = map[? ROCKET_MAP.BUFF];
 	var rx = ((RES_W / 8) + ((RES_W / 4) * (i - 1))) - ((offset - 1) * ((RES_W / 4) * columns));
 	var ry = offset * 130 + 40;
-	scDrawText(rx, ry, name, color_element, scale_element); //Rocket name
-	draw_sprite(spr, 0, rx, ry + 30); //Rocket icon
+	var c = color_element;
+	var yoffset = 0;
+	if (scUIHovering(rx, ry, name, x_buffer, 10, scale_element, true)) {
+		c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1, 0);}
+	scDrawText(rx, ry, name, c, scale_element); //Rocket name
+	draw_sprite(spr, 0, rx, ry + 30 + yoffset); //Rocket icon
 	if (!is_undefined(buffs)) { //Rocket buffs if exists
 		var bamt = array_length_1d(buffs);
 		for (var b = 0; b < bamt; b++) {
