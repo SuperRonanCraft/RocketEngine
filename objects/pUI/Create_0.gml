@@ -8,7 +8,8 @@ enum menu_page {
 	graphics,
 	keybinds, keybinds2,
 	controls,
-	rocketinfo,
+	info,
+	rocketlist,
 	rocketbuffs,
 	confirm,
 	height

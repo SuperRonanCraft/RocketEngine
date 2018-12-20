@@ -3,7 +3,7 @@ event_inherited();
 ds_menu_main = scUICreateMenuPage(
 	["PLAY",		menu_element_type.page_transfer,	menu_page.gamemodes],
 	["SETTINGS",	menu_element_type.page_transfer,	menu_page.settings],
-	["INFO",		menu_element_type.page_transfer,	menu_page.rocketinfo],
+	["INFO",		menu_element_type.page_transfer,	menu_page.info],
 	["QUIT",		menu_element_type.page_transfer,	menu_page.confirm],
 );
 
@@ -20,22 +20,27 @@ ds_other_gamemodes = scUICreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	menu_page.gamemodes],
 );
 
-ds_rocketinfo = scUICreateMenuPage(
-	["",			menu_element_type.rocket_list],
+ds_info = scUICreateMenuPage(
+	["ROCKETS",		menu_element_type.page_transfer,	menu_page.rocketlist],
 	["BUFFS",		menu_element_type.page_transfer,	menu_page.rocketbuffs],
 	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls],
 	["BACK",		menu_element_type.page_transfer,	menu_page.main],
 );
 
+ds_rocketinfo = scUICreateMenuPage(
+	["",			menu_element_type.rocket_list],
+	["BACK",		menu_element_type.page_transfer,	menu_page.info],
+);
+
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],
 	["KEYBINDS",	menu_element_type.page_transfer,	menu_page.keybinds2],
-	["BACK",		menu_element_type.page_transfer,	menu_page.rocketinfo],
+	["BACK",		menu_element_type.page_transfer,	menu_page.info],
 );
 
 ds_rocketbuffs = scUICreateMenuPage(
 	["",		menu_element_type.rocket_buffs],
-	["BACK",	menu_element_type.page_transfer,	menu_page.rocketinfo],
+	["BACK",	menu_element_type.page_transfer,	menu_page.info],
 );
 
 ds_confirm = scUICreateMenuPage(
@@ -50,14 +55,14 @@ ds_keybinds2[# 2, ds_grid_height(ds_keybinds2) - 1] = menu_page.controls;
 
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics,
-	ds_menu_keybinds, ds_other_gamemodes, ds_rocketinfo, ds_controls, ds_rocketbuffs,
+	ds_menu_keybinds, ds_other_gamemodes, ds_info, ds_rocketinfo, ds_controls, ds_rocketbuffs,
 	ds_keybinds2, ds_confirm];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
-	menu_page.keybinds, menu_page.more_gamemodes, menu_page.rocketinfo, menu_page.controls, menu_page.rocketbuffs,
+	menu_page.keybinds, menu_page.more_gamemodes, menu_page.info, menu_page.rocketlist, menu_page.controls, menu_page.rocketbuffs,
 	menu_page.keybinds2, menu_page.confirm];
 //Pages that are centered and have no input side
-menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm];
+menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_info, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	for (var a = 0; a < array_length_1d(menu_special); a++) {
