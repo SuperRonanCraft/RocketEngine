@@ -109,6 +109,7 @@ start_x_default = RES_W / 2;
 start_y_default = RES_H / 2;
 //Is the current menu unfolding? Will lock mouse control
 unfolding = true;
+button_confirmed = 0;
 //Ignore specific menu elements from being selected
 menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls];
 var pos = RES_H - RES_H / 8 - RES_H / 16;

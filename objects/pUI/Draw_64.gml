@@ -1,14 +1,13 @@
 /// @desc Draw all element types
 
-//Grid values, grid length, page we're working on
+//Grid values, grid length, page working on
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid), workingon = page_workingon;
 
-if (workingon != page) {
+if (workingon != page) { //New page, lets set it up
 	page_workingon = page;
 	//Scales
 	scale_option = 0; //Reset array
-	for (var i = 0; i < ds_height; i++)
-		scale_option[i] = scale_main; //Set default size for option
+	for (var i = 0; i < ds_height; i++) scale_option[i] = scale_main; //Set default size for option
 	//Centered?
 	var centering = false;
 	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
@@ -26,11 +25,8 @@ if (workingon != page) {
 			var arr = ds_grid[# 0, i];
 			var bffr = (x_buffer * 4)
 			switch (arr[1]) {
-				case menu_centered.left:
-					start_x[i] -= bffr; break;
-				case menu_centered.right:
-					start_x[i] += bffr; break;
-			}
+				case menu_centered.left: start_x[i] -= bffr; break;
+				case menu_centered.right: start_x[i] += bffr; break;}
 			if (skips <= 0) skips = 1; //Maximum of 1 skip allowed
 			else {index--; skips--;} //Makes the y not count up
 		}
@@ -41,11 +37,17 @@ if (workingon != page) {
 		start_y[i] = yy == 0 ? start_y_default + yoffset : yy;
 		index++;
 	}
+	button_confirmed = 0; //Reset confirm button
 } else { //On same page as before
 	for (var i = 0; i < ds_height; i++)
-		if (i == menu_option[page])
-			scale_option[i] = min(scale_option[i] + scale_change, scale_main_hovering);
-		else
+		if (i == menu_option[page]) {
+			if (is_array(button_confirmed) && button_confirmed[0] == i && button_confirmed[1] == page) {
+				var val = max(scale_option[i] - scale_change, scale_main);
+				if (val == scale_main) button_confirmed = 0; //Done animating, reset array
+				scale_option[i] = val;
+			} else
+				scale_option[i] = min(scale_option[i] + scale_change, scale_main_hovering);
+		} else
 			scale_option[i] = max(scale_option[i] - scale_change, scale_main);
 }
 
