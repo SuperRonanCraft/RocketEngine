@@ -72,6 +72,13 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 	}
 menu_option[0] = -1; //Default main page is -1 for the animation phase
 	
+//Ignore specific menu elements from being selected
+menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls];
+var pos = RES_H - RES_H / 8 - RES_H / 16;
+menu_special_start_y = [pos, pos, pos];
+
+//Unfolding animation
+unfolding = false;
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
 	unfold[i] = 0; //Position multiplier of page text
 	

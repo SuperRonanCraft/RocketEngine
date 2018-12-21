@@ -562,7 +562,7 @@
             "Key": "30c67dd4-3558-4028-9cd1-77b2cd963526",
             "Value": {
                 "id": "ffee103c-507c-4c02-a137-65029275d1ee",
-                "resourcePath": "objects\\pUI\\pUI.yy",
+                "resourcePath": "objects\\pUIMenus\\pUIMenus.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1831,6 +1831,14 @@
             }
         },
         {
+            "Key": "a472ebbc-93a4-4ecd-88b4-3d7132101508",
+            "Value": {
+                "id": "e635b4e6-4af8-41a9-9bd3-b4bd86377bb8",
+                "resourcePath": "objects\\pUICore\\pUICore.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
             "Value": {
                 "id": "812aca6b-08cb-467d-9098-54ac5c0607c1",
@@ -2532,6 +2540,14 @@
                 "id": "3e97b057-8dd9-41cf-a6b0-ebde1e3afe13",
                 "resourcePath": "sprites\\sexplosion_Ice\\sexplosion_Ice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e563d611-f73c-41ca-a289-cb86e74e5690",
+            "Value": {
+                "id": "ca7ce8f7-1ede-4dad-9343-0526afb457d4",
+                "resourcePath": "views\\e563d611-f73c-41ca-a289-cb86e74e5690.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
