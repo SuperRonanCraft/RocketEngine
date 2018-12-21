@@ -64,18 +64,18 @@ menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, men
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_info, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm];
 
-for (var i = 0; i < array_length_1d(menu_pages); i++)
-	for (var a = 0; a < array_length_1d(menu_special); a++) {
-		var ds_grid = menu_pages[i];
-		if (ds_grid[# 1, 0] == menu_special[a]) {menu_option[i] = 1; break;} //Default selection for each special page
-		else menu_option[i] = 0; //Default selection for each page
-	}
-menu_option[0] = -1; //Default main page is -1 for the animation phase
-	
 //Ignore specific menu elements from being selected
 menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls];
 var pos = RES_H - RES_H / 8 - RES_H / 16;
 menu_special_start_y = [pos, pos, pos];
+
+for (var i = 0; i < array_length_1d(menu_pages); i++)
+	for (var a = 0; a < array_length_1d(menu_special); a++) {
+		var ds_grid = menu_pages[i];
+		if (ds_grid[# 1, 0] == menu_special[a]) menu_option[i] = 1; //Default selection for each special page
+		else menu_option[i] = 0; //Default selection for each page
+	}
+menu_option[page] = -1; //Default main page is -1 for the animation phase
 
 //Unfolding animation
 unfolding = false;
