@@ -4,6 +4,6 @@ with (scSpawnRocket(x, y, depth + 1, team == TEAM.LEFT ? 0 : 180, id, rocket_map
 	//Explosion Size
 	size = 3;
 	//Scale
-	image_xscale = 3;
-	image_yscale = 3;
+	image_xscale += 2;
+	image_yscale += 2;
 }

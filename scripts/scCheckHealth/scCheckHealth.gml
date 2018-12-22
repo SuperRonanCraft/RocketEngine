@@ -2,6 +2,8 @@
 
 if (hp <= 0) {
 	alive = false;
-	playerState = PLAYERSTATE.DEAD;
+	if(standing){
+		playerState = PLAYERSTATE.DEAD;
+	}
 	scPlayerDied();
 }

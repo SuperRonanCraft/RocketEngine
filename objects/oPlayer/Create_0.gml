@@ -15,7 +15,7 @@ event_inherited();
 //Load player states
 canControl = true;
 enum PLAYERSTATE{
-	NORMAL,DEAD,
+	NORMAL,DEAD,CANTCONTROL,KNOCKBACK
 }
 playerState = PLAYERSTATE.NORMAL;
 
@@ -25,7 +25,10 @@ animationVar = 0;
 overrideAnimation = false;
 currentSprite = sprite_index;
 enum ANIMATIONSTATE{
-	STANDING,RISING,FALLING,WALKING,DEAD
+	STANDING,RISING,FALLING,WALKING,DEAD,KNOCKBACK
 }
 
 animState = ANIMATIONSTATE.STANDING;
+
+//If jumped at right time
+teched = false;

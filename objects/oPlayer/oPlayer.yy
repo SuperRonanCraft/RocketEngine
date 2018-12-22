@@ -119,7 +119,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "8",
+            "value": "12",
             "varName": "walksp",
             "varType": 0
         },

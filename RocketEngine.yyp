@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "30927b15-6586-479c-b2ee-1fbced56dcc6",
+            "Value": {
+                "id": "2bd7d6b1-b5c6-4665-85dc-240a173709fe",
+                "resourcePath": "scripts\\doKnockback\\doKnockback.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "30c67dd4-3558-4028-9cd1-77b2cd963526",
             "Value": {
                 "id": "ffee103c-507c-4c02-a137-65029275d1ee",
@@ -1807,6 +1815,14 @@
             }
         },
         {
+            "Key": "a2375737-b878-420e-8706-1853b5cc1f7b",
+            "Value": {
+                "id": "8a661e0e-5b57-4a53-a16f-fc89926f8a91",
+                "resourcePath": "scripts\\scDrawOtherAnimationState\\scDrawOtherAnimationState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a3918777-47db-4c20-b08a-100aa8a44bc0",
             "Value": {
                 "id": "b80711ed-a150-4c34-8564-242ca0261e51",
@@ -1860,6 +1876,14 @@
                 "id": "d0585570-333d-4252-a034-3779e657d905",
                 "resourcePath": "sprites\\sWall\\sWall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a62e83a3-5049-4bc1-85be-fd514e25dc62",
+            "Value": {
+                "id": "2ad0d6eb-adbd-4b0f-bc42-395eb4640901",
+                "resourcePath": "scripts\\knockBackStep\\knockBackStep.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2228,6 +2252,14 @@
                 "id": "88dc10f3-55c7-4266-8276-7600ee0ceee5",
                 "resourcePath": "scripts\\scSpawnRocket\\scSpawnRocket.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c081306a-98d7-4bed-be5d-52368d7b0f54",
+            "Value": {
+                "id": "963169f8-515a-40f0-adfa-30eb4e828a7e",
+                "resourcePath": "sprites\\s_abilityIcon_KnockBack\\s_abilityIcon_KnockBack.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2790,6 +2822,7 @@
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "92c8ec42-71bb-4b65-968e-5de99090a6b7",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
+        "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
         "b207e289-366c-4794-9fc6-7166e3f11f20",
@@ -2867,10 +2900,12 @@
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",
         "6a93ce55-0209-4047-baf0-4b4265f30278",
+        "a2375737-b878-420e-8706-1853b5cc1f7b",
         "88211932-9cea-4adc-a0a3-3b8613abe868",
         "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
         "6e1af632-6685-40a9-b0e7-653f1b415768",
         "38944597-eaf0-4f99-8a24-11ebe9391c21",
+        "a62e83a3-5049-4bc1-85be-fd514e25dc62",
         "22340016-76dd-4ca3-9586-882cef09cf3d",
         "52bf7011-b434-455b-b401-3945ebf3821b",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",

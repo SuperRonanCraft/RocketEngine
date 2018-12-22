@@ -9,7 +9,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != weapon) {
 	//Grab custom weapon keys
 	scRocketGet(weapons[weapon], rocket_map);
 	ammo = rocket_map[? ROCKET_MAP.CLIP];
-	current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
+	current_cd = 15;
 	prj_scale = 2;
 	ult_casting = false; //Reset the ult timer
 }

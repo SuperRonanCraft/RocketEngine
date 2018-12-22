@@ -19,7 +19,7 @@ if (rand >= 0.8)
 		obj = oHealthPickup;
 	else
 		obj = oBuffPickup;
-var xx = random_range(50, RES_W - 50), yy = random_range(50, RES_H - 50);
+var xx = irandom_range(50, RES_W - 50), yy = irandom_range(50, RES_H - 50);
 switch (obj) {
 	//Is a rocket pickup
 	case oRocketPickup:
@@ -36,7 +36,7 @@ switch (obj) {
 		//Pick a random rocket from the possible array
 		var map = weapons[possible[irandom_range(0, array_length_1d(possible) - 1)]];
 		//Spawn and give it default values
-		with (instance_create_layer(xx, yy, layer, obj)) {
+		with (instance_create_depth(xx, yy, depth, obj)) {
 			if (x > RES_W / 2)
 				image_xscale = -image_xscale;
 			sprite_index = map[? ROCKET_MAP.PROJECTILE];
@@ -63,7 +63,7 @@ switch (obj) {
 		//Pick a random buff from the possibel good buffs array
 		var ind = possible[irandom_range(0, array_length_1d(possible) - 1)];
 		//Spawn and give it default values
-		with (instance_create_layer(xx, yy, layer, obj)) {
+		with (instance_create_depth(xx, yy, depth, obj)) {
 			var map = ds_map_create();
 			scGetBuff(ind, map);
 			sprite_index = map[? BUFF_MAP.ICON];

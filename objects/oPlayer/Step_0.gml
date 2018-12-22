@@ -6,3 +6,4 @@ scStateCheck();
 scKeybindsControls();
 event_inherited();
 scCheckHealth();
+knockBackStep();

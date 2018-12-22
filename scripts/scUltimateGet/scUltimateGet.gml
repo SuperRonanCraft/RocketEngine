@@ -28,7 +28,7 @@ switch (type) {
 	case ULTIMATE.SAND: //I Cant See!
 		ds_map[? ULTIMATE_MAP.NAME] = "Honey don't go outside!";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateSand;
-		ds_map[? ULTIMATE_MAP.CAST_TIME] = 120;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.REVERSE: //Huh, the cake isnt a lie afterall
 		ds_map[? ULTIMATE_MAP.NAME] = "Portal dimension";
@@ -36,7 +36,7 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 55;
 		break;
 	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
-		ds_map[? ULTIMATE_MAP.NAME] = "Portal dimension";
+		ds_map[? ULTIMATE_MAP.NAME] = "Ur gonna hate this";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateSwipe;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
 		break;

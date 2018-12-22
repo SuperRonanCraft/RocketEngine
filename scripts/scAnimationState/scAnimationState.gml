@@ -7,3 +7,6 @@ if(!overrideAnimation){
 	scGetNormalAnimationState();	
 	scDrawNormalAnimationState(animState);
 }
+else{
+	scDrawOtherAnimationState(animState)	
+}

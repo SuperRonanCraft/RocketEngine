@@ -3,9 +3,9 @@
 x = owner.x;
 y = owner.y;
 
-if (timer % 3 == 0 && timer < 25)
+if (timer % 10 == 0 && timer < 30)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
-			irandom_range(0, 360), owner, owner.rocket_map)) {
+			irandom_range(45, 135), owner, owner.rocket_map)) {
 		/*owner = other.owner;
 		//Give it the map of the current rocket
 		rocket_map = ds_map_create(); 

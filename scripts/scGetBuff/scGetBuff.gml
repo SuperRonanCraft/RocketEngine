@@ -75,6 +75,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.TIME] = 15 * room_speed;
 		ds_map[? "multiplier"] = 0.5;
 		break;
+		
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -90,7 +91,8 @@ enum BUFF_ICON {
 	BURNRUSH = s_abilityIcon_BurnRush, CHILLED = s_abilityIcon_Chilled,
 	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
 	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity,
-	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge
+	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
+	KNOCKBACK = s_abilityIcon_KnockBack
 }
 
 enum BUFFTYPE {
