@@ -48,6 +48,6 @@ rocket_map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.DEFAULT; //The rockets ultimate pow
 rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = true; //If the rocket should give ultcharge
 rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //Multiplier offset of a specific rocket 1 for none
 //KNOCKBACK
-rocket_map[? ROCKET_MAP.KBAMT] = 10;
+rocket_map[? ROCKET_MAP.KBAMT] = 20;
 var map = argument0;
 map = rocket_map;
