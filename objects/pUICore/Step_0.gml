@@ -66,7 +66,7 @@ if (inputting) { //Are we inputting data?
 			break;
 	}
 } else { //Not inputting
-	var newoption = menu_option[page];
+	var option = menu_option[page];
 	//Mouse Support
 	if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old)) { //Not unfolding and mouse is moving
 		mouse_x_old = device_mouse_x_to_gui(0);
@@ -77,21 +77,26 @@ if (inputting) { //Are we inputting data?
 				for (var a = 0; a < array_length_1d(menu_special); a++)
 					if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
 				if (!ignore && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered)) {
-					newoption = i; break;} //Set the new option, break away
-				else newoption = -1;
+					option = i; break;} //Set the new option, break away
+				else option = -1;
 			}
 	} else {
 		//Keyboard support
+		//Up and down support
 		var ochange = key_down - key_up;
 		if (ochange != 0) {
-			newoption += ochange;
-			if (newoption > ds_height - 1) newoption = 0;
-			else if (newoption < 0) newoption = ds_height - 1;
+			//newoption += ochange;
+			if (option >= 0 && option + ochange >= 0 && option + ochange < ds_height)
+				if (start_y[option] == start_y[option + ochange]) option += ochange * 2;
+				else option += ochange;
+			else option += ochange;
+			if (option > ds_height - 1) option = 0;
+			else if (option < 0) option = ds_height - 1;
 			//Ignore special menu elements
 			for (var i = 0; i < array_length_1d(menu_special); i++)
-				if (ds_grid[# 1, newoption] == menu_special[i]) { //Ignore this element, change the option
-					if (ochange < 0) newoption = ds_height - 1;
-					else newoption += 1;
+				if (ds_grid[# 1, option] == menu_special[i]) { //Ignore this element, change the option
+					if (ochange < 0) option = ds_height - 1;
+					else option += 1;
 					break;
 				}
 		}
@@ -101,14 +106,16 @@ if (inputting) { //Are we inputting data?
 			if (ochange != 0) {
 				var option = menu_option[page];
 				if (option >= 0 && option + ochange >= 0 && option + ochange < ds_height)
-					if (start_y[option] == start_y[option + ochange]) newoption = option + ochange;
+					if (start_y[option] == start_y[option + ochange]) option += ochange;
+					else if (option - ochange >= 0 && option - ochange < ds_height)
+					if (start_y[option] == start_y[option - ochange]) key_enter = true;
 			}
 		}
 	}
 	//Sounds and update selection
-	if (newoption != menu_option[page]) { //Not on the same selection
-		menu_option[page] = newoption; //-1 means no option
-		if (newoption != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);
+	if (option != menu_option[page]) { //Not on the same selection
+		menu_option[page] = option; //-1 means no option
+		if (option != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);
 	}
 }
 
