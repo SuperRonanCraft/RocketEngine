@@ -4,7 +4,8 @@ if (knockback_time <= 0) exit; //No knockback, exit
 knockback_time--;
 
 //knockback time was just set to 0, do the following
-if (hsp == 0 || vsp == 0 || knockback_time == 0) {
+if (hsp == 0 || standing || knockback_time == 0) {
+	vsp_move += vsp_knockback; //Leave the knockback without instant momentum
 	hsp_knockback = 0;
 	vsp_knockback = 0;
 }

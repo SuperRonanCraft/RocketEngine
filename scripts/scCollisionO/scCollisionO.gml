@@ -6,7 +6,7 @@ if (hsp_knockback == 0)
 	hsp = (hsp_override == 0) ? hsp_move + hsp_carry + hsp_knockback : hsp_override;
 else
 	hsp = hsp_knockback;
-if (vsp_knockback == 0)
+if (vsp_knockback == 0) //Make knockback override all inputs
 	vsp = (vsp_override == 0) ? vsp_move + vsp_carry + vsp_knockback : vsp_override;
 else
 	vsp = vsp_move + vsp_knockback;

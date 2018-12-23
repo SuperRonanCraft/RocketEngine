@@ -108,7 +108,7 @@ if (inputting) { //Are we inputting data?
 				if (option >= 0 && option + ochange >= 0 && option + ochange < ds_height)
 					if (start_y[option] == start_y[option + ochange]) option += ochange;
 					else if (option - ochange >= 0 && option - ochange < ds_height)
-					if (start_y[option] == start_y[option - ochange]) key_enter = true;
+						if (start_y[option] == start_y[option - ochange]) key_enter = true;
 			}
 		}
 	}

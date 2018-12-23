@@ -16,7 +16,7 @@ if (owner != other.id) {
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 			//Damage player
 			with (hitList[| i])
-				scHitShootable(other.owner, false, true, dmg);
+				scDamageShootable(other.owner, false, true, dmg);
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);

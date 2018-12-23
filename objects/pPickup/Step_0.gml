@@ -1,5 +1,5 @@
 /// @description animate in place
-y = ystart + sin(get_timer() / 500000) * 5;
+y = scMovementWave(ystart - 3, ystart + 3, 2, 0);
 if (timer > timer_original * 0.15)
 	image_alpha = min(image_alpha + 0.05, 1);
 else

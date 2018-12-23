@@ -20,14 +20,13 @@ if (side) { //facing left
 	show_debug_message(diff);
 }
 
-
 owner.canControl = false;
 owner.playerState = PLAYERSTATE.KNOCKBACK;
 var hval = lengthdir_x(maxH, dir), vval = lengthdir_y(maxV, dir);
-owner.hsp_knockback = hval;//maxH * (owner.facing);
-owner.vsp_knockback = vval;//maxV;
+owner.hsp_knockback = hval;
+owner.vsp_knockback = vval;
+owner.vsp_move = 0; //Reset gravity
 owner.knockback_time = 30;
 owner.facing = side ? 1 : -1;
-owner.y-=2;
+owner.y -= 2;
 owner.standing = false;
-	

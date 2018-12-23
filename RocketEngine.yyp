@@ -458,7 +458,7 @@
             "Key": "27b0d615-2fba-4f17-abd9-48c282d140de",
             "Value": {
                 "id": "6075824e-7402-4bc0-9628-eeadecd4f8d3",
-                "resourcePath": "scripts\\scHitShootable\\scHitShootable.yy",
+                "resourcePath": "scripts\\scDamageShootable\\scDamageShootable.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1671,6 +1671,14 @@
             }
         },
         {
+            "Key": "918059a4-6693-4056-b5be-aeb427a35742",
+            "Value": {
+                "id": "8857404a-5b34-4644-9337-f822d63e47d7",
+                "resourcePath": "views\\918059a4-6693-4056-b5be-aeb427a35742.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "91ff5475-440a-4436-8673-384888ce0e45",
             "Value": {
                 "id": "ac0a4101-586c-4651-aa42-8b863cefa0e6",
@@ -2819,7 +2827,6 @@
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
         "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
-        "27b0d615-2fba-4f17-abd9-48c282d140de",
         "92c8ec42-71bb-4b65-968e-5de99090a6b7",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
@@ -2865,6 +2872,7 @@
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",
         "52deab92-d816-42a2-a7e9-c1d27b700b3c",
         "30fd3536-1bc6-45d9-9728-3e1c11589e5a",
+        "27b0d615-2fba-4f17-abd9-48c282d140de",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
