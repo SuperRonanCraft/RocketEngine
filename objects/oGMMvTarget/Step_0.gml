@@ -8,7 +8,7 @@ if (global.play) { //If game play is enabled
 		spawn_time--;
 
 	if (targets_created < targets)
-		with (instance_create_layer(0, 0, layer, random_range(0, 100) < 95 ? oTarget : oTargetBomb)) {
+		with (instance_create_depth(0, 0, depth, irandom_range(0, 100) < 95 ? oTarget : oTargetBomb)) {
 			other.targets_created++;
 			owner = other;
 			timer = other.diff * 3;

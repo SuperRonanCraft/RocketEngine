@@ -5,6 +5,9 @@ if (shootable) {
 		points_scale += 1;
 	}
 	//No sound effect as the score handles that!
-	flash = 10;
 	shootable = false;
+	image_alpha -= 0.15;
+	alpha_reduction = 0.15;
+	timer = 0;
+	image_index = 1;
 }
