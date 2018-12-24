@@ -39,6 +39,7 @@ with (oMusic)
 kick_timer = 10; //Time is seconds
 kick_timer_abs = kick_timer * room_speed; //Absolute timer value
 kick_timer_display = 3; //Display timer after this index is met
+kick_execute = true; //Leave the game after timer reaches 0
 
 
 //--------------
@@ -49,7 +50,7 @@ event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
 	["RESTART",		menu_element_type.script_runner,	scStageRestart],
-	["EXIT",		menu_element_type.goto_room,		global.gamemodeSRoom[gamemode]],
+	["EXIT",		menu_element_type.goto_room,	global.gamemodeSRoom[gamemode]],
 );
 
 //Pages of the menu

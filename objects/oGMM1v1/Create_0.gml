@@ -16,5 +16,3 @@ spawn_time = 120;
 scRockets(0);
 
 event_inherited();
-
-

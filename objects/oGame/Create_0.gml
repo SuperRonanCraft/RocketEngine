@@ -81,3 +81,5 @@ enum TEAM {
 
 //Randomize gameplay
 randomize();
+
+debug = false; //Debug mode?
