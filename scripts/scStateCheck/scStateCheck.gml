@@ -2,8 +2,9 @@
 
 switch (playerState) {
 	case PLAYERSTATE.KNOCKBACK:
+		canControl = false;
 		overrideAnimation = true;
-		animState = ANIMATIONSTATE.KNOCKBACK;
+		//animState = ANIMATIONSTATE.KNOCKBACK;
 		break;
 	
 	case PLAYERSTATE.CANTCONTROL:

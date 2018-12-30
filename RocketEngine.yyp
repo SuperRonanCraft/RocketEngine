@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0380a8aa-295e-4dc8-a17c-5e543d948fed",
+            "Value": {
+                "id": "cf3e8b7a-57b1-45c1-9765-f19d4767fdc4",
+                "resourcePath": "sprites\\sPlayer_knockBack2\\sPlayer_knockBack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "03a26806-17fd-4171-842e-d47ae969bf8e",
             "Value": {
                 "id": "eac138ab-4423-45dd-a1cd-24ba7a5e45a2",
@@ -116,6 +124,14 @@
                 "id": "b3ab3f09-86d9-40cc-b7a3-58108ac49dca",
                 "resourcePath": "views\\05ab479d-09ff-4f4e-8da7-1e019610271c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "064161b7-ce22-4511-9fba-9c0dd7e0e35e",
+            "Value": {
+                "id": "0bab1737-faa1-45e9-ac8f-204031b861ad",
+                "resourcePath": "sprites\\s_psmoke2\\s_psmoke2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -620,6 +636,14 @@
                 "id": "1cb99bee-e9cf-4c33-a3e8-b39860982131",
                 "resourcePath": "scripts\\scRocketSpecialIce_Rocket\\scRocketSpecialIce_Rocket.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3456ef42-758a-42de-b772-6edd088d1d58",
+            "Value": {
+                "id": "f6e703eb-c07a-4da4-b9ab-9faac120be32",
+                "resourcePath": "sprites\\bg1v1rm1\\bg1v1rm1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1172,6 +1196,14 @@
                 "id": "11447bd5-adbb-4164-975d-437cf3c36f44",
                 "resourcePath": "scripts\\scDrawNormalAnimationState\\scDrawNormalAnimationState.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6b0e6cea-49e7-4ae3-962f-9a9bdaea7625",
+            "Value": {
+                "id": "55618eae-a8a6-4824-991f-f8be34cb2ff1",
+                "resourcePath": "sprites\\s_phitWall\\s_phitWall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

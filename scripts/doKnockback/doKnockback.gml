@@ -27,6 +27,6 @@ owner.hsp_knockback = hval;
 owner.vsp_knockback = vval;
 owner.vsp_move = 0; //Reset gravity
 owner.knockback_time = 30;
-owner.facing = side ? 1 : -1;
+//owner.facing = side ? 1 : -1;
 owner.y -= 2;
 owner.standing = false;

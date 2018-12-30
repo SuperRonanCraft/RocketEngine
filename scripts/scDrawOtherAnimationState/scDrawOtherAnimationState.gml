@@ -7,6 +7,10 @@ var state = argument[0];
 
 switch (state) {
 	
+	case ANIMATIONSTATE.KNOCKBACK2:
+		currentSprite = sPlayer_knockBack2;
+		break;
+	
 	case ANIMATIONSTATE.KNOCKBACK:
 		currentSprite = sPlayer_knockBack;
 		break;

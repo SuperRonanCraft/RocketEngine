@@ -25,6 +25,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 20);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 11*varspd);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
+ds_map_add(weapons[roc], ROCKET_MAP.KBAMT, 35);
 
 //FAST
 roc = ROCKET.FAST;
@@ -37,7 +38,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.FAST);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 25);
 ds_map_add(weapons[roc], ROCKET_MAP.CLIP, 2);
-ds_map_add(weapons[roc], ROCKET_MAP.RELOAD_TIME, 60);
+ds_map_add(weapons[roc], ROCKET_MAP.RELOAD_TIME, 40);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.FAST);

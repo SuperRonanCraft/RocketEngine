@@ -134,8 +134,25 @@ part_type_gravity(parttype, 0.5, 90);
 ds_map_add(ds_part, PARTICLES.ULTCHARGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.ULTCHARGE, 1);
 
+parttype = part_type_create();
+part_type_sprite(parttype, s_psmoke2, false,false,true);
+part_type_size(parttype,1,1.2,-0.05,0);
+part_type_alpha1(parttype,0.8);
+part_type_life(parttype,25,25);
+
+ds_map_add(ds_part,PARTICLES.KBSMOKE,parttype);
+ds_map_add(ds_part_amt, PARTICLES.KBSMOKE, 1);
+
+parttype = part_type_create();
+part_type_sprite(parttype, s_phitWall, true,true,false);
+//part_type_size(parttype,1,1,0,0);
+part_type_life(parttype,5,5);
+
+ds_map_add(ds_part,PARTICLES.KBHIT,parttype);
+ds_map_add(ds_part_amt, PARTICLES.KBHIT, 1);
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SAND,
-	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE
+	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
+	KBHIT,
 }

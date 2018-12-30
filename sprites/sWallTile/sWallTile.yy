@@ -38,8 +38,8 @@
             ]
         }
     ],
-    "gridX": 0,
-    "gridY": 0,
+    "gridX": 32,
+    "gridY": 32,
     "height": 32,
     "layers": [
         {
@@ -50,13 +50,13 @@
             "blendMode": 0,
             "isLocked": false,
             "name": "default",
-            "opacity": 46,
+            "opacity": 100,
             "visible": true
         }
     ],
     "origin": 4,
     "originLocked": false,
-    "playbackSpeed": 15,
+    "playbackSpeed": 16,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,
