@@ -3,8 +3,16 @@ var key_jump = keyboard_check_pressed(keyjump);
 
 var techPossible = noone;
 
-for (var t = 0; t < 2; t++) {
-	techPossible = instance_place(x+(hsp*t),y+(vsp*t),oWall);
+if(playerState == PLAYERSTATE.KNOCKBACK){
+	
+	for (var t = 0; t < 3; t++) {
+		//part_particles_create(global.ParticleSystem1,x + (hsp*(t)),y + (vsp*(t)),oParticleHandler.ds_part[?PARTICLES.TEST],1);
+		techPossible = instance_place(x + (hsp*(t)),y,oWall);
+		if(techPossible == noone){
+			techPossible = instance_place(x,y + (vsp*(t)),oWall);	
+		}
+	}
+	
 }
 
 
