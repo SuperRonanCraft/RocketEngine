@@ -21,6 +21,9 @@ scRockets(starting_weapon);
 //Load Ultimates
 scUltimateStart();
 
+//Load Combos
+scComboStart();
+
 //Buffs/Debuffs setup
 buffs = ds_list_create();
 

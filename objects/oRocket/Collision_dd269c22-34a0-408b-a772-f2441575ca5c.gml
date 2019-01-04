@@ -14,6 +14,8 @@ if (owner != other.id) {
 			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
 			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
+			//Knockback		
+			doKnockback(hitList[|i], rocket_map[? ROCKET_MAP.KBAMT], direction);
 			//Damage player
 			with (hitList[| i])
 				scDamageShootable(other.owner, false, true, dmg);
@@ -22,8 +24,6 @@ if (owner != other.id) {
 				scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
 				scAddUltCharge(owner, DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
-			//Knockback		
-			doKnockback(hitList[|i], rocket_map[? ROCKET_MAP.KBAMT], direction);
 		}
 	//Custom Explosion with a pShootable script
 	if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)

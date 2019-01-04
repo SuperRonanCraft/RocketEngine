@@ -14,6 +14,8 @@ if ((damage_take || (argument_count >= 5 ? (argument[4] != noone ? argument[4] :
 		instance_destroy(other.id);
 	hpscale = 2;
 	scPlaySound(SOUND.EFFECT_HIT);
-	if (hp > 0 || alive)
+	if (hp > 0 || alive) {
 		scData_ConfirmHit();
+		scComboDamaged(argument[0]);
+	}
 }

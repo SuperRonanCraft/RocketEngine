@@ -12,7 +12,7 @@ switch (argument[0]) {
 	case DAMAGETYPE.INDIRECT: charge += ult_charge_indirect; break;
 	case DAMAGETYPE.TIME: charge += ult_charge_time; break;
 }
-ult_charge = min(ult_charge + ((charge * ult_charge_multiplier) * multi), ult_charge_max);
+ult_charge = min(ult_charge + ((charge * (ult_charge_multiplier + (combo_amount + 1))) * multi), ult_charge_max);
 
 enum DAMAGETYPE {
 	DIRECT, SPLASH, INDIRECT, TIME

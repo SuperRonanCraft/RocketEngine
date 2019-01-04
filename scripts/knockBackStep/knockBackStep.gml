@@ -3,8 +3,8 @@
 if (knockback_time <= 0) exit; //No knockback, exit
 knockback_time--;
 
-show_debug_message(vsp);
-show_debug_message(hsp);
+//show_debug_message(vsp);
+//show_debug_message(hsp);
 
 //Particles
 part_particles_create(global.ParticleSystem1,x,y,oParticleHandler.ds_part[? PARTICLES.KBSMOKE],1);

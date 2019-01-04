@@ -87,3 +87,10 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	//ULTIMATE CHARGE TEXT
 	scDrawText(xposcir, ypos * 2, string(charge) + string("%"), c_ltgray, 0.5, noone, 0.8);
 }
+//Combos
+if (combo_amount > 1) {
+	var xpos = team == TEAM.LEFT ? 50 : RES_W - 50;
+	var align = team == TEAM.LEFT ? fa_left : fa_right;
+	var ctext = "x" + string(combo_amount) + " " + combo_text_current;
+	scDrawText(xpos, 50, ctext, c_yellow, combo_scale * 0.5, noone, noone, align);
+}

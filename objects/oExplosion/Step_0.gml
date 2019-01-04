@@ -8,6 +8,8 @@ if (doing_damage)
 			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
 			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
+			//Knockback		
+			doKnockback(hitList[|i], rocket_map[? ROCKET_MAP.KBAMT], point_direction(x, y, p.x, p.y));
 			//Damage player
 			with (p) 
 				scDamageShootable(other.parent, false, true, dmg);
@@ -16,8 +18,6 @@ if (doing_damage)
 				scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
 				scAddUltCharge(parent, DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
-			//Knockback		
-			doKnockback(hitList[|i], rocket_map[? ROCKET_MAP.KBAMT], point_direction(x, y, p.x, p.y));
 		}
 if (rocket_map[? ROCKET_MAP.EXPLOSION_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_STEP]);
