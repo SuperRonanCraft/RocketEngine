@@ -11,11 +11,12 @@ for (var i = 0; i < hp_original; i++) {
 	if (i mod 10 == 0)
 		offset++;
 	//Determine side to display and offset every heart (mirrored)
-	var xpos = team == TEAM.LEFT ? 20 + (((hpwidth / 2) + 1) * i) - (offset - 1 * (((hpwidth / 2) + 1) * i)) : 
-		RES_W - hpwidth - 20 - (((hpwidth / 2) + 1) * i) + (offset - 1 * (((hpwidth / 2) + 1) * i));
+	var len = (hpwidth + 1) * (i - ((offset - 1) * 10));
+	var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
 	//Change every 10 hearts
 	var ypos = offset * (hpheight + 2);
-	draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, hpscale, hpscale, 0, c_white, 0.8);
+	var scale = i == hp ? hpscale : 1;
+	draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
 }
 //Display Buffs and Time
 offset = 0;

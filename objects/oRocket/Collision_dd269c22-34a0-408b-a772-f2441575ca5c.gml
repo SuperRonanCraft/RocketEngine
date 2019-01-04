@@ -31,6 +31,4 @@ if (owner != other.id) {
 	else
 		//Run the default explosion event/script
 		event_user(0);
-		
-	
 }
