@@ -863,6 +863,14 @@
             }
         },
         {
+            "Key": "4cbc08e1-9932-4aa2-96bc-cb04ae7dba9a",
+            "Value": {
+                "id": "02b1a20f-f2e9-4cca-bb7a-2b5551414daf",
+                "resourcePath": "sprites\\sPlayer_tech\\sPlayer_tech.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
             "Value": {
                 "id": "9617330e-6642-4015-b5a3-effa8f86110a",
@@ -2663,6 +2671,14 @@
             }
         },
         {
+            "Key": "e7cd7811-8569-46e4-a299-8cd5af491252",
+            "Value": {
+                "id": "fbd07df8-50fa-44f1-abdf-3c3fb1c1e906",
+                "resourcePath": "sprites\\s_ptech\\s_ptech.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e8958ecd-db37-4420-8365-d502b8a7a409",
             "Value": {
                 "id": "4ffca2c2-5857-4ea5-ba5e-dbedff972ab0",
@@ -2732,6 +2748,14 @@
                 "id": "aea2d528-9feb-4df5-98b9-d1f63996f2a6",
                 "resourcePath": "tilesets\\tsWall\\tsWall.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
+            "Value": {
+                "id": "4f9ffcc4-5928-4fa9-98b7-3f37c3d9b3e7",
+                "resourcePath": "scripts\\scCheckTech\\scCheckTech.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2885,6 +2909,7 @@
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
+        "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
         "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "ab738f93-ad7a-45aa-a119-240062d21cca",
         "02b336b5-7467-4576-8a97-db9d380154a7",

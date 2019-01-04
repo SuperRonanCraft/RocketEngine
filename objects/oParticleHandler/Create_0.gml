@@ -151,8 +151,16 @@ part_type_life(parttype,5,5);
 ds_map_add(ds_part,PARTICLES.KBHIT,parttype);
 ds_map_add(ds_part_amt, PARTICLES.KBHIT, 1);
 
+parttype = part_type_create();
+part_type_sprite(parttype, s_ptech, true,true,false);
+//part_type_size(parttype,1,1,0,0);
+part_type_life(parttype,5,5);
+
+ds_map_add(ds_part,PARTICLES.TECH,parttype);
+ds_map_add(ds_part_amt, PARTICLES.TECH, 1);
+
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
-	KBHIT,
+	KBHIT, TECH,
 }

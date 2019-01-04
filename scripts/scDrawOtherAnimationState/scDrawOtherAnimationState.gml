@@ -7,6 +7,13 @@ var state = argument[0];
 
 switch (state) {
 	
+	case ANIMATIONSTATE.TECHED:
+		overwrite = true;
+		if(scSpecialAnimation(sPlayer_tech, 0)){
+			animState = PLAYERSTATE.NORMAL;	
+		}
+		break;
+	
 	case ANIMATIONSTATE.KNOCKBACK2:
 		currentSprite = sPlayer_knockBack2;
 		break;

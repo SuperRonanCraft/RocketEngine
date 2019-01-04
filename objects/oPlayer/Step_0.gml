@@ -4,6 +4,7 @@ if (!global.play) exit;
 
 scStateCheck();
 scKeybindsControls();
+scCheckTech();
 event_inherited();
 scCheckHealth();
 knockBackStep();

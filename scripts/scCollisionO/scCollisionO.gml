@@ -31,11 +31,7 @@ if (touchingx != noone){ //If touching a wall in the horizontal
 	}
 	else{
 		part_particles_create(global.ParticleSystem1,x,y,oParticleHandler.ds_part[? PARTICLES.KBHIT],1);
-		hsp_knockback /= -2;
-		
-		if(vsp_knockback >= 0){
-			vsp_knockback = -5;
-		}
+		hsp_knockback /= -1.3;
 	}
 	
 }

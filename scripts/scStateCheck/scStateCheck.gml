@@ -1,10 +1,19 @@
 ///Check the player states
 
 switch (playerState) {
+	case PLAYERSTATE.TECHED:
+		overrideAnimation = true;
+		
+		if(animState == PLAYERSTATE.NORMAL){
+			overrideAnimation = false;
+			playerState = PLAYERSTATE.NORMAL;	
+		}
+		
+		break;
+	
 	case PLAYERSTATE.KNOCKBACK:
 		canControl = false;
 		overrideAnimation = true;
-		//animState = ANIMATIONSTATE.KNOCKBACK;
 		break;
 	
 	case PLAYERSTATE.CANTCONTROL:
@@ -16,7 +25,10 @@ switch (playerState) {
 		animState = ANIMATIONSTATE.DEAD;
         canControl = false;
         break;
-    default:
+		
+		
+    case PLAYERSTATE.NORMAL:
+	default:
         canControl = true;
         break;
 }
