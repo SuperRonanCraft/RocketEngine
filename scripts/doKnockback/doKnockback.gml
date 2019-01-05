@@ -13,12 +13,10 @@ if (hitFrom > 270)
 	hitFrom -= 360
 var dir = side ? 180 : 0;
 var diff = hitFrom - dir;
-if (side) { //facing left
+if (side) //facing left
 	dir = clamp(135 + diff, 100, 135);
-} else {
+else
 	dir = clamp(45 + diff, 45, 80);
-	show_debug_message(diff);
-}
 
 owner.canControl = false;
 owner.playerState = PLAYERSTATE.KNOCKBACK;

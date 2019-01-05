@@ -9,14 +9,12 @@ if (global.pause && background != noone)
 	draw_sprite(background, 0, 0, 0);
 
 if (debug) { //Debug activated
-	var rocketsInGame = 0, playersInGame = 0, inst = instance_count;
-	with (oPlayer) {
-		rocketsInGame += rockets;
-		playersInGame++;
-	}
-	var text = "Players: " + string(playersInGame) + "\nRockets: " + string(rocketsInGame)
-		+ "\nFPS: " + string(fps_real) + "\nInstances: " + string(inst);
-	var scale = 0.5;
-	var h = string_height(text), yy = h - (h - (h * scale));
-	scDrawText(5, yy, text, c_black, scale, c_white, noone, fa_left, fa_center);
+	var instancesInGame = instance_count, playersInGame = instance_number(oPlayer), rocketsInGame = instance_number(oRocket);
+	var frames = "\nFPS: " + string(fps_real) + "/" + string(fps);
+	var instances = "\nInstances: " + string(instancesInGame);
+	var players = "\nPlayers: " + string(playersInGame);
+	var rockets = "\nRockets: " + string(rocketsInGame);
+	var text = frames + instances + players + rockets;
+	var scale = 0.5, yy = RES_H - 20;
+	scDrawText(5, yy, text, c_black, scale, c_white, noone, fa_left, fa_bottom);
 }

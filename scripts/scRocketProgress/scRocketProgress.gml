@@ -11,7 +11,6 @@ if (current_delay == 0) {
 	if (ammo != 0) {
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
 		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, rocket_map);
-		rockets++;
 		ammo -= 1;
 		//Recoil code
 		//with (owner) {
