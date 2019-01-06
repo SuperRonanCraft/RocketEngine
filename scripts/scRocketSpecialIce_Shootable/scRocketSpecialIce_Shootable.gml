@@ -10,7 +10,7 @@ if(hit != owner){
 	
 	//A direct hit should reward the player, giving 1.5 more seconds
 	//of debuff time rather than getting hit by the explosion
-	scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hit, 3);
+	scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hit, 3);
 	
 	//The explosion still happens because, well, it looks cool
 	//Plus it provides visual feedback to the receiver that they got hit

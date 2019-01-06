@@ -1,10 +1,10 @@
 /// @desc add charge related to the damage type of a hit
-/// @arg damage-type
-/// @arg multiplier direct multiplier for each instance
+/// @arg damage-type*
+/// @arg multiplier* direct multiplier for each instance
 
-//Declare variables
+var type = argument_count > 1 ? (argument[1] != noone ? argument[1] : DAMAGETYPE.DIRECT) : DAMAGETYPE.DIRECT; //Damage type
+var multi = argument_count > 2 ? argument[2] : 1; //Multiplier
 var charge = 0;
-var multi = argument_count > 1 ? argument[1] : 1;
 
 switch (argument[0]) {
 	case DAMAGETYPE.DIRECT: charge += ult_charge_direct; break;

@@ -15,9 +15,10 @@ if (doing_damage)
 				scDamageShootable(other.parent, false, true, dmg);
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
-				scAddBuff(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
+				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
-				scAddUltCharge(parent, DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+				with (parent)
+					scUltimateAddCharge(DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		}
 if (rocket_map[? ROCKET_MAP.EXPLOSION_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_STEP]);

@@ -1,4 +1,4 @@
 if (!checked || !global.play) exit;
 //Add buff to player
-scAddBuff(buff, other);
+scBuffAdd(buff, other);
 event_inherited();

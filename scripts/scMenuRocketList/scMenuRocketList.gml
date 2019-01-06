@@ -20,7 +20,7 @@ for (var i = 1; i < amt; i++) {
 		var bamt = array_length_1d(buffs);
 		for (var b = 0; b < bamt; b++) {
 			var map = ds_map_create();
-			scGetBuff(buffs[b], map);
+			scBuffGet(buffs[b], map);
 			draw_sprite_ext(map[? BUFF_MAP.ICON], 0, rx - (bamt * 20) + (40 * b) + 4, ry + 70, 0.5, 0.5, 0, c_white, 1);
 			ds_map_destroy(map);
 		}

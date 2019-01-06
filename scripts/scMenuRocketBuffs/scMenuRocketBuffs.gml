@@ -3,7 +3,7 @@ for (var i = 0; i < amt; i++) {
 	if (i mod columns == 0)
 		offset++;
 	var map = ds_map_create();
-	scGetBuff(i, map); //Grab the buff map
+	scBuffGet(i, map); //Grab the buff map
 	var spr = map[? BUFF_MAP.ICON]; //Grab the icon
 	var name = map[? BUFF_MAP.NAME]; //Grab the name
 	var desc = map[? BUFF_MAP.DESCRIPTION]; //Grab the description
@@ -13,7 +13,7 @@ for (var i = 0; i < amt; i++) {
 	var ry = offset * 150 + 10;
 	var c = color_element;
 	var yoffset = 0;
-	if (scUIHovering(rx, ry, name, x_buffer, 10, scale_element, true)) {
+	if (scUIHovering(rx, ry + 40, name, x_buffer, 65, scale_element, true)) {
 			c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1);}
 	scDrawText(rx, ry, name, c, scale_element); //Buff name
 	//Particles

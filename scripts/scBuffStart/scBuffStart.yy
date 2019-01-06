@@ -1,8 +1,8 @@
 {
-    "id": "19bb796d-1000-4d06-9411-9602588f1e07",
+    "id": "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scAddBuff",
+    "name": "scBuffStart",
     "IsCompatibility": false,
     "IsDnD": false
 }

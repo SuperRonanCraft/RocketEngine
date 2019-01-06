@@ -71,7 +71,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "Ima go this way");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.REVERSE);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 40);
-ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 9*varspd);
+ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 12*varspd);
 ds_map_add(weapons[roc], ROCKET_MAP.OFFSET, 10);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 180);
 ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialReverse_Create);

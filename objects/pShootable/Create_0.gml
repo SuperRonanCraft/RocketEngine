@@ -11,9 +11,6 @@ hpwidth = sprite_get_width(hpsprite);
 flash = 0;
 
 //How to display the health
-enum DISPLAYTYPE {
-	NONE, BAR, SCREEN
-}
 
 //Load Rockets
 scRockets(starting_weapon);
@@ -25,6 +22,6 @@ scUltimateStart();
 scComboStart();
 
 //Buffs/Debuffs setup
-buffs = ds_list_create();
+scBuffStart();
 
 damage_take = true; //Ability to take damage

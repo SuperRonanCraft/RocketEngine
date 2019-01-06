@@ -306,7 +306,7 @@
             "Key": "19bb796d-1000-4d06-9411-9602588f1e07",
             "Value": {
                 "id": "f02383c4-1829-469c-bc62-7c72032a5dff",
-                "resourcePath": "scripts\\scAddBuff\\scAddBuff.yy",
+                "resourcePath": "scripts\\scBuffAdd\\scBuffAdd.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -767,6 +767,14 @@
             }
         },
         {
+            "Key": "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
+            "Value": {
+                "id": "2313a048-70ce-4248-b0b1-5e1f3a6ba62d",
+                "resourcePath": "scripts\\scBuffStart\\scBuffStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "42be5c97-e4c3-4924-80e9-448045e1852e",
             "Value": {
                 "id": "11eece7c-4a9e-4e99-9489-f6c9dcaa0223",
@@ -1002,7 +1010,7 @@
             "Key": "54ba9aef-e374-4001-9b0e-b1fbe4a46f4d",
             "Value": {
                 "id": "683e97d5-22f0-401d-8ae8-44630288f440",
-                "resourcePath": "scripts\\scRemoveBuff\\scRemoveBuff.yy",
+                "resourcePath": "scripts\\scBuffRemove\\scBuffRemove.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1767,14 +1775,6 @@
             }
         },
         {
-            "Key": "92c8ec42-71bb-4b65-968e-5de99090a6b7",
-            "Value": {
-                "id": "84e9f8b1-03c6-4e29-af84-d31f3025859d",
-                "resourcePath": "scripts\\scAddUltCharge\\scAddUltCharge.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "92ed85dc-7eeb-436d-85ce-b5ac325a0898",
             "Value": {
                 "id": "a1efe53a-c7f6-416a-98b1-f6d917d504a1",
@@ -2282,7 +2282,7 @@
             "Key": "bca65bdf-3977-4ffa-9057-499b54290b57",
             "Value": {
                 "id": "94f59e88-3af0-4b4a-a69c-e744dfa0ad39",
-                "resourcePath": "scripts\\scFindBuff\\scFindBuff.yy",
+                "resourcePath": "scripts\\scBuffFind\\scBuffFind.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2530,7 +2530,7 @@
             "Key": "d2a4648a-e27d-4dc9-a722-27c9258bae07",
             "Value": {
                 "id": "3b1df15a-0237-48ea-aa8a-2159d5bd9e8f",
-                "resourcePath": "scripts\\scGetBuff\\scGetBuff.yy",
+                "resourcePath": "scripts\\scBuffGet\\scBuffGet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2924,7 +2924,6 @@
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
         "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
-        "92c8ec42-71bb-4b65-968e-5de99090a6b7",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "52387e9e-387e-489a-aed1-d4b727d19097",
@@ -2973,11 +2972,12 @@
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
         "819c3721-6078-47b0-91cb-c171738ea97b",
+        "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
+        "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
         "bca65bdf-3977-4ffa-9057-499b54290b57",
         "54ba9aef-e374-4001-9b0e-b1fbe4a46f4d",
-        "508da282-5360-414c-896e-c0369ddbf32e",
         "93c0f3dd-0605-48de-811a-2a13bed0930c",
         "81fccae6-6512-41e0-b599-64f5af50f932",
         "61a3a3c1-f3cb-46f8-a290-1ea6cb5be30a",

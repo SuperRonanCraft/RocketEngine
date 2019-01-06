@@ -1,10 +1,8 @@
-/// @desc Display Health, Buff, Rocket and Cooldowns
-if (display != DISPLAYTYPE.SCREEN)
-	exit;
-hpscale = max(hpscale * 0.95, 1);
-//Left by default
-//var sidepos = team == TEAM.LEFT ? hpwidth * 11 - 2 : RES_W - hpwidth * 2 ;
+/// @desc Display Health, Buff, Rocket, Cooldowns and Combos
+
+//-----------------
 //Display health
+hpscale = max(hpscale * 0.95, 1);
 var offset = 0;
 for (var i = 0; i < hp_original; i++) {
 	//Offset every 10 hearts
@@ -18,6 +16,7 @@ for (var i = 0; i < hp_original; i++) {
 	var scale = i == hp ? hpscale : 1;
 	draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
 }
+//-----------------
 //Display Buffs and Time
 offset = 0;
 for (var i = 0; i < ds_list_size(buffs); i++) {

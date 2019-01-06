@@ -2,6 +2,7 @@
 /// @arg shooter-instance
 if (playerState == PLAYERSTATE.KNOCKBACK)
 	with (argument0) {
+		if (object_index != oPlayer) exit;
 		combo_amount++;
 		combo_cooldown_current = 0;
 		combo_player = other.id;

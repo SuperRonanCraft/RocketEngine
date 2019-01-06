@@ -19,7 +19,7 @@ if (clock = 0) {
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	owner.grv = dsBuff[? "grvOriginal"];
-	scRemoveBuff(owner, dsBuff);
+	scBuffRemove(owner, dsBuff);
 } else {
 	//Lower gravity slowly
 	owner.grv = max(owner.grv - 0.05, dsBuff[? "grv"]);

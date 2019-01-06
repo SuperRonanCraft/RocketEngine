@@ -15,7 +15,7 @@ if (clock = 0)
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	owner.ult_charge_multiplier -= dsBuff[? "multiplier"];
-	scRemoveBuff(owner, dsBuff);
+	scBuffRemove(owner, dsBuff);
 } else {
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
 	dsBuff[? BUFF_MAP.PARTICLE], irandom_range(2,4));

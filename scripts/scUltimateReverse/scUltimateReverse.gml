@@ -7,5 +7,5 @@ var amt = instance_number(oPlayer);
 for (var i = 0; i < amt; i++) {
 	var p = instance_find(oPlayer, i);
 	if (p.team != team)
-		scAddBuff(BUFFTYPE.REVERSECONTROLS, p);
+		scBuffAdd(BUFFTYPE.REVERSECONTROLS, p);
 }

@@ -52,7 +52,7 @@ switch (obj) {
 		//Get a list of all possible good buffs
 		for (var i = 0; i < BUFFTYPE.LENGHT; i++) {
 			var map = ds_map_create();
-			scGetBuff(i, map);
+			scBuffGet(i, map);
 			//If the buff good? Add it to the possible array
 			if (map[? BUFF_MAP.GOOD]) {
 				possible[index] = i;
@@ -65,7 +65,7 @@ switch (obj) {
 		//Spawn and give it default values
 		with (instance_create_depth(xx, yy, depth, obj)) {
 			var map = ds_map_create();
-			scGetBuff(ind, map);
+			scBuffGet(ind, map);
 			sprite_index = map[? BUFF_MAP.ICON];
 			buff = map[? BUFF_MAP.TYPE];
 			other.pickups_created++;

@@ -17,7 +17,7 @@ if (clock = 0){
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	owner.jump_adj += dsBuff[? "jump"];	
 	//Remove Slime
-	scRemoveBuff(owner, dsBuff);
+	scBuffRemove(owner, dsBuff);
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0)
