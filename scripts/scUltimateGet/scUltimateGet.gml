@@ -15,9 +15,9 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Mr.Huge!";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateDefault;
 		break;
-	case ULTIMATE.LASERS: //Dodge the lasers!
+	case ULTIMATE.BARRAGE: //Dodge the lasers!
 		ds_map[? ULTIMATE_MAP.NAME] = "Termination";
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateLaser;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateBarrage;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
 		break;
 	case ULTIMATE.FAST: //Triple threat!
@@ -55,10 +55,14 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Rocket Barrage";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateHoming;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
+	case ULTIMATE.LASER: 
+		ds_map[? ULTIMATE_MAP.NAME] = "Lets Delete them!";
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateLaser;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 }
 
 enum ULTIMATE {
-	DEFAULT, LASERS, FAST, SAND, REVERSE, SWIPE, SHIELD, MIRROR, HOMING,
+	DEFAULT, BARRAGE, FAST, SAND, REVERSE, SWIPE, SHIELD, MIRROR, HOMING, LASER,
 	
 	//PUT LAST
 	LENGTH

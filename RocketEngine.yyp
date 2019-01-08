@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "10f58b08-0894-4fc8-a43a-b06dc142944a",
+            "Value": {
+                "id": "ca85191b-a022-4937-ba00-60a0f6d78d18",
+                "resourcePath": "scripts\\scDrawRect\\scDrawRect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "118a5b69-5b45-4d79-ae95-7e59c52e3054",
             "Value": {
                 "id": "071e0be8-06fc-40e2-80ab-2205cced251f",
@@ -354,7 +362,7 @@
             "Key": "1f21fc11-d952-4e84-9139-b99c6adc2365",
             "Value": {
                 "id": "8957e3a8-6cee-41bf-b044-d868f0032468",
-                "resourcePath": "scripts\\scUltimateLaser\\scUltimateLaser.yy",
+                "resourcePath": "scripts\\scUltimateBarrage\\scUltimateBarrage.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1154,7 +1162,7 @@
             "Key": "62645431-2792-433f-8f9c-20e7fc3de003",
             "Value": {
                 "id": "09be1474-7936-41ec-9d8c-2daa5181237e",
-                "resourcePath": "objects\\oUltimateLasers\\oUltimateLasers.yy",
+                "resourcePath": "objects\\oUltimateBarrage\\oUltimateBarrage.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1468,6 +1476,14 @@
                 "id": "48c3fb6a-6f45-48be-ae44-5e48e49ba897",
                 "resourcePath": "scripts\\scMenuRocketList\\scMenuRocketList.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "77a15b51-f0b8-4cfa-91e5-0198e117e529",
+            "Value": {
+                "id": "0dfcc8b0-3b81-49de-82c1-47f166b11a18",
+                "resourcePath": "objects\\oUltimateLaser\\oUltimateLaser.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2239,6 +2255,14 @@
             }
         },
         {
+            "Key": "baa56110-3ad2-4fbd-8848-bd4f43256c5c",
+            "Value": {
+                "id": "f6f11bb6-a6f0-4614-9202-83f58ee67422",
+                "resourcePath": "scripts\\scDrawCircle\\scDrawCircle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bad5ec47-1e21-45a1-8411-9f1bb5506fc8",
             "Value": {
                 "id": "3d5edade-86e5-438c-8ff5-a877cf342f24",
@@ -2759,6 +2783,14 @@
             }
         },
         {
+            "Key": "ee729c30-dc52-42ca-a438-1569da8289c1",
+            "Value": {
+                "id": "87b433a6-e27f-4027-8aef-0935468eca95",
+                "resourcePath": "scripts\\scUltimateLaser\\scUltimateLaser.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
             "Value": {
                 "id": "4f9ffcc4-5928-4fa9-98b7-3f37c3d9b3e7",
@@ -2968,6 +3000,7 @@
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",
         "52deab92-d816-42a2-a7e9-c1d27b700b3c",
         "30fd3536-1bc6-45d9-9728-3e1c11589e5a",
+        "ee729c30-dc52-42ca-a438-1569da8289c1",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
@@ -3026,6 +3059,8 @@
         "093e6d59-2a90-4ecf-82d1-506fe0325e2d",
         "c00d9aec-4219-4441-8d7c-11b27b03bfd6",
         "2c533d0b-af1d-444f-b4c9-2892f0e1535d",
+        "baa56110-3ad2-4fbd-8848-bd4f43256c5c",
+        "10f58b08-0894-4fc8-a43a-b06dc142944a",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",

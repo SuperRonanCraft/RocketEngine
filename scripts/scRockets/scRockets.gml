@@ -52,7 +52,6 @@ ds_map_add(weapons[roc], ROCKET_MAP.DESCRIPTION, "I will find you!");
 ds_map_add(weapons[roc], ROCKET_MAP.RECOIL, 5);
 ds_map_add(weapons[roc], ROCKET_MAP.DAMAGE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.PROJECTILE, ROCKET_SPRITE.HOMING);
-ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.HOMING);
 ds_map_add(weapons[roc], ROCKET_MAP.COOLDOWN, 45 * 0.8);
 ds_map_add(weapons[roc], ROCKET_MAP.SPEED, 15);
 ds_map_add(weapons[roc], ROCKET_MAP.TIMER, 120);
@@ -61,6 +60,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_STEP, scRocketSpecialHoming_Step);
 ds_map_add(weapons[roc], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 7);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 15);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.HOMING);
 
 //REVERSE
 roc = ROCKET.REVERSE;
@@ -125,6 +125,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_WALL, scRocketSpecialFire_Wall);
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_SHOOTABLE, scRocketSpecialFire_Shootable);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 4);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 10);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.LASER);
 
 //SAND
 roc = ROCKET.SAND;
@@ -165,7 +166,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_CREATE, scRocketSpecialLaser_Create);
 ds_map_add(weapons[roc], ROCKET_MAP.BUFF, [BUFFTYPE.COOLDOWN]);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 12);
-ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.LASERS);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.BARRAGE);
 
 //SLIME
 roc = ROCKET.SLIME;

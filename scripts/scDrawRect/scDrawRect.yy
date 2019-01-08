@@ -1,8 +1,8 @@
 {
-    "id": "ee729c30-dc52-42ca-a438-1569da8289c1",
+    "id": "10f58b08-0894-4fc8-a43a-b06dc142944a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUltimateLaser",
+    "name": "scDrawRect",
     "IsCompatibility": false,
     "IsDnD": false
 }

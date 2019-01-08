@@ -3,7 +3,7 @@
 //draw rectangle
 var c = mirror_color;
 draw_set_alpha(mirror_alpha);
-draw_rectangle_color(xpos1, 0, xpos2, y, c, c, c, c, false);
+scDrawRect(xpos1, y, xpos2, y - mirror_height, c, false, mirror_);
 draw_set_alpha(1);
 
 //Particles

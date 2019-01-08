@@ -114,7 +114,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ROCKET.DEFAULT",
+            "value": "ROCKET.FIRE",
             "varName": "starting_weapon",
             "varType": 4
         }

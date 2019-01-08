@@ -2,7 +2,7 @@
     "id": "62645431-2792-433f-8f9c-20e7fc3de003",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oUltimateLasers",
+    "name": "oUltimateBarrage",
     "eventList": [
         {
             "id": "4888fe66-a69a-47eb-bf01-e7a9fc0564f7",

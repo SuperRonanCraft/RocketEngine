@@ -37,6 +37,9 @@ if (!teleported) {
 	else {
 		teleported = false;
 		teleporting = false;
+		var curpos = RES_W - x, mid = RES_W / 2;
+		if (curpos > mid - 10 && curpos < mid + 10)
+			event_user(0);
 	}
 }
 

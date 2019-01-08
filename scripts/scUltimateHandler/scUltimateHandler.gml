@@ -17,7 +17,7 @@ if (key_shoot) { //Shoot key being held down
 			script_execute(ult_cast_script); //Casting an ult but not calling one
 	} else {
 		//if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
-		var ult = rocket_map[? ROCKET_MAP.ULTIMATE]
+		var ult = rocket_map[? ROCKET_MAP.ULTIMATE];
 		if (ult != ult_casting_last) { //New ultimate being casted?
 			var map = ds_map_create(); //Create an ult map
 			scUltimateGet(ult, map); //Grab the ult map
@@ -48,7 +48,9 @@ if (key_shoot) { //Shoot key being held down
 if (!shoot) exit; //Not shooting but we still have full ult charge!
 
 var map = ds_map_create(); //Create an ult map
-scUltimateGet(rocket_map[? ROCKET_MAP.ULTIMATE], map); //Grab the ult map
+scUltimateGet(ult_casting_last, map); //Grab the ult map
+
+show_debug_message(string(ult_casting_last) + " " + rocket_map[? ROCKET_MAP.NAME]);
 
 script_execute(map[? ULTIMATE_MAP.SCRIPT_CASTED]); //Run the ult script, no arguments as the player is the shooter
 ult_charge = 0; //Reset the ult charge
