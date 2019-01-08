@@ -50,8 +50,6 @@ if (!shoot) exit; //Not shooting but we still have full ult charge!
 var map = ds_map_create(); //Create an ult map
 scUltimateGet(ult_casting_last, map); //Grab the ult map
 
-show_debug_message(string(ult_casting_last) + " " + rocket_map[? ROCKET_MAP.NAME]);
-
 script_execute(map[? ULTIMATE_MAP.SCRIPT_CASTED]); //Run the ult script, no arguments as the player is the shooter
 ult_charge = 0; //Reset the ult charge
 scPlaySound(map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound

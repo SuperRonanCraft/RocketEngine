@@ -20,8 +20,9 @@ color_text = c_white; //Color of normal text
 tip_list = scUICreateMenuPage(
 	[tip_element.sprite, sRocket_Homing, "HOMING ROCKET", "A menacing soft-lock rocket!"],
 	[tip_element.sprite, sHealth, "HEALTH PICKUPS", "Low on health?\nPickup an extra life!"],
-	[tip_element.text, "Remember to use your left and right\nkeys to fire up ultimates!"],
+	[tip_element.text, "Remember to use your left and right\nkeys to cast ultimates!"],
 	[tip_element.text, "Gain more ULTIMATE charge by shooting\nthe enemy or grabbing a buff!"],
+	[tip_element.sprite, sRocket_Homing_Ult, "Ultimates", "Each rocket has its own unique ultimate!"]
 );
 
 tip_current = irandom_range(0, ds_grid_height(tip_list) - 1); //Randomize the first tip
