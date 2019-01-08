@@ -28,8 +28,11 @@ if (!teleported) {
 			teleported = true;
 		}
 	} else {
-		x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED], direction);
-		y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);
+		var spd = rocket_map[? ROCKET_MAP.SPEED];
+		x += lengthdir_x(spd, direction);
+		y += lengthdir_y(spd, direction);
+		var mid = RES_W / 2;
+		if (x > mid - spd && x < mid + spd) event_user(0);
 	}
 } else {
 	if (original_xscale != org_xscale)
@@ -37,9 +40,6 @@ if (!teleported) {
 	else {
 		teleported = false;
 		teleporting = false;
-		var curpos = RES_W - x, mid = RES_W / 2;
-		if (curpos > mid - 10 && curpos < mid + 10)
-			event_user(0);
 	}
 }
 
