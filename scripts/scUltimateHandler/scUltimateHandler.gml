@@ -2,7 +2,7 @@ if (!ult_enabled) exit; //Is the system even enabled?
 
 if (ult_charge < ult_charge_max) {scUltimateAddCharge(DAMAGETYPE.TIME); exit;} //Give charge by time, exit
 
-var key_shoot = keyboard_check(keyleft) && keyboard_check(keyright);
+var key_shoot = keyboard_check(keyleft) && keyboard_check(keyright); //Holding both left and right keys to cast ult
 
 var shoot = false;
 
@@ -12,9 +12,9 @@ if (key_shoot) { //Shoot key being held down
 			shoot = true;
 		else
 			ult_cast_time--;
-		//current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
+		//current_cd = rocket_map[? ROCKET_MAP.COOLDOWN]; //Reset rocket cooldown
 		if (ult_cast_script != noone)
-			script_execute(ult_cast_script); //Casting an ult but not calling one
+			script_execute(ult_cast_script); //Casting an ult but not calling one (pre-animation?)
 	} else {
 		//if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
 		var ult = rocket_map[? ROCKET_MAP.ULTIMATE];

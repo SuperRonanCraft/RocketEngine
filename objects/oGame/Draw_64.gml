@@ -1,3 +1,4 @@
+/// @desc Debugger
 /*with (oPlayer) {
 	draw_set_color(c_black);
 	draw_text(view_wport[0]/2, view_hport[0]/8, "vsp " + string(vsp));

@@ -55,10 +55,12 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Rocket Barrage";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateHoming;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
+		break;
 	case ULTIMATE.LASER: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Lets Delete them!";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateLaser;
-		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
+		break;
 }
 
 enum ULTIMATE {
