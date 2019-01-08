@@ -11,4 +11,5 @@ key_old_shoot = false;
 ult_cast_time = 0;
 ult_cast_time_max = 0;
 ult_casting = false;
+ult_casting_last = noone; //The ultimate we were charging
 ult_cast_script = noone;

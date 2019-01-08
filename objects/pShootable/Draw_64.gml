@@ -77,7 +77,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	scDrawPiePart(xposcir, ypos, ult_charge, ult_charge_max, c, 28, 0.8, 9);
 	
 	//ULTIMATE CASTTIME CIRCLE
-	scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_purple, 32, 0.9, 4);
+	scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_yellow, 32, 0.9, 4);
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * prj_scale, 1 * prj_scale, 0, c_white, 0.8);
 	//scDrawPieRectSprite(xpos, ypos + 50, curr_cd, cd, c_white, 5, 0.8, sprite);

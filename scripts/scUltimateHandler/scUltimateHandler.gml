@@ -14,16 +14,20 @@ if (key_shoot) { //Shoot key being held down
 			ult_cast_time--;
 		//current_cd = rocket_map[? ROCKET_MAP.COOLDOWN];
 		if (ult_cast_script != noone)
-			script_execute(ult_cast_script);
+			script_execute(ult_cast_script); //Casting an ult but not calling one
 	} else {
-		if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
-		var map = ds_map_create(); //Create an ult map
-		scUltimateGet(rocket_map[? ROCKET_MAP.ULTIMATE], map); //Grab the ult map
-		ult_casting = true;
-		ult_cast_time = map[? ULTIMATE_MAP.CAST_TIME];
-		ult_cast_time_max = ult_cast_time;
-		ult_cast_script = map[? ULTIMATE_MAP.SCRIPT_CASTING];
-		ds_map_destroy(map); //Delete the ult map
+		//if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
+		var ult = rocket_map[? ROCKET_MAP.ULTIMATE]
+		if (ult != ult_casting_last) { //New ultimate being casted?
+			var map = ds_map_create(); //Create an ult map
+			scUltimateGet(ult, map); //Grab the ult map
+			ult_cast_time = map[? ULTIMATE_MAP.CAST_TIME];
+			ult_cast_time_max = ult_cast_time;
+			ult_cast_script = map[? ULTIMATE_MAP.SCRIPT_CASTING];
+			ult_casting_last = ult; //The last ult we were casting
+			ds_map_destroy(map); //Delete the ult map
+		}
+		ult_casting = true; //Run this only once
 		exit;
 	}
 } else {
@@ -53,5 +57,4 @@ ds_map_destroy(map); //Delete the ult map
 
 //No longer casting
 ult_casting = false;
-ult_cast_time = 0;
-ult_cast_time_max = 0;
+ult_cast_time = ult_cast_time_max; //Reset for a new chargeup

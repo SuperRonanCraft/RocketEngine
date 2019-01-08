@@ -68,14 +68,6 @@
     "maskSpriteId": "90ce5129-0a73-467a-b73e-c8676261b117",
     "overriddenProperties": [
         {
-            "id": "21a83d12-68f6-4455-9d79-bb7497d1a3b9",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
-            "propertyId": "37d965f5-27ac-4926-91ba-60c462f2c454",
-            "value": "DISPLAYTYPE.SCREEN"
-        },
-        {
             "id": "7f29be8e-b9be-4ebd-9329-fd43494ce0c7",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
