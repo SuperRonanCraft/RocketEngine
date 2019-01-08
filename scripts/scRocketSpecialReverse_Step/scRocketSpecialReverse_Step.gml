@@ -32,7 +32,7 @@ if (!teleported) {
 		x += lengthdir_x(spd, direction);
 		y += lengthdir_y(spd, direction);
 		var mid = RES_W / 2;
-		if (x > mid - spd && x < mid + spd) event_user(0);
+		if (x > mid - spd && x < mid + spd) event_user(0); //Destroy when in middle of screen
 	}
 } else {
 	if (original_xscale != org_xscale)
