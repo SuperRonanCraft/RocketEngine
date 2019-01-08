@@ -15,6 +15,7 @@ stage_on_current = stage_on;
 xx = RES_W / 2;
 yy = RES_H / 4;
 
+//Grab the gamemode we are setting up for
 switch (room) {
 	case r1v1Select: global.gamemode = global.gamemodes[GAMEMODE.ONEVONE]; break;
 	case rvTargetSelect: global.gamemode = global.gamemodes[GAMEMODE.TARGETS]; break;
@@ -26,23 +27,18 @@ switch (room) {
 event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
-	["CONFIRM",		menu_element_type.script_runner,	scStageConfirm],
+	["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-	["BACK",		menu_element_type.page_transfer,	menu_page.confirm],
-);
-
-ds_confirm = scUICreateMenuPage(
-	["CONFIRM",		menu_element_type.script_runner,	scUIExitToTitle, "Are you sure?"],
-	["CANCEL",		menu_element_type.page_transfer,	menu_page.main],
+	["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 );
 
 //Pages of the menu
-menu_pages = [ds_menu_main, ds_confirm];
+menu_pages = [ds_menu_main];
 //The page index values (must be in order)
-menu_pages_index = [menu_page.main, menu_page.confirm];
+menu_pages_index = [menu_page.main];
 //Pages that are centered and have no input side
-menu_pages_centered = [ds_menu_main, ds_confirm];
+menu_pages_centered = [ds_menu_main];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	menu_option[i] = 0;
