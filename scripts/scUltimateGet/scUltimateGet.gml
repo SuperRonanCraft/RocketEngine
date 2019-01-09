@@ -36,7 +36,7 @@ switch (type) {
 	case ULTIMATE.REVERSE: //Huh, the cake isnt a lie afterall
 		ds_map[? ULTIMATE_MAP.NAME] = "Portal dimension";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateReverse;
-		ds_map[? ULTIMATE_MAP.CAST_TIME] = 55;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
 		ds_map[? ULTIMATE_MAP.NAME] = "Ur gonna hate this";
