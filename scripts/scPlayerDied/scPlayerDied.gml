@@ -1,2 +1,3 @@
-with(pGMM)
-	event_user(1);
+if (display)
+	with (pGMM)
+		event_user(1);

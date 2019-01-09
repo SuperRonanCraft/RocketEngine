@@ -1615,6 +1615,14 @@
             }
         },
         {
+            "Key": "85cfdb92-8c8d-4717-a83a-487f26b6bb4b",
+            "Value": {
+                "id": "e39b1ec3-f69d-4f1e-85ad-0075667f196b",
+                "resourcePath": "scripts\\scRocketSand_Create\\scRocketSand_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "85d02825-b819-4683-aabd-50db9d5f07b2",
             "Value": {
                 "id": "c13a2ab2-b08a-46be-8475-cd5429a7a4fb",
@@ -2583,6 +2591,14 @@
             }
         },
         {
+            "Key": "d02c7b49-db3d-4b54-a180-27e44039ac2f",
+            "Value": {
+                "id": "15aa06a6-38a4-4b58-9e93-82e9c26dc3bd",
+                "resourcePath": "scripts\\scRocketSand_Step\\scRocketSand_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d1260b08-a738-448f-8ec6-6767a0bcceb7",
             "Value": {
                 "id": "84b17abc-747c-4d34-a72a-37c3175375e8",
@@ -2676,6 +2692,14 @@
                 "id": "7ecb2700-e440-481c-9445-d63a9b6b0ce6",
                 "resourcePath": "views\\ddc98acc-b452-41ad-8428-de628c25bf7e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "de39e19f-7cd9-422a-aa93-4892c404871b",
+            "Value": {
+                "id": "964099d0-ff25-4757-8a4b-90faa411d020",
+                "resourcePath": "scripts\\scRocketSand_Destroy\\scRocketSand_Destroy.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3039,6 +3063,9 @@
         "fec53fa2-f9a0-4286-99e6-6eed12f0a4d8",
         "7c30ad4e-9edc-423c-8c2b-2c1415d78451",
         "7a5bd777-6d09-42a2-ad95-9dd69ef5f2de",
+        "d02c7b49-db3d-4b54-a180-27e44039ac2f",
+        "85cfdb92-8c8d-4717-a83a-487f26b6bb4b",
+        "de39e19f-7cd9-422a-aa93-4892c404871b",
         "3dedc9d0-41e6-411f-8949-1c71f9e8c831",
         "5219a979-caa3-4639-9b4a-8a1007225652",
         "c08826d3-9dd3-4247-81fd-cce74174587c",

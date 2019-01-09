@@ -26,7 +26,7 @@ part_type_direction(parttype, 0, 360, 0, 0);
 part_type_speed(parttype, 0.8, 1, 0, 0);
 part_type_life(parttype, 5, 15);
 ds_map_add(ds_part, PARTICLES.ICE, parttype);
-ds_map_add(ds_part_amt, PARTICLES.ICE, 10);
+ds_map_add(ds_part_amt, PARTICLES.ICE, 15);
 
 parttype = part_type_create();
 part_type_sprite(parttype, s_psparkle, true, false, true);
@@ -81,9 +81,9 @@ ds_map_add(ds_part_amt, PARTICLES.SMOKE1, 5);
 
 parttype = part_type_create();
 part_type_sprite(parttype, s_psand, false, false, true);
-part_type_size(parttype, 0.3, 0.5, -0.05, 0);
-part_type_direction(parttype, 80, 110, 0, 0);
-part_type_speed(parttype, 0.8, 1, 0, 0);
+part_type_size(parttype, 0.3, 0.5, -0.05, 0.05);
+part_type_direction(parttype, 90, 270, 0, 1);
+part_type_speed(parttype, 0.75, 1.15, 0, 0);
 part_type_life(parttype, 5, 15);
 ds_map_add(ds_part, PARTICLES.SAND, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SAND, 15);

@@ -160,6 +160,20 @@
             "value": "KEYBIND.PLAYER1",
             "varName": "keys",
             "varType": 4
+        },
+        {
+            "id": "b8783764-b2f9-415c-99d5-0eb7fbd4919c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "despawn",
+            "varType": 3
         }
     ],
     "solid": false,

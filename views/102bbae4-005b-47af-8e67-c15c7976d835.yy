@@ -8,7 +8,7 @@
         "c07d0565-8664-4ade-bb74-991c3b5bd62e"
     ],
     "filterType": "GMScript",
-    "folderName": "Fast",
+    "folderName": "Spray",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

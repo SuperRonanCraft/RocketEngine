@@ -1,10 +1,5 @@
-if (owner.playerid == 1 && direction != 180) {
-	direction = 180
-	image_angle = direction;
-} else if (owner.playerid == 2 && direction != 0) {
-	direction = 0;
-	image_angle = direction;
-}
+direction += 180; //Reverse its direction
+image_angle = direction;
 rev_map = ds_map_create();
 rev_map[? "side"] = true; //true = left, false = right
 rev_map[? "teleported"] = false; //Have we teleported?
