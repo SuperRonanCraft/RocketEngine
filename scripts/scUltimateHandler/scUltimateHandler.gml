@@ -13,8 +13,8 @@ if (key_shoot) { //Shoot key being held down
 		else
 			ult_cast_time--;
 		//current_cd = rocket_map[? ROCKET_MAP.COOLDOWN]; //Reset rocket cooldown
-		if (ult_cast_script != noone)
-			script_execute(ult_cast_script); //Casting an ult but not calling one (pre-animation?)
+		if (ult_casting_step != noone)
+			script_execute(ult_casting_step); //Casting an ult but not calling one (pre-animation?)
 	} else {
 		//if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
 		var ult = rocket_map[? ROCKET_MAP.ULTIMATE];
@@ -23,7 +23,8 @@ if (key_shoot) { //Shoot key being held down
 			scUltimateGet(ult, map); //Grab the ult map
 			ult_cast_time = map[? ULTIMATE_MAP.CAST_TIME];
 			ult_cast_time_max = ult_cast_time;
-			ult_cast_script = map[? ULTIMATE_MAP.SCRIPT_CASTING];
+			ult_casting_step = map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP];
+			ult_casting_draw = map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW];
 			ult_casting_last = ult; //The last ult we were casting
 			ds_map_destroy(map); //Delete the ult map
 		}

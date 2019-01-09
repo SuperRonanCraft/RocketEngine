@@ -7,7 +7,8 @@ var ds_map = argument1;
 
 //The amount of time u need to press the shoot button to ult
 ds_map[? ULTIMATE_MAP.CAST_TIME] = 25; //Defaulted to 25/60th of a second
-ds_map[? ULTIMATE_MAP.SCRIPT_CASTING] = noone; //Defaulted to aviod errors
+ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP] = noone; //Script when casting an ult
+ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = noone; //Script when casting an ult
 ds_map[? ULTIMATE_MAP.SOUND_CAST] = noone; //Default sound of the ultimate being casted
 
 switch (type) {
@@ -23,6 +24,7 @@ switch (type) {
 	case ULTIMATE.FAST: //Triple threat!
 		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateFast;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateFastDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.SAND: //I Cant See!
@@ -59,6 +61,7 @@ switch (type) {
 	case ULTIMATE.LASER: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Lets Delete them!";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateLaser;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
 		break;
 }
@@ -71,7 +74,7 @@ enum ULTIMATE {
 }
 
 enum ULTIMATE_MAP {
-	NAME, SCRIPT_CASTING, SCRIPT_CASTED, CAST_TIME,
+	NAME, SCRIPT_CASTING_STEP, SCRIPT_CASTING_DRAW, SCRIPT_CASTED, CAST_TIME,
 	//SOUND
 	SOUND_CAST
 }
