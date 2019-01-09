@@ -6,26 +6,25 @@ if (owner != other.id) {
 	//if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 	//	scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other);
 	//Add the pShootable to the hitlist
-	ds_list_add(hitList, other);
 	//Do damage once to the hitlist
-	for (var i = 0; i < ds_list_size(hitList); i++)
-		if (ds_list_find_index(confirmList, hitList[| i]) == -1) {
-			ds_list_add(confirmList, hitList[| i]);
-			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
-			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
-				dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
-			//Knockback		
-			doKnockback(hitList[|i], rocket_map[? ROCKET_MAP.KBAMT], direction);
-			//Damage player
-			with (hitList[| i])
-				scDamageShootable(other.owner, false, true, dmg);
-			//Add buff
-			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
-				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
-			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
-				with (owner)
-					scUltimateAddCharge(DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
-		}
+	if (ds_list_find_index(confirmList, other) == -1) {
+		ds_list_add(confirmList, other);
+		ds_list_add(hitList, other);
+		var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
+		if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
+			dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
+		//Knockback		
+		doKnockback(other, rocket_map[? ROCKET_MAP.KBAMT], direction);
+		//Damage player
+		with (other)
+			scDamageShootable(other.owner, false, true, dmg);
+		//Add buff
+		if (rocket_map[? ROCKET_MAP.BUFF] != noone)
+			scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other);
+		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
+			with (owner)
+				scUltimateAddCharge(DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+	}
 	//Custom Explosion with a pShootable script
 	if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)
 		script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE], other);

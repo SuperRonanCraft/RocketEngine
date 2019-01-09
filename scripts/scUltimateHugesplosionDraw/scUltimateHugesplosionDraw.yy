@@ -1,8 +1,8 @@
 {
-    "id": "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
+    "id": "9402c50c-2b68-481f-aeb5-ba4a832f4c25",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUltimateFast",
+    "name": "scUltimateHugesplosionDraw",
     "IsCompatibility": false,
     "IsDnD": false
 }

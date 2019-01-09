@@ -41,7 +41,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.CLIP, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.RELOAD_TIME, 40);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 1);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 3);
-ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.FAST);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SPRAY);
 
 //HOMING
 roc = ROCKET.HOMING;
@@ -148,7 +148,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_CREATE, scRocketSand_ExplodeCreate
 ds_map_add(weapons[roc], ROCKET_MAP.EXPLOSION_STEP, scRocketSand_ExplodeStep);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 3);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 5);
-ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.SAND);
+ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.HUGEEXPLOSION);
 
 //LASER
 roc = ROCKET.LASER;

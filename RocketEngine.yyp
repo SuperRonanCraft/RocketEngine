@@ -1066,7 +1066,7 @@
             "Key": "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
             "Value": {
                 "id": "2952311c-66b5-46c3-ad61-8312d1715d11",
-                "resourcePath": "scripts\\scUltimateFast\\scUltimateFast.yy",
+                "resourcePath": "scripts\\scUltimateSpray\\scUltimateSpray.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1282,7 +1282,7 @@
             "Key": "6cc25b60-8d65-432c-839c-7ac6ffc724b4",
             "Value": {
                 "id": "1d559415-daa8-45ee-a6ed-a899f27cebd2",
-                "resourcePath": "objects\\oUltimateSand\\oUltimateSand.yy",
+                "resourcePath": "objects\\oUltimateHugesplosion\\oUltimateHugesplosion.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1674,7 +1674,7 @@
             "Key": "88c1413f-e933-467a-9ff0-ea073a4a3731",
             "Value": {
                 "id": "5be44d7d-76bc-425b-902e-43d620a54355",
-                "resourcePath": "scripts\\scUltimateSand\\scUltimateSand.yy",
+                "resourcePath": "scripts\\scUltimateHugesplosion\\scUltimateHugesplosion.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1751,6 +1751,14 @@
             }
         },
         {
+            "Key": "901315a8-9858-4241-b1bd-0dff66a4c542",
+            "Value": {
+                "id": "ab369b7c-452a-4916-84f9-bb2f745d37d3",
+                "resourcePath": "views\\901315a8-9858-4241-b1bd-0dff66a4c542.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9060d9ee-7760-4043-8ade-3367c2498167",
             "Value": {
                 "id": "a22dd90f-70df-4ace-b631-a44062c74e30",
@@ -1819,6 +1827,14 @@
             "Value": {
                 "id": "08128d37-7896-453f-836d-eaf4b78d832f",
                 "resourcePath": "scripts\\scBuffChilled\\scBuffChilled.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9402c50c-2b68-481f-aeb5-ba4a832f4c25",
+            "Value": {
+                "id": "74a87e56-12e8-4dda-b131-dfd27e57774f",
+                "resourcePath": "scripts\\scUltimateHugesplosionDraw\\scUltimateHugesplosionDraw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2394,7 +2410,7 @@
             "Key": "c07d0565-8664-4ade-bb74-991c3b5bd62e",
             "Value": {
                 "id": "acc58d7d-d859-456a-b8ce-1d8741869c40",
-                "resourcePath": "scripts\\scUltimateFastDraw\\scUltimateFastDraw.yy",
+                "resourcePath": "scripts\\scUltimateSprayDraw\\scUltimateSprayDraw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3045,6 +3061,7 @@
         "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
         "c07d0565-8664-4ade-bb74-991c3b5bd62e",
         "88c1413f-e933-467a-9ff0-ea073a4a3731",
+        "9402c50c-2b68-481f-aeb5-ba4a832f4c25",
         "b59162fe-a4e6-4152-a4a7-b2bf31784b65",
         "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",

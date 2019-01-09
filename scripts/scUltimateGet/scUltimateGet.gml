@@ -21,15 +21,16 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateBarrage;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
 		break;
-	case ULTIMATE.FAST: //Triple threat!
+	case ULTIMATE.SPRAY: //Triple threat!
 		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateFast;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateFastDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateSpray;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateSprayDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
-	case ULTIMATE.SAND: //I Cant See!
+	case ULTIMATE.HUGEEXPLOSION: //I Cant See!
 		ds_map[? ULTIMATE_MAP.NAME] = "Honey don't go outside!";
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateSand;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateHugesplosion;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHugesplosionDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.REVERSE: //Huh, the cake isnt a lie afterall
@@ -67,7 +68,7 @@ switch (type) {
 }
 
 enum ULTIMATE {
-	DEFAULT, BARRAGE, FAST, SAND, REVERSE, SWIPE, SHIELD, MIRROR, HOMING, LASER,
+	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, REVERSE, SWIPE, SHIELD, MIRROR, HOMING, LASER,
 	
 	//PUT LAST
 	LENGTH
