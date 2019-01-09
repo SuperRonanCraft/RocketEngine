@@ -20,7 +20,7 @@ if (exploding) {
 	var dir = -(360 / explode_rocket_amount) / 2;
 	for (var i = 0; i < explode_rocket_amount; i++) {
 		dir += (360 / explode_rocket_amount);
-		scSpawnRocket(x, y, depth, dir, owner, rocket_map, [ROCKET_MAP.BUFF], [BUFFTYPE.REVERSECONTROLS]);
+		scSpawnRocket(x, y, depth, dir, owner, rocket_map);//, [ROCKET_MAP.BUFF], [BUFFTYPE.REVERSECONTROLS]);
 	}
 	spawned = true;
 }

@@ -80,6 +80,7 @@ ds_map_add(weapons[roc], ROCKET_MAP.ROCKET_DESTROY, scRocketSpecialReverse_Destr
 ds_map_add(weapons[roc], ROCKET_MAP.IGNORE_WALL, true);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_MAGNITUDE, 2);
 ds_map_add(weapons[roc], ROCKET_MAP.SHAKE_FRAMES, 6);
+ds_map_add(weapons[roc], ROCKET_MAP.BUFF, BUFFTYPE.REVERSECONTROLS);
 ds_map_add(weapons[roc], ROCKET_MAP.ULTIMATE, ULTIMATE.REVERSE);
 
 //ICE
