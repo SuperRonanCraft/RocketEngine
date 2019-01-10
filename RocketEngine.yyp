@@ -522,7 +522,7 @@
             "Key": "297d4c3b-f851-40c5-ab77-d200e683277e",
             "Value": {
                 "id": "d3ebb60c-5a63-4973-822e-939cbf1d35a2",
-                "resourcePath": "sprites\\sexplosion_Default\\sexplosion_Default.yy",
+                "resourcePath": "sprites\\sexplosion_Default2\\sexplosion_Default2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2700,6 +2700,14 @@
                 "id": "964099d0-ff25-4757-8a4b-90faa411d020",
                 "resourcePath": "scripts\\scRocketSand_Destroy\\scRocketSand_Destroy.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "deb17bfa-50b9-4836-8941-cd57aa0c61f9",
+            "Value": {
+                "id": "1a2d1ede-6635-4246-b8c3-38b9eb2e2dec",
+                "resourcePath": "sprites\\sexplosion_Default\\sexplosion_Default.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

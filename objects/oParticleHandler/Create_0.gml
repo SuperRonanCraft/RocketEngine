@@ -107,7 +107,7 @@ ds_map_add(ds_part, PARTICLES.SPEED, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SPEED, 10);
 
 parttype = part_type_create();
-part_type_sprite(parttype, s_plowgravity, true, true, true);
+part_type_sprite(parttype, s_plowgravity, true, true, false);
 part_type_size(parttype, 0.5, 0.8, 0, 0);
 part_type_speed(parttype, 1, 2, 0.5, 0.5);
 part_type_life(parttype, 10, 15);
