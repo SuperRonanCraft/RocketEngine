@@ -9,7 +9,7 @@
     "bbox_bottom": 31,
     "bbox_left": 0,
     "bbox_right": 31,
-    "bbox_top": 2,
+    "bbox_top": 0,
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
@@ -51,7 +51,7 @@
             },
             "images": [
                 {
-                    "id": "f847aac0-e56e-439a-826c-e6d80eb7c35d",
+                    "id": "76867ca1-558e-4dd3-b936-129bdda1119f",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
                     "FrameId": "292240cf-8303-4404-a82a-284447d407c5",

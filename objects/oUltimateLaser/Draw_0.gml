@@ -24,11 +24,20 @@ for (var i = 0; i < ds_list_size(list); i++) {
 ds_list_destroy(list);
 
 var dis = hitting != noone ? abs(x - hitting.x) : abs(x - x2);
-var xx = 5;
-for (var i = 0; i < dis / 2; i++) {
-	draw_sprite_ext(sprite_index, 1, x + (image_xscale * xx), y + offset, 1, width_cur, 0, c_white, laser_alpha);
-	xx += 2;
+var width = abs(sprite_width);
+var xoffset = image_xscale * width;
+var xx = 0;
+var amt = floor(dis / width)
+for (var i = 0; i < amt; i++) {
+	if (i == amt - 1) {
+		var val = image_xscale * (dis mod 32);
+		draw_sprite_part_ext(sprite_index, 1, 0, 0, abs(val), sprite_height, x + xx + (val - ((width / 2) * (image_xscale * -1))), y - ((sprite_height * width_cur) / width_cur) + offset, 1, width_cur, c_white, laser_alpha);
+		xx += val;
+	} else {
+		xx += xoffset;
+		draw_sprite_ext(sprite_index, 1, x + xx, y + offset, 1, width_cur, 0, c_white, laser_alpha);
+	}
 }
 
 //End
-draw_sprite_ext(sprite_index, 2, x + xx, y + offset, image_xscale, width_cur, 0, c_white, laser_alpha);
+draw_sprite_ext(sprite_index, 2, x + xx + xoffset, y + offset, image_xscale, width_cur, 0, c_white, laser_alpha);
