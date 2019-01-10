@@ -11,8 +11,6 @@ display = true; //Display gui stuff
 //Show when hit
 flash = 0;
 
-//How to display the health
-
 //Load Rockets
 scRocketStart(starting_weapon);
 

@@ -18,15 +18,20 @@ if (timer % 10 == 0 && timer < 30)
 		image_xscale = 0.8;
 		image_yscale = 0.8;
 		//Find a target
-		for (var i = 0; i < instance_number(oPlayer); i++)
-			if (instance_find(oPlayer, i) != owner)
-				target = instance_find(oPlayer, i);
-		with (target) {
-			other.homing = ds_map_create();
-			other.homing[? "clock"] = 0;
-			other.homing[? "locX"] = x + irandom_range(-30, 30);
-			other.homing[? "locY"] = y + irandom_range(-30, 30);
+		var target = noone, xx = x, yy = y;
+		for (var i = 0; i < instance_number(oPlayer); i++) {
+			var obj = instance_find(oPlayer, i)
+			if (obj != owner) {
+				target = obj;
+				xx = target.x;
+				yy = target.y;
+			}
 		}
+		homing = ds_map_create();
+		homing[? "target"] = target;
+		homing[? "clock"] = 0;
+		homing[? "locX"] = xx + irandom_range(-30, 30);
+		homing[? "locY"] = yy + irandom_range(-30, 30);
 		rocket_map[? ROCKET_MAP.SPEED] = 0.1;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	

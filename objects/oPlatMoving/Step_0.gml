@@ -17,12 +17,12 @@ y += vsp;
 //}
 //Add horizontal speed to player
 
-var list = ds_list_create();
+/*var list = ds_list_create();
 var obj = instance_place_list(x, y - 1, oPlayer, list, true);
 if (obj > 0)
-	for (var i = 0; i < obj; i++) {
-		var ins = list[| i];
-		ins.hsp_carry = hsp;
-		ins.vsp_carry = vsp;
-	}
+	for (var i = 0; i < obj; i++)
+		with (list[| i]) {
+			hsp_carry = other.hsp;
+			vsp_carry = other.vsp;
+		}
 ds_list_destroy(list);

@@ -38,34 +38,6 @@
             "varType": 3
         },
         {
-            "id": "7f74fcf1-195e-4ea0-b1a3-de4b9e172f31",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "vsp",
-            "varType": 0
-        },
-        {
-            "id": "9ef7b6bc-83bd-4077-96e2-a22d3d0b9e78",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "hsp",
-            "varType": 0
-        },
-        {
             "id": "82b63db5-713a-4fa2-be20-b2a80117eac1",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oSeperator",
     "eventList": [
-        
+        {
+            "id": "eeba0088-ce1b-4648-91ac-0e8d652091ee",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "7195dc8f-dbfc-42b3-8700-b609300cde6e"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [

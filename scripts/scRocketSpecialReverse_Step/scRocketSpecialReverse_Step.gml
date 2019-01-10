@@ -6,9 +6,10 @@ var org_xscale = rev_map[? "org_xscale"];
 var offset = rev_map[? "offset"];
 
 if (!teleporting)
-	if (x < offset && (direction > 90 && direction < 270))
+	if (x < offset && (direction > 90 && direction < 270)) {
+		rev_map[? "side"] = true;
 		teleporting = true;
-	else if (x > RES_W - offset && (direction >= 270 || direction <= 90)) {
+	} else if (x > RES_W - offset && (direction >= 270 || direction <= 90)) {
 		teleporting = true;
 		rev_map[? "side"] = false;
 	}
