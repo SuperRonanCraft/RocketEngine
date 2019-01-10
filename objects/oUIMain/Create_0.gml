@@ -81,5 +81,3 @@ menu_option[page] = -1; //Default main page is -1 for the animation phase
 unfolding = false;
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
 	unfold[i] = 0; //Position multiplier of page text
-	
-scRockets(0); //Load in a copy of the rockets map for refrence

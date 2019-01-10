@@ -12,7 +12,4 @@ pickups_created = 0;
 //Delay between each pickup spawn
 spawn_time = 120;
 
-//Load all default rockets
-scRockets(0);
-
 event_inherited();

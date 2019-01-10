@@ -7,6 +7,6 @@ for (var i = 0; i < 5; i++) {
 	else
 		dir = 140 + (20 * i);
 	//Create the rocket with the new direction
-	with (scSpawnRocket(x, y, depth - 1, dir, id, rocket_map))
+	with (scSpawnRocket(x, y, depth - 1, dir, id, rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false]))
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
 }

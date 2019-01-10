@@ -73,7 +73,7 @@
             "mvc": "1.0",
             "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
             "propertyId": "db9b1853-5c2e-4303-8ecd-2952eb879441",
-            "value": "ROCKET.REVERSE"
+            "value": "ROCKET.ICE"
         }
     ],
     "parentObjectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",

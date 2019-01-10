@@ -13,7 +13,9 @@ if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone) {
 }
 
 //Grow into the stage
-if (abs(image_xscale) != abs(original_xscale))
+if (image_xscale != original_xscale)
 	image_xscale = clamp(image_xscale + scale_speed, -original_xscale, original_xscale);
-if (abs(image_yscale) != abs(original_yscale))
-	image_yscale = clamp(image_yscale + scale_speed, -original_yscale, original_yscale);
+if (image_yscale != original_yscale) {
+	var val = sign(original_yscale);
+	image_yscale = clamp(image_yscale + (scale_speed * val), -original_yscale * val, original_yscale * val);
+}

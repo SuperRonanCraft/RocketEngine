@@ -20,10 +20,13 @@ if (timer % 10 == 0 && timer < 30)
 		//Find a target
 		for (var i = 0; i < instance_number(oPlayer); i++)
 			if (instance_find(oPlayer, i) != owner)
-				target = instance_find(oPlayer, i);	
-		homingClock = 0;
-		targetLocX = target.x + irandom_range(-30, 30);
-		targetLocY = target.y + irandom_range(-30, 30);
+				target = instance_find(oPlayer, i);
+		with (target) {
+			other.homing = ds_map_create();
+			other.homing[? "clock"] = 0;
+			other.homing[? "locX"] = x + irandom_range(-30, 30);
+			other.homing[? "locY"] = y + irandom_range(-30, 30);
+		}
 		rocket_map[? ROCKET_MAP.SPEED] = 0.1;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	

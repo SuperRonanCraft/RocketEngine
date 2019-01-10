@@ -28,7 +28,7 @@ if (current_delay == 0) {
 current_delay = max(-1, current_delay - 1);
 if (current_delay == -1)
 	current_cd = max(0, current_cd - 1);
-current_recoil = max(0, floor(current_recoil * 0.8));
+//current_recoil = max(0, floor(current_recoil * 0.8));
 
 //Reload
 if (ammo == 0)

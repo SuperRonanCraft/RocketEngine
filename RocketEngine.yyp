@@ -1386,7 +1386,7 @@
             "Key": "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
             "Value": {
                 "id": "b53dae57-c5ae-460f-8278-825f507e2068",
-                "resourcePath": "scripts\\scRocketGet\\scRocketGet.yy",
+                "resourcePath": "scripts\\scRocketGet2\\scRocketGet2.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2106,7 +2106,7 @@
             "Key": "ab738f93-ad7a-45aa-a119-240062d21cca",
             "Value": {
                 "id": "a76767ee-cfbc-4303-85f7-1976f4b65f81",
-                "resourcePath": "scripts\\scRockets\\scRockets.yy",
+                "resourcePath": "scripts\\scRocketGet\\scRocketGet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2983,6 +2983,14 @@
             }
         },
         {
+            "Key": "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
+            "Value": {
+                "id": "98465573-23f6-48f2-83c2-f0400742d626",
+                "resourcePath": "scripts\\scRocketStart\\scRocketStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd5f9e2d-aab8-4026-8d3c-80bd3e096f2f",
             "Value": {
                 "id": "45545c77-c6fd-4aea-ba6a-4d776cfd6f66",
@@ -3038,7 +3046,7 @@
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
-        "e9299095-87f4-4b5e-a689-8746fbc3f450",
+        "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
         "ab738f93-ad7a-45aa-a119-240062d21cca",
         "02b336b5-7467-4576-8a97-db9d380154a7",
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
@@ -3046,6 +3054,7 @@
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
+        "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
         "b207e289-366c-4794-9fc6-7166e3f11f20",

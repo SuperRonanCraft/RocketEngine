@@ -32,6 +32,8 @@ with (inst) {
 	rocket_map = map;
 	direction = dir;
 	image_angle = direction;
+	if (direction > 90 && direction < 270)
+		image_yscale *= -1;
 	sprite_index = rocket_map[? ROCKET_MAP.PROJECTILE];
 	timer = rocket_map[? ROCKET_MAP.TIMER];
 }

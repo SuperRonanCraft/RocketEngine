@@ -14,7 +14,7 @@ flash = 0;
 //How to display the health
 
 //Load Rockets
-scRockets(starting_weapon);
+scRocketStart(starting_weapon);
 
 //Load Ultimates
 scUltimateStart();

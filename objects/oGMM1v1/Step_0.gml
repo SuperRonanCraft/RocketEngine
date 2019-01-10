@@ -27,14 +27,15 @@ switch (obj) {
 		var index = 0;
 		//Get a list of all enabled rockets
 		for (var i = ROCKET.DEFAULT; i < ROCKET.LENGHT; i++) {
-			var wp_map = weapons[i];
+			var wp_map = scRocketGet(i);
 			if (is_undefined(wp_map[? ROCKET_MAP.ENABLED]) || wp_map[? ROCKET_MAP.ENABLED]) {
 				possible[index] = i;
 				index++;
 			}
+			ds_map_destroy(wp_map);
 		}
 		//Pick a random rocket from the possible array
-		var map = weapons[possible[irandom_range(0, array_length_1d(possible) - 1)]];
+		var map = scRocketGet(possible[irandom_range(0, array_length_1d(possible) - 1)]);
 		//Spawn and give it default values
 		with (instance_create_depth(xx, yy, depth, obj)) {
 			if (x > RES_W / 2)
@@ -44,6 +45,7 @@ switch (obj) {
 			other.pickups_created++;
 			owner = other;
 		}
+		ds_map_destroy(map);
 		break;
 	//Is a buff pickup
 	case oBuffPickup:
