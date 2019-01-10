@@ -47,7 +47,7 @@ switch (roc) {
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.HOMING;
-		map[? ROCKET_MAP.COOLDOWN] = 45 * 0.8;
+		map[? ROCKET_MAP.COOLDOWN] = 45 * 0.65;
 		map[? ROCKET_MAP.SPEED] = 15;
 		map[? ROCKET_MAP.TIMER] = 120;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
@@ -149,11 +149,11 @@ switch (roc) {
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LASER;
 		map[? ROCKET_MAP.COOLDOWN] = 50 * varcd;
-		map[? ROCKET_MAP.SPEED] = 8*varspd;
-		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.SPEED] = 20;
+		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialLaser_Create;
-		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.COOLDOWN];
+		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.COOLDOWN];
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 12;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BARRAGE;
