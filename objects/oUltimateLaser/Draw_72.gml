@@ -4,4 +4,5 @@
 if (first_draw) exit;
 first_draw = true;
 
-x2 = side == TEAM.LEFT ? RES_W : 0;
+image_xscale = side == TEAM.LEFT ? 1 : -1;
+x2 = side == TEAM.LEFT ? RES_W : 0; //Collision line
