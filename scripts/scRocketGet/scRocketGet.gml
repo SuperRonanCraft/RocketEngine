@@ -199,19 +199,21 @@ switch (roc) {
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SHIELD;
 		break;
 		
-	case ROCKET.INTERCEPT:
-		map[? ROCKET_MAP.NAME] = "Interceptor";
-		map[? ROCKET_MAP.DESCRIPTION] = "Not another Sombra";
-		map[? ROCKET_MAP.DAMAGE] = 0;
+	case ROCKET.BOUNCY:
+		map[? ROCKET_MAP.NAME] = "Bouncy Castle";
+		map[? ROCKET_MAP.DESCRIPTION] = "Ahhh Childhood parties";
+		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.RECOIL] = 2;
-		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.INTERCEPT;
-		map[? ROCKET_MAP.COOLDOWN] = 18;
-		map[? ROCKET_MAP.SPEED] = 12*varspd;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOUNCY;
+		map[? ROCKET_MAP.COOLDOWN] = room_speed * 1.8;
+		map[? ROCKET_MAP.SPEED] = 8 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
-		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketIntercept_ExplodeCreate;
-		map[? ROCKET_MAP.EXPLOSION_STEP] = scRocketIntercept_ExplodeStep;
-		map[? ROCKET_MAP.ENABLED] = false; //Do not allow rocket in-game
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketBouncy_Create;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketBouncy_Step;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBouncy_Destroy;
+		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		break;
 }
 

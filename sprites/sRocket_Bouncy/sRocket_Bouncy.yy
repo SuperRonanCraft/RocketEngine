@@ -2,7 +2,7 @@
     "id": "7ba7f4a4-2968-4299-a5ba-1fa51cbcfe5f",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sRocket_Interceptor",
+    "name": "sRocket_Bouncy",
     "For3D": false,
     "HTile": false,
     "VTile": false,

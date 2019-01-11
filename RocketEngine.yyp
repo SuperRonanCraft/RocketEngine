@@ -1338,7 +1338,7 @@
             "Key": "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
             "Value": {
                 "id": "bfb58431-e244-4472-a2fc-fc82b7199bc9",
-                "resourcePath": "scripts\\scRocketIntercept_ExplodeCreate\\scRocketIntercept_ExplodeCreate.yy",
+                "resourcePath": "scripts\\scRocketBouncy_Create\\scRocketBouncy_Create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1514,7 +1514,7 @@
             "Key": "7ba7f4a4-2968-4299-a5ba-1fa51cbcfe5f",
             "Value": {
                 "id": "53f4c4b0-8262-4afc-b9b7-36f7708a5cb5",
-                "resourcePath": "sprites\\sRocket_Interceptor\\sRocket_Interceptor.yy",
+                "resourcePath": "sprites\\sRocket_Bouncy\\sRocket_Bouncy.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1975,6 +1975,14 @@
             }
         },
         {
+            "Key": "a0373957-1977-4dc5-8f69-f712d0f32230",
+            "Value": {
+                "id": "1a8a0211-8df3-4261-8fbd-fef3fbbbc909",
+                "resourcePath": "scripts\\scRocketBouncy_Destroy\\scRocketBouncy_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a1f267c9-deba-4c77-be57-b84b7a858768",
             "Value": {
                 "id": "c15c03ea-4d70-4def-8e12-cbf2749fb879",
@@ -2026,7 +2034,7 @@
             "Key": "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
             "Value": {
                 "id": "812aca6b-08cb-467d-9098-54ac5c0607c1",
-                "resourcePath": "scripts\\scRocketIntercept_ExplodeStep\\scRocketIntercept_ExplodeStep.yy",
+                "resourcePath": "scripts\\scRocketBouncy_Step\\scRocketBouncy_Step.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3127,6 +3135,7 @@
         "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
         "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
         "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
+        "a0373957-1977-4dc5-8f69-f712d0f32230",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",

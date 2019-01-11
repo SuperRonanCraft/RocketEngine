@@ -1,7 +1,7 @@
 /// @desc manage sounds, play a sound
-/// @arg sound to play
+/// @arg sound* to play
 /// @arg pitch* of sound
-/// @arg cancel-sound* sound you would also like to cancel
+/// @arg [cancel-sound]* sound you would like to cancel
 
 var sound = argument[0];
 if (sound != noone) {

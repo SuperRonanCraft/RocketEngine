@@ -8,5 +8,5 @@ with (scSpawnRocket(x, y, depth + 1, team == TEAM.LEFT ? 0 : 180, id, rocket_map
 	size = 3;
 	//Scale
 	image_xscale += .5;
-	image_yscale += .5;
+	image_yscale += sign(image_yscale) * .5; //Backwards rocket support
 }

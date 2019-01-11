@@ -1,8 +1,8 @@
 {
-    "id": "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
+    "id": "a0373957-1977-4dc5-8f69-f712d0f32230",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scRocketIntercept_ExplodeCreate",
+    "name": "scRocketBouncy_Destroy",
     "IsCompatibility": false,
     "IsDnD": false
 }
