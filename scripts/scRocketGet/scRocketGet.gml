@@ -214,6 +214,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBouncy_Destroy;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		break;
 }
 

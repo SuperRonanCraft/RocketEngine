@@ -1391,14 +1391,6 @@
             }
         },
         {
-            "Key": "734495cc-adba-45b8-8cf4-5ff46bbb9525",
-            "Value": {
-                "id": "b0c09443-cfb3-4ea2-bb71-66daff1491d3",
-                "resourcePath": "sprites\\s_pSmokeScreen\\s_pSmokeScreen.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "73916b9e-7998-48c3-a569-71fa392c6841",
             "Value": {
                 "id": "786d2bd9-b04e-49d1-b3fc-02c4e14a6b7f",

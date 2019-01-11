@@ -28,7 +28,7 @@ map[? ROCKET_MAP.ROCKET_DESTROY] = noone; //The rocket destroy script (adds)
 //PARTICLES
 map[? ROCKET_MAP.PARTICLE_TRAIL] = noone; //rocket particle trail
 map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
-map[? ROCKET_MAP.PARTICLE_AMT] = 1; //rocket particle trail
+map[? ROCKET_MAP.PARTICLE_AMT] = 5; //rocket particle trail amount
 //SCREEN SHAKE
 map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2; //Screen shake magnitude
 map[? ROCKET_MAP.SHAKE_FRAMES] = 8; //Screen shake frame

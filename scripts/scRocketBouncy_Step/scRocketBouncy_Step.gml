@@ -8,7 +8,6 @@ var vsp = lengthdir_y(spd, direction);
 
 
 var col = false;
-var org = direction;
 var inst = collision_point(x + hsp, y, oWall, true, false);
 if (inst != noone) { //Check x collision
 	if (inst.object_index == oSeperator) {
@@ -46,6 +45,3 @@ x += hsp;
 y += vsp;
 if (refx || refy)
 	image_angle = direction;
-
-if (org != direction)
-	show_debug_message("CHANGED! x=" + string(refx) + " y=" + string(refy) + " bar="+string(bouncy[? "passbarrier"]));
