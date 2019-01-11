@@ -5,12 +5,12 @@ owner = noone;
 damage_toggle = false; //Ability to toggle damage
 
 //Maximum alpha
-alpha_max = 0.85;
-alpha_index = 0.025;
+alpha_max = 0.85; //Max opacity
+alpha_index = 0.025; //Change of alpha per event
 color = c_aqua;
-radius = 50; //Radius of shield
-width_max = 10; //Width of shield
-width = 0;
+//radius = sprite_width / 2; //Radius of shield
+//width_max = 10; //Width of shield
+//width = 0;
 
 //Uptime
 timer = 3 * room_speed;
@@ -20,4 +20,4 @@ fading_time = 30;
 //false is fading in, true is out
 fading_type = false;
 //The alpha that we are at
-fading_alpha = 0;
+image_alpha = 0;

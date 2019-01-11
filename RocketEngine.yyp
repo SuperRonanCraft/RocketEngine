@@ -1927,6 +1927,14 @@
             }
         },
         {
+            "Key": "9bf5e0b3-1881-4f20-a5a7-8812e3c59864",
+            "Value": {
+                "id": "d2343b4b-8af1-469d-83b9-6f7f51b26de1",
+                "resourcePath": "sprites\\sUltMirror\\sUltMirror.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9c3aae89-90b3-4a3d-8655-7eefa58dcf6d",
             "Value": {
                 "id": "2be690fb-2977-41e5-a5bf-b7540dd845cc",
@@ -1964,6 +1972,14 @@
                 "id": "b38a9de5-d3ae-4f4c-85a2-0f98b452a87b",
                 "resourcePath": "scripts\\scStageChange\\scStageChange.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a1f267c9-deba-4c77-be57-b84b7a858768",
+            "Value": {
+                "id": "c15c03ea-4d70-4def-8e12-cbf2749fb879",
+                "resourcePath": "sprites\\sUltShield\\sUltShield.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
