@@ -8,7 +8,8 @@ var ds_map = argument1;
 //The amount of time u need to press the shoot button to ult
 ds_map[? ULTIMATE_MAP.CAST_TIME] = 25; //Defaulted to 25/60th of a second
 ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP] = noone; //Script when casting an ult
-ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = noone; //Script when casting an ult
+ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = noone; //Draw script when casting an ult
+ds_map[? ULTIMATE_MAP.SCRIPT_CASTED_DRAW] = noone; //Draw script when ult casted
 ds_map[? ULTIMATE_MAP.SOUND_CAST] = noone; //Default sound of the ultimate being casted
 
 switch (type) {
@@ -33,9 +34,11 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHugesplosionDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
-	case ULTIMATE.REVERSE: //Huh, the cake isnt a lie afterall
+	case ULTIMATE.CLONE: //Huh, the cake isnt a lie afterall
 		ds_map[? ULTIMATE_MAP.NAME] = "Portal dimension";
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateReverse;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateClone;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateCloneDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED_DRAW] = scUltimateCloneDrawCasted;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
@@ -65,17 +68,24 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
 		break;
+	case ULTIMATE.TRAP: 
+		ds_map[? ULTIMATE_MAP.NAME] = "Gotcha";
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateTrap;
+		//ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
+		break;
 }
 
 enum ULTIMATE {
-	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, REVERSE, SWIPE, SHIELD, MIRROR, HOMING, LASER,
+	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
+	MIRROR, HOMING, LASER, TRAP,
 	
 	//PUT LAST
 	LENGTH
 }
 
 enum ULTIMATE_MAP {
-	NAME, SCRIPT_CASTING_STEP, SCRIPT_CASTING_DRAW, SCRIPT_CASTED, CAST_TIME,
+	NAME, SCRIPT_CASTING_STEP, SCRIPT_CASTING_DRAW, SCRIPT_CASTED, SCRIPT_CASTED_DRAW, CAST_TIME,
 	//SOUND
 	SOUND_CAST
 }

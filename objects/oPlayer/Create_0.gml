@@ -14,9 +14,6 @@ event_inherited();
 
 //Load player states
 canControl = true;
-enum PLAYERSTATE{
-	NORMAL,DEAD,CANTCONTROL,KNOCKBACK,TECHED,
-}
 playerState = PLAYERSTATE.NORMAL;
 
 //Load animation states
@@ -24,8 +21,8 @@ alive = true;
 animationVar = 0;
 overrideAnimation = false;
 currentSprite = sprite_index;
-enum ANIMATIONSTATE{
-	STANDING,RISING,FALLING,WALKING,DEAD,KNOCKBACK,KNOCKBACK2,TECHED,
+enum ANIMATIONSTATE {
+	STANDING, RISING, FALLING, WALKING, DEAD, KNOCKBACK, KNOCKBACK2, TECHED,
 }
 
 animState = ANIMATIONSTATE.STANDING;

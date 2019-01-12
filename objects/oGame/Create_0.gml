@@ -82,4 +82,5 @@ enum TEAM {
 //Randomize gameplay
 randomize();
 
-debug = false; //Debug mode?
+global.debug = false; //Debug mode?
+global.devmode = false; //Developer mode enabled?

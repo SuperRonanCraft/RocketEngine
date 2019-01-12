@@ -1,8 +1,8 @@
 {
-    "id": "b59162fe-a4e6-4152-a4a7-b2bf31784b65",
+    "id": "3c4f725c-8026-4f3a-9407-28d9ea10f79c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUltimateReverse",
+    "name": "scUltimateTrap",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,3 +1,3 @@
 /// @desc toggle debugger
 
-debug = !debug
+global.debug = !global.debug

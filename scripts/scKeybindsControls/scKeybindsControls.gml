@@ -17,7 +17,7 @@ if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(co
 }
 
 //Check if can control
-if(canControl){
+if (canControl){
 	//Horizontal
 	var move = (key_right - key_left) * (keydirection);
 	hsp_move = (move * walksp) + (move_adj * move);
@@ -30,4 +30,5 @@ if(canControl){
 	//Weapon
 	if (key_shoot)
 		scRocketShoot();
-}
+} else 
+	hsp_move = move_adj;

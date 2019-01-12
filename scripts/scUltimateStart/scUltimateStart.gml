@@ -14,3 +14,4 @@ ult_casting = false;
 ult_casting_last = noone; //The ultimate we were charging
 ult_casting_step = noone;
 ult_casting_draw = noone;
+ult_casted_draw = noone;

@@ -26,9 +26,16 @@ switch (playerState) {
         canControl = false;
         break;
 		
-		
+	case PLAYERSTATE.TRAPPED:
+        canControl = false;
+        break;
+
     case PLAYERSTATE.NORMAL:
 	default:
         canControl = true;
         break;
+}
+
+enum PLAYERSTATE {
+	NORMAL, DEAD, CANTCONTROL, KNOCKBACK, TECHED, TRAPPED
 }

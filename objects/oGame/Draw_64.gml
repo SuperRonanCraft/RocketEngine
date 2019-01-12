@@ -9,7 +9,7 @@
 if (global.pause && background != noone)
 	draw_sprite(background, 0, 0, 0);
 
-if (debug) { //Debug activated
+if (global.debug) { //Debug activated
 	var instancesInGame = instance_count, playersInGame = instance_number(oPlayer), rocketsInGame = instance_number(oRocket);
 	var frames = "\nFPS: " + string(fps_real) + "/" + string(fps);
 	var instances = "\nInstances: " + string(instancesInGame);
