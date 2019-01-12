@@ -1,11 +1,11 @@
 /// @desc Burst ultimate
 var dir = 0;
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 6; i++) {
 	//Set direction offset
 	if (team == TEAM.LEFT)
-		dir = 40 - (20 * i);
+		dir = 37.5 - (15 * i);
 	else
-		dir = 140 + (20 * i);
+		dir = 142.5 + (15 * i);
 	//Create the rocket with the new direction
 	var xx = x, yy = y;
 	while (xx > 0 && xx < RES_W && yy > 0 && yy < RES_H) {

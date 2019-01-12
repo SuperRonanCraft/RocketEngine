@@ -12,4 +12,5 @@ with (inst) {
 	hp = 1; //One hit kill
 	hp_original = 1;
 	despawn = true; //Despawn player if dead
+	walksp += random_range(-2, 2);
 }

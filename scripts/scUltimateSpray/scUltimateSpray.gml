@@ -1,12 +1,15 @@
 /// @desc Burst ultimate
 var dir = 0;
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 6; i++) {
 	//Set direction offset
 	if (team == TEAM.LEFT)
-		dir = 40 - (20 * i);
+		dir = 37.5 - (15 * i);
 	else
-		dir = 140 + (20 * i);
+		dir = 142.5 + (15 * i);
 	//Create the rocket with the new direction
-	with (scSpawnRocket(x, y, depth - 1, dir, id, rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false]))
-		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
+	with (scSpawnRocket(x, y, depth - 1, dir, id, rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false])) {
+		x += lengthdir_x(5, direction);
+		y += lengthdir_y(5, direction);
+		rocket_map[? ROCKET_MAP.IGNORE_WALL] = false;
+	}
 }

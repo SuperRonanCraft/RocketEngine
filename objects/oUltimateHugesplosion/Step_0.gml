@@ -8,7 +8,7 @@ if (exploding) {
 	exploding = false;
 	exploded = true;
 } else if (!exploded) {
-	x += lengthdir_x(explode_rocket_speed, direction);
+	x = clamp(x + lengthdir_x(explode_rocket_speed, direction), xstart - explode_rocket_len, xstart + explode_rocket_len);
 	traveled += explode_rocket_speed;
 	var offset = 30;
 	var xx = x - lengthdir_x(offset, direction), yy = y - lengthdir_y(offset, direction);
@@ -20,7 +20,10 @@ if (exploding) {
 	var dir = -(360 / explode_rocket_amount) / 2;
 	for (var i = 0; i < explode_rocket_amount; i++) {
 		dir += (360 / explode_rocket_amount);
-		scSpawnRocket(x, y, depth, dir, owner, rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false]);
+		with(scSpawnRocket(x, y, depth, dir, owner, rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false])) {
+			x += lengthdir_x(5, direction);
+			y += lengthdir_y(5, direction);
+		}
 	}
 	spawned = true;
 }
