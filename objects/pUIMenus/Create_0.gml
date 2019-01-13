@@ -8,9 +8,9 @@ ds_settings = scUICreateMenuPage(
 );
 
 ds_menu_audio = scUICreateMenuPage(
-	["MASTER",			menu_element_type.slider,			scUIChangeVolume,		"vol_master",	global.vol_master],
-	["SOUNDS",			menu_element_type.slider,			scUIChangeVolume,		"vol_sounds",	global.vol_sounds],
-	["MUSIC",			menu_element_type.slider,			scUIChangeVolume,		"vol_music",	global.vol_music],
+	["MASTER",			menu_element_type.slider,			scUIChangeVolume,		"vol_master",	global.vol_master,	0],
+	["SOUNDS",			menu_element_type.slider,			scUIChangeVolume,		"vol_sounds",	global.vol_sounds,	1],
+	["MUSIC",			menu_element_type.slider,			scUIChangeVolume,		"vol_music",	global.vol_music,	2],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 

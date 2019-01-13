@@ -5,7 +5,7 @@ var arg, i = 0;
 for (var i = 0; i < argument_count; i++)
 	arg[i] = argument[i];
 
-var ds_grid_id = ds_grid_create(5, argument_count);
+var ds_grid_id = ds_grid_create(6, argument_count);
 
 for (var i = 0; i < argument_count; i++) {
 	var array = arg[i];

@@ -7,3 +7,5 @@ switch (type) {
 	case 1: audio_group_set_gain(agEffects, argument0, 0); break;
 	case 2: audio_group_set_gain(agMusic, argument0, 0); break;
 }
+
+show_debug_message("MUSIC SET " + string(type) + " AMOUNT " + string(argument0));

@@ -122,7 +122,8 @@ if (inputting) { //Are we inputting data?
 //If Enter or Left-Clicking and we have a selection, execute the action
 if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 	button_confirmed = [menu_option[page], page]; 
-	switch (ds_grid[# 1, menu_option[page]]) {
+	var option = ds_grid[# 1, menu_option[page]];
+	switch (option) {
 		case menu_element_type.script_runner: //Run a script when selecting
 			script_execute(ds_grid[# 2, menu_option[page]]); break;
 		case menu_element_type.goto_room: //Change the room, dont care what happens to object
@@ -136,8 +137,13 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 		case menu_element_type.slider: //If its a slider
 		case menu_element_type.shift: //If we were shifting
 		case menu_element_type.toggle: //If we were toggling
-			if (inputting) { script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-				variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]); }
+			if (inputting) { 
+				if (option == menu_element_type.slider) {
+					script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]], ds_grid[# 5, menu_option[page]]);
+					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+				} else {
+					script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);}}
 		case menu_element_type.input: //Simply inputting a character
 			inputting = !inputting; break;
 	}
