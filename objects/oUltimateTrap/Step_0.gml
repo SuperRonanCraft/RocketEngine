@@ -44,7 +44,7 @@ if (!standing) {
 }
 
 with (trapped) {
-	if (hp = other.trapped_hp) {
+	if (hp == other.trapped_hp) {
 		playerState = PLAYERSTATE.TRAPPED;
 		other.x = x;
 		other.y = bbox_bottom - (other.bbox_bottom - other.y);

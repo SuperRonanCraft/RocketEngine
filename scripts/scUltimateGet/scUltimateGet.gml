@@ -55,6 +55,7 @@ switch (type) {
 	case ULTIMATE.MIRROR: //Oh, now its going this way
 		ds_map[? ULTIMATE_MAP.NAME] = "Magical mirror";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateMirror;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMirrorDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.HOMING: 
@@ -71,7 +72,7 @@ switch (type) {
 	case ULTIMATE.TRAP: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Gotcha";
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateTrap;
-		//ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTrapDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 }

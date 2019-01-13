@@ -33,7 +33,7 @@ for (var i = 0; i < amt; i++) {
 		var val = image_xscale * (dis mod 32);
 		draw_sprite_part_ext(sprite_index, 1, 0, 0, abs(val), sprite_height, 
 		x + xx + (val + (xoffset / 2)) + (image_xscale == 1 ? (xoffset - val) - xoffset : 0), 
-		y - ((sprite_height * width_cur) / width_cur) + offset, 1, width_cur, c_white, laser_alpha);
+		y - ((sprite_height / 2) * width_cur) + offset, 1, width_cur, c_white, laser_alpha);
 		xx += val;
 	} else {
 		xx += xoffset;

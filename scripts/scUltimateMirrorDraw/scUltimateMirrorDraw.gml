@@ -1,0 +1,1 @@
+scDrawLine(x, 0, x, RES_H, c_red, 5, 0.2);

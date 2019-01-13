@@ -6,3 +6,4 @@ image_alpha = 0;
 timer_original = 10 * room_speed;
 timer = timer_original;
 checked = false;
+alpha_max = 0.75;

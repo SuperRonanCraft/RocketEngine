@@ -8,7 +8,8 @@ for (var i = 0; i < 6; i++) {
 		dir = 142.5 + (15 * i);
 	//Create the rocket with the new direction
 	var xx = x, yy = y;
-	while (xx > 0 && xx < RES_W && yy > 0 && yy < RES_H) {
+	//while () {
+	while(collision_point(xx, yy, oWall, false, false) == noone && (xx > 0 && xx < RES_W && yy > 0 && yy < RES_H)) {
 		xx += lengthdir_x(10, dir);
 		yy += lengthdir_y(10, dir);
 	}
