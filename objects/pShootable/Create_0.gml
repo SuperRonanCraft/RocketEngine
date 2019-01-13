@@ -2,7 +2,7 @@
 
 //Health
 hp_original = hp;
-hpscale = 1;
+hp_scale = 1;
 hpsprite = sHealth;
 hpheight = sprite_get_height(hpsprite);
 hpwidth = sprite_get_width(hpsprite);

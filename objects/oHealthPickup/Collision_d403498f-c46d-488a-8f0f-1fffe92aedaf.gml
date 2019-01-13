@@ -5,7 +5,7 @@ var added = false;
 with (other)
 	if (hp != hp_original) {
 		hp += other.hp_amount;
-		hpscale += 2;
+		hp_scale += 2;
 		added = true;
 	}
 if (added)

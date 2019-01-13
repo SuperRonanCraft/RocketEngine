@@ -12,15 +12,9 @@ if (current_delay == 0) {
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
 		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, rocket_map);
 		ammo -= 1;
-		//Recoil code
-		//with (owner) {
-		//	hsp -= lengthdir_x(other.recoil_push, other.direction);
-		//	vsp -= lengthdir_y(other.recoil_push, other.direction);
-		//}
-		//current_recoil = recoil;
-		
 		//Sound effects and screen shaking
 		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
+		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 	}
 }
 

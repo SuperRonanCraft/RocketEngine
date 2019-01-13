@@ -6,7 +6,7 @@ current_delay = -1; //Delay from shooting to deploying rocket
 current_reload = 0; //Reload time
 rockets = 0; //Amount of rockets a player has in the room
 ammo = 0;
-prj_scale = 1;
+rocket_scale = 1;
 rocket_map = ds_map_create();
 scRocketChange(argument0);
 

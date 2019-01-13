@@ -2,11 +2,11 @@
 event_inherited();
 if (!global.play) exit; //If game play is enabled
 var spawn = false
-if (pickups_created < pickups_max && spawn_time < 0 && random_range(0, 1)) {
+if (pickups_created < pickups_max && spawn_timer < 0) {
 	spawn = true;
-	spawn_time = 60;
+	spawn_timer = spawn_timer_delay;
 } else
-	spawn_time--;
+	spawn_timer--;
 	
 //Are we spawning? No, just cancel the event
 if (!spawn) exit;
@@ -77,6 +77,6 @@ switch (obj) {
 		break;
 	//Is a health pickup
 	case oHealthPickup:
-		instance_create_layer(xx, yy, layer, obj);
+		instance_create_depth(xx, yy, depth, obj);
 		break;
 }
