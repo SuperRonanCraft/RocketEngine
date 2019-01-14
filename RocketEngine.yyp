@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "00ca8237-9f77-4bab-8063-1419bbed946c",
+            "Value": {
+                "id": "cac0f69a-882f-492e-9476-8a149adc8e19",
+                "resourcePath": "sprites\\s_ppull\\s_ppull.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02b336b5-7467-4576-8a97-db9d380154a7",
             "Value": {
                 "id": "8a378eb8-518b-4164-80f8-461f844ca2bc",
@@ -2247,6 +2255,14 @@
             }
         },
         {
+            "Key": "ae720a96-de55-4357-82a9-5297fc14ffc4",
+            "Value": {
+                "id": "c750595e-f7c3-4fa6-89fe-cc44b855aee1",
+                "resourcePath": "objects\\oUltimateMagnet\\oUltimateMagnet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "aed9174f-7283-46ef-9d55-8b06afc00451",
             "Value": {
                 "id": "08aa5fd7-c27e-4a6d-90ec-1e70f1dbf246",
@@ -2439,6 +2455,14 @@
             }
         },
         {
+            "Key": "bb7a93b9-3f38-41d7-a372-4cb6c5b2675a",
+            "Value": {
+                "id": "16d59464-27d7-4497-8258-4066d1995ad4",
+                "resourcePath": "sprites\\sUltMagnet\\sUltMagnet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bbc81c0a-0d78-41ad-8e77-7b338ef05fd6",
             "Value": {
                 "id": "c346bb47-994f-49bb-9d37-60103f3cae81",
@@ -2508,6 +2532,14 @@
                 "id": "c6998847-2266-44bf-9422-90c4123463b1",
                 "resourcePath": "objects\\oUltimateMirror\\oUltimateMirror.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bf8695d7-e589-4e92-867e-040899958e6f",
+            "Value": {
+                "id": "57a35737-95e4-4efd-90c0-ba5344931f0c",
+                "resourcePath": "views\\bf8695d7-e589-4e92-867e-040899958e6f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2959,6 +2991,14 @@
             }
         },
         {
+            "Key": "e92bd04b-1686-429c-b7af-ed736558db1a",
+            "Value": {
+                "id": "5177191c-a176-489c-baf3-a9d5c7edc0f0",
+                "resourcePath": "scripts\\scUltimateMagnet\\scUltimateMagnet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e999552c-0203-4d93-8f4b-ac3ceb6cc170",
             "Value": {
                 "id": "7fa208d0-41de-4589-83a6-9269c4aa6647",
@@ -3063,6 +3103,14 @@
             }
         },
         {
+            "Key": "f279c199-5719-4daa-8b79-87f93eab9ae3",
+            "Value": {
+                "id": "5ea7dee4-c74e-4c2d-b80b-3b7294c9de31",
+                "resourcePath": "scripts\\scRocketMagnet_Step\\scRocketMagnet_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f2fb6cef-551e-48ee-82a9-9d5362748527",
             "Value": {
                 "id": "dc803959-bd65-4a95-ab2f-7e2ad49e09c9",
@@ -3084,6 +3132,14 @@
                 "id": "b5e92e48-3975-4d1a-8ff6-306fe8529bf6",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f47996e4-9017-4225-b470-d2a63f9736da",
+            "Value": {
+                "id": "44a3d1a3-de11-487b-adaa-35a6c4cf7839",
+                "resourcePath": "sprites\\sRocket_Magnet\\sRocket_Magnet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3156,6 +3212,14 @@
                 "id": "45545c77-c6fd-4aea-ba6a-4d776cfd6f66",
                 "resourcePath": "objects\\oStageSBack\\oStageSBack.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fddb7f7e-b6b4-4d7a-83bd-6ea2da4bc79e",
+            "Value": {
+                "id": "58846b26-4861-425a-94bf-bd041f46abf3",
+                "resourcePath": "sprites\\s_pmagnetTrail\\s_pmagnetTrail.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3250,6 +3314,7 @@
         "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
         "a0373957-1977-4dc5-8f69-f712d0f32230",
         "9299be41-19b1-4883-b416-95f521b59769",
+        "f279c199-5719-4daa-8b79-87f93eab9ae3",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",
@@ -3273,6 +3338,7 @@
         "81bef824-f3c8-4fe3-b0cf-7c7c3e43c40e",
         "3c4f725c-8026-4f3a-9407-28d9ea10f79c",
         "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
+        "e92bd04b-1686-429c-b7af-ed736558db1a",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",

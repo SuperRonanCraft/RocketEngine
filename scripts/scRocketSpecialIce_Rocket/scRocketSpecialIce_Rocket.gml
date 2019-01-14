@@ -14,7 +14,7 @@ if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
 	scRocketSpecialIce_Explode(3);
 //But if you hit a fire rocket, minimize your explosion.
 else if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
-	scRocketSpecialIce_Explode(0);	
+	scRocketSpecialIce_Explode(0.1);	
 //Otherwise, a smaller explosion mostly to show what happened
 //This can still hurt/affect the opposing player if they are close enough
 else

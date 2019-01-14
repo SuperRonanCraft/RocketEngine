@@ -95,6 +95,8 @@ switch (roc) {
 		map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialIce_Shootable;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 8;
+		map[? ROCKET_MAP.KBAMT] = 20;
+		
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MIRROR;
 		break;
 		
@@ -117,6 +119,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 4;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.LASER;
+		map[? ROCKET_MAP.KBAMT] = 20;
 		break;
 		
 	case ROCKET.SAND:
@@ -232,6 +235,25 @@ switch (roc) {
 		//map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBouncy_Destroy;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TRAP;
+		break;
+		
+	case ROCKET.MAGNET:
+		map[? ROCKET_MAP.NAME] = "Magnet";
+		map[? ROCKET_MAP.DESCRIPTION] = "Positively attractive!";
+		map[? ROCKET_MAP.RECOIL] = 3;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.MAGNET;
+		map[? ROCKET_MAP.COOLDOWN] = 12;
+		map[? ROCKET_MAP.SPEED] = 18;
+		map[? ROCKET_MAP.CLIP] = 3;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketMagnet_Step;
+		map[? ROCKET_MAP.RELOAD_TIME] = 40;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 2;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MAGNET;
+		map[? ROCKET_MAP.KBAMT] = 15;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.MAGNET];
+		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		break;
 }
 

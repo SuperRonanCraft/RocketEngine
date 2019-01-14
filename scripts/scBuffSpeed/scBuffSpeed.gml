@@ -17,7 +17,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	scBuffRemove(owner, dsBuff);
 } else {
 	//Create a new item in the DS Map so that it isn't saved to the object
-	dsBuff[? "speedup"] = owner.walksp * 1.1;
+	dsBuff[? "speedup"] = owner.walksp * .5;
 	owner.move_adj -= dsBuff[? "overallSpeed"];
 	owner.move_adj += dsBuff[? "speedup"];
 	dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];

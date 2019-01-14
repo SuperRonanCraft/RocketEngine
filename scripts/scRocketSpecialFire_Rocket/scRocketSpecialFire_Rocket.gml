@@ -10,6 +10,6 @@ collideRocket = 1;
 if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
 	scRocketSpecialFire_Explode(3 * size);
 else if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
-	scRocketSpecialFire_Explode(0);	
+	scRocketSpecialFire_Explode(0.1);	
 else
 	scRocketSpecialFire_Explode(1.5 * size);

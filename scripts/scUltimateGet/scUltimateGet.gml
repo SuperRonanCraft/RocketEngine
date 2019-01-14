@@ -75,11 +75,18 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTrapDraw;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
+
+	case ULTIMATE.MAGNET: 
+		ds_map[? ULTIMATE_MAP.NAME] = "Get Over Here!";
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTED] = scUltimateMagnet;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
+		break;
+		
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
-	MIRROR, HOMING, LASER, TRAP,
+	MIRROR, HOMING, LASER, TRAP, MAGNET,
 	
 	//PUT LAST
 	LENGTH
