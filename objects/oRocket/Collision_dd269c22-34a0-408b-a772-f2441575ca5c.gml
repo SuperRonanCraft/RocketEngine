@@ -1,7 +1,7 @@
 /// @desc Hit a shootable
 
 //If the rocket is not from the same shooter
-if (owner.team != other.team) {
+if (!destroy && owner.team != other.team) {
 	//Add the pShootable to the hitlist
 	//Do damage once to the hitlist
 	if (ds_list_find_index(confirmList, other) == -1) {

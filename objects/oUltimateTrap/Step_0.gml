@@ -19,9 +19,11 @@ if (!standing) {
 	}
 	ds_list_clear(list);
 	instance_place_list(x, y + trap_vsp, oWall, list, false);
+	var istouchingy = false;
 	for (var i = 0; i < ds_list_size(list); i++) {
 		var touchingy = list[| i]; 
 		if (touchingy != noone && touchingy.object_index != oSeperator) {
+			istouchingy = true;
 			if (trap_vsp > 0) //Falling
 				y = floor(touchingy.bbox_top + (y - bbox_bottom) - offset);
 			else if (trap_vsp < 0) //Going up
@@ -32,10 +34,10 @@ if (!standing) {
 	}
 	ds_list_destroy(list);
 	
-	if (trap_vsp == 0)
-		trap_hsp -= sign(trap_hsp) * 1;
+	if (trap_vsp == 0 && istouchingy)
+		trap_hsp = sign(trap_hsp) == 1 ? max(trap_hsp - 3, 0) : min(trap_hsp + 3, 0);
 	
-	if (trap_vsp == 0 && trap_hsp == 0)
+	if (trap_vsp == 0 && trap_hsp == 0 && istouchingy)
 		standing = true;
 	else {
 		x += trap_hsp;

@@ -1,7 +1,7 @@
 /// @desc collide with rocket
 
 //If the rocket is not from the same shooter
-if (other.owner != owner && !destroy) {
+if (!destroy && other.owner != owner) {
 	//Custom Explosion with another rocket script?
 	if (rocket_map[? ROCKET_MAP.EXPLOSION_ROCKET] != noone) 
 		script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_ROCKET], other);

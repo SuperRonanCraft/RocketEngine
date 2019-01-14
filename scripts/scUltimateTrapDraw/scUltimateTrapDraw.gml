@@ -7,8 +7,8 @@ while (!colliding) {
 		colliding = true;
 	} else {
 		xx += hspd
-		yspd += 1.8;
+		yspd += 1.6;
 		yy += yspd;
-		//scDrawCircle(xx, yy, 5, c_red, false, 0.2);
+		scDrawCircle(xx, yy, 5, c_red, false, 0.2);
 	}
 }
