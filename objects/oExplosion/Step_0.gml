@@ -4,18 +4,21 @@ if (doing_damage)
 	for (var i = 0; i < ds_list_size(hitList); i++)
 		if (ds_list_find_index(confirmList, hitList[| i]) == -1) {
 			ds_list_add(confirmList, hitList[| i]);
-			var p = hitList[| i]; //Player instance
+			if (!instance_exists(hitList[| i])) exit; //Not exist?
+			var p = hitList[| i]; //Shootable instance
 			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
 			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
-			//Knockback		
-			doKnockback(hitList[|i], rocket_map[? ROCKET_MAP.KBAMT], point_direction(x, y, p.x, p.y));
-			//Damage player
+			if (p.object_index == oPlayer) {
+				//Knockback
+				doKnockback(p, rocket_map[? ROCKET_MAP.KBAMT], point_direction(x, y, p.x, p.y));
+				//Add buff
+				if (rocket_map[? ROCKET_MAP.BUFF] != noone)
+					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
+			}
+			//Damage shootable
 			with (p) 
 				scDamageShootable(other.parent, false, true, dmg);
-			//Add buff
-			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
-				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
 				with (parent)
 					scUltimateAddCharge(DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge

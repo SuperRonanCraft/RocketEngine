@@ -1,6 +1,5 @@
 /// @desc draw score
 event_inherited();
-draw_set_font(points_font);
 var changed = points_current != points;
 points_current = points;
 points_str = points_str_pre + string(points_current);

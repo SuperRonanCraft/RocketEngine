@@ -19,8 +19,8 @@ if (timer % 10 == 0 && timer < 30)
 		image_yscale = 0.8;
 		//Find a target
 		var target = noone, xx = x, yy = y;
-		for (var i = 0; i < instance_number(oPlayer); i++) {
-			var obj = instance_find(oPlayer, i)
+		for (var i = 0; i < instance_number(pShootable); i++) {
+			var obj = instance_find(pShootable, i)
 			if (obj != owner) {
 				target = obj;
 				xx = target.x;

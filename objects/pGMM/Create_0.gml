@@ -1,8 +1,8 @@
 /// @desc a stage has begun
-timer = STAGE_TIMER.DEFAULT;//global.stage_timer;
-enum STAGE_TIMER {
-	DEFAULT = 90, DEDICATED = 120, SCARED = 180
-}
+timer = 90;//global.stage_timer;
+
+global.gamemode = gamemode;
+
 timer_current = timer;
 timer_room = 0;
 wait_timer = 3; //The original timer

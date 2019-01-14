@@ -5,19 +5,23 @@ if (!global.play) exit;
 scStateCheck();
 
 //DEVMODE
-if (global.devmode)
-	if (global.debug) {
-		if (keyboard_check_pressed(keyshoot) && keyboard_check(keyjump)) {
-			var newwep = rocket_map[? ROCKET_MAP.TYPE] + 1;
-			if (newwep >= ROCKET.LENGHT)
-				newwep = ROCKET.DEFAULT;
-			scRocketChange(newwep);
-		}
+if (global.devmode && global.debug)
+	if (keyboard_check_pressed(keyshoot) && keyboard_check(keyjump)) {
+		var newwep = rocket_map[? ROCKET_MAP.TYPE] + 1;
+		if (newwep >= ROCKET.LENGHT)
+			newwep = ROCKET.DEFAULT;
+		scRocketChange(newwep);
 	}
 
 scKeybindsControls();
 scCheckTech();
-event_inherited();
+
+scBuffHandler();
+scGravity();
+scRocketProgress(team);
+scUltimateHandler();
+scComboStep();
+
 scCheckHealth();
 knockBackStep();
 

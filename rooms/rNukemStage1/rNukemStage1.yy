@@ -11,9 +11,9 @@
         "e62872c2-6ce2-4e6d-bb2a-1ebeed7d788a",
         "d662224b-8d29-4214-9f17-c577b61cd749",
         "0a7e033f-051d-427c-b243-b3b4f6e5eec3",
-        "9581c006-d1b1-4fe3-b4ad-3f2c6b3b3140",
         "d546f084-5109-4287-9040-b77bca334a62",
-        "0b586af2-5c1e-45e8-8ba9-a3719d936d32"
+        "0b586af2-5c1e-45e8-8ba9-a3719d936d32",
+        "9581c006-d1b1-4fe3-b4ad-3f2c6b3b3140"
     ],
     "IsDnD": false,
     "layers": [
@@ -32,7 +32,7 @@
             "inheritVisibility": false,
             "instances": [
 {"name": "inst_1CA32AB4","id": "d546f084-5109-4287-9040-b77bca334a62","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1CA32AB4","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 64,"y": 64},
-{"name": "inst_4791ACAD","id": "0b586af2-5c1e-45e8-8ba9-a3719d936d32","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4791ACAD","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "5c4a44ed-f2ca-416c-ab52-e7a254c3db9c","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "93332b42-841c-42be-8f6a-3320d4bf6d13","mvc": "1.0","value": "TEAM.RIGHT"},{"id": "228bfcb1-08b3-413e-bb73-9ad1c2b505f5","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b","mvc": "1.0","value": "KEYBIND.PLAYER2"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 928,"y": 64}
+{"name": "inst_4791ACAD","id": "0b586af2-5c1e-45e8-8ba9-a3719d936d32","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4791ACAD","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "5c4a44ed-f2ca-416c-ab52-e7a254c3db9c","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "93332b42-841c-42be-8f6a-3320d4bf6d13","mvc": "1.0","value": "TEAM.RIGHT"},{"id": "228bfcb1-08b3-413e-bb73-9ad1c2b505f5","modelName": "GMOverriddenProperty","objectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","propertyId": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b","mvc": "1.0","value": "KEYBIND.PLAYER2"},{"id": "b21e2d31-d8d2-438f-8f7e-e243b1b5b707","modelName": "GMOverriddenProperty","objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf","propertyId": "ef38e31b-4397-4e92-90de-abcfe75f0315","mvc": "1.0","value": "TEAM.RIGHT"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 928,"y": 64}
             ],
             "layers": [
 

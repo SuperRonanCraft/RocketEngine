@@ -15,7 +15,7 @@ var closest = RES_W; //Closest player to laser
 var list = ds_list_create();
 
 //Find the closest player
-collision_rectangle_list(x, y - width, x2, y + width, oPlayer, false, false, list, false);
+collision_rectangle_list(x, y - width, x2, y + width, pShootable, false, false, list, false);
 for (var i = 0; i < ds_list_size(list); i++) {
 	var p = list[| i];
 	if (p != owner && abs(x - p.x) < closest) //Not the same player as shot

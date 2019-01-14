@@ -1,4 +1,3 @@
-/// @desc Display Health, Buff, Rocket, Cooldowns and Combos
 if (!display) exit;
 
 //-----------------

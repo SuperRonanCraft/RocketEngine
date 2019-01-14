@@ -63,17 +63,27 @@
             "enumb": 5,
             "eventtype": 7,
             "m_owner": "20513aa7-8b82-4929-ba2f-346ad2ca271a"
+        },
+        {
+            "id": "d57f3f07-572a-47cc-a3bf-05ffe1d8bb1f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "20513aa7-8b82-4929-ba2f-346ad2ca271a"
         }
     ],
     "maskSpriteId": "90ce5129-0a73-467a-b73e-c8676261b117",
     "overriddenProperties": [
         {
-            "id": "7f29be8e-b9be-4ebd-9329-fd43494ce0c7",
+            "id": "f57a1efb-6cf0-4f8e-b2e2-db7ffce6fbfe",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
-            "propertyId": "db9b1853-5c2e-4303-8ecd-2952eb879441",
-            "value": "ROCKET.SPIKED"
+            "propertyId": "ef38e31b-4397-4e92-90de-abcfe75f0315",
+            "value": "TEAM.LEFT"
         }
     ],
     "parentObjectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
@@ -134,20 +144,6 @@
             "varType": 0
         },
         {
-            "id": "93332b42-841c-42be-8f6a-3320d4bf6d13",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "TEAM.LEFT",
-            "varName": "team",
-            "varType": 4
-        },
-        {
             "id": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -173,6 +169,48 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "despawn",
+            "varType": 3
+        },
+        {
+            "id": "09a5ff43-f603-4ffc-8d75-45c0d633ad2e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "ROCKET.DEFAULT",
+            "varName": "starting_weapon",
+            "varType": 4
+        },
+        {
+            "id": "022c4a73-55d6-434c-b977-d1d9ef7f0fe3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "facing",
+            "varType": 0
+        },
+        {
+            "id": "ba37f882-34d8-4ff3-a145-0cd17f9a80c0",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "face_movement",
             "varType": 3
         }
     ],

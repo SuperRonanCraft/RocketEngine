@@ -76,7 +76,7 @@ global.teamLeft = ds_list_create();
 global.teamRight = ds_list_create();
 
 enum TEAM {
-	PLAYERID, LEFT, RIGHT
+	NONE, LEFT, RIGHT
 }
 
 //Randomize gameplay
@@ -87,6 +87,11 @@ global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 
 //Gameplay modes
-global.mode_extradrops = false;
-global.mode_extrahealth = 0;
-global.mode_ultimates = true;
+global.mode_1v1_extradrops = false;
+global.mode_1v1_extrahealth = 0;
+global.mode_1v1_ultimates = true;
+global.mode_1v1_timer = 2;
+
+global.mode_targets_difficulty = 0;
+global.mode_targets_rocket = ROCKET.DEFAULT;
+global.mode_targets_timer = 2;

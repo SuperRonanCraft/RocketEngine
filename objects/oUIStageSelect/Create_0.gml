@@ -27,11 +27,11 @@ switch (room) {
 event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
-			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
-			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
-		);
+	["PLAY",		menu_element_type.script_runner,	scStageConfirm],
+	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+	["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+);
 //Pages of the menu
 menu_pages = [ds_menu_main];
 //The page index values (must be in order)
@@ -42,20 +42,45 @@ switch (type) {
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODE",		menu_element_type.page_transfer,	menu_page.modes],
+			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 
 		ds_modes = scUICreateMenuPage(
-			["Extra Drops",	menu_element_type.toggle,	noone,	"mode_extradrops",	global.mode_extradrops],
-			["Health",		menu_element_type.shift,	["x1", "x2", "x5", "x10"],	"mode_extrahealth",	global.mode_extrahealth],
-			["Ultimates",	menu_element_type.toggle,	noone,	"mode_ultimates",	global.mode_ultimates],
+			["Health",		menu_element_type.shift,	["x1", "x2", "x5", "x10"],	"mode_1v1_extrahealth",	global.mode_1v1_extrahealth],
+			["Time",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer],
+			["Ultimates",	menu_element_type.toggle,	noone,	"mode_1v1_ultimates",	global.mode_1v1_ultimates],
+			["Extra Drops",	menu_element_type.toggle,	noone,	"mode_1v1_extradrops",	global.mode_1v1_extradrops],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];
 		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
 	case GAMEMODE.TARGETS:
+		var rockets = 0;
+		var roc = 0
+		for (var i = ROCKET.DEFAULT; i < ROCKET.LENGHT; i++) {
+			var list = scRocketGet(i);
+			rockets[roc] = list[? ROCKET_MAP.NAME];
+			ds_map_destroy(list);
+			roc++;
+		}
+		ds_menu_main = scUICreateMenuPage(
+			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
+			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes],
+			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+		);
+		
+		ds_modes = scUICreateMenuPage(
+			["DIFFICULTY",		menu_element_type.shift,	["EASY", "MEDIUM", "HARD"],	"mode_targets_difficulty",	global.mode_targets_difficulty],
+			["ROCKET",		menu_element_type.shift,	rockets,	"mode_targets_rocket",	global.mode_targets_rocket],
+			["BACK",		menu_element_type.page_transfer,	menu_page.main],
+		);
+		menu_pages = [ds_menu_main, ds_modes];
+		menu_pages_index = [menu_page.main, menu_page.modes];
+		break;
 	case GAMEMODE.KNOCKOUT:
 	case GAMEMODE.NUKED:
 		break;

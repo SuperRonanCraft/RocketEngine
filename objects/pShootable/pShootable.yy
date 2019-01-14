@@ -13,36 +13,6 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
-        },
-        {
-            "id": "16765e16-974a-4d5a-960f-38465a71c1c6",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
-        },
-        {
-            "id": "623a7769-6640-48d4-a1c5-10c277293c81",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
-        },
-        {
-            "id": "d121837e-c4ad-484a-bbb3-7200a7dec25c",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "e04689cc-2747-4827-95e0-f5412b0fe4bf"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -63,7 +33,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "c1b97869-8689-47e0-9c67-9ae2decb7eb3",
+            "id": "ef38e31b-4397-4e92-90de-abcfe75f0315",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -72,36 +42,8 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "True",
-            "varName": "face_movement",
-            "varType": 3
-        },
-        {
-            "id": "59d96c29-113a-444a-b05f-f6b2de848117",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "1",
-            "varName": "facing",
-            "varType": 0
-        },
-        {
-            "id": "db9b1853-5c2e-4303-8ecd-2952eb879441",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "ROCKET.FIRE",
-            "varName": "starting_weapon",
+            "value": "TEAM.NONE",
+            "varName": "team",
             "varType": 4
         }
     ],

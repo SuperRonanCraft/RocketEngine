@@ -5,16 +5,6 @@
     "name": "oTargetBomb",
     "eventList": [
         {
-            "id": "e5de4675-5315-4d84-8fe3-fc7217bf408e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "f34242a3-26d8-4545-ac48-27e72e82b69c",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "0c36d4b4-730f-4bba-b8a5-a713f04089dc"
-        },
-        {
             "id": "c8778658-3fb7-404f-81fe-a5096c035f23",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -25,13 +15,13 @@
             "m_owner": "0c36d4b4-730f-4bba-b8a5-a713f04089dc"
         },
         {
-            "id": "cb14f733-243a-4f9e-89b7-3c0af51b4e24",
+            "id": "c3c92573-cc91-4eb5-90f0-7b56716bfbcf",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "184e19c9-d257-47e9-bc6a-1ada34ba66be",
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 4,
+            "eventtype": 3,
             "m_owner": "0c36d4b4-730f-4bba-b8a5-a713f04089dc"
         }
     ],
