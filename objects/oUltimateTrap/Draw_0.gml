@@ -8,6 +8,6 @@ else
 
 draw_self();
 
-scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_red, false, 0.5);
-scDrawCircle(x, y, 5, c_blue, false, 0.5);
+//scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_red, false, 0.5);
+//scDrawCircle(x, y, 5, c_blue, false, 0.5);
 

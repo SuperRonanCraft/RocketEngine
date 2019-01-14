@@ -9,6 +9,6 @@ while (!colliding) {
 		xx += hspd
 		yspd += 1.8;
 		yy += yspd;
-		scDrawCircle(xx, yy, 5, c_red, false, 0.2);
+		//scDrawCircle(xx, yy, 5, c_red, false, 0.2);
 	}
 }

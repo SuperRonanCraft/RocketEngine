@@ -223,8 +223,8 @@ switch (roc) {
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SPIKED;
-		map[? ROCKET_MAP.COOLDOWN] = room_speed * 2;
-		map[? ROCKET_MAP.SPEED] = 8 * varspd;
+		map[? ROCKET_MAP.COOLDOWN] = 23;
+		map[? ROCKET_MAP.SPEED] = 16 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
 		//map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpiked_Create;

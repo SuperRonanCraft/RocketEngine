@@ -24,15 +24,8 @@ if (touchingx != noone){ //If touching a wall in the horizontal
 	
 	
 	//Miss tech/bounce
-	if(abs(hsp_knockback/2) < 7){
-		hsp = 0;
-		hsp_move = hsp;
-		hsp_knockback = hsp;
-	}
-	else{
-		part_particles_create(global.ParticleSystem1,x,y,oParticleHandler.ds_part[? PARTICLES.KBHIT],1);
-		hsp_knockback /= -1.3;
-	}
+	//if (allowedTech) etc.
+	knockbackBounce();
 	
 }
 

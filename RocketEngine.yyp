@@ -935,6 +935,14 @@
             }
         },
         {
+            "Key": "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
+            "Value": {
+                "id": "be8ddf78-203a-4379-8852-55183aa54535",
+                "resourcePath": "scripts\\knockbackBounce\\knockbackBounce.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
             "Value": {
                 "id": "9617330e-6642-4015-b5a3-effa8f86110a",
@@ -3198,6 +3206,7 @@
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
+        "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
         "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
         "ab738f93-ad7a-45aa-a119-240062d21cca",
         "02b336b5-7467-4576-8a97-db9d380154a7",
