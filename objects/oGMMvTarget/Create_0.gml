@@ -27,3 +27,5 @@ points_top = points_y - (points_itemheight * 1.5);
 lost_text = choose("You  Lost!", "Better  luck  next  time!", "Whoops!");
 
 event_inherited();
+
+global.gamemode = GAMEMODE.TARGETS;

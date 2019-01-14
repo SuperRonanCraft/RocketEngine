@@ -1,6 +1,6 @@
 ult_charge = 2;
 ult_charge_max = 2;
-ult_enabled = true;
+ult_enabled = global.mode_ultimates;
 ult_charge_direct = 15 / 100; //Given in an direct damage event
 ult_charge_splash = 7.5 / 100; //Given in an splash damage event
 ult_charge_indirect = 5 / 100; //Given in an indirect damage event

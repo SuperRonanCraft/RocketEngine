@@ -1,6 +1,14 @@
 /// @desc 
 
 //Health
+hp = 10;
+if (global.gamemode == GAMEMODE.ONEVONE)
+	switch (global.mode_extrahealth) {
+		case 0: break;
+		case 1: hp *= 2; break;
+		case 2: hp *= 5; break;
+		case 3: hp *= 10; break;
+	}
 hp_original = hp;
 hp_scale = 1;
 hpsprite = sHealth;

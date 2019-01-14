@@ -73,12 +73,12 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	rtx = start_x[i] + x_buffer * 2;
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift:
-			var current_val = ds_grid[# 3, i], current_array = ds_grid[# 4, i], c = color_element;
+			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
 			var left_shift = "<< ", right_shift = " >>";
 			if (current_val == 0) left_shift = "";
-			else if (current_val == array_length_1d(ds_grid[# 4, i]) - 1) right_shift = "";
+			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
 			if (inputting && i == menu_option[page]) c = color_element_input;
-			scDrawText(rtx, rty, left_shift + current_array[current_val] + right_shift, c, scale_element, noone, noone, fa_left);
+			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;

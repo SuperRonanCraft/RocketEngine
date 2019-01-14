@@ -11,10 +11,16 @@ if (inputting) { //Are we inputting data?
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.shift:
 			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+			if (hinput == 0)
+				hinput = mouse_check_button_pressed(mb_right);
 			if (hinput != 0) {
 				//AUDIO
-				ds_grid[# 3, menu_option[page]] += hinput;
-				ds_grid[# 3, menu_option[page]] = clamp(ds_grid[# 3, menu_option[page]], 0, array_length_1d(ds_grid[# 4, menu_option[page]]) - 1);
+				var val = ds_grid[# 4, menu_option[page]] + hinput;
+				if (val >= array_length_1d(ds_grid[# 2, menu_option[page]]))
+					val = 0;
+				else if (val < 0)
+					val = array_length_1d(ds_grid[# 2, menu_option[page]]) - 1;
+				ds_grid[# 4, menu_option[page]] = val;
 			}
 			break;
 		case menu_element_type.slider:
@@ -141,8 +147,11 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 				if (option == menu_element_type.slider) {
 					script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]], ds_grid[# 5, menu_option[page]]);
 					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+				} else if (option == menu_element_type.shift) {
+					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 				} else {
-					script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+					if (ds_grid[# 2, menu_option[page]] != noone)
+						script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);}}
 		case menu_element_type.input: //Simply inputting a character
 			inputting = !inputting; break;

@@ -73,20 +73,21 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
 	
 	//ULTIMATE CHARGE CIRCLE
-	var charge = round(ult_charge * (100 / ult_charge_max));
-	var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
-	scDrawPiePart(xposcir, ypos, ult_charge, ult_charge_max, c, 28, 0.8, 9);
+	if (ult_enabled) {
+		var charge = round(ult_charge * (100 / ult_charge_max));
+		var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
+		scDrawPiePart(xposcir, ypos, ult_charge, ult_charge_max, c, 28, 0.8, 9);
 	
-	//ULTIMATE CASTTIME CIRCLE
-	scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_yellow, 32, 0.9, 4);
+		//ULTIMATE CASTTIME CIRCLE
+		scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_yellow, 32, 0.9, 4);
+	
+		//ULTIMATE CHARGE TEXT
+		scDrawText(xposcir, ypos * 2, string(charge) + string("%"), c_ltgray, 0.5, noone, 0.8);
+	}
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, c_white, 0.8);
-	//scDrawPieRectSprite(xpos, ypos + 50, curr_cd, cd, c_white, 5, 0.8, sprite);
 	//Make the scale smaller over time
 	rocket_scale = max(rocket_scale * 0.95, 1);
-	
-	//ULTIMATE CHARGE TEXT
-	scDrawText(xposcir, ypos * 2, string(charge) + string("%"), c_ltgray, 0.5, noone, 0.8);
 }
 //Combos
 if (combo_amount > 1) {

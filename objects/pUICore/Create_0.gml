@@ -1,7 +1,7 @@
 ///Page types
 enum menu_page {
 	main, gamemodes, more_gamemodes, settings, audio, graphics, keybinds,
-	keybinds2, controls, info, rocketlist, rocketbuffs, confirm,
+	keybinds2, controls, info, rocketlist, rocketbuffs, confirm, modes,
 	//Keep last
 	height
 }

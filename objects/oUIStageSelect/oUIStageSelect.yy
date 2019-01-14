@@ -62,7 +62,20 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "0d87cc88-bef4-49ad-a99f-ac8030720a2e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "GAMEMODE.ONEVONE",
+            "varName": "type",
+            "varType": 4
+        }
     ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",

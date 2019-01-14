@@ -15,3 +15,5 @@ for (var i = 0; i < instance_number(oPlayer); i++) {
 }
 
 event_inherited();
+
+global.gamemode = GAMEMODE.KNOCKOUT;

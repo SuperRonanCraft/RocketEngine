@@ -20,3 +20,5 @@ for (var i = 0; i < instance_number(oPlayer); i++) {
 
 //Inherit the default gamemode setup
 event_inherited();
+
+global.gamemode = GAMEMODE.NUKED;
