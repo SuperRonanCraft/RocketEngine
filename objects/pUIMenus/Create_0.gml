@@ -28,6 +28,6 @@ ds_menu_keybinds = scUICreateMenuPage(
 	["LEFT P2",			menu_element_type.input,			"key_p2_left",		global.key_p2_left],
 	["RIGHT P2",		menu_element_type.input,			"key_p2_right",		global.key_p2_right],
 	["SHOOT P2",		menu_element_type.input,			"key_p2_shoot",		global.key_p2_shoot],
-	["RESET KEYS",		menu_element_type.script_runner,	scUIResetKeybinds],
+	["RESET",		menu_element_type.script_runner,	scUIResetKeybinds, "This will reset all keys!", true],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );

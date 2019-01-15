@@ -71,7 +71,7 @@ if (inputting) { //Are we inputting data?
 			}
 			break;
 		case menu_element_type.mass_toggle:
-			var hinput = keyboard_check_pressed(vk_left) - keyboard_check_pressed(vk_right);
+			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
 			if (hinput == 0)
 				hinput = mouse_check_button_pressed(mb_right);
 			var option = menu_option[page], val = ds_grid[# 5, option];
@@ -171,11 +171,10 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 							variable_global_set(ds_grid[# 3, menuSel], val);
 						}
 					}
-					ds_grid[# 6, op] = selection;
+					ds_grid[# 6, op] = ds_grid[# 5, op];
 				}
 			}
 			inputting = !inputting; break;
-			break;
 		//Input elements
 		case menu_element_type.slider: //If its a slider
 		case menu_element_type.shift: //If we were shifting
@@ -189,7 +188,11 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 				} else {
 					if (ds_grid[# 2, menu_option[page]] != noone)
 						script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);}}
+					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);}
+				for (var i = 0; i < ds_height; i++)
+					if (ds_grid[# 1, i] == menu_element_type.mass_toggle)
+						ds_grid[# 5, i] = 0;
+			}
 		case menu_element_type.input: //Simply inputting a character
 			inputting = !inputting; break;
 	}

@@ -49,12 +49,14 @@ switch (type) {
 		);
 
 		ds_modes = scUICreateMenuPage(
-			["Health",		menu_element_type.shift,	["x1", "x2", "x5", "x10"],	"mode_1v1_extrahealth",	global.mode_1v1_extrahealth],
-			["Time",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer],
-			["Rockets",		menu_element_type.toggle,	noone,	"mode_1v1_rockets",	global.mode_1v1_rockets],
-			["Ultimates",	menu_element_type.toggle,	noone,	"mode_1v1_ultimates",	global.mode_1v1_ultimates],
-			["Extra Drops",	menu_element_type.toggle,	noone,	"mode_1v1_extradrops",	global.mode_1v1_extradrops],
-			["Preset",	menu_element_type.mass_toggle,	[0, 1, 2, 3, 4],	["Custom", "Classic", "Boss Battle", "No Ultimates"],	[[0, 3, true, true, false], [3, 4, true, true, true], [0, 2, true, false, false]], 1, 1],
+			["HEALTH",		menu_element_type.shift,	["x1/10", "x1/2", "x1", "x2", "x5", "x10"],	"mode_1v1_health",	global.mode_1v1_health, "Based off 10 hp"],
+			["TIME",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer],
+			["DROPS",		menu_element_type.shift,	["x0", "x1", "x10"],	"mode_1v1_drops",	global.mode_1v1_drops, "Or better said, pickup random stuff"],
+			["ROCKETS",		menu_element_type.toggle,	noone,	"mode_1v1_rockets",	global.mode_1v1_rockets, "Faster ultimate charge!"],
+			["ULTIMATES",	menu_element_type.toggle,	noone,	"mode_1v1_ultimates",	global.mode_1v1_ultimates, "The fun mode"],
+			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
+			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2, 3, 4],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
+			[[2, 2, 1, true, true], [5, 4, 2, true, true], [2, 2, 2, true, false], [0, 0, 1, true, false]], 1, 1],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];
@@ -78,8 +80,9 @@ switch (type) {
 		);
 		
 		ds_modes = scUICreateMenuPage(
-			["DIFFICULTY",		menu_element_type.shift,	["EASY", "MEDIUM", "HARD"],	"mode_targets_difficulty",	global.mode_targets_difficulty],
-			["ROCKET",		menu_element_type.shift,	rockets,	"mode_targets_rocket",	global.mode_targets_rocket],
+			["DIFFICULTY",		menu_element_type.shift,	["EASY", "MEDIUM", "HARD"],	"mode_targets_difficulty",	global.mode_targets_difficulty, "Less targets the harder it gets"],
+			["TIME",			menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_targets_timer",	global.mode_targets_timer],
+			["ROCKET TYPE",		menu_element_type.shift,	rockets,	"mode_targets_rockettype",	global.mode_targets_rockettype, "Your sword master"],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];

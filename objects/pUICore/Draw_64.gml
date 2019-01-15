@@ -60,6 +60,23 @@ for (var i = 0; i < ds_height; i++) {
 	if (unfolding) lty += (RES_H / 2 * (1 - unfold[i]));
 	if (i == menu_option[page]) {ltx += scMovementWave(-4, 4, 2); c_main = color_main_hovering; xo = -(x_buffer / 2);}
 	scDrawText(centered ? ltx : ltx + xo, lty, is_array(text) ? text[0] : text, c_main, scale, noone, noone, centered ? fa_middle : fa_right);
+	//Button hover descriptions
+
+	switch (ds_grid[# 1, i]) {
+		case menu_element_type.script_runner:
+			if (ds_grid[# 4, i] == true && menu_option[page] != i) break;
+		case menu_element_type.goto_room:
+			if (ds_grid[# 3, i] == 0) break; //No text option
+			var string_val = ds_grid[# 3, i];
+			scDrawText(start_x[i], lty + 25, string_val, color_element, scale_description, noone, noone, centered ? fa_middle : fa_right); //Description of button
+			break;
+		case menu_element_type.shift:
+		case menu_element_type.toggle:
+			if (menu_option[page] != i || ds_grid[# 5, i] == 0) break; //No text option
+			var string_val = ds_grid[# 5, i];
+			scDrawText(start_x[i] + xo, lty + 25, string_val, color_element, scale_description, noone, noone, fa_right);
+			break;
+	}
 }
 
 // Draw center line
@@ -71,6 +88,8 @@ var rtx, rty; //right-Xpos, right-Ypos
 for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current page
 	rty = start_y[i];
 	rtx = start_x[i] + x_buffer * 2;
+	if (inputting && menu_option[page] == i && ds_grid[# 1, i] != menu_element_type.input)
+		scDrawText(rtx, rty - (y_buffer / 2), "Use R-Mouse Btn or Arrow keys!", color_element_special, 0.4, noone, 0.75, fa_left);
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift:
 			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
@@ -100,12 +119,6 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, i])), c = color_element;
 			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
-			break;
-		case menu_element_type.script_runner:
-		case menu_element_type.goto_room:
-			if (ds_grid[# 3, i] == 0) break; //No text option
-			var string_val = ds_grid[# 3, i];
-			scDrawText(start_x[i], rty + 25, string_val, color_element, scale_description); //Description of button
 			break;
 		case menu_element_type.mass_toggle:
 			var current_val = ds_grid[# 5, i], current_array = ds_grid[# 3, i], c = color_element;

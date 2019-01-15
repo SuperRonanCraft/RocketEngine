@@ -69,7 +69,8 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	
 	//ROCKET COOLDOWN
-	scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
+	if (rockets_enabled)
+		scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
 	
 	//ULTIMATE CHARGE CIRCLE
 	if (ult_enabled) {
@@ -84,7 +85,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		scDrawText(xposcir, ypos * 2, string(charge) + string("%"), c_ltgray, 0.5, noone, 0.8);
 	}
 	//ROCKET EQUIPPED
-	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, c_white, 0.8);
+	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, c_white, rockets_enabled ? 0.8 : 0.3);
 	//Make the scale smaller over time
 	rocket_scale = max(rocket_scale * 0.95, 1);
 }

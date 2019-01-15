@@ -4,14 +4,20 @@
 scData_StartCount()
 
 //Max amount of oRocketPickup
-pickups_max = global.mode_1v1_extradrops ? 60 : 6;
+pickups_max = 6;
 //Pickups that should spawn
 pickups = 0;
 //How much have been created
 pickups_created = 0;
 //Delay between each pickup spawn
-spawn_timer_delay = global.mode_1v1_extradrops ? 15 : 60;
+spawn_timer_delay = 60;
 spawn_timer = spawn_timer_delay;
+
+switch (global.mode_1v1_drops) {
+	case 0: pickups_max = 0; break;
+	case 1: break;
+	case 2: pickups_max *= 10; spawn_timer_delay /= 10; break;
+}
 
 event_inherited();
 
@@ -28,13 +34,17 @@ timer = time; //New time
 timer_current = timer;
 
 with (oPlayer) {
-	switch (global.mode_1v1_extrahealth) {
-		case 0: break;
-		case 1: hp *= 2; break;
-		case 2: hp *= 5; break;
-		case 3: hp *= 10; break;
+	switch (global.mode_1v1_health) {
+		case 0: hp /= 10; break;
+		case 1: hp /= 2; break;
+		case 2: break;
+		case 3: hp *= 2; break;
+		case 4: hp *= 5; break;
+		case 5: hp *= 10; break;
 	}
 	hp_original = hp;
 	ult_enabled = global.mode_1v1_ultimates;
 	rockets_enabled = global.mode_1v1_rockets;
+	if (!rockets_enabled)
+		ult_charge_multiplier *= 10;
 }

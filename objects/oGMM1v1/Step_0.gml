@@ -1,6 +1,6 @@
 /// @desc spawn pickups
 event_inherited();
-if (!global.play) exit; //If game play is enabled
+if (!global.play || pickups_max <= 0) exit; //If game play is enabled
 var spawn = false
 if (pickups_created < pickups_max && spawn_timer < 0) {
 	spawn = true;
