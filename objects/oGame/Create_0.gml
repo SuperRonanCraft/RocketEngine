@@ -91,6 +91,7 @@ global.mode_1v1_extradrops = false;
 global.mode_1v1_extrahealth = 0;
 global.mode_1v1_ultimates = true;
 global.mode_1v1_timer = 2;
+global.mode_1v1_rockets = true;
 
 global.mode_targets_difficulty = 0;
 global.mode_targets_rocket = ROCKET.DEFAULT;

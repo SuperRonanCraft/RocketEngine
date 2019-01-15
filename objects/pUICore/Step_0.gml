@@ -70,6 +70,21 @@ if (inputting) { //Are we inputting data?
 				keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
 			}
 			break;
+		case menu_element_type.mass_toggle:
+			var hinput = keyboard_check_pressed(vk_left) - keyboard_check_pressed(vk_right);
+			if (hinput == 0)
+				hinput = mouse_check_button_pressed(mb_right);
+			var option = menu_option[page], val = ds_grid[# 5, option];
+			if (hinput != 0) {
+				//AUDIO
+				var val = ds_grid[# 5, menu_option[page]] + hinput;
+				if (val >= array_length_1d(ds_grid[# 3, menu_option[page]]))
+					val = 0;
+				else if (val < 0)
+					val = array_length_1d(ds_grid[# 3, menu_option[page]]) - 1;
+				ds_grid[# 5, menu_option[page]] = val;
+			}
+			break;
 	}
 } else { //Not inputting
 	var option = menu_option[page];
@@ -139,6 +154,27 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 			for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
 				if (menu_pages_index[i] != ds_grid[# 2, menu_option[page]]) continue; //Find the index of the page related to the order
 				page = i; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
+			break;
+		case menu_element_type.mass_toggle: //If mass toggling
+			if (inputting) {
+				var op = menu_option[page];
+				if (ds_grid[# 6, op] != ds_grid[# 5, op]) { //If changing the selection
+					var selection = ds_grid[# 5, op] - 1;
+					if (selection != -1) {
+						var array = ds_grid[# 2, op];
+						var values = ds_grid[# 4, op];
+						var values_array = values[selection];
+						for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
+							var menuSel = array[i];
+							var val = values_array[i];
+							ds_grid[# 4, menuSel] = val;
+							variable_global_set(ds_grid[# 3, menuSel], val);
+						}
+					}
+					ds_grid[# 6, op] = selection;
+				}
+			}
+			inputting = !inputting; break;
 			break;
 		//Input elements
 		case menu_element_type.slider: //If its a slider

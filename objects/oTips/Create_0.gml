@@ -29,7 +29,7 @@ tip_current = irandom_range(0, ds_grid_height(tip_list) - 1); //Randomize the fi
 
 //Position on screen
 x = RES_W / 2 + RES_W / 4;
-y = RES_H / 16; 
+y = RES_H - RES_H / 8; 
 
 //Front of pause menu
 depth -= 2;

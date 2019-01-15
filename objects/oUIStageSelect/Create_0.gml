@@ -13,7 +13,9 @@ stage_on = 0;
 stage_on_current = stage_on;
 
 xx = RES_W / 2;
-yy = RES_H / 4;
+yy = RES_H / 8;
+xx2 = RES_W / 6;
+yy2 = RES_H - RES_H / 16;
 
 //Grab the gamemode we are setting up for
 switch (room) {
@@ -49,8 +51,10 @@ switch (type) {
 		ds_modes = scUICreateMenuPage(
 			["Health",		menu_element_type.shift,	["x1", "x2", "x5", "x10"],	"mode_1v1_extrahealth",	global.mode_1v1_extrahealth],
 			["Time",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer],
+			["Rockets",		menu_element_type.toggle,	noone,	"mode_1v1_rockets",	global.mode_1v1_rockets],
 			["Ultimates",	menu_element_type.toggle,	noone,	"mode_1v1_ultimates",	global.mode_1v1_ultimates],
 			["Extra Drops",	menu_element_type.toggle,	noone,	"mode_1v1_extradrops",	global.mode_1v1_extradrops],
+			["Preset",	menu_element_type.mass_toggle,	[0, 1, 2, 3, 4],	["Custom", "Classic", "Boss Battle", "No Ultimates"],	[[0, 3, true, true, false], [3, 4, true, true, true], [0, 2, true, false, false]], 1, 1],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];

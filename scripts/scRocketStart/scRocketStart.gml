@@ -8,6 +8,7 @@ rockets = 0; //Amount of rockets a player has in the room
 ammo = 0;
 rocket_scale = 1;
 rocket_map = ds_map_create();
+rockets_enabled = true; //Ability to shoot
 scRocketChange(argument0);
 
 enum ROCKET {

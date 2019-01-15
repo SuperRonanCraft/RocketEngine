@@ -36,4 +36,5 @@ with (oPlayer) {
 	}
 	hp_original = hp;
 	ult_enabled = global.mode_1v1_ultimates;
+	rockets_enabled = global.mode_1v1_rockets;
 }

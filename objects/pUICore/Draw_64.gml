@@ -107,6 +107,14 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var string_val = ds_grid[# 3, i];
 			scDrawText(start_x[i], rty + 25, string_val, color_element, scale_description); //Description of button
 			break;
+		case menu_element_type.mass_toggle:
+			var current_val = ds_grid[# 5, i], current_array = ds_grid[# 3, i], c = color_element;
+			var left_shift = "<< ", right_shift = " >>";
+			if (current_val == 0) left_shift = "";
+			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
+			if (inputting && i == menu_option[page]) c = color_element_input;
+			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
+			break;
 		case menu_element_type.rocket_list: //Rocket info page
 			scMenuRocketList(); break;
 		case menu_element_type.rocket_buffs: //Buffs list

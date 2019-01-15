@@ -3,9 +3,8 @@
 //Gamemode name
 scDrawText(xx, yy, global.gamemode, color_element, 2);
 //Stage ID text
-var text = "Stage\n" + string(stage_on + 1) + " - " + string(array_length_1d(global.stages));
-var yval = yy + RES_H / 2;
-scDrawText(xx, yval, text, color_element_input);
+var text = "Stage " + string(stage_on + 1) + "/" + string(array_length_1d(global.stages));
+scDrawText(xx2, yy2, text, color_element_input, 0.4);
 
 //UI Draw event
 event_inherited();

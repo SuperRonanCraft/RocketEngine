@@ -24,6 +24,8 @@ enum menu_element_type {
 	goto_room,
 	//List all rockets
 	rocket_list, rocket_buffs,
+	//Toggle multiple settings
+	mass_toggle,
 	//Controls page
 	controls
 }
