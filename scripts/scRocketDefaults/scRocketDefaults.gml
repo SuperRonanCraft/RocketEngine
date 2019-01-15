@@ -27,7 +27,7 @@ map[? ROCKET_MAP.ROCKET_STEP] = noone; //Step event (overrides movement)
 map[? ROCKET_MAP.ROCKET_DRAW] = noone; //Draw event for rockets (adds)
 map[? ROCKET_MAP.ROCKET_DESTROY] = noone; //The rocket destroy script (adds)
 //PARTICLES
-map[? ROCKET_MAP.PARTICLE_TRAIL] = noone; //rocket particle trail
+map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE3]; //rocket particle trail
 map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
 map[? ROCKET_MAP.PARTICLE_AMT] = 5; //rocket particle trail amount
 //SCREEN SHAKE

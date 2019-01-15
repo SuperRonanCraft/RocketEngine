@@ -33,6 +33,7 @@ if (timer % 10 == 0 && timer < 30)
 		homing[? "locX"] = xx + irandom_range(-30, 30);
 		homing[? "locY"] = yy + irandom_range(-30, 30);
 		rocket_map[? ROCKET_MAP.SPEED] = 0.1;
+		rocket_map[? ROCKET_MAP.SCALE] = 1;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	
 		rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];

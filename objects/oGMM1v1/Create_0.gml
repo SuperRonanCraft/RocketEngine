@@ -43,8 +43,12 @@ with (oPlayer) {
 		case 5: hp *= 10; break;
 	}
 	hp_original = hp;
-	ult_enabled = global.mode_1v1_ultimates;
+	switch (global.mode_1v1_ultimates) {
+		case 0: ult_enabled = false; break;
+		case 1: break;
+		case 2: ult_charge_multiplier *= 10;
+	}
 	rockets_enabled = global.mode_1v1_rockets;
-	if (!rockets_enabled)
-		ult_charge_multiplier *= 10;
+	//if (global.mode_1v1_lowgravity)
+	//	grv /= 2;
 }

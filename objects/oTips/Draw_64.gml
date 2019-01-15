@@ -10,6 +10,11 @@ switch (tip_list[# 0, tip]) {
 		draw_sprite_ext(tip_list[# 1, tip], 0, xx, yy + 25, 1, 1, 0, c_white, alpha); //Sprite icon
 		scDrawText(xx, yy + 50, tip_list[# 3, tip], color_text, scale, noone, alpha, noone, fa_top); //Sprite desc
 		break;
+	case tip_element.sprite_buff:
+		scDrawText(xx, yy, tip_list[# 2, tip], color_title, scale, noone, alpha); //Sprite name
+		draw_sprite_ext(tip_list[# 1, tip], 0, xx - 16, yy + 25 - 16, 0.5, 0.5, 0, c_white, alpha); //Sprite icon
+		scDrawText(xx, yy + 50, tip_list[# 3, tip], color_text, scale, noone, alpha, noone, fa_top); //Sprite desc
+		break;
 	case tip_element.text:
 		scDrawText(xx, yy, tip_list[# 1, tip], color_text, scale, noone, alpha, noone, fa_top); //Text
 		break;

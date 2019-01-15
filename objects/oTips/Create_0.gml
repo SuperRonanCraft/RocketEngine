@@ -2,6 +2,7 @@
 
 enum tip_element {
 	sprite, //Display a sprite, title and text
+	sprite_buff,
 	text //Just text
 }
 
@@ -21,14 +22,16 @@ tip_list = scUICreateMenuPage(
 	[tip_element.sprite, sRocket_Homing, "HOMING ROCKET", "A menacing soft-lock rocket!"],
 	[tip_element.sprite, sHealth, "HEALTH PICKUPS", "Low on health?\nPickup an extra life!"],
 	[tip_element.text, "Remember to use your left and right\nkeys to cast ultimates!"],
-	[tip_element.text, "Gain more ULTIMATE charge by shooting\nthe enemy or grabbing a buff!"],
-	[tip_element.sprite, sRocket_Homing_Ult, "Ultimates", "Each rocket has its own unique ultimate!"]
+	[tip_element.sprite_buff, choose(s_abilityIcon_BurnRush, s_abilityIcon_ReverseControls, s_abilityIcon_Chilled, s_abilityIcon_Cooldown),
+		"Buffs", "Gain an advantage over\nothers by grabbing a buff!"],
+	[tip_element.text, "Each rocket has its own ultimate!"],
+	[tip_element.sprite, sUltTrap, "Trap", "Grab a spiked rocket and trap\nyour enemy for inevitable damage!"]
 );
 
 tip_current = irandom_range(0, ds_grid_height(tip_list) - 1); //Randomize the first tip
 
 //Position on screen
-x = RES_W / 2 + RES_W / 4;
+x = RES_W / 4;
 y = RES_H - RES_H / 8; 
 
 //Front of pause menu
