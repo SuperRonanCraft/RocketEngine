@@ -13,32 +13,32 @@ if(timer == EXPIRETIMER){
 	
 	
 	//Find a target
-	for (var i = 0; i < instance_number(pShootable); i += 1)
-		if (instance_find(pShootable, i) != owner)
-			target = instance_find(pShootable, i);	
+	target = scFindTarget(owner.team);
 }
 
 
 if(pull){
 	
+	
 	with(target){
-	
-		if(y > other.y){
-			other.vsp_pull -= other.strength;	
+		if((y < other.y + other.MAXRANGE && y > other.y - other.MAXRANGE) && (x < other.x + other.MAXRANGE && x > other.x - other.MAXRANGE)){
+			if(y > other.y){
+				other.vsp_pull -= other.strength;	
+			}
+			else{
+				other.vsp_pull += other.strength;	
+			}
+			if(x > other.x ){
+				other.hsp_pull -= other.strength;
+			}
+			else{
+				other.hsp_pull += other.strength;	
+			}
+			
+			vsp_move = 0;
+			vsp_override = other.vsp_pull;
+			hsp_override = other.hsp_pull;
 		}
-		else{
-			other.vsp_pull += other.strength;	
-		}
-		if(x > other.x){
-			other.hsp_pull -= other.strength;
-		}
-		else{
-			other.hsp_pull += other.strength;	
-		}
-	
-		vsp_move = 0;
-		vsp_override = other.vsp_pull;
-		hsp_override = other.hsp_pull;
 	}
 
 }

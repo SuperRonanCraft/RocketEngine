@@ -3,6 +3,7 @@
 
 
 EXPIRETIMER = 90;
+MAXRANGE = 300;
 
 pull = false;
 
@@ -16,7 +17,7 @@ image_yscale = 0;
 
 target = noone;
 
-strength = 1;
+strength = 5;
 MAXPULL = 10;
 
 hsp_pull = 0;

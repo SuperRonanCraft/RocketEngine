@@ -116,11 +116,11 @@ ds_map_add(ds_part, PARTICLES.LOWGRAVITY, parttype);
 ds_map_add(ds_part_amt, PARTICLES.LOWGRAVITY, 5);
 
 parttype = part_type_create();
-part_type_sprite(parttype, s_preversecontrols, true, true, true);
+part_type_sprite(parttype, s_preversecontrols, false, false, false);
 part_type_size(parttype, 0.5, 0.75, -0.05, 0);
-part_type_speed(parttype, 0.8, 1.2, 0.5, 0);
-part_type_life(parttype, 12, 18);
-part_type_direction(parttype, 0, 360, 0, 0);
+part_type_speed(parttype, 1, 1.5, 0.08, 0);
+part_type_life(parttype, 12, 25);
+part_type_direction(parttype, 0, 180, 0, 0);
 ds_map_add(ds_part, PARTICLES.REVERSECONTROLS, parttype);
 ds_map_add(ds_part_amt, PARTICLES.REVERSECONTROLS, 3);
 

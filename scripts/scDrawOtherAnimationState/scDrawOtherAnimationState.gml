@@ -7,6 +7,12 @@ var state = argument[0];
 
 switch (state) {
 	
+	case ANIMATIONSTATE.TRAPPED:
+		currentSprite = sPlayer_trapped;
+		
+		break;
+	
+	
 	case ANIMATIONSTATE.TECHED:
 		overwrite = true;
 		if(scSpecialAnimation(sPlayer_tech, 0)){

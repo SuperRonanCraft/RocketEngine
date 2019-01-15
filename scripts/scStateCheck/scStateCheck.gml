@@ -27,6 +27,8 @@ switch (playerState) {
         break;
 		
 	case PLAYERSTATE.TRAPPED:
+		overrideAnimation = true;
+		animState = ANIMATIONSTATE.TRAPPED;
         canControl = false;
         break;
 

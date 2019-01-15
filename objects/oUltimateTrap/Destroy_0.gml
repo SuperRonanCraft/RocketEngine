@@ -1,4 +1,7 @@
 /// @desc 
 
-with (trapped)
+with (trapped){
 	playerState = PLAYERSTATE.NORMAL;
+	overrideAnimation = false;
+	
+}

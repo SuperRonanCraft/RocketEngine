@@ -255,6 +255,7 @@ switch (roc) {
 		map[? ROCKET_MAP.KBAMT] = 15;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.MAGNET];
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		map[? ROCKET_MAP.SCALE] = 1;
 		break;
 }
 
