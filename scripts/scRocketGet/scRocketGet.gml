@@ -16,7 +16,7 @@ switch (roc) {
 		break;
 		
 	case ROCKET.DEFAULT:
-		map[? ROCKET_MAP.NAME] = "Default";
+		map[? ROCKET_MAP.NAME] = "Classic";
 		map[? ROCKET_MAP.DESCRIPTION] = "Explosive device";
 		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.DEFAULT;
@@ -102,7 +102,7 @@ switch (roc) {
 		
 	case ROCKET.FIRE:
 		map[? ROCKET_MAP.NAME] = "Fire";
-		map[? ROCKET_MAP.DESCRIPTION] = "Run like... faster";
+		map[? ROCKET_MAP.DESCRIPTION] = "Hot like lava";
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FIRE;
 		map[? ROCKET_MAP.COOLDOWN] = 50 *varcd;
@@ -124,7 +124,7 @@ switch (roc) {
 		
 	case ROCKET.SAND:
 		map[? ROCKET_MAP.NAME] = "Sandy";
-		map[? ROCKET_MAP.DESCRIPTION] = "Dusty but laggy";
+		map[? ROCKET_MAP.DESCRIPTION] = "In question";
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SAND;
 		map[? ROCKET_MAP.COOLDOWN] = 100 * varcd;
@@ -148,7 +148,7 @@ switch (roc) {
 
 	case ROCKET.LASER:
 		map[? ROCKET_MAP.NAME] = "Laser";
-		map[? ROCKET_MAP.DESCRIPTION] = "Just don't afk";
+		map[? ROCKET_MAP.DESCRIPTION] = "Dont stand still!";
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LASER;
 		map[? ROCKET_MAP.COOLDOWN] = 50 * varcd;
@@ -164,7 +164,7 @@ switch (roc) {
 
 	case ROCKET.SLIME:
 		map[? ROCKET_MAP.NAME] = "Slime";
-		map[? ROCKET_MAP.DESCRIPTION] = "Not a bounce castle";
+		map[? ROCKET_MAP.DESCRIPTION] = "A sticky situation";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SLIME;
 		map[? ROCKET_MAP.SPEED] = 10*varspd;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SLIME];
@@ -187,7 +187,7 @@ switch (roc) {
 		break;
 
 	case ROCKET.RANDOM:
-		map[? ROCKET_MAP.NAME] = "Obsolete";
+		map[? ROCKET_MAP.NAME] = "Random";
 		map[? ROCKET_MAP.DESCRIPTION] = "RNG isn't fun";
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		//map[? ROCKET_MAP.BUFF] = [choose(BUFFTYPE.SLIME] = BUFFTYPE.COOLDOWN] = BUFFTYPE.BURNRUSH)];
@@ -218,6 +218,7 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.ENABLED] = false;
 		break;
 		
 	case ROCKET.SPIKED:

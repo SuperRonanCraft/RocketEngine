@@ -89,6 +89,7 @@ if (inputting) { //Are we inputting data?
 	} else {
 		//Keyboard support
 		//Up and down support
+		if (!is_array(start_y) && !is_array(start_x)) exit;
 		var ochange = key_down - key_up;
 		if (ochange != 0) {
 			//newoption += ochange;

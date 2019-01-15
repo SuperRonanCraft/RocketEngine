@@ -16,6 +16,7 @@ map[? ROCKET_MAP.DESCRIPTION] = "Uh... Nothing?"; //Description of rocket (must 
 map[? ROCKET_MAP.TYPE] = ROCKET.NONE; //Rocket type (must have)
 map[? ROCKET_MAP.BUFF] = noone; //The buffs a rocket has (array)
 map[? ROCKET_MAP.ENABLED] = true; //Is the rocket enabled in-game?
+map[? ROCKET_MAP.SCALE] = 1.3; //Default rocket scale
 //DAMAGES
 map[? ROCKET_MAP.DAMAGE] = 1; //Base damage
 map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket
