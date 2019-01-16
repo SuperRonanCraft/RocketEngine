@@ -1,7 +1,6 @@
 /// @desc Laser ult casted
 
 owner = noone;
-side = TEAM.LEFT;
 
 laser_uptime = 3 * room_speed; //Amount of time we should stay up (fade in time does not count)
 laser_width = 2; //How tall the laser should be

@@ -42,8 +42,11 @@ timer = time; //New time
 timer_current = timer;
 
 var roc = ROCKET.DEFAULT;
-for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rocket + ROCKET.DEFAULT && i < ROCKET.LENGHT; i++) {
-	roc++;
+for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAULT && i < ROCKET.LENGHT; i++) {
+	var list = scRocketGet(i);
+	if (list[? ROCKET_MAP.ENABLED])
+		roc++;
+	ds_map_destroy(list);
 }
 
 with (oPlayer)

@@ -11,7 +11,7 @@ var clock = dsBuff[? BUFF_MAP.CLOCK];
 //When the buff firt starts, apply the slow
 if (clock == 0) {	
 	//Create a new item in the DS Map so that it isn't saved to the object
-	dsBuff[? "slow"] = owner.walksp/2;
+	dsBuff[? "slow"] = owner.walksp / 2;
 	owner.move_adj -= dsBuff[? "slow"];
 	//This way it does not get changed/affected in any other way
 }

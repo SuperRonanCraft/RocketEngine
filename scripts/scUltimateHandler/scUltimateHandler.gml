@@ -51,8 +51,12 @@ if (!shoot) exit; //Not shooting but we still have full ult charge!
 var map = ds_map_create(); //Create an ult map
 scUltimateGet(ult_casting_last, map); //Grab the ult map
 
-script_execute(map[? ULTIMATE_MAP.SCRIPT_CASTED]); //Run the ult script, no arguments as the player is the shooter
-ult_casted_draw = map[? ULTIMATE_MAP.SCRIPT_CASTED_DRAW];
+if (map[? ULTIMATE_MAP.CASTED_SCRIPT] != noone)
+	script_execute(map[? ULTIMATE_MAP.CASTED_SCRIPT]); //Run the ult script, no arguments as the player is the shooter
+if (map[? ULTIMATE_MAP.CASTED_OBJECT] != noone)
+	with (instance_create_depth(x, y, depth + map[? ULTIMATE_MAP.CASTED_DEPTH], map[? ULTIMATE_MAP.CASTED_OBJECT]))
+		owner = other;
+ult_casted_draw = map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW];
 ult_charge = 0; //Reset the ult charge
 scPlaySound(map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound
 ds_map_destroy(map); //Delete the ult map

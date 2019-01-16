@@ -106,19 +106,16 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			//draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
 			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left);
 			//Slider bar
-			draw_sprite_part_ext(sSliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
-			draw_sprite_part_ext(sSliderBar, 0, circle_pos * len, 0, len, 10, rtx + circle_pos * len, rty - 4, 1, 1, c_white, 0.8);
+			draw_sprite_part_ext(sUISliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
+			draw_sprite_part_ext(sUISliderBar, 0, circle_pos * len, 0, len, 10, rtx + circle_pos * len, rty - 4, 1, 1, c_white, 0.8);
 			//Slider button
-			draw_sprite_ext(sSliderButton, 0, rtx + (circle_pos * len), rty, 1, 1, 0, c_white, 0.8);
+			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, 1, 1, 0, c_white, 0.8);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];
-			var c1, c2, c = color_element;
-			if (inputting && i == menu_option[page]) c = color_element_input;
-			if (current_val == 1) { c1 = c; c2 = color_element_input_unselected;
-			} else { c1 = color_element_input_unselected; c2 = c;}
-			scDrawText(rtx, rty, "ON", c1, scale_element, noone, noone, fa_left);
-			scDrawText(rtx + 96 , rty, "OFF", c2, scale_element, noone, noone, fa_left);
+			var c = inputting && i == menu_option[page] ? color_element_input : color_element	
+			scDrawText(rtx + 32, rty, current_val == 1 ? "ENABLED" : "DISABLED", c, scale_element, noone, noone, fa_left);
+			draw_sprite(sUIToggle, current_val, rtx, rty - 8);
 			break;
 		case menu_element_type.input:
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, i])), c = color_element;

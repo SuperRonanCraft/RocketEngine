@@ -18,8 +18,9 @@ var list = ds_list_create();
 collision_rectangle_list(x, y - width, x2, y + width, pShootable, false, false, list, false);
 for (var i = 0; i < ds_list_size(list); i++) {
 	var p = list[| i];
-	if (p != owner && abs(x - p.x) < closest) //Not the same player as shot
+	if (p.team != owner.team && abs(x - p.x) < closest) //Not the same team as player
 		hitting = p;
+	closest = p.x;
 }
 ds_list_destroy(list);
 

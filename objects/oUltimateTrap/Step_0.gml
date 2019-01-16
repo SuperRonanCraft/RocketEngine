@@ -1,6 +1,6 @@
 /// @desc 
 
-if (!standing) {
+if (!standing) { //Collision
 	trap_vsp += trap_grv;
 	var offset = 1;
 	var list = ds_list_create();
@@ -37,9 +37,10 @@ if (!standing) {
 	if (trap_vsp == 0 && istouchingy)
 		trap_hsp = sign(trap_hsp) == 1 ? max(trap_hsp - 3, 0) : min(trap_hsp + 3, 0);
 	
-	if (trap_vsp == 0 && trap_hsp == 0 && istouchingy)
+	if (trap_vsp == 0 && trap_hsp == 0 && istouchingy) {
 		standing = true;
-	else {
+		image_index = 1;
+	} else {
 		x += trap_hsp;
 		y += trap_vsp;
 	}
@@ -51,12 +52,16 @@ with (trapped) {
 		other.x = x;
 		other.y = bbox_bottom - (other.bbox_bottom - other.y);
 	} else
-		with (other)
-			instance_destroy();
+		instance_destroy(other); //Player was shot, delete trap
 }
 
-if (standing) {
-	timer++;
-	if (timer > trap_uptime)
-		instance_destroy();
-}
+if (standing)
+	if (trapped == noone) {
+		timer++;
+		if (timer > uptime)
+			instance_destroy();
+	} else {
+		timer_trapped++;
+		if (timer_trapped > uptime_trapped)
+			instance_destroy();
+	}
