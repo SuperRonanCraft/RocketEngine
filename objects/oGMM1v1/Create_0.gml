@@ -1,7 +1,7 @@
 /// @desc 1v1 Gamemode has started
 
 //Log new 1v1 game
-scData_StartCount()
+scData_StartCount();
 
 //Max amount of oRocketPickup
 pickups_max = 6;
@@ -13,7 +13,7 @@ pickups_created = 0;
 spawn_timer_delay = 60;
 spawn_timer = spawn_timer_delay;
 
-switch (global.mode_1v1_drops) {
+switch (global.mode_1v1_pickups) {
 	case 0: pickups_max = 0; break;
 	case 1: break;
 	case 2: pickups_max *= 10; spawn_timer_delay /= 10; break;

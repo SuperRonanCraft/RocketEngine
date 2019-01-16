@@ -16,7 +16,7 @@ if (clock == 0) {
 	//This way it does not get changed/affected in any other way
 }
 //If the internal clock reaches the time in seconds, expire
-if (scBuffFind(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[?  BUFF_MAP.TIME]) {
+if (scBuffFind(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Return to normal speed
 	owner.move_adj += dsBuff[? "slow"];	
 	//Remove Chilled

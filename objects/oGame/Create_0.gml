@@ -87,7 +87,7 @@ global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 
 //Gameplay modes
-global.mode_1v1_drops = 1;
+global.mode_1v1_pickups = 1;
 global.mode_1v1_health = 2;
 global.mode_1v1_ultimates = 1;
 global.mode_1v1_timer = 2;

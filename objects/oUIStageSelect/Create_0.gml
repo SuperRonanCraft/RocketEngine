@@ -50,13 +50,13 @@ switch (type) {
 
 		ds_modes = scUICreateMenuPage(
 			["HEALTH",		menu_element_type.shift,	["x1/10", "x1/2", "x1", "x2", "x5", "x10"],	"mode_1v1_health",	global.mode_1v1_health, "Based off 10 hp"],
-			["TIME",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer],
-			["DROPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_drops",	global.mode_1v1_drops, "Unleash Mayhem!"],
+			["TIME",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer, "Become a time master"],
+			["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_pickups",	global.mode_1v1_pickups, "Unleash Mayhem!"],
 			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
-			["ULTIMATES",	menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_ultimates",	global.mode_1v1_ultimates, "The wombo combos!"],
+			["ULTIMATE",	menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_ultimates",	global.mode_1v1_ultimates, "The wombo combos!"],
 			["ROCKETS",		menu_element_type.toggle,	noone,	"mode_1v1_rockets",	global.mode_1v1_rockets, "So, u wont be able to shoot..."],
 			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
-			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2, 3, 4],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
+			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2, 3, 4],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
 			[[2, 2, 1, 1, true], [5, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], 1, 1],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
@@ -84,9 +84,9 @@ switch (type) {
 		
 		ds_modes = scUICreateMenuPage(
 			["DIFFICULTY",		menu_element_type.shift,	["EASY", "MEDIUM", "HARD"],	"mode_targets_difficulty",	global.mode_targets_difficulty, "Less targets the harder it gets"],
-			["TIME",			menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_targets_timer",	global.mode_targets_timer],
+			["TIME",			menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_targets_timer",	global.mode_targets_timer, "Become a time master"],
 			["ROCKET TYPE",		menu_element_type.shift,	rockets,	"mode_targets_rockettype",	global.mode_targets_rockettype, "Choose your weapon!"],
-			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Never Miss Huh", "Time Expert"],	
+			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Never Miss", "Time Expert"],	
 			[[0, 2, 0], [2, 3, 2], [2, 0, 5]], 1, 1],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);

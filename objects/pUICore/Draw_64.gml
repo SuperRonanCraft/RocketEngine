@@ -89,7 +89,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	rty = start_y[i];
 	rtx = start_x[i] + x_buffer * 2;
 	if (inputting && menu_option[page] == i && ds_grid[# 1, i] != menu_element_type.input)
-		scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.75, fa_left);
+		scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift:
 			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
@@ -102,9 +102,14 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
 			if (inputting && i == menu_option[page]) c = c_yellow;
-			draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
-			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
+			//draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
+			//draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
 			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left);
+			//Slider bar
+			draw_sprite_part_ext(sSliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
+			draw_sprite_part_ext(sSliderBar, 0, circle_pos * len, 0, len, 10, rtx + circle_pos * len, rty - 4, 1, 1, c_white, 0.8);
+			//Slider button
+			draw_sprite_ext(sSliderButton, 0, rtx + (circle_pos * len), rty, 1, 1, 0, c_white, 0.8);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];

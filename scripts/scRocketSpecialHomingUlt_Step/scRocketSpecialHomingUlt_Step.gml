@@ -1,4 +1,6 @@
 var map = homing;
+if (!instance_exists(map[? "target"]))
+	map[? "target"] = scFindTarget(owner.team);
 with (map[? "target"]) {
 	var clock = map[? "clock"];
 	if (clock > 35) {
