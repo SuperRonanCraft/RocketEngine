@@ -8,7 +8,8 @@ rockets = 0; //Amount of rockets a player has in the room
 ammo = 0;
 rocket_scale = 1;
 rocket_map = ds_map_create();
-rockets_enabled = true; //Ability to shoot
+rockets_enabled = true; //Ability to shoot rockets
+rockets_hit = true; //Should rockets not be able to hit player?
 scRocketChange(argument0);
 
 enum ROCKET {

@@ -19,3 +19,7 @@ standing = false;
 hsp_knockback = 0;
 vsp_knockback = 0;
 knockback_time = 0;
+
+//Specials
+player_tech = true; //Remove the bounce and teching
+player_knockback = true; //Remove knockback all together

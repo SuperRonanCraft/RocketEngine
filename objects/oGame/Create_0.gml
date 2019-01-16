@@ -1,3 +1,5 @@
+toggled_audio = false;
+
 //Player 1 keybinds
 global.key_p1_left = ord("A");
 global.key_p1_right = ord("D");
@@ -97,3 +99,8 @@ global.mode_1v1_rockets = true;
 global.mode_targets_difficulty = 0;
 global.mode_targets_rockettype = ROCKET.DEFAULT;
 global.mode_targets_timer = 2;
+
+global.mode_kb_pickups = 1;
+global.mode_kb_health = 2;
+global.mode_kb_ultimates = 1;
+global.mode_kb_timer = 2;

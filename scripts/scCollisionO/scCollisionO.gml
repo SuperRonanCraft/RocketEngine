@@ -24,8 +24,10 @@ if (touchingx != noone){ //If touching a wall in the horizontal
 	
 	
 	//Miss tech/bounce
-	//if (allowedTech) etc.
-	knockbackBounce();
+	if (player_tech)
+		scKnockbackBounce();
+	else
+		hsp_knockback = 0;
 	
 }
 

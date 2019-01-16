@@ -946,7 +946,7 @@
             "Key": "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
             "Value": {
                 "id": "be8ddf78-203a-4379-8852-55183aa54535",
-                "resourcePath": "scripts\\knockbackBounce\\knockbackBounce.yy",
+                "resourcePath": "scripts\\scKnockbackBounce\\scKnockbackBounce.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -44,7 +44,7 @@ switch (type) {
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes],
+			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 
@@ -78,7 +78,7 @@ switch (type) {
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes],
+			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 		
@@ -94,6 +94,28 @@ switch (type) {
 		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
 	case GAMEMODE.KNOCKOUT:
+		ds_menu_main = scUICreateMenuPage(
+			["PLAY",		menu_element_type.script_runner,	scStageConfirm, "NO WALL KNOCKBACK BOUNCES, BEWARE!"],
+			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
+			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+		);
+
+		ds_modes = scUICreateMenuPage(
+			["HEALTH",		menu_element_type.shift,	["1", "2", "3", "5", "10"],	"mode_kb_health",	global.mode_kb_health, "Spawn kill!?"],
+			["TIME",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_kb_timer, "Become a time master"],
+			["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_kb_pickups",	global.mode_kb_pickups, "Unleash Mayhem!"],
+			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
+			["ULTIMATE",	menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_kb_ultimates",	global.mode_kb_ultimates, "The wombo combos!"],
+			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
+			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2, 3],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
+			[[2, 2, 1, 1], [4, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], 1, 1],
+			["BACK",		menu_element_type.page_transfer,	menu_page.main],
+		);
+		menu_pages = [ds_menu_main, ds_modes];
+		menu_pages_index = [menu_page.main, menu_page.modes];
+		break;
 	case GAMEMODE.NUKED:
 		break;
 }

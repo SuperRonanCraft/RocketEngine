@@ -1,10 +1,10 @@
 event_inherited();
 
-ds_menu_main = scUICreateMenuPage(
+ds_menu_main = ds_grid_create(0,0);/*scUICreateMenuPage(
 	["RESUME",			menu_element_type.script_runner,	scUIResumeGame],
 	["SETTINGS",		menu_element_type.page_transfer,	menu_page.settings],
 	["EXIT TO TITLE",	menu_element_type.page_transfer,	menu_page.confirm], //Confirm you wanna exit
-);
+);*/
 
 ds_confirm = scUICreateMenuPage(
 	["CONFIRM",		menu_element_type.script_runner,	scUIExitToTitle, "Are you sure?"], //Only script that has text input

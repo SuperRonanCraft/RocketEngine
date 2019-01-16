@@ -3,7 +3,9 @@
 ///@arg amount Knockback amount
 ///@arg direction direction getting hit from
 
+
 var owner = argument[0];
+if (!owner.player_knockback) exit;
 
 var maxV = argument[1];
 var maxH = argument[1];
