@@ -7,7 +7,7 @@ var ds_map = argument1;
 switch (buff) {
 	case BUFFTYPE.BURNRUSH:
 		ds_map[? BUFF_MAP.NAME] = "Burn Rush";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "Run bro!";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Ahhh! It Burns!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH;
 		ds_map[? BUFF_MAP.STEP] = scBuffBurnRush;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
@@ -15,15 +15,15 @@ switch (buff) {
 		break;
 	case BUFFTYPE.CHILLED:
 		ds_map[? BUFF_MAP.NAME] = "Chilled";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "It's still cold";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "This snow is thick!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.CHILLED;
 		ds_map[? BUFF_MAP.STEP] = scBuffChilled;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.WINTER];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.WINTER];
 		break;
 	case BUFFTYPE.COOLDOWN:
-		ds_map[? BUFF_MAP.NAME] = "Cooldowns";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "You are high!";
+		ds_map[? BUFF_MAP.NAME] = "Rocket Booster";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Shoot faster John!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.COOLDOWN;
 		ds_map[? BUFF_MAP.STEP] = scBuffCooldown;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPARKLE];
@@ -48,7 +48,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = true;
 		break;
 	case BUFFTYPE.LOWGRAVITY:
-		ds_map[? BUFF_MAP.NAME] = "No Gravity";
+		ds_map[? BUFF_MAP.NAME] = "Low Gravity";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "You're a Wizard!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.LOWGRAVITY;
 		ds_map[? BUFF_MAP.STEP] = scBuffLowGravity;
@@ -58,14 +58,14 @@ switch (buff) {
 		break;
 	case BUFFTYPE.REVERSECONTROLS:
 		ds_map[? BUFF_MAP.NAME] = "Reversed";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "You have no power!";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Not that way!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSECONTROLS;
 		ds_map[? BUFF_MAP.STEP] = scBuffReverseControls;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSECONTROLS];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSECONTROLS];
 		break;
 	case BUFFTYPE.ULTCHARGE:
-		ds_map[? BUFF_MAP.NAME] = "Ultimate Charger";
+		ds_map[? BUFF_MAP.NAME] = "Ultimate Booster";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Unlimited powahhh!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ULTCHARGE;
 		ds_map[? BUFF_MAP.STEP] = scBuffUltCharge;
@@ -73,7 +73,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 15 * room_speed;
-		ds_map[? "multiplier"] = 0.5;
+		ds_map[? "multiplier"] = 3;
 		break;
 		
 }

@@ -20,14 +20,14 @@ ds_menu_graphics = scUICreateMenuPage(
 );
 
 ds_menu_keybinds = scUICreateMenuPage(
-	["JUMP P1",			menu_element_type.input,			"key_p1_jump",		global.key_p1_jump],
-	["LEFT P1",			menu_element_type.input,			"key_p1_left",		global.key_p1_left],
-	["RIGHT P1",		menu_element_type.input,			"key_p1_right",		global.key_p1_right],
-	["SHOOT P1",		menu_element_type.input,			"key_p1_shoot",		global.key_p1_shoot],
-	["JUMP P2",			menu_element_type.input,			"key_p2_jump",		global.key_p2_jump],
-	["LEFT P2",			menu_element_type.input,			"key_p2_left",		global.key_p2_left],
-	["RIGHT P2",		menu_element_type.input,			"key_p2_right",		global.key_p2_right],
-	["SHOOT P2",		menu_element_type.input,			"key_p2_shoot",		global.key_p2_shoot],
+	["JUMP P1",		menu_element_type.input,		"key_p1_jump",		global.key_p1_jump],
+	["LEFT P1",		menu_element_type.input,		"key_p1_left",		global.key_p1_left],
+	["RIGHT P1",	menu_element_type.input,		"key_p1_right",		global.key_p1_right],
+	["SHOOT P1",	menu_element_type.input,		"key_p1_shoot",		global.key_p1_shoot],
+	["JUMP P2",		menu_element_type.input,		"key_p2_jump",		global.key_p2_jump],
+	["LEFT P2",		menu_element_type.input,		"key_p2_left",		global.key_p2_left],
+	["RIGHT P2",	menu_element_type.input,		"key_p2_right",		global.key_p2_right],
+	["SHOOT P2",	menu_element_type.input,		"key_p2_shoot",		global.key_p2_shoot],
 	["RESET",		menu_element_type.script_runner,	scUIResetKeybinds, "This will reset all keys!", true],
-	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
+	["BACK",		menu_element_type.page_transfer,	menu_page.settings],
 );

@@ -17,9 +17,9 @@ for (var i = 0; i < amt; i++) {
 			c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1);}
 	scDrawText(rx, ry, name, c, scale_element); //Buff name
 	//Particles
-	part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - 30, rx + 30,
-		ry + sprite_get_height(spr) + 10, ry + sprite_get_height(spr) + 30,
-		ps_shape_ellipse, ps_distr_gaussian)
+	part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - 42, rx + 42,
+		ry + 94, ry + 74,
+		ps_shape_rectangle, ps_distr_linear)
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
 	draw_sprite(spr, 0, rx - 32, ry + 20 + yoffset); //Buff icon
 	scDrawText(rx, ry + 110, desc, color_element_input, 0.45); //Buff description

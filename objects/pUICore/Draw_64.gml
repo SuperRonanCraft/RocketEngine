@@ -89,7 +89,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	rty = start_y[i];
 	rtx = start_x[i] + x_buffer * 2;
 	if (inputting && menu_option[page] == i && ds_grid[# 1, i] != menu_element_type.input)
-		scDrawText(rtx, rty - (y_buffer / 2), "Use R-Mouse Btn or Arrow keys!", color_element_special, 0.4, noone, 0.75, fa_left);
+		scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.75, fa_left);
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift:
 			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
