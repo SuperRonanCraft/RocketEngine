@@ -33,12 +33,20 @@ timer = scStageTimerStart(global.mode_targets_timer); //New time
 timer_current = timer;
 
 var roc = ROCKET.DEFAULT;
+var rocindex = roc;
 for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAULT && i < ROCKET.LENGHT; i++) {
 	var list = scRocketGet(i);
 	if (list[? ROCKET_MAP.ENABLED])
 		roc++;
+	rocindex++;
 	ds_map_destroy(list);
 }
 
-with (oPlayer)
-	scRocketChange(roc);
+with (oPlayer) {
+	switch (global.mode_targets_difficulty) {
+		case 0: hp = 5; break;
+		case 1: hp = 3; break;
+		case 2: hp = 1; break;
+	}
+	scRocketChange(rocindex);
+}

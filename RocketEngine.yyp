@@ -2159,6 +2159,14 @@
             }
         },
         {
+            "Key": "a5e7a2e1-fb80-4757-8b69-a3e875cb6913",
+            "Value": {
+                "id": "106e57da-24a2-4c64-afba-9ccd8617f18e",
+                "resourcePath": "objects\\oUltimateSludge\\oUltimateSludge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a6070534-903b-4493-b956-7c258781b24d",
             "Value": {
                 "id": "b4046084-61a0-4732-8478-5b1bd018a56f",
