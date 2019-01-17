@@ -28,7 +28,7 @@ if (damage_cooldown_cur > 0) {
 			hitting = p;
 	}*/
 	with (hitting) {
-		scDamageShootable(other, false, false, 1, false);
+		scDamageShootable(other.owner, false, false, 1, false);
 		other.damage_cooldown_cur = other.laser_damage_cooldown;
 	}
 	//ds_list_destroy(list);

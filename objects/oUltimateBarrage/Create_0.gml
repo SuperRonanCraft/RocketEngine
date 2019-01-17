@@ -12,7 +12,7 @@ destroy = false;
 
 //Allow doing damage to the player after hit a shootable once
 damage = true;
-//The gamemode manager
+//The owner of ult
 owner = noone;
 
 //The wall that is in the way

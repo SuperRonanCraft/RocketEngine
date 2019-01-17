@@ -83,11 +83,11 @@ switch (type) {
 		);
 		
 		ds_modes = scUICreateMenuPage(
-			["DIFFICULTY",		menu_element_type.shift,	["EASY", "MEDIUM", "HARD"],	"mode_targets_difficulty",	global.mode_targets_difficulty, "Less targets the harder it gets"],
+			["DIFFICULTY",		menu_element_type.shift,	["EASY", "MEDIUM", "HARD"],	"mode_targets_difficulty",	global.mode_targets_difficulty, "Less targets, more skill!"],
 			["TIMER",			menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_targets_timer",	global.mode_targets_timer, "Become a time master"],
 			["ROCKET TYPE",		menu_element_type.shift,	rockets,	"mode_targets_rockettype",	global.mode_targets_rockettype, "Choose your weapon!"],
 			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Never Miss", "Time Expert"],	
-			[[0, 2, 0], [2, 3, 2], [2, 0, 5]], 1, 1],
+			[[0, 2, 1], [1, 3, 2], [2, 0, 5]], 1, 1],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];

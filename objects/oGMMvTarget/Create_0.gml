@@ -25,7 +25,7 @@ points_str = points_str_pre + string(points);
 points_top = points_y - (points_itemheight * 1.5);
 
 //End game
-lost_text = choose("You  Lost!", "Better  luck  next  time!", "Whoops!");
+lost_text = choose("You Lost!", "Better luck next time!", "Whoops!");
 
 event_inherited();
 
@@ -48,5 +48,6 @@ with (oPlayer) {
 		case 1: hp = 3; break;
 		case 2: hp = 1; break;
 	}
+	hp_original = hp;
 	scRocketChange(rocindex);
 }
