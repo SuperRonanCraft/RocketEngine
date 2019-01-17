@@ -76,6 +76,11 @@ for (var i = 0; i < ds_height; i++) {
 			var string_val = ds_grid[# 5, i];
 			scDrawText(start_x[i] + xo, lty + 25, string_val, color_element, scale_description, noone, noone, fa_right);
 			break;
+		case menu_element_type.page_transfer:
+			if (menu_option[page] != i || ds_grid[# 3, i] == 0) break; //No text option
+			var string_val = ds_grid[# 3, i];
+			scDrawText(start_x[i], lty + 25, string_val, color_element, scale_description, noone, noone, centered ? fa_middle : fa_right);
+			break;
 	}
 }
 

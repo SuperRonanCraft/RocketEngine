@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "082df688-87c1-4d4d-ad07-2e2705b550d6",
+            "Value": {
+                "id": "05a80fdd-e4d0-4cbd-a72b-7f8fd35837ec",
+                "resourcePath": "scripts\\scStageTimerStart\\scStageTimerStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "08efb6e9-47da-4024-9f40-72386f03a1fb",
             "Value": {
                 "id": "dc6ec60d-5038-41ef-9814-d035f490bc2a",
@@ -844,6 +852,14 @@
                 "id": "11eece7c-4a9e-4e99-9489-f6c9dcaa0223",
                 "resourcePath": "views\\42be5c97-e4c3-4924-80e9-448045e1852e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "42cef2dd-a7ab-43a2-b872-d0e151ef5020",
+            "Value": {
+                "id": "97301a4d-1717-4e7c-9a95-0b180d223b33",
+                "resourcePath": "scripts\\scStagePickupsStart\\scStagePickupsStart.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2783,10 +2799,26 @@
             }
         },
         {
+            "Key": "d2cbb237-d715-4553-add5-022c14eb00b5",
+            "Value": {
+                "id": "ad266620-290a-485e-a79c-bc5d27f77874",
+                "resourcePath": "views\\d2cbb237-d715-4553-add5-022c14eb00b5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d5df6012-6295-4374-8c61-eb6eed033a2f",
             "Value": {
                 "id": "728df671-dac7-4e70-bb6c-7a20155e1b59",
                 "resourcePath": "scripts\\scUltimateMirrorDraw\\scUltimateMirrorDraw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d62dde8b-5a5a-41b9-9f68-6828f4a597f4",
+            "Value": {
+                "id": "f523d0e8-d9b9-4b31-8dbc-4f54ef99ea58",
+                "resourcePath": "scripts\\scStagePickupsStep\\scStagePickupsStep.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3051,6 +3083,14 @@
             "Value": {
                 "id": "4f9ffcc4-5928-4fa9-98b7-3f37c3d9b3e7",
                 "resourcePath": "scripts\\scCheckTech\\scCheckTech.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "efc2a0e4-e6ba-404f-bbff-42c3749f526a",
+            "Value": {
+                "id": "e8c64915-e1ca-473f-9b5c-4c621888660d",
+                "resourcePath": "scripts\\scStageUltimateStart\\scStageUltimateStart.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3347,6 +3387,10 @@
         "86fc6873-f622-4a82-8614-0ee8be27cb34",
         "0b798dda-53ea-4630-ae0b-d3f1f9f039df",
         "04ba6bb7-3b41-41d0-9988-cdd122a80c2d",
+        "082df688-87c1-4d4d-ad07-2e2705b550d6",
+        "efc2a0e4-e6ba-404f-bbff-42c3749f526a",
+        "42cef2dd-a7ab-43a2-b872-d0e151ef5020",
+        "d62dde8b-5a5a-41b9-9f68-6828f4a597f4",
         "0302c78d-63c7-4a1b-a186-ec4494652c18",
         "629e7bea-6edd-4695-8e76-70aed14f0001",
         "4feff080-c2ca-471c-a07b-d3e79032357b",

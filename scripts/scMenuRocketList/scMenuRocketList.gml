@@ -13,7 +13,7 @@ for (var i = 1; i < amt; i++) {
 	var ry = offset * 130 + 40;
 	var c = color_element;
 	var yoffset = 0;
-	if (scUIHovering(rx, ry, name, x_buffer, 10, scale_element, true)) {
+	if (scUIHovering(rx, ry + 20, name, x_buffer, 34, scale_element, true)) {
 		c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1);}
 	scDrawText(rx, ry, name, c, scale_element); //Rocket name
 	draw_sprite(spr, 0, rx, ry + 30 + yoffset); //Rocket icon

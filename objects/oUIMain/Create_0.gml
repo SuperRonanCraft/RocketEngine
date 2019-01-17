@@ -21,9 +21,9 @@ ds_other_gamemodes = scUICreateMenuPage(
 );
 
 ds_info = scUICreateMenuPage(
-	["ROCKETS",		menu_element_type.page_transfer,	menu_page.rocketlist],
-	["BUFFS",		menu_element_type.page_transfer,	menu_page.rocketbuffs],
-	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls],
+	["ROCKETS",		menu_element_type.page_transfer,	menu_page.rocketlist, "Learn about every rocket available!"],
+	["BUFFS",		menu_element_type.page_transfer,	menu_page.rocketbuffs, "Get to know your buff!"],
+	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls, "Can't aim? Check ur keys!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.main],
 );
 

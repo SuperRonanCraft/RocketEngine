@@ -97,7 +97,7 @@ if (inputting) { //Are we inputting data?
 				var yoffset = (y_buffer / 3), ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val, xoffset = string_width(text) * scale_main_hovering;
 				for (var a = 0; a < array_length_1d(menu_special); a++)
 					if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
-				if (!ignore && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered)) {
+				if (!ignore && is_array(start_x) && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered)) {
 					option = i; break;} //Set the new option, break away
 				else option = -1;
 			}

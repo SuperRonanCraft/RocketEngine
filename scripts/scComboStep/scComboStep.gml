@@ -1,5 +1,7 @@
 with (combo_player)
-	if (playerState != PLAYERSTATE.KNOCKBACK)
+	if (player_tech && playerState != PLAYERSTATE.KNOCKBACK)
+		other.combo_amount = 0;
+	else if (standing)
 		other.combo_amount = 0;
 combo_scale = max(combo_scale * 0.95, 1);
 
