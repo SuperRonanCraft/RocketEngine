@@ -1,5 +1,7 @@
 direction += 180; //Reverse its direction
 image_angle = direction;
+if (hsp == 0) //Face towards rocket
+	facing = dir > -90 && dir <= 90 ? 1 : -1;
 rev_map = ds_map_create();
 rev_map[? "side"] = true; //true = left, false = right
 rev_map[? "teleported"] = false; //Have we teleported?

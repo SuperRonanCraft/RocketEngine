@@ -11,3 +11,5 @@ if (room == rMenu) {
 		["EXIT TO TITLE",	menu_element_type.page_transfer,	menu_page.confirm], //Confirm you wanna exit
 	);
 }
+
+page_workingon = noone; //Setup the page
