@@ -1,15 +1,15 @@
 /// @desc Hit a shootable
 
 //If the rocket is not from the same shooter
-if (!destroy && owner.team != other.team) {
-	//Add the pShootable to the hitlist
-	//Do damage once to the hitlist
+//Add the pShootable to the hitlist
+//Do damage once to the hitlist
+if (!destroy && owner.team != other.team)
 	if (ds_list_find_index(confirmList, other) == -1) {
 		ds_list_add(confirmList, other);
 		ds_list_add(hitList, other);
+		if (!other.rockets_hit) exit; //Do nothing to the player, don't allow rocket to interact
 
 		if (other.object_index == oPlayer) {
-			if (!other.rockets_hit) exit; //Do nothing to the player, don't allow rocket to interact
 			//Knockback
 			doKnockback(other, rocket_map[? ROCKET_MAP.KBAMT], direction);
 			//Add buff
@@ -27,11 +27,12 @@ if (!destroy && owner.team != other.team) {
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
 			with (owner)
 				scUltimateAddCharge(DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
-	} else if (other.object_index == oPlayer && !other.rockets_hit) exit;
-	//Custom Explosion with a pShootable script
-	if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)
-		script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE], other);
-	else
+		
+		//Custom Explosion with a pShootable script
+		if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)
+			script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE], other);
+		else
 		//Run the default explosion event/script
 		event_user(0);
-}
+	} else if (!other.rockets_hit) 
+		exit;

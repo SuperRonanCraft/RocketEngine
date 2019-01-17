@@ -29,16 +29,7 @@ lost_text = choose("You  Lost!", "Better  luck  next  time!", "Whoops!");
 
 event_inherited();
 
-var time = 0;
-switch (global.mode_1v1_timer) {
-	case 0: time = 30; break;
-	case 1: time = 60; break;
-	case 2: time = 90; break;
-	case 3: time = 180; break;
-	case 4: time = 300; break;
-}
-
-timer = time; //New time
+timer = scStageTimerStart(global.mode_targets_timer); //New time
 timer_current = timer;
 
 var roc = ROCKET.DEFAULT;
