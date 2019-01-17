@@ -19,8 +19,23 @@ if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(co
 //Check if can control
 if (canControl){
 	//Horizontal
-	var move = (key_right - key_left) * (keydirection);
-	hsp_move = (move * walksp) + (move_adj * move);
+	var move = (key_right - key_left) * keydirection;
+	controlling = move;
+	
+	
+	
+	//Friction
+	if(move == 0 && hsp_move != 0){
+		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs( hsp_move * (friction_base+friction_adj) ) );	
+		
+		//Ease into 0
+		if(abs(hsp_move) < 0.5){
+			hsp_move = 0;
+		}
+	}
+	else{
+		hsp_move = (move * walksp) + (move_adj * move);		
+	}
 
 	//Vertical
 	if (key_jump && standing) {

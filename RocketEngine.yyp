@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "01a37422-a30a-42ae-a420-e16dd710cb6a",
+            "Value": {
+                "id": "59fea421-8e17-401c-80e1-46cc35f66e74",
+                "resourcePath": "sprites\\sPlayer_walkend\\sPlayer_walkend.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02b336b5-7467-4576-8a97-db9d380154a7",
             "Value": {
                 "id": "8a378eb8-518b-4164-80f8-461f844ca2bc",

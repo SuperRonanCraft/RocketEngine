@@ -248,7 +248,7 @@ switch (roc) {
 		map[? ROCKET_MAP.CLIP] = 3;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketMagnet_Step;
-		map[? ROCKET_MAP.RELOAD_TIME] = 40;
+		map[? ROCKET_MAP.RELOAD_TIME] = 60;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 2;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MAGNET;

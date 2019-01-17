@@ -8,7 +8,7 @@ knockback_time--;
 
 //Particles
 part_particles_create(global.ParticleSystem1,x,y,oParticleHandler.ds_part[? PARTICLES.KBSMOKE],1);
-
+hsp_move = 0;
 //animate correctly
 if(sign(facing) == sign(hsp_knockback) && playerState == PLAYERSTATE.KNOCKBACK){
 	animState = ANIMATIONSTATE.KNOCKBACK2;

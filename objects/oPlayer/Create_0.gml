@@ -49,9 +49,15 @@ overrideAnimation = false;
 currentSprite = sprite_index;
 enum ANIMATIONSTATE {
 	STANDING, RISING, FALLING, WALKING, DEAD, KNOCKBACK, KNOCKBACK2, TECHED,TRAPPED,
+	SLIDING,
 }
 
 animState = ANIMATIONSTATE.STANDING;
+
+//Movement vars
+controlling = 0; //If the player is controlling AND moving
+friction_base = 0.3;
+friction_adj = 0;
 
 //If jumped at right time
 teched = false;

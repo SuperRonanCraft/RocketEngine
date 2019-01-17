@@ -12,3 +12,5 @@ scUltimateHandlerDraw();
 
 //Animate the player in their current state
 scAnimationState();
+
+//draw_text(x,y-100,hsp_move);

@@ -19,6 +19,10 @@ switch (state) {
 	case ANIMATIONSTATE.RISING:
 		currentSprite = sPlayer_rise;	
 		break;	
+		
+	case ANIMATIONSTATE.SLIDING:
+		currentSprite = sPlayer_walkend;	
+		break;	
 	
 	case ANIMATIONSTATE.FALLING:
         currentSprite = sPlayer_fall;	
