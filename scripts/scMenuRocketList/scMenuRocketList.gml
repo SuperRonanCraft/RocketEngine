@@ -10,7 +10,7 @@ for (var i = 1; i < amt; i++) {
 	var desc = roc_map[? ROCKET_MAP.DESCRIPTION];
 	var buffs = roc_map[? ROCKET_MAP.BUFF];
 	var rx = ((RES_W / 8) + ((RES_W / 4) * (index))) - ((offset - 1) * ((RES_W / 4) * columns));
-	var ry = offset * 130 + 40;
+	var ry = offset * 130;
 	var c = color_element;
 	var yoffset = 0;
 	if (scUIHovering(rx, ry + 20, name, x_buffer, 34, scale_element, true)) {

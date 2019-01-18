@@ -1,4 +1,4 @@
-var amt = BUFFTYPE.LENGHT, columns = 3, offset = 0;
+var amt = BUFFTYPE.LENGHT, columns = 4, offset = 0;
 for (var i = 0; i < amt; i++) {
 	if (i mod columns == 0)
 		offset++;
@@ -9,7 +9,7 @@ for (var i = 0; i < amt; i++) {
 	var desc = map[? BUFF_MAP.DESCRIPTION]; //Grab the description
 	var part = map[? BUFF_MAP.PARTICLE]; //Grab the particle
 	var part_amt = map[? BUFF_MAP.PARTICLE_AMT]; //Grab the amount of particles
-	var rx = ((RES_W / 4) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
+	var rx = ((RES_W / 8) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
 	var ry = offset * 150 + 10;
 	var c = color_element;
 	var yoffset = 0;

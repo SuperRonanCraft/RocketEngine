@@ -224,20 +224,19 @@ switch (roc) {
 		
 	case ROCKET.SPIKED:
 		map[? ROCKET_MAP.NAME] = "Spiked";
-		map[? ROCKET_MAP.DESCRIPTION] = "Don't touch this!";
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DESCRIPTION] = "Plushy but deadly!";
+		map[? ROCKET_MAP.DAMAGE] = 0;
 		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SPIKED;
-		map[? ROCKET_MAP.COOLDOWN] = 19;
+		map[? ROCKET_MAP.COOLDOWN] = 25;
 		map[? ROCKET_MAP.SPEED] = 16 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
-		//map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpiked_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpiked_Step;
-		//map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBouncy_Destroy;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TRAP;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
 		break;
 		
 	case ROCKET.MAGNET:
@@ -258,6 +257,25 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.MAGNET];
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.SCALE] = 1;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
+		break;
+		
+	case ROCKET.OBSOLETE:
+		map[? ROCKET_MAP.NAME] = "OBSOLETE";
+		map[? ROCKET_MAP.DESCRIPTION] = "It never works ;)";
+		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.RECOIL] = 2;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.OBSOLETE;
+		map[? ROCKET_MAP.COOLDOWN] = 20;
+		map[? ROCKET_MAP.SPEED] = 12 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketObsolete_Step;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketObsolete_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketObsolete_Destroy;
+		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
+		map[? ROCKET_MAP.ENABLED] = true;
 		break;
 }
 

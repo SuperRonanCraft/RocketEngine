@@ -89,6 +89,7 @@ global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 
 //Gameplay modes
+global.mode_1v1_preset = 1
 global.mode_1v1_pickups = 1;
 global.mode_1v1_health = 2;
 global.mode_1v1_ultimates = 1;
@@ -96,10 +97,12 @@ global.mode_1v1_timer = 2;
 global.mode_1v1_rockets = true;
 //global.mode_1v1_lowgravity = false;
 
+global.mode_targets_preset = 1;
 global.mode_targets_difficulty = 0;
 global.mode_targets_rockettype = 1;
 global.mode_targets_timer = 2;
 
+global.mode_kb_preset = 1;
 global.mode_kb_pickups = 1;
 global.mode_kb_health = 2;
 global.mode_kb_ultimates = 1;

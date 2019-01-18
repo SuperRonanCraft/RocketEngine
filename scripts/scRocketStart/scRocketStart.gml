@@ -26,6 +26,7 @@ enum ROCKET {
 	BOUNCY,
 	SPIKED,
 	MAGNET,
+	OBSOLETE,
 	
 	//KEEP LAST
 	LENGHT
@@ -35,7 +36,7 @@ enum ROCKET_SPRITE {
 	//Mostly used to save memory on oRocketPickup, or to insta grab a rocket sprite
 	NONE = noone, DEFAULT = sRocket_Default, FAST = sRocket_Fast, HOMING = sRocket_Homing, REVERSE = sRocket_Reverse, 
 	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime,
-	RANDOM = sRocket_Random, BOUNCY = sRocket_Bouncy, SPIKED = sRocket_Spiked, MAGNET = sRocket_Magnet
+	RANDOM = sRocket_Random, BOUNCY = sRocket_Bouncy, SPIKED = sRocket_Spiked, MAGNET = sRocket_Magnet, OBSOLETE = sRocket_Obsolete
 }
 
 enum ROCKET_MAP {

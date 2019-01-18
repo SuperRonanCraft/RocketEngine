@@ -74,15 +74,15 @@ if (inputting) { //Are we inputting data?
 			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
 			if (hinput == 0)
 				hinput = mouse_check_button_pressed(mb_right);
-			var option = menu_option[page], val = ds_grid[# 5, option];
 			if (hinput != 0) {
 				//AUDIO
-				var val = ds_grid[# 5, menu_option[page]] + hinput;
-				if (val >= array_length_1d(ds_grid[# 3, menu_option[page]]))
+				var option = menu_option[page];
+				var val = ds_grid[# 6, option] + hinput;
+				if (val >= array_length_1d(ds_grid[# 3, option]))
 					val = 0;
 				else if (val < 0)
-					val = array_length_1d(ds_grid[# 3, menu_option[page]]) - 1;
-				ds_grid[# 5, menu_option[page]] = val;
+					val = array_length_1d(ds_grid[# 3, option]) - 1;
+				ds_grid[# 6, option] = val;
 			}
 			break;
 	}
@@ -158,21 +158,19 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 		case menu_element_type.mass_toggle: //If mass toggling
 			if (inputting) {
 				var op = menu_option[page];
-				if (ds_grid[# 6, op] != ds_grid[# 5, op]) { //If changing the selection
-					var selection = ds_grid[# 5, op] - 1;
-					if (selection != -1) {
-						var array = ds_grid[# 2, op];
-						var values = ds_grid[# 4, op];
-						var values_array = values[selection];
-						for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
-							var menuSel = array[i];
-							var val = values_array[i];
-							ds_grid[# 4, menuSel] = val;
-							variable_global_set(ds_grid[# 3, menuSel], val);
-						}
+				var selection = ds_grid[# 6, op] - 1;
+				if (selection != -1) {
+					var array = ds_grid[# 2, op];
+					var values = ds_grid[# 4, op];
+					var values_array = values[selection];
+					for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
+						var menuSel = array[i];
+						var val = values_array[i];
+						ds_grid[# 4, menuSel] = val;
+						variable_global_set(ds_grid[# 3, menuSel], val);
 					}
-					ds_grid[# 6, op] = ds_grid[# 5, op];
 				}
+				variable_global_set(ds_grid[# 5, op], ds_grid[# 6, op]);
 			}
 			inputting = !inputting; break;
 		//Input elements
@@ -190,8 +188,10 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 						script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);}
 				for (var i = 0; i < ds_height; i++)
-					if (ds_grid[# 1, i] == menu_element_type.mass_toggle)
-						ds_grid[# 5, i] = 0;
+					if (ds_grid[# 1, i] == menu_element_type.mass_toggle) {
+						ds_grid[# 6, i] = 0;
+						variable_global_set(ds_grid[# 5, i], ds_grid[# 6, i]);
+					}
 			}
 		case menu_element_type.input: //Simply inputting a character
 			inputting = !inputting; break;

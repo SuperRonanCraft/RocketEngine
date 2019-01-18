@@ -2,7 +2,7 @@
 
 owner = noone;
 
-laser_uptime = 3 * room_speed; //Amount of time we should stay up (fade in time does not count)
+laser_uptime = 5 * room_speed; //Amount of time we should stay up (fade in time does not count)
 laser_width = 2; //How tall the laser should be
 laser_alpha = 0.5; //Transparency of beam
 laser_damage_cooldown = room_speed / 2; //How much damage per second

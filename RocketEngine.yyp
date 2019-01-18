@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "2e6f01a9-923d-4e48-bc3c-4a7e3ba5feaf",
+            "Value": {
+                "id": "9da123df-7cca-4ee5-9243-8e4edef06517",
+                "resourcePath": "scripts\\scRocketObsolete_Destroy\\scRocketObsolete_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "30927b15-6586-479c-b2ee-1fbced56dcc6",
             "Value": {
                 "id": "2bd7d6b1-b5c6-4665-85dc-240a173709fe",
@@ -919,6 +927,14 @@
             }
         },
         {
+            "Key": "46e87e96-d49c-4b1b-ab3d-958bb60cf833",
+            "Value": {
+                "id": "c3862589-1195-4103-a88c-efd226743c4c",
+                "resourcePath": "sprites\\s_abilityIcon_BleedOut\\s_abilityIcon_BleedOut.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4759b713-eb08-488a-9c4b-d95704bcc0e5",
             "Value": {
                 "id": "1ff1cd7b-89ec-4dab-95fc-05f5ebd25b77",
@@ -1100,6 +1116,14 @@
                 "id": "5e583292-ea70-4f8d-891b-81133630911e",
                 "resourcePath": "sprites\\s_abilityIcon_Speed\\s_abilityIcon_Speed.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "558ac4eb-3f40-44da-8b90-c12aeb3e664a",
+            "Value": {
+                "id": "1111d309-8bba-418e-ae1a-b629698358de",
+                "resourcePath": "scripts\\scRocketObsolete_Step\\scRocketObsolete_Step.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2007,6 +2031,14 @@
             }
         },
         {
+            "Key": "97902ae7-a9eb-4116-8611-56f01f33abee",
+            "Value": {
+                "id": "d4b2eaec-0b94-420d-a4fa-e87e299377ca",
+                "resourcePath": "views\\97902ae7-a9eb-4116-8611-56f01f33abee.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "97c654c9-dda0-4c9f-862a-39f5aa1191fc",
             "Value": {
                 "id": "4fe2f793-e574-48b7-8e4c-eea620bf9d33",
@@ -2140,6 +2172,14 @@
                 "id": "9132eb09-471b-4ee3-9703-690d08da4038",
                 "resourcePath": "views\\a398b639-3b0f-4dd7-9904-582859ef38d1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a3b80a3b-7dd9-49d0-b348-f28b035b16e1",
+            "Value": {
+                "id": "7007873d-2739-444e-85d3-f768872c90e1",
+                "resourcePath": "sprites\\s_pbleed\\s_pbleed.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2311,6 +2351,14 @@
             }
         },
         {
+            "Key": "ad4cf7c3-be62-4048-8c46-9b6b1658c8d3",
+            "Value": {
+                "id": "105da5ec-06e8-4855-85ac-fd434614d6f5",
+                "resourcePath": "scripts\\scBuffHacked\\scBuffHacked.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ae720a96-de55-4357-82a9-5297fc14ffc4",
             "Value": {
                 "id": "c750595e-f7c3-4fa6-89fe-cc44b855aee1",
@@ -2371,6 +2419,14 @@
             "Value": {
                 "id": "0c4d2e0c-1610-4721-ba7c-b935279f5948",
                 "resourcePath": "scripts\\scComboStart\\scComboStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b0ad2d55-dfd4-441e-bce4-b60104d4b865",
+            "Value": {
+                "id": "1dac84e9-3d5b-4e77-b3b0-c7f903d47a84",
+                "resourcePath": "scripts\\scRocketObsolete_Create\\scRocketObsolete_Create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2484,6 +2540,14 @@
                 "id": "4d7ea996-a360-44b0-8d89-d69a2425f1db",
                 "resourcePath": "scripts\\scUIReloadGlobal\\scUIReloadGlobal.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b997d4b3-0086-4c98-a969-560e243bb5a3",
+            "Value": {
+                "id": "3e5ac659-cc1e-461b-aaf6-b29922b48d69",
+                "resourcePath": "sprites\\s_abilityIcon_Hacked\\s_abilityIcon_Hacked.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2831,6 +2895,22 @@
             }
         },
         {
+            "Key": "d2e43553-c950-45bc-8833-42f4c7e3421b",
+            "Value": {
+                "id": "762a6f6d-bf75-4a88-b8da-95d8feb0471d",
+                "resourcePath": "scripts\\scBuffBleedout\\scBuffBleedout.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d47d0884-2949-4ccf-ae41-060bad012c6b",
+            "Value": {
+                "id": "5e74aff0-8f09-4d61-a629-117c87f50880",
+                "resourcePath": "sprites\\sRocket_Obsolete\\sRocket_Obsolete.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d5df6012-6295-4374-8c61-eb6eed033a2f",
             "Value": {
                 "id": "728df671-dac7-4e70-bb6c-7a20155e1b59",
@@ -3103,6 +3183,14 @@
             }
         },
         {
+            "Key": "ed189651-15fe-4ace-ae8a-c1850da9b6c8",
+            "Value": {
+                "id": "571a64f3-dc92-4461-9280-f004745ef2bb",
+                "resourcePath": "sprites\\s_phack\\s_phack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
             "Value": {
                 "id": "4f9ffcc4-5928-4fa9-98b7-3f37c3d9b3e7",
@@ -3363,6 +3451,9 @@
         "a0373957-1977-4dc5-8f69-f712d0f32230",
         "9299be41-19b1-4883-b416-95f521b59769",
         "f279c199-5719-4daa-8b79-87f93eab9ae3",
+        "558ac4eb-3f40-44da-8b90-c12aeb3e664a",
+        "b0ad2d55-dfd4-441e-bce4-b60104d4b865",
+        "2e6f01a9-923d-4e48-bc3c-4a7e3ba5feaf",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",
@@ -3401,6 +3492,8 @@
         "a8a72bd7-3732-4cfe-b57d-e4f4dd832e45",
         "6751a009-9e34-4abb-84c2-f3003c527488",
         "70e3eb22-06f6-4b42-a408-5f2e4869e836",
+        "d2e43553-c950-45bc-8833-42f4c7e3421b",
+        "ad4cf7c3-be62-4048-8c46-9b6b1658c8d3",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

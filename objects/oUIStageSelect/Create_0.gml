@@ -49,15 +49,15 @@ switch (type) {
 		);
 
 		ds_modes = scUICreateMenuPage(
-			["HEALTH",		menu_element_type.shift,	["x1/10", "x1/2", "x1", "x2", "x5", "x10"],	"mode_1v1_health",	global.mode_1v1_health, "Based off 10 hp"],
+			["HEALTH",		menu_element_type.shift,	["1", "5", "10", "20", "50", "100"],	"mode_1v1_health",	global.mode_1v1_health, "Be an angel, or a jerk!"],
 			["TIMER",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_1v1_timer",	global.mode_1v1_timer, "Become a time master"],
 			["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_pickups",	global.mode_1v1_pickups, "Unleash Mayhem!"],
 			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
-			["ULTIMATE",	menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_ultimates",	global.mode_1v1_ultimates, "The wombo combos!"],
+			["ULTIMATE",	menu_element_type.shift,	["Disabled", "x1 Charge", "x10 Charge"],	"mode_1v1_ultimates",	global.mode_1v1_ultimates, "The wombo combos!"],
 			["ROCKETS",		menu_element_type.toggle,	noone,	"mode_1v1_rockets",	global.mode_1v1_rockets, "So, u wont be able to shoot..."],
 			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
 			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2, 3, 4],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
-			[[2, 2, 1, 1, true], [5, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], 1, 1],
+			[[2, 2, 1, 1, true], [5, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], "mode_1v1_preset", global.mode_1v1_preset],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];
@@ -87,7 +87,7 @@ switch (type) {
 			["TIMER",			menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_targets_timer",	global.mode_targets_timer, "Become a time master"],
 			["ROCKET TYPE",		menu_element_type.shift,	rockets,	"mode_targets_rockettype",	global.mode_targets_rockettype, "Choose your weapon!"],
 			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Never Miss", "Time Expert"],	
-			[[0, 2, 1], [1, 3, 2], [2, 0, 5]], 1, 1],
+			[[0, 2, 1], [1, 3, 2], [2, 0, 5]], "mode_targets_preset", global.mode_targets_preset],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];
@@ -107,10 +107,10 @@ switch (type) {
 			["TIMER",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_kb_timer",	global.mode_kb_timer, "Become a time master"],
 			["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_kb_pickups",	global.mode_kb_pickups, "Unleash Mayhem!"],
 			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
-			["ULTIMATE",	menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_kb_ultimates",	global.mode_kb_ultimates, "The wombo combos!"],
+			["ULTIMATE",	menu_element_type.shift,	["Disabled", "x1 Charge", "x10 Charge"],	"mode_kb_ultimates",	global.mode_kb_ultimates, "The wombo combos!"],
 			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
 			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2, 3],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
-			[[2, 2, 1, 1], [4, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], 1, 1],
+			[[2, 2, 1, 1], [4, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], "mode_kb_preset", global.mode_kb_preset],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];

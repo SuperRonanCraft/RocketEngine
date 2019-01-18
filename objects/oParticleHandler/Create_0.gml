@@ -197,8 +197,32 @@ part_type_size(parttype,1,1.5,0,0);
 ds_map_add(ds_part,PARTICLES.PULL,parttype);
 ds_map_add(ds_part_amt,PARTICLES.PULL,5);
 
+parttype = part_type_create();
+part_type_sprite(parttype, s_pbleed, false, false, true);
+part_type_size(parttype, 0.5, 0.8, 0.025, 0);
+part_type_speed(parttype, 0.5, 0.85, 0.5, 0);
+part_type_life(parttype, 10, 15);
+part_type_direction(parttype, 45, 135, 0, 0);
+part_type_alpha3(parttype, 1, 1, 0);
+part_type_gravity(parttype, 0.3, 270);
+
+ds_map_add(ds_part,PARTICLES.BLEED, parttype);
+ds_map_add(ds_part_amt,PARTICLES.BLEED, 3);
+
+
+parttype = part_type_create();
+part_type_sprite(parttype, s_phack, false, false, true);
+part_type_size(parttype, 0.5, 0.8, 0, 0.02);
+part_type_direction(parttype, 20, 160, 0, 0);
+part_type_speed(parttype, -0.5, 0.5, 0, 0.1);
+part_type_life(parttype, 15, 30);
+
+ds_map_add(ds_part, PARTICLES.HACK, parttype);
+ds_map_add(ds_part_amt, PARTICLES.HACK, 2);
+
+
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
-	KBHIT, TECH, TEST, MAGNET, PULL,
+	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK
 }
