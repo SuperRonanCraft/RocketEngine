@@ -9,6 +9,7 @@ ammo = 0;
 rocket_scale = 1;
 rocket_map = ds_map_create();
 rockets_enabled = true; //Ability to shoot rockets
+pickups_enabled = true; //Ability to use pickups
 scRocketChange(argument0);
 
 enum ROCKET {

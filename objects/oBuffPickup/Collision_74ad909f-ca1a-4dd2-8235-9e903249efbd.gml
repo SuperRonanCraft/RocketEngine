@@ -1,4 +1,4 @@
-if (!checked || !global.play) exit;
+if (!other.pickups_enabled || !checked || !global.play) exit;
 //Add buff to player
 scBuffAdd(buff, other);
 event_inherited();

@@ -6,15 +6,24 @@ hp_scale = max(hp_scale * 0.95, 1);
 var offset = 0;
 for (var i = 0; i < hp_original; i++) {
 	//Offset every 10 hearts
-	if (i mod 10 == 0)
-		offset++;
+	//if (i mod 10 == 0)
+	//	offset++;
 	//Determine side to display and offset every heart (mirrored)
-	var len = (hpwidth + 1) * (i - ((offset - 1) * 10));
-	var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
-	//Change every 10 hearts
-	var ypos = offset * (hpheight + 2);
-	var scale = i == hp ? hp_scale : 1;
-	draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
+	if (i < 10) {
+		var len = hpwidth * i//((offset - 1) * 10));
+		var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
+		//Change every 10 hearts
+		var ypos = (hpheight + 2) + (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
+		var scale = i == hp ? hp_scale : 1;
+		draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
+	} else {
+		if (hp < 10) break;
+		var str = "+" + string(hp - i);
+		var xpos = team == TEAM.LEFT ? 20 : RES_W - 20;
+		var ypos = hpheight * 2;
+		scDrawText(xpos, ypos, str, c_white, hp_scale / 2, noone, 0.65, team == TEAM.LEFT ? fa_left : fa_right);
+		break;
+	}
 }
 //-----------------
 //Display Buffs and Time
@@ -30,20 +39,18 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	//Dimentions of sprite
 	var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
-	//Alpha of icon (wearing off after 75% of the buff has progressed)
-	//var per = (ds_list[? BUFF_MAP.CLOCK] / ds_list[? BUFF_MAP.TIME])
-	//var alpha = (per > 0.75) ? (per - 0.75) * 400 : 0;
 	//Determine side and offset related to how many buffs to display (2 pixels between each icon) (mirrored)
-	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 6) * i) : (RES_W / 2) + (w / 2) + (((w / 2) + 6) * i);
+	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 8) * (i - ((offset - 1) * 10))) : (RES_W / 2) + (w / 2) + (((w / 2) + 8) * (i - ((offset - 1) * 10)));
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	
 	//BUFF TIME
 	var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
 	var maxtime = ds_list[? BUFF_MAP.TIME];
-	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 3, 0.8);
+	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 4, 0.65);
 	
 	//BUFF ICON
-	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.8);// - (alpha / 100));
+	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.55);
+	scDrawText(xpos + w / 2, ypos + h / 2, string(ceil(time / room_speed)), c_gray, 0.45);
 }
 //Display Rocket Equipped, Cooldown and Ultimate Charge
 if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
@@ -64,13 +71,15 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
 			c = c_green;
 	}
-	var cd = ammo == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
-	var curr_cd = ammo == 0 ? current_reload : current_cd;
+	
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	
 	//ROCKET COOLDOWN
-	if (rockets_enabled)
+	if (rockets_enabled) {
+		var cd = ammo == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
+		var curr_cd = ammo == 0 ? current_reload : current_cd;
 		scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
+	}
 	
 	//ULTIMATE CHARGE CIRCLE
 	if (ult_enabled) {

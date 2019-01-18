@@ -14,6 +14,9 @@ if (clock = 0) {
 	dsBuff[? "toggleRoc"] = owner.rockets_enabled;
 	if (dsBuff[? "toggleRoc"])
 		owner.rockets_enabled = false;
+	dsBuff[? "togglePic"] = owner.pickups_enabled;
+	if (dsBuff[? "togglePic"])
+		owner.pickups_enabled = false;
 }
 
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
@@ -21,6 +24,8 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
 		owner.ult_enabled = true;
 	if (dsBuff[? "toggleRoc"])
 		owner.rockets_enabled = true;
+	if (dsBuff[? "togglePic"])
+		owner.pickups_enabled = true;
 	scBuffRemove(owner, dsBuff);
 } else {
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 

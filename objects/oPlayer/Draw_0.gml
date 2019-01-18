@@ -14,3 +14,18 @@ scUltimateHandlerDraw();
 scAnimationState();
 
 //draw_text(x,y-100,hsp_move);
+
+if (rockets_enabled && hp > 0) {
+	var clip = rocket_map[? ROCKET_MAP.CLIP];
+		if (clip > 1) {
+		var xx = x - 30;
+		var yy = bbox_bottom;
+		for (var i = 0; i < clip; i++) {
+			yy -= 5;
+			scDrawLine(xx, yy, xx + 10, yy, ammo > i ? c_yellow : c_gray, 2, 0.5);
+		}
+	}
+}
+
+if (ult_enabled && ult_charge == ult_charge_max)
+	scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));

@@ -69,7 +69,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.STEP] = scBuffReverseControls;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSECONTROLS];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSECONTROLS];
-		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
 		break;
 	case BUFFTYPE.ULTCHARGE:
 		ds_map[? BUFF_MAP.NAME] = "Ultimate Booster";
@@ -79,7 +79,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
-		ds_map[? BUFF_MAP.TIME] = 20 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
 		ds_map[? "multiplier"] = 10; //Custom ultimate booster variable
 		break;
 	case BUFFTYPE.BLEEDOUT:
