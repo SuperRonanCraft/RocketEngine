@@ -30,8 +30,8 @@ event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
 	["PLAY",		menu_element_type.script_runner,	scStageConfirm],
-	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+	//[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+	//[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
 	["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 );
 //Pages of the menu
@@ -41,9 +41,9 @@ menu_pages_index = [menu_page.main];
 switch (type) {
 	case GAMEMODE.ONEVONE:
 		ds_menu_main = scUICreateMenuPage(
-			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
-			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			["PLAY",		menu_element_type.script_runner,	scStageConfirm, "THE ORIGINAL GAMEMODE!", true],
+			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack, "SWITCH STAGE", true],
+			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext, "SWITCH STAGE", true],
 			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
@@ -76,8 +76,8 @@ switch (type) {
 		}
 		ds_menu_main = scUICreateMenuPage(
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
-			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack, "SWITCH STAGE", true],
+			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext, "SWITCH STAGE", true],
 			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
@@ -95,9 +95,9 @@ switch (type) {
 		break;
 	case GAMEMODE.KNOCKOUT:
 		ds_menu_main = scUICreateMenuPage(
-			["PLAY",		menu_element_type.script_runner,	scStageConfirm, "NO WALL KNOCKBACK BOUNCES, BEWARE!"],
-			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			["PLAY",		menu_element_type.script_runner,	scStageConfirm, "NO WALL KNOCKBACK, BEWARE!"],
+			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack, "SWITCH STAGE", true],
+			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext, "SWITCH STAGE", true],
 			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);

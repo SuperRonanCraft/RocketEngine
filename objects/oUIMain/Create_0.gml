@@ -11,7 +11,7 @@ ds_gamemodes = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player"],
 	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs..."],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!"],
-	["MORE...",			menu_element_type.page_transfer,	menu_page.more_gamemodes],
+	//["MORE...",			menu_element_type.page_transfer,	menu_page.more_gamemodes],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
 );
 

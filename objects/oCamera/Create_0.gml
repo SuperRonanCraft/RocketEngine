@@ -12,3 +12,7 @@ shake_lenght = 0;
 shake_magnitude = 0;
 shake_remain = 0;
 buff = 0;
+
+//Code
+keynum_timer = 3 * room_speed;
+keynum = 0;
