@@ -33,7 +33,7 @@ switch (roc) {
 		map[? ROCKET_MAP.RECOIL] = 3;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FAST;
 		map[? ROCKET_MAP.COOLDOWN] = 5;
-		map[? ROCKET_MAP.SPEED] = 25;
+		map[? ROCKET_MAP.SPEED] = 30;
 		map[? ROCKET_MAP.CLIP] = 2;
 		map[? ROCKET_MAP.RELOAD_TIME] = 40;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
@@ -47,12 +47,12 @@ switch (roc) {
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.HOMING;
-		map[? ROCKET_MAP.COOLDOWN] = 45 * 0.65;
-		map[? ROCKET_MAP.SPEED] = 15;
+		map[? ROCKET_MAP.COOLDOWN] = 45;
+		map[? ROCKET_MAP.SPEED] = 20;
 		map[? ROCKET_MAP.TIMER] = 120;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHoming_Step;
-		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		map[? ROCKET_MAP.IGNORE_WALL] = false;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 7;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 15;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HOMING;
@@ -127,10 +127,11 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "In question";
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SAND;
-		map[? ROCKET_MAP.COOLDOWN] = 100 * varcd;
-		map[? ROCKET_MAP.SPEED] = 7*varspd;
+		map[? ROCKET_MAP.COOLDOWN] = 12;
+		map[? ROCKET_MAP.SPEED] = 3 * varspd;
+		map[? ROCKET_MAP.CLIP] = 5;
+		map[? ROCKET_MAP.RELOAD_TIME] = 100 * varcd;
 		map[? ROCKET_MAP.DAMAGE] = 1;
-		map[? ROCKET_MAP.DAMAGE_ROCKET] = 2;
 		map[? ROCKET_MAP.TIMER] = 180;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SAND];
 		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SAND];
@@ -151,8 +152,8 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Dont stand still!";
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LASER;
-		map[? ROCKET_MAP.COOLDOWN] = 50 * varcd;
-		map[? ROCKET_MAP.SPEED] = 20;
+		map[? ROCKET_MAP.COOLDOWN] = 55 * varcd;
+		map[? ROCKET_MAP.SPEED] = 25;
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialLaser_Create;
@@ -171,7 +172,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.SLIME];
-		map[? ROCKET_MAP.COOLDOWN] = 30;
+		map[? ROCKET_MAP.COOLDOWN] = 28;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialSlime_Create;
@@ -235,6 +236,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpiked_Step;
 		//map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBouncy_Destroy;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TRAP;
 		break;
 		

@@ -1879,6 +1879,14 @@
             }
         },
         {
+            "Key": "9087e25b-4191-423c-84aa-3900b5e2d542",
+            "Value": {
+                "id": "2f3c8321-97d6-43dd-8fd2-62ac0f24b604",
+                "resourcePath": "scripts\\scUltimateTrap\\scUltimateTrap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "908b93c2-a679-4239-a92c-162de84ac11e",
             "Value": {
                 "id": "65c500ef-b12b-4943-b741-56bf4160bb57",
@@ -3373,6 +3381,7 @@
         "f85c2c1b-5466-4812-ad48-6786a0d2b963",
         "81bef824-f3c8-4fe3-b0cf-7c7c3e43c40e",
         "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
+        "9087e25b-4191-423c-84aa-3900b5e2d542",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
