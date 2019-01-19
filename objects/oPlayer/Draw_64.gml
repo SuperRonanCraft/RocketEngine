@@ -1,27 +1,25 @@
+/// @desc GUI for player hp, rockets and ults
 if (!display) exit;
 
 //-----------------
 //Display health
 hp_scale = max(hp_scale * 0.95, 1);
-var offset = 0;
+//var offset = 0;
 for (var i = 0; i < hp_original; i++) {
-	//Offset every 10 hearts
-	//if (i mod 10 == 0)
-	//	offset++;
-	//Determine side to display and offset every heart (mirrored)
+	//Show first ten hearts, then show additional hearts in text
 	if (i < 10) {
 		var len = hpwidth * i//((offset - 1) * 10));
 		var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
-		//Change every 10 hearts
-		var ypos = (hpheight + 2) + (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
+		var ypos = (hpheight + 2); //+ (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
 		var scale = i == hp ? hp_scale : 1;
 		draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
 	} else {
 		if (hp < 10) break;
 		var str = "+" + string(hp - i);
-		var xpos = team == TEAM.LEFT ? 20 : RES_W - 20;
-		var ypos = hpheight * 2;
-		scDrawText(xpos, ypos, str, c_white, hp_scale / 2, noone, 0.65, team == TEAM.LEFT ? fa_left : fa_right);
+		var xpos = team == TEAM.LEFT ? 20 + (hpwidth * 8) : RES_W - 20 - (hpwidth * 8);
+		var ypos = hpheight + 10;
+		c = hp_scale == 1 ? c_white : c_red;
+		scDrawText(xpos, ypos, str, c, hp_scale / 2, noone, 0.65, team == TEAM.LEFT ? fa_left : fa_right);
 		break;
 	}
 }
@@ -71,6 +69,27 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
 			c = c_green;
 	}
+	if (rocket_map[? ROCKET_MAP.BUFF] != noone) {
+		var buffy = RES_H / 16;
+		var buffx = xpos + (team == TEAM.LEFT ? 32 : -50);
+		var buffsid = rocket_map[? ROCKET_MAP.BUFF];
+		if (is_array(buffsid))
+			for (var i = 0; i < array_length_1d(buffsid); i++) {
+				var buff_map = ds_map_create();
+				scBuffGet(buffsid[i], buff_map);
+				draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, rockets_enabled ? 0.5 : 0.2);
+				buffx += (team == TEAM.LEFT ? 22 : -22);
+				ds_map_destroy(buff_map);
+			}
+		else {
+			var buff_map = ds_map_create();
+			scBuffGet(buffsid, buff_map);
+			draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, rockets_enabled ? 0.5 : 0.2);
+			ds_map_destroy(buff_map);
+		}
+	}
+			
+		
 	
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	

@@ -19,6 +19,7 @@ standing = false;
 hsp_knockback = 0;
 vsp_knockback = 0;
 knockback_time = 0;
+knockback_multiplier = 1; //How much harder or softer should a knockback be
 
 //Specials
 player_tech = true; //Remove the bounce and teching

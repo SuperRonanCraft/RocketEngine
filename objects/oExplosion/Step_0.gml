@@ -11,7 +11,7 @@ if (doing_damage)
 				dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			if (p.object_index == oPlayer) {
 				//Knockback
-				doKnockback(p, rocket_map[? ROCKET_MAP.KBAMT], point_direction(x, y, p.x, p.y));
+				doKnockback(p, rocket_map[? ROCKET_MAP.KBAMT] * p.knockback_multiplier, point_direction(x, y, p.x, p.y));
 				//Add buff
 				if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);

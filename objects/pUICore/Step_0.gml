@@ -24,21 +24,15 @@ if (inputting) { //Are we inputting data?
 			}
 			break;
 		case menu_element_type.slider:
-			//Audio to play for each type (MASTER, EFFECTS and MUSIC)
-			/*switch (menu_option[page]) {
-				case 0: if (!audio_is_playing()) audio_play_sound();
-				case 1:
-				case 2: 
-			}*/
 			var hinput = keyboard_check(vk_right) - keyboard_check(vk_left);
+			var option = menu_option[page];
 			if (hinput != 0) {
-				var val = ds_grid[# 4, menu_option[page]] + hinput * 0.01;
-				ds_grid[# 4, menu_option[page]] = clamp(val, 0, 1); break;
+				var val = ds_grid[# 4, option] + hinput * 0.01;
+				ds_grid[# 4, option] = clamp(val, 0, 1);
 			} else if ((device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) 
 					&& mouse_check_button(mb_right)) { //Must be pressing right to move slider
 				mouse_x_old = device_mouse_x_to_gui(0);
 				mouse_y_old = device_mouse_y_to_gui(0);
-				var option = menu_option[page];
 				var xleft = start_x[option] + (x_buffer * 2);
 				var ycheck = start_y[option];
 				if (mouse_x_old > xleft - 10 && mouse_x_old < xleft + slider_width + 10 && mouse_y_old > ycheck - 10 && mouse_y_old < ycheck + 10) {

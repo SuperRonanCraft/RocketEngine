@@ -7,7 +7,7 @@ if (endgame_delay <= 0) {
 		with (p) {
 			var scale = min(image_xscale + 0.05, 5);
 			image_xscale = scale;
-			image_yscale = scale;
+			image_yscale = scale * grv_dir;
 			image_speed = 0;
 			var sidex = (team == TEAM.LEFT ? RES_W / 4 : RES_W / 2 + RES_W / 4);
 			var dir = point_direction(x, y, sidex, RES_H / 2);

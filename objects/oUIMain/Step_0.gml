@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (checked) {
+if (keys_update) {
 	event_user(2); //Update keybinds
-	checked = false; //Make it check its global vars when updated again
+	keys_update = false;
 }

@@ -25,7 +25,6 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
 		map[? ROCKET_MAP.KBAMT] = 35;
-		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSEGRAVITY];
 		break;
 		
 	case ROCKET.FAST:
@@ -97,7 +96,6 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 8;
 		map[? ROCKET_MAP.KBAMT] = 20;
-		
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MIRROR;
 		break;
 		
@@ -202,6 +200,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialRandom_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialRandom_Create;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SHIELD;
+		map[? ROCKET_MAP.BUFF] = BUFFTYPE.ROCKETBOOTS;
 		break;
 		
 	case ROCKET.BOUNCY:
@@ -247,7 +246,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.MAGNET;
 		map[? ROCKET_MAP.COOLDOWN] = 12;
 		map[? ROCKET_MAP.SPEED] = 18;
-		map[? ROCKET_MAP.CLIP] = 3;
+		map[? ROCKET_MAP.CLIP] = 2;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketMagnet_Step;
 		map[? ROCKET_MAP.RELOAD_TIME] = 60;
@@ -267,7 +266,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.OBSOLETE;
-		map[? ROCKET_MAP.COOLDOWN] = 20;
+		map[? ROCKET_MAP.COOLDOWN] = 40;
 		map[? ROCKET_MAP.SPEED] = 12 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
@@ -277,6 +276,7 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		map[? ROCKET_MAP.ENABLED] = true;
+		map[? ROCKET_MAP.ULTIMATE] = BUFFTYPE.REVERSEGRAVITY;
 		break;
 }
 

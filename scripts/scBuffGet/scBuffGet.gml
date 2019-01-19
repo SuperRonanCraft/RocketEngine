@@ -80,7 +80,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
-		ds_map[? "multiplier"] = 10; //Custom ultimate booster variable
+		ds_map[? "multiplier"] = 8; //Custom ultimate booster variable
 		break;
 	case BUFFTYPE.BLEEDOUT:
 		ds_map[? BUFF_MAP.NAME] = "Bleed Out";
@@ -95,7 +95,7 @@ switch (buff) {
 		break;
 	case BUFFTYPE.HACKED:
 		ds_map[? BUFF_MAP.NAME] = "Hacked";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "'I forgot how to run'";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Forgot how to shoot?";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.HACKED;
 		ds_map[? BUFF_MAP.STEP] = scBuffHacked;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.HACK];
@@ -105,13 +105,39 @@ switch (buff) {
 		break;
 	case BUFFTYPE.REVERSEGRAVITY:
 		ds_map[? BUFF_MAP.NAME] = "Reversed";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "Your world, upside-down";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Defying gravity";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSEGRAVITY;
 		ds_map[? BUFF_MAP.STEP] = scBuffReverseGravity;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSEGRAVITY];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSEGRAVITY];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		break;
+	/*case BUFFTYPE.KNOCKBACK:
+		ds_map[? BUFF_MAP.NAME] = "Knockback";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "My back hurts!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.KNOCKBACK;
+		ds_map[? BUFF_MAP.STEP] = scBuffKnockback;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.KBSMOKE];
+		ds_map[? BUFF_MAP.GOOD] = false;
+		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		ds_map[? "multiplier"] = 2.2; //Amount of knockback to multiply
+		break;*/
+	case BUFFTYPE.ROCKETBOOTS:
+		ds_map[? BUFF_MAP.NAME] = "Broken Boots";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "My shoes are broken!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ROCKETBOOTS;
+		ds_map[? BUFF_MAP.STEP] = scBuffRocketBoots;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.KBSMOKE];
+		ds_map[? BUFF_MAP.GOOD] = false;
+		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		ds_map[? "vsp"] = 2.2; //Amount of vsp to add to the player
+		ds_map[? "delay"] = 24; //Delay between force
+		ds_map[? "current_delay"] = 0;
+		ds_map[? "duration"] = 10; //Amount of time to apply force
+		ds_map[? "current_duration"] = 0;
 		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
@@ -128,15 +154,14 @@ enum BUFF_ICON {
 	BURNRUSH = s_abilityIcon_BurnRush, CHILLED = s_abilityIcon_Chilled,
 	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
 	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity,
-	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
-	KNOCKBACK = s_abilityIcon_KnockBack, BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
-	REVERSEGRAVITY = s_abilityIcon_ReverseGravity
+	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge, BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
+	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots
 }
 
 enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
-	REVERSEGRAVITY,
+	REVERSEGRAVITY, ROCKETBOOTS,
 	
 	//PUT LAST
 	LENGHT

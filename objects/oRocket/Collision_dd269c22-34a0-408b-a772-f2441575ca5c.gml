@@ -4,17 +4,18 @@
 //Add the pShootable to the hitlist
 //Do damage once to the hitlist
 if (!destroy && owner.team != other.team)
-	if (ds_list_find_index(confirmList, other) == -1) {
+	if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this player before
 		ds_list_add(confirmList, other);
 		ds_list_add(hitList, other);
 		if (!other.rockets_hit) exit; //Do nothing to the player, don't allow rocket to interact
 
 		if (other.object_index == oPlayer) {
-			//Knockback
-			doKnockback(other, rocket_map[? ROCKET_MAP.KBAMT], direction);
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other);
+			//with (other) scBuffHandler();
+			//Knockback
+			doKnockback(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
 		}
 		
 		//Damage player
@@ -34,5 +35,4 @@ if (!destroy && owner.team != other.team)
 		else
 		//Run the default explosion event/script
 		event_user(0);
-	} else if (!other.rockets_hit) 
-		exit;
+	}

@@ -2706,7 +2706,7 @@
             "Key": "c081306a-98d7-4bed-be5d-52368d7b0f54",
             "Value": {
                 "id": "963169f8-515a-40f0-adfa-30eb4e828a7e",
-                "resourcePath": "sprites\\s_abilityIcon_KnockBack\\s_abilityIcon_KnockBack.yy",
+                "resourcePath": "sprites\\s_abilityIcon_RocketBoots\\s_abilityIcon_RocketBoots.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3028,6 +3028,14 @@
                 "id": "1a2d1ede-6635-4246-b8c3-38b9eb2e2dec",
                 "resourcePath": "sprites\\sexplosion_Default\\sexplosion_Default.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e02a2303-a556-4d20-ab08-e9a2978b49cf",
+            "Value": {
+                "id": "61ade6b8-ccc5-4320-a6e4-91424de1503e",
+                "resourcePath": "scripts\\scBuffKnockback\\scBuffKnockback.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3367,6 +3375,14 @@
             }
         },
         {
+            "Key": "fc395cba-a75e-4ca3-93db-767b11addd98",
+            "Value": {
+                "id": "b59d7efa-9f2b-4398-9d11-c4c1da768a32",
+                "resourcePath": "scripts\\scBuffRocketBoots\\scBuffRocketBoots.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd5f9e2d-aab8-4026-8d3c-80bd3e096f2f",
             "Value": {
                 "id": "45545c77-c6fd-4aea-ba6a-4d776cfd6f66",
@@ -3519,6 +3535,8 @@
         "d2e43553-c950-45bc-8833-42f4c7e3421b",
         "ad4cf7c3-be62-4048-8c46-9b6b1658c8d3",
         "e787a68b-3070-49de-b812-e18b6a3a030e",
+        "e02a2303-a556-4d20-ab08-e9a2978b49cf",
+        "fc395cba-a75e-4ca3-93db-767b11addd98",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

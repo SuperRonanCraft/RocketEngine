@@ -1,7 +1,7 @@
-///@desc Knockback a pShootable
-///@arg target Entity to knockback
-///@arg amount Knockback amount
-///@arg direction direction getting hit from
+///@desc Knockback an oPlayer
+///@arg target entity to knockback
+///@arg amount of knockback
+///@arg direction getting hit from
 
 
 var owner = argument[0];

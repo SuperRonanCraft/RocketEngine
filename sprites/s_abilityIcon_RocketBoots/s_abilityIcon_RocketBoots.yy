@@ -2,7 +2,7 @@
     "id": "c081306a-98d7-4bed-be5d-52368d7b0f54",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_abilityIcon_KnockBack",
+    "name": "s_abilityIcon_RocketBoots",
     "For3D": false,
     "HTile": false,
     "VTile": false,
