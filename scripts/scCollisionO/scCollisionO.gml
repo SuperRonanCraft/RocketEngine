@@ -45,4 +45,4 @@ if (touchingy != noone) { //If touching a wall in the vertical
 }
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
-return (instance_place(x, y + offset, oWall) != noone);
+return (instance_place(x, y + (offset * grv_dir), oWall) != noone);

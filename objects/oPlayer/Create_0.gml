@@ -20,7 +20,7 @@ hp_scale = 1;
 hpsprite = sHealth;
 hpheight = sprite_get_height(hpsprite);
 hpwidth = sprite_get_width(hpsprite);
-display = true; //Display gui stuff
+//display = true; //Display gui stuff
 
 //Show when hit
 flash = 0;

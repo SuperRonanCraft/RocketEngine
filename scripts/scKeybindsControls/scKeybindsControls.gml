@@ -39,7 +39,7 @@ if (canControl){
 
 	//Vertical
 	if (key_jump && standing) {
-		vsp_move = -jump_height - jump_adj;
+		vsp_move = (-jump_height - jump_adj) * grv_dir;
 		standing = false;
 	}
 	//Weapon

@@ -29,3 +29,6 @@ if (rockets_enabled && hp > 0) {
 
 if (ult_enabled && ult_charge == ult_charge_max)
 	scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
+
+if (global.debug)
+	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);

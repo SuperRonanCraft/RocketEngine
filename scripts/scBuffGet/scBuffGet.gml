@@ -103,6 +103,16 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
 		break;
+	case BUFFTYPE.REVERSEGRAVITY:
+		ds_map[? BUFF_MAP.NAME] = "Reversed";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Your world, upside-down";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSEGRAVITY;
+		ds_map[? BUFF_MAP.STEP] = scBuffReverseGravity;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSEGRAVITY];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSEGRAVITY];
+		ds_map[? BUFF_MAP.GOOD] = false;
+		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -119,11 +129,14 @@ enum BUFF_ICON {
 	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
 	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity,
 	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
-	KNOCKBACK = s_abilityIcon_KnockBack, BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked
+	KNOCKBACK = s_abilityIcon_KnockBack, BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
+	REVERSEGRAVITY = s_abilityIcon_ReverseGravity
 }
 
 enum BUFFTYPE {
-	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
+	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
+	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
+	REVERSEGRAVITY,
 	
 	//PUT LAST
 	LENGHT

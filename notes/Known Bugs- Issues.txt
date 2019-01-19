@@ -1,10 +1,12 @@
 --Bugs--
 CURRENT:
-- Ult casting seems to freeze if picking up a rocket while casting an ult.
 - When "Teched" the player might teleport to the other side of a platform when doing so at the edge of one.
+- Player in the main menu does not have their keybinds updated
+- Player does not take damage right as a game ends?
 
 FIXED:
 - Second player sometimes takes double damage from default rocket?
 - Smoke particles for "Burn Rush" appears in front of player, as well as explosion
 - Playing a game of knockout and returning to the menu to play a game of 1v1 results in a crash.
+- Ult casting seems to freeze if picking up a rocket while casting an ult.
 

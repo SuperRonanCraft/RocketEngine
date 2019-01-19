@@ -220,9 +220,20 @@ part_type_life(parttype, 15, 30);
 ds_map_add(ds_part, PARTICLES.HACK, parttype);
 ds_map_add(ds_part_amt, PARTICLES.HACK, 2);
 
+parttype = part_type_create();
+part_type_sprite(parttype, s_preversegravity, false, false, true);
+part_type_size(parttype, 0.3, 0.5, 0, 0.02);
+part_type_direction(parttype, 220, 320, 0, 0);
+part_type_speed(parttype, 0.7, 0.9, 0, 0.1);
+part_type_alpha3(parttype, 1, 1, 0);
+part_type_life(parttype, 15, 30);
+
+ds_map_add(ds_part, PARTICLES.REVERSEGRAVITY, parttype);
+ds_map_add(ds_part_amt, PARTICLES.REVERSEGRAVITY, 1);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
-	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK
+	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY
 }

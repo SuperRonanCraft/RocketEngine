@@ -60,7 +60,7 @@ global.gamemodeSRoom[GAMEMODE.NUKED] = rNukemSelect;
 global.stages = -1;
 //Saved after a stage is selected to play
 global.stage_selected = -1;
-global.play = false;
+global.play = true;
 
 //Other
 global.vol_master = 1;

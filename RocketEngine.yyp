@@ -1991,6 +1991,14 @@
             }
         },
         {
+            "Key": "94741c68-b8fe-48ea-8421-8bf1d9d49cc7",
+            "Value": {
+                "id": "17276d39-7813-4b62-ad08-cec02c189322",
+                "resourcePath": "sprites\\s_abilityIcon_ReverseGravity\\s_abilityIcon_ReverseGravity.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9507032a-38ac-4212-9e7f-6abdee2729e4",
             "Value": {
                 "id": "ecc5d01a-57f4-4c7f-aa18-c6443c9ab3fb",
@@ -2927,6 +2935,14 @@
             }
         },
         {
+            "Key": "d6871021-2cfc-47c1-ab44-9c108e5f064b",
+            "Value": {
+                "id": "204296af-a0b4-426c-a91d-66cee4e6cb79",
+                "resourcePath": "sprites\\s_preversegravity\\s_preversegravity.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d6ba92e2-a45a-49aa-bdbf-5ab91afc2838",
             "Value": {
                 "id": "d8d7b9f2-9aca-4831-95a0-60e899fb42fa",
@@ -3100,6 +3116,14 @@
                 "id": "b3b56149-2148-4960-90a5-7a7b70d7897d",
                 "resourcePath": "objects\\oUltimateSwipe\\oUltimateSwipe.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e787a68b-3070-49de-b812-e18b6a3a030e",
+            "Value": {
+                "id": "290457b9-2ea1-4423-af40-1efbef0f9dbc",
+                "resourcePath": "scripts\\scBuffReverseGravity\\scBuffReverseGravity.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3494,6 +3518,7 @@
         "70e3eb22-06f6-4b42-a408-5f2e4869e836",
         "d2e43553-c950-45bc-8833-42f4c7e3421b",
         "ad4cf7c3-be62-4048-8c46-9b6b1658c8d3",
+        "e787a68b-3070-49de-b812-e18b6a3a030e",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

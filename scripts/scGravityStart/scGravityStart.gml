@@ -23,3 +23,5 @@ knockback_time = 0;
 //Specials
 player_tech = true; //Remove the bounce and teching
 player_knockback = true; //Remove knockback all together
+
+grv_dir = 1; //Gravity direction (1 = down, 0 = none, -1 = up)

@@ -18,7 +18,7 @@ scCheckTech();
 
 scBuffHandler();
 scGravity();
-scRocketProgress(team);
+scRocketProgress(!shoot_face ? team : -1);
 scUltimateHandler();
 scComboStep();
 

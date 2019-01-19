@@ -25,6 +25,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
 		map[? ROCKET_MAP.KBAMT] = 35;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSEGRAVITY];
 		break;
 		
 	case ROCKET.FAST:

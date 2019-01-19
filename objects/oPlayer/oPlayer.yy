@@ -212,6 +212,34 @@
             "value": "True",
             "varName": "face_movement",
             "varType": 3
+        },
+        {
+            "id": "f4fe2718-e7f7-4ce1-8d3b-4ebc49ac7e44",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "display",
+            "varType": 3
+        },
+        {
+            "id": "c8d9aabb-af46-4dc9-8a96-70c58610d9c7",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "shoot_face",
+            "varType": 3
         }
     ],
     "solid": false,

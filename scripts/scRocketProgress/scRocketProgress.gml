@@ -1,10 +1,10 @@
 /// @desc Check when to shoot a tocket
-/// @arg team (-1 to disable right team checking)
+/// @arg team (-1 to disable team checking)
 
 
 if (rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
 //Set the direction of the rocket
-var dir = argument0 == -1 ? direction : (argument0 == TEAM.LEFT ? 0 : 180);
+var dir = argument0 == -1 ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
 
 //Rocket
 if (current_delay == 0) {
