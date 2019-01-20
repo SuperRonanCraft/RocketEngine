@@ -9,7 +9,7 @@
         "28466398-ac55-4905-b63d-c861da53bae0"
     ],
     "filterType": "GMRoom",
-    "folderName": "Nukem",
+    "folderName": "Rumble",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -1,42 +1,23 @@
 {
-    "id": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f",
+    "id": "0d740bd0-f561-4b8f-9404-a954ae375dba",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oGMMNukem",
+    "name": "oWallRumble",
     "eventList": [
         {
-            "id": "ec771ab2-da0a-4ce1-9400-f5a4e281fb54",
+            "id": "8069ce86-b316-4e45-9703-633da83a83be",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f"
-        },
-        {
-            "id": "d531ef27-915d-4701-8c60-4e64f31d4086",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f"
+            "m_owner": "0d740bd0-f561-4b8f-9404-a954ae375dba"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        {
-            "id": "b5c7e0a5-1c31-42ba-a7e2-866abf3d3410",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "908b93c2-a679-4239-a92c-162de84ac11e",
-            "propertyId": "78b3389c-ec6a-456a-bc80-ddd7076a3c44",
-            "value": "GAMEMODE.NUKED"
-        }
-    ],
-    "parentObjectId": "908b93c2-a679-4239-a92c-162de84ac11e",
+    "overriddenProperties": null,
+    "parentObjectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -52,7 +33,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "f754a224-c2cd-4724-8c2e-1613240a6084",
+            "id": "7b25ed3a-d13f-40bf-99b3-01b3b960112f",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -61,8 +42,8 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
-            "varName": "hp_start",
+            "value": "0",
+            "varName": "level",
             "varType": 1
         }
     ],

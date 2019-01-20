@@ -11,13 +11,8 @@ ds_gamemodes = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player"],
 	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs..."],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!"],
-	//["MORE...",			menu_element_type.page_transfer,	menu_page.more_gamemodes],
+	[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],		"Duke Nuke'm!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
-);
-
-ds_other_gamemodes = scUICreateMenuPage(
-	[global.gamemodes[GAMEMODE.NUKED],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.NUKED],		"Duke Nuke'm!"],
-	["BACK",			menu_element_type.page_transfer,	menu_page.gamemodes],
 );
 
 ds_info = scUICreateMenuPage(
@@ -55,14 +50,14 @@ ds_keybinds2[# 2, ds_grid_height(ds_keybinds2) - 1] = menu_page.controls;
 
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics,
-	ds_menu_keybinds, ds_other_gamemodes, ds_info, ds_rocketinfo, ds_controls, ds_rocketbuffs,
+	ds_menu_keybinds, ds_info, ds_rocketinfo, ds_controls, ds_rocketbuffs,
 	ds_keybinds2, ds_confirm];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
-	menu_page.keybinds, menu_page.more_gamemodes, menu_page.info, menu_page.rocketlist, menu_page.controls, menu_page.rocketbuffs,
+	menu_page.keybinds, menu_page.info, menu_page.rocketlist, menu_page.controls, menu_page.rocketbuffs,
 	menu_page.keybinds2, menu_page.confirm];
 //Pages that are centered and have no input side
-menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_other_gamemodes, ds_info, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm];
+menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_info, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm];
 
 //Ignore specific menu elements from being selected
 menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls];

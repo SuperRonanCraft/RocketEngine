@@ -41,19 +41,19 @@ global.pause = false;
 //Gamemodes
 //Preset
 enum GAMEMODE {
-	ONEVONE = 0, TARGETS = 1, KNOCKOUT = 2, NUKED = 3
+	ONEVONE = 0, TARGETS = 1, KNOCKOUT = 2, RUMBLE = 3
 }
 global.gamemodes[GAMEMODE.ONEVONE] = "One v One";
 global.gamemodes[GAMEMODE.TARGETS] = "Targets";
 global.gamemodes[GAMEMODE.KNOCKOUT] = "Knockout";
-global.gamemodes[GAMEMODE.NUKED] = "Nuked";
+global.gamemodes[GAMEMODE.RUMBLE] = "Rumble";
 //Set when a select room is activated
 global.gamemode = noone;
 //Gamemode rooms
 global.gamemodeSRoom[GAMEMODE.ONEVONE] = r1v1Select;
 global.gamemodeSRoom[GAMEMODE.TARGETS] = rvTargetSelect;
 global.gamemodeSRoom[GAMEMODE.KNOCKOUT] = rKnockOutSelect;
-global.gamemodeSRoom[GAMEMODE.NUKED] = rNukemSelect;
+global.gamemodeSRoom[GAMEMODE.RUMBLE] = rRumbleSelect;
 
 //Stages
 //Set on every StageSelect room

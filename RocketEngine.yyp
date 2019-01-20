@@ -50,7 +50,7 @@
             "Key": "00731309-f644-4722-aedd-5d7ebb784efe",
             "Value": {
                 "id": "36293a86-e53e-411c-b668-af257bcf92ab",
-                "resourcePath": "rooms\\rNukemSelect\\rNukemSelect.yy",
+                "resourcePath": "rooms\\rRumbleSelect\\rRumbleSelect.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -236,6 +236,14 @@
                 "id": "ec64b453-a977-4000-971e-54d4fca824ef",
                 "resourcePath": "sounds\\snEndGame\\snEndGame.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "0d740bd0-f561-4b8f-9404-a954ae375dba",
+            "Value": {
+                "id": "ff4d0b82-250d-43dc-bbd5-d352d114abe3",
+                "resourcePath": "objects\\oWallRumble\\oWallRumble.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -562,7 +570,7 @@
             "Key": "28466398-ac55-4905-b63d-c861da53bae0",
             "Value": {
                 "id": "fa097950-2f60-46a1-b3a4-d86b1f5e9646",
-                "resourcePath": "rooms\\rNukemStage2\\rNukemStage2.yy",
+                "resourcePath": "rooms\\rRumbleStage2\\rRumbleStage2.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -939,6 +947,14 @@
             "Value": {
                 "id": "1ff1cd7b-89ec-4dab-95fc-05f5ebd25b77",
                 "resourcePath": "views\\4759b713-eb08-488a-9c4b-d95704bcc0e5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "490add55-39f6-4682-97ff-75835ebfc0c8",
+            "Value": {
+                "id": "3feb13b5-0f45-4663-ac66-a6d1d5e4d80b",
+                "resourcePath": "views\\490add55-39f6-4682-97ff-75835ebfc0c8.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2098,7 +2114,7 @@
             "Key": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f",
             "Value": {
                 "id": "ee5096e8-f838-447d-91b1-72b24c0c37d0",
-                "resourcePath": "objects\\oGMMNukem\\oGMMNukem.yy",
+                "resourcePath": "objects\\oGMMRumble\\oGMMRumble.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3346,7 +3362,7 @@
             "Key": "f9f10e60-74ad-4790-8a7b-9cc1e69ddcd0",
             "Value": {
                 "id": "73d2d617-8fb7-4e41-a761-90f8676aa1fa",
-                "resourcePath": "rooms\\rNukemStage1\\rNukemStage1.yy",
+                "resourcePath": "rooms\\rRumbleStage1\\rRumbleStage1.yy",
                 "resourceType": "GMRoom"
             }
         },
