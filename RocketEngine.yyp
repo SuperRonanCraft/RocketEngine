@@ -831,6 +831,14 @@
             }
         },
         {
+            "Key": "3fbe2a0d-926b-445e-8750-ec3918aa79ba",
+            "Value": {
+                "id": "c44a55ab-411e-42d7-9bd7-c01403a0ad25",
+                "resourcePath": "objects\\pPickupItem\\pPickupItem.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3fe80bd9-4520-4da5-9f1e-e9f7e36946ca",
             "Value": {
                 "id": "89e0fb87-df8f-4e1b-85e0-53ec73b91593",
@@ -1332,6 +1340,14 @@
                 "id": "1b409804-e99a-47e3-abb3-6d243dca6086",
                 "resourcePath": "scripts\\scBuffReverseControls\\scBuffReverseControls.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "680f5faa-5388-40f2-b6f9-27e133690728",
+            "Value": {
+                "id": "4a20aa6b-52cc-4623-a78f-e60b5df78f86",
+                "resourcePath": "sprites\\sPickupFloor\\sPickupFloor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
