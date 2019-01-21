@@ -1,6 +1,6 @@
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW]);
-else if (sprite_index != noone)
+if (sprite_index != noone)
 	draw_self();
 	
 if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone) {

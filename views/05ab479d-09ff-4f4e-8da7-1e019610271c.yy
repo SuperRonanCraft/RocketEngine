@@ -15,7 +15,8 @@
         "95509e06-2ab1-4c1d-b570-f2b5360ab507",
         "e57b7142-11f4-4ae4-8f55-7f4758fac442",
         "bf8695d7-e589-4e92-867e-040899958e6f",
-        "97902ae7-a9eb-4116-8611-56f01f33abee"
+        "97902ae7-a9eb-4116-8611-56f01f33abee",
+        "88f79f07-9b9b-4580-9d2e-57db0eff089e"
     ],
     "filterType": "GMScript",
     "folderName": "Specials",

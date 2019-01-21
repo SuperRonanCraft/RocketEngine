@@ -10,10 +10,10 @@ for (var i = 0; i < 6; i++) {
 	var xx = x, yy = y;
 	var colliding = false;
 	while(!colliding) {
-		var inst = collision_point(xx, yy, oWall, false, false);
-		if ((inst == noone || inst.object_index == oSeperator) && (xx > 0 && xx < RES_W && yy > 0 && yy < RES_H)) {
-			xx += lengthdir_x(10, dir);
-			yy += lengthdir_y(10, dir);
+		//var inst = collision_point(xx, yy, oWall, false, false);
+		if (/*(inst == noone || inst.object_index == oSeperator) &&*/ (xx > 0 && xx < RES_W && yy > 0 && yy < RES_H)) {
+			xx += lengthdir_x(50, dir);
+			yy += lengthdir_y(50, dir);
 		} else
 			colliding = true;
 	}

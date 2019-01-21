@@ -40,6 +40,7 @@ map[? ROCKET_MAP.EXPLOSION_ROCKET] = noone; //Explosion with a rocket
 map[? ROCKET_MAP.EXPLOSION_WALL] = noone; //Explosion with a wall
 map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = noone; //Explosion with a shootable
 map[? ROCKET_MAP.EXPLOSION_STEP] = noone; //Explosion step event
+map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = noone; //Explosion draw create event
 //SOUNDS
 map[? ROCKET_MAP.SOUND_SHOOT] = SOUND.EFFECT_SHOOT; //Rocket shoot sound
 map[? ROCKET_MAP.SOUND_EXPLOSION] = SOUND.EFFECT_EXP; //Rocket explode sound

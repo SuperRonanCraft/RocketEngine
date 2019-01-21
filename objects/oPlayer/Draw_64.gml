@@ -11,7 +11,7 @@ for (var i = 0; i < hp_original; i++) {
 		var len = hpwidth * i//((offset - 1) * 10));
 		var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
 		var ypos = (hpheight + 2); //+ (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
-		var scale = i == hp ? hp_scale : 1;
+		var scale = hp_damaged > 0 ? (i == hp ? hp_scale : 1) : 1;
 		draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
 	} else {
 		if (hp < 10) break;
@@ -110,7 +110,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_yellow, 32, 0.9, 4);
 	
 		//ULTIMATE CHARGE TEXT
-		scDrawText(xposcir, ypos * 2, string(charge) + string("%"), c_ltgray, 0.5, noone, 0.8);
+		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow, 0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
 	}
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, c_white, rockets_enabled ? 0.8 : 0.3);

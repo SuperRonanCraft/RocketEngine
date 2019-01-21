@@ -276,7 +276,27 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		map[? ROCKET_MAP.ENABLED] = true;
-		map[? ROCKET_MAP.ULTIMATE] = BUFFTYPE.REVERSEGRAVITY;
+		break;
+	
+	case ROCKET.LIGHTNING:
+		map[? ROCKET_MAP.NAME] = "LIGHTNING";
+		map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
+		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.RECOIL] = 2;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
+		map[? ROCKET_MAP.COOLDOWN] = 35;
+		map[? ROCKET_MAP.SPEED] = 15;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 10;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketLightning_Step;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketLightning_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketLightning_Destroy;
+		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketLightning_Draw;
+		map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = scRocketLightning_DrawExplode;
+		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.ENABLED] = true;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSEGRAVITY];
 		break;
 }
 

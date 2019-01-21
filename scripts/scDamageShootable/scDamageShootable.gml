@@ -16,6 +16,7 @@ if ((damage_take /*&& shootInst != id*/) || force) {
 		flash = 3;
 		hitfrom = other.direction;
 		hp_scale = 2;
+		hp_damaged = dmg;
 		if (hp > 0 || alive)
 			scData_ConfirmHit();
 	}

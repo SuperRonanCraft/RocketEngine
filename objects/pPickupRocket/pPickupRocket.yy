@@ -2,7 +2,7 @@
     "id": "3fbe2a0d-926b-445e-8750-ec3918aa79ba",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "pPickupItem",
+    "name": "pPickupRocket",
     "eventList": [
         {
             "id": "709a7ef6-dc64-4ca4-9a7f-84c9a5d6f88b",
@@ -33,6 +33,16 @@
             "enumb": 0,
             "eventtype": 8,
             "m_owner": "3fbe2a0d-926b-445e-8750-ec3918aa79ba"
+        },
+        {
+            "id": "406c1674-5d56-4ffd-a3ee-3b161d72def8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "3fbe2a0d-926b-445e-8750-ec3918aa79ba"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -52,20 +62,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "39d6f4e4-53f9-4daf-a927-3bdad218cff1",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "PICKUP_TYPE.ROCKET",
-            "varName": "type",
-            "varType": 5
-        }
+        
     ],
     "solid": false,
     "spriteId": "680f5faa-5388-40f2-b6f9-27e133690728",

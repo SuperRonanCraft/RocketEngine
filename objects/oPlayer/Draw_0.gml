@@ -8,6 +8,14 @@ if (ult_casting) {
 	scDrawRect(x - 50, yy, x - 50 + (percent * 100), yy2, c_yellow, false, 0.9);
 }
 
+//Ultimate ready indicator
+if (ult_enabled && ult_charge == ult_charge_max && global.play) {
+	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
+	var dir = irandom(360);
+	var dis = irandom_range(20, 30);
+	scDrawLightning(x, y, x + lengthdir_x(dis, dir), y + lengthdir_y(dis, dir), irandom_range(2, 5), c_aqua);
+}
+
 //Update the direction the player should face
 scDirection(true);
 
@@ -29,11 +37,6 @@ if (rockets_enabled && hp > 0) {
 		}
 	}
 }
-
-//Ultimate ready indicator
-if (ult_enabled && ult_charge == ult_charge_max)
-	scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
-
 
 //Show players collision box while in debug mode
 if (global.debug)
