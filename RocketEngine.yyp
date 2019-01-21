@@ -2487,6 +2487,14 @@
             }
         },
         {
+            "Key": "af655ced-6f3f-4d40-bbd3-94dbbaa0a427",
+            "Value": {
+                "id": "ed8252de-5fb9-41b7-ad83-c2558dc61d6e",
+                "resourcePath": "scripts\\scUltimateSludge\\scUltimateSludge.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "af7e5d3c-ebb7-457a-941d-927a45d5f935",
             "Value": {
                 "id": "6b03c4fa-3fdf-49a8-b116-ed13fed552fd",
@@ -3621,6 +3629,7 @@
         "1f21fc11-d952-4e84-9139-b99c6adc2365",
         "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",
+        "af655ced-6f3f-4d40-bbd3-94dbbaa0a427",
         "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
         "c07d0565-8664-4ade-bb74-991c3b5bd62e",
         "9402c50c-2b68-481f-aeb5-ba4a832f4c25",

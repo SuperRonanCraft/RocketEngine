@@ -179,7 +179,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketSpecialSlime_Draw;
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Slime;
 		//map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketSpecialSlime_Exp_Create;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SWIPE;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLUDGE;//SWIPE;
 		//map[? ROCKET_MAP.EXPLOSION_STEP] = scRocketSpecialSlime_Exp_Step;
 		//map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialSlime_Exp_Shootable;
 		//map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialSlime_Exp_Wall;

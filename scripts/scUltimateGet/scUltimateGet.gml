@@ -85,11 +85,16 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateMagnet;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
+	case ULTIMATE.SLUDGE:
+		ds_map[? ULTIMATE_MAP.NAME] = "Icky goo!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSludge;
+		ds_map[? "amount"] = 10; //Amount of sludge to cast
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
-	MIRROR, HOMING, LASER, TRAP, MAGNET,
+	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE,
 	
 	//PUT LAST
 	LENGTH

@@ -52,7 +52,7 @@ var map = ds_map_create(); //Create an ult map
 scUltimateGet(ult_casting_last, map); //Grab the ult map
 
 if (map[? ULTIMATE_MAP.CASTED_SCRIPT] != noone)
-	script_execute(map[? ULTIMATE_MAP.CASTED_SCRIPT]); //Run the ult script, no arguments as the player is the shooter
+	script_execute(map[? ULTIMATE_MAP.CASTED_SCRIPT], map); //Run the ult script, no arguments as the player is the shooter
 if (map[? ULTIMATE_MAP.CASTED_OBJECT] != noone)
 	with (instance_create_depth(x, y, depth + map[? ULTIMATE_MAP.CASTED_DEPTH], map[? ULTIMATE_MAP.CASTED_OBJECT]))
 		owner = other;

@@ -26,6 +26,9 @@ else
 	for (var i = 0; i < ds_list_size(targ.buffs); i++) {
 		var currentBuff = targ.buffs[| i];
 		//If the types are equal
-		if (currentBuff[? BUFF_MAP.TYPE] == ds_map[? BUFF_MAP.TYPE])
-			currentBuff[? BUFF_MAP.CLOCK] = 1;
+		if (currentBuff[? BUFF_MAP.TYPE] == ds_map[? BUFF_MAP.TYPE]) {
+			if (currentBuff[? BUFF_MAP.CLOCK] > 0)
+				currentBuff[? BUFF_MAP.CLOCK] = 1;
+			break;
+		}
 	}
