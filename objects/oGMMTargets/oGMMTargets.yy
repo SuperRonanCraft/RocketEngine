@@ -2,7 +2,7 @@
     "id": "f1afdbc9-f9a5-42f1-81b3-77c4a3b60be2",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oGMMvTarget",
+    "name": "oGMMTargets",
     "eventList": [
         {
             "id": "3a34235d-a437-475f-80e6-3c6965a90f19",

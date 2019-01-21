@@ -1,5 +1,4 @@
-/// @desc Create tiles
-if (!create_tiles) exit;
+// @desc Destroy tiles
 var lay_id = layer_get_id("Tiles");
 var map_id = layer_tilemap_get_id(lay_id);
 for (var xx = 0; xx < image_xscale; xx++)

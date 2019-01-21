@@ -73,7 +73,7 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 6;
-		map[? ROCKET_MAP.BUFF] = BUFFTYPE.REVERSECONTROLS;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSECONTROLS];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.CLONE;
 		break;
 		
@@ -200,7 +200,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialRandom_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialRandom_Create;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SHIELD;
-		map[? ROCKET_MAP.BUFF] = BUFFTYPE.ROCKETBOOTS;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ROCKETBOOTS];
 		break;
 		
 	case ROCKET.BOUNCY:

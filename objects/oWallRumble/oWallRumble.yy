@@ -5,13 +5,13 @@
     "name": "oWallRumble",
     "eventList": [
         {
-            "id": "8069ce86-b316-4e45-9703-633da83a83be",
+            "id": "7a4ad4e2-4805-4d98-9e0e-18348b1f90b4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
+            "enumb": 10,
+            "eventtype": 7,
             "m_owner": "0d740bd0-f561-4b8f-9404-a954ae375dba"
         }
     ],
@@ -48,6 +48,6 @@
         }
     ],
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "a62224e9-3086-4752-8803-ac9e07f57b35",
     "visible": true
 }

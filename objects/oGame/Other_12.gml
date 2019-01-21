@@ -7,4 +7,3 @@ instance_activate_object(oUIPause);
 instance_activate_object(oMusic);
 instance_activate_object(oTips);
 global.pause = true;
-global.play = false;

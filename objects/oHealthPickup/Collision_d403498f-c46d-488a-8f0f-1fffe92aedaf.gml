@@ -3,10 +3,11 @@ if (!checked || !global.play) exit;
 //Add health to player
 var added = false;
 with (other)
-	if (hp != hp_original) {
-		hp += other.hp_amount;
-		hp_scale += 2;
-		added = true;
-	}
+	if (hp > 0)
+		if (hp != hp_original) {
+			hp += other.hp_amount;
+			hp_scale += 2;
+			added = true;
+		}
 if (added)
 	event_inherited();
