@@ -178,7 +178,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialSlime_Step;
 		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketSpecialSlime_Draw;
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Slime;
-		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketSpecialSlime_Exp_Create;
+		//map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketSpecialSlime_Exp_Create;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SWIPE;
 		//map[? ROCKET_MAP.EXPLOSION_STEP] = scRocketSpecialSlime_Exp_Step;
 		//map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialSlime_Exp_Shootable;
@@ -282,6 +282,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "LIGHTNING";
 		map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
 		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1;
 		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
 		map[? ROCKET_MAP.COOLDOWN] = 35;
@@ -293,6 +294,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketLightning_Destroy;
 		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketLightning_Draw;
 		map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = scRocketLightning_DrawExplode;
+		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketLightning_CreateExplode;
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ENABLED] = true;

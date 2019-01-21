@@ -21,10 +21,9 @@ if (part != noone) {
 scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 //Delete this instance of oRocket
 
-destroy = true;
+with (xplo) //Custom create event for rocket
+	if (rocket_map[? ROCKET_MAP.EXPLOSION_CREATE] != noone)
+		script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_CREATE]);
 
-//Do something special if no rocket/shootable or wall event for a rocket, do something with just the explosion
-//giving it an instance of the explosion
-if (rocket_map[? ROCKET_MAP.EXPLOSION_CREATE] != noone)
-	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_CREATE], xplo);
+destroy = true;
 scPlaySound(rocket_map[? ROCKET_MAP.SOUND_EXPLOSION]);
