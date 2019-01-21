@@ -1663,6 +1663,14 @@
             }
         },
         {
+            "Key": "7c561b78-e556-4aef-926d-ef357167bc32",
+            "Value": {
+                "id": "f15200d7-0452-4730-a270-31fd69395647",
+                "resourcePath": "sprites\\s_pblexplosion\\s_pblexplosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7efb0829-d3fc-42e3-bf5f-34fbafd2a0f8",
             "Value": {
                 "id": "13b684e6-1c5d-4f82-8a97-7cf7ed62aa09",

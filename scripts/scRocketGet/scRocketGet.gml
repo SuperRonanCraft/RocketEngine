@@ -83,7 +83,7 @@ switch (roc) {
 		map[? ROCKET_MAP.RECOIL] = 5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.ICE;
 		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
-		map[? ROCKET_MAP.SPEED] = 11*varspd;
+		map[? ROCKET_MAP.SPEED] = 19;
 		map[? ROCKET_MAP.TIMER] = 180;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.ICE];
 		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ICE];

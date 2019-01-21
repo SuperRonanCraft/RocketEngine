@@ -8,10 +8,30 @@ var dsBuff = argument1;
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
+	
+	part_emitter_region(global.ParticleSystem1, global.Emitter1, owner.x - 5, owner.x + 5, owner.y + 5, owner.y - 5, ps_shape_ellipse, ps_distr_gaussian);
+	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEEDEXPLOSION], 10);	
+	
 	scDamageShootable(owner, false, false, 1);
+	
+	if(owner.hp <= 0){
+		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEEDEXPLOSION], 25);	
+	
+	}
+	
+
 	scBuffRemove(owner, dsBuff);
 } else {
-	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
-		dsBuff[? BUFF_MAP.PARTICLE], irandom_range(2,4));
+	
+	if(clock < dsBuff[? BUFF_MAP.TIME] * 0.95){
+		part_emitter_region(global.ParticleSystem1, global.Emitter1, owner.x - 35, owner.x + 35, owner.y + 35, owner.y - 35, ps_shape_ellipse, ps_distr_invgaussian);
+		
+		if(owner.hp > 1)
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEED],1);	
+		else
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEED],5);	
+
+	}
+		
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

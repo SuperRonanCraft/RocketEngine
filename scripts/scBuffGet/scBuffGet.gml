@@ -91,7 +91,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.BLEED];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.STACKABLE] = true; //Only buff that is stackable (timer doesn't reset)
-		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
 		break;
 	case BUFFTYPE.HACKED:
 		ds_map[? BUFF_MAP.NAME] = "Hacked";
