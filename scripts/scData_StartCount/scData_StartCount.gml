@@ -6,7 +6,7 @@ scAddData("-------");
 scAddData("GAME " + string(oDataCollector.games) + ":");
 
 
-with(oDataCollector){
+with (oDataCollector) {
 	beginCount = true;
 	timer = 0;
 }

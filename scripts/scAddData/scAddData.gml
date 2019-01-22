@@ -2,10 +2,18 @@
 ///@arg data The string to add
 
 var data = argument[0];
-var file = file_text_open_append(working_directory+"data.txt");
+var file = file_text_open_append(working_directory + "data.txt");
 
-file_text_write_string(file, data);
+file_text_write_string(file, data); //Write the data
+file_text_writeln(file); //Dont know
+file_text_close(file); //Close the stream
 
-file_text_writeln(file);
 
-file_text_close(file);
+
+enum DATATYPE {
+	WINNER, HITS_AVG, TIME, TIME_LENGTH, TIMEOUT
+}
+
+enum DATATYPE_RESULT {
+	TIE
+}

@@ -7,6 +7,5 @@ if (audio_group_is_loaded(agMusic)) {
 	current_sound = sound;
 }
 
-if (audio_group_is_loaded(agEffects)) {
+if (audio_group_is_loaded(agEffects))
 	audio_group_set_gain(agEffects, global.vol_sounds, 0);
-}

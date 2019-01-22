@@ -2,13 +2,20 @@
 
 oDataCollector.beginCount = false;
 
-scAddData("OUTCOME:");
-
+scAddData(string(DATATYPE.WINNER) + ":" + (!tie ? string(global.winner) : string(DATATYPE_RESULT.TIE)));
 scData_CalculateAvgHit();
-
-if(!tie)
-	scAddData("WINNER: " + string(global.winner));
-else
-	scAddData("TIE");	
+scAddData(string(DATATYPE.TIME) + ":" + string(timer_current));
+scAddData(string(DATATYPE.TIME_LENGTH) + ":" + string(timer));
 //Check if game ended in timeout, add to data
-scAddData("TIMEOUT: " + string(timer_current <= 0));
+scAddData(string(DATATYPE.TIMEOUT) + ":" + string(timer_current <= 0));
+
+//WINNER / LOSER
+if (global.winner == TEAM.LEFT) {
+	global.score_p1_wins++;
+	global.score_p2_loses++;
+} else if (global.winner == TEAM.RIGHT) {
+	global.score_p2_wins++;
+	global.score_p1_loses++;
+}
+
+scSaveStats(); //Save the stats to the file

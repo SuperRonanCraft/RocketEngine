@@ -107,3 +107,12 @@ global.mode_kb_pickups = 1;
 global.mode_kb_health = 2;
 global.mode_kb_ultimates = 1;
 global.mode_kb_timer = 2;
+
+//SCORE
+global.score_p1_wins = 0;
+global.score_p1_loses = 0;
+global.score_p2_wins = 0;
+global.score_p2_loses = 0;
+
+//LOAD STUFF
+scLoadSettings();

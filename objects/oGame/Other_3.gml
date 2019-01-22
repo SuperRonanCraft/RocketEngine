@@ -1,0 +1,2 @@
+/// @desc Save stuff
+scSaveSettings();
