@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "03a0e4bc-8b37-4972-aa01-7cb29b11afbd",
+            "Value": {
+                "id": "c7fcfd5c-a572-497b-8649-19343a495dbc",
+                "resourcePath": "views\\03a0e4bc-8b37-4972-aa01-7cb29b11afbd.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "03a26806-17fd-4171-842e-d47ae969bf8e",
             "Value": {
                 "id": "eac138ab-4423-45dd-a1cd-24ba7a5e45a2",
@@ -295,6 +303,14 @@
             }
         },
         {
+            "Key": "12cef5e0-58b2-4e5e-89f6-9362ce03831c",
+            "Value": {
+                "id": "f577d9b6-2550-419c-a0d9-5c6ce8e2badf",
+                "resourcePath": "sprites\\sUltSludge_floor1\\sUltSludge_floor1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "12f54edf-5527-4ddb-9dda-dc5099ad848c",
             "Value": {
                 "id": "a45e158f-f6b9-47fd-bfc1-e1f05534a337",
@@ -332,6 +348,14 @@
                 "id": "f033e8cc-7606-4213-947c-6a93619128f2",
                 "resourcePath": "sprites\\s_pember\\s_pember.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1728f6db-8f7a-4b87-bdd6-988735e60289",
+            "Value": {
+                "id": "5dd83d45-cc03-4e10-ad65-d273fd69d073",
+                "resourcePath": "objects\\oUltimateSludgeShooter\\oUltimateSludgeShooter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2210,7 +2234,7 @@
             "Key": "9d4d72b0-5fe0-4c56-8d7c-62dcab8fba3e",
             "Value": {
                 "id": "ec69163d-9f1e-47e4-b3d9-4a4b69a8b368",
-                "resourcePath": "sprites\\sUltSludge\\sUltSludge.yy",
+                "resourcePath": "sprites\\sUltSludge_stationary\\sUltSludge_stationary.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3540,6 +3564,14 @@
                 "id": "98465573-23f6-48f2-83c2-f0400742d626",
                 "resourcePath": "scripts\\scRocketStart\\scRocketStart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fbf8d8a8-9a0b-4157-a5a8-5bc472473fa6",
+            "Value": {
+                "id": "35b19d13-cd18-4223-afe0-b28ebd49f781",
+                "resourcePath": "sprites\\sUltSludge_fly1\\sUltSludge_fly1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

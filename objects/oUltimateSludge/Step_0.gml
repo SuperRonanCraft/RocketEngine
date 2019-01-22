@@ -1,6 +1,8 @@
 /// @desc move sludge
 
-if (!standing) { //Collision
+var otherSludge = noone;
+
+if (true) { //Collision
 	sludge_vsp += sludge_grv;
 	var offset = 1;
 	var list = ds_list_create();
@@ -14,12 +16,17 @@ if (!standing) { //Collision
 			} else if (sludge_hsp < 0)//Going Left
 				x = ceil(touchingx.bbox_right + (x - bbox_left) + offset);
 			sludge_hsp = 0;
+			sludge_vsp = 0;
 			break;
 		}
 	}
 	ds_list_clear(list);
+	
 	instance_place_list(x, y + sludge_vsp, oWall, list, false);
+	
 	var istouchingy = false;
+	
+	
 	for (var i = 0; i < ds_list_size(list); i++) {
 		var touchingy = list[| i]; 
 		if (touchingy != noone && touchingy.object_index != oSeperator) {
@@ -29,6 +36,7 @@ if (!standing) { //Collision
 			else if (sludge_vsp < 0) //Going up
 				y = ceil(touchingy.bbox_bottom + (y - bbox_top) + offset);
 			sludge_vsp = 0;
+			sludge_hsp = 0;
 			break;
 		}
 	}
@@ -39,14 +47,27 @@ if (!standing) { //Collision
 	
 	if (sludge_vsp == 0 && sludge_hsp == 0 && istouchingy) {
 		standing = true;
-		image_index = 1;
 	} else {
 		x += sludge_hsp;
 		y += sludge_vsp;
+		standing = false;
 	}
 }
 
 if (standing)
+	otherSludge = instance_place(x,y,oUltimateSludge);
+	if(otherSludge != noone){
+		
+		if(otherSludge.x > x){
+			x-= 2;	
+		}
+		else{
+			x+= 2;	
+		}
+		
+	}
+
+
 	if (sludge_timer > sludge_despawn) {
 		image_alpha -= 0.1;
 		if (image_alpha <= 0)
