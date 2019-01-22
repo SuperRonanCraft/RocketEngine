@@ -2,4 +2,4 @@
 
 if (standing && other.team != owner.team)
 	//if (!scBuffFind(other, BUFFTYPE.SLIME)) //Cannot add all the time as the first clock event will not happen
-	scBuffAdd(BUFFTYPE.SLIME, other);
+	scBuffAdd(sludge_buff, other);

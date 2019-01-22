@@ -21,3 +21,7 @@ if (image_yscale != original_yscale) {
 	var val = sign(original_yscale);
 	image_yscale = clamp(image_yscale + (scale_speed * val), -original_yscale * val, original_yscale * val);
 }
+
+//Show rocket collision box while in debug mode
+if (global.debug)
+	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);

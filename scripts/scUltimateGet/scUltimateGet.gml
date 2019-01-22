@@ -90,11 +90,15 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSludge;
 		ds_map[? "amount"] = 10; //Amount of sludge to cast
 		break;
+	case ULTIMATE.NAPALM:
+		ds_map[? ULTIMATE_MAP.NAME] = "The floor is lava!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateNapalm_Casted;
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
-	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE,
+	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM,
 	
 	//PUT LAST
 	LENGTH

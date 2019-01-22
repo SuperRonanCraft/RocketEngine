@@ -276,6 +276,7 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		map[? ROCKET_MAP.ENABLED] = true;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NAPALM;
 		break;
 	
 	case ROCKET.LIGHTNING:
