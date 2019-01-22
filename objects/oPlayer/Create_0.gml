@@ -62,3 +62,5 @@ friction_adj = 0;
 
 //If jumped at right time
 teched = false;
+
+buffs_cur = -1;

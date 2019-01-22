@@ -6,5 +6,3 @@ for (var b = 0; b < ds_list_size(buffs); b++) {
 	//Apply the script contained within the buff DS Map
 	script_execute(buf[? BUFF_MAP.STEP], id, buf);
 }
-
-//This script is run every step of oPlayer. It executes buffs and their scripts.

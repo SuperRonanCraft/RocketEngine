@@ -36,6 +36,13 @@ with (inst) {
 		image_yscale *= -1;
 	sprite_index = rocket_map[? ROCKET_MAP.PROJECTILE];
 	timer = rocket_map[? ROCKET_MAP.TIMER];
+	//SCALE
+	var scale = rocket_map[? ROCKET_MAP.SCALE];
+	original_xscale = scale;
+	original_yscale = scale;
+	//CREATE
+	if (rocket_map[? ROCKET_MAP.ROCKET_CREATE] != noone) //Script to run when a rocket has been created
+		script_execute(rocket_map[? ROCKET_MAP.ROCKET_CREATE]);
 }
 
 return inst;

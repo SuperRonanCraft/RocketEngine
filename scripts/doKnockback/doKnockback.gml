@@ -24,7 +24,7 @@ owner.canControl = false;
 owner.playerState = PLAYERSTATE.KNOCKBACK;
 var hval = lengthdir_x(maxH, dir), vval = lengthdir_y(maxV, dir);
 owner.hsp_knockback = hval;
-owner.vsp_knockback = vval * sign(owner.grv_dir);
+owner.vsp_knockback = vval;// * sign(owner.grv_dir);
 owner.vsp_move = 0; //Reset gravity
 owner.knockback_time = 300;
 owner.hsp_move = 0;

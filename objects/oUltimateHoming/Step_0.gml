@@ -5,7 +5,7 @@ y = owner.y;
 
 if (timer % 10 == 0 && timer < 30)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
-			irandom_range(45, 135), owner, owner.rocket_map)) {
+			irandom_range(45, 135), owner, owner.rocket_map, [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;
 		//Give it the map of the current rocket
 		rocket_map = ds_map_create(); 
@@ -34,7 +34,6 @@ if (timer % 10 == 0 && timer < 30)
 		homing[? "locY"] = yy + irandom_range(-30, 30);
 		rocket_map[? ROCKET_MAP.SPEED] = 0.1;
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
-		rocket_map[? ROCKET_MAP.SCALE] = 1;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	
 		rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];
