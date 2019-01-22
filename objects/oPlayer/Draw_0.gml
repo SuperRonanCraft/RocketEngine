@@ -1,7 +1,7 @@
 /// @desc Animation/Sprite
 
 //Ultimate casting bar above players heads
-if (ult_casting) {
+if (ult_casting && global.play) {
 	var yy = bbox_top - 4, yy2 = bbox_top - 8;
 	var percent = (ult_cast_time_max - ult_cast_time) / ult_cast_time_max;
 	scDrawRect(x - 51, yy + 1, x + 51, yy2 + 1, c_black, false, 0.9);
@@ -26,7 +26,7 @@ scUltimateHandlerDraw();
 scAnimationState();
 
 //Show weapon clip if larger than 1
-if (rockets_enabled && hp > 0) {
+if (rockets_enabled && hp > 0 && global.play) {
 	var clip = rocket_map[? ROCKET_MAP.CLIP];
 		if (clip > 1) {
 		var xx = x - 30;
