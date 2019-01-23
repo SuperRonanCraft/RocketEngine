@@ -1,2 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc Reset timer and item
+
+if (instance_exists(current_item))
+	instance_destroy(current_item)
