@@ -33,7 +33,11 @@ if (workingon != page) { //New page, lets set it up
 		//Make the buttons for special menus to spawn lower than normal
 		for (var a = 0; a < array_length_1d(menu_special); a++)
 			if (ds_grid[# 1, 0] == menu_special[a]) {
-				yy = menu_special_start_y[a] + yoffset; break;}
+				var val = menu_special_start_y[a];
+				if (val != noone)
+					yy = val + yoffset;
+				break;
+			}
 		start_y[i] = yy == 0 ? start_y_default + yoffset : yy;
 		index++;
 	}
@@ -143,5 +147,17 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			scMenuRocketBuffs(); break;
 		case menu_element_type.controls: //Key controls page
 			scMenuControls(); break;
+		case menu_element_type.stats: //Stats page
+			var p1 = "Player 1", p2 = "Player 2";
+			var scale = scale_element;
+			if (i == 0)
+				scDrawText(rtx, rty - (y_buffer / 2), p1 + "    " + p2, color_element_special, 0.5, noone, noone, fa_left);
+			var midp1 = rtx + ((string_width(p1) * scale) / 2);
+			var midp2 = rtx + ((string_width(p1 + "    ") * scale) + ((string_width(p2) * scale) / 2));
+			var map = oDataCollector.data_cache;
+			var mode = string(ds_grid[# 2, i]);
+			scDrawText(midp1, rty, map[? "p1_wins_" + mode], c_red, scale, noone, noone, fa_middle);
+			scDrawText(midp2, rty, map[? "p2_wins_" + mode], c_red, scale, noone, noone, fa_middle);
+			break;
 	}
 }

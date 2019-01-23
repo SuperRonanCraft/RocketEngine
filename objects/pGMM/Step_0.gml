@@ -11,11 +11,8 @@ if (wait_timer_current >= 0) {
 			case 1: wait_timer_color = c_yellow; break;
 			case 0: wait_timer_color = c_lime; wait_timer_text = wait_timer_go; break;
 		}
-		if (wait_timer_current < 0) //{
+		if (wait_timer_current <= 0)
 			global.play = true;
-		//	scPlaySound(SOUND.UI_START);
-		//} else
-		//	scPlaySound(SOUND.UI_COUNTDOWN, choose(0.8, 1, 1.2));
 	}
 	wait_timer_scale = max(wait_timer_scale * 0.95, 1);
 	exit;

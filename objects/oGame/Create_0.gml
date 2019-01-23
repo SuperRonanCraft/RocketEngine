@@ -41,7 +41,7 @@ global.pause = false;
 //Gamemodes
 //Preset
 enum GAMEMODE {
-	ONEVONE = 0, TARGETS = 1, KNOCKOUT = 2, RUMBLE = 3
+	ONEVONE, TARGETS, KNOCKOUT, RUMBLE, LENGTH
 }
 global.gamemodes[GAMEMODE.ONEVONE] = "One v One";
 global.gamemodes[GAMEMODE.TARGETS] = "Targets";
@@ -109,10 +109,13 @@ global.mode_kb_ultimates = 1;
 global.mode_kb_timer = 2;
 
 //SCORE
-global.score_p1_wins = 0;
-global.score_p1_loses = 0;
-global.score_p2_wins = 0;
-global.score_p2_loses = 0;
+//global.score_p1_wins = 0;
+//global.score_p1_loses = 0;
+//global.score_p2_wins = 0;
+//global.score_p2_loses = 0;
+
+global.score_mode_p1_wins = 0;
+global.score_mode_p2_wins = 0;
 
 //LOAD STUFF
 scLoadSettings();

@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "1449a1da-aeb4-44a1-b379-0bde0e8cdbd7",
+            "Value": {
+                "id": "b2f0da31-788d-4cc7-a2e6-aecbaeb93428",
+                "resourcePath": "scripts\\scLoadStatsMode\\scLoadStatsMode.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "14c4078b-f092-479f-909a-69267fc05e22",
             "Value": {
                 "id": "316a42dd-92ba-4cad-a09f-acf9d59cff98",
@@ -911,6 +919,14 @@
             }
         },
         {
+            "Key": "41360344-979f-49d9-8118-74553b9de3c1",
+            "Value": {
+                "id": "174e9a10-aa6f-496b-9021-a5ae80b61443",
+                "resourcePath": "scripts\\scResetStageStats\\scResetStageStats.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
             "Value": {
                 "id": "2313a048-70ce-4248-b0b1-5e1f3a6ba62d",
@@ -1291,6 +1307,14 @@
             "Value": {
                 "id": "9254bd5d-d31f-4edd-b4f8-2bd8a25564b0",
                 "resourcePath": "scripts\\scRocketLightning_Draw\\scRocketLightning_Draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5e55b293-f3e4-4ad3-aae9-a5ec05874b2e",
+            "Value": {
+                "id": "bafbe41f-87ee-4956-9564-830356306509",
+                "resourcePath": "scripts\\scLoadStats\\scLoadStats.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2599,6 +2623,14 @@
             }
         },
         {
+            "Key": "b07921d9-8376-4807-9a92-24c903c3e303",
+            "Value": {
+                "id": "2e7e0773-14fb-4416-a300-45ebfcdc1092",
+                "resourcePath": "scripts\\scFileGetType\\scFileGetType.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b0ad2d55-dfd4-441e-bce4-b60104d4b865",
             "Value": {
                 "id": "1dac84e9-3d5b-4e77-b3b0-c7f903d47a84",
@@ -2667,6 +2699,14 @@
             "Value": {
                 "id": "9be64a23-f23c-48d0-8bf0-5834873e6a94",
                 "resourcePath": "scripts\\scUltimateClone\\scUltimateClone.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b5db1945-bb64-468c-aff2-c3552b4fdd86",
+            "Value": {
+                "id": "cea8dbbe-f706-47fe-af56-8186f4e97c18",
+                "resourcePath": "scripts\\scResetGameStats\\scResetGameStats.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3836,7 +3876,12 @@
         "548ac667-ced5-4357-8535-c3454975615a",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
-        "7eec10ae-de29-493a-afc4-60ffa416df7d"
+        "5e55b293-f3e4-4ad3-aae9-a5ec05874b2e",
+        "7eec10ae-de29-493a-afc4-60ffa416df7d",
+        "41360344-979f-49d9-8118-74553b9de3c1",
+        "1449a1da-aeb4-44a1-b379-0bde0e8cdbd7",
+        "b07921d9-8376-4807-9a92-24c903c3e303",
+        "b5db1945-bb64-468c-aff2-c3552b4fdd86"
     ],
     "tutorial": ""
 }

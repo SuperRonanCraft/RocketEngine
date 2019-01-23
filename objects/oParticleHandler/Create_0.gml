@@ -223,9 +223,10 @@ ds_map_add(ds_part_amt,PARTICLES.BLEEDEXPLOSION, 3);
 
 parttype = part_type_create();
 part_type_sprite(parttype, s_phack, false, false, true);
-part_type_size(parttype, 0.5, 0.8, 0, 0.02);
-part_type_direction(parttype, 20, 160, 0, 0);
-part_type_speed(parttype, -0.5, 0.5, 0, 0.1);
+part_type_size(parttype, 0.8, 0.8, 0, 0);
+part_type_direction(parttype, 90, 90, 0, 0);
+part_type_speed(parttype, -0.8, 0.8, 0, 0);
+part_type_alpha3(parttype, 1, 1, 0);
 part_type_life(parttype, 15, 30);
 
 ds_map_add(ds_part, PARTICLES.HACK, parttype);

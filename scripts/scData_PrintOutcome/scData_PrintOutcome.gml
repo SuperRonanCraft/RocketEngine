@@ -11,11 +11,11 @@ scAddData(string(DATATYPE.TIMEOUT) + ":" + string(timer_current <= 0));
 
 //WINNER / LOSER
 if (global.winner == TEAM.LEFT) {
-	global.score_p1_wins++;
-	global.score_p2_loses++;
+	global.score_mode_p1_wins++;
+	global.score_stage_p1_wins++;
 } else if (global.winner == TEAM.RIGHT) {
-	global.score_p2_wins++;
-	global.score_p1_loses++;
+	global.score_mode_p2_wins++;
+	global.score_stage_p2_wins++;
 }
 
 scSaveStats(); //Save the stats to the file

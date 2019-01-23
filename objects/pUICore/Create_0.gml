@@ -1,7 +1,7 @@
 ///Page types
 enum menu_page {
 	main, gamemodes, more_gamemodes, settings, audio, graphics, keybinds,
-	keybinds2, controls, info, rocketlist, rocketbuffs, confirm, modes,
+	keybinds2, controls, info, rocketlist, rocketbuffs, confirm, modes, stats,
 	//Keep last
 	height
 }
@@ -27,7 +27,8 @@ enum menu_element_type {
 	//Toggle multiple settings
 	mass_toggle,
 	//Controls page
-	controls
+	controls,
+	stats
 }
 
 enum menu_centered {

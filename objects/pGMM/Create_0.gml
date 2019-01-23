@@ -1,7 +1,12 @@
 /// @desc a stage has begun
-timer = 90;//global.stage_timer;
 
 global.gamemode = gamemode;
+
+scResetStageStats();
+
+timer = 90; //global.stage_timer;
+
+scLoadStatsMode();
 
 timer_current = timer;
 timer_room = 0;
@@ -15,7 +20,7 @@ wait_timer_color = c_red;
 //Kinda like pausing, but for specific objects like a player
 global.play = false;
 //Create a camera object for the screen shake and ability to manipulate viewport
-instance_create_depth(0,0, depth, oCamera);
+instance_create_depth(0, 0, depth, oCamera);
 //Endgame
 endgame = false;
 endgame_delay = 2 * room_speed; //Delay between ending the game and starting the end_game screen

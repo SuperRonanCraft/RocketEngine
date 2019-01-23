@@ -1,4 +1,4 @@
-var fileStr = "Save.sav"; //File name
+var fileStr = scFileGetType(FILES.SETTINGS); //File name
 if (file_exists(fileStr)) file_delete(fileStr); //Delete the last save file
 
 ini_open(fileStr); //Open stream
