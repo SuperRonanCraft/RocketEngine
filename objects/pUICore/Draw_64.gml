@@ -106,8 +106,20 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var left_shift = "<< ", right_shift = " >>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
-			if (inputting && i == menu_option[page]) c = color_element_input;
-			
+			if (inputting && i == menu_option[page]) {
+				c = color_element_input;
+				//HOVERING SUPPORT
+				var x1left = rtx;
+				var x2left = x1left + (string_width("<< ") * scale_element);
+				var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element);
+				var x2right = x1right + (string_width(" >>") * scale_element);
+				var buffer = string_width(left_shift) * scale_element;
+				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, "<< ", buffer, buffer, scale_element, true))
+					left_shift = "<<< ";
+				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, true))
+					right_shift = " >>>";
+			}
+			//TEXT
 			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
@@ -138,7 +150,19 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var left_shift = "<< ", right_shift = " >>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
-			if (inputting && i == menu_option[page]) c = color_element_input;
+			if (inputting && i == menu_option[page]) {
+				c = color_element_input;
+				//HOVERING SUPPORT
+				var x1left = rtx;
+				var x2left = x1left + (string_width("<< ") * scale_element);
+				var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element);
+				var x2right = x1right + (string_width(" >>") * scale_element);
+				var buffer = string_width(left_shift) * scale_element;
+				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, "<< ", buffer, buffer, scale_element, true))
+					left_shift = "<<< ";
+				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, true))
+					right_shift = " >>>";
+			}
 			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.rocket_list: //Rocket info page
@@ -152,12 +176,19 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var scale = scale_element;
 			if (i == 0)
 				scDrawText(rtx, rty - (y_buffer / 2), p1 + "    " + p2, color_element_special, 0.5, noone, noone, fa_left);
-			var midp1 = rtx + ((string_width(p1) * scale) / 2);
-			var midp2 = rtx + ((string_width(p1 + "    ") * scale) + ((string_width(p2) * scale) / 2));
+			var midp1 = rtx + (string_width(p1) / 4);
+			var midp2 = rtx + ((string_width(p1 + "    ") / 2) + (string_width(p2) / 4));
 			var map = oDataCollector.data_cache;
-			var mode = string(ds_grid[# 2, i]);
-			scDrawText(midp1, rty, map[? "p1_wins_" + mode], c_red, scale, noone, noone, fa_middle);
-			scDrawText(midp2, rty, map[? "p2_wins_" + mode], c_red, scale, noone, noone, fa_middle);
+			var mode = ds_grid[# 2, i];
+			switch (mode) {
+				case GAMEMODE.TARGETS:
+					scDrawText((midp1 + midp2) / 2, rty, scStatsGetNumerated(mode, noone), c_red, scale, noone, noone, fa_middle);
+					break;
+				default:
+					scDrawText(midp1, rty, scStatsGetNumerated(mode, 1), c_red, scale, noone, noone, fa_middle);
+					scDrawText(midp2, rty, scStatsGetNumerated(mode, 2), c_red, scale, noone, noone, fa_middle);
+					break;
+			}
 			break;
 	}
 }

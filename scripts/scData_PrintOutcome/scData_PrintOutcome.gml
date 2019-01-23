@@ -18,4 +18,14 @@ if (global.winner == TEAM.LEFT) {
 	global.score_stage_p2_wins++;
 }
 
-scSaveStats(); //Save the stats to the file
+var gm = global.gamemode;
+switch (gm) {
+	case GAMEMODE.TARGETS:
+		if (points > scStatsGet(gm, noone)) //High score
+			scStatsSave(gm, [points]); break;
+	default:
+		//MODE P1, MODE P2, STAGE P1, STAGE P2
+		var scr = [global.score_mode_p1_wins, global.score_mode_p2_wins, global.score_stage_p1_wins, global.score_stage_p2_wins];
+		scStatsSave(gm, scr); //Save the stats to the file and cache
+		break;
+}

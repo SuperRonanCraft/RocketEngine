@@ -2,11 +2,11 @@
 
 global.gamemode = gamemode;
 
-scResetStageStats();
+scStatsResetStage();
 
 timer = 90; //global.stage_timer;
 
-scLoadStatsMode();
+scStatsLoadMode();
 
 timer_current = timer;
 timer_room = 0;

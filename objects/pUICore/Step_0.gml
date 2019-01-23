@@ -11,8 +11,23 @@ if (inputting) { //Are we inputting data?
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.shift:
 			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
-			if (hinput == 0)
-				hinput = mouse_check_button_pressed(mb_right);
+			if (hinput == 0) { //HOVERING SUPPORT
+				var option = menu_option[page];
+				var x1left = start_x[option] + (x_buffer * 2);
+				var x2left = x1left + (string_width("<< ") * scale_element);
+				var current_val = ds_grid[# 4, option];//, current_array = ds_grid[# 2, option];
+				//var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element)
+				//var x2right = x1right + (string_width("<< ") * scale_element);
+				var buffer = string_width("<< ") * scale_element;
+				if (mouse_check_button_pressed(mb_right))
+					if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+						hinput = -1;
+					//else if (current_val != array_length_1d(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+					//	hinput = 1;
+					else
+						hinput = 1;
+			}
+				
 			if (hinput != 0) {
 				//AUDIO
 				var val = ds_grid[# 4, menu_option[page]] + hinput;
@@ -66,8 +81,22 @@ if (inputting) { //Are we inputting data?
 			break;
 		case menu_element_type.mass_toggle:
 			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
-			if (hinput == 0)
-				hinput = mouse_check_button_pressed(mb_right);
+			if (hinput == 0) { //HOVERING SUPPORT
+				var option = menu_option[page];
+				var x1left = start_x[option] + (x_buffer * 2);
+				var x2left = x1left + (string_width("<< ") * scale_element);
+				var current_val = ds_grid[# 4, option];//, current_array = ds_grid[# 2, option];
+				//var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element)
+				//var x2right = x1right + (string_width("<< ") * scale_element);
+				var buffer = string_width("<< ") * scale_element;
+				if (mouse_check_button_pressed(mb_right))
+					if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+						hinput = -1;
+					//else if (current_val != array_length_1d(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+					//	hinput = 1;
+					else
+						hinput = 1;
+			}
 			if (hinput != 0) {
 				//AUDIO
 				var option = menu_option[page];
@@ -110,10 +139,10 @@ if (inputting) { //Are we inputting data?
 			else if (option < 0) option = ds_height - 1;
 			//Ignore special menu elements
 			for (var i = 0; i < array_length_1d(menu_special); i++)
-				if (ds_grid[# 1, option] == menu_special[i]) { //Ignore this element, change the option
-					if (ochange < 0) option = ds_height - 1;
-					else option += 1;
-					break;
+				while (ds_grid[# 1, option] == menu_special[i]) { //Ignore this element, change the option
+					option += ochange;
+					if (option > ds_height - 1) option = 0;
+					else if (option < 0) option = ds_height - 1;
 				}
 		}
 		 //Left and right support on horizontally aligned buttons

@@ -1,7 +1,7 @@
 /// @description Make a text file
 
 data_cache = ds_map_create();
-scLoadStats();
+scStatsLoad();
 
 //OLD SYSTEM
 file = file_text_open_write(working_directory + "data.txt");

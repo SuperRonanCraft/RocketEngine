@@ -9,8 +9,8 @@ ds_menu_main = scUICreateMenuPage(
 
 ds_gamemodes = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player"],
-	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs..."],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!"],
+	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs..."],
 	//[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],		"Duke Nuke'm!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );
@@ -26,7 +26,8 @@ ds_info = scUICreateMenuPage(
 ds_stats = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.stats,	GAMEMODE.ONEVONE],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.stats,	GAMEMODE.KNOCKOUT],
-	["RESET",		menu_element_type.script_runner,	scResetGameStats, "This will reset all stats!"],
+	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.stats,	GAMEMODE.TARGETS],
+	["RESET",		menu_element_type.script_runner,	scStatsResetGame, "This will reset all stats!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 
