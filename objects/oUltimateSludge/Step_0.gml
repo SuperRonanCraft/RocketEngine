@@ -73,10 +73,10 @@ if (standing)
 	otherSludge = instance_place(x,y,oUltimateSludge);
 	if(otherSludge != noone){
 		
-		if(otherSludge.x > x){
+		if(otherSludge.x > x && wallStick == 0){
 			x-= 2;	
 		}
-		else{
+		else if(wallStick == 0){
 			x+= 2;	
 		}
 		
