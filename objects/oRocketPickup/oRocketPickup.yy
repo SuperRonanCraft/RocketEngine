@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
+        },
+        {
+            "id": "da53c40b-2fea-494e-be71-c643d5722785",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "82456896-61ba-4055-9bf6-e6a1b3875d73"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -44,36 +54,9 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "514a08f7-1d70-4570-a665-c5b01ba37c70",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "ROCKET_SPRITE.DEFAULT",
-            "varName": "rocket_sprite",
-            "varType": 4
-        },
-        {
-            "id": "d74013e5-7eb6-4832-90e8-1112bc012149",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "ROCKET.DEFAULT",
-            "varName": "rocket",
-            "varType": 4
-        }
+        
     ],
     "solid": false,
-    "spriteId": "49b7cf3b-0bf3-4992-ab55-3d8c00f2af4b",
+    "spriteId": "680f5faa-5388-40f2-b6f9-27e133690728",
     "visible": true
 }

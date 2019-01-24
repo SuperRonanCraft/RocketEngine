@@ -5,26 +5,6 @@
     "name": "pPickup",
     "eventList": [
         {
-            "id": "3d19ae3e-eef7-4f53-b404-356edbdef07c",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 1,
-            "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
-        },
-        {
-            "id": "95b1c376-49b6-4717-8d35-1a271e0d4cf3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
-        },
-        {
             "id": "336dcb74-d975-4b40-9304-8d587d7f9583",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -35,23 +15,23 @@
             "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
         },
         {
-            "id": "de5e697f-dc7d-4a44-8ae8-8c0637ba857a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
-        },
-        {
-            "id": "430b8f09-3a02-4af0-92f0-4b6d861611b4",
+            "id": "871a689f-f288-4706-a2e5-02a4f98d591f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 76,
+            "enumb": 0,
             "eventtype": 8,
+            "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
+        },
+        {
+            "id": "32d651aa-dc42-4651-8737-abc8529c6341",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "f34242a3-26d8-4545-ac48-27e72e82b69c",
+            "enumb": 0,
+            "eventtype": 4,
             "m_owner": "9507032a-38ac-4212-9e7f-6abdee2729e4"
         }
     ],
@@ -73,7 +53,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "db8f9de4-7601-4e66-96d5-41a1f5bc1fe6",
+            "id": "53b95a5c-87ec-46e1-a4f9-1f644414603a",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -82,9 +62,51 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "True",
-            "varName": "destroy",
-            "varType": 3
+            "value": "5",
+            "varName": "time",
+            "varType": 1
+        },
+        {
+            "id": "f8f0a459-8eba-448b-ac49-f8f5cfec7568",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "uptime",
+            "varType": 1
+        },
+        {
+            "id": "f030c16c-0cd1-4312-983b-b6aed792bcb4",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "10",
+            "varName": "delayed",
+            "varType": 0
+        },
+        {
+            "id": "0c29f53c-eb11-4fbe-b7f8-bde152a81f4e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "TEAM.LEFT",
+            "varName": "team",
+            "varType": 0
         }
     ],
     "solid": false,

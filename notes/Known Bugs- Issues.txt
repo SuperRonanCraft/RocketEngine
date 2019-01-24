@@ -2,7 +2,6 @@
 CURRENT:
 - When "Teched" the player might teleport to the other side of a platform when doing so at the edge of one.
 - Player does not take damage right as a game ends?
-- Sound volumes for title and effects dont have right volume at game start
 
 FIXED:
 - Second player sometimes takes double damage from default rocket?
@@ -10,4 +9,5 @@ FIXED:
 - Playing a game of knockout and returning to the menu to play a game of 1v1 results in a crash.
 - Ult casting seems to freeze if picking up a rocket while casting an ult.
 - Player in the main menu does not have their keybinds updated
+- Sound volumes for title and effects dont have right volume at game start
 
