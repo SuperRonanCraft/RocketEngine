@@ -9,6 +9,7 @@ if (percent == 1 || percent == 0)
 	switch (mode) {
 		case TRANS_MODE.GOTO:
 			mode = TRANS_MODE.INTRO;
+			global.pause_possible = true;
 			room_goto(target);
 			break;
 		case TRANS_MODE.RESTART:

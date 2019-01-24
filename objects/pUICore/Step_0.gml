@@ -172,7 +172,7 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 		case menu_element_type.script_runner: //Run a script when selecting
 			script_execute(ds_grid[# 2, menu_option[page]]); break;
 		case menu_element_type.goto_room: //Change the room, dont care what happens to object
-			SlideTransition(TRANS_MODE.GOTO, ds_grid[# 2, menu_option[page]]); control = false; break; //Remove control and leave the room
+			SlideTransition(TRANS_MODE.GOTO, ds_grid[# 2, menu_option[page]]); control = false; global.pause_possible = false; break; //Remove control and leave the room
 		case menu_element_type.page_transfer: //Change the page
 			for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
 				if (menu_pages_index[i] != ds_grid[# 2, menu_option[page]]) continue; //Find the index of the page related to the order

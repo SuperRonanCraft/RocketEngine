@@ -37,6 +37,7 @@ changeres = true;
 //Screenshot of all sprites before disabling them
 background = noone;
 global.pause = false;
+global.pause_possible = true;
 
 //Gamemodes
 //Preset
