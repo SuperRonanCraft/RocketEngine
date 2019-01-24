@@ -1,17 +1,12 @@
 /// @desc Create
-facing = 1;
-//Id of the player
 
 //Load gravity and movement variables
 scGravityStart();
 //Load keybinds
-global.players[array_length_1d(global.players)] = self;
-playerid = array_length_1d(global.players);
 scKeybindsSet(keys);
 
 //Display health
 event_inherited();
-
 
 //Health
 hp = 10;
@@ -38,7 +33,6 @@ scComboStart();
 //Buffs/Debuffs setup
 scBuffStart();
 
-
 //Load player states
 canControl = true;
 playerState = PLAYERSTATE.NORMAL;
@@ -63,4 +57,5 @@ friction_adj = 0;
 //If jumped at right time
 teched = false;
 
+//Cheat mode buff id
 buffs_cur = -1;

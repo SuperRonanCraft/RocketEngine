@@ -1,7 +1,7 @@
 /// @desc a Knockout gamemode hasstarted
 //Set players hp to the gamemodes default health start
 
-scStagePickupsStart(6, 60, global.mode_kb_pickups);
+//scStagePickupsStart(6, 60, global.mode_kb_pickups);
 
 event_inherited();
 

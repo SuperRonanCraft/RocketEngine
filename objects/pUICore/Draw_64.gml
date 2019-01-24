@@ -60,32 +60,26 @@ scUIUnfold(); //Unfolding event
 // Draw left
 for (var i = 0; i < ds_height; i++) {
 	//Color, Scale, Y-pos, X-offset
-	var c_main = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i];
+	var c = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i];
 	if (unfolding) lty += (RES_H / 2 * (1 - unfold[i]));
-	if (i == menu_option[page]) {ltx += scMovementWave(-4, 4, 2); c_main = color_main_hovering; xo = -(x_buffer / 2);}
-	scDrawText(centered ? ltx : ltx + xo, lty, is_array(text) ? text[0] : text, c_main, scale, noone, noone, centered ? fa_middle : fa_right);
-	//Button hover descriptions
-
+	if (i == menu_option[page]) {ltx += scMovementWave(-4, 4, 2); c = color_main_hovering; xo = -(x_buffer / 2);}
+	else if (ds_grid[# 1, i] == menu_element_type.stats) {c = color_element_input;}
+	scDrawText(centered ? ltx : ltx + xo, lty, is_array(text) ? text[0] : text, c, scale, noone, noone, centered ? fa_middle : fa_right);
+	
+	//DESCRIPTIONS
+	ltx = start_x[i];
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.script_runner:
-			if (ds_grid[# 4, i] == true && menu_option[page] != i) break; //5th grid val of script to allow only hovering description
 		case menu_element_type.goto_room:
-			if (ds_grid[# 3, i] == 0) break; //No text option
-			var string_val = ds_grid[# 3, i];
-			scDrawText(start_x[i], lty + 25, string_val, color_element, scale_description, noone, noone, centered ? fa_middle : fa_right); //Description of button
-			break;
+			scUIDescription(ltx, lty, ds_grid, 3, i); break;
 		case menu_element_type.shift:
+		case menu_element_type.input:
 		case menu_element_type.toggle:
-			if (menu_option[page] != i || ds_grid[# 5, i] == 0) break; //No text option
-			var string_val = ds_grid[# 5, i];
-			scDrawText(start_x[i] + xo, lty + 25, string_val, color_element, scale_description, noone, noone, fa_right);
-			break;
+			scUIDescription(ltx, lty, ds_grid, 5, i); break;
 		case menu_element_type.page_transfer:
-			if (menu_option[page] != i || ds_grid[# 3, i] == 0) break; //No text option
-			if (ds_grid[# 4, i] == true && menu_option[page] != i) break; //5th grid val of script to allow only hovering description
-			var string_val = ds_grid[# 3, i];
-			scDrawText(start_x[i], lty + 25, string_val, color_element, scale_description, noone, noone, centered ? fa_middle : fa_right);
-			break;
+			scUIDescription(ltx, lty, ds_grid, 3, i); break;
+		case menu_element_type.slider:
+			scUIDescription(ltx, lty, ds_grid, 6, i); break;
 	}
 }
 

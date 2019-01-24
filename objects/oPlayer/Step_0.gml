@@ -27,16 +27,29 @@ if (global.devmode && global.debug && keyboard_check(keyjump))
 scKeybindsControls();
 scCheckTech();
 
+//Buff step handler
 scBuffHandler();
+
+//Collision
 scGravity();
+
+//Rocket shooting
 scRocketProgress(!shoot_face ? team : -1);
-scUltimateHandler();
+
+//Combo handling (alters ultimate charge)
 scComboStep();
 
-scCheckHealth();
-knockBackStep();
+//Ultimate step handler
+scUltimateHandler();
 
-if (despawn && hp <= 0 && playerState == PLAYERSTATE.DEAD && vsp == 0) { //Despawn player object
+//Check health
+scCheckHealth();
+
+//Knockback handling
+scKnockback();
+
+//Mostly meant for clones
+if (despawn && ((hp <= 0 && playerState == PLAYERSTATE.DEAD && vsp == 0) || image_alpha != 1)) { //Despawn player object
 	image_alpha -= 0.025;
 	if (image_alpha <= 0)
 		instance_destroy();

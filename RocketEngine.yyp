@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "0cfaef1a-439d-4830-9f33-a32cef5cc1a3",
+            "Value": {
+                "id": "c139a5b4-3784-4333-beab-692ef9e59a12",
+                "resourcePath": "rooms\\rKnockOutStage2\\rKnockOutStage2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "0d71e5b5-fe09-4292-ada7-91dd60216ccb",
             "Value": {
                 "id": "ec64b453-a977-4000-971e-54d4fca824ef",
@@ -2474,7 +2482,7 @@
             "Key": "a62e83a3-5049-4bc1-85be-fd514e25dc62",
             "Value": {
                 "id": "2ad0d6eb-adbd-4b0f-bc42-395eb4640901",
-                "resourcePath": "scripts\\knockBackStep\\knockBackStep.yy",
+                "resourcePath": "scripts\\scKnockback\\scKnockback.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3407,6 +3415,14 @@
             }
         },
         {
+            "Key": "e6b3fce5-eee5-4b2c-b861-206baa29be0a",
+            "Value": {
+                "id": "a3ab0ace-f508-416c-9c22-eecff71689d3",
+                "resourcePath": "scripts\\scUIDescription\\scUIDescription.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e6d34a83-f4cb-4bd6-ab2c-6a2590b759d8",
             "Value": {
                 "id": "b3b56149-2148-4960-90a5-7a7b70d7897d",
@@ -3899,6 +3915,7 @@
         "6c94f478-e681-4d26-bb6c-476da0da1b53",
         "bc52f200-8726-4ff9-ad86-55bb3c461b15",
         "b888dc2c-40b4-4802-b8db-4d8c9e60095c",
+        "e6b3fce5-eee5-4b2c-b861-206baa29be0a",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",

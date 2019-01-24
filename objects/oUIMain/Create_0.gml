@@ -1,25 +1,25 @@
 event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
-	["PLAY",		menu_element_type.page_transfer,	menu_page.gamemodes],
-	["SETTINGS",	menu_element_type.page_transfer,	menu_page.settings],
-	["INFO",		menu_element_type.page_transfer,	menu_page.info],
-	["QUIT",		menu_element_type.page_transfer,	menu_page.confirm]
+	["PLAY",		menu_element_type.page_transfer,	menu_page.gamemodes, "Initiate gameplay!"],
+	["SETTINGS",	menu_element_type.page_transfer,	menu_page.settings, "Change some levers and buttons"],
+	["EXTRAS",		menu_element_type.page_transfer,	menu_page.info, "Learn more about the game!"],
+	["QUIT",		menu_element_type.page_transfer,	menu_page.confirm, "Don't go!"]
 );
 
 ds_gamemodes = scUICreateMenuPage(
-	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player"],
-	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!"],
-	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs..."],
+	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player", true],
+	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!", true],
+	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs...", true],
 	//[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],		"Duke Nuke'm!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );
 
 ds_info = scUICreateMenuPage(
+	["STATISTICS",	menu_element_type.page_transfer,	menu_page.stats, "Check your game stats!", true],
 	["ROCKETS",		menu_element_type.page_transfer,	menu_page.rocketlist, "Learn about every rocket available!"],
 	["BUFFS",		menu_element_type.page_transfer,	menu_page.rocketbuffs, "Get to know your buff!"],
 	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls, "Can't aim? Check ur keys!"],
-	["STATISTICS",	menu_element_type.page_transfer,	menu_page.stats, "Check your game stats!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.main]
 );
 
@@ -38,7 +38,7 @@ ds_rocketinfo = scUICreateMenuPage(
 
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],
-	["KEYBINDS",	menu_element_type.page_transfer,	menu_page.keybinds2],
+	["KEYBINDS",	menu_element_type.page_transfer,	menu_page.keybinds2, "Change your keys!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 

@@ -9,7 +9,7 @@ else
 if (vsp_knockback == 0 || vsp_override != 0) //Make knockback override all inputs
 	vsp = (vsp_override == 0) ? vsp_move + vsp_carry + (vsp_knockback * grv_dir) : vsp_override;
 else
-	vsp = vsp_move + vsp_knockback;
+	vsp = vsp_move + (vsp_knockback * grv_dir);
 
 var touchingx = instance_place(x + hsp, y, oWall); //get the instance of the wall in the future in the horizontal
 if (touchingx != noone){ //If touching a wall in the horizontal 

@@ -25,7 +25,7 @@ global.key_p2_jump_default = global.key_p2_jump;
 global.key_p2_shoot_default = global.key_p2_shoot;
 
 //Players id
-global.players = 0;
+//global.players = 0;
 
 //The resolution the game will run at
 #macro RES_W 1024
@@ -85,6 +85,7 @@ enum TEAM {
 randomize();
 
 //Different modes
+devmode_allow = false; //Allow dev mode to function?
 global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 

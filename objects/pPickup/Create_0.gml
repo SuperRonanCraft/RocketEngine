@@ -12,3 +12,5 @@ alpha_cooldown = 0.2;
 item_scale = 1;
 item_xoffset = 0;
 item_yoffset = 0;
+
+image_index = irandom(image_number);

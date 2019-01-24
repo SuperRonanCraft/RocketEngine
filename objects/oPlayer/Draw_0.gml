@@ -9,7 +9,7 @@ if (ult_casting && global.play) {
 }
 
 //Ultimate ready indicator
-if (ult_enabled && ult_charge == ult_charge_max && global.play) {
+if (ult_enabled && ult_charge == ult_charge_max && hp > 0 && global.play) {
 	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
 	var dir = irandom(360);
 	var dis = irandom_range(20, 30);
