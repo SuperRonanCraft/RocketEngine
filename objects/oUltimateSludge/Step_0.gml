@@ -3,18 +3,31 @@
 var otherSludge = noone;
 
 if (true) { //Collision
-	sludge_vsp += sludge_grv;
+	
+	if(!standing){
+		sludge_vsp += sludge_grv;	
+	}
+	
 	var offset = 1;
 	var list = ds_list_create();
 	instance_place_list(x + sludge_hsp, y, oWall, list, false);
+	
+	var istouchingx = false;
+	
 	for (var i = 0; i < ds_list_size(list); i++) {
 		var touchingx = list[| i];
 		if (touchingx != noone && touchingx.object_index != oSeperator) {  
+			
+			istouchingx = true;
 			//Normal wall collision
 			if (sludge_hsp > 0) { //Going Right
 				x = floor(touchingx.bbox_left + (x - bbox_right) - offset);
-			} else if (sludge_hsp < 0)//Going Left
+				wallStick = 1;
+			} 
+			else if (sludge_hsp < 0){//Going Left
+				wallStick = -1;
 				x = ceil(touchingx.bbox_right + (x - bbox_left) + offset);
+			}
 			sludge_hsp = 0;
 			sludge_vsp = 0;
 			break;
@@ -33,8 +46,10 @@ if (true) { //Collision
 			istouchingy = true;
 			if (sludge_vsp > 0) //Falling
 				y = floor(touchingy.bbox_top + (y - bbox_bottom) - offset);
-			else if (sludge_vsp < 0) //Going up
+			else if (sludge_vsp < 0){ //Going up
 				y = ceil(touchingy.bbox_bottom + (y - bbox_top) + offset);
+				ceilingStick = true;
+			}
 			sludge_vsp = 0;
 			sludge_hsp = 0;
 			break;
@@ -45,7 +60,7 @@ if (true) { //Collision
 	if (sludge_vsp == 0 && istouchingy)
 		sludge_hsp = sign(sludge_hsp) == 1 ? max(sludge_hsp - 3, 0) : min(sludge_hsp + 3, 0);
 	
-	if (sludge_vsp == 0 && sludge_hsp == 0 && istouchingy) {
+	if (wallStick != 0 || ceilingStick || (sludge_vsp == 0 && sludge_hsp == 0 && istouchingy)) {
 		standing = true;
 	} else {
 		x += sludge_hsp;
