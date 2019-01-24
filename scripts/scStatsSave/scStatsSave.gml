@@ -13,20 +13,25 @@ var mode = string(gm);
 var sec = "Statistics." + mode;
 switch (gm) {
 	case GAMEMODE.TARGETS: //TARGETS GAMEMODE
-		ini_write_real(sec, "points", scr[0]);
-		map[? "points_" + mode] = scr[0];
+	//GAMEMODE
+		var val = scCacheGetType(CACHE.GM_TARGETS_POINTS); //POINTS
+		ini_write_real(sec, val, scr[0]);
+	//CACHE
+		map[? val + mode] = scr[0];
 		break;
 	default:
 	// GAMEMODE
-		ini_write_real(sec, "p1_wins", scr[0]);
-		ini_write_real(sec, "p2_wins", scr[1]);
+		var valp1 = scCacheGetType(CACHE.GM_GENERAL_P1_WINS); //P1 GAMEMODE WINS
+		var valp2 = scCacheGetType(CACHE.GM_GENERAL_P2_WINS); //P2 GAMEMODE WINS
+		ini_write_real(sec, valp1, scr[0]);
+		ini_write_real(sec, valp2, scr[1]);
 	// STAGE
 		sec = sec + ".Stage";
-		ini_write_real(sec, "p1_wins", scr[2]);
-		ini_write_real(sec, "p2_wins", scr[3]);
+		ini_write_real(sec, valp1, scr[2]);
+		ini_write_real(sec, valp2, scr[3]);
 	//CACHE
-		map[? "p1_wins_" + mode] = scr[0];
-		map[? "p2_wins_" + mode] = scr[1];
+		map[? valp1 + mode] = scr[0];
+		map[? valp2 + mode] = scr[1];
 		break;
 }
 ini_close(); //Close stream
