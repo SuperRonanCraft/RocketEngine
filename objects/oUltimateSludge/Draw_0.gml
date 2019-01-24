@@ -8,7 +8,7 @@ if(!standing){
 else if(wallStick == 1 && !ceilingStick){
 	image_angle = 90;
 }
-else if(wallStick == -1 && !celingStick){
+else if(wallStick == -1 && !ceilingStick){
 	image_angle = 270;	
 }
 else if(ceilingStick){
