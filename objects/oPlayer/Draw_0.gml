@@ -17,7 +17,7 @@ if (ult_enabled && ult_charge == ult_charge_max && hp > 0 && global.play) {
 }
 
 //Update the direction the player should face
-scDirection(true);
+//scDirection(true);
 
 //Draw event for ultimates
 scUltimateHandlerDraw();

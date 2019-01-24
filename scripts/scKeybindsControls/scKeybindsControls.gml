@@ -22,7 +22,9 @@ if (canControl){
 	var move = (key_right - key_left) * keydirection;
 	controlling = move;
 	
-	
+	//Direction
+	if(move != 0)
+		facing = move;
 	
 	//Friction
 	if(move == 0 && hsp_move != 0){
