@@ -27,14 +27,14 @@ if (canControl){
 	//Friction
 	if(move == 0 && hsp_move != 0){
 		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs( hsp_move * (friction_base+friction_adj) ) );	
-		
+		hsp_move += recoilKB;
 		//Ease into 0
 		if(abs(hsp_move) < 0.5){
 			hsp_move = 0;
 		}
 	}
 	else{
-		hsp_move = (move * walksp) + (move_adj * move);		
+		hsp_move = (move * walksp) + (move_adj * move) + recoilKB ;
 	}
 
 	//Vertical
@@ -45,5 +45,13 @@ if (canControl){
 	//Weapon
 	if (key_shoot)
 		scRocketShoot();
-} else 
+} 
+
+else{ 
 	hsp_move = move_adj;
+}
+
+//REset recoil
+recoilKB = 0;
+
+

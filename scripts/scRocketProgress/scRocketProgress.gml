@@ -15,8 +15,11 @@ if (current_delay == 0) {
 		//Sound effects and screen shaking
 		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
 		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
-		if (hsp == 0) //Face towards rocket
-			facing = dir > -90 && dir <= 90 ? 1 : -1;
+		
+		//if (hsp == 0) //Face towards rocket
+		facing = dir > -90 && dir <= 90 ? 1 : -1;
+		
+		scRecoil(rocket_map[?ROCKET_MAP.RECOIL]);
 	}
 }
 
