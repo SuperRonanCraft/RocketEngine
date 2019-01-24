@@ -51,7 +51,14 @@ else{
 	hsp_move = move_adj;
 }
 
-//REset recoil
-recoilKB = 0;
+//Reset recoil
+
+if(recoilKB < recoilMAX)
+	recoilKB ++;
+else if recoilKB > recoilMAX
+	recoilKB --;
+else
+	recoilMAX = 0;
+
 
 

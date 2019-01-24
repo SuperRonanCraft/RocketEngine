@@ -4,7 +4,8 @@
 var amt = argument[0];
 var currentAmt = amt*10;
 
-recoilKB = -currentAmt;
+recoilMAX = amt;
 
-if(facing == -1)	
-	recoilKB *=-1;
+if(facing == 1){	
+	recoilMAX *=-1;
+}

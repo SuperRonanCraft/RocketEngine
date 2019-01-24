@@ -54,6 +54,7 @@ controlling = 0; //If the player is controlling AND moving
 friction_base = 0.3;
 friction_adj = 0;
 recoilKB = 0;
+recoilMAX = 0;
 
 //If jumped at right time
 teched = false;
