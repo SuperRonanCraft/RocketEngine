@@ -1,13 +1,17 @@
-//Evade spawning and giving to player or giving to player after game ended
-if (!checked || !global.play) exit;
+if (!other.pickups_enabled || !global.play) exit;
 //Add health to player
-var added = false;
-with (other)
-	if (hp > 0)
-		if (hp != hp_original) {
-			hp += other.hp_amount;
-			hp_scale += 2;
-			added = true;
-		}
-if (added)
-	event_inherited();
+
+if (item != noone) {
+	var added = false;
+	with (other)
+		if (hp > 0)
+			if (hp != hp_original) {
+				hp += 1;
+				hp_scale += 2;
+				added = true;
+			}
+	if (added) { //Can collect the hp
+		timer_current = timer; //Reset the timer
+		item = noone; //Reset item
+	}
+}

@@ -1,9 +1,14 @@
 //@desc pickup has spawned
 
-//Make it allow to fade in
-image_alpha = 0;
-//Time to be alive (haha)
-timer_original = 10 * room_speed;
-timer = timer_original;
-checked = false;
-alpha_max = 0.75;
+timer = time * room_speed;
+timer_current = timer;
+delay = delayed * room_speed
+delay_current = 0;
+item = noone;
+
+alpha_item = 0.8;
+alpha_cooldown = 0.2;
+
+item_scale = 1;
+item_xoffset = 0;
+item_yoffset = 0;

@@ -3,7 +3,7 @@
 //Log new 1v1 game
 scData_StartCount();
 
-scStagePickupsStart(6, 60, global.mode_1v1_pickups);
+//scStagePickupsStart(6, 60, global.mode_1v1_pickups);
 
 event_inherited();
 
