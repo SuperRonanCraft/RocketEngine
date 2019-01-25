@@ -86,7 +86,7 @@ enum TEAM {
 randomize();
 
 //Different modes
-devmode_allow = true; //Allow dev mode to function?
+devmode_allow = false; //Allow dev mode to function?
 global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 

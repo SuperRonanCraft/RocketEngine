@@ -3103,14 +3103,6 @@
             }
         },
         {
-            "Key": "c91e6873-e13e-4b4b-8756-2e264a6097ed",
-            "Value": {
-                "id": "90b4adf0-de6b-4a21-9920-ff1721657975",
-                "resourcePath": "sprites\\sHit_Spark\\sHit_Spark.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "c9db60d0-710e-4892-9a89-02f5195caf98",
             "Value": {
                 "id": "0d6060e1-58ec-46ac-89e6-12a0b3206f45",
@@ -3372,6 +3364,14 @@
                 "id": "79d314bf-e133-49c5-944b-9fb48e0e2f83",
                 "resourcePath": "views\\e0595cdc-4686-4768-8203-b048336087ae.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e0905690-552a-4b83-b940-36855455f08b",
+            "Value": {
+                "id": "c240e295-571c-4602-b040-9587e7f4a104",
+                "resourcePath": "sprites\\sUltNapalmFlame_Fly\\sUltNapalmFlame_Fly.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
