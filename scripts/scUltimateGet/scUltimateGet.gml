@@ -94,11 +94,15 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "The floor is lava!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateNapalm_Casted;
 		break;
+	case ULTIMATE.LIGHTNING_ORB:
+		ds_map[? ULTIMATE_MAP.NAME] = "Oh, its gonna hurt";
+		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLightning;
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
-	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM,
+	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 	
 	//PUT LAST
 	LENGTH

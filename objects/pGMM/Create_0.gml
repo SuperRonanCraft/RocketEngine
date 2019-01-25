@@ -2,7 +2,7 @@
 
 global.gamemode = gamemode;
 
-scStatsResetStage();
+scStatsResetStage(false);
 
 timer = 90; //global.stage_timer;
 

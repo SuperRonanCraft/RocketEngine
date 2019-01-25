@@ -18,7 +18,6 @@ switch (roc) {
 	case ROCKET.DEFAULT:
 		map[? ROCKET_MAP.NAME] = "Classic";
 		map[? ROCKET_MAP.DESCRIPTION] = "Explosive device";
-		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.DEFAULT;
 		map[? ROCKET_MAP.COOLDOWN] = 20;
 		map[? ROCKET_MAP.SPEED] = 11*varspd;
@@ -61,7 +60,7 @@ switch (roc) {
 	case ROCKET.REVERSE:
 		map[? ROCKET_MAP.NAME] = "Reverse";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ima go this way";
-		map[? ROCKET_MAP.RECOIL] = 5;
+		map[? ROCKET_MAP.RECOIL] = -5;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.REVERSE;
 		map[? ROCKET_MAP.COOLDOWN] = 40;
 		map[? ROCKET_MAP.SPEED] = 12*varspd;
@@ -300,6 +299,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ENABLED] = true;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSEGRAVITY];
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_ORB;
 		break;
 }
 

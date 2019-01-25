@@ -9,15 +9,14 @@ var dir = argument0 == -1 ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 
 //Rocket
 if (current_delay == 0) {
 	if (ammo != 0) {
+		facing = dir > -90 && dir <= 90 ? 1 : -1;
+		
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
 		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, rocket_map);
 		ammo -= 1;
 		//Sound effects and screen shaking
 		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
 		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
-		
-		//if (hsp == 0) //Face towards rocket
-		facing = dir > -90 && dir <= 90 ? 1 : -1;
 		
 		scRecoil(rocket_map[?ROCKET_MAP.RECOIL]);
 	}

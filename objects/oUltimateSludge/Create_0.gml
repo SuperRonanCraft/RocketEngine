@@ -9,6 +9,9 @@ sludge_hsp = 10;
 sludge_vsp = -4;
 sludge_buff = BUFFTYPE.SLIME;
 
+sludge_sprite_fly = sUltSludge_fly1;
+sludge_sprite_floor = sUltSludge_floor1;
+
 image_xscale = 0.5;
 image_yscale = 0.5;
 

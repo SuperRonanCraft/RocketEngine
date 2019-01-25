@@ -19,10 +19,10 @@ yy2 = RES_H - RES_H / 16;
 
 //Grab the gamemode we are setting up for
 switch (room) {
-	case r1v1Select: global.gamemode = global.gamemodes[GAMEMODE.ONEVONE]; break;
-	case rvTargetSelect: global.gamemode = global.gamemodes[GAMEMODE.TARGETS]; break;
-	case rKnockOutSelect: global.gamemode = global.gamemodes[GAMEMODE.KNOCKOUT]; break;
-	case rRumbleSelect: global.gamemode = global.gamemodes[GAMEMODE.RUMBLE]; break;
+	case r1v1Select: mode = global.gamemodes[GAMEMODE.ONEVONE]; break;
+	case rvTargetSelect: mode = global.gamemodes[GAMEMODE.TARGETS]; break;
+	case rKnockOutSelect: mode = global.gamemodes[GAMEMODE.KNOCKOUT]; break;
+	case rRumbleSelect: mode = global.gamemodes[GAMEMODE.RUMBLE]; break;
 }
 
 //Setup ui
@@ -38,6 +38,8 @@ ds_menu_main = scUICreateMenuPage(
 menu_pages = [ds_menu_main];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main];
+
+global.gamemode = type;
 switch (type) {
 	case GAMEMODE.ONEVONE:
 		ds_menu_main = scUICreateMenuPage(

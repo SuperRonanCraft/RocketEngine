@@ -1,7 +1,7 @@
 /// @desc Set all the default values for a Rockets map
 
 var map = ds_map_create();
-map[? ROCKET_MAP.RECOIL] = 0; //Amount of recoil to push the player back
+map[? ROCKET_MAP.RECOIL] = 2; //Amount of recoil to push the player back
 map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.NONE; //Sprite to show
 map[? ROCKET_MAP.COOLDOWN] = 0; //Cooldown between shots
 map[? ROCKET_MAP.SPEED] = 0; //Speed of rocket

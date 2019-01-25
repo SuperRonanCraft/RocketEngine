@@ -1,22 +1,17 @@
 
-sprite_index = sUltSludge_floor1;
+sprite_index = sludge_sprite_floor;
 
-if(!standing){
-	sprite_index = sUltSludge_fly1;
-	image_angle = darctan2(-sludge_vsp,sludge_hsp) - 90;
-}
-else if(wallStick == 1 && !ceilingStick){
+if (!standing) {
+	sprite_index = sludge_sprite_fly;
+	image_angle = darctan2(-sludge_vsp, sludge_hsp) - 90;
+} else if (wallStick == 1 && !ceilingStick) {
 	image_angle = 90;
-}
-else if(wallStick == -1 && !ceilingStick){
+} else if (wallStick == -1 && !ceilingStick) {
 	image_angle = 270;	
-}
-else if(ceilingStick){
+} else if (ceilingStick) {
 	image_angle = 180;
-}
-else{
+} else {
 	image_angle = 0;	
 }
-
 
 draw_self();

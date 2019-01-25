@@ -2007,6 +2007,14 @@
             }
         },
         {
+            "Key": "873e565d-bd63-4261-8386-a01151ffef28",
+            "Value": {
+                "id": "2432e947-1fd1-4f71-8893-2e729ac4400b",
+                "resourcePath": "objects\\oUltimateLightning\\oUltimateLightning.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "88211932-9cea-4adc-a0a3-3b8613abe868",
             "Value": {
                 "id": "e3b4dcdb-dcf8-4211-93d9-c51f500beba2",
@@ -3976,7 +3984,6 @@
         "548ac667-ced5-4357-8535-c3454975615a",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
-        "b07921d9-8376-4807-9a92-24c903c3e303",
         "5e55b293-f3e4-4ad3-aae9-a5ec05874b2e",
         "7eec10ae-de29-493a-afc4-60ffa416df7d",
         "41360344-979f-49d9-8118-74553b9de3c1",
@@ -3984,6 +3991,7 @@
         "b5db1945-bb64-468c-aff2-c3552b4fdd86",
         "f60f39d0-8c12-4d20-8f5c-35711e4aafe1",
         "d931ac9e-0dd2-4622-989f-7416c57d4e51",
+        "b07921d9-8376-4807-9a92-24c903c3e303",
         "5bb371ed-9f8c-456e-a54c-4c30c87f7fea"
     ],
     "tutorial": ""
