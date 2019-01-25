@@ -1,4 +1,6 @@
 /// @desc keyboard-controls
+
+//Keyboard
 var key_left = keyboard_check(keyleft); 
 var key_right = keyboard_check(keyright);
 var key_jump = keyboard_check_pressed(keyjump);
@@ -23,15 +25,15 @@ if (canControl){
 	controlling = move;
 	
 	//Direction
-	if(move != 0)
+	if (move != 0)
 		facing = move;
 	
 	//Friction
-	if(move == 0 && hsp_move != 0){
+	if (move == 0 && hsp_move != 0) {
 		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs( hsp_move * (friction_base+friction_adj) ) );	
 		hsp_move += recoilKB;
 		//Ease into 0
-		if(abs(hsp_move) < 0.5){
+		if (abs(hsp_move) < 0.5) {
 			hsp_move = 0;
 		}
 	}
@@ -55,7 +57,7 @@ else{
 
 //Reset recoil
 
-if(recoilKB < recoilMAX)
+if (recoilKB < recoilMAX)
 	recoilKB ++;
 else if recoilKB > recoilMAX
 	recoilKB --;

@@ -1,12 +1,9 @@
 ///Determine which animation state the object is in
 
 
-if(!overrideAnimation){
-	
+if (!overrideAnimation) {
 	//Get state
-	scGetNormalAnimationState();	
+	scGetNormalAnimationState();
 	scDrawNormalAnimationState(animState);
-}
-else{
+} else
 	scDrawOtherAnimationState(animState)	
-}

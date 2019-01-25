@@ -1,21 +1,4 @@
 /// @desc Animation/Sprite
-
-//Ultimate casting bar above players heads
-if (ult_casting && global.play) {
-	var yy = bbox_top - 4, yy2 = bbox_top - 8;
-	var percent = (ult_cast_time_max - ult_cast_time) / ult_cast_time_max;
-	scDrawRect(x - 51, yy + 1, x + 51, yy2 + 1, c_black, false, 0.9);
-	scDrawRect(x - 50, yy, x - 50 + (percent * 100), yy2, c_yellow, false, 0.9);
-}
-
-//Ultimate ready indicator
-if (ult_enabled && ult_charge == ult_charge_max && hp > 0 && global.play) {
-	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
-	var dir = irandom(360);
-	var dis = irandom_range(20, 30);
-	scDrawLightning(x, y, x + lengthdir_x(dis, dir), y + lengthdir_y(dis, dir), irandom_range(2, 5), c_aqua);
-}
-
 //Update the direction the player should face
 //scDirection(true);
 

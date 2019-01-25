@@ -3,7 +3,7 @@ owner = noone; //Owner of ult
 
 light_range = 125;
 light_branches = 10;
-light_speed = 7;
+light_speed = 12;
 light_target = RES_W / 2 + RES_W / 4;
 light_current = 0;
 

@@ -2047,6 +2047,14 @@
             }
         },
         {
+            "Key": "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
+            "Value": {
+                "id": "e2ee3e92-6313-49d9-a673-cdeb154680b0",
+                "resourcePath": "scripts\\scUltimateLightningDraw\\scUltimateLightningDraw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8ab1e232-5314-4659-b765-79a9d6f6d807",
             "Value": {
                 "id": "62b7ece9-b955-4e11-b1cd-ea1e40044d61",
@@ -2363,6 +2371,14 @@
             "Value": {
                 "id": "d3e3211e-8b3b-4ca1-afa0-118bec7204ee",
                 "resourcePath": "views\\9d6db107-9371-41a8-aca5-5ebbab1c24fa.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9ea10b9a-afcf-4768-8b8b-d4f29f5ba939",
+            "Value": {
+                "id": "3be4b188-48b4-41a5-a607-f589f2c3e738",
+                "resourcePath": "views\\9ea10b9a-afcf-4768-8b8b-d4f29f5ba939.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -3900,6 +3916,7 @@
         "c2daa36e-34a9-4a82-8cdf-3b62080465c5",
         "4f3470e5-ce00-4686-b790-664c0a4fd1b2",
         "b98f217d-6e7d-4cb6-86b2-57d4413a546b",
+        "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",

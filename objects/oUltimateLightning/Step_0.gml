@@ -23,10 +23,9 @@ striking = noone;
 var amt = instance_number(oPlayer);
 for (var i = 0; i < amt; i++) {
 	var p = instance_find(oPlayer, i);
-	if (p != noone && p.team != owner.team) {
+	if (p != noone && p.team != owner.team)
 		if (point_distance(x, y, p.x, p.y) <= light_range) {
 			striking = p;
 			break;
 		}
-	} 
 }

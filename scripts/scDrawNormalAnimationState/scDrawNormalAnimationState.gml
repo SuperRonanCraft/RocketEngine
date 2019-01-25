@@ -29,15 +29,17 @@ switch (state) {
 		break;
 	
     case ANIMATIONSTATE.STANDING:
+	
 	default:
         currentSprite = sPlayer_idle;
         break;
 }
 
 //draw sprite normally
-if(!overwrite){
+if (!overwrite) {
 	animationVar += image_speed;
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing * image_xscale,image_yscale,0,c_white,image_alpha);	
+	draw_sprite_ext(currentSprite, floor(animationVar), x, y, 
+		facing * image_xscale, image_yscale, 0, c_white, image_alpha);	
 }
 
 

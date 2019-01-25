@@ -104,14 +104,14 @@ switch (buff) {
 		ds_map[? BUFF_MAP.TIME] = 2 * room_speed;
 		break;
 	case BUFFTYPE.REVERSEGRAVITY:
-		ds_map[? BUFF_MAP.NAME] = "Reversed";
+		ds_map[? BUFF_MAP.NAME] = "Flipped";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Defying gravity";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSEGRAVITY;
 		ds_map[? BUFF_MAP.STEP] = scBuffReverseGravity;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSEGRAVITY];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSEGRAVITY];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
 		break;
 	/*case BUFFTYPE.KNOCKBACK:
 		ds_map[? BUFF_MAP.NAME] = "Knockback";

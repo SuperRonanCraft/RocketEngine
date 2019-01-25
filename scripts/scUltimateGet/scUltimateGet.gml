@@ -97,6 +97,7 @@ switch (type) {
 	case ULTIMATE.LIGHTNING_ORB:
 		ds_map[? ULTIMATE_MAP.NAME] = "Oh, its gonna hurt";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLightning;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLightningDraw;
 		break;
 }
 

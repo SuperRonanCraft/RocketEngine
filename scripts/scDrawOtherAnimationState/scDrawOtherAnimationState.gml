@@ -9,15 +9,12 @@ switch (state) {
 	
 	case ANIMATIONSTATE.TRAPPED:
 		currentSprite = sPlayer_trapped;
-		
 		break;
-	
 	
 	case ANIMATIONSTATE.TECHED:
 		overwrite = true;
-		if(scSpecialAnimation(sPlayer_tech, 0)){
+		if (scSpecialAnimation(sPlayer_tech, 0))
 			animState = PLAYERSTATE.NORMAL;	
-		}
 		break;
 	
 	case ANIMATIONSTATE.KNOCKBACK2:
@@ -30,9 +27,10 @@ switch (state) {
 }
 
 //draw sprite normally
-if(!overwrite){
+if (!overwrite) {
 	animationVar += image_speed;
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing * image_xscale,image_yscale,0,c_white,image_alpha);	
+	draw_sprite_ext(currentSprite, floor(animationVar), x, y, 
+		facing * image_xscale, image_yscale, 0, c_white, image_alpha);	
 }
 
 
