@@ -3,7 +3,7 @@
 
 var team = argument0;
 //Find a target
-for (var i = 0; i < instance_number(pShootable); i += 1) {
+for (var i = instance_number(pShootable) - 1; i >= 0; i--) {
 	var inst = instance_find(pShootable, i);
 	if (inst.team != team)
 		return inst;

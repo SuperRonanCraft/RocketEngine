@@ -1,7 +1,7 @@
 /// @desc do not draw rocket until indication is done
 if (spawn_time > 0) {
 	spawn_time--;
-	var val = sin(get_timer() / 500000);
+	var val = sin((get_timer() / 500000) + offset);
 	draw_set_alpha(val * sign(val));
 	var ybtm = RES_H;
 	if (wall != noone)

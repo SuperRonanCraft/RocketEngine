@@ -14,8 +14,10 @@ destroy = false;
 damage = true;
 //The owner of ult
 owner = noone;
+offset = irandom(100);
 
 //The wall that is in the way
+wall = noone;
 walllist = ds_list_create();
 collision_line_list(x, y, x, RES_H, oWall, true, true, walllist, true);
 for (var i = 0; i < ds_list_size(walllist); i++) {

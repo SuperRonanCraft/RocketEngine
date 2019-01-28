@@ -103,6 +103,10 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	//ULTIMATE CHARGE CIRCLE
 	if (ult_enabled) {
 		var charge = round(ult_charge * (100 / ult_charge_max));
+		if (charge >= 100) {
+			var ang = irandom_range(0, 360);
+			scDrawLightning(xposcir, ypos, xposcir + lengthdir_x(32, ang), ypos + lengthdir_y(32, ang), irandom(5), c_blue);
+		}
 		var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
 		scDrawPiePart(xposcir, ypos, ult_charge, ult_charge_max, c, 28, 0.8, 9);
 	
@@ -110,7 +114,13 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_yellow, 32, 0.9, 4);
 	
 		//ULTIMATE CHARGE TEXT
-		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow, 0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
+		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,
+			0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
+		if (charge >= 100) {
+			var str = scKeyToString(keyleft) + " + " + scKeyToString(keyright);
+			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
+				0.5, noone, scMovementWave(0.8, 0.4, 1));
+		}
 	}
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, c_white, rockets_enabled ? 0.8 : 0.3);

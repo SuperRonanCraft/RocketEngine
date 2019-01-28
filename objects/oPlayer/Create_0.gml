@@ -19,7 +19,9 @@ hpwidth = sprite_get_width(hpsprite);
 //display = true; //Display gui stuff
 
 //Show when hit
-flash = 0;
+flash_alpha = 0; //Flashing alpha
+flash_reduce = 0.05; //How much to reduce the flash alpha
+flash_color = c_white; //Color of the flash
 
 //Load Rockets
 scRocketStart(starting_weapon);

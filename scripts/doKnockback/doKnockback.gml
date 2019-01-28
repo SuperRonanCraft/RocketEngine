@@ -3,7 +3,6 @@
 ///@arg amount of knockback
 ///@arg direction getting hit from
 
-
 var owner = argument[0];
 if (!owner.player_knockback) exit;
 

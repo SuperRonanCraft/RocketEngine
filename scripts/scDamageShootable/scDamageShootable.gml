@@ -13,7 +13,6 @@ var force = argument_count >= 5 ? (argument[4] != noone ? argument[4] : false) :
 if ((damage_take /*&& shootInst != id*/) || force) {
 	hp -= dmg;
 	if (isPlayer) {
-		flash = 3;
 		hitfrom = other.direction;
 		hp_scale = 2;
 		hp_damaged = dmg;
@@ -25,5 +24,7 @@ if ((damage_take /*&& shootInst != id*/) || force) {
 		instance_destroy(other.id);
 	scPlaySound(SOUND.EFFECT_HIT);
 }
-if (isPlayer)
+if (isPlayer) {
+	flash_alpha = 1;
 	scComboDamaged(argument[0]);
+}

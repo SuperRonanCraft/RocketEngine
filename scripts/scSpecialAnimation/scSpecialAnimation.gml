@@ -15,16 +15,17 @@ if(animationVar != 0 && currentSprite != sprite){
 
 currentSprite = sprite;
 
-if(loop == 0){
-	if(floor(animationVar) >= sprite_get_number(sprite)-1){
-		animationVar = sprite_get_number(sprite)-1;	
+if (loop == 0) {
+	if (floor(animationVar) >= sprite_get_number(sprite) - 1){
+		animationVar = sprite_get_number(sprite) - 1;	
 		loopFin = true;
 	}
 	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing*image_xscale,image_yscale,0,c_white,image_alpha);
-}
-else{
+} else
 	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing*image_xscale,image_yscale,0,c_white,image_alpha);	
-}
+
+scFlash(currentSprite, floor(animationVar)); //Flash shader
+
 animationVar += image_speed;
 
 return (loopFin);

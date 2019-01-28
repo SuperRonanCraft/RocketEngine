@@ -2871,6 +2871,14 @@
             }
         },
         {
+            "Key": "b9bacdd8-3145-4f0c-b281-aa34d5749ab9",
+            "Value": {
+                "id": "2b01fd41-821e-4c14-b00a-8edf64980e43",
+                "resourcePath": "shaders\\shFlashAlpha\\shFlashAlpha.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "ba2fd104-db50-45fd-a0a2-86b27ebc5fec",
             "Value": {
                 "id": "66e39af9-a950-4b33-bc06-aeb6e260f654",
@@ -3846,8 +3854,6 @@
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
         "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
-        "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
-        "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
@@ -3921,6 +3927,8 @@
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
         "819c3721-6078-47b0-91cb-c171738ea97b",
+        "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
+        "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",

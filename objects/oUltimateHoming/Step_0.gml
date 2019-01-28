@@ -18,14 +18,10 @@ if (timer % 10 == 0 && timer < 30)
 		image_xscale = 0.8;
 		image_yscale = 0.8;
 		//Find a target
-		var target = noone, xx = x, yy = y;
-		for (var i = 0; i < instance_number(pShootable); i++) {
-			var obj = instance_find(pShootable, i)
-			if (obj != owner) {
-				target = obj;
-				xx = target.x;
-				yy = target.y;
-			}
+		var target = scFindTarget(owner.team), xx = x, yy = y;
+		if (target != noone) {
+			xx = target.x;
+			yy = target.y;
 		}
 		homing = ds_map_create();
 		homing[? "target"] = target;

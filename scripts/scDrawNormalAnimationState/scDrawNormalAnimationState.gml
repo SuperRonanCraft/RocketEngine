@@ -38,8 +38,11 @@ switch (state) {
 //draw sprite normally
 if (!overwrite) {
 	animationVar += image_speed;
-	draw_sprite_ext(currentSprite, floor(animationVar), x, y, 
-		facing * image_xscale, image_yscale, 0, c_white, image_alpha);	
+	var sprite = currentSprite;
+	var sprite_img = floor(animationVar);
+	draw_sprite_ext(sprite, sprite_img, x, y, 
+		facing * image_xscale, image_yscale, 0, c_white, image_alpha);
+	scFlash(sprite, sprite_img);
 }
 
 
