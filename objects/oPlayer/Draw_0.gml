@@ -11,7 +11,7 @@ scAnimationState();
 //Show weapon clip if larger than 1
 if (rockets_enabled && hp > 0 && global.play) {
 	var clip = rocket_map[? ROCKET_MAP.CLIP];
-		if (clip > 1) {
+	if (clip > 1) {
 		var xx = x - 30;
 		var yy = bbox_bottom;
 		for (var i = 0; i < clip; i++) {
