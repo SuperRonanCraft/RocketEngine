@@ -751,10 +751,18 @@
             }
         },
         {
+            "Key": "308c532b-572e-444a-b419-fb1c6c459fc6",
+            "Value": {
+                "id": "4e02201e-645d-4680-9004-e12305bf5ec6",
+                "resourcePath": "scripts\\scKeybindsGet\\scKeybindsGet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "30927b15-6586-479c-b2ee-1fbced56dcc6",
             "Value": {
                 "id": "2bd7d6b1-b5c6-4665-85dc-240a173709fe",
-                "resourcePath": "scripts\\doKnockback\\doKnockback.yy",
+                "resourcePath": "scripts\\scKnockbackGive\\scKnockbackGive.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3842,6 +3850,7 @@
     "script_order": [
         "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
         "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
+        "308c532b-572e-444a-b419-fb1c6c459fc6",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",

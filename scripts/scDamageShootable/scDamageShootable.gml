@@ -26,5 +26,6 @@ if ((damage_take /*&& shootInst != id*/) || force) {
 }
 if (isPlayer) {
 	flash_alpha = 1;
+	hp_flash_alpha = 1;
 	scComboDamaged(argument[0]);
 }

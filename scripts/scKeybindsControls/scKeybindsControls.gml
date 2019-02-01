@@ -1,25 +1,14 @@
-/// @desc keyboard-controls
-
-//Keyboard
-var key_left = keyboard_check(keyleft); 
-var key_right = keyboard_check(keyright);
-var key_jump = keyboard_check_pressed(keyjump);
-var key_shoot = keyboard_check(keyshoot);
-
-//Gamepad
-if (!(key_left || key_right || key_jump || key_shoot) && gamepad_is_connected(controller)) {
-	if (abs(gamepad_axis_value(controller, gp_axislh)) > 0.2){
-		key_left = abs(min(gamepad_axis_value(controller, gp_axislh), 0));
-		key_right = max(gamepad_axis_value(controller, gp_axislh), 0);
-	}
-	if (gamepad_button_check_pressed(controller, gp_face1))
-		key_jump = 1;
-	if (gamepad_button_check(controller, gp_shoulderr))
-		key_shoot = 1;
-}
+/// @desc player movement
 
 //Check if can control
-if (canControl){
+if (canControl) {
+	
+	//KEYBINDS
+	var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
+	var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
+	var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
+	var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
+
 	//Horizontal
 	var move = (key_right - key_left) * keydirection;
 	controlling = move;
@@ -30,16 +19,13 @@ if (canControl){
 	
 	//Friction
 	if (move == 0 && hsp_move != 0) {
-		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs( hsp_move * (friction_base+friction_adj) ) );	
+		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base+friction_adj)));	
 		hsp_move += recoilKB;
 		//Ease into 0
-		if (abs(hsp_move) < 0.5) {
+		if (abs(hsp_move) < 0.5)
 			hsp_move = 0;
-		}
-	}
-	else{
-		hsp_move = (move * walksp) + (move_adj * move) + recoilKB ;
-	}
+	} else
+		hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
 
 	//Vertical
 	if (key_jump && standing) {
@@ -49,14 +35,10 @@ if (canControl){
 	//Weapon
 	if (key_shoot)
 		scRocketShoot();
-} 
-
-else{ 
+} else 
 	hsp_move = move_adj;
-}
 
 //Reset recoil
-
 if (recoilKB < recoilMAX)
 	recoilKB ++;
 else if recoilKB > recoilMAX

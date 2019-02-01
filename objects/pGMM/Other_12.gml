@@ -19,9 +19,8 @@ if (endgame_delay <= 0) {
 		}
 	}
 	if (endgame_delay == 0) {
-		global.play = false;
 		endgame_delay--;
-		//Display end of game event
+		//Calculate game event
 		event_user(3);		
 	}
 } else

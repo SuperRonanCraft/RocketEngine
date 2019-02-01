@@ -13,7 +13,7 @@ color = c_aqua;
 //width = 0;
 
 //Uptime
-timer = 3 * room_speed;
+timer = 6 * room_speed;
 
 fading = true;
 fading_time = 30;

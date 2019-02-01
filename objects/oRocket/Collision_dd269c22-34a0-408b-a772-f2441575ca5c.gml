@@ -13,9 +13,8 @@ if (!destroy && owner.team != other.team)
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other);
-			//with (other) scBuffHandler();
 			//Knockback
-			doKnockback(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
+			scKnockbackGive(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
 		}
 		
 		//Damage player

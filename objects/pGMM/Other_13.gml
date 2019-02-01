@@ -23,4 +23,10 @@ if (ds_list_size(p_list) == 2) {
 calculated = true;
 global.play = false;
 
+//Remove the ability to take damage
+for (var i = 0; i < ds_list_size(p_list); i++) {
+	var p = p_list[| i];
+	p.damage_take = false; //Remove the ability to take damage
+}
+
 scData_PrintOutcome();

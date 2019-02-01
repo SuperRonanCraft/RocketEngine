@@ -16,6 +16,9 @@ hp_damaged = 0;
 hpsprite = sHealth;
 hpheight = sprite_get_height(hpsprite);
 hpwidth = sprite_get_width(hpsprite);
+hp_flash_alpha = 0;
+hp_flash_reduce = 0.05;
+hp_flash_color = c_red;
 //display = true; //Display gui stuff
 
 //Show when hit

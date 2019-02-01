@@ -2,7 +2,7 @@ if (!ult_enabled) exit; //Is the system even enabled?
 
 if (ult_charge < ult_charge_max) {scUltimateAddCharge(DAMAGETYPE.TIME); exit;} //Give charge by time, exit
 
-var key_shoot = keyboard_check(keyleft) && keyboard_check(keyright); //Holding both left and right keys to cast ult
+var key_shoot = scKeybindsGet(KEYBIND_TYPE.ULT); //Holding both left and right keys to cast ult
 
 var shoot = false;
 

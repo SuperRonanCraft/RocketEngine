@@ -3,8 +3,6 @@ if (!display) exit;
 
 //-----------------
 //Display health
-hp_scale = max(hp_scale * 0.95, 1);
-//var offset = 0;
 for (var i = 0; i < hp_original; i++) {
 	//Show first ten hearts, then show additional hearts in text
 	if (i < 10) {
@@ -13,6 +11,7 @@ for (var i = 0; i < hp_original; i++) {
 		var ypos = (hpheight + 2); //+ (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
 		var scale = hp_damaged > 0 ? (i == hp ? hp_scale : 1) : 1;
 		draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
+		scFlash(hp_flash_alpha, hp_flash_color, scale, scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
 	} else {
 		if (hp < 10) break;
 		var str = "+" + string(hp - i);
@@ -23,6 +22,8 @@ for (var i = 0; i < hp_original; i++) {
 		break;
 	}
 }
+hp_scale = max(hp_scale * 0.95, 1);
+hp_flash_alpha = max(hp_flash_alpha - hp_flash_reduce, 0);
 //-----------------
 //Display Buffs and Time
 offset = 0;
@@ -134,3 +135,4 @@ if (combo_amount > 1) {
 	var ctext = "x" + string(combo_amount) + " " + combo_text_current;
 	scDrawText(xpos, 50, ctext, c_yellow, combo_scale * 0.5, noone, noone, align);
 }
+combo_scale = max(combo_scale * 0.95, 1); //Lower combo scale

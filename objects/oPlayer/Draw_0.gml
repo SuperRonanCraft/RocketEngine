@@ -1,6 +1,4 @@
 /// @desc Animation/Sprite
-//Update the direction the player should face
-//scDirection(true);
 
 //Draw event for ultimates
 scUltimateHandlerDraw();
