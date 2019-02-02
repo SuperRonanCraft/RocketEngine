@@ -8,8 +8,8 @@ for (var i = 0; i < hp_original; i++) {
 	if (i < 10) {
 		var len = hpwidth * i//((offset - 1) * 10));
 		var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
-		var ypos = (hpheight + 2); //+ (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
-		var scale = hp_damaged > 0 ? (i == hp ? hp_scale : 1) : 1;
+		var ypos = hpheight + 2; //+ (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
+		var scale = i <= hp + (hp_damaged - 1) && i >= hp ? hp_scale : 1;
 		draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
 		scFlash(hp_flash_alpha, hp_flash_color, scale, scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
 	} else {
@@ -39,7 +39,8 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
 	//Determine side and offset related to how many buffs to display (2 pixels between each icon) (mirrored)
-	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 8) * (i - ((offset - 1) * 10))) : (RES_W / 2) + (w / 2) + (((w / 2) + 8) * (i - ((offset - 1) * 10)));
+	var xpos = team == TEAM.LEFT ? (RES_W / 2) - (w) - (((w / 2) + 8) * (i - ((offset - 1) * 10)))
+		: (RES_W / 2) + (w / 2) + (((w / 2) + 8) * (i - ((offset - 1) * 10)));
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	
 	//BUFF TIME
@@ -124,7 +125,8 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		}
 	}
 	//ROCKET EQUIPPED
-	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, c_white, rockets_enabled ? 0.8 : 0.3);
+	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, 
+		c_white, rockets_enabled ? 0.8 : 0.3);
 	//Make the scale smaller over time
 	rocket_scale = max(rocket_scale * 0.95, 1);
 }

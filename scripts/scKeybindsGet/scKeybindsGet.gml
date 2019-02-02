@@ -10,7 +10,7 @@ switch (argument0) {
 		keyboard = keyboard_check(keyright);
 		break;
 	case KEYBIND_TYPE.JUMP:
-		keyboard = keyboard_check(keyjump);
+		keyboard = keyboard_check_pressed(keyjump);
 		break;
 	case KEYBIND_TYPE.SHOOT:
 		keyboard = keyboard_check(keyshoot);

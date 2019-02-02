@@ -16,6 +16,7 @@ if ((damage_take /*&& shootInst != id*/) || force) {
 		hitfrom = other.direction;
 		hp_scale = 2;
 		hp_damaged = dmg;
+		hp_flash_alpha = 1;
 		if (hp > 0 || alive)
 			scData_ConfirmHit();
 	}
@@ -24,8 +25,7 @@ if ((damage_take /*&& shootInst != id*/) || force) {
 		instance_destroy(other.id);
 	scPlaySound(SOUND.EFFECT_HIT);
 }
-if (isPlayer) {
+if (isPlayer) { //Do thing no matter taking damage or not
 	flash_alpha = 1;
-	hp_flash_alpha = 1;
 	scComboDamaged(argument[0]);
 }

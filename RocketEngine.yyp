@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "2e7d44a8-e0e5-4644-a057-ec586a9b4606",
+            "Value": {
+                "id": "6e6637af-835c-4a2b-8b5a-e6406d69ea4a",
+                "resourcePath": "scripts\\scRocketShotgun_Step\\scRocketShotgun_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2f1d3f2a-1727-477b-a40b-87b15e33a3d5",
             "Value": {
                 "id": "b0d8628a-53f9-434b-a07e-4153072826d6",
@@ -772,6 +780,14 @@
                 "id": "ffee103c-507c-4c02-a137-65029275d1ee",
                 "resourcePath": "objects\\pUIMenus\\pUIMenus.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "30d403c0-63be-413c-a99e-57f6c45a248c",
+            "Value": {
+                "id": "f16c4c5c-314a-4242-94c2-2cd7f4eb4727",
+                "resourcePath": "views\\30d403c0-63be-413c-a99e-57f6c45a248c.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -956,6 +972,14 @@
                 "id": "174e9a10-aa6f-496b-9021-a5ae80b61443",
                 "resourcePath": "scripts\\scStatsResetStage\\scStatsResetStage.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4174624f-3c7c-4002-adf5-82a4d51891d5",
+            "Value": {
+                "id": "6459ce76-9979-430a-91c1-90e756aeb54f",
+                "resourcePath": "sprites\\sRocket_Shotgun\\sRocket_Shotgun.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3908,6 +3932,7 @@
         "f72e821d-28fa-437c-aa5c-0c3fb1a2f9aa",
         "2fbb2a02-faba-4f7a-9fc1-2e0e0b7e9646",
         "e51366d6-d1b4-4db2-99a5-cc9108b9a4f6",
+        "2e7d44a8-e0e5-4644-a057-ec586a9b4606",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",

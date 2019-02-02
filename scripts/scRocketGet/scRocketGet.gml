@@ -274,7 +274,6 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketObsolete_Destroy;
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
-		map[? ROCKET_MAP.ENABLED] = true;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NAPALM;
 		break;
 	
@@ -297,9 +296,21 @@ switch (roc) {
 		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketLightning_CreateExplode;
 		map[? ROCKET_MAP.TIMER] = 4 * room_speed;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
-		map[? ROCKET_MAP.ENABLED] = true;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSEGRAVITY];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_ORB;
+		break;
+	
+	case ROCKET.SHOTGUN:
+		map[? ROCKET_MAP.NAME] = "SHOTGUN";
+		map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
+		map[? ROCKET_MAP.RECOIL] = 2;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
+		map[? ROCKET_MAP.COOLDOWN] = 55;
+		map[? ROCKET_MAP.SPEED] = 13;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 5;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketShotgun_Step;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HUGEEXPLOSION;
 		break;
 }
 

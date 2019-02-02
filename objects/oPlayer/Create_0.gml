@@ -12,7 +12,7 @@ event_inherited();
 hp = 10;
 hp_original = hp;
 hp_scale = 1;
-hp_damaged = 0;
+hp_damaged = 0; //Amount of damage taken last time
 hpsprite = sHealth;
 hpheight = sprite_get_height(hpsprite);
 hpwidth = sprite_get_width(hpsprite);

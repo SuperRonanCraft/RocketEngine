@@ -13,8 +13,8 @@ explode_rocket_len = RES_W / 2;
 explode_rocket_amount = 8;
 explode_scale = 1.3;
 explode_sprite = sexplosion_Default;
-explode_rocket_particle = oParticleHandler.ds_part[? PARTICLES.SAND];
-explode_rocket_particle_amt = 10;
+explode_rocket_particle = oParticleHandler.ds_part[? PARTICLES.SMOKE3];
+explode_rocket_particle_amt = 1;
 
 traveled = 0;
 exploding = false;
