@@ -2759,6 +2759,14 @@
             }
         },
         {
+            "Key": "b08c373d-f76e-4595-b12f-df58d1a6e7f0",
+            "Value": {
+                "id": "607e26d0-3fde-4845-9356-f0a53a088212",
+                "resourcePath": "rooms\\rKnockOutStage3\\rKnockOutStage3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "b0ad2d55-dfd4-441e-bce4-b60104d4b865",
             "Value": {
                 "id": "1dac84e9-3d5b-4e77-b3b0-c7f903d47a84",
@@ -3519,6 +3527,14 @@
             }
         },
         {
+            "Key": "e768b8fa-c36e-4c9e-88d9-530294a36520",
+            "Value": {
+                "id": "e995ae72-83ce-41e2-8b15-c932a9ba5527",
+                "resourcePath": "views\\e768b8fa-c36e-4c9e-88d9-530294a36520.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e787a68b-3070-49de-b812-e18b6a3a030e",
             "Value": {
                 "id": "290457b9-2ea1-4423-af40-1efbef0f9dbc",
@@ -3548,14 +3564,6 @@
                 "id": "b9c339f1-7428-477c-b035-fb772b439c9b",
                 "resourcePath": "scripts\\scRocketDefaults\\scRocketDefaults.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "e999552c-0203-4d93-8f4b-ac3ceb6cc170",
-            "Value": {
-                "id": "7fa208d0-41de-4589-83a6-9269c4aa6647",
-                "resourcePath": "sprites\\sEnemy\\sEnemy.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -3674,7 +3682,7 @@
             "Key": "f2fb6cef-551e-48ee-82a9-9d5362748527",
             "Value": {
                 "id": "dc803959-bd65-4a95-ab2f-7e2ad49e09c9",
-                "resourcePath": "sprites\\sPlatform\\sPlatform.yy",
+                "resourcePath": "sprites\\sBarrier\\sBarrier.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3732,14 +3740,6 @@
                 "id": "8ae5bbd6-929a-4647-99fc-f21723860c88",
                 "resourcePath": "scripts\\scRocketLightning_Step\\scRocketLightning_Step.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f74e855f-7270-473f-ae23-e4dc3dc8a292",
-            "Value": {
-                "id": "1b0e6cea-1d33-4932-b425-79bdaa515afb",
-                "resourcePath": "views\\f74e855f-7270-473f-ae23-e4dc3dc8a292.yy",
-                "resourceType": "GMFolder"
             }
         },
         {

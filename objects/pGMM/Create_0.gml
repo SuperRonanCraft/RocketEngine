@@ -9,6 +9,7 @@ timer = 90; //global.stage_timer;
 scStatsLoadMode();
 
 timer_current = timer;
+timer_current_width = 0;
 timer_room = 0;
 wait_timer = 3; //The original timer
 wait_timer_current = wait_timer; //Current timer index
@@ -54,8 +55,8 @@ kick_execute = true; //Leave the game after timer reaches 0
 event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
-	["RESTART",		menu_element_type.script_runner,	scStageRestart],
-	["EXIT",		menu_element_type.goto_room,	global.gamemodeSRoom[gamemode]],
+	["RESTART",		menu_element_type.script_runner,	scStageRestart, "Play again!"],
+	["EXIT",		menu_element_type.goto_room,	global.gamemodeSRoom[gamemode], "Choose a new stage"],
 );
 
 //Pages of the menu
