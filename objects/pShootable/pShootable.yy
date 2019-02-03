@@ -45,6 +45,20 @@
             "value": "TEAM.NONE",
             "varName": "team",
             "varType": 4
+        },
+        {
+            "id": "c6448701-da62-480c-bc90-58b3998ec875",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "damage_take",
+            "varType": 3
         }
     ],
     "solid": false,

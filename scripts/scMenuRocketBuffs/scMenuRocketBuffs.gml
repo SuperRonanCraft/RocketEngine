@@ -14,7 +14,11 @@ for (var i = 0; i < amt; i++) {
 	var c = color_element;
 	var yoffset = 0;
 	if (scUIHovering(rx, ry + 40, name, x_buffer, 65, scale_element, true)) {
-			c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1); part_amt *= 2;}
+		c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1);
+		part_amt *= 2;
+		if (mouse_check_button_pressed(mb_left))
+			scBuffAdd(map[? BUFF_MAP.TYPE], oPlayer);
+	}
 	scDrawText(rx, ry, name, c, scale_element); //Buff name
 	//Particles
 	part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - 42, rx + 42,

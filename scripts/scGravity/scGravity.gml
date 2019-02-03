@@ -1,7 +1,7 @@
 //No need to send us downward if we are going to stay still
 //Note: Not how physics works in real life
 if (!standing)
-	vsp_move += grv * grv_dir;
+	vsp_move = clamp(vsp_move + (grv * grv_dir), -32, 32);
 standing = scCollisionO();
 x += hsp;
 y += vsp;

@@ -14,7 +14,12 @@ for (var i = 1; i < amt; i++) {
 	var c = color_element;
 	var yoffset = 0;
 	if (scUIHovering(rx, ry + 20, name, x_buffer, 34, scale_element, true)) {
-		c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1);}
+		c = color_main_hovering;
+		yoffset = scMovementWave(-2, 2, 1);
+		if (mouse_check_button_pressed(mb_left))
+			with (oPlayer)
+				scRocketChange(roc_map[? ROCKET_MAP.TYPE]);
+	}
 	scDrawText(rx, ry, name, c, scale_element); //Rocket name
 	draw_sprite(spr, 0, rx, ry + 30 + yoffset); //Rocket icon
 	if (!is_undefined(buffs)) { //Rocket buffs if exists
