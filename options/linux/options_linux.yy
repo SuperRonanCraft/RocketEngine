@@ -5,7 +5,7 @@
     "name": "Linux",
     "option_linux_allow_fullscreen": false,
     "option_linux_display_cursor": true,
-    "option_linux_display_name": "Made in GameMaker Studio 2",
+    "option_linux_display_name": "RocketMan 3.0 BETA",
     "option_linux_display_splash": false,
     "option_linux_enable_steam": false,
     "option_linux_homepage": "http:\/\/www.yoyogames.com",

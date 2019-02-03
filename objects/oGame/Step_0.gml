@@ -2,7 +2,7 @@
 
 if (global.pause) exit;
 
-if (os_is_paused()) { //Window is paused
+if (global.pause_onfocus && os_is_paused()) { //Window is paused
 	event_user(0); //Toggle pause
 	audio_master_gain(0);
 	toggled_audio = true;

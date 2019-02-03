@@ -20,4 +20,7 @@ global.key_p2_left = ini_read_real(sec, "p2_left", global.key_p2_left_default);
 global.key_p2_right = ini_read_real(sec, "p2_right", global.key_p2_right_default);
 global.key_p2_shoot = ini_read_real(sec, "p2_shoot", global.key_p2_shoot_default);
 
+//GRAPHICS
+global.pause_onfocus = ini_read_real(sec, "pause_onfocus", global.pause_onfocus);
+
 ini_close(); //Close stream

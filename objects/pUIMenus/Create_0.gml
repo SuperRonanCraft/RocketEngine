@@ -15,7 +15,8 @@ ds_menu_audio = scUICreateMenuPage(
 );
 
 ds_menu_graphics = scUICreateMenuPage(
-	["FULLSCREEN",		menu_element_type.toggle,			scUIToggleFullscreen,	"fullscreen",	global.fullscreen],
+	["FULLSCREEN",		menu_element_type.toggle,		scUIToggleFullscreen,	"fullscreen",	global.fullscreen],
+	["PAUSE UN-FOCUS",	menu_element_type.toggle,		noone,	"pause_onfocus",	global.pause_onfocus, "Pause game automatially when unfocused"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 

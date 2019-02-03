@@ -38,6 +38,7 @@ changeres = true;
 background = noone;
 global.pause = false;
 global.pause_possible = true;
+global.pause_onfocus = true;
 
 //Gamemodes
 //Preset
@@ -74,10 +75,6 @@ enum KEYBIND {
 	PLAYER1, PLAYER2, PLAYER3, PLAYER4
 }
 
-//Teams
-global.teamLeft = ds_list_create();
-global.teamRight = ds_list_create();
-
 enum TEAM {
 	NONE, LEFT, RIGHT
 }
@@ -110,12 +107,7 @@ global.mode_kb_health = 2;
 global.mode_kb_ultimates = 1;
 global.mode_kb_timer = 2;
 
-//SCORE
-//global.score_p1_wins = 0;
-//global.score_p1_loses = 0;
-//global.score_p2_wins = 0;
-//global.score_p2_loses = 0;
-
+//STAGE SCORE
 global.score_mode_p1_wins = 0;
 global.score_mode_p2_wins = 0;
 

@@ -20,4 +20,7 @@ ini_write_real(sec, "p2_left", global.key_p2_left);
 ini_write_real(sec, "p2_right", global.key_p2_right);
 ini_write_real(sec, "p2_shoot", global.key_p2_shoot);
 
+//GRAPHICS
+ini_write_real(sec, "pause_onfocus", global.pause_onfocus);
+
 ini_close(); //Close stream
