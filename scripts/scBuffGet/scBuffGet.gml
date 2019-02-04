@@ -31,7 +31,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPARKLE];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SPARKLE];
 		ds_map[? BUFF_MAP.GOOD] = true;
-		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
 		break;
 	case BUFFTYPE.SLIME:
 		ds_map[? BUFF_MAP.NAME] = "Slimed";
@@ -40,7 +40,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.STEP] = scBuffSlime; 
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLIME];
-		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
 		break;
 	case BUFFTYPE.SPEED:
 		ds_map[? BUFF_MAP.NAME] = "Speed";
@@ -60,7 +60,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.LOWGRAVITY];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.LOWGRAVITY];
 		ds_map[? BUFF_MAP.GOOD] = true;
-		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 7 * room_speed;
 		break;
 	case BUFFTYPE.REVERSECONTROLS:
 		ds_map[? BUFF_MAP.NAME] = "Reversed";
@@ -69,7 +69,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.STEP] = scBuffReverseControls;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSECONTROLS];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSECONTROLS];
-		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 3 * room_speed;
 		break;
 	case BUFFTYPE.ULTCHARGE:
 		ds_map[? BUFF_MAP.NAME] = "Ultimate Booster";
@@ -79,8 +79,8 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
-		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
-		ds_map[? "multiplier"] = 8; //Custom ultimate booster variable
+		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
+		ds_map[? "multiplier"] = 6; //Custom ultimate booster variable
 		break;
 	case BUFFTYPE.BLEEDOUT:
 		ds_map[? BUFF_MAP.NAME] = "Bleed Out";
@@ -111,7 +111,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSEGRAVITY];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSEGRAVITY];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 3 * room_speed;
 		break;
 	/*case BUFFTYPE.KNOCKBACK:
 		ds_map[? BUFF_MAP.NAME] = "Knockback";
@@ -132,11 +132,11 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.KBSMOKE];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 8 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
 		ds_map[? "vsp"] = 2.2; //Amount of vsp to add to the player
 		ds_map[? "delay"] = 24; //Delay between force
 		ds_map[? "current_delay"] = 0;
-		ds_map[? "duration"] = 10; //Amount of time to apply force
+		ds_map[? "duration"] = 15; //Amount of time to apply force
 		ds_map[? "current_duration"] = 0;
 		break;
 }

@@ -9,14 +9,14 @@ ds_settings = scUICreateMenuPage(
 
 ds_menu_audio = scUICreateMenuPage(
 	["MASTER",			menu_element_type.slider,			scUIChangeVolume,		"vol_master",	global.vol_master,	0],
-	["SOUNDS",			menu_element_type.slider,			scUIChangeVolume,		"vol_sounds",	global.vol_sounds,	1],
+	["EFFECTS",			menu_element_type.slider,			scUIChangeVolume,		"vol_sounds",	global.vol_sounds,	1],
 	["MUSIC",			menu_element_type.slider,			scUIChangeVolume,		"vol_music",	global.vol_music,	2],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
 ds_menu_graphics = scUICreateMenuPage(
-	["FULLSCREEN",		menu_element_type.toggle,		scUIToggleFullscreen,	"fullscreen",	global.fullscreen],
-	["PAUSE UN-FOCUS",	menu_element_type.toggle,		noone,	"pause_onfocus",	global.pause_onfocus, "Pause game automatially when unfocused"],
+	["FULLSCREEN",		menu_element_type.toggle,		scUIToggleFullscreen,	"fullscreen",	global.fullscreen, "Toggle fullscreen mode"],
+	["AUTO PAUSE",	menu_element_type.toggle,		noone,	"pause_onfocus",	global.pause_onfocus, "Pause game when unfocused"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
@@ -29,6 +29,6 @@ ds_menu_keybinds = scUICreateMenuPage(
 	["LEFT P2",		menu_element_type.input,		"key_p2_left",		global.key_p2_left],
 	["RIGHT P2",	menu_element_type.input,		"key_p2_right",		global.key_p2_right],
 	["SHOOT P2",	menu_element_type.input,		"key_p2_shoot",		global.key_p2_shoot],
-	["RESET",		menu_element_type.script_runner,	scUIResetKeybinds, "This will reset all keys!"],
+	["RESET",		menu_element_type.script_runner,	scUIResetKeybinds, "&cThis will reset all keys!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.settings],
 );

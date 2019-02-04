@@ -4,7 +4,7 @@ ds_menu_main = scUICreateMenuPage(
 	["PLAY",		menu_element_type.page_transfer,	menu_page.gamemodes, "Initiate gameplay!"],
 	["SETTINGS",	menu_element_type.page_transfer,	menu_page.settings, "Change some levers and buttons"],
 	["EXTRAS",		menu_element_type.page_transfer,	menu_page.info, "Learn more about the game!"],
-	["QUIT",		menu_element_type.page_transfer,	menu_page.confirm, "Don't go!"]
+	["QUIT",		menu_element_type.page_transfer,	menu_page.confirm, "&cDon't go!"]
 );
 
 ds_gamemodes = scUICreateMenuPage(
@@ -27,7 +27,7 @@ ds_stats = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.stats,	GAMEMODE.ONEVONE],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.stats,	GAMEMODE.KNOCKOUT],
 	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.stats,	GAMEMODE.TARGETS],
-	["RESET",		menu_element_type.script_runner,	scStatsResetGame, "This will reset all stats!"],
+	["RESET",		menu_element_type.script_runner,	scStatsResetGame, "&cThis will reset all stats!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 
