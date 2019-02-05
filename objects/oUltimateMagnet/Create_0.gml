@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-EXPIRETIMER = 90;
+EXPIRETIMER = 90 * (room_speed / 30);
 MAXRANGE = 300;
 
 pull = false;

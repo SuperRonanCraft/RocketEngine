@@ -1,7 +1,7 @@
 /// @desc Spawn a nuke
 direction = 270;
 image_angle = direction;
-move_spd = 5;
+move_spd = 5 / (room_speed / 30);
 //delay between indicating and spawning
 spawn_time = 100;
 

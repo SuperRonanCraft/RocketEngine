@@ -45,6 +45,7 @@ playerState = PLAYERSTATE.NORMAL;
 //Load animation states
 alive = true;
 animationVar = 0;
+image_speed *= 0.5;
 overrideAnimation = false;
 currentSprite = sprite_index;
 enum ANIMATIONSTATE {

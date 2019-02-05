@@ -3,7 +3,7 @@
 x = owner.x;
 y = owner.y;
 
-if (timer % 10 == 0 && timer < 30)
+if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
 			irandom_range(45, 135), owner, owner.rocket_map, [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;
@@ -35,6 +35,6 @@ if (timer % 10 == 0 && timer < 30)
 		rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];
 	}
 
-if (timer > 60)
+if (timer > (room_speed * 2))
 	instance_destroy();	
 timer++;

@@ -2,9 +2,9 @@
 var spd = rocket_map[? ROCKET_MAP.SPEED];
 var dir = obsolete[? "dir"]; 
 if (dir < 90 && dir > -80)
-	dir -= 3;
+	dir -= 1.5;
 else if (dir > 90 && dir < 260)
-	dir += 3;
+	dir += 1.5;
 
 direction += 20 * obsolete[? "flip"]
 image_angle = direction;

@@ -1,5 +1,5 @@
-ult_charge_max = 2; //Absolute maximum charge 
-ult_charge = ult_charge_max / 2; //Current uilt charge
+ult_charge_max = 4; //Absolute maximum charge 
+ult_charge = ult_charge_max / 2; //Current ult charge
 ult_enabled = true;
 ult_charge_direct = 15 / 100; //Given in an direct damage event
 ult_charge_splash = 7.5 / 100; //Given in an splash damage event

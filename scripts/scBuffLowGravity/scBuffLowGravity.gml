@@ -13,7 +13,7 @@ if (clock = 0) {
 	//Save original gravity
 	dsBuff[? "grvOriginal"] = owner.grv;
 	//Generate the lowest gravity
-	dsBuff[? "grv"] = 1;
+	dsBuff[? "grv"] = owner.grv / 2;
 }
 
 //If the internal clock reaches the time in seconds, expire

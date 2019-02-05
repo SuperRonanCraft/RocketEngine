@@ -4,7 +4,7 @@
 owner = noone;
 
 //Edittable
-mirror_speed = 5;
+mirror_speed = 5 / (room_speed / 30);
 //mirror_width = 20;
 //mirror_color = c_silver;
 mirror_alpha = 0.5;

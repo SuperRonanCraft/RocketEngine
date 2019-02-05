@@ -133,10 +133,10 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.KBSMOKE];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
-		ds_map[? "vsp"] = 2.2; //Amount of vsp to add to the player
-		ds_map[? "delay"] = 24; //Delay between force
+		ds_map[? "vsp"] = 1.1; //Amount of vsp to add to the player
+		ds_map[? "delay"] = 48; //Delay between force
 		ds_map[? "current_delay"] = 0;
-		ds_map[? "duration"] = 15; //Amount of time to apply force
+		ds_map[? "duration"] = 30; //Amount of time to apply force
 		ds_map[? "current_duration"] = 0;
 		break;
 }
