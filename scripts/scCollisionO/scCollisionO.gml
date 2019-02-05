@@ -11,6 +11,9 @@ if (vsp_knockback == 0 || vsp_override != 0) //Make knockback override all input
 else
 	vsp = vsp_move + (vsp_knockback * grv_dir);
 
+hsp *= time_dialation;
+vsp *= time_dialation;
+
 var touchingx = instance_place(x + hsp, y, oWall); //get the instance of the wall in the future in the horizontal
 if (touchingx != noone){ //If touching a wall in the horizontal 
 	//Normal wall collision
@@ -22,13 +25,11 @@ if (touchingx != noone){ //If touching a wall in the horizontal
 	hsp = 0;
 	hsp_move = hsp;
 	
-	
 	//Miss tech/bounce
 	if (player_tech)
 		scKnockbackBounce();
 	else
 		hsp_knockback = 0;
-	
 }
 
 var touchingy = instance_place(x, y + vsp, oWall); //get the instance of the wall in the future in the vertical
@@ -41,8 +42,7 @@ if (touchingy != noone) { //If touching a wall in the vertical
 	vsp = 0;
 	vsp_move = vsp;
 	vsp_knockback = vsp;
-	
 }
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
-return (instance_place(x, y + (offset * grv_dir), oWall) != noone);
+return (instance_place(x, y + (offset * grv_dir + (grv * grv_dir)), oWall) != noone);

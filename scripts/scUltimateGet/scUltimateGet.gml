@@ -4,9 +4,10 @@
 
 var type = argument0;
 var ds_map = argument1;
+var time = TIME_SPEED;
 
 //Defaults
-ds_map[? ULTIMATE_MAP.CAST_TIME] = 15; //Defaulted to 25/60th of a second
+ds_map[? ULTIMATE_MAP.CAST_TIME] = 15 * time; //Defaulted to 15/30th of a second
 ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP] = noone; //Script when casting an ult
 ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = noone; //Draw script when casting an ult
 ds_map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW] = noone; //Draw script when ult casted

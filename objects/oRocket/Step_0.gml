@@ -5,8 +5,9 @@ if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
 else {
 	var spd = rocket_map[? ROCKET_MAP.SPEED];
-	x += lengthdir_x(spd, direction);
-	y += lengthdir_y(spd, direction);
+	scMovementLine(spd, direction);
+	//x += lengthdir_x(spd, direction);
+	//y += lengthdir_y(spd, direction);
 }
 
 if (timer > 0)

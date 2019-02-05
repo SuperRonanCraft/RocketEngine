@@ -9,6 +9,6 @@ if (hp <= 0 && damage_take) {
 		scDamageShootable(other, false, false, 1, false);
 	//flash = 10;
 	damage_take = false;
-	timer = 10;
+	timer = 10 * TIME_SPEED;
 	show_debug_message("BOMB HIT!");
 }

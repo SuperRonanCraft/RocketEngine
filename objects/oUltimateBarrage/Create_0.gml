@@ -3,9 +3,9 @@ direction = 270;
 image_angle = direction;
 move_spd = 5 / (room_speed / 30);
 //delay between indicating and spawning
-spawn_time = 100;
+spawn_time = 100 * (room_speed / 30);
 
-explosion_scale = 3;
+explosion_scale = 2.5;
 
 //What allows the nuke explosion to be deleted from the room when its animation ends
 destroy = false;
@@ -14,7 +14,7 @@ destroy = false;
 damage = true;
 //The owner of ult
 owner = noone;
-offset = irandom(100);
+offset = irandom(100); //Indicator alpha offset
 
 //The wall that is in the way
 wall = noone;

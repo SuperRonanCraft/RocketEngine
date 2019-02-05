@@ -16,7 +16,6 @@ with (map[? "target"]) {
 	}
 	map[? "clock"] = clock + 1;
 }
-x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED], direction);
-y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);
+scMovementLine(rocket_map[? ROCKET_MAP.SPEED], direction);
 
 rocket_map[? ROCKET_MAP.SPEED] += 0.2 / (room_speed / 30);

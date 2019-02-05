@@ -17,7 +17,7 @@ hpsprite = sHealth;
 hpheight = sprite_get_height(hpsprite);
 hpwidth = sprite_get_width(hpsprite);
 hp_flash_alpha = 0;
-hp_flash_reduce = 0.05;
+hp_flash_reduce = 0.05 / TIME_SPEED;
 hp_flash_color = c_red;
 //display = true; //Display gui stuff
 
@@ -45,7 +45,7 @@ playerState = PLAYERSTATE.NORMAL;
 //Load animation states
 alive = true;
 animationVar = 0;
-image_speed *= 0.5;
+image_speed /= TIME_SPEED;
 overrideAnimation = false;
 currentSprite = sprite_index;
 enum ANIMATIONSTATE {
@@ -57,7 +57,7 @@ animState = ANIMATIONSTATE.STANDING;
 
 //Movement vars
 controlling = 0; //If the player is controlling AND moving
-friction_base = 0.3;
+friction_base = 0.3 * TIME_SPEED;
 friction_adj = 0;
 recoilKB = 0;
 recoilMAX = 0;

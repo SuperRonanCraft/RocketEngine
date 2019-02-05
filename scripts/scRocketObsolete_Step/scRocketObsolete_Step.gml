@@ -1,15 +1,15 @@
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation;
 var dir = obsolete[? "dir"]; 
+var val = 1.5 * owner.time_dialation;
 if (dir < 90 && dir > -80)
-	dir -= 1.5;
+	dir -= val;
 else if (dir > 90 && dir < 260)
-	dir += 1.5;
+	dir += val;
 
 direction += 20 * obsolete[? "flip"]
 image_angle = direction;
 if (abs(image_angle / 360) > 1)
 	image_angle -= sign(image_angle) * 360;
-x += lengthdir_x(spd, dir);
-y += lengthdir_y(spd, dir);
+scMovementLine(spd, dir);
 obsolete[? "dir"] = dir; 

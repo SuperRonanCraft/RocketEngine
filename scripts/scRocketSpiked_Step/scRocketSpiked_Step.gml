@@ -1,11 +1,11 @@
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
-
+var val = 0.3 * owner.time_dialation;
 if (direction < 90 && direction > -80)
-	direction -= 0.3;
+	direction -= val;
 else if (direction > 90 && direction < 260)
-	direction += 0.3;
+	direction += val;
 
 image_angle = direction;
-x += lengthdir_x(spd, direction);
-y += lengthdir_y(spd, direction);
+
+var spd = rocket_map[? ROCKET_MAP.SPEED];
+scMovementLine(spd, direction);

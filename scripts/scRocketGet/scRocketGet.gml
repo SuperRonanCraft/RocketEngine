@@ -1,10 +1,8 @@
 /// @desc Load all rockets and set the default rocket
 /// @arg rocket
 
-
-//temporary balance
 var varspd = 0.5;
-var varcd = 2;
+var varcd = TIME_SPEED;
 
 var map = scRocketDefaults();
 var roc = argument0;

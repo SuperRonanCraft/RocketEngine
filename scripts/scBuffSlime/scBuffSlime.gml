@@ -21,7 +21,8 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0)
-		part_particles_create(global.ParticleSystem1, owner.x + irandom_range(-15,15), owner.y, dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
+		part_particles_create(global.ParticleSystem1, owner.x + irandom_range(-15,15), owner.y, 
+			dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
 	//Also, increase the clock. Essential for every buff.
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

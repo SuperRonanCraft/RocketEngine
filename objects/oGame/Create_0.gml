@@ -30,6 +30,7 @@ global.key_p2_shoot_default = global.key_p2_shoot;
 //The resolution the game will run at
 #macro RES_W 1024
 #macro RES_H 768
+#macro TIME_SPEED (room_speed / 30)
 
 changeres = true;
 
@@ -69,6 +70,7 @@ global.vol_master = 1;
 global.vol_music = 0.15;
 global.vol_sounds = 0.2;
 global.fullscreen = false;
+global.timeDialationEnabled = false; //FOR TESTING
 
 //Keybinds
 enum KEYBIND {

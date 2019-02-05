@@ -117,6 +117,20 @@
             "value": "TEAM.LEFT",
             "varName": "team",
             "varType": 0
+        },
+        {
+            "id": "87c779e6-8248-4472-b9f0-a48adc28d930",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "time_show",
+            "varType": 3
         }
     ],
     "solid": false,

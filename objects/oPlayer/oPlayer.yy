@@ -111,9 +111,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "6",
+            "value": "12 \/ TIME_SPEED",
             "varName": "walksp",
-            "varType": 0
+            "varType": 1
         },
         {
             "id": "0283d571-0e5a-4cfd-b6a9-af60e1b71b5f",
@@ -125,9 +125,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "18",
+            "value": "25 - (25 \/ (TIME_SPEED * 2))",
             "varName": "jump_height",
-            "varType": 0
+            "varType": 1
         },
         {
             "id": "bddd4545-e38b-4f81-8eff-5b0f766182c2",
@@ -139,9 +139,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
+            "value": "1.8 \/ TIME_SPEED",
             "varName": "grv",
-            "varType": 0
+            "varType": 1
         },
         {
             "id": "44a02ed4-0bd8-4ac9-aa91-6831f4754d3b",

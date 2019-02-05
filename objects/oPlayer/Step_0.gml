@@ -4,6 +4,7 @@ if (!global.play) exit;
 
 scStateCheck();
 
+//--------
 //DEVMODE 
 //JUMP + KEYSHOOT = CHANGE ROCKET
 //JUMP + F5 = CHANGE AND APPLY BUFF
@@ -23,6 +24,7 @@ if (global.devmode && global.debug && keyboard_check(keyjump))
 		if (buffs_cur >= 0)
 			scBuffAdd(buffs_cur, id);
 	}
+//--------
 
 scKeybindsControls();
 scCheckTech();

@@ -8,5 +8,8 @@ with (target) {
 		other.image_angle = other.direction;
 	}
 }
-x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED], direction);
-y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);
+
+var spd = rocket_map[? ROCKET_MAP.SPEED];
+scMovementLine(spd, direction);
+//x += lengthdir_x(spd, direction);
+//y += lengthdir_y(spd, direction);

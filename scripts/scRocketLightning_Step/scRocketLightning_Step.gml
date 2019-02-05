@@ -5,8 +5,7 @@ if (lightning[? "dis_travelled"] > lightning[? "dis_slowed"]) {
 }
 
 if (lightning[? "dis_travelled"] < lightning[? "dis_target"] && spd > 2) {
-	x += lengthdir_x(spd, direction);
-	y += lengthdir_y(spd, direction);
-	lightning[? "dis_travelled"] += spd;
+	scMovementLine(spd, direction);
+	lightning[? "dis_travelled"] += spd * owner.time_dialation;;
 } else
 	event_user(0);

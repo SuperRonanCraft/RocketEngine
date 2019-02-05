@@ -8,7 +8,7 @@ if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone) {
 	var offset = rocket_map[? ROCKET_MAP.OFFSET];
 	var xx = x - lengthdir_x(offset, direction), yy = y - lengthdir_y(offset, direction);
 	var ptrail = rocket_map[? ROCKET_MAP.PARTICLE_TRAIL];
-	part_type_orientation(ptrail, direction, direction, 0, 0, false);
+	part_type_orientation(ptrail, direction, direction, 0, 0, 0);
 	part_emitter_region(global.ParticleSystem1, global.Emitter1, xx + 1, xx - 1, yy + 1, yy - 1, ps_shape_ellipse, ps_distr_gaussian);
 	//Then bursts with the defined particle over at oParticleHandler
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, ptrail, rocket_map[? ROCKET_MAP.PARTICLE_AMT]);

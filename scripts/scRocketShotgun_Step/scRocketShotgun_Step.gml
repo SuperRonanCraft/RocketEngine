@@ -12,6 +12,5 @@ if (abs(lengthdir_x(abs(xstart - x), direction)) + abs(lengthdir_y(abs(ystart - 
 	event_user(0); //Explode this rocket
 } else {
 	var spd = rocket_map[? ROCKET_MAP.SPEED];
-	x += lengthdir_x(spd, direction);
-	y += lengthdir_y(spd, direction);
+	scMovementLine(spd, direction);
 }

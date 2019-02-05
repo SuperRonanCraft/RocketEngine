@@ -24,11 +24,15 @@ if (scBuffFind(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? BUFF_MAP.TIME]) {
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
 	if (clock % 2 == 0) {
+		var part = dsBuff[? BUFF_MAP.PARTICLE];
+		var amt = dsBuff[? BUFF_MAP.PARTICLE_AMT];
+		var xoffset = (owner.x - owner.bbox_right) / 2;
+		var yoffset = owner.bbox_bottom - owner.y;
 		//One particle for each foot!
-		part_particles_create(global.ParticleSystem1, owner.x - ((owner.x - owner.bbox_right)/2),
-			owner.y + (owner.bbox_bottom - owner.y), dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
-		part_particles_create(global.ParticleSystem1, owner.x + ((owner.x - owner.bbox_right)/2),
-			owner.y + (owner.bbox_bottom - owner.y), dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
+		part_particles_create(global.ParticleSystem1, owner.x - xoffset,
+			owner.y + yoffset, part, amt);
+		part_particles_create(global.ParticleSystem1, owner.x + xoffset,
+			owner.y + yoffset, part, amt);
 	}
 	//Also, increaase the clock. Essential for every buff.
 	dsBuff[? BUFF_MAP.CLOCK]++;

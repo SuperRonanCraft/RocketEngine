@@ -1,4 +1,5 @@
 /// @desc Move barrier
-if ((bbox_bottom >= RES_H && spd == abs(spd)) || (bbox_top <= 0 && sign(spd) == -1))
+var sp = spd / TIME_SPEED;
+if ((bbox_bottom >= RES_H && sp == abs(sp)) || (bbox_top <= 0 && sign(sp) == -1))
 	spd = -spd;
-y += spd;
+y += sp;

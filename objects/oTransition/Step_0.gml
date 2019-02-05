@@ -1,9 +1,9 @@
 /// @desc Progress Transitions
 if (mode == TRANS_MODE.OFF) exit;
 if (mode == TRANS_MODE.INTRO || mode == TRANS_MODE.UNPAUSE)
-	percent = max(0, percent - max((percent / 10), 0.0005));
+	percent = max(0, percent - max((percent / (10 * TIME_SPEED)), 0.0005));
 else
-	percent = min(1, percent +  max(((1 - percent) / 10), 0.01));
+	percent = min(1, percent +  max(((1 - percent) / (10 * TIME_SPEED)), 0.01));
 //What to do after animation is done either filling or leaving
 if (percent == 1 || percent == 0)
 	switch (mode) {

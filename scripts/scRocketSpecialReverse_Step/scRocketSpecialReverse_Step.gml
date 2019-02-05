@@ -20,7 +20,7 @@ var side = rev_map[? "side"];
 if (!teleported) {
 	if (teleporting) {
 		if (original_xscale != 0)
-			original_xscale = max(original_xscale - (0.2 * org_xscale), 0);
+			original_xscale = max(original_xscale - ((0.1 * owner.time_dialation) * org_xscale), 0);
 		else {
 			if (side)
 				x = RES_W - offset;
@@ -30,14 +30,15 @@ if (!teleported) {
 		}
 	} else {
 		var spd = rocket_map[? ROCKET_MAP.SPEED];
-		x += lengthdir_x(spd, direction);
-		y += lengthdir_y(spd, direction);
+		scMovementLine(spd, direction);
+		//x += lengthdir_x(spd, direction);
+		//y += lengthdir_y(spd, direction);
 		var mid = RES_W / 2;
 		if (x > mid - spd && x < mid + spd) event_user(0); //Destroy when in middle of screen
 	}
 } else {
 	if (original_xscale != org_xscale)
-		original_xscale = min(original_xscale + (0.2 * org_xscale), org_xscale);
+		original_xscale = min(original_xscale + ((0.1 * owner.time_dialation) * org_xscale), org_xscale);
 	else {
 		teleported = false;
 		teleporting = false;

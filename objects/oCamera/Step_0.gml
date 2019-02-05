@@ -11,8 +11,8 @@
 }*/
 
 //Update object
-x += (xTo - x) / 25;
-y += (yTo - y) / 25;
+x += (xTo - x) / cam_speed;
+y += (yTo - y) / cam_speed;
 
 //Center inside room
 x = clamp(x, view_w_half + buff, room_width - view_w_half - buff);
