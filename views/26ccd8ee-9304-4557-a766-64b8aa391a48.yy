@@ -9,7 +9,7 @@
         "28466398-ac55-4905-b63d-c861da53bae0"
     ],
     "filterType": "GMRoom",
-    "folderName": "Rumble",
+    "folderName": "Single",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

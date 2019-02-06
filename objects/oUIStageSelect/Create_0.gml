@@ -22,7 +22,7 @@ switch (room) {
 	case r1v1Select: mode = global.gamemodes[GAMEMODE.ONEVONE]; break;
 	case rvTargetSelect: mode = global.gamemodes[GAMEMODE.TARGETS]; break;
 	case rKnockOutSelect: mode = global.gamemodes[GAMEMODE.KNOCKOUT]; break;
-	case rRumbleSelect: mode = global.gamemodes[GAMEMODE.RUMBLE]; break;
+	case rSingleSelect: mode = global.gamemodes[GAMEMODE.SINGLE]; break;
 }
 
 //Setup ui
@@ -118,7 +118,7 @@ switch (type) {
 		menu_pages = [ds_menu_main, ds_modes];
 		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
-	case GAMEMODE.RUMBLE:
+	case GAMEMODE.SINGLE:
 		break;
 }
 

@@ -50,7 +50,7 @@
             "Key": "00731309-f644-4722-aedd-5d7ebb784efe",
             "Value": {
                 "id": "36293a86-e53e-411c-b668-af257bcf92ab",
-                "resourcePath": "rooms\\rRumbleSelect\\rRumbleSelect.yy",
+                "resourcePath": "rooms\\rSingleSelect\\rSingleSelect.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -618,7 +618,7 @@
             "Key": "28466398-ac55-4905-b63d-c861da53bae0",
             "Value": {
                 "id": "fa097950-2f60-46a1-b3a4-d86b1f5e9646",
-                "resourcePath": "rooms\\rRumbleStage2\\rRumbleStage2.yy",
+                "resourcePath": "rooms\\rSingleStage2\\rSingleStage2.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -2402,7 +2402,7 @@
             "Key": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f",
             "Value": {
                 "id": "ee5096e8-f838-447d-91b1-72b24c0c37d0",
-                "resourcePath": "objects\\oGMMRumble\\oGMMRumble.yy",
+                "resourcePath": "objects\\oGMMSingle\\oGMMSingle.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3786,7 +3786,7 @@
             "Key": "f9f10e60-74ad-4790-8a7b-9cc1e69ddcd0",
             "Value": {
                 "id": "73d2d617-8fb7-4e41-a761-90f8676aa1fa",
-                "resourcePath": "rooms\\rRumbleStage1\\rRumbleStage1.yy",
+                "resourcePath": "rooms\\rSingleStage1\\rSingleStage1.yy",
                 "resourceType": "GMRoom"
             }
         },

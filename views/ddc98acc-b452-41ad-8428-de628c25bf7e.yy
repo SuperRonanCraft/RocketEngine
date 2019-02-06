@@ -8,7 +8,7 @@
         "0d740bd0-f561-4b8f-9404-a954ae375dba"
     ],
     "filterType": "GMObject",
-    "folderName": "Rumble",
+    "folderName": "SinglePlayer",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
