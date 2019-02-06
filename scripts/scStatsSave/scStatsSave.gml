@@ -10,7 +10,7 @@ ini_open(scFileGetType(FILES.DATABASE)); //Open stream
 
 var map = oDataCollector.data_cache;
 var mode = string(gm);
-var sec = "Statistics." + mode;
+var sec = scCacheGetType(CACHE.SECTION) + mode;
 switch (gm) {
 	case GAMEMODE.TARGETS: //TARGETS GAMEMODE
 	//GAMEMODE
@@ -18,6 +18,18 @@ switch (gm) {
 		ini_write_real(sec, val, scr[0]);
 	//CACHE
 		map[? val + mode] = scr[0];
+		break;
+	case GAMEMODE.SINGLE: //TARGETS GAMEMODE
+	//GAMEMODE
+		var val = scCacheGetType(CACHE.GM_SINGLE_LEVEL); //LEVEL
+		ini_write_real(sec, val, scr[0]);
+		map[? val + mode] = scr[0]; //CACHE
+		val = scCacheGetType(CACHE.GM_SINGLE_CHECKPOINT); //CHECKPOINT
+		ini_write_real(sec, val, scr[1]);
+		map[? val + mode] = scr[1]; //CACHE
+		val = scCacheGetType(CACHE.GM_SINGLE_LIVES); //LIVES
+		ini_write_real(sec, val, scr[2]);
+		map[? val + mode] = scr[2]; //CACHE
 		break;
 	default:
 	// GAMEMODE

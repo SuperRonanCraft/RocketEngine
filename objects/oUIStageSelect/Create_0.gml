@@ -89,7 +89,7 @@ switch (type) {
 			["TIMER",			menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_targets_timer",	global.mode_targets_timer, "Become a time master"],
 			["ROCKET TYPE",		menu_element_type.shift,	rockets,	"mode_targets_rockettype",	global.mode_targets_rockettype, "Choose your weapon!"],
 			["PRESET",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Never Miss", "Time Expert"],	
-			[[0, 2, 1], [1, 3, 2], [2, 0, 5]], "mode_targets_preset", global.mode_targets_preset],
+				[[0, 2, 1], [1, 3, 2], [2, 0, 5]], "mode_targets_preset", global.mode_targets_preset],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];
@@ -98,9 +98,9 @@ switch (type) {
 	case GAMEMODE.KNOCKOUT:
 		ds_menu_main = scUICreateMenuPage(
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm, "NO WALL KNOCKBACK, BEWARE!"],
-			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
-			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
+			[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+			[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			["MODIFERS",	menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 
@@ -112,13 +112,26 @@ switch (type) {
 			["ULTIMATES",	menu_element_type.shift,	["Disabled", "x1 Charge", "x10 Charge"],	"mode_kb_ultimates",	global.mode_kb_ultimates, "The wombo combos!"],
 			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
 			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2, 3],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
-			[[2, 2, 1, 1], [4, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], "mode_kb_preset", global.mode_kb_preset],
+				[[2, 2, 1, 1], [4, 4, 2, 2, true], [2, 2, 2, 0, true], [0, 0, 1, 0, true]], "mode_kb_preset", global.mode_kb_preset],
 			["BACK",		menu_element_type.page_transfer,	menu_page.main],
 		);
 		menu_pages = [ds_menu_main, ds_modes];
 		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
 	case GAMEMODE.SINGLE:
+		if (scCacheGet(type, CACHE.GM_SINGLE_LIVES) <= 0)
+			ds_menu_main = scUICreateMenuPage(
+				["NEW GAME",	menu_element_type.script_runner,	scStageConfirm],
+				["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+			);
+		else
+			ds_menu_main = scUICreateMenuPage(
+				["CONTINUE",	menu_element_type.script_runner,	scStageConfirm],
+				["NEW GAME",	menu_element_type.script_runner,	scStageConfirm],
+				["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+			);
+		menu_pages = [ds_menu_main];
+		menu_pages_index = [menu_page.main];
 		break;
 }
 

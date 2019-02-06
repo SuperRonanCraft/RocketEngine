@@ -14,7 +14,7 @@
         "e6b3fce5-eee5-4b2c-b861-206baa29be0a"
     ],
     "filterType": "GMScript",
-    "folderName": "Scripts",
+    "folderName": "Menus",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

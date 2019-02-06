@@ -1,9 +1,5 @@
 /// @desc 
 
-//Count down
-if (wait_timer_current >= 0)
-	scDrawText(RES_W / 2, RES_H / 2, wait_timer_text, wait_timer_color, 
-		wait_timer_scale * 2, noone, noone, fa_middle, fa_middle);
 
 //Game end draw events
 if (endgame) {

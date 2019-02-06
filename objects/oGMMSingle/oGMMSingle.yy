@@ -46,7 +46,7 @@
             "value": "GAMEMODE.SINGLE"
         }
     ],
-    "parentObjectId": "908b93c2-a679-4239-a92c-162de84ac11e",
+    "parentObjectId": "a472ebbc-93a4-4ecd-88b4-3d7132101508",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
