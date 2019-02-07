@@ -96,7 +96,7 @@ global.mode_1v1_health = 2;
 global.mode_1v1_ultimates = 1;
 global.mode_1v1_timer = 2;
 global.mode_1v1_rockets = true;
-global.mode_1v1_singleplayer = true;
+global.mode_1v1_singleplayer = 0;
 //global.mode_1v1_lowgravity = false;
 
 global.mode_targets_preset = 1;
