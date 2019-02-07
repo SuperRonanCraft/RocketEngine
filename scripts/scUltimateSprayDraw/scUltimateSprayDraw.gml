@@ -11,7 +11,7 @@ for (var i = 0; i < 6; i++) {
 	var colliding = false;
 	while(!colliding) {
 		//var inst = collision_point(xx, yy, oWall, false, false);
-		if (/*(inst == noone || inst.object_index == oSeperator) &&*/ (xx > 0 && xx < RES_W && yy > 0 && yy < RES_H)) {
+		if (/*(inst == noone || inst.object_index == oSeperator) &&*/ (xx > 0 && xx < room_width && yy > 0 && yy < room_height)) {
 			xx += lengthdir_x(50, dir);
 			yy += lengthdir_y(50, dir);
 		} else

@@ -3,8 +3,7 @@
 var index = 0; //The current list index, not the current id
 for (var i = index; i < ds_list_size(tile_list); i++) {
 	var map = tile_list[| index];
-	var timer = map[? "timer"]; //Get the timer
-	if (timer <= 0) {
+	if (map[? "timer"] <= 0) { //Change when timer runs out
 		var lay_id = layer_get_id("Tiles");
 		var map_id = layer_tilemap_get_id(lay_id);
 		var mx = map[? "x"];
@@ -15,7 +14,7 @@ for (var i = index; i < ds_list_size(tile_list); i++) {
 		ds_map_destroy(map); //Delete the map from memory
 		ds_list_delete(tile_list, index); //Remove the tile from the list
 	} else {
-		map[? "timer"] = timer - 1; //Lower the timer
+		map[? "timer"]--; //Lower the timer
 		index++;
 	}
 }

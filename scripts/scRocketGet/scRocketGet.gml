@@ -11,6 +11,7 @@ map[? ROCKET_MAP.TYPE] = roc;
 switch (roc) {
 	case ROCKET.NONE:
 		map[? ROCKET_MAP.DAMAGE] = 0;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NONE;
 		break;
 		
 	case ROCKET.DEFAULT:

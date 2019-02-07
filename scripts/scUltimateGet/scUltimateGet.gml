@@ -17,6 +17,9 @@ ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = -1; //The object to spawn
 ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = noone; //The script to execute when casted
 
 switch (type) {
+	case ULTIMATE.NONE: //Huge af cloned rocket
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = noone;
+		break;
 	case ULTIMATE.DEFAULT: //Huge af cloned rocket
 		ds_map[? ULTIMATE_MAP.NAME] = "Mr.Huge!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateDefault;
@@ -105,7 +108,7 @@ switch (type) {
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
-	
+	NONE,
 	//PUT LAST
 	LENGTH
 }

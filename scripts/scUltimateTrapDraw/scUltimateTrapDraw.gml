@@ -5,7 +5,7 @@ for (var i = 0; i < 3; i++) {
 	var grv = 1.6;
 	while (!colliding) {
 		var inst = instance_place(xx, yy, oWall);
-		if ((inst != noone && inst.object_index != oSeperator) || !(xx > 0 && xx < RES_W && yy > 0 && yy < RES_H)) {
+		if ((inst != noone && inst.object_index != oSeperator) || !(xx > 0 && xx < room_width && yy > 0 && yy < room_height)) {
 			colliding = true;
 		} else {
 			xx += hspd

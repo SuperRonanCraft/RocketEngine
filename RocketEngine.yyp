@@ -178,7 +178,7 @@
             "Key": "06531bb4-4a0f-4beb-957d-0b1fd473e5c9",
             "Value": {
                 "id": "fe13898e-22b6-45ce-b82a-77ea868c6f18",
-                "resourcePath": "sprites\\sWallTile\\sWallTile.yy",
+                "resourcePath": "sprites\\sTile_Wall\\sTile_Wall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -546,7 +546,7 @@
             "Key": "2346ce06-a649-4f93-847f-7133ce3e9d82",
             "Value": {
                 "id": "ea6c5904-83a6-47a9-9f6d-dc28c46ff7c6",
-                "resourcePath": "sprites\\sWallTileHit\\sWallTileHit.yy",
+                "resourcePath": "sprites\\sTile_WallHit\\sTile_WallHit.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -850,7 +850,7 @@
             "Key": "3456ef42-758a-42de-b772-6edd088d1d58",
             "Value": {
                 "id": "f6e703eb-c07a-4da4-b9ab-9faac120be32",
-                "resourcePath": "sprites\\bg1v1rm1\\bg1v1rm1.yy",
+                "resourcePath": "sprites\\bg_Main\\bg_Main.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1292,6 +1292,14 @@
                 "id": "c4643576-e21f-4eb6-8921-ba7a29225a7f",
                 "resourcePath": "views\\543aace0-fa70-4ead-82be-ad3ffd9cf18c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "544d95f8-b592-4d32-8210-70f3aab8a4db",
+            "Value": {
+                "id": "88fd1fe0-f57e-4b95-b903-55164fd85697",
+                "resourcePath": "sprites\\sTile_Grass\\sTile_Grass.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1903,6 +1911,14 @@
             }
         },
         {
+            "Key": "7e106719-76bf-4e89-a99a-acc3aed22fbc",
+            "Value": {
+                "id": "a268236b-898a-4cf8-88c9-e6e4cd63d59d",
+                "resourcePath": "sprites\\sTile_GrassHit\\sTile_GrassHit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7eec10ae-de29-493a-afc4-60ffa416df7d",
             "Value": {
                 "id": "c19bb927-f725-49ce-94ee-233bc9ebde71",
@@ -2324,6 +2340,14 @@
                 "id": "17276d39-7813-4b62-ad08-cec02c189322",
                 "resourcePath": "sprites\\s_abilityIcon_ReverseGravity\\s_abilityIcon_ReverseGravity.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "94ae7b75-5041-4120-bd68-3132b4015c6c",
+            "Value": {
+                "id": "b6b684a0-d5d2-4966-95c9-71c2979f4fef",
+                "resourcePath": "tilesets\\tTiles\\tTiles.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -3932,6 +3956,14 @@
                 "id": "9a47749f-5acb-40b4-908f-f95a1bd2b8a2",
                 "resourcePath": "views\\fedb5019-57a5-4a30-ae5a-b41dc25e535b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ff5453fc-7706-4518-8922-7e18f1f2fe48",
+            "Value": {
+                "id": "e3ada884-e38c-4cc8-b0de-74157a999e49",
+                "resourcePath": "objects\\oCameraFollow\\oCameraFollow.yy",
+                "resourceType": "GMObject"
             }
         },
         {

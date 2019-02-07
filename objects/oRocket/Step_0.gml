@@ -6,8 +6,6 @@ if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 else {
 	var spd = rocket_map[? ROCKET_MAP.SPEED];
 	scMovementLine(spd, direction);
-	//x += lengthdir_x(spd, direction);
-	//y += lengthdir_y(spd, direction);
 }
 
 if (timer > 0)
@@ -15,7 +13,7 @@ if (timer > 0)
 else if (timer == 0)
 	event_user(0);
 
-if (x > RES_W + 20 || x < -20 || y > RES_H || y < -20)
+if (x > room_width + 20 || x < -20 || y > room_height || y < -20)
 	event_user(0);
 	
 if (destroy)

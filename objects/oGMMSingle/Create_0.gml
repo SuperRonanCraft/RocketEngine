@@ -2,7 +2,8 @@
 
 global.gamemode = gamemode;
 
-instance_create_depth(0, 0, depth, oCamera);
+with (instance_create_depth(0, 0, depth, oCameraFollow))
+	follow = oPlayer;
 
 with (oMusic)
 	event_user(1); //Start a new song

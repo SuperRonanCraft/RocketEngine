@@ -13,20 +13,20 @@ for (var hei = 0; hei < h; hei++) {
 	var yval = yy + (tile_h * hei);
 	for (var len = 0; len < l; len++) {
 		var xval = xx + (tile_l * len);
-		if (collision_point(xval, yval, oWall, false, true)) {
+		if (collision_point(xval, yval, oWall, false, true)) { //Only if touching a wall
 			with (oEnvironmentHandler) {
 				var mx = tilemap_get_cell_x_at_pixel(map_id, xval, yval);
 				var my = tilemap_get_cell_y_at_pixel(map_id, xval, yval);
 				var data = tilemap_get(map_id, mx, my);
 				var index = tile_get_index(data);
-				if (tile_get_empty(data)) { //Skip if already blank
+				if (tile_get_empty(data)) { //Skip if already damaged
 					for (var i = 0; i < ds_list_size(tile_list); i++) {
 						var map = tile_list[| i]
 						if (map[? "x"] == mx && map[? "y"] == my) {
 							map[? "timer"] = tile_timer + irandom_range(tile_timer_randomize, -tile_timer_randomize); break;
 						}
 					}
-				} else {
+				} else { //Reset the timer
 					var map = ds_map_create();
 					ds_map_add(map, "x", mx);
 					ds_map_add(map, "y", my);

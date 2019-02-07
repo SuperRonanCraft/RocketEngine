@@ -49,7 +49,7 @@ enum GAMEMODE {
 global.gamemodes[GAMEMODE.ONEVONE] = "One v One";
 global.gamemodes[GAMEMODE.TARGETS] = "Targets";
 global.gamemodes[GAMEMODE.KNOCKOUT] = "Knockout";
-global.gamemodes[GAMEMODE.SINGLE] = "Single";
+global.gamemodes[GAMEMODE.SINGLE] = "Single Player";
 //Set when a select room is activated
 global.gamemode = noone;
 //Gamemode rooms
