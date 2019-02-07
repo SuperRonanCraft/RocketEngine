@@ -7,6 +7,7 @@ switch (argument0) {
 	case CACHE.GM_SINGLE_CHECKPOINT: val = "single_checkpoint_"; break;
 	case CACHE.GM_SINGLE_LIVES: val = "single_lives_"; break;
 	case CACHE.GM_SINGLE_ROCKET: val = "single_rocket_"; break;
+	case CACHE.GM_SINGLE_NEWGAME: val = "single_newgame_"; break;
 	case CACHE.GM_GENERAL_P1_WINS: val = "p1_wins_"; break;
 	case CACHE.GM_GENERAL_P2_WINS: val = "p2_wins_"; break;
 	case CACHE.ROCKETS_SHOT_P1: val = "rockets_shot_p1_"; break;
@@ -26,6 +27,7 @@ enum CACHE {
 	GM_SINGLE_CHECKPOINT,
 	GM_SINGLE_LIVES,
 	GM_SINGLE_ROCKET,
+	GM_SINGLE_NEWGAME,
 	GM_GENERAL_P1_WINS,
 	GM_GENERAL_P2_WINS,
 	//PLAYER

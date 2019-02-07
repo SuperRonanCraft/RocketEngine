@@ -1,5 +1,5 @@
 global.vol_master = 0;
 scUIChangeVolume(0, 0);
-room_goto(r1v1Select);
+room_goto(rSingleSelect);
 if (global.pause)
 	event_user(1);

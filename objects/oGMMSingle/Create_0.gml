@@ -21,6 +21,16 @@ kick_execute = true; //Leave the game after timer reaches 0
 player_checkpoint = noone;
 player_hp = 0;
 player_rocket = noone;
+
+if (!scCacheGet(gamemode, CACHE.GM_SINGLE_NEWGAME)) {
+	with (oPlayer) {
+		hp = scCacheGet(gamemode, CACHE.GM_SINGLE_LIVES);
+		scRocketChange(scCacheGet(gamemode, CACHE.GM_SINGLE_ROCKET))
+	}
+}
+
+scStatsSet(gamemode, [CACHE.GM_SINGLE_NEWGAME], [false]);
+	
 	
 //--------------
 //User Interface

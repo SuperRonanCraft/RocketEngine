@@ -240,6 +240,20 @@
             "value": "0",
             "varName": "shoot_face",
             "varType": 3
+        },
+        {
+            "id": "164ce779-eb0f-4bb9-afbd-132562c86591",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "player_aimode",
+            "varType": 3
         }
     ],
     "solid": false,
