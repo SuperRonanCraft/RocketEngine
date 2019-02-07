@@ -17,6 +17,10 @@ kick_timer = 10; //Time is seconds
 kick_timer_abs = kick_timer * room_speed; //Absolute timer value
 kick_timer_display = 3; //Display timer after this index is met
 kick_execute = true; //Leave the game after timer reaches 0
+
+player_checkpoint = noone;
+player_hp = 0;
+player_rocket = noone;
 	
 //--------------
 //User Interface

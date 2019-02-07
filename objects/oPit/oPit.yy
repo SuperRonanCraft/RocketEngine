@@ -47,14 +47,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        {
-            "id": "bdf00649-e535-43cd-a60a-f159278eb2ea",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
-            "propertyId": "7f74fcf1-195e-4ea0-b1a3-de4b9e172f31",
-            "value": "2"
-        }
+        
     ],
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
@@ -71,62 +64,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "513e48fd-ee51-433f-b39f-14ecf2d16a1d",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "hsp",
-            "varType": 0
-        },
-        {
-            "id": "ac59447b-c344-4518-ab32-3010ddc1fdb0",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "vsp",
-            "varType": 0
-        },
-        {
-            "id": "840f9cc7-f67c-4e56-9bc3-4295ce9b780a",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "x_max",
-            "varType": 0
-        },
-        {
-            "id": "b594801e-1262-49c2-b31e-202c09c8437b",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "y_max",
-            "varType": 0
-        }
+        
     ],
     "solid": false,
     "spriteId": "310a2ec4-89ca-426d-b097-393285030a8e",

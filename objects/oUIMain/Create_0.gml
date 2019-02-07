@@ -8,10 +8,10 @@ ds_menu_main = scUICreateMenuPage(
 );
 
 ds_gamemodes = scUICreateMenuPage(
+	[global.gamemodes[GAMEMODE.SINGLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.SINGLE],		"&cBETA, DO NOT PLAY!", true],
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player", true],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!", true],
 	//[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs...", true],
-	[global.gamemodes[GAMEMODE.SINGLE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.SINGLE],		"&cBETA, DO NOT PLAY!", true],
 	//[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],		"Duke Nuke'm!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );

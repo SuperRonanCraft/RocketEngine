@@ -8,3 +8,8 @@ if (endgame) {
 	if (kick_timer_abs <= 0 && kick_execute)
 		SlideTransition(TRANS_MODE.GOTO, global.gamemodeSRoom[gamemode]);
 }
+
+with (oPlayer) {
+	other.player_hp = hp;
+	other.player_rocket = rocket_map[? ROCKET_MAP.TYPE];
+}

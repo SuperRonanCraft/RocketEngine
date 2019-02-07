@@ -1,5 +1,6 @@
 /// @desc touching a player
 
+show_debug_message("TOUCHING PLAYER!");
 with (other)
 	if (hp > 0) {
 		scDamageShootable(other, false, false, 1, true);

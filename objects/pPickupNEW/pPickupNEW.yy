@@ -52,9 +52,36 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "9ed819fc-a094-4c12-aab4-b607fe04ea7a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "fixed",
+            "varType": 3
+        },
+        {
+            "id": "0f3a183b-df72-4716-a298-00411a45bff6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "ROCKET.NONE",
+            "varName": "fixed_item",
+            "varType": 4
+        }
     ],
     "solid": false,
-    "spriteId": "680f5faa-5388-40f2-b6f9-27e133690728",
+    "spriteId": "f47996e4-9017-4225-b470-d2a63f9736da",
     "visible": true
 }
