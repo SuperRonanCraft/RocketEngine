@@ -11,7 +11,8 @@
         "96f4fa4e-a373-4236-8a98-48377515eb94",
         "784a4a93-ac57-4b98-b80c-e12207fda320",
         "2c9b5621-953f-420c-a60b-cbf1a1cab1ec",
-        "68ee4ed2-cf73-4d63-9aa7-9a1cfe08aa62"
+        "68ee4ed2-cf73-4d63-9aa7-9a1cfe08aa62",
+        "2f5c9d8e-f4e9-4949-9337-f1d473576556"
     ],
     "filterType": "GMObject",
     "folderName": "Triggers",

@@ -23,8 +23,10 @@ with (oPlayer) {
 	hp_original = hp;
 	scStageUltimateStart(global.mode_1v1_ultimates);
 	rockets_enabled = global.mode_1v1_rockets;
-	if (team == TEAM.RIGHT)
+	if (team == TEAM.RIGHT){
 		player_aimode = global.mode_1v1_singleplayer;
+		scStartAI();
+	}
 	//if (global.mode_1v1_lowgravity)
 	//	grv /= 2;
 }

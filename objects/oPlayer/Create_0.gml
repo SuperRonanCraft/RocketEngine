@@ -65,5 +65,8 @@ recoilMAX = 0;
 //If jumped at right time
 teched = false;
 
+//AI Control
+aiBrain = noone;
+
 //Cheat mode buff id
 buffs_cur = -1;

@@ -4,6 +4,10 @@ if (ult_charge < ult_charge_max) {scUltimateAddCharge(DAMAGETYPE.TIME); exit;} /
 
 var key_shoot = scKeybindsGet(KEYBIND_TYPE.ULT); //Holding both left and right keys to cast ult
 
+if(player_aimode == 1 && aiBrain != noone){
+	key_shoot = aiBrain.AIUlt;	
+}
+
 var shoot = false;
 
 if (key_shoot) { //Shoot key being held down
