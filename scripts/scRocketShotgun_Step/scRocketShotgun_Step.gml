@@ -2,7 +2,7 @@ if (abs(lengthdir_x(abs(xstart - x), direction)) + abs(lengthdir_y(abs(ystart - 
 	var dir = direction - 15;
 	for (var i = 0; i < 4; i++) {
 		var rocket = scSpawnRocket(x, y, depth, dir, owner, rocket_map, [ROCKET_MAP.ROCKET_STEP, ROCKET_MAP.SCALE,
-			ROCKET_MAP.OFFSET], [noone, 0.5, 15]);
+			ROCKET_MAP.OFFSET, ROCKET_MAP.TIMER], [noone, 0.5, 15, room_speed / 2]);
 		rocket.size = 0.5;
 		var spd = 10;
 		rocket.x += lengthdir_x(spd, dir);

@@ -103,11 +103,17 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLightning;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLightningDraw;
 		break;
+	case ULTIMATE.SLOWMO:
+		ds_map[? ULTIMATE_MAP.NAME] = "Bullet time!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSlowmo;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
+	SLOWMO,
 	NONE,
 	//PUT LAST
 	LENGTH

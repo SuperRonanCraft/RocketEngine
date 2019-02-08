@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "059676af-adae-4143-9efd-587ae5ec9fb8",
+            "Value": {
+                "id": "05026cec-620c-4c67-ad40-e058acf82d58",
+                "resourcePath": "scripts\\scUltimateSlowmo\\scUltimateSlowmo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "05ab479d-09ff-4f4e-8da7-1e019610271c",
             "Value": {
                 "id": "b3ab3f09-86d9-40cc-b7a3-58108ac49dca",
@@ -604,6 +612,14 @@
                 "id": "61b120ab-f3e2-42c2-a8bb-28aadc2c8f13",
                 "resourcePath": "views\\26ccd8ee-9304-4557-a766-64b8aa391a48.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "26e8ef09-b1aa-487f-941e-ec53bbe4b5bd",
+            "Value": {
+                "id": "22796a10-f226-4ca6-a5c2-9c53a95429c2",
+                "resourcePath": "sprites\\s_pslowmo\\s_pslowmo.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1187,6 +1203,14 @@
             "Value": {
                 "id": "be8ddf78-203a-4379-8852-55183aa54535",
                 "resourcePath": "scripts\\scKnockbackBounce\\scKnockbackBounce.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4dd4d129-5280-42bb-a6e7-786d76f8739a",
+            "Value": {
+                "id": "9d5b8fcc-6acf-4dd6-a5c9-956efc10bdbc",
+                "resourcePath": "scripts\\scBuffSlowmo\\scBuffSlowmo.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3623,6 +3647,14 @@
             }
         },
         {
+            "Key": "e6069ad3-9013-4f4b-9794-4674055a4c57",
+            "Value": {
+                "id": "4265d4a7-b253-4755-aff1-0a8fe23e72f9",
+                "resourcePath": "sprites\\s_abilityIcon_Slowmo\\s_abilityIcon_Slowmo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e6b3fce5-eee5-4b2c-b861-206baa29be0a",
             "Value": {
                 "id": "a3ab0ace-f508-416c-9c22-eecff71689d3",
@@ -4079,6 +4111,7 @@
         "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",
         "af655ced-6f3f-4d40-bbd3-94dbbaa0a427",
+        "059676af-adae-4143-9efd-587ae5ec9fb8",
         "5a5d5e85-c4ef-4c54-8a0f-bbb92df4a1f9",
         "c07d0565-8664-4ade-bb74-991c3b5bd62e",
         "9402c50c-2b68-481f-aeb5-ba4a832f4c25",
@@ -4119,6 +4152,7 @@
         "e787a68b-3070-49de-b812-e18b6a3a030e",
         "e02a2303-a556-4d20-ab08-e9a2978b49cf",
         "fc395cba-a75e-4ca3-93db-767b11addd98",
+        "4dd4d129-5280-42bb-a6e7-786d76f8739a",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

@@ -36,7 +36,7 @@ switch (roc) {
 		map[? ROCKET_MAP.RELOAD_TIME] = 80;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 3;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLOWMO;
 		break;
 		
 	case ROCKET.HOMING:
@@ -309,7 +309,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketShotgun_Step;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HUGEEXPLOSION;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
 		break;
 }
 

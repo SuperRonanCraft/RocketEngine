@@ -139,6 +139,17 @@ switch (buff) {
 		ds_map[? "duration"] = 30; //Amount of time to apply force
 		ds_map[? "current_duration"] = 0;
 		break;
+	case BUFFTYPE.SLOWMO:
+		ds_map[? BUFF_MAP.NAME] = "Slowmo";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Another Dimension!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.SLOWMO;
+		ds_map[? BUFF_MAP.STEP] = scBuffSlowmo;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLOWMO];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLOWMO];
+		ds_map[? BUFF_MAP.GOOD] = false;
+		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
+		ds_map[? "dialation"] = 0.5;
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -155,13 +166,13 @@ enum BUFF_ICON {
 	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
 	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity,
 	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge, BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
-	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots
+	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots, SLOWMO = s_abilityIcon_Slowmo
 }
 
 enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
-	REVERSEGRAVITY, ROCKETBOOTS,
+	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO,
 	
 	//PUT LAST
 	LENGHT
