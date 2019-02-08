@@ -1,8 +1,8 @@
 /// @desc Tips object has been spawned
 
 enum tip_element {
-	sprite, //Display a sprite, title and text
-	sprite_buff,
+	sprite, //Display a sprite, title and desc
+	sprite_buff, //Displa a buff sprite, title and desc
 	text //Just text
 }
 

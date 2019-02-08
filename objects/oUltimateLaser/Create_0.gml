@@ -6,7 +6,7 @@ laser_uptime = 6 * room_speed; //Amount of time we should stay up (fade in time 
 laser_width = 2; //How tall the laser should be
 laser_alpha = 0.5; //Transparency of beam
 laser_damage_cooldown = room_speed / 2; //How much damage per second
-laser_grow_speed = 0.075 / (room_speed / 30);
+laser_grow_speed = 0.075 / TIME_SPEED;
 
 //Saved values
 width_cur = 0; //Current width

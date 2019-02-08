@@ -28,7 +28,7 @@ if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 		homing[? "clock"] = 0;
 		homing[? "locX"] = xx + irandom_range(-30, 30);
 		homing[? "locY"] = yy + irandom_range(-30, 30);
-		rocket_map[? ROCKET_MAP.SPEED] = 0.1;
+		rocket_map[? ROCKET_MAP.SPEED] = 0.1 / TIME_SPEED;
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	
