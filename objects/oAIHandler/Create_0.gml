@@ -10,8 +10,8 @@ AIJump = false;
 AIShoot = false;
 AIUlt = false;
 
-enum ACTIONS{
-	RIGHT,LEFT,JUMP,SHOOT,ULT
+enum ACTIONS {
+	RIGHT, LEFT, JUMP, SHOOT, ULT
 }
 
 //Random action
@@ -21,4 +21,4 @@ randDirection = ACTIONS.RIGHT;
 ultReady = false;
 
 //Timer to react
-timer = irandom_range(120,300);
+timer = irandom_range(120, 300);

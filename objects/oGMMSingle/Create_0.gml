@@ -1,33 +1,28 @@
 /// @desc Single Player gamemode started
 
-global.gamemode = gamemode;
+event_inherited();
 
 with (instance_create_depth(0, 0, depth, oCameraFollow))
 	follow = oPlayer;
 
-with (oMusic)
-	event_user(1); //Start a new song
+global.play = true;
 
-//Endgame
-endgame = false;
-endgame_delay = 2 * room_speed; //Delay between ending the game and starting the end_game screen
-
-//Kick back timer
-kick_timer = 10; //Time is seconds
-kick_timer_abs = kick_timer * room_speed; //Absolute timer value
-kick_timer_display = 3; //Display timer after this index is met
-kick_execute = true; //Leave the game after timer reaches 0
-
-player_checkpoint = noone;
+player_checkpoint = 0; //Index of checkpoint
 player_hp = 0;
 player_rocket = noone;
 
-if (!scCacheGet(gamemode, CACHE.GM_SINGLE_NEWGAME)) {
+if (!scCacheGet(gamemode, CACHE.GM_SINGLE_NEWGAME))
 	with (oPlayer) {
-		hp = scCacheGet(gamemode, CACHE.GM_SINGLE_LIVES);
-		scRocketChange(scCacheGet(gamemode, CACHE.GM_SINGLE_ROCKET))
+		hp = scCacheGet(other.gamemode, CACHE.GM_SINGLE_LIVES);
+		scRocketChange(scCacheGet(other.gamemode, CACHE.GM_SINGLE_ROCKET));
+		var check_point_id = scCacheGet(other.gamemode, CACHE.GM_SINGLE_CHECKPOINT);
+		var check_point = scCheckpointGet(check_point_id);
+		if (check_point != noone) {
+			x = check_point.x;
+			y = check_point.y - 100;
+			other.player_checkpoint = check_point_id;
+		}
 	}
-}
 
 scStatsSet(gamemode, [CACHE.GM_SINGLE_NEWGAME], [false]);
 	
@@ -35,8 +30,6 @@ scStatsSet(gamemode, [CACHE.GM_SINGLE_NEWGAME], [false]);
 //--------------
 //User Interface
 //--------------
-
-event_inherited();
 
 ds_menu_main = scUICreateMenuPage(
 	["RESTART",		menu_element_type.script_runner,	scStageRestart, "Play again!"],

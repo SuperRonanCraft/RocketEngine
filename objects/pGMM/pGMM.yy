@@ -97,7 +97,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "30c67dd4-3558-4028-9cd1-77b2cd963526",
+    "parentObjectId": "a472ebbc-93a4-4ecd-88b4-3d7132101508",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -113,20 +113,6 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "1c5d3a17-e5d0-4efa-b0e6-a231a2ad9a25",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "True",
-            "varName": "enabled",
-            "varType": 3
-        },
-        {
             "id": "78b3389c-ec6a-456a-bc80-ddd7076a3c44",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -139,6 +125,20 @@
             "value": "GAMEMODE.ONEVONE",
             "varName": "gamemode",
             "varType": 4
+        },
+        {
+            "id": "63572cc3-5e2b-4695-a522-9edef1db45e3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "timer_enabled",
+            "varType": 3
         }
     ],
     "solid": false,

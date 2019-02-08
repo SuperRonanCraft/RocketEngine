@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "144982b9-d541-4c5e-8c52-3c3391bb7d17",
+            "Value": {
+                "id": "45ce3227-e946-4143-8678-b9471ccab518",
+                "resourcePath": "objects\\oCheckpoint\\oCheckpoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1449a1da-aeb4-44a1-b379-0bde0e8cdbd7",
             "Value": {
                 "id": "b2f0da31-788d-4cc7-a2e6-aecbaeb93428",
@@ -3735,6 +3743,14 @@
             }
         },
         {
+            "Key": "eba4ce8a-0c7b-4168-a7fd-e0cd7a8a9cde",
+            "Value": {
+                "id": "4ffa41bc-4381-477d-93bc-75e8fd580fa4",
+                "resourcePath": "sprites\\sCheckpoint\\sCheckpoint.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ebf3cc05-43e2-430b-b897-16b4cc657735",
             "Value": {
                 "id": "67af58e8-f566-43ef-8f4e-c73876605766",
@@ -3932,6 +3948,14 @@
                 "id": "06a7a069-0d73-4e7a-830d-9b8f747a72c7",
                 "resourcePath": "rooms\\rMenu\\rMenu.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "fa5855a1-186b-4e43-aefc-704bba09dcbb",
+            "Value": {
+                "id": "4b37aee0-6d4e-4869-a3e6-ce8bb6591d2a",
+                "resourcePath": "scripts\\scCheckpointGet\\scCheckpointGet.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4209,6 +4233,7 @@
         "8435c761-8278-4207-b431-1562529463c0",
         "19455d7d-472c-41ce-a375-87e79c0b8fc9",
         "54391887-2485-456f-8f52-d226cc98a8e9",
+        "fa5855a1-186b-4e43-aefc-704bba09dcbb",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",

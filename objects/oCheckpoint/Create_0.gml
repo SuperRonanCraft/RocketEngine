@@ -1,0 +1,3 @@
+/// @desc Checkpoint
+
+triggered = false;

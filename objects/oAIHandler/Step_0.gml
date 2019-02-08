@@ -1,5 +1,4 @@
-/// @description  
-
+/// @desc AI Ninjas 
 
 //Choose a direction to randomly walk in
 switch (randDirection) {
@@ -20,46 +19,42 @@ switch (randDirection) {
 }
 
 //If you stand, have a 'chance' to jump
-if(player.standing){
-	if(timer%irandom_range(2,70) == 0){
+if (player.standing) {
+	if (timer % irandom_range(2, 70) == 0) {
 		AIJump = true;	
 	}
-}
-else{
+} else {
 	AIJump = false;	
 }
 
 //As long as you live, shoot!
-if(!ultReady && player.alive){
+if (!ultReady && player.alive) {
 	AIShoot = true;	
-}
-else{
+} else {
 	AIShoot = false;	
 }
 
 //If ult is ready, fire IMMEDIATELY
-if(player.ult_charge >= player.ult_charge_max){
+if (player.ult_charge >= player.ult_charge_max) {
 	ultReady = true;
 	AIRight = true;
 	AILeft = true;
-}
-else{
+} else {
 	ultReady = false;	
 }
 
 AIUlt = ultReady;
 
 //Reset timer
-if(timer < 0){
-	timer = irandom_range(30,120);	
+if (timer < 0) {
+	timer = irandom_range(30, 120);	
 	
-	if(!ultReady)
-		randDirection = irandom_range(0,1);
+	if (!ultReady)
+		randDirection = irandom_range(0, 1);
 	else
 		randDirection = noone;	
 	
-}
-else{
+} else {
 	timer--;	
 }
 

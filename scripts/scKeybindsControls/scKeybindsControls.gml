@@ -10,13 +10,12 @@ if (canControl) {
 	var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
 
 	//AI KEYBINDS
-	if(player_aimode == 1 && aiBrain != noone){
+	if (player_aimode && aiBrain != noone) {
 		key_left = aiBrain.AILeft;
 		key_right = aiBrain.AIRight;
 		key_jump = aiBrain.AIJump;
 		key_shoot = aiBrain.AIShoot;
 	}
-
 
 	//Horizontal
 	var move = (key_right - key_left) * keydirection;

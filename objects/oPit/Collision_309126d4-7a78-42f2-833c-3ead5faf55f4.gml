@@ -1,11 +1,18 @@
 /// @desc touching a player
 
-show_debug_message("TOUCHING PLAYER!");
 with (other)
 	if (hp > 0) {
 		scDamageShootable(other, false, false, 1, true);
 		if (hp > 0) {
-			x = xstart; y = ystart; 
+			var xx = xstart, yy = ystart;
+			with (oGMMSingle) {
+				var check_point = scCheckpointGet(player_checkpoint);
+				if (check_point != noone) {
+					xx = check_point.x;
+					yy = check_point.y;
+				}
+			}
+			x = xx; y = yy;
 			hsp_knockback = 0;
 			vsp_knockback = 0;
 			vsp_move = 0;

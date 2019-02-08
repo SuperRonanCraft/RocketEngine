@@ -25,16 +25,6 @@
             "m_owner": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f"
         },
         {
-            "id": "1eea5898-8e1b-4831-af1c-8a2e8695a92f",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "9ccd1603-82d3-4aaf-a403-3fd5c2e44b9f"
-        },
-        {
             "id": "08cd6e5e-e51d-4e2e-9e23-641eebaac6db",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -54,9 +44,17 @@
             "objectId": "908b93c2-a679-4239-a92c-162de84ac11e",
             "propertyId": "78b3389c-ec6a-456a-bc80-ddd7076a3c44",
             "value": "GAMEMODE.SINGLE"
+        },
+        {
+            "id": "4a05b23f-5546-4286-a781-f0b531256b07",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "908b93c2-a679-4239-a92c-162de84ac11e",
+            "propertyId": "63572cc3-5e2b-4695-a522-9edef1db45e3",
+            "value": "False"
         }
     ],
-    "parentObjectId": "a472ebbc-93a4-4ecd-88b4-3d7132101508",
+    "parentObjectId": "908b93c2-a679-4239-a92c-162de84ac11e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -71,20 +69,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "95615f4f-8977-4eb6-aded-6554f19b184b",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "GAMEMODE.SINGLE",
-            "varName": "gamemode",
-            "varType": 4
-        }
+        
     ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",
