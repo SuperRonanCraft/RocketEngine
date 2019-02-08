@@ -1,9 +1,0 @@
-/// @desc Initialize
-value = 1;
-max_value = 1;
-selected = false;
-sound_played = true;
-sprite = sprite_index;
-height = sprite_height;
-width = sprite_width;
-sprite_index = -1;

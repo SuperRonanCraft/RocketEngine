@@ -11,9 +11,7 @@
         "97c654c9-dda0-4c9f-862a-39f5aa1191fc",
         "a884c73d-c22c-4659-baec-9bacf82b034a",
         "ff5453fc-7706-4518-8922-7e18f1f2fe48",
-        "533240ff-5565-41cc-ac8f-63b214c10180",
-        "c9db60d0-710e-4892-9a89-02f5195caf98",
-        "2c28dadb-53b8-4739-9267-93d099dd8ddd"
+        "533240ff-5565-41cc-ac8f-63b214c10180"
     ],
     "filterType": "GMObject",
     "folderName": "UserInterface",

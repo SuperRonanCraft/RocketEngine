@@ -30,7 +30,7 @@ switch (state) {
 
 //draw sprite normally
 if (!overwrite) {
-	animationVar += image_speed;
+	animationVar += image_speed * time_dialation;
 	var sprite = currentSprite;
 	var sprite_img = floor(animationVar);
 	draw_sprite_ext(sprite, sprite_img, x, y, 

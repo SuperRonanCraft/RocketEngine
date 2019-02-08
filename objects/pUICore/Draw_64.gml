@@ -166,21 +166,21 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		case menu_element_type.controls: //Key controls page
 			scMenuControls(); break;
 		case menu_element_type.stats: //Stats page
-			var p1 = "Player 1", p2 = "Player 2";
 			var scale = scale_element;
-			if (i == 0)
-				scDrawText(rtx, rty - (y_buffer / 2), p1 + "    " + p2, color_element_special, 0.5, noone, noone, fa_left);
-			var midp1 = rtx + (string_width(p1) / 4);
-			var midp2 = rtx + ((string_width(p1 + "    ") / 2) + (string_width(p2) / 4));
 			var map = oDataCollector.data_cache;
 			var mode = ds_grid[# 2, i];
+			var c = c_white;
 			switch (mode) {
 				case GAMEMODE.TARGETS:
-					scDrawText((midp1 + midp2) / 2, rty, scStatsGetNumerated(mode, noone), c_red, scale, noone, noone, fa_middle);
+					scDrawText(rtx, rty, "High Score: " + string(scCacheGet(mode, CACHE.GM_TARGETS_POINTS)), c, scale, noone, noone, fa_left);
+					break;
+				case GAMEMODE.SINGLE:
+					scDrawText(rtx, rty, "Checkpoint: " + string(scCacheGet(mode, CACHE.GM_SINGLE_CHECKPOINT)), c, scale, noone, noone, fa_left);
 					break;
 				default:
-					scDrawText(midp1, rty, scStatsGetNumerated(mode, 1), c_red, scale, noone, noone, fa_middle);
-					scDrawText(midp2, rty, scStatsGetNumerated(mode, 2), c_red, scale, noone, noone, fa_middle);
+					var text = "P1: " + string(scCacheGet(mode, CACHE.GM_GENERAL_P1_WINS));
+					scDrawText(rtx, rty, text, c, scale, noone, noone, fa_left);
+					scDrawText(rtx + (string_width(text) * scale_element) + x_buffer, rty, "P2: " + string(scCacheGet(mode, CACHE.GM_GENERAL_P2_WINS)), c, scale, noone, noone, fa_left);
 					break;
 			}
 			break;

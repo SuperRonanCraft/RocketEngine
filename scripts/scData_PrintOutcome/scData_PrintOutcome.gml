@@ -21,7 +21,7 @@ if (global.winner == TEAM.LEFT) {
 var gm = global.gamemode;
 switch (gm) {
 	case GAMEMODE.TARGETS:
-		if (points > scStatsGet(gm, noone)) //High score
+		if (points > scCacheGet(gm, CACHE.GM_TARGETS_POINTS)) //High score
 			scStatsSave(gm, [points]); break;
 	default:
 		//MODE P1, MODE P2, STAGE P1, STAGE P2

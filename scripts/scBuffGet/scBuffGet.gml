@@ -24,7 +24,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
 		break;
 	case BUFFTYPE.COOLDOWN:
-		ds_map[? BUFF_MAP.NAME] = "Rocket Booster";
+		ds_map[? BUFF_MAP.NAME] = "Cooldowns";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Shoot faster John!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.COOLDOWN;
 		ds_map[? BUFF_MAP.STEP] = scBuffCooldown;
@@ -72,7 +72,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.TIME] = 3 * room_speed;
 		break;
 	case BUFFTYPE.ULTCHARGE:
-		ds_map[? BUFF_MAP.NAME] = "Ultimate Booster";
+		ds_map[? BUFF_MAP.NAME] = "Ultimate Boost";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Unlimited powahhh!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ULTCHARGE;
 		ds_map[? BUFF_MAP.STEP] = scBuffUltCharge;
@@ -80,7 +80,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ULTCHARGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
-		ds_map[? "multiplier"] = 6; //Custom ultimate booster variable
+		ds_map[? "multiplier"] = 8; //Custom ultimate booster variable
 		break;
 	case BUFFTYPE.BLEEDOUT:
 		ds_map[? BUFF_MAP.NAME] = "Bleed Out";
@@ -134,9 +134,9 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
 		ds_map[? "vsp"] = 1.1; //Amount of vsp to add to the player
-		ds_map[? "delay"] = 48; //Delay between force
+		ds_map[? "delay"] = 24 * TIME_SPEED; //Delay between force
 		ds_map[? "current_delay"] = 0;
-		ds_map[? "duration"] = 30; //Amount of time to apply force
+		ds_map[? "duration"] = 15 * TIME_SPEED; //Amount of time to apply force
 		ds_map[? "current_duration"] = 0;
 		break;
 	case BUFFTYPE.SLOWMO:
@@ -148,7 +148,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLOWMO];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
-		ds_map[? "dialation"] = 0.5;
+		ds_map[? "dialation"] = 0.5; //How much to dialate time down to
 		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
@@ -165,8 +165,10 @@ enum BUFF_ICON {
 	BURNRUSH = s_abilityIcon_BurnRush, CHILLED = s_abilityIcon_Chilled,
 	COOLDOWN = s_abilityIcon_Cooldown, SLIME = s_abilityIcon_Slimed,
 	SPEED = s_abilityIcon_Speed, LOWGRAVITY = s_abilityIcon_LowGravity,
-	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge, BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
-	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots, SLOWMO = s_abilityIcon_Slowmo
+	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
+	BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
+	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots,
+	SLOWMO = s_abilityIcon_Slowmo
 }
 
 enum BUFFTYPE {

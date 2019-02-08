@@ -25,6 +25,6 @@ if (loop == 0) {
 
 scFlash(flash_alpha, flash_color, facing * image_xscale, image_yscale, currentSprite, floor(animationVar), x, y); //Flash shader
 
-animationVar += image_speed;
+animationVar += image_speed * time_dialation;
 
 return (loopFin);
