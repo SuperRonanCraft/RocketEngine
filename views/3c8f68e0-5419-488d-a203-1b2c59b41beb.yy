@@ -11,6 +11,7 @@
         "17af6314-1f9a-4f2b-9747-32cde0cd0be3",
         "297d4c3b-f851-40c5-ab77-d200e683277e",
         "88458918-0482-4739-8389-66c75e3c0c39",
+        "b0501a03-b169-4619-bade-88bc43a0ad53",
         "0e424772-2dc0-4a0b-9edc-ebc2309e1784",
         "136e1036-3526-4b29-b1a4-28f5cdd3ab17",
         "2b5a8f32-db74-4eb6-b791-be4a35414bba",
@@ -35,7 +36,8 @@
         "ed189651-15fe-4ace-ae8a-c1850da9b6c8",
         "d6871021-2cfc-47c1-ab44-9c108e5f064b",
         "7c561b78-e556-4aef-926d-ef357167bc32",
-        "26e8ef09-b1aa-487f-941e-ec53bbe4b5bd"
+        "26e8ef09-b1aa-487f-941e-ec53bbe4b5bd",
+        "4f704e8c-a472-4607-97ea-b18ec8bdc788"
     ],
     "filterType": "GMSprite",
     "folderName": "Particles",

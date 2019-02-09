@@ -1,20 +1,22 @@
-var amt = BUFFTYPE.LENGHT, columns = 4, offset = 0;
-for (var i = 0; i < amt; i++) {
-	if (i mod columns == 0)
+var amt = BUFFTYPE.LENGHT, columns = 3, rows = 3, offset = 0;
+var pg = page_buffs;
+var map, spr, name, desc, part, part_amt, rx, ry, c, yoffset, index = 0;
+for (var i = (pg * (columns * rows)); i < (pg * (columns * rows)) + (columns * rows) && i < amt; i++) {
+	if (index mod columns == 0)
 		offset++;
-	var map = ds_map_create();
+	map = ds_map_create();
 	scBuffGet(i, map); //Grab the buff map
-	var spr = map[? BUFF_MAP.ICON]; //Grab the icon
-	var name = map[? BUFF_MAP.NAME]; //Grab the name
-	var desc = map[? BUFF_MAP.DESCRIPTION]; //Grab the description
-	var part = map[? BUFF_MAP.PARTICLE]; //Grab the particle
-	var part_amt = map[? BUFF_MAP.PARTICLE_AMT]; //Grab the amount of particles
-	var rx = ((RES_W / 8) + ((RES_W / 4) * i)) - ((offset - 1) * ((RES_W / 4) * columns));
-	var ry = offset * 150 + 10;
-	var c = color_element;
-	var yoffset = 0;
-	if (scUIHovering(rx, ry + 40, name, x_buffer, 65, scale_element, true)) {
-		c = color_main_hovering; yoffset = scMovementWave(-2, 2, 1);
+	spr = map[? BUFF_MAP.ICON]; //Grab the icon
+	name = map[? BUFF_MAP.NAME]; //Grab the name
+	desc = map[? BUFF_MAP.DESCRIPTION]; //Grab the description
+	part = map[? BUFF_MAP.PARTICLE]; //Grab the particle
+	part_amt = map[? BUFF_MAP.PARTICLE_AMT]; //Grab the amount of particles
+	rx = ((RES_W / 4) + ((RES_W / 4) * index)) - ((offset - 1) * ((RES_W / 4) * columns));
+	ry = offset * 150 + 10;
+	c = color_element;
+	yoffset = 0;
+	if (scUIHovering(rx, ry + 40, name, x_buffer, 65, scale_element, fa_middle)) {
+		c = color_main_hovering; yoffset = scMovementWave(-3, 3, 1);
 		part_amt *= 2;
 		if (mouse_check_button_pressed(mb_left))
 			scBuffAdd(map[? BUFF_MAP.TYPE], oPlayer);
@@ -22,8 +24,7 @@ for (var i = 0; i < amt; i++) {
 	scDrawText(rx, ry, name, c, scale_element); //Buff name
 	//Particles
 	part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - 42, rx + 42,
-		ry + 94, ry + 74,
-		ps_shape_rectangle, ps_distr_linear)
+		ry + 94, ry + 74, ps_shape_rectangle, ps_distr_linear)
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
 	draw_sprite(spr, 0, rx - 32, ry + 20 + yoffset); //Buff icon
 	scDrawText(rx + 32, ry + 84 + yoffset, string(ceil(map[? BUFF_MAP.TIME] / room_speed)),
@@ -31,4 +32,10 @@ for (var i = 0; i < amt; i++) {
 	scDrawText(rx, ry + 110, desc, color_element_input, 0.45); //Buff description
 	draw_line_width_color(rx - 64, ry + 122, rx + 64, ry + 122, 2, c_black, c_black); //Seperator line
 	ds_map_destroy(map);
+	index++;
 }
+
+var max_page = 0;
+while (amt - (((max_page + 1) * (columns * rows)) + 1) > 0)
+	max_page++;
+scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);

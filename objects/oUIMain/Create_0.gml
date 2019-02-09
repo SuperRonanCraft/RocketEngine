@@ -35,8 +35,12 @@ ds_stats = scUICreateMenuPage(
 
 ds_rocketinfo = scUICreateMenuPage(
 	["",			menu_element_type.rocket_list],
+	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageRocketsPrev],
+	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageRocketsNext],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
+//Rockets page
+page_rockets = 0;
 
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],
@@ -46,8 +50,12 @@ ds_controls = scUICreateMenuPage(
 
 ds_rocketbuffs = scUICreateMenuPage(
 	["",		menu_element_type.rocket_buffs],
+	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageBuffsPrev],
+	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageBuffsNext],
 	["BACK",	menu_element_type.page_transfer,	menu_page.info]
 );
+//Buffs page
+page_buffs = 0;
 
 ds_confirm = scUICreateMenuPage(
 	["CONFIRM",		menu_element_type.script_runner,	scUIQuitGame, "Are you sure?"], //Only script that has text input
@@ -72,8 +80,8 @@ menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_info, ds_rock
 
 //Ignore specific menu elements from being selected
 menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls, menu_element_type.stats];
-var pos = RES_H - RES_H / 8 - RES_H / 16;
-menu_special_start_y = [pos, pos, pos, noone];
+var pos = RES_H - (RES_H / 8) - (RES_H / 16);
+menu_special_start_y = [pos + (RES_H / 16), pos + (RES_H / 16), pos, noone];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	for (var a = 0; a < array_length_1d(menu_special); a++) {

@@ -13,4 +13,5 @@ if (rocket_map[? ROCKET_MAP.TYPE] != weapon) {
 	current_cd = 15;
 	rocket_scale = 2;
 	ult_casting = false; //Reset the ult timer
+	current_reload = 0;
 }

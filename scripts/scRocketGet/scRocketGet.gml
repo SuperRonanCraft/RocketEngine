@@ -243,8 +243,8 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Positively attractive!";
 		map[? ROCKET_MAP.RECOIL] = 3;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.MAGNET;
-		map[? ROCKET_MAP.COOLDOWN] = 12 * varcd;
-		map[? ROCKET_MAP.SPEED] = 18 * varspd;
+		map[? ROCKET_MAP.COOLDOWN] = 18 * varcd;
+		map[? ROCKET_MAP.SPEED] = 15 * varspd;
 		map[? ROCKET_MAP.CLIP] = 2;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketMagnet_Step;
@@ -256,7 +256,6 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.MAGNET];
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.SCALE] = 1;
-		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		break;
 		
 	case ROCKET.OBSOLETE:
@@ -311,6 +310,22 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketShotgun_Step;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
+		break;
+	
+	case ROCKET.PEACE:
+		map[? ROCKET_MAP.NAME] = "Peace";
+		map[? ROCKET_MAP.DESCRIPTION] = "Back to the 80s";
+		map[? ROCKET_MAP.RECOIL] = 2;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PEACE;
+		map[? ROCKET_MAP.COOLDOWN] = 55 * varcd;
+		map[? ROCKET_MAP.SPEED] = 14 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];
+		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.PEACE];
+		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PEACE];
+		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		break;
 }
 

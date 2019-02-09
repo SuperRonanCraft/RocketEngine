@@ -186,3 +186,13 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			break;
 	}
 }
+
+
+//Show hover boxes over buttons
+if (global.debug && !inputting && !unfolding) {
+	if (page_workingon == page)
+		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
+			var val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
+			scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right);
+		}
+}
