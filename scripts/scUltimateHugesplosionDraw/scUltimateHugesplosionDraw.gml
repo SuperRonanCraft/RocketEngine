@@ -1,6 +1,7 @@
 /// @desc Burst ultimate
+/// @arg direction
 var len = RES_W / 2;
-var xxpos = x + ((team == TEAM.LEFT ? 1 : -1) * len);
+var xxpos = x + ((argument0 == 0 ? 1 : -1) * len);
 
 scDrawLine(x, y, xxpos, y, c_red, 4, 0.2);
 scDrawCircle(xxpos, y, 10, c_red, false, 0.2);

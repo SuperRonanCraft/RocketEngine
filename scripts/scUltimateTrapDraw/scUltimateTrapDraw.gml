@@ -1,6 +1,7 @@
+/// @arg direction
 for (var i = 0; i < 3; i++) {
 	var colliding = false;
-	var hspd = (team == TEAM.LEFT ? 1 : -1) * (20 + (i * 10));
+	var hspd = (argument0 == 0 ? 1 : -1) * (20 + (i * 10));
 	var xx = x, yy = y, yspd = -8 + (-4 * i);
 	var grv = 1.6;
 	while (!colliding) {

@@ -1,7 +1,9 @@
 /// @arg ult map
+/// @arg direction
+/// @arg map
 
-var map = argument0;
-var dir = team == TEAM.LEFT ? 1 : -1;
+var map = argument1;
+var dir = argument0 == 0 ? 1 : -1;
 var amt = map[? "amount"];
 
 var ultObj = instance_create_depth(x + (10 * dir), y, depth + 1, oUltimateSludgeShooter);

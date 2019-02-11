@@ -14,8 +14,7 @@ player_rocket = noone;
 if (!scCacheGet(gamemode, CACHE.GM_SINGLE_NEWGAME))
 	with (oPlayer) {
 		hp = scCacheGet(other.gamemode, CACHE.GM_SINGLE_LIVES);
-		show_debug_message(string(scCacheGet(other.gamemode, CACHE.GM_SINGLE_ROCKET)));
-		//scRocketChange(scCacheGet(other.gamemode, CACHE.GM_SINGLE_ROCKET));
+		scRocketChange(scCacheGet(other.gamemode, CACHE.GM_SINGLE_ROCKET));
 		var check_point_id = scCacheGet(other.gamemode, CACHE.GM_SINGLE_CHECKPOINT);
 		var check_point = scCheckpointGet(check_point_id);
 		if (check_point != noone) {

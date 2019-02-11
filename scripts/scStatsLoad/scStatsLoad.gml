@@ -11,21 +11,29 @@ for (var i = 0; i < GAMEMODE.LENGTH; i++) {
 	var mode = string(gm);
 	switch (gm) {
 		case GAMEMODE.TARGETS:
-			var val = scCacheGetType(CACHE.GM_TARGETS_POINTS); //POINTS
-			map[? val + mode] = ini_read_real(sec + mode, val, 0); break;
+			//Points
+			var ary = [CACHE.GM_TARGETS_POINTS];
+			for (var i = 0; i < array_length_1d(ary); i++) {
+				var val = scCacheGetType(ary[i]);
+				map[? val + mode] = ini_read_real(sec + mode, val, 0);
+			}
+			break;
 		case GAMEMODE.SINGLE:
-			var val = scCacheGetType(CACHE.GM_SINGLE_LEVEL); //LEVEL
-			map[? val + mode] = ini_read_real(sec + mode, val, 0);
-			val = scCacheGetType(CACHE.GM_SINGLE_CHECKPOINT); //CHECKPOINT
-			map[? val + mode] = ini_read_real(sec + mode, val, 0);
-			val = scCacheGetType(CACHE.GM_SINGLE_LIVES); //LIVES
-			map[? val + mode] = ini_read_real(sec + mode, val, 0);
+			//Level, checkpoint, lives, rocket
+			var ary = [CACHE.GM_SINGLE_LEVEL, CACHE.GM_SINGLE_CHECKPOINT, 
+				CACHE.GM_SINGLE_LIVES, CACHE.GM_SINGLE_ROCKET];
+			for (var i = 0; i < array_length_1d(ary); i++) {
+				var val = scCacheGetType(ary[i]);
+				map[? val + mode] = ini_read_real(sec + mode, val, 0);
+			}
 			break;
 		default:
-			var val = scCacheGetType(CACHE.GM_GENERAL_P1_WINS); //P1 WINS GM
-			map[? val + mode] = ini_read_real(sec + mode, val, 0);
-			val = scCacheGetType(CACHE.GM_GENERAL_P2_WINS); //P2 WINS GM
-			map[? val + mode] = ini_read_real(sec + mode, val, 0);
+			//P1 wins, P2 wins
+			var ary = [CACHE.GM_GENERAL_P1_WINS, CACHE.GM_GENERAL_P2_WINS];
+			for (var i = 0; i < array_length_1d(ary); i++) {
+				var val = scCacheGetType(ary[i]);
+				map[? val + mode] = ini_read_real(sec + mode, val, 0);
+			}
 			break;
 	}
 }

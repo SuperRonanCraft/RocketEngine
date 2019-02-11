@@ -4,9 +4,7 @@
 //First step
 if (timer == EXPIRETIMER) {
 	//determine direction
-	direction = 0;	
-	if (owner.team == TEAM.RIGHT)
-		direction = 180;
+	direction = !owner.shoot_face ? (owner.team == TEAM.LEFT ? 0 : 180) : (owner.facing == 1 ? 0 : 180);
 	//Find a target
 	target = scFindTarget(owner.team);
 }

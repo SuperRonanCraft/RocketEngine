@@ -20,7 +20,7 @@ if (global.devmode && global.debug && keyboard_check(keyjump))
 		if (buffs_cur >= BUFFTYPE.LENGHT)
 			buffs_cur = 0;
 		scBuffAdd(buffs_cur, id);
-	} else if (keyboard_check_pressed(vk_f5)) {
+	} else if (keyboard_check_pressed(vk_f6)) {
 		if (buffs_cur >= 0)
 			scBuffAdd(buffs_cur, id);
 	}

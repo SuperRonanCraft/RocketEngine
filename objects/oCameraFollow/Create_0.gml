@@ -3,4 +3,4 @@
 // Inherit the parent event
 event_inherited();
 
-follow = noone;
+follow = noone; //Who we are following

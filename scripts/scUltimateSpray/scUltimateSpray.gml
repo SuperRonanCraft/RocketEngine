@@ -2,7 +2,7 @@
 var dir = 0;
 for (var i = 0; i < 6; i++) {
 	//Set direction offset
-	if (team == TEAM.LEFT)
+	if (argument0 == 0)
 		dir = 37.5 - (15 * i);
 	else
 		dir = 142.5 + (15 * i);
