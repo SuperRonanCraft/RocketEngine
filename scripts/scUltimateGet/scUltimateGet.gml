@@ -17,12 +17,14 @@ ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = -1; //The object to spawn
 ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = noone; //The script to execute when casted
 
 switch (type) {
-	case ULTIMATE.NONE: //Huge af cloned rocket
+	case ULTIMATE.NONE: //nuthing
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = noone;
 		break;
 	case ULTIMATE.DEFAULT: //Huge af cloned rocket
 		ds_map[? ULTIMATE_MAP.NAME] = "Mr.Huge!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateDefault;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? "casting_tiem"] = 0;
 		break;
 	case ULTIMATE.BARRAGE: //Dodge the lasers!
 		ds_map[? ULTIMATE_MAP.NAME] = "Termination";
@@ -70,6 +72,7 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Rocket Barrage";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateHoming;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHomingDraw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.LASER: 
@@ -87,6 +90,8 @@ switch (type) {
 	case ULTIMATE.MAGNET: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Get Over Here!";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateMagnet;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMagnetDraw;
+		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.SLUDGE:
@@ -97,6 +102,7 @@ switch (type) {
 	case ULTIMATE.NAPALM:
 		ds_map[? ULTIMATE_MAP.NAME] = "The floor is lava!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateNapalm_Casted;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateNapalm_CastingDraw;
 		break;
 	case ULTIMATE.LIGHTNING_ORB:
 		ds_map[? ULTIMATE_MAP.NAME] = "Oh, its gonna hurt";

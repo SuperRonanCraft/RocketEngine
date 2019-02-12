@@ -147,7 +147,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLOWMO];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLOWMO];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
 		ds_map[? "dialation"] = 0.5; //How much to dialate time down to
 		break;
 }

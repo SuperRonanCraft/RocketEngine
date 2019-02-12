@@ -7,8 +7,9 @@ if (ult_casting) {
 	scDrawRect(x - 51, yy + 1, x + 51, yy2 + 1, c_black, false, 0.9);
 	scDrawRect(x - 50, yy, x - 50 + (percent * 100), yy2, c_yellow, false, 0.9);
 	//Casting script
-	if (ult_casting_draw != noone)
-		script_execute(ult_casting_draw, !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180));
+	if (!ds_map_empty(ult_casting_map))
+		if (ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] != noone)
+			script_execute(ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180));
 }
 
 //Ultimate ready indicator

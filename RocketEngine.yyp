@@ -1055,6 +1055,14 @@
             }
         },
         {
+            "Key": "42a59ed5-758c-4b0b-9b19-b85dc1b9e282",
+            "Value": {
+                "id": "fa9d95ba-4ea3-44fa-ba22-aae584f9270a",
+                "resourcePath": "views\\42a59ed5-758c-4b0b-9b19-b85dc1b9e282.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "42be5c97-e4c3-4924-80e9-448045e1852e",
             "Value": {
                 "id": "11eece7c-4a9e-4e99-9489-f6c9dcaa0223",
@@ -2567,11 +2575,27 @@
             }
         },
         {
+            "Key": "a084eff7-c3ad-4f4f-9dc1-5d9cc2cf4f79",
+            "Value": {
+                "id": "fd65d9ad-41e8-482c-9aec-5764e290251a",
+                "resourcePath": "sprites\\sUltHoming\\sUltHoming.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
             "Value": {
                 "id": "508592d5-7e93-44b9-8490-3a5877175a69",
                 "resourcePath": "scripts\\scLoadSettings\\scLoadSettings.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a167f786-0125-4b22-ab4a-df02b69162a2",
+            "Value": {
+                "id": "86dc9319-0ca2-4580-bdd8-208f152ab275",
+                "resourcePath": "views\\a167f786-0125-4b22-ab4a-df02b69162a2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2907,6 +2931,14 @@
             "Value": {
                 "id": "1dac84e9-3d5b-4e77-b3b0-c7f903d47a84",
                 "resourcePath": "scripts\\scRocketObsolete_Create\\scRocketObsolete_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b12a1902-44aa-4970-b275-4bfbf40ab298",
+            "Value": {
+                "id": "d2d7b729-a4d5-41fb-ab4b-cf2ed0895c6f",
+                "resourcePath": "scripts\\scUltimateMagnetDraw\\scUltimateMagnetDraw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3420,6 +3452,14 @@
                 "id": "5e74aff0-8f09-4d61-a629-117c87f50880",
                 "resourcePath": "sprites\\sRocket_Obsolete\\sRocket_Obsolete.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
+            "Value": {
+                "id": "4808106a-cdde-4454-836d-6f8ebadf96be",
+                "resourcePath": "scripts\\scUltimateHomingDraw\\scUltimateHomingDraw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4126,6 +4166,8 @@
         "4f3470e5-ce00-4686-b790-664c0a4fd1b2",
         "b98f217d-6e7d-4cb6-86b2-57d4413a546b",
         "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
+        "b12a1902-44aa-4970-b275-4bfbf40ab298",
+        "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",

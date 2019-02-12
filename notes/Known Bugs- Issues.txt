@@ -1,7 +1,7 @@
 --Bugs--
 CURRENT:
 - When "Teched" the player might teleport to the other side of a platform when doing so at the edge of one.
-- If switching weapons under a reload timer, you can reload ur weapon emmidiatly after (insta reload)
+- Napalm ult breaks when exploding on a wall
 
 FIXED:
 - Second player sometimes takes double damage from default rocket?
@@ -11,4 +11,5 @@ FIXED:
 - Player in the main menu does not have their keybinds updated
 - Sound volumes for title and effects dont have right volume at game start
 - Player does not take damage right as a game ends?
+- If switching weapons under a reload timer, you can reload ur weapon emmidiatly after (insta reload)
 

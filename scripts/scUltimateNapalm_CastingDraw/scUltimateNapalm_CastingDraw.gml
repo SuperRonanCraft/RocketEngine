@@ -1,8 +1,8 @@
 
 var colliding = false;
-var hspd = (team == TEAM.LEFT ? 1 : -1) * 20;
+var hspd = !shoot_face ? (team == TEAM.LEFT ? 1 : -1) : (facing == 1 ? 1 : -1) * 21;
 var xx = x, yy = y, yspd = -8;
-var grv = 1.6;
+var grv = 1.5;
 while (!colliding) {
 	var inst = instance_place(xx, yy, oWall);
 	if ((inst != noone && inst.object_index != oSeperator) || !(xx > 0 && xx < room_width && yy > 0 && yy < room_height)) {

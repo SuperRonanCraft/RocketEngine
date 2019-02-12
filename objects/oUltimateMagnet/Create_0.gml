@@ -17,8 +17,8 @@ image_yscale = 0;
 
 target = noone;
 
-strength = 2;
-MAXPULL = 10;
+strength = 1;
+MAXPULL = 8;
 
 hsp_pull = 0;
 vsp_pull = 0;
