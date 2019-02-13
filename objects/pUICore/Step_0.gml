@@ -20,7 +20,7 @@ if (inputting) { //Are we inputting data?
 				//var x2right = x1right + (string_width("<< ") * scale_element);
 				var buffer = string_width("<< ") * scale_element;
 				if (mouse_check_button_pressed(mb_right))
-					if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+					if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[option], "<< ", buffer * 2, buffer, scale_element, true))
 						hinput = -1;
 					//else if (current_val != array_length_1d(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
 					//	hinput = 1;
@@ -44,14 +44,11 @@ if (inputting) { //Are we inputting data?
 			if (hinput != 0) {
 				var val = ds_grid[# 4, option] + hinput * 0.01;
 				ds_grid[# 4, option] = clamp(val, 0, 1);
-			} else if ((device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old) 
-					&& mouse_check_button(mb_right)) { //Must be pressing right to move slider
-				mouse_x_old = device_mouse_x_to_gui(0);
-				mouse_y_old = device_mouse_y_to_gui(0);
+			} else if (mouse_check_button(mb_right)) { //Must be pressing right to move slider
 				var xleft = start_x[option] + (x_buffer * 2);
 				var ycheck = start_y[option];
-				if (mouse_x_old > xleft - 10 && mouse_x_old < xleft + slider_width + 10 && mouse_y_old > ycheck - 10 && mouse_y_old < ycheck + 10) {
-					var val = (mouse_x_old - xleft) / slider_width;
+				if (scUIHoveringBox(xleft, xleft + slider_width, ycheck, ycheck, x_buffer, y_buffer)) {
+					var val = (device_mouse_x_to_gui(0) - xleft) / slider_width;
 					ds_grid[# 4, option] = clamp(val, 0, 1);
 				}
 			}
@@ -109,7 +106,8 @@ if (inputting) { //Are we inputting data?
 			}
 			break;
 	}
-} else { //Not inputting
+} else {
+	//Not inputting
 	var option = menu_option[page];
 	//Mouse Support
 	if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_gui(0) != mouse_y_old)) { //Not unfolding and mouse is moving
@@ -145,7 +143,7 @@ if (inputting) { //Are we inputting data?
 					else if (option < 0) option = ds_height - 1;
 				}
 		}
-		 //Left and right support on horizontally aligned buttons
+			//Left and right support on horizontally aligned buttons
 		else {
 			ochange = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
 			if (ochange != 0) {

@@ -26,6 +26,13 @@ flash_alpha = 0; //Flashing alpha
 flash_reduce = 0.05; //How much to reduce the flash alpha
 flash_color = c_white; //Color of the flash
 
+//Ult ready animation
+ult_loc_x = 0;
+ult_loc_y = 0;
+ult_justReady = false;
+ult_loc_timer = 2 * room_speed;
+ult_loc_timer_cur = 0;
+ult_loc_alpha = 0;
 //Load Rockets
 scRocketStart(starting_weapon);
 

@@ -119,10 +119,25 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,
 			0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
 		if (charge >= 100) {
+			if (!ult_justReady) {
+				ult_justReady = true;
+				ult_loc_x = x;
+				ult_loc_y = bbox_top;
+				ult_loc_alpha = 1;
+				ult_loc_timer_cur = 0;
+			}
+			
+			if (ult_loc_alpha > 0) {
+				scDrawText(ult_loc_x, ult_loc_y, "Ultimate ready!", c_yellow, 0.5, noone, ult_loc_alpha);
+				ult_loc_y -= 2 / TIME_SPEED;
+				ult_loc_alpha = max(ult_loc_alpha - (0.04 / TIME_SPEED), 0);
+			}
+			
 			var str = scKeyToString(keyleft) + " + " + scKeyToString(keyright);
 			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
 				0.5, noone, scMovementWave(0.8, 0.4, 1));
-		}
+		} else
+			ult_justReady = false;
 	}
 	//ROCKET EQUIPPED
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, 

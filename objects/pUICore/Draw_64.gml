@@ -97,24 +97,24 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift:
 			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
-			var left_shift = "<< ", right_shift = " >>";
+			var left_shift = "<<", right_shift = ">>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
 			if (inputting && i == menu_option[page]) {
 				c = color_element_input;
 				//HOVERING SUPPORT
 				var x1left = rtx;
-				var x2left = x1left + (string_width("<< ") * scale_element);
-				var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element);
-				var x2right = x1right + (string_width(" >>") * scale_element);
-				var buffer = string_width(left_shift) * scale_element;
-				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, "<< ", buffer, buffer, scale_element, true))
-					left_shift = "<<< ";
-				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, true))
-					right_shift = " >>>";
+				var x2left = x1left + (string_width(left_shift) * scale_element);
+				var x1right = x2left + (string_width(string(current_array[current_val]) + "  ") * scale_element);
+				var x2right = x1right + (string_width(right_shift) * scale_element);
+				var buffer = string_width("<<<") * scale_element;
+				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, left_shift, buffer * 2, buffer, scale_element, fa_middle))
+					left_shift = "<<<";
+				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, right_shift, buffer * 2, buffer, scale_element, fa_middle))
+					right_shift = ">>>";
 			}
 			//TEXT
-			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
+			scDrawText(rtx, rty, left_shift + " " + string(current_array[current_val]) + " " + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
@@ -126,7 +126,11 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			draw_sprite_part_ext(sUISliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
 			draw_sprite_part_ext(sUISliderBar, 0, circle_pos * len, 0, len, 10, rtx + circle_pos * len, rty - 4, 1, 1, c_white, 0.8);
 			//Slider button
-			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, 1, 1, 0, c_white, 0.8);
+			var scl = 1;
+			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, c_white, 0.8);
+			var xleft = rtx;
+			var ycheck = rty;
+			scUIHoveringBox(xleft, xleft + slider_width, ycheck, ycheck, x_buffer, y_buffer);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];

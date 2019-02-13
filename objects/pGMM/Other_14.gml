@@ -18,4 +18,4 @@ if (!tie) {
 
 //DRAW GAMEMODE SCORE
 var scr = string(global.score_stage_p1_wins) + " - " + string(global.score_stage_p2_wins);
-scDrawText(RES_W / 2, yy / 2, scr, c_lime);
+scDrawText(RES_W / 2, yy / 2 + 10, scr, c_lime);

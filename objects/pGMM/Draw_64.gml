@@ -29,5 +29,6 @@ if (endgame) {
 		event_inherited(); //Draw ui buttons
 	}
 	if (kick_timer_display >= kick_timer)
-		scDrawText(RES_W - RES_W / 8, RES_H - RES_H / 16, "Continuing in " + string(clamp(kick_timer, 1, kick_timer_display)) + "...", c_yellow, 0.6);
+		scDrawText(RES_W - 16, RES_H - RES_H / 16, "Continuing in " + 
+			string(clamp(kick_timer, 1, kick_timer_display)) + "...", c_yellow, 0.6, noone, noone, fa_right);
 }
