@@ -18,7 +18,7 @@ if (current_delay == 0) {
 		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
 		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 		
-		scRecoil(rocket_map[?ROCKET_MAP.RECOIL]);
+		scRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
 	}
 }
 

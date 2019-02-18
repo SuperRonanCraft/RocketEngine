@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "085c58de-2240-48f4-9b89-b21ac07969d1",
+            "Value": {
+                "id": "b8bb5c77-4157-4ea2-89eb-549f681cbcec",
+                "resourcePath": "scripts\\scBuffSleep\\scBuffSleep.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "08efb6e9-47da-4024-9f40-72386f03a1fb",
             "Value": {
                 "id": "dc6ec60d-5038-41ef-9814-d035f490bc2a",
@@ -556,6 +564,14 @@
                 "id": "87c14202-73a8-4cf5-8402-c4d0da275a7a",
                 "resourcePath": "views\\21531934-d461-4134-86d8-21f1836d7b96.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "217e2a30-33ca-4834-bbd0-47636ce09b18",
+            "Value": {
+                "id": "14952a88-c106-43cb-97b7-f5b0fbd64e55",
+                "resourcePath": "scripts\\scUltimateSleepDart\\scUltimateSleepDart.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1484,6 +1500,14 @@
                 "id": "8077b590-40c1-4955-a560-0a02476c2112",
                 "resourcePath": "scripts\\scRocketSpecialRandom_Create\\scRocketSpecialRandom_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5cac4671-ccd7-4700-ac89-1b5942b99f0c",
+            "Value": {
+                "id": "dce15f71-76e6-4c6b-8f2f-64456dabae87",
+                "resourcePath": "sprites\\s_abilityIcon_Sleep\\s_abilityIcon_Sleep.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4031,6 +4055,14 @@
             }
         },
         {
+            "Key": "fd044a9a-b7a3-47e7-87a6-8d671cedac0c",
+            "Value": {
+                "id": "d7448a23-456b-4649-ba8b-cd212f670d46",
+                "resourcePath": "sprites\\s_psleep\\s_psleep.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fdd1144e-9e18-4265-b011-9ac83d555409",
             "Value": {
                 "id": "24049837-4818-4674-8ebb-b0b05084a3de",
@@ -4184,6 +4216,7 @@
         "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
         "b12a1902-44aa-4970-b275-4bfbf40ab298",
         "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
+        "217e2a30-33ca-4834-bbd0-47636ce09b18",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
@@ -4211,6 +4244,7 @@
         "e02a2303-a556-4d20-ab08-e9a2978b49cf",
         "fc395cba-a75e-4ca3-93db-767b11addd98",
         "4dd4d129-5280-42bb-a6e7-786d76f8739a",
+        "085c58de-2240-48f4-9b89-b21ac07969d1",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

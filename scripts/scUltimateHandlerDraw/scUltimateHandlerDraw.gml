@@ -1,4 +1,4 @@
-if (!ult_enabled || !global.play) exit; //Is the system even enabled?
+if (!ult_enabled || !canControl || !global.play) exit; //Is the system even enabled?
 
 if (ult_casting) {
 	//Ultimate casting bar above players heads

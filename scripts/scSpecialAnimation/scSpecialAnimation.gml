@@ -1,16 +1,16 @@
 ///@desc Perform a special animation with detailed parameters
 ///@arg sprite Sprite to use
-///@arg loop 0 for no loop / 1 for loop
+///@arg loop 0 for no loop / 1 for loop / 2 for backwards-loop
 
 var sprite = argument[0];
 var loop = argument[1];
 
 //Check if loop finished
-var loopFin = false;;
+var loopFin = false;
 
 //Reset animationVar
 if (animationVar != 0 && currentSprite != sprite)
-	animationVar = 0;	
+	animationVar = (loop == 2) ? sprite_get_number(sprite) - 1 : 0;
 
 currentSprite = sprite;
 
@@ -19,12 +19,17 @@ if (loop == 0) {
 		animationVar = sprite_get_number(sprite) - 1;	
 		loopFin = true;
 	}
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing*image_xscale,image_yscale,0,c_white,image_alpha);
-} else
-	draw_sprite_ext(currentSprite,floor(animationVar),x,y,facing*image_xscale,image_yscale,0,c_white,image_alpha);	
+} else if (loop == 2) {
+	if (floor(animationVar) <= 0) {
+		animationVar = 0;	
+		loopFin = true;
+	}
+}
+
+draw_sprite_ext(currentSprite, floor(animationVar), x, y, facing * image_xscale, image_yscale, 0, c_white, image_alpha);
 
 scFlash(flash_alpha, flash_color, facing * image_xscale, image_yscale, currentSprite, floor(animationVar), x, y); //Flash shader
 
-animationVar += image_speed * time_dialation;
+animationVar += (image_speed * time_dialation) * (loop == 2 ? -1 : 1);
 
 return (loopFin);

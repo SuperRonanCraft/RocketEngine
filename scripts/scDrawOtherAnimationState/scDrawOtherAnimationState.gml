@@ -20,6 +20,15 @@ switch (state) {
 	case ANIMATIONSTATE.KNOCKBACK:
 		currentSprite = sPlayer_knockBack;
 		break;
+	case ANIMATIONSTATE.SLEEPING:
+		overwrite = true;
+		scSpecialAnimation(sPlayer_dead1, 0);
+		break;
+	case ANIMATIONSTATE.WAKING:
+		overwrite = true;
+		if (scSpecialAnimation(sPlayer_dead1, 2))
+			animState = PLAYERSTATE.NORMAL;
+		break;
 }
 
 //draw sprite normally

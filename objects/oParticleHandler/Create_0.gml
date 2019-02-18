@@ -268,10 +268,21 @@ part_type_gravity(parttype, 0.2 * spd, 90);
 ds_map_add(ds_part, PARTICLES.PEACE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.PEACE, 1 * amt);
 
+//SLEEP
+parttype = part_type_create();
+part_type_sprite(parttype, s_psleep, false, false, true);
+part_type_size(parttype, 0.3, 0.5, 0.02 * spd, 0);
+part_type_direction(parttype, 80, 100, 0, 0);
+part_type_speed(parttype, 0.5 * spd, 0.8 * spd, 0.04 * spd, 0);
+part_type_life(parttype, 13 * life, 20 * life);
+part_type_gravity(parttype, 0.2 * spd, 90);
+ds_map_add(ds_part, PARTICLES.SLEEP, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SLEEP, 1 * amt);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
-	SLOWMO, PEACE
+	SLOWMO, PEACE, SLEEP
 }

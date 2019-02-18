@@ -150,6 +150,16 @@ switch (buff) {
 		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
 		ds_map[? "dialation"] = 0.5; //How much to dialate time down to
 		break;
+	case BUFFTYPE.SLEEP:
+		ds_map[? BUFF_MAP.NAME] = "Sleep";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Night Night";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.SLEEP;
+		ds_map[? BUFF_MAP.STEP] = scBuffSleep;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLEEP];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLEEP];
+		ds_map[? BUFF_MAP.GOOD] = false;
+		ds_map[? BUFF_MAP.TIME] = 3 * room_speed;
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -168,13 +178,13 @@ enum BUFF_ICON {
 	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
 	BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
 	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots,
-	SLOWMO = s_abilityIcon_Slowmo
+	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep
 }
 
 enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
-	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO,
+	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP,
 	
 	//PUT LAST
 	LENGHT

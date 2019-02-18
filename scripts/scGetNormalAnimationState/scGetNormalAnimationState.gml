@@ -1,4 +1,4 @@
-///The normal animation for an object
+ ///The normal animation for an object
 
 if (alive && hsp == 0 && vsp == 0 && standing)
 	animState = ANIMATIONSTATE.STANDING;

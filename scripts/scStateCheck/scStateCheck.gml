@@ -20,6 +20,16 @@ switch (playerState) {
 		animState = ANIMATIONSTATE.DEAD;
         canControl = false;
         break;
+	case PLAYERSTATE.WAKING:
+		overrideAnimation = true;
+		animState = ANIMATIONSTATE.WAKING;
+        canControl = false;
+        break;
+	case PLAYERSTATE.SLEEPING:
+		overrideAnimation = true;
+		animState = ANIMATIONSTATE.SLEEPING;
+        canControl = false;
+        break;
 	case PLAYERSTATE.TRAPPED:
 		overrideAnimation = true;
 		animState = ANIMATIONSTATE.TRAPPED;
@@ -32,5 +42,5 @@ switch (playerState) {
 }
 
 enum PLAYERSTATE {
-	NORMAL, DEAD, CANTCONTROL, KNOCKBACK, TECHED, TRAPPED
+	NORMAL, DEAD, CANTCONTROL, KNOCKBACK, TECHED, TRAPPED, SLEEPING, WAKING
 }
