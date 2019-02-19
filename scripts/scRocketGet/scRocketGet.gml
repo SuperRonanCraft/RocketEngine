@@ -175,7 +175,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialSlime_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialSlime_Step;
-		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketSpecialSlime_Draw;
+		//map[? ROCKET_MAP.ROCKET_DRAW] = scRocketSpecialSlime_Draw;
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Slime;
 		//map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketSpecialSlime_Exp_Create;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLUDGE;//SWIPE;
@@ -327,6 +327,30 @@ switch (roc) {
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
+		map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
+		break;
+	
+	case ROCKET.TELEPORT:
+		map[? ROCKET_MAP.NAME] = "Teleporting";
+		map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
+		map[? ROCKET_MAP.RECOIL] = 2;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
+		map[? ROCKET_MAP.COOLDOWN] = 60 * varcd;
+		map[? ROCKET_MAP.SPEED] = 13 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketTeleport_Step;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketTeleport_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketTeleport_Destroy;
+		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketTeleport_Draw;
+		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
+		//map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];
+		//map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.PEACE];
+		//map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PEACE];
+		//map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
+		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
+		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
+		//map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
 		break;
 }
 

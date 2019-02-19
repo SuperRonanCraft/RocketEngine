@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "03165dca-1b92-4f7f-a640-a1bc4f14f19f",
+            "Value": {
+                "id": "53b95fe8-dc57-4f56-a7dc-164bc95c88c7",
+                "resourcePath": "scripts\\scRocketTeleport_Destroy\\scRocketTeleport_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0378c52b-0d41-40b1-8b55-41b306c931ba",
             "Value": {
                 "id": "50feb544-b39e-455a-b034-7fa5849905e3",
@@ -607,6 +615,14 @@
             }
         },
         {
+            "Key": "24dc3915-813e-42cb-a082-e9b24d6bb714",
+            "Value": {
+                "id": "ca331992-a410-4a0f-85a2-2f6761f26a11",
+                "resourcePath": "sprites\\sRocket_Teleport\\sRocket_Teleport.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "251d7a00-edec-47c6-8e7f-69dcae953141",
             "Value": {
                 "id": "b7e4c59d-ea89-4b98-8ed7-fb56bc3b5800",
@@ -908,6 +924,14 @@
                 "id": "f6e703eb-c07a-4da4-b9ab-9faac120be32",
                 "resourcePath": "sprites\\bg_Main\\bg_Main.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "34b0f736-fb45-4f48-89cc-a4becc9444b4",
+            "Value": {
+                "id": "a98947bc-a1f1-485f-9614-319442684208",
+                "resourcePath": "scripts\\scRocketTeleport_Draw\\scRocketTeleport_Draw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1419,6 +1443,14 @@
             "Value": {
                 "id": "5e583292-ea70-4f8d-891b-81133630911e",
                 "resourcePath": "sprites\\s_abilityIcon_Speed\\s_abilityIcon_Speed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5523fb5b-75c3-427b-af45-6e4b82a5c6c3",
+            "Value": {
+                "id": "9922b2a7-018f-4f11-8018-14ac33a39dc3",
+                "resourcePath": "sprites\\sRocTeleportPortal\\sRocTeleportPortal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2535,6 +2567,14 @@
             }
         },
         {
+            "Key": "9b15f637-983b-48a4-8074-e73313ed3507",
+            "Value": {
+                "id": "c047e2dd-e593-4007-9e97-183f8bd6996f",
+                "resourcePath": "scripts\\scRocketTeleport_Step\\scRocketTeleport_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9bf5e0b3-1881-4f20-a5a7-8812e3c59864",
             "Value": {
                 "id": "d2343b4b-8af1-469d-83b9-6f7f51b26de1",
@@ -2803,6 +2843,14 @@
             "Value": {
                 "id": "8dff9369-5f8b-43c3-bd11-ee9a599dffa4",
                 "resourcePath": "scripts\\scBuffLowGravity\\scBuffLowGravity.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a8ee6ec8-352c-4f9f-8fbd-48dfad5e6007",
+            "Value": {
+                "id": "73c329c1-5432-4ef0-a178-5c5c3f08b0e9",
+                "resourcePath": "scripts\\scRocketTeleport_Create\\scRocketTeleport_Create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3324,6 +3372,14 @@
                 "id": "d8306e85-525f-420a-a664-3e6cd3c760b3",
                 "resourcePath": "scripts\\scUltimateNapalm_CastingDraw\\scUltimateNapalm_CastingDraw.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c3c61c40-8fd8-4b0e-bf0e-d140871687d8",
+            "Value": {
+                "id": "bce680ce-fbe4-4898-8165-43b8863da549",
+                "resourcePath": "views\\c3c61c40-8fd8-4b0e-bf0e-d140871687d8.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4197,6 +4253,10 @@
         "2fbb2a02-faba-4f7a-9fc1-2e0e0b7e9646",
         "e51366d6-d1b4-4db2-99a5-cc9108b9a4f6",
         "2e7d44a8-e0e5-4644-a057-ec586a9b4606",
+        "34b0f736-fb45-4f48-89cc-a4becc9444b4",
+        "a8ee6ec8-352c-4f9f-8fbd-48dfad5e6007",
+        "9b15f637-983b-48a4-8074-e73313ed3507",
+        "03165dca-1b92-4f7f-a640-a1bc4f14f19f",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",

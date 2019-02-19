@@ -17,6 +17,7 @@ map[? ROCKET_MAP.TYPE] = ROCKET.NONE; //Rocket type (must have)
 map[? ROCKET_MAP.BUFF] = noone; //The buffs a rocket has (array)
 map[? ROCKET_MAP.ENABLED] = true; //Is the rocket enabled in-game?
 map[? ROCKET_MAP.SCALE] = 1.3; //Default rocket scale
+map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = true; //automatically destroy instance when collided
 //DAMAGES
 map[? ROCKET_MAP.DAMAGE] = 1; //Base damage
 map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket
@@ -31,6 +32,7 @@ map[? ROCKET_MAP.ROCKET_ALPHA] = 1; //Rockets alpha value
 map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE3]; //rocket particle trail
 map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
 map[? ROCKET_MAP.PARTICLE_AMT] = 5; //rocket particle trail amount
+map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = true; //Make the orientation of particle respect to rocket
 //SCREEN SHAKE
 map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2; //Screen shake magnitude
 map[? ROCKET_MAP.SHAKE_FRAMES] = 8; //Screen shake frame
