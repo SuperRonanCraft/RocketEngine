@@ -23,7 +23,8 @@
         "8e8e6f46-10d3-4e7a-b898-e9574690cc59",
         "4174624f-3c7c-4002-adf5-82a4d51891d5",
         "fa647531-2b6f-4476-94da-e9f9d162fdc8",
-        "24dc3915-813e-42cb-a082-e9b24d6bb714"
+        "24dc3915-813e-42cb-a082-e9b24d6bb714",
+        "532c2c97-96c1-4910-9d10-e5a823243fe8"
     ],
     "filterType": "GMSprite",
     "folderName": "Rockets",

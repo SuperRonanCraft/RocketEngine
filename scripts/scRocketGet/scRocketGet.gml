@@ -246,8 +246,9 @@ switch (roc) {
 		map[? ROCKET_MAP.COOLDOWN] = 18 * varcd;
 		map[? ROCKET_MAP.SPEED] = 15 * varspd;
 		map[? ROCKET_MAP.CLIP] = 2;
-		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketMagnet_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketMagnet_Step;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketMagnet_Destroy;
 		map[? ROCKET_MAP.RELOAD_TIME] = 60 * vartime;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 2 * vartime;
@@ -331,7 +332,7 @@ switch (roc) {
 		break;
 	
 	case ROCKET.TELEPORT:
-		map[? ROCKET_MAP.NAME] = "Teleporting";
+		map[? ROCKET_MAP.NAME] = "Portal";
 		map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
 		map[? ROCKET_MAP.RECOIL] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
@@ -351,6 +352,26 @@ switch (roc) {
 		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		//map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
+		break;
+	
+	case ROCKET.ARCHING:
+		map[? ROCKET_MAP.NAME] = "Bowing";
+		map[? ROCKET_MAP.DESCRIPTION] = "The ark!";
+		map[? ROCKET_MAP.RECOIL] = 2;
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.ARCHING;
+		map[? ROCKET_MAP.COOLDOWN] = 8 * varcd;
+		map[? ROCKET_MAP.SPEED] = 11 * varspd;
+		map[? ROCKET_MAP.RELOAD_TIME] = 50 * varcd;
+		map[? ROCKET_MAP.CLIP] = 3;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketArching_Step;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketArching_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
+		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		//map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
+		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
+		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
 }
 
