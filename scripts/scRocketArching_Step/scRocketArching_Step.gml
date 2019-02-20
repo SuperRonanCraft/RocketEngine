@@ -1,6 +1,6 @@
 var map = archMap;
 
-var spd = rocket_map[? ROCKET_MAP.SPEED] * map[? "side"];
+var spd = (rocket_map[? ROCKET_MAP.SPEED] * map[? "side"]) * owner.time_dialation;
 map[? "x"] += spd;
 var xx = map[? "x"], dis = map[? "dis"];
 map[? "y"] = (xx * (xx - dis)) / (dis * map[? "multi"]);

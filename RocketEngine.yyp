@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "01cfe7e1-8967-4426-a649-233b97758fea",
+            "Value": {
+                "id": "9d7bc61b-6f83-4a8a-860e-e3cbc779447f",
+                "resourcePath": "scripts\\scDrawParticle\\scDrawParticle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "02b336b5-7467-4576-8a97-db9d380154a7",
             "Value": {
                 "id": "8a378eb8-518b-4164-80f8-461f844ca2bc",
@@ -388,6 +396,14 @@
                 "id": "3a41775a-def8-46d3-83e5-e6c19355b1be",
                 "resourcePath": "views\\1519c071-385b-4197-964b-ec2af6504174.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "15569e88-3fdc-4af7-ad85-e6d86b803416",
+            "Value": {
+                "id": "972bb14f-8110-4c3d-9818-c424fe8943f2",
+                "resourcePath": "scripts\\scUIMenuColor\\scUIMenuColor.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1018,7 +1034,7 @@
             "Key": "3cd2a549-2c05-4258-9bca-3efaeafe1396",
             "Value": {
                 "id": "7c0421f9-cf1e-461f-8bc9-6b7c0707c992",
-                "resourcePath": "sprites\\sRocTeleportPortal1\\sRocTeleportPortal1.yy",
+                "resourcePath": "sprites\\sRocTeleportPortal\\sRocTeleportPortal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1148,6 +1164,14 @@
                 "id": "cef4dc6b-d8d6-49e7-bc1f-b3d4b891e0fa",
                 "resourcePath": "views\\43962847-d03f-4fe4-be08-d1e2d655ed0f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "43bd36f1-0f26-4131-828f-c2f251a68016",
+            "Value": {
+                "id": "d7461de8-c5f7-4ef4-a8cb-8dcac7e5a721",
+                "resourcePath": "sprites\\s_pportal\\s_pportal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1475,14 +1499,6 @@
             "Value": {
                 "id": "5e583292-ea70-4f8d-891b-81133630911e",
                 "resourcePath": "sprites\\s_abilityIcon_Speed\\s_abilityIcon_Speed.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "5523fb5b-75c3-427b-af45-6e4b82a5c6c3",
-            "Value": {
-                "id": "9922b2a7-018f-4f11-8018-14ac33a39dc3",
-                "resourcePath": "sprites\\sRocTeleportPortal\\sRocTeleportPortal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2175,6 +2191,14 @@
             }
         },
         {
+            "Key": "8203ec32-611f-4df4-9112-a9ff85985bb1",
+            "Value": {
+                "id": "1c6b1fb1-8e7b-4915-a703-144316a7737b",
+                "resourcePath": "scripts\\scRocketShotgun_Destroy\\scRocketShotgun_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "822463af-75c0-4740-b109-3696c806301d",
             "Value": {
                 "id": "d4ca4564-7a33-4622-b92b-0423f036fcb1",
@@ -2615,6 +2639,14 @@
             }
         },
         {
+            "Key": "9a57686d-0d9e-4de7-a87a-035e4eccf56b",
+            "Value": {
+                "id": "18d661a7-ab49-4133-9ce6-750d80b93c63",
+                "resourcePath": "scripts\\scRocketShotgun_Create\\scRocketShotgun_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9a7c461b-65a4-4d9d-a0ca-8c62918e3307",
             "Value": {
                 "id": "4339026b-08d8-45c2-bf8e-1a12df8f2090",
@@ -2794,7 +2826,7 @@
             "Key": "a3bea0da-29c2-4116-b98e-4fc70b51c1ab",
             "Value": {
                 "id": "17ab60f9-13e8-4b6f-8df3-c1e836de5e16",
-                "resourcePath": "sprites\\sUltPortal1\\sUltPortal1.yy",
+                "resourcePath": "sprites\\sUltPortal\\sUltPortal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3147,14 +3179,6 @@
             "Value": {
                 "id": "f957b2eb-a1a7-41ea-8784-3e62b9de9d60",
                 "resourcePath": "sprites\\sUltLaser\\sUltLaser.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "b55005a0-65ac-4abf-ba52-77c43ed14ee5",
-            "Value": {
-                "id": "2b22db68-9b95-4169-a6a4-e4895c9ef925",
-                "resourcePath": "sprites\\sUltPortal\\sUltPortal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4342,6 +4366,8 @@
         "f72e821d-28fa-437c-aa5c-0c3fb1a2f9aa",
         "2fbb2a02-faba-4f7a-9fc1-2e0e0b7e9646",
         "e51366d6-d1b4-4db2-99a5-cc9108b9a4f6",
+        "9a57686d-0d9e-4de7-a87a-035e4eccf56b",
+        "8203ec32-611f-4df4-9112-a9ff85985bb1",
         "2e7d44a8-e0e5-4644-a057-ec586a9b4606",
         "34b0f736-fb45-4f48-89cc-a4becc9444b4",
         "a8ee6ec8-352c-4f9f-8fbd-48dfad5e6007",
@@ -4438,6 +4464,7 @@
         "54791054-8f45-4f70-958a-fafb6a31106c",
         "4f496e7c-5b8f-4f44-bd34-75ba158982c8",
         "9a0da5da-81e2-4634-9400-c0e170ae88bc",
+        "15569e88-3fdc-4af7-ad85-e6d86b803416",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",
@@ -4468,6 +4495,7 @@
         "19455d7d-472c-41ce-a375-87e79c0b8fc9",
         "54391887-2485-456f-8f52-d226cc98a8e9",
         "fa5855a1-186b-4e43-aefc-704bba09dcbb",
+        "01cfe7e1-8967-4426-a649-233b97758fea",
         "ec0e18b5-ebc1-4b4a-be22-92f7667ca5ea",
         "a8615d81-d453-4895-91f1-52b35fed0118",
         "e2a97c9b-a1dd-4af2-8a0d-39cdee6d4d90",

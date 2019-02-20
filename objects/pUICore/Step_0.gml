@@ -9,6 +9,7 @@ var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
 
 if (inputting) { //Are we inputting data?
 	switch (ds_grid[# 1, menu_option[page]]) {
+		case menu_element_type.shift_script:
 		case menu_element_type.shift:
 			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
 			if (hinput == 0) { //HOVERING SUPPORT
@@ -197,6 +198,7 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 		//Input elements
 		case menu_element_type.slider: //If its a slider
 		case menu_element_type.shift: //If we were shifting
+		case menu_element_type.shift_script: //If we were shifting
 		case menu_element_type.toggle: //If we were toggling
 			if (inputting) { 
 				if (option == menu_element_type.slider) {
@@ -204,6 +206,9 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 				} else if (option == menu_element_type.shift) {
 					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+				} else if (option == menu_element_type.shift_script) {
+					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+					script_execute(ds_grid[# 5, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 				} else {
 					if (ds_grid[# 2, menu_option[page]] != noone)
 						script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);

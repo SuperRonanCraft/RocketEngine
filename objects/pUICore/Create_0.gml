@@ -16,6 +16,8 @@ enum menu_element_type {
 	slider,
 	//Go from one value to another
 	shift,
+	//Go from one value to another and execute script
+	shift_script,
 	//Toggle from true <-> false
 	toggle,
 	//Takes a key input
@@ -88,7 +90,7 @@ slider_width = 128; //Length of the sliders
 
 //Colors
 color_main = c_gray; //Button colors
-color_main_hovering = c_orange; //Button hovering colors
+color_main_hovering = c_orange;//global.menu_color_hover_act; //Button hovering colors
 color_element = c_ltgray; //Element colors (desc or input)
 color_element_input = c_yellow; //Inputting element color
 color_element_input_unselected = c_black; //Inputting element unselected color (toggle)

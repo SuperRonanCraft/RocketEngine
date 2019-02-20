@@ -72,6 +72,8 @@ for (var i = 0; i < ds_height; i++) {
 		case menu_element_type.script_runner:
 		case menu_element_type.goto_room:
 			scUIDescription(ltx, lty, ds_grid, 3, i); break;
+		case menu_element_type.shift_script:
+			scUIDescription(ltx, lty, ds_grid, 6, i); break;
 		case menu_element_type.shift:
 		case menu_element_type.input:
 		case menu_element_type.toggle:
@@ -95,6 +97,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	if (inputting && menu_option[page] == i && ds_grid[# 1, i] != menu_element_type.input)
 		scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
 	switch (ds_grid[# 1, i]) {
+		case menu_element_type.shift_script:
 		case menu_element_type.shift:
 			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
 			var left_shift = "<<", right_shift = ">>";

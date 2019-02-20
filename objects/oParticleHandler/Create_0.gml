@@ -3,7 +3,7 @@
 
 //Particles
 global.ParticleSystem1 = part_system_create();
-part_system_depth(global.ParticleSystem1, 100);
+part_system_depth(global.ParticleSystem1, 99);
 
 global.Emitter1 = part_emitter_create(global.ParticleSystem1);
 
@@ -279,10 +279,20 @@ part_type_gravity(parttype, 0.2 * spd, 90);
 ds_map_add(ds_part, PARTICLES.SLEEP, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SLEEP, 1 * amt);
 
+//PORTAL
+parttype = part_type_create();
+part_type_sprite(parttype, s_pportal, true, false, true);
+part_type_size(parttype, 0.2, 0.3, 0, 0);
+part_type_direction(parttype, 0, 360, 0, 0);
+part_type_speed(parttype, 1 * spd, 1.3 * spd, -0.01 * spd, 0);
+part_type_life(parttype, 13 * life, 25 * life);
+ds_map_add(ds_part, PARTICLES.PORTAL, parttype);
+ds_map_add(ds_part_amt, PARTICLES.PORTAL, 5 * amt);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
-	SLOWMO, PEACE, SLEEP
+	SLOWMO, PEACE, SLEEP, PORTAL
 }

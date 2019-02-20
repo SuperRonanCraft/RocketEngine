@@ -309,7 +309,9 @@ switch (roc) {
 		map[? ROCKET_MAP.SPEED] = 13 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketShotgun_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketShotgun_Step;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketShotgun_Destroy;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
 		break;
 	
@@ -346,6 +348,9 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketTeleport_Draw;
 		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MOB;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PORTAL];
+		map[? ROCKET_MAP.PARTICLE_AMT] = 1;
+		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PORTAL];
 		break;
 	
 	case ROCKET.ARCHING:

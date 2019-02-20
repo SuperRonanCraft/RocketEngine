@@ -90,8 +90,6 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 			ds_map_destroy(buff_map);
 		}
 	}
-			
-		
 	
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	

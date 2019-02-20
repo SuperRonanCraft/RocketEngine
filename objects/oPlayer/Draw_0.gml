@@ -7,7 +7,7 @@ scUltimateHandlerDraw();
 scAnimationState();
 
 //Show weapon clip if larger than 1
-if (rockets_enabled && hp > 0 && global.play) {
+if (rockets_enabled && hp > 0 && global.play && global.weapon_info) {
 	var clip = rocket_map[? ROCKET_MAP.CLIP];
 	if (clip > 1) {
 		var xx = x - 30;
