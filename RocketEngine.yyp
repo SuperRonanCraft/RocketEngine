@@ -1015,6 +1015,14 @@
             }
         },
         {
+            "Key": "3cd2a549-2c05-4258-9bca-3efaeafe1396",
+            "Value": {
+                "id": "7c0421f9-cf1e-461f-8bc9-6b7c0707c992",
+                "resourcePath": "sprites\\sRocTeleportPortal1\\sRocTeleportPortal1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3d9d1734-de3d-4754-8164-2a8911a8656a",
             "Value": {
                 "id": "de4fa8b2-bd9b-4e84-a3a6-ca4af779a5aa",
@@ -2783,6 +2791,14 @@
             }
         },
         {
+            "Key": "a3bea0da-29c2-4116-b98e-4fc70b51c1ab",
+            "Value": {
+                "id": "17ab60f9-13e8-4b6f-8df3-c1e836de5e16",
+                "resourcePath": "sprites\\sUltPortal1\\sUltPortal1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a4012950-c510-497e-8028-40c9f7870aa7",
             "Value": {
                 "id": "a2a9ee7c-dd5f-4e45-87b0-d6df9181ea91",
@@ -3131,6 +3147,14 @@
             "Value": {
                 "id": "f957b2eb-a1a7-41ea-8784-3e62b9de9d60",
                 "resourcePath": "sprites\\sUltLaser\\sUltLaser.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b55005a0-65ac-4abf-ba52-77c43ed14ee5",
+            "Value": {
+                "id": "2b22db68-9b95-4169-a6a4-e4895c9ef925",
+                "resourcePath": "sprites\\sUltPortal\\sUltPortal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4122,7 +4146,7 @@
             "Key": "f9f1c0d0-3274-4a05-8fc3-99bff39646c4",
             "Value": {
                 "id": "fc4baea5-b6b3-4456-ad71-5407f238cab2",
-                "resourcePath": "objects\\oUltimateMob\\oUltimateMob.yy",
+                "resourcePath": "objects\\oUltimatePortal\\oUltimatePortal.yy",
                 "resourceType": "GMObject"
             }
         },

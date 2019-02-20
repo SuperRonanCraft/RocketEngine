@@ -1,7 +1,7 @@
 
 var colliding = false;
-var hspd = !shoot_face ? (team == TEAM.LEFT ? 1 : -1) : (facing == 1 ? 1 : -1) * 21;
-var xx = x, yy = y, yspd = -8;
+var hspd = !shoot_face ? (team == TEAM.LEFT ? 1 : -1) : (facing == 1 ? 1 : -1) * 24;
+var xx = x, yy = y, yspd = -8 / TIME_SPEED;
 var grv = 1.5;
 while (!colliding) {
 	var inst = instance_place(xx, yy, oWall);

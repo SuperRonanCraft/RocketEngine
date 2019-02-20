@@ -15,7 +15,7 @@ enum ACTIONS {
 }
 
 //Random action
-randDirection = ACTIONS.RIGHT;
+randDirection = choose(ACTIONS.RIGHT, ACTIONS.LEFT);
 
 //Check Ultimate status
 ultReady = false;

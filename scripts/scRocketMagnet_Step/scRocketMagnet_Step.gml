@@ -1,6 +1,8 @@
 ///Magnet Step
 var map = magnetMap;
-if (direction == 0 || direction == 180 && !map[? "movingdir"]) {
+if ((direction == 0 || direction == 180) && !map[? "movingdir"]) {
+	if (!instance_exists(map[? "target"]))
+		map[? "target"] = scFindTarget(owner.team);
 	with (map[? "target"])
 		if ((other.x > x - 25 && other.x < x + 25)) {
 			if (y > other.y)
@@ -11,22 +13,16 @@ if (direction == 0 || direction == 180 && !map[? "movingdir"]) {
 		}
 } else if (map[? "movingdir"]) {
 	var targetdir = map[? "target_dir"];
-	var change = 2;
-	if (targetdir == 90 && direction < 90)
-		direction += change;
-	else if (targetdir == 90 && direction > 90)
-		direction -= change;
-	else if (targetdir == 270 && direction < 180)
-		direction += change;
-	else if (targetdir == 270 && direction > 180)
-		direction -= change;
-	if (abs(direction - targetdir) <= 5) {
-		direction = targetdir;
+	var change = 20;
+	var diff = angle_difference(direction, targetdir); //The difference between the rocket direction and target direction
+	if (abs(diff) > change)
+		direction -= clamp(diff, -change, change); //Slowly rotate the rocket
+	else {
 		map[? "movingdir"] = false;
+		direction = targetdir;
 	}
+	image_angle = direction;
 }
-	
-image_angle = direction;
 
 var spd = rocket_map[? ROCKET_MAP.SPEED];
 scMovementLine(spd, direction);

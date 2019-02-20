@@ -119,12 +119,18 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSleepDart;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHomingDraw;
 		break;
+	case ULTIMATE.MOB:
+		ds_map[? ULTIMATE_MAP.NAME] = "Mad Mob!";
+		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimatePortal;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateCloneDraw;
+		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
-	SLOWMO, SLEEPDART,
+	SLOWMO, SLEEPDART, MOB,
 	NONE,
 	//PUT LAST
 	LENGTH

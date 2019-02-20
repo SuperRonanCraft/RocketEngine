@@ -345,13 +345,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketTeleport_Destroy;
 		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketTeleport_Draw;
 		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
-		//map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];
-		//map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.PEACE];
-		//map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PEACE];
-		//map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
-		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
-		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
-		//map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MOB;
 		break;
 	
 	case ROCKET.ARCHING:
@@ -369,8 +363,6 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketArching_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
-		//map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
-		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
 }
