@@ -147,6 +147,7 @@ part_type_gravity(parttype, 0.5 * spd, 90);
 ds_map_add(ds_part, PARTICLES.ULTCHARGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.ULTCHARGE, 1 * amt);
 
+//KNOCKBACK SMOKE
 parttype = part_type_create();
 part_type_sprite(parttype, s_psmoke2, false, false, true);
 part_type_size(parttype, 1, 1.2, -0.05 * spd, 0);
@@ -287,10 +288,20 @@ part_type_life(parttype, 13 * life, 25 * life);
 ds_map_add(ds_part, PARTICLES.PORTAL, parttype);
 ds_map_add(ds_part_amt, PARTICLES.PORTAL, 5 * amt);
 
+//DUST
+parttype = part_type_create();
+part_type_sprite(parttype, s_pdust, true, false, false);
+part_type_size(parttype, 0.8, 1.2, 0, 0);
+part_type_speed(parttype, 0.02 * spd, 0.04 * spd, -0.02 * spd, 0);
+part_type_gravity(parttype, 0.25 * spd, 90);
+part_type_life(parttype, 8, 11);
+ds_map_add(ds_part, PARTICLES.DUST, parttype);
+ds_map_add(ds_part_amt, PARTICLES.DUST, 5 * amt);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
-	SLOWMO, PEACE, SLEEP, PORTAL
+	SLOWMO, PEACE, SLEEP, PORTAL, DUST
 }
