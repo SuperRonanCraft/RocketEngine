@@ -64,7 +64,7 @@ animState = ANIMATIONSTATE.STANDING;
 
 //Movement vars
 controlling = 0; //If the player is controlling AND moving
-friction_base = 0.3 * TIME_SPEED;
+friction_base = 0.6;
 friction_adj = 0;
 recoilKB = 0;
 recoilMAX = 0;

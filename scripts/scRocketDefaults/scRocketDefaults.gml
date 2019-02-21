@@ -1,7 +1,7 @@
 /// @desc Set all the default values for a Rockets map
 
 var map = ds_map_create();
-map[? ROCKET_MAP.RECOIL] = 2; //Amount of recoil to push the player back
+map[? ROCKET_MAP.RECOIL] = 2 * TIME_SPEED; //Amount of recoil to push the player back
 map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.NONE; //Sprite to show
 map[? ROCKET_MAP.COOLDOWN] = 0; //Cooldown between shots
 map[? ROCKET_MAP.SPEED] = 0; //Speed of rocket
@@ -34,8 +34,8 @@ map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
 map[? ROCKET_MAP.PARTICLE_AMT] = 5; //rocket particle trail amount
 map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = true; //Make the orientation of particle respect to rocket
 //SCREEN SHAKE
-map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2; //Screen shake magnitude
-map[? ROCKET_MAP.SHAKE_FRAMES] = 8; //Screen shake frame
+map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2 * TIME_SPEED; //Screen shake magnitude
+map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * TIME_SPEED; //Screen shake frame
 //EXPLOSIONS
 map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Default; //Sprite of explosion
 map[? ROCKET_MAP.EXPLOSION_CREATE] = noone; //Only if no event for rocket, wall or shootable
@@ -52,5 +52,5 @@ map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.DEFAULT; //The rockets ultimate power
 map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = true; //If the rocket should give ultcharge
 map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //Multiplier offset of a specific rocket 1 for none
 //KNOCKBACK
-map[? ROCKET_MAP.KBAMT] = 20;
+map[? ROCKET_MAP.KBAMT] = 35 / TIME_SPEED;
 return map;

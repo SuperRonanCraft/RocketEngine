@@ -10,5 +10,5 @@ if (target != noone)
 map[? "dis"] = dis;
 map[? "x"] = 0;
 map[? "y"] = 0;
-map[? "multi"] = choose(-1, 1) * (0.5 + random(1.5));
+map[? "multi"] = choose(-1, 1) * (0.4 + random(2));
 map[? "side"] = side;
