@@ -1,14 +1,12 @@
 /// @desc a sand rockets explosion create event
 /// @arg explosion-instance
 
-var val = 45 * (direction == 180 ? 1 : -1);
-if (owner.standing)
-	direction -= val;
-else
-	direction += val;
-image_angle = direction;
+var side = direction == 0 ? 1 : -1;
 
-bouncy = ds_map_create();
-bouncy[? "reflectedx"] = false;
-bouncy[? "reflectedy"] = false;
-bouncy[? "passbarrier"] = true;
+bounceMap = ds_map_create();
+var map = bounceMap;
+map[? "bounced"] = false;
+map[? "hsp"] = rocket_map[? ROCKET_MAP.SPEED] * side;
+map[? "vsp"] = -10;
+map[? "grv"] = 0.4;
+map[? "frc"] = 0.005;

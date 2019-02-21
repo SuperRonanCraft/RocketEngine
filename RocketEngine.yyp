@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "050d13bb-375e-45bc-bc7b-93d3fc0b302e",
+            "Value": {
+                "id": "220fd13d-18ad-4e7d-8af5-29903df5806d",
+                "resourcePath": "scripts\\scRocketBoomerang_Create\\scRocketBoomerang_Create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
             "Value": {
                 "id": "b985dcf7-a1a7-4f7c-9d3f-880f00b367a6",
@@ -212,6 +220,14 @@
                 "id": "81d93384-71a3-468e-8371-221ae0f9b9d1",
                 "resourcePath": "views\\068cb5e8-8976-4f96-8ca4-ab010e68c51c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "07af92e0-8757-46f3-8f6a-24d215dda9cb",
+            "Value": {
+                "id": "e774203b-ddab-4ca5-b70e-baeb553aba76",
+                "resourcePath": "scripts\\scRocketBoomerang_Step\\scRocketBoomerang_Step.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -783,6 +799,14 @@
             }
         },
         {
+            "Key": "2d0bae85-640d-4962-82d3-f31374f684aa",
+            "Value": {
+                "id": "fd3f323e-85e5-459a-8cbc-f375dbb3018a",
+                "resourcePath": "scripts\\scRocketBoomerang_Destroy\\scRocketBoomerang_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2dafeaac-dcfc-4533-b268-e020fc82992f",
             "Value": {
                 "id": "aa243bfb-0b0a-444a-9a92-fd897ac7a547",
@@ -1052,6 +1076,14 @@
                 "id": "1809ff2d-78a5-4b51-add2-66d599d0b7c6",
                 "resourcePath": "scripts\\scRocketSpecialSlime_Create\\scRocketSpecialSlime_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3e562b93-e0b5-49e5-a5ea-dbde53ec4ab5",
+            "Value": {
+                "id": "f0bf7040-5e80-4bc8-8882-90f8f7e97573",
+                "resourcePath": "sprites\\sRocket_Boomerang\\sRocket_Boomerang.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4143,6 +4175,14 @@
             }
         },
         {
+            "Key": "f6f1af58-f290-4b5d-8e12-437aa6c823d5",
+            "Value": {
+                "id": "808376b6-6cea-4e60-b47b-bf678124b95f",
+                "resourcePath": "views\\f6f1af58-f290-4b5d-8e12-437aa6c823d5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f72e821d-28fa-437c-aa5c-0c3fb1a2f9aa",
             "Value": {
                 "id": "8ae5bbd6-929a-4647-99fc-f21723860c88",
@@ -4392,6 +4432,9 @@
         "3995c68f-dd29-4385-970a-18b2c00f3ed9",
         "4acae887-a676-4e1d-8ae0-f97cb2191423",
         "a1c23a1d-2d5b-4ee1-90e6-d0b77622cc2f",
+        "050d13bb-375e-45bc-bc7b-93d3fc0b302e",
+        "07af92e0-8757-46f3-8f6a-24d215dda9cb",
+        "2d0bae85-640d-4962-82d3-f31374f684aa",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",

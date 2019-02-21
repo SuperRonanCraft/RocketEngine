@@ -219,7 +219,7 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
-		map[? ROCKET_MAP.ENABLED] = false;
+		//map[? ROCKET_MAP.ENABLED] = false;
 		break;
 		
 	case ROCKET.SPIKED:
@@ -309,6 +309,8 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketShotgun_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketShotgun_Step;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketShotgun_Destroy;
+		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SMOKE3];
+		map[? ROCKET_MAP.PARTICLE_AMT] = 100;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
 		break;
 	
@@ -363,6 +365,22 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketArching_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
+		break;
+	case ROCKET.BOOMERANG:
+		map[? ROCKET_MAP.NAME] = "Boomerang";
+		map[? ROCKET_MAP.DESCRIPTION] = "The skill!";
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOOMERANG;
+		map[? ROCKET_MAP.RECOIL] = 1 * varkb;
+		map[? ROCKET_MAP.COOLDOWN] = 8 * varcd;
+		map[? ROCKET_MAP.SPEED] = 5 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 2 * vartime;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketBoomerang_Step;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketBoomerang_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBoomerang_Destroy;
+		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
 }

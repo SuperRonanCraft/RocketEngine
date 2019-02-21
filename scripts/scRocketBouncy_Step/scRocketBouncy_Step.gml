@@ -1,47 +1,25 @@
 /// @desc reflect off wall
+var map = bounceMap;
 
-var refx = false, refy = false, last_refx = bouncy[? "reflectedx"], last_refy = bouncy[? "reflectedy"];
-
-var spd = rocket_map[? ROCKET_MAP.SPEED];
-var hsp = lengthdir_x(spd, direction);
-var vsp = lengthdir_y(spd, direction);
+//var spd = rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation;
+map[? "vsp"] += map[? "grv"];
+map[? "hsp"] += -sign(map[? "hsp"]) * map[? "frc"];
 
 
-var col = false;
-var inst = collision_point(x + hsp, y, oWall, true, false);
-if (inst != noone) { //Check x collision
-	if (inst.object_index == oSeperator) {
-		if (bouncy[? "passbarrier"]) {
-			bouncy[? "passbarrier"] = false;
-			col = false;
-		} else
-			col = true;
-	} else 
-		col = true;
-	if (col && !last_refy && !last_refx)
-		direction = 180 - direction;
-	refx = true;
+var colx = false;
+var inst = collision_point(x + map[? "hsp"], y, oWall, true, false);
+if (inst != noone && inst.object_index != oSeperator) {
+	map[? "hsp"] /= -1.5;
+	colx = true;
 }
 
-inst = collision_point(x, y + vsp, oWall, true, false);
-if (inst != noone) {
-	if (inst.object_index == oSeperator) {
-		if (bouncy[? "passbarrier"]) {
-			bouncy[? "passbarrier"] = false;
-			col = false;
-		} else
-			col = true;
-	} else 
-		col = true;
-	if (col && (!refx && !last_refx))
-		direction = 360 - direction;
-	refy = true;
+inst = collision_point(x, y + map[? "vsp"], oWall, true, false);
+if (inst != noone && inst.object_index != oSeperator) {
+	map[? "vsp"] /= -1.5;
+	map[? "vsp"] /= 1.05;
 }
-
-bouncy[? "reflectedx"] = refx;
-bouncy[? "reflectedy"] = refy;
-
-x += hsp;
-y += vsp;
-if (refx || refy)
-	image_angle = direction;
+	
+x += map[? "hsp"];
+y += map[? "vsp"];
+direction = point_direction(x, y, x + map[? "hsp"], y + map[? "vsp"]);
+image_angle = direction;

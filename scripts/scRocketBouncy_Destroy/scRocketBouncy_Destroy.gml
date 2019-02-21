@@ -1,1 +1,1 @@
-ds_map_destroy(bouncy);
+ds_map_destroy(bounceMap);

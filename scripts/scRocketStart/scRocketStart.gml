@@ -15,7 +15,7 @@ scRocketChange(argument0);
 enum ROCKET {
 	NONE, DEFAULT, FAST, HOMING, REVERSE, ICE, FIRE, SAND, LASER, SLIME,
 	RANDOM, BOUNCY, SPIKED, MAGNET, OBSOLETE, LIGHTNING, SHOTGUN, PEACE,
-	TELEPORT, ARCHING,
+	TELEPORT, ARCHING, BOOMERANG,
 	//KEEP LAST
 	LENGHT
 }
@@ -26,7 +26,7 @@ enum ROCKET_SPRITE {
 	ICE = sRocket_Ice, FIRE = sRocket_Fire, SAND = sRocket_Sand, LASER = sRocket_Laser, SLIME = sRocket_Slime,
 	RANDOM = sRocket_Random, BOUNCY = sRocket_Bouncy, SPIKED = sRocket_Spiked, MAGNET = sRocket_Magnet, OBSOLETE = sRocket_Obsolete,
 	LIGHTNING = sRocket_Lightning, SHOTGUN = sRocket_Shotgun, PEACE = sRocket_Peace, TELEPORT = sRocket_Teleport,
-	ARCHING = sRocket_Arching
+	ARCHING = sRocket_Arching, BOOMERANG = sRocket_Boomerang
 }
 
 enum ROCKET_MAP {
