@@ -17,8 +17,7 @@ if (!exit_created) {
 	
 	portal_timer--;
 	//Collision
-	event_user(0);
-	
+	event_user(0);	
 } else {
 	portal_alpha = max(portal_alpha - alpha_change, 0);
 	image_alpha = max(image_alpha - alpha_change, 0);

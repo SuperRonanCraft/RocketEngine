@@ -101,8 +101,11 @@ for (var e = 0; e < 2; e++) {
 		var from = ary[1];
 		ds_list_add(teleported, [p, from]);
 		var offset = 0;
-		if (p.object_index == oRocket)
+		if (p.object_index == oRocket) {
 			offset = p.rocket_map[? ROCKET_MAP.OFFSET] * p.image_xscale;
+			p.image_xscale /= 4;
+			p.image_yscale /= 4;
+		}
 		if (from) {
 			p.x = exit_x + offset;
 			p.y = exit_y;

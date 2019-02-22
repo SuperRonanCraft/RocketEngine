@@ -6,7 +6,8 @@
     "children": [
         "558ac4eb-3f40-44da-8b90-c12aeb3e664a",
         "b0ad2d55-dfd4-441e-bce4-b60104d4b865",
-        "2e6f01a9-923d-4e48-bc3c-4a7e3ba5feaf"
+        "2e6f01a9-923d-4e48-bc3c-4a7e3ba5feaf",
+        "888e76d5-7b9c-400c-9fd4-94dc92ec21dd"
     ],
     "filterType": "GMScript",
     "folderName": "Obsolete",

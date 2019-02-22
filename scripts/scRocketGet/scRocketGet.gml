@@ -270,8 +270,9 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketObsolete_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketObsolete_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketObsolete_Destroy;
+		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketObsolete_Draw;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
-		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NAPALM;
 		break;
 	

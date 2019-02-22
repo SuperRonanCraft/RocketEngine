@@ -7,5 +7,4 @@ var dis = RES_W / 4;
 map[? "dis"] = dis;
 map[? "x"] = 0;
 map[? "y"] = 0;
-map[? "multi"] = 0.125 * -side;
-map[? "side"] = side;
+map[? "multi"] = 0.125;
