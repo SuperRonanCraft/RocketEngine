@@ -2303,6 +2303,14 @@
             }
         },
         {
+            "Key": "865c2c03-6d3c-4750-8b0c-1284db59b9e5",
+            "Value": {
+                "id": "231228d3-e9bb-4f15-bc38-e37e9f7b48a1",
+                "resourcePath": "sprites\\s_pteleport\\s_pteleport.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "86cf25f3-b5b6-4523-b479-b6c396e8c840",
             "Value": {
                 "id": "4be2e694-a2c5-4acd-95e4-1c14c9443394",
