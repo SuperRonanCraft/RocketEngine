@@ -219,7 +219,6 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
-		//map[? ROCKET_MAP.ENABLED] = false;
 		break;
 		
 	case ROCKET.SPIKED:
@@ -372,7 +371,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "The skill!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOOMERANG;
 		map[? ROCKET_MAP.RECOIL] = 1 * varkb;
-		map[? ROCKET_MAP.COOLDOWN] = 8 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 46 * varcd;
 		map[? ROCKET_MAP.SPEED] = 5 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 2 * vartime;

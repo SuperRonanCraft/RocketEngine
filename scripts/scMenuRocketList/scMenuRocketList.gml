@@ -3,14 +3,15 @@ var pg = page_rockets;
 var spr, name, desc, buffs, rx, ry, c, yoffset, index = 0, ioffset = ROCKET.DEFAULT;
 
 var disabled = 0;
-for (var i = 0; i < amt; i++) {
+for (var i = ioffset; i < amt; i++) {
 	var roc_map = scRocketGet(i);
 	if (!roc_map[? ROCKET_MAP.ENABLED])
 		disabled++;
 	ds_map_destroy(roc_map);
 }
 
-for (var i = (pg * (columns * rows) + (pg > 0 ? disabled : 0)) + ioffset; index < ((pg * (columns * rows)) + ioffset) + (columns * rows) - disabled && i < amt; i++) {
+var newi = (pg * (columns * rows)) + ioffset + (pg > 0 ? disabled : 0);
+for (var i = newi; index < columns * rows && i < amt; i++) {
 	var roc_map = scRocketGet(i);
 	if (!roc_map[? ROCKET_MAP.ENABLED]) {ds_map_destroy(roc_map); continue;} //Is it disabled?
 	if (index mod columns == 0)
@@ -19,6 +20,7 @@ for (var i = (pg * (columns * rows) + (pg > 0 ? disabled : 0)) + ioffset; index 
 	var name = roc_map[? ROCKET_MAP.NAME];
 	var desc = roc_map[? ROCKET_MAP.DESCRIPTION];
 	var buffs = roc_map[? ROCKET_MAP.BUFF];
+	var clip = roc_map[? ROCKET_MAP.CLIP];
 	var rx = ((RES_W / 8) + ((RES_W / 4) * index)) - ((offset - 1) * ((RES_W / 4) * columns));
 	var ry = offset * 130 + 50;
 	var c = color_element;
@@ -29,6 +31,13 @@ for (var i = (pg * (columns * rows) + (pg > 0 ? disabled : 0)) + ioffset; index 
 		if (mouse_check_button_pressed(mb_left))
 			with (oPlayer)
 				scRocketChange(roc_map[? ROCKET_MAP.TYPE]);
+	}
+	if (clip > 1) {
+		var lx = rx + 40;
+		for (var d = 0; d < clip; d++) {
+			var ly = ry + 20 + (5 * d) + yoffset;
+			scDrawLine(lx, ly, lx + 10, ly, c_yellow, 2, 0.5);
+		}
 	}
 	scDrawText(rx, ry, name, c, scale_element); //Rocket name
 	draw_sprite(spr, 0, rx, ry + 30 + yoffset); //Rocket icon
