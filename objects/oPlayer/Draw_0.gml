@@ -6,17 +6,29 @@ scUltimateHandlerDraw();
 //Animate the player in their current state
 scAnimationState();
 
-//Recoil smoke
-//if (recoilMAX != 0)
-//	scDrawParticle(bbox_left, bbox_bottom - 2, bbox_right, bbox_bottom + 2, PARTICLES.SMOKE3, 1);
-
-if (hsp != 0 && standing)
-	if (smoke_cur >= smoke_act - irandom(smoke_act / 2)) {
-		var amt = irandom_range(1, 3);
-		scDrawParticle(bbox_left, bbox_bottom - 2, bbox_right, bbox_bottom + 2, PARTICLES.DUST, amt, facing == 1 ? [-5, 5] : [175, 185]);
-		smoke_cur = 0;
-	} else
-		smoke_cur++;
+//Moving dust
+if (standing) {
+	var amt = 0;
+	var dirs;
+	var range = 5;
+	if (hsp != 0)
+		if (smoke_cur >= smoke_act - irandom(smoke_act / 2)) {
+			amt = irandom_range(1, 3);
+			dirs = facing != 1 ? [-5, 5] : [175, 185];
+			smoke_cur = 0;
+		} else
+			smoke_cur++;
+	if (smoke_lastvsp > 20) {
+		amt = 20;
+		dirs = [-20, 200];
+		range = 15;
+		smoke_lastvsp = 0;
+	}
+	if (amt > 0)
+		scDrawParticle(bbox_left - range, bbox_bottom - 5, bbox_right + range, 
+			bbox_bottom + 2, PARTICLES.DUST, amt, dirs);
+} else
+	smoke_lastvsp = vsp;
 
 //Show weapon clip if larger than 1
 if (rockets_enabled && hp > 0 && global.play && global.weapon_info) {

@@ -80,4 +80,5 @@ buffs_cur = -1;
 
 //Smoke moving effect
 smoke_cur = 0;
-smoke_act = 20;
+smoke_act = 10;
+smoke_lastvsp = 0;

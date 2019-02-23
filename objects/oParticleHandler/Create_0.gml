@@ -292,9 +292,9 @@ ds_map_add(ds_part_amt, PARTICLES.PORTAL, 5 * amt);
 parttype = part_type_create();
 part_type_sprite(parttype, s_pdust, true, false, false);
 part_type_size(parttype, 0.8, 1.2, 0, 0);
-part_type_speed(parttype, 0.02 * spd, 0.04 * spd, -0.02 * spd, 0);
-part_type_gravity(parttype, 0.25 * spd, 90);
-part_type_life(parttype, 8, 11);
+part_type_speed(parttype, 1.5 * spd, 2.5 * spd, -0.03 * spd, 0);
+part_type_gravity(parttype, 0.06 * spd, 90);
+part_type_life(parttype, 8 * 3, 11 * 3);
 ds_map_add(ds_part, PARTICLES.DUST, parttype);
 ds_map_add(ds_part_amt, PARTICLES.DUST, 5 * amt);
 

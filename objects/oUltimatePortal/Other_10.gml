@@ -1,4 +1,5 @@
 /// @desc collision event
+if (!global.play) exit;
 
 for (var e = 0; e < 2; e++) {
 	var inst = e == 0 ? oPlayer : oRocket;

@@ -1,27 +1,44 @@
 /// @desc 
 
+//Connecting particle when teleported
+if (portal_used_entry || portal_used_exit || portal_connect_img != 0) {
+	var dir = point_direction(x, y, exit_x, exit_y) - 90;
+	var scale = (point_distance(x, y, exit_x, exit_y) / 64) / 2.2;
+	var img = floor(portal_connect_img);
+	var alpha = image_alpha - 0.2;
+	scDrawSpriteExt(x, y, portal_connect_spr, img, c_white, alpha, noone, scale, dir);
+	scDrawSpriteExt(exit_x, exit_y, portal_connect_spr, img, c_white, alpha, noone, scale, dir - 180);
+	portal_connect_img += portal_connect_img_spd;
+	if (portal_connect_img >= portal_connect_img_max)
+		portal_connect_img = 0;
+}
+
 var amt = 1, type = PARTICLES.PORTAL;
-if (portal_used_entry) {
+if (portal_used_entry) { //Entry used particles
 	portal_used_entry = false;
 	amt = 100;
 	type = PARTICLES.SPARKLE;
-} 
-scDrawParticle(exit_x - marginx, exit_y - marginy, exit_x + marginx, exit_y + marginy, type, amt);
+}
+var margx = marginx * 3, margy = marginy * 3;
+if (exit_created) //Portal exit particles
+	scDrawParticle(exit_x - margx, exit_y - margy, exit_x + margx, exit_y + margy, type, amt);
 
 amt = 1;
 type = PARTICLES.PORTAL
-if (portal_used_exit) {
+if (portal_used_exit) {//Exit used particles
 	portal_used_exit = false;
 	amt = 100;
 	type = PARTICLES.SPARKLE;
 }
-scDrawParticle(x - marginx, y - marginy, x + marginx, y + marginy, type, amt);
+//Portal entry particles
+scDrawParticle(x - margx, y - margy, x + margx, y + margy, type, amt);
 
-
-if (exit_created) {
+if (exit_created) { //Exit is up, draw it and progress bar
+	//Draw exit
 	scDrawSpriteExt(exit_x, exit_y, sprite_index, image_index, noone, 
-		portal_alpha, image_xscale, image_yscale);
+		portal_alpha, portal_xscale, portal_yscale);
 } else {
+	//Draw portal place progress bar
 	with (owner) {
 		var len = 50, width = 3, margin = 2;
 		var yy = bbox_top - 10 - (width + margin), xx = x - (len / 2);
@@ -31,6 +48,7 @@ if (exit_created) {
 	}
 }
 
+//draw main portal
 draw_self();
 
 if (global.debug) {
