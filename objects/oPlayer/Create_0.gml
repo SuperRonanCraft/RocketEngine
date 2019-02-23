@@ -9,7 +9,8 @@ scKeybindsSet(keys);
 event_inherited();
 
 //Health
-hp = 10;
+hp = 100;
+hp_sub = 10;
 hp_original = hp;
 hp_scale = 1;
 hp_damaged = 0; //Amount of damage taken last time

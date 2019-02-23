@@ -1,20 +1,46 @@
 /// @desc GUI for player hp, rockets and ults
-if (!display) exit;
+//if (!display) exit;
 
 //-----------------
 //Display health
-for (var i = 0; i < hp_original; i++) {
+var hppart = hp mod 10 / 10;
+for (var i = 0; i < hp_original / 10; i++) {
 	//Show first ten hearts, then show additional hearts in text
 	if (i < 10) {
 		var len = hpwidth * i//((offset - 1) * 10));
-		var xpos = team == TEAM.LEFT ? 20 + len : RES_W - 20 - len;
+		var side = team == TEAM.LEFT ? 1 : -1;
+		var xpos = side == 1 ? 20 + len : RES_W - 20 - len;
 		var ypos = hpheight + 2; //+ (offset > 1 ? (offset == 2 ? hpheight + 2 : ((offset - 2) * (hpheight / 1.5)) + (hpheight + 2)) : 0);
-		var scale = i <= hp + (hp_damaged - 1) && i >= hp ? hp_scale : 1;
-		draw_sprite_ext(hpsprite, hp > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
-		scFlash(hp_flash_alpha, hp_flash_color, scale, scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
+		var scale = i * 10 <= hp + (hp_damaged - 1) && i * 10 > hp - 10 ? hp_scale : 1;
+		if (hppart != 0 && i == (hp - (hppart * 10)) / 10) {
+			var alpha = 0.9;
+			var amt = 1;
+			var c = c_white;
+			if (hp_flash_alpha > 0) //shader
+				amt = 2;
+			for (var a = 0; a < amt; a++) {
+				if (a == 1) { //shader
+					shader_set(shFlashAlpha);
+					alpha = hp_flash_alpha;
+					c = c_red;
+				} else {
+					xpos -= ((hpwidth * scale) / 2);
+					ypos -= (hpwidth * scale) / 2;
+				}
+				draw_sprite_part_ext(hpsprite, 0, 0, 0, hpwidth * hppart, hpheight, 
+					xpos, ypos, scale, scale, c, alpha);
+				draw_sprite_part_ext(hpsprite, 1, hpwidth * hppart, 0, hpwidth - (hpwidth * hppart), hpheight,
+					xpos + (hpwidth * (scale - 1)) + (hpwidth * hppart), ypos, scale, scale, c_white, alpha);
+			}
+			if (hp_flash_alpha > 0) //shader
+				shader_reset();
+		} else {
+			draw_sprite_ext(hpsprite, hp / 10 > i ? 0 : 1, xpos, ypos, scale, scale, 0, c_white, 0.8);
+			scFlash(hp_flash_alpha, hp / 10 > i ? hp_flash_color : c_white, scale, scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
+		}
 	} else {
-		if (hp < 10) break;
-		var str = "+" + string(hp - i);
+		if (hp < 100) break;
+		var str = "+" + string((hp / 10) - i);
 		var xpos = team == TEAM.LEFT ? 20 + (hpwidth * 8) : RES_W - 20 - (hpwidth * 8);
 		var ypos = hpheight + 10;
 		c = hp_scale == 1 ? c_white : c_red;
