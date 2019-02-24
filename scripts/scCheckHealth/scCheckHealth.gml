@@ -6,5 +6,5 @@ if (hp <= 0) {
 		playerState = PLAYERSTATE.DEAD;
 	scPlayerDied();
 } else
-	if (hp <= ceil(hp_original / 10) && hp_flash_alpha == 0)
+	if (hp <= 2 && hp_flash_alpha == 0) //Pulse health bar
 		hp_flash_alpha = 0.75;

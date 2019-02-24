@@ -46,7 +46,6 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Homing";
 		map[? ROCKET_MAP.DESCRIPTION] = "I will find you!";
 		map[? ROCKET_MAP.RECOIL] = 5 * varrc;
-		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.HOMING;
 		map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
 		map[? ROCKET_MAP.SPEED] = 20 * varspd;
@@ -126,6 +125,7 @@ switch (roc) {
 	case ROCKET.SAND:
 		map[? ROCKET_MAP.NAME] = "Sandy";
 		map[? ROCKET_MAP.DESCRIPTION] = "In question";
+		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.RECOIL] = 2 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SAND;
 		map[? ROCKET_MAP.COOLDOWN] = 12 * varcd;
@@ -207,7 +207,7 @@ switch (roc) {
 	case ROCKET.BOUNCY:
 		map[? ROCKET_MAP.NAME] = "Bouncy Castle";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ahhh Childhood parties";
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOUNCY;
 		map[? ROCKET_MAP.COOLDOWN] = room_speed * 1.8;
 		map[? ROCKET_MAP.SPEED] = 16 * varspd;
@@ -261,7 +261,7 @@ switch (roc) {
 	case ROCKET.OBSOLETE:
 		map[? ROCKET_MAP.NAME] = "OBSOLETE";
 		map[? ROCKET_MAP.DESCRIPTION] = "It never works ;)";
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.OBSOLETE;
 		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
 		map[? ROCKET_MAP.SPEED] = 24 * varspd;
@@ -279,7 +279,7 @@ switch (roc) {
 	case ROCKET.LIGHTNING:
 		map[? ROCKET_MAP.NAME] = "LIGHTNING";
 		map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
-		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
 		map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
@@ -316,10 +316,13 @@ switch (roc) {
 	
 	case ROCKET.PEACE:
 		map[? ROCKET_MAP.NAME] = "Peace";
-		map[? ROCKET_MAP.DESCRIPTION] = "Back to the 80s";
+		map[? ROCKET_MAP.DESCRIPTION] = "Good vibes brooo";
+		map[? ROCKET_MAP.DAMAGE] = 0;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PEACE;
-		map[? ROCKET_MAP.COOLDOWN] = 55 * varcd;
-		map[? ROCKET_MAP.SPEED] = 14 * varspd;
+		map[? ROCKET_MAP.COOLDOWN] = 10 * varcd;
+		map[? ROCKET_MAP.CLIP] = 3;
+		map[? ROCKET_MAP.RELOAD_TIME] = 30 * varcd;
+		map[? ROCKET_MAP.SPEED] = 15 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];

@@ -101,7 +101,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.HACK];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.HACK];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 2 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
 		break;
 	case BUFFTYPE.REVERSEGRAVITY:
 		ds_map[? BUFF_MAP.NAME] = "Flipped";
@@ -160,6 +160,16 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 3 * room_speed;
 		break;
+	case BUFFTYPE.DAMAGE:
+		ds_map[? BUFF_MAP.NAME] = "Double Damage";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Skull piercing!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.DAMAGE;
+		ds_map[? BUFF_MAP.STEP] = scBuffDamage;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.DAMAGE];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.DAMAGE];
+		ds_map[? BUFF_MAP.GOOD] = true;
+		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -178,13 +188,13 @@ enum BUFF_ICON {
 	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
 	BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
 	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots,
-	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep
+	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep, DAMAGE = s_abilityIcon_Damage
 }
 
 enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
-	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP,
+	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
 	
 	//PUT LAST
 	LENGHT

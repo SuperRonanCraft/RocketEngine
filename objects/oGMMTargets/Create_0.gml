@@ -44,9 +44,9 @@ for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAU
 
 with (oPlayer) {
 	switch (global.mode_targets_difficulty) {
-		case 0: hp = 5; break;
-		case 1: hp = 3; break;
-		case 2: hp = 1; break;
+		case 0: hp = 10; break;
+		case 1: hp = 6; break;
+		case 2: hp = 2; break;
 	}
 	hp_original = hp;
 	scRocketChange(rocindex);

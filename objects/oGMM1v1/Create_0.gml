@@ -16,9 +16,9 @@ with (oPlayer) {
 		case 0: hp /= 10; break;
 		case 1: hp /= 2; break;
 		case 2: hp *= 1; break;
-		case 3: hp *= 20; break;
-		case 4: hp *= 50; break;
-		case 5: hp *= 100; break;
+		case 3: hp *= 2; break;
+		case 4: hp *= 5; break;
+		case 5: hp *= 10; break;
 	}
 	hp_original = hp;
 	scStageUltimateStart(global.mode_1v1_ultimates);

@@ -9,8 +9,7 @@ scKeybindsSet(keys);
 event_inherited();
 
 //Health
-hp = 100;
-hp_sub = 10;
+hp = 20;
 hp_original = hp;
 hp_scale = 1;
 hp_damaged = 0; //Amount of damage taken last time
@@ -20,6 +19,7 @@ hpwidth = sprite_get_width(hpsprite);
 hp_flash_alpha = 0;
 hp_flash_reduce = 0.05 / TIME_SPEED;
 hp_flash_color = c_red;
+hp_color = c_white;
 //display = true; //Display gui stuff
 
 //Show when hit

@@ -17,11 +17,11 @@ for (var i = 0; i < instance_number(oPlayer); i++) {
 //Alter hp and ults
 with (oPlayer) {
 	switch (global.mode_kb_health) {
-		case 0: hp = 1; break;
-		case 1: hp = 2; break;
-		case 2: hp = 3; break;
-		case 3: hp = 5; break;
-		case 4: hp = 10; break;
+		case 0: hp = 2; break;
+		case 1: hp = 4; break;
+		case 2: hp = 6; break;
+		case 3: hp = 10; break;
+		case 4: hp = 20; break;
 	}
 	hp_original = hp;
 	scStageUltimateStart(global.mode_kb_ultimates);

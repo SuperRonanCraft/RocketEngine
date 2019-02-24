@@ -1215,6 +1215,14 @@
             }
         },
         {
+            "Key": "440f5199-a9e4-4ed8-b4f4-53010c009aca",
+            "Value": {
+                "id": "486eea64-18e7-4b2e-a6a4-4f5087a802d7",
+                "resourcePath": "scripts\\scBuffDamage\\scBuffDamage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "441673d3-902a-4783-92c2-4fafa8b32505",
             "Value": {
                 "id": "4a4886ae-a363-4202-a47d-996dea386610",
@@ -2276,6 +2284,14 @@
                 "id": "02abf157-36ac-48f6-b70f-f43898fd58ca",
                 "resourcePath": "scripts\\scDrawLine\\scDrawLine.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "84b2d929-66e9-407f-b209-6b98c511ee2e",
+            "Value": {
+                "id": "1dc59242-c6c5-44f4-904c-30550c8971ea",
+                "resourcePath": "sprites\\s_pdamageboost\\s_pdamageboost.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3503,6 +3519,14 @@
             }
         },
         {
+            "Key": "c1a4e509-33ca-48e3-9121-d572ac997e1c",
+            "Value": {
+                "id": "de6c04ad-a9c8-47f9-8db1-d01a26950bae",
+                "resourcePath": "sprites\\s_abilityIcon_Damage\\s_abilityIcon_Damage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c1aff81f-2979-4818-8590-47e0428b7825",
             "Value": {
                 "id": "8b89ac30-ad20-41a6-9b30-12eefc95ed1a",
@@ -4509,6 +4533,7 @@
         "fc395cba-a75e-4ca3-93db-767b11addd98",
         "4dd4d129-5280-42bb-a6e7-786d76f8739a",
         "085c58de-2240-48f4-9b89-b21ac07969d1",
+        "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

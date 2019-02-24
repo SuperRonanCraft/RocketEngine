@@ -21,6 +21,7 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	var desc = roc_map[? ROCKET_MAP.DESCRIPTION];
 	var buffs = roc_map[? ROCKET_MAP.BUFF];
 	var clip = roc_map[? ROCKET_MAP.CLIP];
+	var dmg = roc_map[? ROCKET_MAP.DAMAGE];
 	var rx = ((RES_W / 8) + ((RES_W / 4) * index)) - ((offset - 1) * ((RES_W / 4) * columns));
 	var ry = offset * 130 + 50;
 	var c = color_element;
@@ -32,8 +33,8 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 			with (oPlayer)
 				scRocketChange(roc_map[? ROCKET_MAP.TYPE]);
 	}
-	if (clip > 1) {
-		var lx = rx + 40;
+	if (clip > 1) { //Show clip
+		var lx = rx + 30;
 		for (var d = 0; d < clip; d++) {
 			var ly = ry + 20 + (5 * d) + yoffset;
 			scDrawLine(lx, ly, lx + 10, ly, c_yellow, 2, 0.5);
@@ -48,6 +49,21 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 			scBuffGet(buffs[b], map);
 			draw_sprite_ext(map[? BUFF_MAP.ICON], 0, rx - (bamt * 20) + (40 * b) + 4, ry + 70, 0.5, 0.5, 0, c_white, 1);
 			ds_map_destroy(map);
+		}
+	}
+	if (dmg > 0) { //Show attack damage
+		var scale = 0.5;
+		var ly = ry + 35 + yoffset;
+		var half = dmg mod 2;
+		var dmgTime = dmg / 2 - half;
+		var lx = rx + 20;
+		for (var d = 0; d < dmgTime; d++) {
+			scDrawSpriteExt(lx + 4, ly + 4, sHealth, 0, noone, 0.8, scale, scale);
+			lx += 8;
+		}
+		if (half > 0) {
+			draw_sprite_part_ext(sHealth, 0, 0, 0, 8, 16, lx, ly, scale, scale, c_white, 0.8);
+			draw_sprite_part_ext(sHealth, 1, 8, 0, 8, 16, lx + 4, ly, scale, scale, c_white, 0.8);
 		}
 	}
 	scDrawText(rx, ry + 60, desc, color_element_input, scale_description); //Rocket Description
