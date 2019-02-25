@@ -327,7 +327,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];
 		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.PEACE];
-		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PEACE];
+		//map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PEACE];
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;

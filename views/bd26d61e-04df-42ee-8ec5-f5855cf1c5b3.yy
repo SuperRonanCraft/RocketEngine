@@ -10,7 +10,7 @@
         "406b5267-371b-4e3f-9dae-0f35be661e37"
     ],
     "filterType": "GMScript",
-    "folderName": "Fire Special",
+    "folderName": "Fire",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

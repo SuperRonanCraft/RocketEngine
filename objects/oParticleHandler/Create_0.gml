@@ -239,10 +239,11 @@ ds_map_add(ds_part_amt, PARTICLES.HACK, 2 * amt);
 parttype = part_type_create();
 part_type_sprite(parttype, s_preversegravity, false, false, true);
 part_type_size(parttype, 0.3, 0.5, 0, 0.02 * spd);
-part_type_direction(parttype, 220, 320, 0, 0);
-part_type_speed(parttype, 0.7 * spd, 0.9 * spd, 0, 0.1 * spd);
+part_type_direction(parttype, 270, 270, 0, 0);
+part_type_speed(parttype, 1 * spd, 1.9 * spd, 0, 0.1 * spd);
 part_type_alpha3(parttype, 1, 1, 0);
 part_type_life(parttype, 15 * life, 30 * life);
+part_type_gravity(parttype,0.1,90);
 
 ds_map_add(ds_part, PARTICLES.REVERSEGRAVITY, parttype);
 ds_map_add(ds_part_amt, PARTICLES.REVERSEGRAVITY, 1 * amt);
@@ -258,12 +259,9 @@ ds_map_add(ds_part_amt, PARTICLES.SLOWMO, 1 * amt);
 
 parttype = part_type_create();
 part_type_sprite(parttype, s_ppeace, true, false, true);
-part_type_size(parttype, 0.3, 0.5, -0.02 * spd, 0);
-part_type_direction(parttype, 0, 180, 0, 0);
-part_type_speed(parttype, 0.5 * spd, 0.8 * spd, 0.04 * spd, 0);
-part_type_life(parttype, 13 * life, 20 * life);
-part_type_orientation(parttype, 0, 360, 0, 2, false);
-part_type_gravity(parttype, 0.2 * spd, 90);
+part_type_size(parttype, 0.5, 0.5, 0 * spd, 0);
+part_type_direction(parttype, 0, 0, 0, 0);
+part_type_life(parttype, 5 * life, 5 * life);
 ds_map_add(ds_part, PARTICLES.PEACE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.PEACE, 1 * amt);
 
@@ -271,10 +269,10 @@ ds_map_add(ds_part_amt, PARTICLES.PEACE, 1 * amt);
 parttype = part_type_create();
 part_type_sprite(parttype, s_psleep, false, false, true);
 part_type_size(parttype, 0.3, 0.5, 0.02 * spd, 0);
-part_type_direction(parttype, 80, 100, 0, 0);
-part_type_speed(parttype, 0.5 * spd, 0.8 * spd, 0.04 * spd, 0);
+part_type_direction(parttype, 45, 135, -15, 20);
+part_type_speed(parttype, 0.1 * spd, 0.2 * spd, 0.05 * spd, -0.06);
 part_type_life(parttype, 13 * life, 20 * life);
-part_type_gravity(parttype, 0.2 * spd, 90);
+part_type_gravity(parttype,0.5,180);
 ds_map_add(ds_part, PARTICLES.SLEEP, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SLEEP, 1 * amt);
 
@@ -301,11 +299,10 @@ ds_map_add(ds_part_amt, PARTICLES.DUST, 5 * amt);
 //DAMAGE
 parttype = part_type_create();
 part_type_sprite(parttype, s_pdamageboost, true, false, false);
-part_type_size(parttype, 0.1, 0.2, 0.025 * spd, 0);
+part_type_size(parttype, 0.5, 0.7, 0.025 * spd, 0);
 part_type_speed(parttype, 0.5 * spd, 1 * spd, 0.5 * spd, 0);
 part_type_life(parttype, 5 * life, 10 * life);
-part_type_direction(parttype, 10, 170, 0, 0);
-part_type_gravity(parttype, 0.5 * spd, 90);
+part_type_direction(parttype, 90, 90, 0, 0);
 ds_map_add(ds_part, PARTICLES.DAMAGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.DAMAGE, 1);
 

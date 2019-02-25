@@ -10,7 +10,7 @@
         "bad5ec47-1e21-45a1-8411-9f1bb5506fc8"
     ],
     "filterType": "GMScript",
-    "folderName": "Ice Special",
+    "folderName": "Ice",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
