@@ -1,2 +1,2 @@
-part_emitter_region(global.ParticleSystem1, global.Emitter1, x - 5, x + 5, y + 5, y - 5, ps_shape_ellipse, ps_distr_gaussian);
-part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.FIRE3], 1);
+//Outline around player
+scFlash(0.8, c_green, (facing * image_xscale) * 1.2, image_yscale * 1.2, currentSprite, floor(animationVar), x, y);

@@ -52,6 +52,8 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHoming_Step;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketSpecialHoming_Destroy;
+		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketSpecialHoming_Draw;
 		map[? ROCKET_MAP.IGNORE_WALL] = false;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 7;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 15 * vartime;
@@ -270,7 +272,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketObsolete_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketObsolete_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketObsolete_Destroy;
-		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketObsolete_Draw;
+		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketObsolete_Draw;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NAPALM;
@@ -289,7 +291,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketLightning_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketLightning_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketLightning_Destroy;
-		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketLightning_Draw;
+		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketLightning_Draw;
 		map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = scRocketLightning_DrawExplode;
 		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketLightning_CreateExplode;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
@@ -322,7 +324,7 @@ switch (roc) {
 		map[? ROCKET_MAP.COOLDOWN] = 10 * varcd;
 		map[? ROCKET_MAP.CLIP] = 3;
 		map[? ROCKET_MAP.RELOAD_TIME] = 30 * varcd;
-		map[? ROCKET_MAP.SPEED] = 15 * varspd;
+		map[? ROCKET_MAP.SPEED] = 16 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];
@@ -345,7 +347,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketTeleport_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketTeleport_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketTeleport_Destroy;
-		map[? ROCKET_MAP.ROCKET_DRAW] = scRocketTeleport_Draw;
+		map[? ROCKET_MAP.ROCKET_DRAW_OVER] = scRocketTeleport_Draw;
 		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.PORTAL;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PORTAL];
@@ -385,6 +387,25 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
+		break;
+	case ROCKET.BRICK:
+		map[? ROCKET_MAP.NAME] = "Brick";
+		map[? ROCKET_MAP.DESCRIPTION] = "Drops like a Stone!";
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BRICK;
+		map[? ROCKET_MAP.DAMAGE] = 3;
+		map[? ROCKET_MAP.RECOIL] = 3 * varkb;
+		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
+		map[? ROCKET_MAP.SPEED] = 8 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 4 * vartime;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketBrick_Step;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketBrick_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBrick_Destroy;
+		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketBrick_Draw;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
+		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Brick;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
+		map[? "scrape_part"] = oParticleHandler.ds_part[? PARTICLES.SCRAPE];
 		break;
 }
 

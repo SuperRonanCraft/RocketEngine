@@ -56,7 +56,7 @@ if (global.debug) {
 	scDrawRect(exit_x - marginx, exit_y - marginy, exit_x + marginx, exit_y + marginy, c_blue, true, 1);
 	scDrawRect(x - marginx, y - marginy, x + marginx, y + marginy, c_blue, true, 1);
 	//Teleport hitbox
-	var margx = marginx / 4, margy = marginy / 4;
+	var margx = marginx / 2, margy = marginy / 2;
 	scDrawRect(exit_x - margx, exit_y - margy, exit_x + margx, exit_y + margy, c_red, true, 1);
 	scDrawRect(x - margx, y - margy, x + margx, y + margy, c_red, true, 1);
 }

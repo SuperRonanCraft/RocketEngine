@@ -25,7 +25,8 @@ map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 0; //Damage by explosion splash
 //ROCKET EVENTS
 map[? ROCKET_MAP.ROCKET_CREATE] = noone; //Event when a rocket is created (adds)
 map[? ROCKET_MAP.ROCKET_STEP] = noone; //Step event (overrides movement)
-map[? ROCKET_MAP.ROCKET_DRAW] = noone; //Draw event for rockets (adds)
+map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = noone; //Draw event for rockets (adds) under rocket
+map[? ROCKET_MAP.ROCKET_DRAW_OVER] = noone; //Draw event for rockets (adds) over rocket
 map[? ROCKET_MAP.ROCKET_DESTROY] = noone; //The rocket destroy script (adds)
 map[? ROCKET_MAP.ROCKET_ALPHA] = 1; //Rockets alpha value
 //PARTICLES

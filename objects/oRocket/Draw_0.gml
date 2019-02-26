@@ -1,7 +1,9 @@
+if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER] != noone)
+	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER]);
 if (sprite_index != noone)
 	draw_self();
-if (rocket_map[? ROCKET_MAP.ROCKET_DRAW] != noone)
-	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW]);
+if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER] != noone)
+	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER]);
 	
 if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone && !destroy) {
 	//Particle emitter first gets placed around the back of the rocket

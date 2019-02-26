@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "04ccc6a9-97b0-4bba-b063-cfcbd3743d92",
+            "Value": {
+                "id": "fd6be348-013b-4ef2-83fe-b8a9ff1ebf03",
+                "resourcePath": "sprites\\sexplosion_Brick\\sexplosion_Brick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "050d13bb-375e-45bc-bc7b-93d3fc0b302e",
             "Value": {
                 "id": "220fd13d-18ad-4e7d-8af5-29903df5806d",
@@ -447,6 +455,14 @@
             }
         },
         {
+            "Key": "1788b220-d89c-43c3-a790-a80d546c4330",
+            "Value": {
+                "id": "8c284d98-ffac-4bdf-b3e7-057c4df600d4",
+                "resourcePath": "scripts\\scRocketSpecialHoming_Destroy\\scRocketSpecialHoming_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "17a15fe3-18e4-4944-9950-8ef476c9366b",
             "Value": {
                 "id": "91ad68a7-b4e5-4272-b990-82f334087379",
@@ -655,6 +671,14 @@
             }
         },
         {
+            "Key": "2494cdf8-01d2-471f-80bb-bdf6724bd5d0",
+            "Value": {
+                "id": "358dada6-3113-41e6-9757-8f21b22ec145",
+                "resourcePath": "sprites\\s_pscrape\\s_pscrape.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "24dc3915-813e-42cb-a082-e9b24d6bb714",
             "Value": {
                 "id": "ca331992-a410-4a0f-85a2-2f6761f26a11",
@@ -692,6 +716,14 @@
                 "id": "61b120ab-f3e2-42c2-a8bb-28aadc2c8f13",
                 "resourcePath": "views\\26ccd8ee-9304-4557-a766-64b8aa391a48.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2715509d-76e9-4563-aa9c-2d2f6df5ca41",
+            "Value": {
+                "id": "0045b745-780a-4326-8819-96e8b34ee331",
+                "resourcePath": "scripts\\scRocketBrick_Step\\scRocketBrick_Step.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1100,6 +1132,14 @@
                 "id": "89e0fb87-df8f-4e1b-85e0-53ec73b91593",
                 "resourcePath": "views\\6201f7a2-ce07-43c5-bc17-dffa9e9dbf33-room.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "40621780-329a-4956-8c2b-a53f0f147d23",
+            "Value": {
+                "id": "aecc2ba4-3f94-48fa-8711-bcf5d6c1147f",
+                "resourcePath": "scripts\\scRocketBrick_Create\\scRocketBrick_Create.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1639,6 +1679,14 @@
             }
         },
         {
+            "Key": "5c943f63-281f-4185-a17a-3d7d1ed4cc7f",
+            "Value": {
+                "id": "19b83e43-7f22-4de3-98f2-a633dcc59aff",
+                "resourcePath": "sprites\\sUltBrickWall\\sUltBrickWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5cac4671-ccd7-4700-ac89-1b5942b99f0c",
             "Value": {
                 "id": "dce15f71-76e6-4c6b-8f2f-64456dabae87",
@@ -1780,6 +1828,14 @@
                 "id": "f37051f1-94f6-427e-953d-bf7cee0e1633",
                 "resourcePath": "sprites\\sTimerBar\\sTimerBar.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6572233f-fa29-4da6-a0c4-4755bea29928",
+            "Value": {
+                "id": "7f776414-097c-4c8c-94f5-4acbdec415d3",
+                "resourcePath": "scripts\\scRocketSpecialHoming_Draw\\scRocketSpecialHoming_Draw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2012,6 +2068,14 @@
                 "id": "292cd33b-1f95-4c75-99cf-687a5e73fcc8",
                 "resourcePath": "views\\744bd065-cfe7-4852-b560-59965abe68a3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7464e221-91a1-4865-8714-2444827859d9",
+            "Value": {
+                "id": "84dd6cc2-e2a3-4a36-9015-ac0a0be121e3",
+                "resourcePath": "scripts\\scRocketBrick_Draw\\scRocketBrick_Draw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2356,6 +2420,22 @@
                 "id": "2432e947-1fd1-4f71-8893-2e729ac4400b",
                 "resourcePath": "objects\\oUltimateLightning\\oUltimateLightning.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "87ec5da8-b494-41aa-a6da-bc63d548cc63",
+            "Value": {
+                "id": "6d02a06f-566c-4080-ae86-6e0a17b4cd07",
+                "resourcePath": "views\\87ec5da8-b494-41aa-a6da-bc63d548cc63.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "880a76c2-d976-4bc3-8fbe-dc4a0c5d045a",
+            "Value": {
+                "id": "d0379d33-5beb-43bf-bef0-85d2a52900a4",
+                "resourcePath": "scripts\\scUltimateBrickWall\\scUltimateBrickWall.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2999,6 +3079,14 @@
             }
         },
         {
+            "Key": "a82bd8a3-3374-497c-9bef-c634f072ac76",
+            "Value": {
+                "id": "c76c9133-7cf9-4fee-914c-31054b82a71e",
+                "resourcePath": "sprites\\sRocket_Brick\\sRocket_Brick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a8615d81-d453-4895-91f1-52b35fed0118",
             "Value": {
                 "id": "f0a3924e-fc76-46d3-b0de-79b9d73579aa",
@@ -3375,6 +3463,14 @@
             }
         },
         {
+            "Key": "bb3d0584-0327-4cd7-a1ea-8e22b9c47b12",
+            "Value": {
+                "id": "a17991e4-19a8-4c54-b2ec-ddb1ec18d00c",
+                "resourcePath": "objects\\oUltimateBrickWall\\oUltimateBrickWall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bb7a93b9-3f38-41d7-a372-4cb6c5b2675a",
             "Value": {
                 "id": "16d59464-27d7-4497-8258-4066d1995ad4",
@@ -3679,6 +3775,14 @@
             }
         },
         {
+            "Key": "cf3e9440-9b33-4839-b7cf-19d0dbd213c8",
+            "Value": {
+                "id": "7ba841f3-a8ce-4080-9493-bd72cd72171c",
+                "resourcePath": "views\\cf3e9440-9b33-4839-b7cf-19d0dbd213c8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d02c7b49-db3d-4b54-a180-27e44039ac2f",
             "Value": {
                 "id": "15aa06a6-38a4-4b58-9e93-82e9c26dc3bd",
@@ -3931,6 +4035,14 @@
             "Value": {
                 "id": "e5add5a4-c469-4595-8af3-f69b443f38dd",
                 "resourcePath": "scripts\\scData_CalculateAvgHit\\scData_CalculateAvgHit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e3eda811-087c-4510-a83b-7a57646d6e9b",
+            "Value": {
+                "id": "c9fbc71c-2be3-468c-9862-60ef329c1628",
+                "resourcePath": "scripts\\scUltimateBrickWall_Draw\\scUltimateBrickWall_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4327,6 +4439,14 @@
             }
         },
         {
+            "Key": "fc47cce2-49d6-4e4e-9aaa-0bd811ca482a",
+            "Value": {
+                "id": "b3fe2fed-8246-4d80-a691-f7e36769311d",
+                "resourcePath": "scripts\\scRocketBrick_Destroy\\scRocketBrick_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd044a9a-b7a3-47e7-87a6-8d671cedac0c",
             "Value": {
                 "id": "d7448a23-456b-4649-ba8b-cd212f670d46",
@@ -4404,6 +4524,7 @@
         "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
         "308c532b-572e-444a-b419-fb1c6c459fc6",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
+        "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
@@ -4415,7 +4536,6 @@
         "b72d9a10-c703-4ec3-8452-1f97282890c0",
         "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
-        "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "52387e9e-387e-489a-aed1-d4b727d19097",
         "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
         "b207e289-366c-4794-9fc6-7166e3f11f20",
@@ -4429,8 +4549,10 @@
         "406b5267-371b-4e3f-9dae-0f35be661e37",
         "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
         "92ed85dc-7eeb-436d-85ce-b5ac325a0898",
+        "1788b220-d89c-43c3-a790-a80d546c4330",
         "72ac3948-6fc8-469f-8d16-843aa1bf49f5",
         "fec53fa2-f9a0-4286-99e6-6eed12f0a4d8",
+        "6572233f-fa29-4da6-a0c4-4755bea29928",
         "7c30ad4e-9edc-423c-8c2b-2c1415d78451",
         "7a5bd777-6d09-42a2-ad95-9dd69ef5f2de",
         "d02c7b49-db3d-4b54-a180-27e44039ac2f",
@@ -4476,6 +4598,10 @@
         "050d13bb-375e-45bc-bc7b-93d3fc0b302e",
         "07af92e0-8757-46f3-8f6a-24d215dda9cb",
         "2d0bae85-640d-4962-82d3-f31374f684aa",
+        "40621780-329a-4956-8c2b-a53f0f147d23",
+        "2715509d-76e9-4563-aa9c-2d2f6df5ca41",
+        "fc47cce2-49d6-4e4e-9aaa-0bd811ca482a",
+        "7464e221-91a1-4865-8714-2444827859d9",
         "38fd31c5-0a3d-4086-ab5d-2750405ebfa0",
         "e0eea826-e3fe-4025-9587-4eb09d1b9378",
         "af87de2e-e23d-4887-875f-53947f1d38e3",
@@ -4505,6 +4631,8 @@
         "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
         "b12a1902-44aa-4970-b275-4bfbf40ab298",
         "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
+        "880a76c2-d976-4bc3-8fbe-dc4a0c5d045a",
+        "e3eda811-087c-4510-a83b-7a57646d6e9b",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",

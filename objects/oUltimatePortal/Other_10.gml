@@ -11,7 +11,7 @@ for (var e = 0; e < 2; e++) {
 //IGNORE BOX
 	
 	//ENTRY AND EXIT
-	var margx = marginx, margy = marginy;
+	var margx = marginx, margy = marginy; //IGNORE MARGINS
 	collision_rectangle_list(x - margx, y - margy, x + margx, y + margy, inst, false, false, listentry, false);
 	collision_rectangle_list(exit_x - margx, exit_y - margy, exit_x + margx, exit_y + margy, inst, false, false, listexit, false);
 	
@@ -56,7 +56,7 @@ for (var e = 0; e < 2; e++) {
 	
 //TELEPORT BOX
 	
-	var margx = marginx / 4, margy = marginy / 4;
+	var margx = marginx / 2, margy = marginy / 2; //TELEPORT MARGINS
 
 	collision_rectangle_list(x - margx, y - margy, x + margx, y + margy, inst, false, false, listentry, false);
 	collision_rectangle_list(exit_x - margx, exit_y - margy, exit_x + margx, exit_y + margy, inst, false, false, listexit, false);

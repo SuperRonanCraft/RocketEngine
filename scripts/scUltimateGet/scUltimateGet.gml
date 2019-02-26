@@ -130,12 +130,19 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateMiniSpray;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
 		break;
+	case ULTIMATE.BRICKWALL:
+		ds_map[? ULTIMATE_MAP.NAME] = "ITS GONNA BE HUGE!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateBrickWall;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateBrickWall_Draw;
+		ds_map[? "size"] = 4; //yscale of wall
+		ds_map[? "dis"] = 50; //distance between player and wall
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
-	SLOWMO, SLEEPDART, PORTAL, MINISPRAY,
+	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL,
 	NONE,
 	//PUT LAST
 	LENGTH

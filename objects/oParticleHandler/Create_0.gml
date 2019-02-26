@@ -60,6 +60,7 @@ parttype = part_type_create();
 part_type_sprite(parttype, s_pfire3, true, false, false);
 part_type_size(parttype, 1.2, 2, 0, 0);
 part_type_direction(parttype, 30, 120, 0, 0);
+part_type_life(parttype, 5 * life, 7 * life);
 //part_type_speed(parttype, 1 * spd, 5.3 * spd, 0.2 * spd, 0);
 ds_map_add(ds_part, PARTICLES.FIRE3, parttype);
 ds_map_add(ds_part_amt, PARTICLES.FIRE3, 20 * amt);
@@ -306,10 +307,20 @@ part_type_direction(parttype, 90, 90, 0, 0);
 ds_map_add(ds_part, PARTICLES.DAMAGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.DAMAGE, 1);
 
+//SCRAPE
+parttype = part_type_create();
+part_type_sprite(parttype, s_pscrape, true, false, false);
+part_type_size(parttype, 0.5, 0.7, -0.025 * spd, 0);
+part_type_speed(parttype, 0.5 * spd, 1 * spd, 0.5 * spd, 0);
+part_type_life(parttype, 5 * life, 10 * life);
+part_type_direction(parttype, 0, 0, 0, 0);
+ds_map_add(ds_part, PARTICLES.SCRAPE, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SCRAPE, 1);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
-	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE
+	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE
 }

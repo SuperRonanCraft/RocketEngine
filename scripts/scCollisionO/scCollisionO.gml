@@ -18,9 +18,9 @@ vsp *= time_dialation;
 var touchingx = instance_place(x + hsp, y, oWall); //get the instance of the wall in the future in the horizontal
 if (touchingx != noone) { //If touching a wall in the horizontal 
 	//Normal wall collision
-	if (hsp > 0) { //Going Right
+	if (hsp > 0) //Going Right
 		x = floor(touchingx.bbox_left + (x - bbox_right) - offset);
-	} else if (hsp < 0)//Going Left
+	else if (hsp < 0) //Going Left
 		x = ceil(touchingx.bbox_right + (x - bbox_left) + offset);
 	
 	hsp = 0;

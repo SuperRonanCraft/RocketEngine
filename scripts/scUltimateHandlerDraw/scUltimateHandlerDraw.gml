@@ -7,7 +7,7 @@ if (ult_casting) {
 	//Casting script
 	if (!ds_map_empty(ult_casting_map))
 		if (ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] != noone)
-			script_execute(ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180));
+			script_execute(ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_casting_map);
 } else if (ult_cast_time != ult_cast_time_max)
 	showultbar = true;
 
