@@ -2,7 +2,7 @@ var map = boomMap;
 
 var side = (direction == 0 ? 1 : -1);
 var spd = rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation;
-var xorg = map[? "x"] * (sign(map[? "x"]) == sign(side) ? 1 : -1), yorg = map[? "y"];
+var xorg = map[? "x"], yorg = map[? "y"];
 map[? "y"] -= spd;
 var yy = map[? "y"], dis = map[? "dis"];
 map[? "x"] = ((yy + dis) * (yy)) / (dis * (map[? "multi"] * -side));
