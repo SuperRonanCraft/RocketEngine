@@ -13,3 +13,5 @@ build_at = 1;
 image_alpha = 0;
 
 placed = false;
+
+rockets_amped = ds_list_create();

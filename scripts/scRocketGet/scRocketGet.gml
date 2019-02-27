@@ -407,6 +407,18 @@ switch (roc) {
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
 		map[? "scrape_part"] = oParticleHandler.ds_part[? PARTICLES.SCRAPE];
 		break;
+	case ROCKET.NEW:
+		map[? ROCKET_MAP.NAME] = "NEW";
+		map[? ROCKET_MAP.DESCRIPTION] = "NEW!";
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.DEFAULT;
+		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.RECOIL] = 2 * varkb;
+		map[? ROCKET_MAP.COOLDOWN] = 20 * varcd;
+		map[? ROCKET_MAP.SPEED] = 8 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 4 * vartime;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.AMPWALL;
+		break;
 }
 
 return map;

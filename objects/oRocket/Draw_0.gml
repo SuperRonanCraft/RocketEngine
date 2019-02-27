@@ -1,3 +1,8 @@
+if (ds_exists(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS], ds_type_list) && !ds_list_empty(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS])) {
+	var events = rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS];
+	for (var i = 0; i < ds_list_size(events); i++)
+		script_execute(events[| i]);
+}
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER]);
 if (sprite_index != noone)

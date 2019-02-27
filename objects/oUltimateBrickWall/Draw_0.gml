@@ -1,7 +1,7 @@
 /// @desc
 
-var xx = x;
-var yy = y + (32 * (image_yscale - 1));
+var xx = x + random_range(-shake_remain, shake_remain);
+var yy = y + (32 * (image_yscale - 1)) + random_range(-shake_remain, shake_remain);
 for (var i = 0; i < build_at; i++) {
 	var newy = yy;
 	if (i == (build_at - 1))
@@ -9,6 +9,7 @@ for (var i = 0; i < build_at; i++) {
 	scDrawSpriteExt(xx, newy, sprite_index, image_number, noone, image_alpha);
 	yy -= 32;
 }
+shake_remain = max(0, shake_remain - ((1 / shake_lenght) * shake_magnitude));
 
 //Build up
 if (build_at <= image_yscale) {

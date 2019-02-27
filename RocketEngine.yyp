@@ -1282,7 +1282,7 @@
             "Key": "45231e2c-a239-415a-a717-352ec52a9233",
             "Value": {
                 "id": "88bfec40-77f9-4b72-926b-41b724007c05",
-                "resourcePath": "objects\\oUltimateDamageAmp\\oUltimateDamageAmp.yy",
+                "resourcePath": "objects\\oUltimateAmpWall\\oUltimateAmpWall.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1900,6 +1900,14 @@
                 "id": "8ed52d4b-0433-4ba4-8a26-e5f6a7cc8402",
                 "resourcePath": "scripts\\scMenuControls\\scMenuControls.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6a2cfbe2-36ba-406e-a683-be97c5c7e914",
+            "Value": {
+                "id": "4ab6109e-3e33-4d33-8840-5ab1c513536f",
+                "resourcePath": "views\\6a2cfbe2-36ba-406e-a683-be97c5c7e914.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3343,6 +3351,14 @@
             }
         },
         {
+            "Key": "b3e73be6-bf13-4ced-bf25-df8574506655",
+            "Value": {
+                "id": "6a674cd2-e558-4de0-bad8-420a0499f872",
+                "resourcePath": "scripts\\scUltimateAmpWall_AmpingCreate\\scUltimateAmpWall_AmpingCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b4976653-506c-48da-a5a6-798c696a4d78",
             "Value": {
                 "id": "65bc9169-bfce-4401-82ac-4ed21e4d11e3",
@@ -3951,6 +3967,14 @@
             }
         },
         {
+            "Key": "db033e89-0201-4574-98f3-ac4741dcbdf6",
+            "Value": {
+                "id": "2f67067d-700e-4dbf-aee0-d31f42316551",
+                "resourcePath": "scripts\\scUltimateAmpWall_Amping\\scUltimateAmpWall_Amping.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "db841c7b-4e69-492a-b56e-28ed0787489a",
             "Value": {
                 "id": "1a94f0e1-5d27-4229-831c-8d30e9dcfbed",
@@ -4540,12 +4564,12 @@
         "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
         "308c532b-572e-444a-b419-fb1c6c459fc6",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
-        "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
         "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
         "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
+        "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
         "ab738f93-ad7a-45aa-a119-240062d21cca",
         "02b336b5-7467-4576-8a97-db9d380154a7",
@@ -4649,6 +4673,8 @@
         "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
         "880a76c2-d976-4bc3-8fbe-dc4a0c5d045a",
         "e3eda811-087c-4510-a83b-7a57646d6e9b",
+        "db033e89-0201-4574-98f3-ac4741dcbdf6",
+        "b3e73be6-bf13-4ced-bf25-df8574506655",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",

@@ -4,7 +4,7 @@
 /// @arg x2
 /// @arg y2
 /// @arg particle-type
-/// @arg patiicle-amt
+/// @arg particle-amt
 /// @arg direction* [min, max]
 /// @arg orientation* [min, max]
 /// @arg scale* [x, y]

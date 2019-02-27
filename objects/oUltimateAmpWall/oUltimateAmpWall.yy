@@ -2,7 +2,7 @@
     "id": "45231e2c-a239-415a-a717-352ec52a9233",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oUltimateDamageAmp",
+    "name": "oUltimateAmpWall",
     "eventList": [
         {
             "id": "c5a01296-df11-42e7-abae-095bb0232763",
@@ -42,6 +42,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
+            "m_owner": "45231e2c-a239-415a-a717-352ec52a9233"
+        },
+        {
+            "id": "8d002f3f-cf0a-447f-9923-19f4a6bcad26",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 1,
             "m_owner": "45231e2c-a239-415a-a717-352ec52a9233"
         }
     ],
