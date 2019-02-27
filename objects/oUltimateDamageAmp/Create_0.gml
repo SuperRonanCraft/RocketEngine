@@ -1,4 +1,4 @@
-/// @desc ultimate brick wall spawned
+/// @desc ultimate damage amp spawned
 
 owner = noone;
 
