@@ -159,6 +159,8 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLEEP];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 3 * room_speed;
+		ds_map[? "parts_crt"] = 0;
+		ds_map[? "parts_amt"] = 5;
 		break;
 	case BUFFTYPE.DAMAGE:
 		ds_map[? BUFF_MAP.NAME] = "Double Damage";
@@ -169,6 +171,8 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.DAMAGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
+		ds_map[? "parts_crt"] = 0;
+		ds_map[? "parts_amt"] = 8;
 		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;

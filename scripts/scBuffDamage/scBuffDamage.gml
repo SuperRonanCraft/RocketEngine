@@ -21,7 +21,11 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 		dsBuff[? "roc_type"] = owner.rocket_map[? ROCKET_MAP.TYPE];
 		owner.rocket_map[? ROCKET_MAP.DAMAGE] *= 2;
 	}
-	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
-		dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
+	if (dsBuff[? "parts_crt"] <= 0) {
+		part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
+			dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
+		dsBuff[? "parts_crt"] = dsBuff[? "parts_amt"];
+	} else
+		dsBuff[? "parts_crt"]--;
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

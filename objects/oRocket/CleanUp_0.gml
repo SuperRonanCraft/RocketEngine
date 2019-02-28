@@ -6,5 +6,6 @@ ds_list_destroy(confirmList);
 if (rocket_map[? ROCKET_MAP.ROCKET_DESTROY] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DESTROY]);
 
-ds_list_destroy(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS]);
+if (ds_exists(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS], ds_type_list))
+	ds_list_destroy(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS]);
 ds_map_destroy(rocket_map);
