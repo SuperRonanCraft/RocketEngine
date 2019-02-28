@@ -53,6 +53,3 @@ else if (recoilKB > recoilMAX)
 	recoilKB--;
 else
 	recoilMAX = 0;
-
-
-

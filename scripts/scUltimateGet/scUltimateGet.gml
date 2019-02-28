@@ -37,15 +37,15 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateSprayDraw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
-	case ULTIMATE.HUGEEXPLOSION: //I Cant See!
+	case ULTIMATE.HUGEEXPLOSION: //It's gonna be huge!
 		ds_map[? ULTIMATE_MAP.NAME] = "Honey don't go outside!";
-		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateHugesplosion;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateHugesplosion;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHugesplosionDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHugesplosion_Draw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.CLONE: //Huh, the cake isnt a lie afterall
-		ds_map[? ULTIMATE_MAP.NAME] = "Portal dimension";
+		ds_map[? ULTIMATE_MAP.NAME] = "From another dimension";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateClone;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateCloneDraw;
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW] = scUltimateCloneDrawCasted;
@@ -146,12 +146,17 @@ switch (type) {
 		ds_map[? "dis"] = 50; //distance between player and wall
 		ds_map[? "ult"] = oUltimateAmpWall;
 		break;
+	case ULTIMATE.TURRET:
+		ds_map[? ULTIMATE_MAP.NAME] = "Noob!";
+		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateTurret;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTurret_Draw;
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
-	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL, AMPWALL,
+	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL, AMPWALL, TURRET,
 	NONE,
 	//PUT LAST
 	LENGTH

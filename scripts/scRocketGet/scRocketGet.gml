@@ -371,8 +371,8 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketArching_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
-		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
+		
 	case ROCKET.BOOMERANG:
 		map[? ROCKET_MAP.NAME] = "Boomerang";
 		map[? ROCKET_MAP.DESCRIPTION] = "The skill!";
@@ -389,6 +389,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
+		
 	case ROCKET.BRICK:
 		map[? ROCKET_MAP.NAME] = "Brick";
 		map[? ROCKET_MAP.DESCRIPTION] = "Drops like a Stone!";
@@ -407,6 +408,23 @@ switch (roc) {
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Brick;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
 		map[? "scrape_part"] = oParticleHandler.ds_part[? PARTICLES.SCRAPE];
+		break;
+		
+	case ROCKET.PIERCING:
+		map[? ROCKET_MAP.NAME] = "Piercing";
+		map[? ROCKET_MAP.DESCRIPTION] = "Can't touch this.";
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PIERCING;
+		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.RECOIL] = 3 * varkb;
+		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
+		map[? ROCKET_MAP.SPEED] = 8 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 6 * vartime;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketPiercing_Create;
+		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketPiercing_Destroy;
+		map[? ROCKET_MAP.ROCKET_DRAW_OVER] = scRocketPiercing_Draw;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TURRET;
+		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
 		break;
 }
 

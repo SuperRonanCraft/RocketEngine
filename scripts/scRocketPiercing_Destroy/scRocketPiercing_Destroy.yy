@@ -1,8 +1,8 @@
 {
-    "id": "9402c50c-2b68-481f-aeb5-ba4a832f4c25",
+    "id": "4e45b309-8276-49b5-a0bc-21aa629f5f6f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUltimateHugesplosionDraw",
+    "name": "scRocketPiercing_Destroy",
     "IsCompatibility": false,
     "IsDnD": false
 }
