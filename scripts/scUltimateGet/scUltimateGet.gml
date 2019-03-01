@@ -148,8 +148,10 @@ switch (type) {
 		break;
 	case ULTIMATE.TURRET:
 		ds_map[? ULTIMATE_MAP.NAME] = "Noob!";
-		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateTurret;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateTurret_Create;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTurret_Draw;
+		ds_map[? "dis"] = 50;
+		ds_map[? "hei"] = -20;
 		break;
 }
 

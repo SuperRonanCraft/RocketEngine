@@ -11,7 +11,7 @@ if (destroy && !map[? "destroyable"]) {
 }
 
 if (map[? "shield"]) {
-	scDrawSpriteExt(x, y, map[? "spr"], floor(map[? "img"]), noone, 1, noone, noone, direction);
+	scDrawSpriteExt(x, y, map[? "spr"], floor(map[? "img"]), noone, image_alpha, image_yscale - 0.2, image_xscale - 0.2, direction);
 	map[? "img"] += map[? "img_spd"];
 	if (floor(map[? "img"]) >= map[? "img_max"])
 		map[? "img"] = 0;

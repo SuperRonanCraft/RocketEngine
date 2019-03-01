@@ -407,7 +407,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Brick;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
-		map[? "scrape_part"] = oParticleHandler.ds_part[? PARTICLES.SCRAPE];
+		map[? "scrape_part"] = PARTICLES.SCRAPE;
 		break;
 		
 	case ROCKET.PIERCING:
