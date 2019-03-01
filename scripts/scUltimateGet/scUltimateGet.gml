@@ -23,7 +23,7 @@ switch (type) {
 	case ULTIMATE.DEFAULT: //Huge af cloned rocket
 		ds_map[? ULTIMATE_MAP.NAME] = "Mr.Huge!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateDefault;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
 		ds_map[? "casting_tiem"] = 0;
 		break;
 	case ULTIMATE.BARRAGE: //Dodge the lasers!
@@ -34,7 +34,7 @@ switch (type) {
 	case ULTIMATE.SPRAY: //Triple threat!
 		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSpray;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateSprayDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateSpray_Draw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.HUGEEXPLOSION: //It's gonna be huge!
@@ -47,8 +47,8 @@ switch (type) {
 	case ULTIMATE.CLONE: //Huh, the cake isnt a lie afterall
 		ds_map[? ULTIMATE_MAP.NAME] = "From another dimension";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateClone;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateCloneDraw;
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW] = scUltimateCloneDrawCasted;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateClone_Draw;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW] = scUltimateClone_DrawCasted;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
@@ -65,32 +65,32 @@ switch (type) {
 	case ULTIMATE.MIRROR: //Oh, now its going this way
 		ds_map[? ULTIMATE_MAP.NAME] = "Magical mirror";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateMirror;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMirrorDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMirror_Draw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.HOMING: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Rocket Barrage";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateHoming;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHomingDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHoming_Draw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.LASER: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Lets Delete them!";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLaser;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
 		break;
 	case ULTIMATE.TRAP: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Gotcha";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateTrap;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTrapDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTrap_Draw;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.MAGNET: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Get Over Here!";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateMagnet;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMagnetDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMagnet_Draw;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
 		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
@@ -107,28 +107,28 @@ switch (type) {
 	case ULTIMATE.LIGHTNING_ORB:
 		ds_map[? ULTIMATE_MAP.NAME] = "Oh, its gonna hurt";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLightning;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLightningDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLightning_Draw;
 		break;
 	case ULTIMATE.SLOWMO:
 		ds_map[? ULTIMATE_MAP.NAME] = "Bullet time!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSlowmo;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
 		break;
 	case ULTIMATE.SLEEPDART:
 		ds_map[? ULTIMATE_MAP.NAME] = "Sleep boi!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSleepDart;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHomingDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHoming_Draw;
 		break;
 	case ULTIMATE.PORTAL:
 		ds_map[? ULTIMATE_MAP.NAME] = "Portal... 2!";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimatePortal;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateCloneDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimatePortal_Draw;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
 		break;
 	case ULTIMATE.MINISPRAY:
 		ds_map[? ULTIMATE_MAP.NAME] = "Mini spray!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateMiniSpray;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaserDraw;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
 		break;
 	case ULTIMATE.BRICKWALL:
 		ds_map[? ULTIMATE_MAP.NAME] = "ITS GONNA BE HUGE!";
@@ -148,10 +148,17 @@ switch (type) {
 		break;
 	case ULTIMATE.TURRET:
 		ds_map[? ULTIMATE_MAP.NAME] = "Noob!";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateTurret_Create;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateTurret;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTurret_Draw;
-		ds_map[? "dis"] = 50;
+		ds_map[? "dis"] = 80;
 		ds_map[? "hei"] = -20;
+		break;
+	case ULTIMATE.ORBIT:
+		ds_map[? ULTIMATE_MAP.NAME] = "Shield 2.0!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateOrbit;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateOrbit_Draw;
+		ds_map[? "dis"] = 120; //distance between rocket and player
+		ds_map[? "amt"] = 5; //amt of rockets
 		break;
 }
 
@@ -159,6 +166,7 @@ enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL, AMPWALL, TURRET,
+	ORBIT,
 	NONE,
 	//PUT LAST
 	LENGTH

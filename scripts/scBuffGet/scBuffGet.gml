@@ -174,6 +174,16 @@ switch (buff) {
 		ds_map[? "parts_crt"] = 0;
 		ds_map[? "parts_amt"] = 8;
 		break;
+	case BUFFTYPE.ANTIHEAL:
+		ds_map[? BUFF_MAP.NAME] = "Anti-Healing";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Why can't I heal!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ANTIHEAL;
+		ds_map[? BUFF_MAP.STEP] = scBuffAntiHeal;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ANTIHEAL];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ANTIHEAL];
+		ds_map[? BUFF_MAP.GOOD] = false;
+		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
+		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -192,13 +202,15 @@ enum BUFF_ICON {
 	REVERSECONTROLS = s_abilityIcon_ReverseControls, ULTCHARGE = s_abilityIcon_UltCharge,
 	BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
 	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots,
-	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep, DAMAGE = s_abilityIcon_Damage
+	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep, DAMAGE = s_abilityIcon_Damage,
+	ANTIHEAL = s_abilityIcon_AntiHeal
 }
 
 enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
+	ANTIHEAL,
 	
 	//PUT LAST
 	LENGHT

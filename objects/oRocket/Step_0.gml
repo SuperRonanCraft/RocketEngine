@@ -2,20 +2,24 @@
 
 //Run special step script and override movement
 var autodestroy = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY];
+var time = rocket_map[? ROCKET_MAP.TIMER];
+var checkroom = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM];
 if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
+	//---===NO MAP REQUESTS AFTER THIS LINE===---
 else {
 	var spd = rocket_map[? ROCKET_MAP.SPEED];
 	scMovementLine(spd, direction);
 }
 
-if (timer > 0)
-	timer--;
-else if (timer == 0)
+if (timer < time)
+	timer++;
+else if (timer == time)
 	event_user(0);
 
-if ((x > room_width + 20 || x < -20 || y > room_height || y < -20) && !destroy)
-	event_user(0);
+if (checkroom)
+	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20) && !destroy)
+		event_user(0);
 	
 if (destroy && autodestroy)
 	instance_destroy();

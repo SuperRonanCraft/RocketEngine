@@ -1,4 +1,4 @@
-///@desc The "Chilled" Buff
+///@desc The "Cooldowns" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 

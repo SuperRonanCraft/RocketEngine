@@ -13,7 +13,7 @@ x += xx - xorg;
 y += yy - yorg;
 
 //Update direction
-//point_direction(xx, yy, ((yy + dis) * ((yy + spd))) / (dis * map[? "multi"]), yy + spd);
-direction += 20 * side;
-image_angle = direction;
+yy -= spd;
+direction = point_direction(xx, yy + spd, ((yy + dis) * (yy)) / (dis * (map[? "multi"] * -side)), yy);
 map[? "dir"] = direction;
+image_angle += 20 * side;

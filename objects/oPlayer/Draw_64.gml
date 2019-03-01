@@ -15,6 +15,8 @@ for (var i = 0; i < hp_original / 2; i++) {
 		var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hpoffset;
 		var ypos = hpheight + 2;
 		var scale = i * 2 <= hp + (hp_damaged - 1) && i * 2 > hp - 2 ? hp_scale : 1;
+		if (hp_color_outline != noone)
+			scFlash(0.8, hp_color_outline, scale + hp_color_outline_scale, scale + hp_color_outline_scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
 		var c = hp / 2 <= i ? c_white : hp_color;
 		if (hppart != 0 && i == (hp - (hppart * 2)) / 2) {
 			var alpha = 0.9;
@@ -43,7 +45,7 @@ for (var i = 0; i < hp_original / 2; i++) {
 		}
 	} else {
 		if (hp < 20) break;
-		var str = "+" + string((hp / 2) - i);
+		var str = "+" + string(hp - i);
 		var xpos = team == TEAM.LEFT ? 20 + (hpwidth * 8) : RES_W - 20 - (hpwidth * 8);
 		var ypos = hpheight + 10;
 		c = hp_scale == 1 ? c_white : c_red;

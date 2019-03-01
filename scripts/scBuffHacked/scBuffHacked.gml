@@ -1,4 +1,4 @@
-///@desc The "BleedOut" Buff (Most effective with non damaging rockets)
+///@desc The "Hacked" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 

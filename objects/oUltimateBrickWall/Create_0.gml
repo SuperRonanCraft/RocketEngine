@@ -15,6 +15,6 @@ image_alpha = 0;
 placed = false;
 
 //Shake wall
-shake_lenght = 0;
+/*shake_lenght = 0;
 shake_magnitude = 0;
 shake_remain = 0;

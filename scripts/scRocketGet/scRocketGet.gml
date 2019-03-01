@@ -222,6 +222,7 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ANTIHEAL];
 		break;
 		
 	case ROCKET.SPIKED:
@@ -387,6 +388,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBoomerang_Destroy;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.ORBIT;
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
 		

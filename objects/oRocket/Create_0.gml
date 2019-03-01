@@ -2,8 +2,8 @@
 rocket_map = 0;
 //Who shot this rocket
 owner = noone;
-//Maximum up-time
-timer = 100;
+//up-time
+timer = 0;
 //Size of explosion
 size = 1;
 //Destroy variable for explosions

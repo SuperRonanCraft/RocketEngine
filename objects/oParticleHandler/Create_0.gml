@@ -317,10 +317,20 @@ part_type_direction(parttype, 0, 0, 0, 0);
 ds_map_add(ds_part, PARTICLES.SCRAPE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SCRAPE, 1);
 
+//ANTIHEAL
+parttype = part_type_create();
+part_type_sprite(parttype, s_pantiheal, false, false, true);
+part_type_size(parttype, 0.3, 0.4, -0.025 * spd, 0);
+part_type_speed(parttype, 0.5 * spd, 1 * spd, 0.5 * spd, 0);
+part_type_life(parttype, 5 * life, 10 * life);
+part_type_direction(parttype, 0, 65, 115, 0);
+ds_map_add(ds_part, PARTICLES.ANTIHEAL, parttype);
+ds_map_add(ds_part_amt, PARTICLES.ANTIHEAL, 1);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
-	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE
+	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE, ANTIHEAL
 }

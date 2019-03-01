@@ -103,7 +103,8 @@ for (var e = 0; e < 2; e++) {
 		ds_list_add(teleported, [p, from]);
 		var offset = 0;
 		if (p.object_index == oRocket) {
-			offset = p.rocket_map[? ROCKET_MAP.OFFSET] * p.image_xscale;
+			offset = p.rocket_map[? ROCKET_MAP.OFFSET] * 
+				((from ? -image_xscale : image_xscale) * -p.image_xscale);
 			p.image_xscale /= 4;
 			p.image_yscale /= 4;
 		}

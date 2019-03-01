@@ -186,7 +186,7 @@
             "Key": "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
             "Value": {
                 "id": "b985dcf7-a1a7-4f7c-9d3f-880f00b367a6",
-                "resourcePath": "scripts\\scUltimateTrapDraw\\scUltimateTrapDraw.yy",
+                "resourcePath": "scripts\\scUltimateTrap_Draw\\scUltimateTrap_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "19c2d420-2494-4322-a360-50399b5a6430",
+            "Value": {
+                "id": "6c65a762-c7f3-4643-bad7-94b9959a78ae",
+                "resourcePath": "scripts\\scUltimateOrbit_RocCreate\\scUltimateOrbit_RocCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1b456b4e-cba3-4dab-8cf2-ce31c8199d20",
             "Value": {
                 "id": "74112782-3c77-4e9e-98d7-d0e0809bf0dc",
@@ -540,6 +548,14 @@
                 "id": "bb27501d-c0f5-4305-9f94-480bb655b647",
                 "resourcePath": "sounds\\snTitle\\snTitle.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1b89090f-f691-400f-9034-17aa7150089e",
+            "Value": {
+                "id": "3bc1826a-f590-40d0-8f49-9a5376975703",
+                "resourcePath": "sprites\\s_abilityIcon_AntiHeal\\s_abilityIcon_AntiHeal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -619,6 +635,14 @@
             "Value": {
                 "id": "fa3be718-8fa5-4573-b735-0a9deee19ad0",
                 "resourcePath": "sprites\\s_pfire2\\s_pfire2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "20eceb90-4150-4415-b7b4-ca4c99a5baa8",
+            "Value": {
+                "id": "1f65380e-19b9-4f7e-894c-7cecc8969af8",
+                "resourcePath": "sprites\\s_pantiheal\\s_pantiheal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -823,6 +847,14 @@
             }
         },
         {
+            "Key": "2c671da0-d29b-49c9-874f-a0b944891740",
+            "Value": {
+                "id": "fada91e0-17db-4777-a2cd-b9016d808070",
+                "resourcePath": "scripts\\scUltimatePortal_Draw\\scUltimatePortal_Draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2c8b4186-f3b4-43be-b61c-fd8b73e85cb3",
             "Value": {
                 "id": "b40dfc2b-6660-400c-b166-7317cf1b8cfc",
@@ -836,6 +868,14 @@
                 "id": "613368ca-0736-4464-9a07-7fbb01a5d040",
                 "resourcePath": "objects\\oDataCollector\\oDataCollector.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2cc7afe5-d90e-411d-af4e-b93a8a5d4a83",
+            "Value": {
+                "id": "77a60fca-d935-479d-b1c4-270ecd4af910",
+                "resourcePath": "scripts\\scUltimateOrbit_RocExplosionRoc\\scUltimateOrbit_RocExplosionRoc.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1252,6 +1292,14 @@
                 "id": "97301a4d-1717-4e7c-9a95-0b180d223b33",
                 "resourcePath": "scripts\\scStagePickupsStart\\scStagePickupsStart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "43582342-2ed1-4395-9e7b-210928908217",
+            "Value": {
+                "id": "18ebc4c0-e181-4f39-96c7-e0ea3b69cde1",
+                "resourcePath": "views\\43582342-2ed1-4395-9e7b-210928908217.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2247,6 +2295,14 @@
             }
         },
         {
+            "Key": "78bb18ef-144e-4cf4-89c5-ed3b6d2b21ed",
+            "Value": {
+                "id": "142b90b6-12b4-4f10-8a12-a7a9a7ffe218",
+                "resourcePath": "views\\78bb18ef-144e-4cf4-89c5-ed3b6d2b21ed.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "79a83312-11d1-4470-a08b-6adc4d900de1",
             "Value": {
                 "id": "21ae92df-a773-4fbd-91aa-a8afe4588457",
@@ -2354,7 +2410,7 @@
             "Key": "81bef824-f3c8-4fe3-b0cf-7c7c3e43c40e",
             "Value": {
                 "id": "4ce87b05-faf7-4527-b408-52d90491b391",
-                "resourcePath": "scripts\\scUltimateCloneDraw\\scUltimateCloneDraw.yy",
+                "resourcePath": "scripts\\scUltimateClone_Draw\\scUltimateClone_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2554,7 +2610,7 @@
             "Key": "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
             "Value": {
                 "id": "e2ee3e92-6313-49d9-a673-cdeb154680b0",
-                "resourcePath": "scripts\\scUltimateLightningDraw\\scUltimateLightningDraw.yy",
+                "resourcePath": "scripts\\scUltimateLightning_Draw\\scUltimateLightning_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3087,6 +3143,14 @@
             }
         },
         {
+            "Key": "a4230314-64d6-455c-83b9-911f9aa4412b",
+            "Value": {
+                "id": "65376969-1e70-4dc0-bed9-c08584ae8597",
+                "resourcePath": "scripts\\scUltimateOrbit_RocDestroy\\scUltimateOrbit_RocDestroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
             "Value": {
                 "id": "2465bbbc-8037-474a-81cd-c3ba35c8df90",
@@ -3386,7 +3450,7 @@
             "Key": "b12a1902-44aa-4970-b275-4bfbf40ab298",
             "Value": {
                 "id": "d2d7b729-a4d5-41fb-ab4b-cf2ed0895c6f",
-                "resourcePath": "scripts\\scUltimateMagnetDraw\\scUltimateMagnetDraw.yy",
+                "resourcePath": "scripts\\scUltimateMagnet_Draw\\scUltimateMagnet_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3706,7 +3770,7 @@
             "Key": "c07d0565-8664-4ade-bb74-991c3b5bd62e",
             "Value": {
                 "id": "acc58d7d-d859-456a-b8ce-1d8741869c40",
-                "resourcePath": "scripts\\scUltimateSprayDraw\\scUltimateSprayDraw.yy",
+                "resourcePath": "scripts\\scUltimateSpray_Draw\\scUltimateSpray_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3863,6 +3927,14 @@
             }
         },
         {
+            "Key": "cc158fc8-aff0-4188-9706-b82b8ee3b715",
+            "Value": {
+                "id": "9dca80e2-838a-4cc3-be92-3147eed2de88",
+                "resourcePath": "scripts\\scUltimateOrbit\\scUltimateOrbit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc16ec0d-763c-4990-a582-a7cb7553e7eb",
             "Value": {
                 "id": "b12d62bf-cde9-4894-82ff-c5bc9c0d6aa7",
@@ -3978,7 +4050,7 @@
             "Key": "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
             "Value": {
                 "id": "4808106a-cdde-4454-836d-6f8ebadf96be",
-                "resourcePath": "scripts\\scUltimateHomingDraw\\scUltimateHomingDraw.yy",
+                "resourcePath": "scripts\\scUltimateHoming_Draw\\scUltimateHoming_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3986,7 +4058,7 @@
             "Key": "d5df6012-6295-4374-8c61-eb6eed033a2f",
             "Value": {
                 "id": "728df671-dac7-4e70-bb6c-7a20155e1b59",
-                "resourcePath": "scripts\\scUltimateMirrorDraw\\scUltimateMirrorDraw.yy",
+                "resourcePath": "scripts\\scUltimateMirror_Draw\\scUltimateMirror_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4026,7 +4098,7 @@
             "Key": "d756b52c-f0bf-473c-bf2b-96b817472c0a",
             "Value": {
                 "id": "b38635f2-c2a2-44fb-b71b-cac8b4bc7824",
-                "resourcePath": "scripts\\scUltimateTurret_Create\\scUltimateTurret_Create.yy",
+                "resourcePath": "scripts\\scUltimateTurret\\scUltimateTurret.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4075,6 +4147,14 @@
             "Value": {
                 "id": "1a94f0e1-5d27-4229-831c-8d30e9dcfbed",
                 "resourcePath": "scripts\\scGetNormalAnimationState\\scGetNormalAnimationState.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dbf687e7-e3e2-4df1-9817-b60d70f68eac",
+            "Value": {
+                "id": "e9990e15-613c-4dfd-84ab-78f99985f592",
+                "resourcePath": "scripts\\scUltimateOrbit_Draw\\scUltimateOrbit_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4322,7 +4402,7 @@
             "Key": "ebf3cc05-43e2-430b-b897-16b4cc657735",
             "Value": {
                 "id": "67af58e8-f566-43ef-8f4e-c73876605766",
-                "resourcePath": "scripts\\scUltimateLaserDraw\\scUltimateLaserDraw.yy",
+                "resourcePath": "scripts\\scUltimateLaser_Draw\\scUltimateLaser_Draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4371,6 +4451,14 @@
             "Value": {
                 "id": "c038d42e-4e30-43f9-adb6-d6e0f9d2d6be",
                 "resourcePath": "scripts\\scFindTarget\\scFindTarget.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f0ddde64-cf5b-443a-8356-ecda24e1bf3a",
+            "Value": {
+                "id": "332f9e00-ef83-4d88-bc7e-59071ef275b7",
+                "resourcePath": "scripts\\scUltimateOrbit_RocStep\\scUltimateOrbit_RocStep.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4490,7 +4578,7 @@
             "Key": "f85c2c1b-5466-4812-ad48-6786a0d2b963",
             "Value": {
                 "id": "959d1367-dc45-42e0-a39b-cec1e4f8b376",
-                "resourcePath": "scripts\\scUltimateCloneDrawCasted\\scUltimateCloneDrawCasted.yy",
+                "resourcePath": "scripts\\scUltimateClone_DrawCasted\\scUltimateClone_DrawCasted.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4500,6 +4588,14 @@
                 "id": "cdb32856-9112-4fbf-ab05-a86e83a87eca",
                 "resourcePath": "views\\f8d62db7-630b-4ff0-b4dd-935e41c38777.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f907be21-c40f-4017-b31f-faec7ca3e936",
+            "Value": {
+                "id": "6bf1aaf6-3073-4c15-90ee-f13ac475c703",
+                "resourcePath": "scripts\\scBuffAntiHeal\\scBuffAntiHeal.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4776,6 +4872,7 @@
         "fcacb6c2-c4a6-4eae-8927-f80bc54ad7a8",
         "42a252e0-61fc-4e98-9183-888cc692ff16",
         "a55421cd-0bee-421b-8eed-6e0f7f2c8515",
+        "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
         "d5df6012-6295-4374-8c61-eb6eed033a2f",
         "ebf3cc05-43e2-430b-b897-16b4cc657735",
         "b59162fe-a4e6-4152-a4a7-b2bf31784b65",
@@ -4788,13 +4885,19 @@
         "b98f217d-6e7d-4cb6-86b2-57d4413a546b",
         "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
         "b12a1902-44aa-4970-b275-4bfbf40ab298",
-        "d5ca0ed6-7ff8-4cf9-a81c-5cf80ec23067",
+        "2c671da0-d29b-49c9-874f-a0b944891740",
         "880a76c2-d976-4bc3-8fbe-dc4a0c5d045a",
         "e3eda811-087c-4510-a83b-7a57646d6e9b",
         "db033e89-0201-4574-98f3-ac4741dcbdf6",
         "b3e73be6-bf13-4ced-bf25-df8574506655",
-        "7196beae-b2a8-4557-9f5b-e6721efc845b",
         "d756b52c-f0bf-473c-bf2b-96b817472c0a",
+        "7196beae-b2a8-4557-9f5b-e6721efc845b",
+        "cc158fc8-aff0-4188-9706-b82b8ee3b715",
+        "dbf687e7-e3e2-4df1-9817-b60d70f68eac",
+        "f0ddde64-cf5b-443a-8356-ecda24e1bf3a",
+        "19c2d420-2494-4322-a360-50399b5a6430",
+        "2cc7afe5-d90e-411d-af4e-b93a8a5d4a83",
+        "a4230314-64d6-455c-83b9-911f9aa4412b",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
@@ -4824,6 +4927,7 @@
         "4dd4d129-5280-42bb-a6e7-786d76f8739a",
         "085c58de-2240-48f4-9b89-b21ac07969d1",
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
+        "f907be21-c40f-4017-b31f-faec7ca3e936",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

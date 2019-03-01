@@ -1,4 +1,4 @@
-///@desc The "Slowmo" Buff (Most effective with non damaging rockets)
+///@desc The "Slowmo" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 

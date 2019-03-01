@@ -1,4 +1,4 @@
-///@desc The "Speed" Buff
+///@desc The "LowGravity" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 

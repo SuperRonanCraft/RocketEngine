@@ -4,7 +4,7 @@ var map = brickMap;
 //var spd = rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation;
 var side = direction > 90 && direction < 270 ? -1 : 1;
 map[? "vsp"] += map[? "grv"] * owner.time_dialation;
-map[? "hsp"] += (sign(map[? "hsp"]) * map[? "acc"]) * owner.time_dialation;
+map[? "hsp"] += (map[? "acc"] * side) * owner.time_dialation;
 if (sign(map[? "hsp"]) != sign(side))
 	map[? "hsp"] *= -1;
 

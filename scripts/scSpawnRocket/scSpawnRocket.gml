@@ -35,7 +35,7 @@ with (inst) {
 	if (direction > 90 && direction < 270)
 		image_yscale *= -1;
 	sprite_index = rocket_map[? ROCKET_MAP.PROJECTILE];
-	timer = rocket_map[? ROCKET_MAP.TIMER];
+	//timer = rocket_map[? ROCKET_MAP.TIMER];
 	//SCALE
 	var scale = rocket_map[? ROCKET_MAP.SCALE];
 	original_xscale = scale;

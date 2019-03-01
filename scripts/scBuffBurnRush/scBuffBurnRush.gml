@@ -1,4 +1,4 @@
-///@desc The "Burn Rush" Buff
+///@desc The "BurnRush" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 
