@@ -1,5 +1,9 @@
 /// @desc Create
 
+PlayerName = "Me!";
+global.PlayerTotal++;        
+
+
 //Load gravity and movement variables
 scGravityStart();
 //Load keybinds

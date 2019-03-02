@@ -4,11 +4,22 @@
 if (canControl) {
 	
 	//KEYBINDS
+	
+	//(NORMAL)
+	/*
 	var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
 	var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
 	var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
 	var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
-
+	*/
+	
+	//NETWORK
+	var key_left = keyboard_check(vk_left);
+	var key_right = keyboard_check(vk_right);
+	var key_jump = keyboard_check(vk_up);
+	var key_shoot = keyboard_check(vk_down);
+	
+	
 	//AI KEYBINDS
 	if (player_aimode && aiBrain != noone) {
 		key_left = aiBrain.AILeft;
