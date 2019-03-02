@@ -6,7 +6,7 @@ if (item != noone) {
 	with (other)
 		if (hp > 0)
 			if (other.healing > 0) {
-				if (hp + other.healing <= hp_original) {
+				if (canheal && hp + other.healing <= hp_original) {
 					hp += other.healing;
 					hp_scale += 2;
 					added = true;

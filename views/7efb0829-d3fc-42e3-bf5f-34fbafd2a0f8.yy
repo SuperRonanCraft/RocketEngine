@@ -19,7 +19,8 @@
         "f9f1c0d0-3274-4a05-8fc3-99bff39646c4",
         "bb3d0584-0327-4cd7-a1ea-8e22b9c47b12",
         "45231e2c-a239-415a-a717-352ec52a9233",
-        "446a9b6e-9707-4e9c-82fb-1043bf199964"
+        "446a9b6e-9707-4e9c-82fb-1043bf199964",
+        "4c4ea86c-5997-46bc-ad4e-8dbc82459305"
     ],
     "filterType": "GMObject",
     "folderName": "Ultimates",

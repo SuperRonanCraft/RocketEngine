@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "02dd18c2-47f0-4a0b-abbd-f0d07f2dcb30",
+            "Value": {
+                "id": "f69c91e3-a97f-4650-9b7b-26d2126498f8",
+                "resourcePath": "views\\02dd18c2-47f0-4a0b-abbd-f0d07f2dcb30.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0302c78d-63c7-4a1b-a186-ec4494652c18",
             "Value": {
                 "id": "e79aa4d3-d7bf-4691-b723-6bcf047cf0e0",
@@ -183,6 +191,14 @@
             }
         },
         {
+            "Key": "05158119-4e6e-4b6e-bd99-a1beabed4e79",
+            "Value": {
+                "id": "a62dbfc0-9951-4bb4-a4a8-dab127c8075f",
+                "resourcePath": "sprites\\sUltJumpPad\\sUltJumpPad.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
             "Value": {
                 "id": "b985dcf7-a1a7-4f7c-9d3f-880f00b367a6",
@@ -275,6 +291,14 @@
             "Value": {
                 "id": "6508cd1c-6f39-44f5-b6f5-28f71da6a59c",
                 "resourcePath": "scripts\\scDrawPieRect\\scDrawPieRect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0a1a4a81-1a05-4340-9be8-0f8d72e0951a",
+            "Value": {
+                "id": "866ac27a-4bc8-4649-81f4-fcd16949325c",
+                "resourcePath": "scripts\\scBuffHandlerDraw\\scBuffHandlerDraw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1460,6 +1484,14 @@
                 "id": "5ecbde53-fe39-4882-a235-1b95c8138553",
                 "resourcePath": "scripts\\scDirection\\scDirection.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4c4ea86c-5997-46bc-ad4e-8dbc82459305",
+            "Value": {
+                "id": "c617d16e-c3dc-4936-9e7e-ebc7463c0f63",
+                "resourcePath": "objects\\oUltimateTrampoline\\oUltimateTrampoline.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3319,6 +3351,14 @@
             }
         },
         {
+            "Key": "a8c87173-026e-438e-92c3-02fb56dfe3e1",
+            "Value": {
+                "id": "a39fdebf-a529-4fd8-9619-210dffc4a46d",
+                "resourcePath": "sprites\\sUltJumpPadDraw\\sUltJumpPadDraw.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a8ee6ec8-352c-4f9f-8fbd-48dfad5e6007",
             "Value": {
                 "id": "73c329c1-5432-4ef0-a178-5c5c3f08b0e9",
@@ -3607,6 +3647,14 @@
             }
         },
         {
+            "Key": "b6715dcd-0717-4402-bcce-9b25a1a8dd27",
+            "Value": {
+                "id": "d6d59da4-fddd-490b-b56c-5e73eeb1b564",
+                "resourcePath": "views\\b6715dcd-0717-4402-bcce-9b25a1a8dd27.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "b72d9a10-c703-4ec3-8452-1f97282890c0",
             "Value": {
                 "id": "a5380136-d5ac-48be-8f8e-cebefa40fb3b",
@@ -3692,6 +3740,14 @@
                 "id": "a17991e4-19a8-4c54-b2ec-ddb1ec18d00c",
                 "resourcePath": "objects\\oUltimateBrickWall\\oUltimateBrickWall.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bb6db2b3-fc3d-4ce0-bb0f-d828b16dcc70",
+            "Value": {
+                "id": "6aa6a97e-a7da-404c-b3cb-41db43c7a905",
+                "resourcePath": "scripts\\scBuffSlowmo_Draw\\scBuffSlowmo_Draw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4957,6 +5013,7 @@
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
+        "0a1a4a81-1a05-4340-9be8-0f8d72e0951a",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "283cbbad-ce8b-421f-b248-fdb98249bd28",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
@@ -4976,6 +5033,7 @@
         "e02a2303-a556-4d20-ab08-e9a2978b49cf",
         "fc395cba-a75e-4ca3-93db-767b11addd98",
         "4dd4d129-5280-42bb-a6e7-786d76f8739a",
+        "bb6db2b3-fc3d-4ce0-bb0f-d828b16dcc70",
         "085c58de-2240-48f4-9b89-b21ac07969d1",
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "f907be21-c40f-4017-b31f-faec7ca3e936",

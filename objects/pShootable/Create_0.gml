@@ -5,3 +5,4 @@ hp = 1;
 shooter = noone; //The last person who shot them
 
 time_dialation = 1; //Time 1 = 100% speed
+canHeal = true;

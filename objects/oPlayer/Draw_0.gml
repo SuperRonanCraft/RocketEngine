@@ -1,10 +1,14 @@
 /// @desc Animation/Sprite
 
+//Buff draw handler
+scBuffHandlerDraw();
+
 //Draw event for ultimates
 scUltimateHandlerDraw();
 
 //Animate the player in their current state
 scAnimationState();
+
 
 //Moving dust
 if (standing) {

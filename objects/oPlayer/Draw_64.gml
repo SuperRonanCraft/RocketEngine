@@ -1,5 +1,5 @@
 /// @desc GUI for player hp, rockets and ults
-//if (!display) exit;
+if (!display) exit;
 
 //-----------------
 //Display health

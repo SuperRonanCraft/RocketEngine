@@ -4,6 +4,8 @@
 
 var buff = argument0;
 var ds_map = argument1;
+//DEFAULTS
+ds_map[? BUFF_MAP.DRAW] = noone;
 switch (buff) {
 	case BUFFTYPE.BURNRUSH:
 		ds_map[? BUFF_MAP.NAME] = "Burn Rush";
@@ -148,7 +150,13 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLOWMO];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
+		ds_map[? BUFF_MAP.DRAW] = scBuffSlowmo_Draw;
 		ds_map[? "dialation"] = 0.5; //How much to dialate time down to
+		ds_map[? "steps"] = ds_list_create();
+		ds_map[? "steps_amt"] = 3;
+		ds_map[? "steps_crt"] = 0;
+		ds_map[? "steps_on"] = 0;
+		ds_map[? "steps_max"] = 7;
 		break;
 	case BUFFTYPE.SLEEP:
 		ds_map[? BUFF_MAP.NAME] = "Sleep";
@@ -190,7 +198,7 @@ ds_map[? BUFF_MAP.TYPE] = buff;
 enum BUFF_MAP {
 	NAME, DESCRIPTION, ICON, PARTICLE, PARTICLE_AMT,
 	//SCRIPTS
-	STEP,
+	STEP, DRAW,
 	//GENERAL
 	CLOCK, TIME, TYPE, STACKABLE, DISABLED, GOOD
 }

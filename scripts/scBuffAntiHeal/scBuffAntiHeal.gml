@@ -10,6 +10,7 @@ var clock = dsBuff[? BUFF_MAP.CLOCK];
 if (clock == 0) {
 	dsBuff[? "color"] = owner.hp_color_outline;
 	owner.hp_color_outline = c_purple;
+	owner.canHeal = false;
 	dsBuff[? "scale_player"] = owner.hp_color_outline_scale;
 	dsBuff[? "scale_org"] = 0.3;
 	dsBuff[? "scale_lmt"] = 0.1;
@@ -21,6 +22,7 @@ if (clock == 0) {
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	owner.hp_color_outline = dsBuff[? "color"];
 	owner.hp_color_outline_scale = dsBuff[? "scale_player"];
+	owner.canHeal = true;
 	scBuffRemove(owner, dsBuff);
 } else {
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-25, 25), y + irandom_range(-30, 30), 
