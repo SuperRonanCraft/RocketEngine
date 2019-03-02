@@ -15,6 +15,8 @@ timer_margin = 2;
 //Shooting
 turret_rate = room_speed; //fire rate
 turret_cd = turret_rate / 4; //current cooldown
+turret_offset = 0;
+turret_offset_max = 10;
 
 //Health
 turret_hp_org = 2; //Original health

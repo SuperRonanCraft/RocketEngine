@@ -6,4 +6,5 @@ if (item != noone) {
 	delay_current = delay; //Delay a new spawn
 	timer_current = 0;
 	item = noone; //Reset item
+	hacked = false;
 }

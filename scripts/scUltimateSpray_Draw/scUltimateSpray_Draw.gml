@@ -18,5 +18,5 @@ for (var i = 0; i < 6; i++) {
 		} else
 			colliding = true;
 	}
-	scDrawLine(x, y, xx, yy, c_red, 4, 0.2);
+	scDrawLine(x, y, xx, yy, c_red, 4, 0.5);
 }

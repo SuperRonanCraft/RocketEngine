@@ -1,1 +1,1 @@
-scDrawLine(x, 0, x, room_height, c_red, 5, 0.2);
+scDrawLine(x, 0, x, room_height, c_red, 5, 0.5);

@@ -159,6 +159,13 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateOrbit_Draw;
 		ds_map[? "dis"] = 120; //distance between rocket and player
 		ds_map[? "amt"] = 5; //amt of rockets
+		ds_map[? "ang"] = 0; //for animating
+		ds_map[? "ang_chg"] = 2; //for animating
+		break;
+	case ULTIMATE.HACKLOOT:
+		ds_map[? ULTIMATE_MAP.NAME] = "Shield 2.0!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateHackLoot;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHackLoot_Draw;
 		break;
 }
 
@@ -166,7 +173,7 @@ enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL, AMPWALL, TURRET,
-	ORBIT,
+	ORBIT, HACKLOOT,
 	NONE,
 	//PUT LAST
 	LENGTH

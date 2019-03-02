@@ -1,6 +1,10 @@
 /// @desc draw circle
 
-draw_self();
+//Base
+scDrawSpriteExt(x, y, sprite_index, 1, noone, image_alpha, image_xscale, image_yscale, 0);
+//Cannon
+turret_offset = max(turret_offset - 1, 0);
+scDrawSpriteExt(x - (turret_offset * image_xscale), y, sprite_index, 0, noone, image_alpha, image_xscale, image_yscale, image_angle);
 
 var yy = bbox_top - 10 - (timer_width + timer_margin), xx = (bbox_left + ((bbox_right - bbox_left) / 2)) - (timer_len / 2);
 var percent = other.timer / other.timer_org;

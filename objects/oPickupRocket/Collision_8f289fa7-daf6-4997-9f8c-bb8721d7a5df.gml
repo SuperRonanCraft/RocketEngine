@@ -4,6 +4,7 @@ if (!other.pickups_enabled || !global.play) exit;
 if (item != noone) {
 	with (other)
 		scRocketChange(other.item_rocket); //Give rocket
-	timer_current = timer; //Reset cooldown
+	timer_current = timer_org; //Reset cooldown
 	item = noone; //Reset item
+	hacked = false;
 }

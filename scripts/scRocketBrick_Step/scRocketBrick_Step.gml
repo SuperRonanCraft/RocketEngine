@@ -7,6 +7,7 @@ map[? "vsp"] += map[? "grv"] * owner.time_dialation;
 map[? "hsp"] += (map[? "acc"] * side) * owner.time_dialation;
 if (sign(map[? "hsp"]) != sign(side))
 	map[? "hsp"] *= -1;
+map[? "hsp"] = clamp(map[? "hsp"], -map[? "max"], map[? "max"])
 
 //Bounce off wall
 var inst_list = ds_list_create();

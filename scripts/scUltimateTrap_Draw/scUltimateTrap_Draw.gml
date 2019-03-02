@@ -12,7 +12,7 @@ for (var i = 0; i < 3; i++) {
 			xx += hspd
 			yspd += grv;
 			yy += yspd;
-			scDrawCircle(xx, yy, 5, c_red, false, 0.2);
+			scDrawCircle(xx, yy, 5, c_red, false, 0.5);
 		}
 	}
 }

@@ -3,7 +3,7 @@
 if (!standing) {
 	vsp += grv * owner.time_dialation;
 
-	//Slide on floor
+	//Fall on floor
 	var coly = false;
 	var inst = instance_place(x, y + vsp, oWall);
 	if (inst != noone && inst.object_index != oSeperator) {
@@ -30,5 +30,6 @@ if (timer <= 0) {
 		var offset = owner.rocket_map[? ROCKET_MAP.OFFSET];
 		scSpawnRocket(x + lengthdir_x(offset, direction), y, depth + 1, direction, owner, owner.rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false]);
 		turret_cd = turret_rate;
+		turret_offset = turret_offset_max;
 	}
 }

@@ -1,9 +1,7 @@
 /// @desc cycle item
 if (!global.play) exit; //Dont start unless game has started
 
-//if (current_delay <= 0) { //Delay a new spawn
-if (current_cooldown <= 0) { //Delay the next spawn
-	current_cooldown = cooldown;
+if (timer_current <= 0) {
 	var possible = 0;
 	var index = 0;
 	//Get a list of all enabled rockets
@@ -17,8 +15,11 @@ if (current_cooldown <= 0) { //Delay the next spawn
 	}
 	//Pick a random rocket from the possible array
 	var map = scRocketGet(possible[irandom_range(0, array_length_1d(possible) - 1)]);
-	current_item = map[? ROCKET_MAP.PROJECTILE];
-	current_rocket = map[? ROCKET_MAP.TYPE];
+	item = map[? ROCKET_MAP.PROJECTILE];
+	item_rocket = map[? ROCKET_MAP.TYPE];
 	ds_map_destroy(map);
+	timer_current = timer_org; //Reset the timer
+	timer = timer_org;
 } else
-	current_cooldown--;
+	timer_current--;
+

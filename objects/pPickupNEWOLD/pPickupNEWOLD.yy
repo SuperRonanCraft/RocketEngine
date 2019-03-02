@@ -2,7 +2,7 @@
     "id": "3fbe2a0d-926b-445e-8750-ec3918aa79ba",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "pPickupNEW",
+    "name": "pPickupNEWOLD",
     "eventList": [
         {
             "id": "709a7ef6-dc64-4ca4-9a7f-84c9a5d6f88b",

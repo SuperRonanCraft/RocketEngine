@@ -19,6 +19,7 @@ map[? ROCKET_MAP.ENABLED] = true; //Is the rocket enabled in-game?
 map[? ROCKET_MAP.SCALE] = 1.3; //Default rocket scale
 map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = true; //automatically destroy instance when collided
 map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM] = true; //automatically destroy instance when outside room
+map[? ROCKET_MAP.HIT_PICKUP] = noone; //When hitting a pickup
 //DAMAGES
 map[? ROCKET_MAP.DAMAGE] = 1; //Base damage
 map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket

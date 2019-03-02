@@ -367,10 +367,11 @@ switch (roc) {
 		map[? ROCKET_MAP.CLIP] = 3;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MINISPRAY;
+		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MINISPRAY;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketArching_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketArching_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HACKLOOT;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		break;
 		
