@@ -1,10 +1,8 @@
 /// @desc 
 
 if (!stopped) {
-	if (light_current > light_target / 2) {
+	if (light_current > light_target / 2)
 		light_speed = ((light_target / light_current) - 1) * light_speed;
-	}
-
 	if (light_current < light_target && light_speed > 1) {
 		x += lengthdir_x(light_speed, direction);
 		y += lengthdir_y(light_speed, direction);

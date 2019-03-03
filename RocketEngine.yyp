@@ -631,14 +631,6 @@
             }
         },
         {
-            "Key": "1fd940af-afa7-47d9-9819-2f6ab960e911",
-            "Value": {
-                "id": "2d04f584-da26-440a-a9fb-ccb679c80017",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Exp_Rocket\\scRocketSpecialSlime_Exp_Rocket.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "1fe401b2-06ef-4064-ac62-fbc3309f8586",
             "Value": {
                 "id": "14b05158-d62c-40ec-a164-62e3f29c7462",
@@ -1167,14 +1159,6 @@
             }
         },
         {
-            "Key": "3ca8b2f6-b0d5-4ba6-a968-dd51de4880aa",
-            "Value": {
-                "id": "466b0902-9e0a-433c-81e1-d7d49947934a",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Exp_Wall\\scRocketSpecialSlime_Exp_Wall.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "3cce5a87-9ff3-4e1b-953b-54b0642dcac5",
             "Value": {
                 "id": "e66ebeea-5d99-46cd-a773-0d7f914fc74a",
@@ -1202,7 +1186,7 @@
             "Key": "3dedc9d0-41e6-411f-8949-1c71f9e8c831",
             "Value": {
                 "id": "1809ff2d-78a5-4b51-add2-66d599d0b7c6",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Create\\scRocketSpecialSlime_Create.yy",
+                "resourcePath": "scripts\\scRocketSlime_Create\\scRocketSlime_Create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1610,7 +1594,7 @@
             "Key": "5219a979-caa3-4639-9b4a-8a1007225652",
             "Value": {
                 "id": "68acbded-3b23-451b-9717-c53a7c9568b6",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Step\\scRocketSpecialSlime_Step.yy",
+                "resourcePath": "scripts\\scRocketSlime_Step\\scRocketSlime_Step.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1812,14 +1796,6 @@
                 "id": "5851d474-fd4f-4050-bfdc-441e77d9b6bb",
                 "resourcePath": "views\\5bdba736-b504-4b73-a57c-ff03e7ebecaf.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "5be65335-d0ed-4a90-b7eb-df6c782b8559",
-            "Value": {
-                "id": "976f22ba-41c5-40f8-bd29-4289ff67a9d4",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Exp_Create\\scRocketSpecialSlime_Exp_Create.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -2683,14 +2659,6 @@
             "Value": {
                 "id": "5095a852-bbd2-4611-baa3-36a3871d8907",
                 "resourcePath": "scripts\\scFlash\\scFlash.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "8b56a2a9-f3e4-44e2-bdba-dea052c0a81e",
-            "Value": {
-                "id": "3600316e-8c5d-4585-b17d-d401f19bf401",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Exp_Step\\scRocketSpecialSlime_Exp_Step.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3663,14 +3631,6 @@
             }
         },
         {
-            "Key": "b78cfcc2-8e40-44d2-a0f8-ac9159cc0aa6",
-            "Value": {
-                "id": "e754d227-0305-49a0-81b1-d7b2f6d2da3a",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Exp_Shootable\\scRocketSpecialSlime_Exp_Shootable.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "b84e103c-4d2a-4588-bd7a-bf3bef971f22",
             "Value": {
                 "id": "c9f82ff8-bdcf-4f79-a601-7a0404297c09",
@@ -3876,14 +3836,6 @@
                 "id": "963169f8-515a-40f0-adfa-30eb4e828a7e",
                 "resourcePath": "sprites\\s_abilityIcon_RocketBoots\\s_abilityIcon_RocketBoots.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "c08826d3-9dd3-4247-81fd-cce74174587c",
-            "Value": {
-                "id": "99e6894d-00d6-4462-853b-467be9bcd282",
-                "resourcePath": "scripts\\scRocketSpecialSlime_Draw\\scRocketSpecialSlime_Draw.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -4920,12 +4872,6 @@
         "de39e19f-7cd9-422a-aa93-4892c404871b",
         "3dedc9d0-41e6-411f-8949-1c71f9e8c831",
         "5219a979-caa3-4639-9b4a-8a1007225652",
-        "c08826d3-9dd3-4247-81fd-cce74174587c",
-        "5be65335-d0ed-4a90-b7eb-df6c782b8559",
-        "8b56a2a9-f3e4-44e2-bdba-dea052c0a81e",
-        "b78cfcc2-8e40-44d2-a0f8-ac9159cc0aa6",
-        "3ca8b2f6-b0d5-4ba6-a968-dd51de4880aa",
-        "1fd940af-afa7-47d9-9819-2f6ab960e911",
         "5c320603-4784-4110-97d0-f25729940237",
         "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
         "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",

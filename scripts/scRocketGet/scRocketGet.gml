@@ -178,16 +178,10 @@ switch (roc) {
 		map[? ROCKET_MAP.COOLDOWN] = 27 * varcd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
-		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialSlime_Create;
-		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialSlime_Step;
-		//map[? ROCKET_MAP.ROCKET_DRAW] = scRocketSpecialSlime_Draw;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSlime_Create;
+		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSlime_Step;
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Slime;
-		//map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketSpecialSlime_Exp_Create;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLUDGE;//SWIPE;
-		//map[? ROCKET_MAP.EXPLOSION_STEP] = scRocketSpecialSlime_Exp_Step;
-		//map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialSlime_Exp_Shootable;
-		//map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialSlime_Exp_Wall;
-		//map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialSlime_Exp_Rocket;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLUDGE;
 		break;
 
 	case ROCKET.RANDOM:
@@ -368,7 +362,6 @@ switch (roc) {
 		map[? ROCKET_MAP.CLIP] = 3;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
-		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MINISPRAY;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketArching_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketArching_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
@@ -391,7 +384,6 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.ORBIT;
-		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
 		break;
 		
 	case ROCKET.BRICK:

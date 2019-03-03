@@ -1,8 +1,8 @@
 {
-    "id": "3ca8b2f6-b0d5-4ba6-a968-dd51de4880aa",
+    "id": "5219a979-caa3-4639-9b4a-8a1007225652",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scRocketSpecialSlime_Exp_Wall",
+    "name": "scRocketSlime_Step",
     "IsCompatibility": false,
     "IsDnD": false
 }

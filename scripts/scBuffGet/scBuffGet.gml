@@ -190,7 +190,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 6 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
 		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;

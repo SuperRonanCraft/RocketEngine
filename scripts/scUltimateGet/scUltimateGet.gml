@@ -29,70 +29,50 @@ switch (type) {
 	case ULTIMATE.BARRAGE: //Dodge the lasers!
 		ds_map[? ULTIMATE_MAP.NAME] = "Termination";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateBarrage;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
 		break;
 	case ULTIMATE.SPRAY: //Triple threat!
 		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSpray;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateSpray_Draw;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.HUGEEXPLOSION: //It's gonna be huge!
 		ds_map[? ULTIMATE_MAP.NAME] = "Honey don't go outside!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateHugesplosion;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHugesplosion_Draw;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.CLONE: //Huh, the cake isnt a lie afterall
 		ds_map[? ULTIMATE_MAP.NAME] = "From another dimension";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateClone;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateClone_Draw;
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW] = scUltimateClone_DrawCasted;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
-		break;
-	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
-		ds_map[? ULTIMATE_MAP.NAME] = "Ur gonna hate this";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwipe;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
-		break;
-	case ULTIMATE.SHIELD: //Huh, that exists
-		ds_map[? ULTIMATE_MAP.NAME] = "Youuuu shall not Passssss!";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateShield;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 15;
-		ds_map[? ULTIMATE_MAP.SOUND_CAST] = SOUND.ULT_SHIELD_CAST;
 		break;
 	case ULTIMATE.MIRROR: //Oh, now its going this way
 		ds_map[? ULTIMATE_MAP.NAME] = "Magical mirror";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateMirror;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMirror_Draw;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 20;
 		break;
 	case ULTIMATE.HOMING: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Rocket Barrage";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateHoming;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHoming_Draw;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.LASER: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Lets Delete them!";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLaser;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 25;
 		break;
 	case ULTIMATE.TRAP: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Gotcha";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateTrap;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTrap_Draw;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.MAGNET: 
 		ds_map[? ULTIMATE_MAP.NAME] = "Get Over Here!";
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateMagnet;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateMagnet_Draw;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 10;
 		break;
 	case ULTIMATE.SLUDGE:
 		ds_map[? ULTIMATE_MAP.NAME] = "Icky goo!";
@@ -124,11 +104,6 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimatePortal;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimatePortal_Draw;
 		ds_map[? ULTIMATE_MAP.CASTED_DEPTH] = 1;
-		break;
-	case ULTIMATE.MINISPRAY:
-		ds_map[? ULTIMATE_MAP.NAME] = "Mini spray!";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateMiniSpray;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
 		break;
 	case ULTIMATE.BRICKWALL:
 		ds_map[? ULTIMATE_MAP.NAME] = "ITS GONNA BE HUGE!";
@@ -183,11 +158,12 @@ switch (type) {
 }
 
 enum ULTIMATE {
-	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
+	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
-	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL, AMPWALL, TURRET,
+	SLOWMO, SLEEPDART, PORTAL, BRICKWALL, AMPWALL, TURRET,
 	ORBIT, HACKLOOT, JUMPPAD,
 	NONE,
+	//SWIPE, SHIELD, MINISPRAY,
 	//PUT LAST
 	LENGTH
 }
@@ -199,3 +175,21 @@ enum ULTIMATE_MAP {
 	//SOUND
 	SOUND_CAST
 }
+
+//OLD ULTIMATES
+/*	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
+		ds_map[? ULTIMATE_MAP.NAME] = "Ur gonna hate this";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwipe;
+		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
+		break;
+	case ULTIMATE.SHIELD: //Huh, that exists
+		ds_map[? ULTIMATE_MAP.NAME] = "Youuuu shall not Passssss!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateShield;
+		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 15;
+		ds_map[? ULTIMATE_MAP.SOUND_CAST] = SOUND.ULT_SHIELD_CAST;
+		break;
+	case ULTIMATE.MINISPRAY:
+		ds_map[? ULTIMATE_MAP.NAME] = "Mini spray!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateMiniSpray;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
+		break;*/
