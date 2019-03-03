@@ -10,6 +10,10 @@ switch (state) {
 		overwrite = true;
 		scSpecialAnimation(sPlayer_dead1, 0);
 		break;
+	case ANIMATIONSTATE.DEAD2:
+		overwrite = true;
+		scSpecialAnimation(sPlayer_dead2, 0);
+		break;
 	case ANIMATIONSTATE.WALKING:
 		currentSprite = sPlayer_walk;	
 		break;	

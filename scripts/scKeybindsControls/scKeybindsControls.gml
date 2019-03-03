@@ -1,39 +1,32 @@
 /// @desc player movement
 
+
+//KEYBINDS
+var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
+var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
+var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
+var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
+
+//AI KEYBINDS
+if (player_aimode && aiBrain != noone) {
+	key_left = aiBrain.AILeft;
+	key_right = aiBrain.AIRight;
+	key_jump = aiBrain.AIJump;
+	key_shoot = aiBrain.AIShoot;
+}
+
+//Horizontal
+var move = (key_right - key_left) * keydirection;
+controlling = move;
+
 //Check if can control
 if (canControl) {
-	
-	//KEYBINDS
-	var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
-	var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
-	var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
-	var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
-
-	//AI KEYBINDS
-	if (player_aimode && aiBrain != noone) {
-		key_left = aiBrain.AILeft;
-		key_right = aiBrain.AIRight;
-		key_jump = aiBrain.AIJump;
-		key_shoot = aiBrain.AIShoot;
-	}
-
-	//Horizontal
-	var move = (key_right - key_left) * keydirection;
-	controlling = move;
 	
 	//Direction
 	if (move != 0)
 		facing = move;
 	
-	//Friction
-	if (move == 0 && hsp_move != 0) {
-		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base + friction_adj)));	
-		hsp_move += recoilKB;
-		//Ease into 0
-		if (abs(hsp_move) < 0.5)
-			hsp_move = 0;
-	} else
-		hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
+	//Frictiom
 
 	//Vertical
 	if (key_jump && standing) {
@@ -43,8 +36,19 @@ if (canControl) {
 	//Weapon
 	if (key_shoot)
 		scRocketShoot();
-} else 
-	hsp_move = move_adj;
+} else {
+	hsp_move = hsp;
+}
+
+//Friction
+if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
+	hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base + friction_adj)));	
+	hsp_move += recoilKB;
+	//Ease into 0
+	if (abs(hsp_move) < 0.5)
+		hsp_move = 0;
+} else if(hsp_knockback == 0)
+	hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
 
 //Reset recoil
 if (recoilKB < recoilMAX)

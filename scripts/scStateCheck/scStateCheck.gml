@@ -17,7 +17,6 @@ switch (playerState) {
 		break;
     case PLAYERSTATE.DEAD:
 		overrideAnimation = false;
-		animState = ANIMATIONSTATE.DEAD;
         canControl = false;
         break;
 	case PLAYERSTATE.WAKING:

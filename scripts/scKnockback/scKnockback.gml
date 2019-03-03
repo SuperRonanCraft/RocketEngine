@@ -5,7 +5,7 @@ knockback_time--;
 
 //Particles
 part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? PARTICLES.KBSMOKE], 1);
-hsp_move = 0;
+//hsp_move = 0;
 //animate correctly
 if (playerState == PLAYERSTATE.KNOCKBACK)
 	if (sign(facing) == sign(hsp_knockback))
@@ -28,6 +28,6 @@ if (hsp_knockback == 0 && vsp_knockback == 0 && alive){
 	knockback_time = 0;
 }
 
-hsp_knockback -= 0.2 * sign(hsp_knockback);
+//hsp_knockback -= 0.2 * sign(hsp_knockback);
 if (abs(hsp_knockback) < 3)
 	hsp_knockback = 0;

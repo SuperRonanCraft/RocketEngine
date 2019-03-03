@@ -300,9 +300,9 @@ ds_map_add(ds_part_amt, PARTICLES.DUST, 5 * amt);
 //DAMAGE
 parttype = part_type_create();
 part_type_sprite(parttype, s_pdamageboost, true, false, false);
-part_type_size(parttype, 0.5, 0.7, 0.025 * spd, 0);
-part_type_speed(parttype, 0.5 * spd, 1 * spd, 0.5 * spd, 0);
-part_type_life(parttype, 5 * life, 10 * life);
+part_type_size(parttype, 1, 1, -0.05 * spd, 0);
+part_type_speed(parttype, 5 * spd, 5 * spd, -0.01 * spd, 0);
+part_type_life(parttype, 15 * life, 15 * life);
 part_type_direction(parttype, 90, 90, 0, 0);
 ds_map_add(ds_part, PARTICLES.DAMAGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.DAMAGE, 1);
