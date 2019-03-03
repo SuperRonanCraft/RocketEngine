@@ -1,8 +1,8 @@
 {
-    "id": "d756b52c-f0bf-473c-bf2b-96b817472c0a",
+    "id": "b63a8be5-6041-4a29-ba39-2b9fcdccae91",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUltimateTurret",
+    "name": "scUltimateGeneral_Outline_Draw",
     "IsCompatibility": false,
     "IsDnD": false
 }

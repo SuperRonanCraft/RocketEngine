@@ -2,7 +2,7 @@
     "id": "4c4ea86c-5997-46bc-ad4e-8dbc82459305",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oUltimateTrampoline",
+    "name": "oUltimateJumpPad",
     "eventList": [
         {
             "id": "34795d5d-59a6-4211-a75b-c8890297617f",
@@ -45,21 +45,11 @@
             "m_owner": "4c4ea86c-5997-46bc-ad4e-8dbc82459305"
         },
         {
-            "id": "d280aa81-6ed5-4a5c-a678-6e12b2f1a889",
+            "id": "bb434925-111f-4328-8c46-fb430fdb21b9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "f34242a3-26d8-4545-ac48-27e72e82b69c",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "4c4ea86c-5997-46bc-ad4e-8dbc82459305"
-        },
-        {
-            "id": "172c0254-bd7a-4cf0-b3f3-85c731f90ebb",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "184e19c9-d257-47e9-bc6a-1ada34ba66be",
+            "collisionObjectId": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "4c4ea86c-5997-46bc-ad4e-8dbc82459305"
@@ -83,6 +73,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "36899e55-56a8-491a-a1f1-3c621a954a29",
+    "spriteId": "05158119-4e6e-4b6e-bd99-a1beabed4e79",
     "visible": true
 }

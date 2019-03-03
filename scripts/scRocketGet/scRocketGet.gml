@@ -223,6 +223,7 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ANTIHEAL];
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.JUMPPAD;
 		break;
 		
 	case ROCKET.SPIKED:

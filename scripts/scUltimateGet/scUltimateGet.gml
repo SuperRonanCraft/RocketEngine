@@ -148,10 +148,13 @@ switch (type) {
 		break;
 	case ULTIMATE.TURRET:
 		ds_map[? ULTIMATE_MAP.NAME] = "Noob!";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateTurret;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateTurret_Draw;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateGeneral_Outline_Object;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateGeneral_Outline_Draw;
 		ds_map[? "dis"] = 80;
 		ds_map[? "hei"] = -20;
+		ds_map[? "obj"] = oUltimateTurret;
+		ds_map[? "spr"] = sUltTurretDraw;
+		ds_map[? "scl"] = 0.7;
 		break;
 	case ULTIMATE.ORBIT:
 		ds_map[? ULTIMATE_MAP.NAME] = "Shield 2.0!";
@@ -167,10 +170,15 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateHackLoot;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHackLoot_Draw;
 		break;
-	case ULTIMATE.TRAMPOLINE:
+	case ULTIMATE.JUMPPAD:
 		ds_map[? ULTIMATE_MAP.NAME] = "BOUNCE!";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateHackLoot;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateHackLoot_Draw;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateGeneral_Outline_Object;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateGeneral_Outline_Draw;
+		ds_map[? "dis"] = 80;
+		ds_map[? "hei"] = -20;
+		ds_map[? "obj"] = oUltimateJumpPad;
+		ds_map[? "spr"] = sUltJumpPadDraw;
+		ds_map[? "scl"] = 1;
 		break;
 }
 
@@ -178,7 +186,7 @@ enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE, SWIPE, SHIELD,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 	SLOWMO, SLEEPDART, PORTAL, MINISPRAY, BRICKWALL, AMPWALL, TURRET,
-	ORBIT, HACKLOOT, TRAMPOLINE,
+	ORBIT, HACKLOOT, JUMPPAD,
 	NONE,
 	//PUT LAST
 	LENGTH
