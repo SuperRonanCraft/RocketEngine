@@ -295,14 +295,6 @@
             }
         },
         {
-            "Key": "0a1a4a81-1a05-4340-9be8-0f8d72e0951a",
-            "Value": {
-                "id": "866ac27a-4bc8-4649-81f4-fcd16949325c",
-                "resourcePath": "scripts\\scBuffHandlerDraw\\scBuffHandlerDraw.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "0b6a16fd-15b1-4137-8d3e-d13448a2a58c",
             "Value": {
                 "id": "ce9fc7ed-df0a-406b-96fe-2f6262d1c321",
@@ -1436,6 +1428,14 @@
                 "id": "f80d3bb0-458e-4112-b132-e9946567ac22",
                 "resourcePath": "sprites\\sRocket_Default\\sRocket_Default.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4a0a3fae-a790-4ff3-a95d-bede420fab12",
+            "Value": {
+                "id": "578752b4-1bbb-46f0-813f-44c3fdd8034e",
+                "resourcePath": "scripts\\scBuffAntiHeal\\scBuffAntiHeal.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4655,14 +4655,6 @@
             }
         },
         {
-            "Key": "f907be21-c40f-4017-b31f-faec7ca3e936",
-            "Value": {
-                "id": "6bf1aaf6-3073-4c15-90ee-f13ac475c703",
-                "resourcePath": "scripts\\scBuffAntiHeal\\scBuffAntiHeal.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "f974073b-3f79-4519-8a46-393d74e2e92e",
             "Value": {
                 "id": "8aa9eb13-ca14-468c-8879-9880c60f0be1",
@@ -4967,7 +4959,6 @@
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
-        "0a1a4a81-1a05-4340-9be8-0f8d72e0951a",
         "19bb796d-1000-4d06-9411-9602588f1e07",
         "283cbbad-ce8b-421f-b248-fdb98249bd28",
         "d2a4648a-e27d-4dc9-a722-27c9258bae07",
@@ -4990,7 +4981,7 @@
         "bb6db2b3-fc3d-4ce0-bb0f-d828b16dcc70",
         "085c58de-2240-48f4-9b89-b21ac07969d1",
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
-        "f907be21-c40f-4017-b31f-faec7ca3e936",
+        "4a0a3fae-a790-4ff3-a95d-bede420fab12",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

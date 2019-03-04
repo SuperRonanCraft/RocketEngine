@@ -1,7 +1,7 @@
 /// @desc Animation/Sprite
 
 //Buff draw handler
-scBuffHandlerDraw();
+scBuffHandler(BUFF_EVENT.DRAW);
 
 //Draw event for ultimates
 scUltimateHandlerDraw();

@@ -1,5 +1,5 @@
 {
-    "id": "f907be21-c40f-4017-b31f-faec7ca3e936",
+    "id": "4a0a3fae-a790-4ff3-a95d-bede420fab12",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scBuffAntiHeal",

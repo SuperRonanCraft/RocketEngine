@@ -1,22 +1,24 @@
 /// @desc GUI for player hp, rockets and ults
-if (!display) exit;
+//if (!display) exit;
+
+//Buff draw handler (below all)
+scBuffHandler(BUFF_EVENT.DRAW_GUI_BELOW);
 
 //-----------------
 //Display health
 var hppart = hp mod 2 / 2;
-var hpoffset = 0;
 if (hp <= 2)
-	hpoffset = scMovementWave(-3, 3, 1);
+	hp_offset = scMovementWave(-3, 3, 1);
+else
+	hp_offset = 0;
 for (var i = 0; i < hp_original / 2; i++) {
 	//Show first ten hearts, then show additional hearts in text
 	if (i < 10) {
 		var len = hpwidth * i;
 		var side = team == TEAM.LEFT ? 1 : -1;
-		var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hpoffset;
+		var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset;
 		var ypos = hpheight + 2;
 		var scale = i * 2 <= hp + (hp_damaged - 1) && i * 2 > hp - 2 ? hp_scale : 1;
-		if (hp_color_outline != noone)
-			scFlash(0.8, hp_color_outline, scale + hp_color_outline_scale, scale + hp_color_outline_scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
 		var c = hp / 2 <= i ? c_white : hp_color;
 		if (hppart != 0 && i == (hp - (hppart * 2)) / 2) {
 			var alpha = 0.9;
@@ -182,3 +184,6 @@ if (combo_amount > 1) {
 	scDrawText(xpos, 50, ctext, c_yellow, combo_scale * 0.5, noone, noone, align);
 }
 combo_scale = max(combo_scale * 0.95, 1); //Lower combo scale
+
+//Buff draw handler (above all)
+scBuffHandler(BUFF_EVENT.DRAW_GUI_ABOVE);

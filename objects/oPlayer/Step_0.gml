@@ -30,7 +30,7 @@ scKeybindsControls();
 scCheckTech();
 
 //Buff step handler
-scBuffHandler();
+scBuffHandler(BUFF_EVENT.STEP);
 
 //Collision
 scGravity();

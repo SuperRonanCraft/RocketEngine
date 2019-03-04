@@ -6,6 +6,9 @@ var buff = argument0;
 var ds_map = argument1;
 //DEFAULTS
 ds_map[? BUFF_MAP.DRAW] = noone;
+ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = noone;
+ds_map[? BUFF_MAP.DRAW_GUI_ABOVE] = noone;
+ds_map[? BUFF_MAP.STEP] = noone;
 switch (buff) {
 	case BUFFTYPE.BURNRUSH:
 		ds_map[? BUFF_MAP.NAME] = "Burn Rush";
@@ -186,11 +189,17 @@ switch (buff) {
 		ds_map[? BUFF_MAP.NAME] = "Anti-Healing";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Why can't I heal!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ANTIHEAL;
-		ds_map[? BUFF_MAP.STEP] = scBuffAntiHeal;
+		ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffAntiHeal;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
+		ds_map[? "color"] = c_purple;
+		ds_map[? "scale_org"] = 0.3;
+		ds_map[? "scale_lmt"] = 0.1;
+		ds_map[? "scale_chg"] = 0.01;
+		ds_map[? "scale_dir"] = 1;
+		ds_map[? "scale"] = ds_map[? "scale_org"];
 		break;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
@@ -198,7 +207,7 @@ ds_map[? BUFF_MAP.TYPE] = buff;
 enum BUFF_MAP {
 	NAME, DESCRIPTION, ICON, PARTICLE, PARTICLE_AMT,
 	//SCRIPTS
-	STEP, DRAW,
+	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE,
 	//GENERAL
 	CLOCK, TIME, TYPE, STACKABLE, DISABLED, GOOD, GIVEN_BY
 }

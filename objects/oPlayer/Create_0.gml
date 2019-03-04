@@ -20,9 +20,7 @@ hp_flash_alpha = 0;
 hp_flash_reduce = 0.05 / TIME_SPEED;
 hp_flash_color = c_red;
 hp_color = c_white;
-hp_color_outline = noone;
-hp_color_outline_scale = 0.2;
-canheal = true;
+hp_offset = 0;
 //display = true; //Display gui stuff
 
 //Show when hit
