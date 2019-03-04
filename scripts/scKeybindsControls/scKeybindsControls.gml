@@ -26,7 +26,7 @@ if (canControl) {
 	if (move != 0)
 		facing = move;
 	
-	//Frictiom
+	//Friction
 
 	//Vertical
 	if (key_jump && standing) {
@@ -40,15 +40,17 @@ if (canControl) {
 	hsp_move = hsp;
 }
 
-//Friction
-if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
-	hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base + friction_adj)));	
-	hsp_move += recoilKB;
-	//Ease into 0
-	if (abs(hsp_move) < 0.5)
-		hsp_move = 0;
-} else if(hsp_knockback == 0)
-	hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
+	//Friction
+	if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
+		hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base + friction_adj)));	
+		hsp_move += recoilKB;
+		//Ease into 0
+		if (abs(hsp_move) < 0.5)
+			hsp_move = 0;
+	} 
+	//Move hsp
+	else if(hsp_knockback == 0 && canControl)
+		hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
 
 //Reset recoil
 if (recoilKB < recoilMAX)
