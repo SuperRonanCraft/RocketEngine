@@ -2002,7 +2002,7 @@
             "Key": "66c610cf-2fd1-4430-ab04-94d93d14661b",
             "Value": {
                 "id": "e1560d8e-accc-4db1-815a-14398ab481f0",
-                "resourcePath": "sprites\\s_pdust\\s_pdust.yy",
+                "resourcePath": "sprites\\s_pdustOG\\s_pdustOG.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4772,6 +4772,14 @@
                 "id": "11e501f3-2774-4272-883f-d19826e2e5d6",
                 "resourcePath": "scripts\\scUltimateHugesplosion\\scUltimateHugesplosion.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fd04274f-c419-49ac-b226-2c57ed70af92",
+            "Value": {
+                "id": "909c2c11-a8b2-414d-a986-fa97ad7d816b",
+                "resourcePath": "sprites\\s_pdust\\s_pdust.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

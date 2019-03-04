@@ -25,12 +25,13 @@ switch (roc) {
 		map[? ROCKET_MAP.SPEED] = 20 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
+		map[? ROCKET_MAP.DAMAGE] = 2;
+		
 		break;
 		
 	case ROCKET.FAST:
 		map[? ROCKET_MAP.NAME] = "Fast";
 		map[? ROCKET_MAP.DESCRIPTION] = "Super sonic!";
-		map[? ROCKET_MAP.RECOIL] = 1 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FAST;
 		map[? ROCKET_MAP.COOLDOWN] = 5 * varcd;
 		map[? ROCKET_MAP.SPEED] = 30 * varspd;
@@ -45,7 +46,6 @@ switch (roc) {
 	case ROCKET.HOMING:
 		map[? ROCKET_MAP.NAME] = "Homing";
 		map[? ROCKET_MAP.DESCRIPTION] = "I will find you!";
-		map[? ROCKET_MAP.RECOIL] = 5 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.HOMING;
 		map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
 		map[? ROCKET_MAP.SPEED] = 20 * varspd;
@@ -63,7 +63,7 @@ switch (roc) {
 	case ROCKET.REVERSE:
 		map[? ROCKET_MAP.NAME] = "Reverse";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ima go this way";
-		map[? ROCKET_MAP.RECOIL] = -5 * varrc;
+		map[? ROCKET_MAP.RECOIL] = -2 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.REVERSE;
 		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
 		map[? ROCKET_MAP.SPEED] = 18 * varspd;
@@ -83,7 +83,6 @@ switch (roc) {
 	case ROCKET.ICE:
 		map[? ROCKET_MAP.NAME] = "Ice";
 		map[? ROCKET_MAP.DESCRIPTION] = "It's cold outside";
-		map[? ROCKET_MAP.RECOIL] = 5 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.ICE;
 		map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
 		map[? ROCKET_MAP.SPEED] = 19 * varspd;
@@ -105,7 +104,6 @@ switch (roc) {
 	case ROCKET.FIRE:
 		map[? ROCKET_MAP.NAME] = "Fire";
 		map[? ROCKET_MAP.DESCRIPTION] = "Hot like lava";
-		map[? ROCKET_MAP.RECOIL] = 5 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FIRE;
 		map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
 		map[? ROCKET_MAP.SPEED] = 22 * varspd;
@@ -128,7 +126,6 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Sandy";
 		map[? ROCKET_MAP.DESCRIPTION] = "In question";
 		map[? ROCKET_MAP.DAMAGE] = 2;
-		map[? ROCKET_MAP.RECOIL] = 2 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SAND;
 		map[? ROCKET_MAP.COOLDOWN] = 12 * varcd;
 		map[? ROCKET_MAP.SPEED] = 6 * varspd;
@@ -140,11 +137,6 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SAND];
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SAND];
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Sand;
-		//map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketSand_ExplodeCreate;
-		//map[? ROCKET_MAP.EXPLOSION_STEP] = scRocketSand_ExplodeStep;
-		//map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSand_Create;
-		//map[? ROCKET_MAP.ROCKET_STEP] = scRocketSand_Step;
-		//map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketSand_Destroy;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HUGEEXPLOSION;
@@ -153,7 +145,6 @@ switch (roc) {
 	case ROCKET.LASER:
 		map[? ROCKET_MAP.NAME] = "Laser";
 		map[? ROCKET_MAP.DESCRIPTION] = "Dont stand still!";
-		map[? ROCKET_MAP.RECOIL] = 5 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LASER;
 		map[? ROCKET_MAP.COOLDOWN] = 30 * varcd;
 		map[? ROCKET_MAP.SPEED] = 22 * varspd;
@@ -239,7 +230,6 @@ switch (roc) {
 	case ROCKET.MAGNET:
 		map[? ROCKET_MAP.NAME] = "Magnet";
 		map[? ROCKET_MAP.DESCRIPTION] = "Positively attractive!";
-		map[? ROCKET_MAP.RECOIL] = 3 * varrc;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.MAGNET;
 		map[? ROCKET_MAP.COOLDOWN] = 18 * varcd;
 		map[? ROCKET_MAP.SPEED] = 15 * varspd;
@@ -373,7 +363,6 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Boomerang";
 		map[? ROCKET_MAP.DESCRIPTION] = "The skill!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOOMERANG;
-		map[? ROCKET_MAP.RECOIL] = 1 * varkb;
 		map[? ROCKET_MAP.COOLDOWN] = 46 * varcd;
 		map[? ROCKET_MAP.SPEED] = 5 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
@@ -391,7 +380,6 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Drops like a Stone!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BRICK;
 		map[? ROCKET_MAP.DAMAGE] = 3;
-		map[? ROCKET_MAP.RECOIL] = 3 * varkb;
 		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
 		map[? ROCKET_MAP.SPEED] = 8 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
@@ -411,9 +399,8 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Can't touch this.";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PIERCING;
 		map[? ROCKET_MAP.DAMAGE] = 1;
-		map[? ROCKET_MAP.RECOIL] = 3 * varkb;
 		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
-		map[? ROCKET_MAP.SPEED] = 8 * varspd;
+		map[? ROCKET_MAP.SPEED] = 12 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 6 * vartime;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketPiercing_Create;

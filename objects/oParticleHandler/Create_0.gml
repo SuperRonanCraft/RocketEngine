@@ -289,7 +289,7 @@ ds_map_add(ds_part_amt, PARTICLES.PORTAL, 5 * amt);
 
 //DUST
 parttype = part_type_create();
-part_type_sprite(parttype, s_pdust, true, false, false);
+part_type_sprite(parttype, s_pdust, true, true, false);
 part_type_size(parttype, 0.8, 1.2, 0, 0);
 part_type_speed(parttype, 1.5 * spd, 2.5 * spd, -0.03 * spd, 0);
 part_type_gravity(parttype, 0.06 * spd, 90);
@@ -310,10 +310,11 @@ ds_map_add(ds_part_amt, PARTICLES.DAMAGE, 1);
 //SCRAPE
 parttype = part_type_create();
 part_type_sprite(parttype, s_pscrape, false, false, true);
-part_type_size(parttype, 0.4, 0.55, -0.025 * spd, 0);
-part_type_speed(parttype, 0.5 * spd, 1 * spd, 0.5 * spd, 0);
+part_type_direction(parttype, 90, 90, 0, 0);
+part_type_size(parttype, 0.55, 0.85, -0.025 * spd, 0);
+part_type_speed(parttype, 5 * spd, 7 * spd, 0 * spd, 0);
 part_type_life(parttype, 5 * life, 10 * life);
-part_type_direction(parttype, 0, 0, 0, 0);
+//part_type_gravity(parttype, 0.8,270);
 ds_map_add(ds_part, PARTICLES.SCRAPE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SCRAPE, 1);
 
