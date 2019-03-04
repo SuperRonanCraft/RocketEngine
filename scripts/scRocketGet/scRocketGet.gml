@@ -202,7 +202,7 @@ switch (roc) {
 		break;
 		
 	case ROCKET.BOUNCY:
-		map[? ROCKET_MAP.NAME] = "Bouncy Castle";
+		map[? ROCKET_MAP.NAME] = "Bouncy";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ahhh Childhood parties";
 		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOUNCY;
@@ -302,7 +302,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
 		map[? ROCKET_MAP.COOLDOWN] = 55 * varcd;
-		map[? ROCKET_MAP.SPEED] = 13 * varspd;
+		map[? ROCKET_MAP.SPEED] = 15 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketShotgun_Create;
