@@ -19,7 +19,7 @@ for (var i = (pg * (columns * rows)); i < (pg * (columns * rows)) + (columns * r
 		c = color_main_hovering; yoffset = scMovementWave(-3, 3, 1);
 		part_amt *= 2;
 		if (mouse_check_button_pressed(mb_left))
-			scBuffAdd(map[? BUFF_MAP.TYPE], oPlayer);
+			scBuffAdd(map[? BUFF_MAP.TYPE], oPlayer, oPlayer);
 	}
 	scDrawText(rx, ry, name, c, scale_element); //Buff name
 	//Particles

@@ -7,12 +7,13 @@ var targ = argument0;
 var buff = argument1;
 
 //Loop through each buff until type is found
-for (var i = 0; i < ds_list_size(targ.buffs); i++) {
-    var currentBuff = targ.buffs[| i];
-	//If the types are equal
-	if (currentBuff[? BUFF_MAP.TYPE] == buff)
-		return true;	
-}
+if (instance_exists(targ))
+	for (var i = 0; i < ds_list_size(targ.buffs); i++) {
+	    var currentBuff = targ.buffs[| i];
+		//If the types are equal
+		if (currentBuff[? BUFF_MAP.TYPE] == buff)
+			return true;	
+	}
 
 //buff was not found
 return false;

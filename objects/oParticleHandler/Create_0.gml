@@ -309,8 +309,8 @@ ds_map_add(ds_part_amt, PARTICLES.DAMAGE, 1);
 
 //SCRAPE
 parttype = part_type_create();
-part_type_sprite(parttype, s_pscrape, true, false, false);
-part_type_size(parttype, 0.5, 0.7, -0.025 * spd, 0);
+part_type_sprite(parttype, s_pscrape, false, false, true);
+part_type_size(parttype, 0.4, 0.55, -0.025 * spd, 0);
 part_type_speed(parttype, 0.5 * spd, 1 * spd, 0.5 * spd, 0);
 part_type_life(parttype, 5 * life, 10 * life);
 part_type_direction(parttype, 0, 0, 0, 0);

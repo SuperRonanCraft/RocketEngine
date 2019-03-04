@@ -12,7 +12,7 @@ if (!destroy && owner.team != other.team)
 		if (other.object_index == oPlayer) {
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
-				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other);
+				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other, owner);
 			//Knockback
 			scKnockbackGive(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
 		}
@@ -22,11 +22,9 @@ if (!destroy && owner.team != other.team)
 		if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
 			dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 		
-		with (other)
-			scDamageShootable(other.owner, false, true, dmg);
+		scDamageShootable(owner, other, false, true, dmg);
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
-			with (owner)
-				scUltimateAddCharge(DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+			scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		
 		//Custom Explosion with a pShootable script
 		if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)

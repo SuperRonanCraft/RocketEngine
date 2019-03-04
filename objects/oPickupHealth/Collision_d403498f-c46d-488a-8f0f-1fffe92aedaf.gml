@@ -12,7 +12,7 @@ if (item != noone) {
 					added = true;
 				}
 			} else {
-				scDamageShootable(noone, false, false, abs(other.healing), false);
+				scDamageShootable(id, id, false, false, abs(other.healing), false);
 				scBuffAdd(BUFFTYPE.ANTIHEAL, id);
 				added = true;
 			}

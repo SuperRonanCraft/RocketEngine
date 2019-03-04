@@ -19,10 +19,10 @@ if (global.devmode && global.debug && keyboard_check(keyjump))
 		buffs_cur++;
 		if (buffs_cur >= BUFFTYPE.LENGHT)
 			buffs_cur = 0;
-		scBuffAdd(buffs_cur, id);
+		scBuffAdd(buffs_cur, id, id);
 	} else if (keyboard_check_pressed(vk_f6)) {
 		if (buffs_cur >= 0)
-			scBuffAdd(buffs_cur, id);
+			scBuffAdd(buffs_cur, id, id);
 	}
 //--------
 

@@ -1,6 +1,6 @@
 if (!ult_enabled || !canControl || rocket_map[? ROCKET_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?
 
-if (ult_charge < ult_charge_max) {scUltimateAddCharge(DAMAGETYPE.TIME); exit;} //Give charge by time, exit
+if (ult_charge < ult_charge_max) {scUltimateAddCharge(id, DAMAGETYPE.TIME); exit;} //Give charge by time, exit
 
 var key_shoot = scKeybindsGet(KEYBIND_TYPE.ULT); //Holding both left and right keys to cast ult
 

@@ -14,14 +14,12 @@ if (doing_damage)
 				scKnockbackGive(p, rocket_map[? ROCKET_MAP.KBAMT] * p.knockback_multiplier, point_direction(x, y, p.x, p.y));
 				//Add buff
 				if (rocket_map[? ROCKET_MAP.BUFF] != noone)
-					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i]);
+					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i], parent);
 			}
 			//Damage shootable
-			with (p) 
-				scDamageShootable(other.parent, false, true, dmg);
+			scDamageShootable(other.parent, p, false, true, dmg);
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
-				with (parent)
-					scUltimateAddCharge(DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+				scUltimateAddCharge(parent, DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		}
 if (rocket_map[? ROCKET_MAP.EXPLOSION_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_STEP]);
