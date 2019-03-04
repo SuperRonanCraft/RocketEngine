@@ -5,6 +5,11 @@
 var buff = argument0;
 var ds_map = argument1;
 //DEFAULTS
+ds_map[? BUFF_MAP.NAME] = "Burn Rush"; //REQUIRED
+ds_map[? BUFF_MAP.DESCRIPTION] = "Ahhh! It Burns!"; //REQUIRED
+ds_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH; //REQUIRED
+ds_map[? BUFF_MAP.TIME] = 5 * room_speed; //5 seconds uptime by default (noone for infinite)
+//OPTIONAL
 ds_map[? BUFF_MAP.DRAW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_ABOVE] = noone;

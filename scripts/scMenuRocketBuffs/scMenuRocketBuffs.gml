@@ -27,7 +27,8 @@ for (var i = (pg * (columns * rows)); i < (pg * (columns * rows)) + (columns * r
 		ry + 94, ry + 74, ps_shape_rectangle, ps_distr_linear)
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
 	draw_sprite(spr, 0, rx - 32, ry + 20 + yoffset); //Buff icon
-	scDrawText(rx + 32, ry + 84 + yoffset, string(ceil(map[? BUFF_MAP.TIME] / room_speed)),
+	var time = map[? BUFF_MAP.TIME] != noone ? ceil(map[? BUFF_MAP.TIME] / room_speed) : "inf";
+	scDrawText(rx + 32, ry + 84 + yoffset, string(time),
 		c_ltgray, 0.6, noone, 0.8, fa_left, fa_top); //Buff time
 	scDrawText(rx, ry + 110, desc, color_element_input, 0.45); //Buff description
 	draw_line_width_color(rx - 64, ry + 122, rx + 64, ry + 122, 2, c_black, c_black); //Seperator line
