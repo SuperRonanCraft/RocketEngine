@@ -1047,6 +1047,14 @@
             }
         },
         {
+            "Key": "32d6fdfe-978b-461b-8bce-e9f965e733e8",
+            "Value": {
+                "id": "7f0c3077-a96e-4809-9627-d1ac1c6a6cfd",
+                "resourcePath": "sprites\\s_abilityIcon_Absorbtion\\s_abilityIcon_Absorbtion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "33285b91-5876-4099-9274-05fc5b0840eb",
             "Value": {
                 "id": "0ad2bf76-022d-42af-afd3-63472a62b54f",
@@ -1068,6 +1076,14 @@
                 "id": "f6e703eb-c07a-4da4-b9ab-9faac120be32",
                 "resourcePath": "sprites\\bg_Main\\bg_Main.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
+            "Value": {
+                "id": "989f5d84-9ce5-4cde-836f-10437417c952",
+                "resourcePath": "scripts\\scBuffAbsorbtion\\scBuffAbsorbtion.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4207,6 +4223,14 @@
             }
         },
         {
+            "Key": "dbc9130b-87d5-4189-96fc-45353a191327",
+            "Value": {
+                "id": "6bb55f5e-0465-48c8-8755-6159ac94ecb1",
+                "resourcePath": "sprites\\s_pabsorbtion\\s_pabsorbtion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dbf687e7-e3e2-4df1-9817-b60d70f68eac",
             "Value": {
                 "id": "e9990e15-613c-4dfd-84ab-78f99985f592",
@@ -4982,6 +5006,7 @@
         "085c58de-2240-48f4-9b89-b21ac07969d1",
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "4a0a3fae-a790-4ff3-a95d-bede420fab12",
+        "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",

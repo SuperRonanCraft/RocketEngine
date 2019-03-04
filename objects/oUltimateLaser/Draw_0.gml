@@ -22,7 +22,6 @@ for (var i = 0; i < ds_list_size(list); i++) {
 		hitting = p;
 	closest = p.x;
 }
-ds_list_destroy(list);
 
 var dis = hitting != noone ? abs(x - hitting.x) : abs(x - x2);
 var width = abs(sprite_width);
