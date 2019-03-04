@@ -206,19 +206,6 @@ switch (buff) {
 		ds_map[? "scale_dir"] = 1;
 		ds_map[? "scale"] = ds_map[? "scale_org"];
 		break;
-	case BUFFTYPE.ABSORBTION:
-		ds_map[? BUFF_MAP.NAME] = "Absorbtion";
-		ds_map[? BUFF_MAP.DESCRIPTION] = "Armor up baby!";
-		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ABSORBTION;
-		ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffAbsorbtion;
-		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ABSORBTION];
-		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
-		ds_map[? BUFF_MAP.GOOD] = true;
-		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
-		ds_map[? BUFF_MAP.STACKABLE] = true;
-		ds_map[? "health"] = 4;
-		ds_map[? "parts_crt"] = 0;
-		ds_map[? "parts_amt"] = 8;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -238,14 +225,14 @@ enum BUFF_ICON {
 	BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
 	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots,
 	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep, DAMAGE = s_abilityIcon_Damage,
-	ANTIHEAL = s_abilityIcon_AntiHeal, ABSORBTION = s_abilityIcon_Absorbtion
+	ANTIHEAL = s_abilityIcon_AntiHeal
 }
 
 enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
-	ANTIHEAL, ABSORBTION,
+	ANTIHEAL,
 	
 	//PUT LAST
 	LENGHT
