@@ -165,7 +165,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 		map[? ROCKET_MAP.DAMAGE] = 1;
-		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.SLIME];
+		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ANTIHEAL];
 		map[? ROCKET_MAP.COOLDOWN] = 27 * varcd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
@@ -207,7 +207,6 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
-		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ANTIHEAL];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.JUMPPAD;
 		break;
 		

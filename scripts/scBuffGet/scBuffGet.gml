@@ -219,6 +219,16 @@ switch (buff) {
 		ds_map[? "health"] = 4;
 		ds_map[? "parts_crt"] = 0;
 		ds_map[? "parts_amt"] = 8;
+	case BUFFTYPE.LIFESTEAL:
+		ds_map[? BUFF_MAP.NAME] = "Life-Steal";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "Muahaha!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ABSORBTION;
+		ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffAbsorbtion;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ABSORBTION];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
+		ds_map[? BUFF_MAP.GOOD] = true;
+		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
+		ds_map[? BUFF_MAP.STACKABLE] = true;
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
@@ -245,7 +255,7 @@ enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
-	ANTIHEAL, ABSORBTION,
+	ANTIHEAL, ABSORBTION, LIFESTEAL,
 	
 	//PUT LAST
 	LENGHT
