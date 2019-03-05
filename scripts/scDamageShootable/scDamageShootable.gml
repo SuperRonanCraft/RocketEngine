@@ -24,6 +24,9 @@ with (damageInst) {
 			hp_flash_alpha = 1;
 			if (hp > 0 || alive)
 				scData_ConfirmHit();
+			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
+			with (shootInst)
+				scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);
 		}
 		shooter = shootInst; //The person who shot them
 		didDamage = true;

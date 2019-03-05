@@ -21,7 +21,9 @@
         "085c58de-2240-48f4-9b89-b21ac07969d1",
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "4a0a3fae-a790-4ff3-a95d-bede420fab12",
-        "34900caf-9f6b-46b2-a177-dce6e90aa6ff"
+        "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
+        "a6cfaa79-a324-4a01-8cbb-024bb89fa5d1",
+        "d4fcf6f8-1d92-4162-b191-fc3d8ee02efe"
     ],
     "filterType": "GMScript",
     "folderName": "Buffs",

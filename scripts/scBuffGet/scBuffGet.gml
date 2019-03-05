@@ -14,6 +14,8 @@ ds_map[? BUFF_MAP.DRAW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_ABOVE] = noone;
 ds_map[? BUFF_MAP.STEP] = noone;
+ds_map[? BUFF_MAP.DAMAGE_APPLIED] = noone;
+ds_map[? BUFF_MAP.DAMAGE_TAKEN] = noone;
 switch (buff) {
 	case BUFFTYPE.BURNRUSH:
 		ds_map[? BUFF_MAP.NAME] = "Burn Rush";
@@ -224,31 +226,37 @@ switch (buff) {
 		ds_map[? BUFF_MAP.NAME] = "Life-Steal";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Give me your soul!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.LIFESTEAL;
-		//ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffAbsorbtion;
-		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ABSORBTION];
-		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
+		ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffLifeSteal;
+		ds_map[? BUFF_MAP.DAMAGE_APPLIED] = scBuffLifeSteal_Damage;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.LIFESTEAL];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.LIFESTEAL];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
 		ds_map[? BUFF_MAP.STACKABLE] = true;
+		ds_map[? "parts_crt"] = 0;
+		ds_map[? "parts_amt"] = 4;
 		break;
-	case BUFFTYPE.CLEANSE:
+	// FOR LATER TECHNOLOGICAL ADVANCES
+	/*case BUFFTYPE.CLEANSE:
 		ds_map[? BUFF_MAP.NAME] = "Cleanse";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Check yourself!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.CLEANSE;
-		//ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffAbsorbtion;
-		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ABSORBTION];
-		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
+		ds_map[? BUFF_MAP.STEP] = scBuffCleanse;
+		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.CLEANSE];
+		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.CLEANSE];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
 		ds_map[? BUFF_MAP.STACKABLE] = true;
-		break;
+		ds_map[? "parts_crt"] = 0;
+		ds_map[? "parts_amt"] = 4;
+		break;*/
 }
 ds_map[? BUFF_MAP.TYPE] = buff;
 
 enum BUFF_MAP {
 	NAME, DESCRIPTION, ICON, PARTICLE, PARTICLE_AMT,
 	//SCRIPTS
-	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE,
+	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN,
 	//GENERAL
 	CLOCK, TIME, TYPE, STACKABLE, DISABLED, GOOD, GIVEN_BY
 }
@@ -269,7 +277,7 @@ enum BUFFTYPE {
 	BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
-	ANTIHEAL, ABSORBTION, LIFESTEAL, CLEANSE,
+	ANTIHEAL, ABSORBTION, LIFESTEAL, //CLEANSE,
 	
 	//PUT LAST
 	LENGHT

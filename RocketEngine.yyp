@@ -1223,6 +1223,14 @@
             }
         },
         {
+            "Key": "40173db7-a5f6-4502-ab7f-232777f15452",
+            "Value": {
+                "id": "5b1e18eb-71ad-47fa-abb4-85d2ea27c439",
+                "resourcePath": "scripts\\scBuffLifeSteal\\scBuffLifeSteal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "40621780-329a-4956-8c2b-a53f0f147d23",
             "Value": {
                 "id": "aecc2ba4-3f94-48fa-8711-bcf5d6c1147f",
@@ -1428,6 +1436,14 @@
                 "id": "bf5c56c7-40ca-4233-b7ca-eb5b8d73d552",
                 "resourcePath": "scripts\\scStagePickupsStartNEW\\scStagePickupsStartNEW.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "48b95f52-7662-4b3c-a800-cac6eed133f2",
+            "Value": {
+                "id": "49182066-57dc-49df-a434-eae1a6f89555",
+                "resourcePath": "sprites\\s_plifesteal\\s_plifesteal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3287,6 +3303,14 @@
             }
         },
         {
+            "Key": "a6cfaa79-a324-4a01-8cbb-024bb89fa5d1",
+            "Value": {
+                "id": "dff3d7ff-877a-4b8c-b91b-ef63c22d8abc",
+                "resourcePath": "views\\a6cfaa79-a324-4a01-8cbb-024bb89fa5d1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a7ca8cd0-00a6-4b72-a693-7234534e258f",
             "Value": {
                 "id": "e80e9fb2-758f-448f-9777-c8a9742b2503",
@@ -3783,6 +3807,14 @@
             }
         },
         {
+            "Key": "bde97971-2fe8-44ba-8ada-bc30755a3f1b",
+            "Value": {
+                "id": "a8993261-7895-4ea6-ab7e-42c44f320958",
+                "resourcePath": "sprites\\s_pcleanse\\s_pcleanse.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
             "Value": {
                 "id": "4d790bbe-8abc-444c-a9f3-e3919694fa2e",
@@ -3991,6 +4023,14 @@
             }
         },
         {
+            "Key": "cac11421-bb3a-4cbf-9e77-a4a404424fa6",
+            "Value": {
+                "id": "6e91c59d-9028-43a1-b770-80a5511a1d7e",
+                "resourcePath": "scripts\\scBuffLifeSteal_Damage\\scBuffLifeSteal_Damage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cb0b55a2-e411-4a24-8296-3f4604ecea71",
             "Value": {
                 "id": "9e46a1b5-e397-469b-b078-0f189ae30ce9",
@@ -4124,6 +4164,14 @@
                 "id": "5e74aff0-8f09-4d61-a629-117c87f50880",
                 "resourcePath": "sprites\\sRocket_Obsolete\\sRocket_Obsolete.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d4fcf6f8-1d92-4162-b191-fc3d8ee02efe",
+            "Value": {
+                "id": "d7d6c174-6988-45fa-bc81-ad98149553e4",
+                "resourcePath": "scripts\\scBuffCleanse\\scBuffCleanse.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5022,6 +5070,9 @@
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "4a0a3fae-a790-4ff3-a95d-bede420fab12",
         "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
+        "40173db7-a5f6-4502-ab7f-232777f15452",
+        "cac11421-bb3a-4cbf-9e77-a4a404424fa6",
+        "d4fcf6f8-1d92-4162-b191-fc3d8ee02efe",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",
