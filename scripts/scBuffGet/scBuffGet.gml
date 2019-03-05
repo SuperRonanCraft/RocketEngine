@@ -232,7 +232,6 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.LIFESTEAL];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
-		ds_map[? BUFF_MAP.STACKABLE] = true;
 		ds_map[? "parts_crt"] = 0;
 		ds_map[? "parts_amt"] = 4;
 		break;
