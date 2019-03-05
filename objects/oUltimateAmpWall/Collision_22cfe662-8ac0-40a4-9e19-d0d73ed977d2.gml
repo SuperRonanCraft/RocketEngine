@@ -11,7 +11,7 @@ for (var i = 0; i < ds_list_size(rockets_amped); i++)
 if (!buffed) {
 	ds_list_add(rockets_amped, other.id);
 	with (other) {
-		ds_list_add(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRAS], scUltimateAmpWall_Amping);
+		rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRA] = scUltimateAmpWall_Amping;
 		rocket_map[? ROCKET_MAP.DAMAGE] *= 2;
 		rocket_map[? ROCKET_MAP.SPEED] *= 2;
 		rocket_map[? ROCKET_MAP.KBAMT] *= 2;
