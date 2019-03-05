@@ -1207,6 +1207,14 @@
             }
         },
         {
+            "Key": "3f27dfea-8074-4d93-9282-ee4b55c5c291",
+            "Value": {
+                "id": "0492a400-7950-4887-a0bb-6dcb4c109bf5",
+                "resourcePath": "sprites\\s_pdrainlife\\s_pdrainlife.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3fbe2a0d-926b-445e-8750-ec3918aa79ba",
             "Value": {
                 "id": "c44a55ab-411e-42d7-9bd7-c01403a0ad25",
@@ -1676,6 +1684,14 @@
                 "id": "504ff740-6b14-42c5-b48e-5b221ada53b1",
                 "resourcePath": "objects\\oTips\\oTips.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5430f60b-ef16-4027-86bf-2b5f5b358d62",
+            "Value": {
+                "id": "1e61bbd5-c934-4243-b344-a8045144c47d",
+                "resourcePath": "sprites\\sHealthBuff\\sHealthBuff.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
