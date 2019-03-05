@@ -13,7 +13,7 @@ if (item != noone) {
 				}
 			} else {
 				scDamageShootable(id, id, false, false, abs(other.healing), false);
-				scBuffAdd(BUFFTYPE.ANTIHEAL, id);
+				scBuffAdd(BUFFTYPE.ANTIHEAL, id, id);
 				added = true;
 			}
 	if (added) { //Can collect the hp
