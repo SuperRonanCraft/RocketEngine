@@ -8,8 +8,10 @@ for (var i = 0; i < ds_list_size(jump_list); i++) {
 }
 
 with (other) {
-	if (vsp_move >= 0)
+	if (vsp_move >= 0) {
+		other.jump_ani = other.jump_ani_max;
 		vsp_move = other.jump_pwr - vsp_move;
+	}
 	vsp_move = max(vsp_move, -30);
 }
 ds_list_add(jump_list, id);

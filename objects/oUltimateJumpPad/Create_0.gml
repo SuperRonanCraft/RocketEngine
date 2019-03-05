@@ -16,6 +16,8 @@ grv = 0.2;
 
 jump_list = ds_list_create();
 jump_pwr = -10;
+jump_ani_max = 16;
+jump_ani = 0;
 
 margin_x = 5;
 margin_y = 5;

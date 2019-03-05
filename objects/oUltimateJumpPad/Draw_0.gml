@@ -1,11 +1,9 @@
 /// @desc draw circle
 
-//Base
+scDrawSpriteExt(x, y, sprite_index, 2, noone, image_alpha - 0.1, image_xscale, max((jump_ani / jump_ani_max) * 2, 1), 0);
 scDrawSpriteExt(x, y, sprite_index, 0, noone, image_alpha, image_xscale, image_yscale, 0);
-//Cannon
-//turret_offset = max(turret_offset - 1, 0);
-//scDrawSpriteExt(x - (turret_offset * image_xscale), y, 
-//sprite_index, 0, noone, image_alpha, image_xscale, image_yscale, turret_offset * image_xscale);
+scDrawSpriteExt(x, y - jump_ani, sprite_index, 1, noone, image_alpha, image_xscale, image_yscale, 0);
+jump_ani = max(jump_ani - 1, 0);
 
 if (global.debug) {
 	//jump box
