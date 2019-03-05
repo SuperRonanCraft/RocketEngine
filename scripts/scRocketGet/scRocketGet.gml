@@ -325,7 +325,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Portal";
 		map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
-		map[? ROCKET_MAP.COOLDOWN] = 50 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
 		map[? ROCKET_MAP.SPEED] = 13 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;

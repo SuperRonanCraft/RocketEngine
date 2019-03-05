@@ -116,7 +116,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.HACK];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.HACK];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 2 * room_speed;
 		break;
 	case BUFFTYPE.REVERSEGRAVITY:
 		ds_map[? BUFF_MAP.NAME] = "Flipped";
