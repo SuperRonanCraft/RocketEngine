@@ -6,7 +6,7 @@ for (var i = 0; i < build_at; i++) {
 	var newy = yy;
 	if (i == (build_at - 1))
 		newy = yy - build_at_offset_crt;
-	scDrawSpriteExt(xx, newy, sprite_index, image_number, noone, image_alpha);
+	scDrawSpriteExt(xx, newy, sprite_index, image_index, noone, image_alpha);
 	yy -= 32;
 }
 

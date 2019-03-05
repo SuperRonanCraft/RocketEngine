@@ -20,7 +20,9 @@
         "5cac4671-ccd7-4700-ac89-1b5942b99f0c",
         "c1a4e509-33ca-48e3-9121-d572ac997e1c",
         "1b89090f-f691-400f-9034-17aa7150089e",
-        "32d6fdfe-978b-461b-8bce-e9f965e733e8"
+        "32d6fdfe-978b-461b-8bce-e9f965e733e8",
+        "cd14c2a9-5fc0-4990-b4f1-ad25fb92f6a4",
+        "83fdb6e8-b5e3-47d6-b780-461ed4c8a96c"
     ],
     "filterType": "GMSprite",
     "folderName": "Icons",

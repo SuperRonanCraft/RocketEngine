@@ -2,7 +2,7 @@
 
 owner = noone;
 
-timer_org = 10 * room_speed;
+timer_org = 8 * room_speed;
 timer = timer_org;
 alpha_change = 0.02;
 alpha_max = 0.8;

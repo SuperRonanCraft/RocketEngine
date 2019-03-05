@@ -2503,6 +2503,14 @@
             }
         },
         {
+            "Key": "83fdb6e8-b5e3-47d6-b780-461ed4c8a96c",
+            "Value": {
+                "id": "95a38741-bc42-4595-919b-317a39f26c09",
+                "resourcePath": "sprites\\s_abilityIcon_Cleanse\\s_abilityIcon_Cleanse.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "842ef260-cf44-41ab-9991-0606c018e317",
             "Value": {
                 "id": "2437f18f-f81e-4ee5-93a6-6fa366b4ef19",
@@ -4020,6 +4028,14 @@
                 "id": "25284558-be7e-4f46-b887-0233339ad0df",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd14c2a9-5fc0-4990-b4f1-ad25fb92f6a4",
+            "Value": {
+                "id": "807b666d-32c9-4820-b271-12f1c123ad7b",
+                "resourcePath": "sprites\\s_abilityIcon_LifeSteal\\s_abilityIcon_LifeSteal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
