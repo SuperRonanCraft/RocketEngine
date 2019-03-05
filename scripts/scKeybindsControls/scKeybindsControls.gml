@@ -19,8 +19,8 @@ if (player_aimode && aiBrain != noone) {
 var move = (key_right - key_left) * keydirection;
 
 
-//If not alive neutralize move
-if(!alive)
+//If cant control, neutralize move
+if(!alive || !canControl)
 	move = 0;
 	
 	

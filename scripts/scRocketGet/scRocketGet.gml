@@ -197,7 +197,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Ahhh Childhood parties";
 		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOUNCY;
-		map[? ROCKET_MAP.COOLDOWN] = room_speed * 1.8;
+		map[? ROCKET_MAP.COOLDOWN] = varcd * 35;
 		map[? ROCKET_MAP.SPEED] = 16 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
@@ -326,7 +326,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Portal";
 		map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
-		map[? ROCKET_MAP.COOLDOWN] = 60 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 50 * varcd;
 		map[? ROCKET_MAP.SPEED] = 13 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
