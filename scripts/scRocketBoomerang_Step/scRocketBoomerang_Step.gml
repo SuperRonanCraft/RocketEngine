@@ -12,6 +12,11 @@ var xx = map[? "x"];
 x += xx - xorg;
 y += yy - yorg;
 
+if (!map[? "damage_buffed"] && yy < -(dis / 2)) {
+	rocket_map[? ROCKET_MAP.DAMAGE] *= 2;
+	map[? "damage_buffed"] = true;
+}
+
 //Update direction
 yy -= spd;
 direction = point_direction(xx, yy + spd, ((yy + dis) * (yy)) / (dis * (map[? "multi"] * -side)), yy);

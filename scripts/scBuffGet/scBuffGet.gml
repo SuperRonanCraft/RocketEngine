@@ -5,8 +5,8 @@
 var buff = argument0;
 var ds_map = argument1;
 //DEFAULTS
-ds_map[? BUFF_MAP.NAME] = "Burn Rush"; //REQUIRED
-ds_map[? BUFF_MAP.DESCRIPTION] = "Ahhh! It Burns!"; //REQUIRED
+ds_map[? BUFF_MAP.NAME] = "Name"; //REQUIRED
+ds_map[? BUFF_MAP.DESCRIPTION] = "Description"; //REQUIRED
 ds_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH; //REQUIRED
 ds_map[? BUFF_MAP.TIME] = 5 * room_speed; //5 seconds uptime by default (noone for infinite)
 //OPTIONAL
@@ -25,6 +25,9 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SMOKE1];
 		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
+		ds_map[? "damage_cd"] = ds_map[? BUFF_MAP.TIME] / 3; //cooldown for taking damage
+		ds_map[? "damage_crt"] = ds_map[? "damage_cd"];
+		ds_map[? "damage"] = 1; //damage to take
 		break;
 	case BUFFTYPE.CHILLED:
 		ds_map[? BUFF_MAP.NAME] = "Chilled";
@@ -202,6 +205,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
 		ds_map[? "color"] = c_purple;
+		ds_map[? "alpha"] = 0.8;
 		ds_map[? "scale_org"] = 0.3;
 		ds_map[? "scale_lmt"] = 0.1;
 		ds_map[? "scale_chg"] = 0.01;
@@ -268,8 +272,8 @@ enum BUFF_ICON {
 	BLEEDOUT = s_abilityIcon_BleedOut, HACKED = s_abilityIcon_Hacked,
 	REVERSEGRAVITY = s_abilityIcon_ReverseGravity, ROCKETBOOTS = s_abilityIcon_RocketBoots,
 	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep, DAMAGE = s_abilityIcon_Damage,
-	ANTIHEAL = s_abilityIcon_AntiHeal, ABSORBTION = s_abilityIcon_Absorbtion, LIFESTEAL = s_abilityIcon_LifeSteal,
-	CLEANSE = s_abilityIcon_Cleanse
+	ANTIHEAL = s_abilityIcon_AntiHeal, ABSORBTION = s_abilityIcon_Absorbtion,
+	LIFESTEAL = s_abilityIcon_LifeSteal, CLEANSE = s_abilityIcon_Cleanse
 }
 
 enum BUFFTYPE {

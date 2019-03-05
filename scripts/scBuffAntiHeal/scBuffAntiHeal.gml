@@ -30,7 +30,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 			var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset;
 			var ypos = hpheight + 2;
 			var scale = i * 2 <= hp + (hp_damaged - 1) && i * 2 > hp - 2 ? hp_scale : 1;
-			scFlash(0.8, dsBuff[? "color"], scale + dsBuff[? "scale"], scale + dsBuff[? "scale"], hpsprite, hp > i ? 0 : 1, xpos, ypos);
+			scFlash(dsBuff[? "alpha"], dsBuff[? "color"], scale + dsBuff[? "scale"], scale + dsBuff[? "scale"], hpsprite, hp > i ? 0 : 1, xpos, ypos);
 		}
 		
 	dsBuff[? BUFF_MAP.CLOCK]++;

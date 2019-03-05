@@ -10,4 +10,4 @@ if (target != noone)
 map[? "dis"] = dis;
 map[? "x"] = 0;
 map[? "y"] = 0;
-map[? "multi"] = choose(-1, 1) * (0.4 + random(2));
+map[? "multi"] = (owner.standing ? 1 : -1) * (0.4 + random(2));

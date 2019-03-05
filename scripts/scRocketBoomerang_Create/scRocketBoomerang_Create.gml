@@ -10,3 +10,4 @@ map[? "y"] = 0;
 map[? "dir"] = direction;
 map[? "side"] = side;
 map[? "multi"] = 0.125;
+map[? "damage_buffed"] = false;
