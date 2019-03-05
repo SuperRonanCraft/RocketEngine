@@ -2,8 +2,6 @@
 
 var inst = instance_create_depth(x, y, depth, oPlayer);
 with (inst) {
-	player_aimode = other.player_aimode;
-	aiBrain = other.aiBrain;
 	keyleft = other.keyright;
 	keyright = other.keyleft;
 	keyjump = other.keyjump;

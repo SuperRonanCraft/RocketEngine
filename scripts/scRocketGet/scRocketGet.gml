@@ -290,7 +290,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "SHOTGUN";
 		map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
-		map[? ROCKET_MAP.COOLDOWN] = 55 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
 		map[? ROCKET_MAP.SPEED] = 15 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
@@ -305,17 +305,16 @@ switch (roc) {
 	case ROCKET.PEACE:
 		map[? ROCKET_MAP.NAME] = "Peace";
 		map[? ROCKET_MAP.DESCRIPTION] = "Good vibes brooo";
-		map[? ROCKET_MAP.DAMAGE] = 0;
+		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PEACE;
 		map[? ROCKET_MAP.COOLDOWN] = 10 * varcd;
-		map[? ROCKET_MAP.CLIP] = 3;
+		map[? ROCKET_MAP.CLIP] = 2;
 		map[? ROCKET_MAP.RELOAD_TIME] = 30 * varcd;
 		map[? ROCKET_MAP.SPEED] = 16 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PEACE];
 		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.PEACE];
-		//map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PEACE];
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
