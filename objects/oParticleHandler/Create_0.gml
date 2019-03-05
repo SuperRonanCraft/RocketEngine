@@ -340,12 +340,11 @@ ds_map_add(ds_part_amt, PARTICLES.ABSORBTION, 1);
 
 //LIFE-STEAL
 parttype = part_type_create();
-part_type_sprite(parttype, s_plifesteal, false, false, true);
-part_type_size(parttype, 0.8, 1.8, -0.005 * spd, 0);
-part_type_speed(parttype, 3 * spd, 5 * spd, -0.01 * spd, 0);
+part_type_sprite(parttype, s_plifesteal, true, true, false);
+part_type_size(parttype, 0.5, 0.8, -0.005 * spd, 0);
+part_type_speed(parttype, 5 * spd, 7 * spd, -0.02 * spd, 0);
 part_type_life(parttype, 10 * life, 15 * life);
 part_type_direction(parttype, 60, 120, 0, 0);
-part_type_alpha3(parttype, 1, 0.5, 0);
 ds_map_add(ds_part, PARTICLES.LIFESTEAL, parttype);
 ds_map_add(ds_part_amt, PARTICLES.LIFESTEAL, 2);
 
