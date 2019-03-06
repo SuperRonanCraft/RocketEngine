@@ -20,6 +20,15 @@ if (inst != noone && inst.object_index != oSeperator) {
 	map[? "vsp"] /= -1.5;
 	coly = true;
 }
+
+//Bounce off pad
+if(instance_exists(oUltimateJumpPad)){
+	
+	if(collision_point(x,y+map[?"vsp"],oUltimateJumpPad,false,true) != noone){
+		map[?"vsp"] *= -3.5;	
+	}
+
+}
 	
 x += map[? "hsp"] * owner.time_dialation;
 y += map[? "vsp"] * owner.time_dialation;

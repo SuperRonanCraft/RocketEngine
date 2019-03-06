@@ -4,6 +4,6 @@ var map = homingMap;
 
 map[? "dir"] = 0;
 map[? "dir_side"] = 1;
-map[? "dir_change"] = 3;
+map[? "dir_change"] = 1.5;
 map[? "dir_max"] = 45;
 map[? "len"] = 100;

@@ -46,8 +46,8 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Homing";
 		map[? ROCKET_MAP.DESCRIPTION] = "I will find you!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.HOMING;
-		map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
-		map[? ROCKET_MAP.SPEED] = 20 * varspd;
+		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
+		map[? ROCKET_MAP.SPEED] = 27 * varspd;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialHoming_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHoming_Step;
@@ -250,7 +250,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "It never works ;)";
 		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.OBSOLETE;
-		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
 		map[? ROCKET_MAP.SPEED] = 24 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
@@ -325,7 +325,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
 		map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
-		map[? ROCKET_MAP.SPEED] = 13 * varspd;
+		map[? ROCKET_MAP.SPEED] = 18 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketTeleport_Step;
