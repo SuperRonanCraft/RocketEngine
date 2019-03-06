@@ -1,6 +1,5 @@
 /// @desc player movement
 
-
 //KEYBINDS
 var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
 var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);

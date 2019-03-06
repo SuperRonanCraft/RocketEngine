@@ -224,7 +224,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.STACKABLE] = true;
 		ds_map[? "health"] = 4;
 		ds_map[? "parts_crt"] = 0;
-		ds_map[? "parts_amt"] = 8;
+		ds_map[? "parts_amt"] = 5;
 		break;
 	case BUFFTYPE.LIFESTEAL:
 		ds_map[? BUFF_MAP.NAME] = "Life-Steal";
@@ -238,7 +238,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
 		ds_map[? "parts_crt"] = 0;
-		ds_map[? "parts_amt"] = 4;
+		ds_map[? "parts_amt"] = 6;
 		break;
 	// FOR LATER TECHNOLOGICAL ADVANCES
 	/*case BUFFTYPE.CLEANSE:

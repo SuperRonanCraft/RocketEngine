@@ -2,6 +2,8 @@
 // You can write your code in this editor
 if (!global.play) exit;
 
+//scPlayerHandler(PLAYER_EVENT.STEP);
+
 scStateCheck();
 
 //--------

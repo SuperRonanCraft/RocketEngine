@@ -4,12 +4,12 @@
     "mvc": "1.1",
     "name": "becb47ca-0c0e-484f-8cc6-9fbf3f8bc4b6",
     "children": [
-        "6e1af632-6685-40a9-b0e7-653f1b415768",
-        "38944597-eaf0-4f99-8a24-11ebe9391c21",
-        "a62e83a3-5049-4bc1-85be-fd514e25dc62"
+        "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
+        "c251b514-5413-4eb8-bda4-3e9c880f56e9",
+        "d91bb678-4aae-4195-a3e1-db2cd77d9840"
     ],
     "filterType": "GMScript",
-    "folderName": "Player States",
+    "folderName": "Player",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -331,7 +331,7 @@ ds_map_add(ds_part_amt, PARTICLES.ANTIHEAL, 1);
 //ABSORBTION
 parttype = part_type_create();
 part_type_sprite(parttype, s_pabsorbtion, false, false, false);
-part_type_size(parttype, 0.3, 0.4, -0.005 * spd, 0);
+part_type_size(parttype, 0.45, 0.7, -0.005 * spd, 0);
 part_type_speed(parttype, 3 * spd, 5 * spd, -0.01 * spd, 0);
 part_type_life(parttype, 10 * life, 15 * life);
 part_type_direction(parttype, 80, 100, 0, 0);

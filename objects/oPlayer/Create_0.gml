@@ -1,5 +1,6 @@
 /// @desc Create
 
+scPlayerStart();
 //Load gravity and movement variables
 scGravityStart();
 //Load keybinds

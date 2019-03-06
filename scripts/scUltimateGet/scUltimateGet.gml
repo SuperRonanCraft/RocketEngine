@@ -34,6 +34,7 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Angry Bird!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSpray;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateSpray_Draw;
+		ds_map[? "amt"] = 8; //amount of rockets in 90 degree cone
 		break;
 	case ULTIMATE.HUGEEXPLOSION: //It's gonna be huge!
 		ds_map[? ULTIMATE_MAP.NAME] = "Honey don't go outside!";
