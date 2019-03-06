@@ -13,6 +13,7 @@ build_at = 1;
 walls_tospawn = 0;
 walls_spawned = ds_list_create();
 walls_side = 0;
+walls_thickness = 2;
 image_alpha = 0;
 
 placed = false;
