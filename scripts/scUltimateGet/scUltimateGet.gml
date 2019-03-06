@@ -116,8 +116,8 @@ switch (type) {
 		break;
 	case ULTIMATE.AMPWALL:
 		ds_map[? ULTIMATE_MAP.NAME] = "ITS GONNA BE HUGE!";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateBrickWall;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateBrickWall_Draw;
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateAmpWall;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateAmpWall_Draw;
 		ds_map[? "size"] = 6; //yscale of wall
 		ds_map[? "dis"] = 50; //distance between player and wall
 		ds_map[? "ult"] = oUltimateAmpWall;
