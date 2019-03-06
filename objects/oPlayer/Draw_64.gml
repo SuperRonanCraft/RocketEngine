@@ -1,9 +1,9 @@
 /// @desc GUI for player hp, rockets and ults
-//if (!display) exit;
 
 //Buff draw handler (below all)
 scBuffHandler(BUFF_EVENT.DRAW_GUI_BELOW);
 
+if (display) {
 //-----------------
 //Display health
 var hppart = hp mod 2 / 2;
@@ -186,6 +186,6 @@ if (combo_amount > 1) {
 	scDrawText(xpos, 50, ctext, c_yellow, combo_scale * 0.5, noone, noone, align);
 }
 combo_scale = max(combo_scale * 0.95, 1); //Lower combo scale
-
+}
 //Buff draw handler (above all)
 scBuffHandler(BUFF_EVENT.DRAW_GUI_ABOVE);

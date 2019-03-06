@@ -26,7 +26,6 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
 		map[? ROCKET_MAP.DAMAGE] = 2;
-		
 		break;
 		
 	case ROCKET.FAST:

@@ -5,6 +5,13 @@
 var owner = argument0;
 var dsBuff = argument1;
 
+if (dsBuff[? BUFF_MAP.CLOCK] == 0) {
+	dsBuff[? "players_hit"] = ds_list_create();
+	dsBuff[? "sprite"] = s_pdrainlife;
+	dsBuff[? "image_index_max"] = sprite_get_number(dsBuff[? "sprite"]) - 1;
+	dsBuff[? "image_speed"] = sprite_get_speed(dsBuff[? "sprite"]);
+}
+
 if (dsBuff[? BUFF_MAP.CLOCK] > dsBuff[? BUFF_MAP.TIME]) { //Remove buff
 	scBuffRemove(owner, dsBuff);
 } else {
