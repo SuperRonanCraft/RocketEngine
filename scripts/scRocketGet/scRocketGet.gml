@@ -360,7 +360,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Boomerang";
 		map[? ROCKET_MAP.DESCRIPTION] = "The skill!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOOMERANG;
-		map[? ROCKET_MAP.COOLDOWN] = 36 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 27 * varcd;
 		map[? ROCKET_MAP.SPEED] = 5 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 2 * vartime;
