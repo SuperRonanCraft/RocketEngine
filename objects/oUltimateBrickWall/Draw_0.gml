@@ -6,12 +6,12 @@ for (var i = 0; i < build_at; i++) {
 	var yy = y - (i * 32);
 	if (i == (build_at - 1))
 		yy -= build_at_offset_crt;
-	repeat (walls_thickness) {
-		scDrawSpriteExt(xx, yy, sprite_index, image_number, noone, image_alpha);
+	repeat (i != 0 ? walls_thickness : 1) {
+		scDrawSpriteExt(xx, yy, sprite_index, 0, noone, image_alpha);
 		yy += 32;
 	}
-	//if (i != build_at)
-	//	scDrawSpriteExt(xx +, yy, sprite_index, image_number, noone, image_alpha);
+	if (i > 1)
+		scDrawSpriteExt(xx + (walls_side == -1 ? 32 : 0), yy, sprite_index, 1, noone, image_alpha, walls_side);
 }
 
 //Build up
