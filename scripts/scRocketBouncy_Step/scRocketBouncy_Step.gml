@@ -18,6 +18,7 @@ var coly = false;
 inst = collision_point(x, y + map[? "vsp"], oWall, true, false);
 if (inst != noone && inst.object_index != oSeperator) {
 	map[? "vsp"] /= -1.5;
+	
 	coly = true;
 }
 
@@ -25,7 +26,8 @@ if (inst != noone && inst.object_index != oSeperator) {
 if(instance_exists(oUltimateJumpPad)){
 	
 	if(collision_point(x,y+map[?"vsp"],oUltimateJumpPad,false,true) != noone){
-		map[?"vsp"] *= -3.5;	
+		map[?"vsp"] = abs(map[?"vsp"]) * -2.5;	
+		map[? "hsp"] *= 2;
 	}
 
 }

@@ -378,7 +378,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BRICK;
 		map[? ROCKET_MAP.DAMAGE] = 3;
 		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
-		map[? ROCKET_MAP.SPEED] = 8 * varspd;
+		map[? ROCKET_MAP.SPEED] = 12 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 4 * vartime;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketBrick_Step;
@@ -388,6 +388,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Brick;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
+		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? "scrape_part"] = PARTICLES.SCRAPE;
 		break;
 		
