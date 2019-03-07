@@ -11,19 +11,23 @@ var loopFin = false;
 
 //Reset animationVar
 var animationVar = map[? PLAYER_MAP.ANIMATION_VAR];
-if (animationVar != 0 && map[? PLAYER_MAP.CURRENT_SPRITE] != sprite)
+if (animationVar != 0 && map[? PLAYER_MAP.CURRENT_SPRITE] != sprite) {
 	animationVar = (loop == 2) ? sprite_get_number(sprite) - 1 : 0;
+	map[? PLAYER_MAP.ANIMATION_VAR] = animationVar;
+}
 
 map[? PLAYER_MAP.CURRENT_SPRITE] = sprite;
 
 if (loop == 0) {
 	if (floor(animationVar) >= sprite_get_number(sprite) - 1) {
-		animationVar = sprite_get_number(sprite) - 1;	
+		animationVar = sprite_get_number(sprite) - 1;
+		map[? PLAYER_MAP.ANIMATION_VAR] = animationVar;
 		loopFin = true;
 	}
 } else if (loop == 2) {
 	if (floor(animationVar) <= 0) {
-		animationVar = 0;	
+		animationVar = 0;
+		map[? PLAYER_MAP.ANIMATION_VAR] = animationVar;
 		loopFin = true;
 	}
 }
