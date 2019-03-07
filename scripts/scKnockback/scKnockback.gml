@@ -22,7 +22,7 @@ if (hsp_knockback == 0 || standing || knockback_time == 0) {
 	knockback_time = 0;
 }
 
-if (hsp_knockback == 0 && vsp_knockback == 0 && alive){
+if (hsp_knockback == 0 && vsp_knockback == 0 && playerMap[? PLAYER_MAP.ALIVE]){
 	map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
 	map[? PLAYER_MAP.CAN_CONTROL] = true;
 	map[? PLAYER_MAP.ANIMATION_STATE] = PLAYERSTATE.NORMAL;
