@@ -24,7 +24,7 @@ for (var i = 0; i < ds_list_size(inst_list); i++) {
 		with(inst){
 			show_debug_message( (other.brickMap[?"touching_floor"]) );
 			
-			if(abs(other.brickMap[?"hsp"]) > 2 && (other.brickMap[?"touching_floor"] || other.brickMap[?"vsp"] < 0 || other.brickMap[?"ramping"]) && collision_point(x-2,y+sprite_height,oWall,false,true) != noone && collision_point(x,y-2,oWall,false,true) == noone ){
+			if(abs(other.brickMap[?"hsp"]) > 2 && (other.brickMap[?"touching_floor"] || other.brickMap[?"vsp"] < 0 || other.brickMap[?"ramping"]) && collision_point(x,y-2,oWall,false,true) == noone ){
 				other.brickMap[? "ramping"] = true;
 				other.y = floor(bbox_top + (other.y - bbox_bottom) - 1);
 				
