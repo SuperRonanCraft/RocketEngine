@@ -1,42 +1,44 @@
 ///Check the player states
 
-switch (playerState) {
+var map = playerMap;
+
+switch (map[? PLAYER_MAP.PLAYER_STATE]) {
 	case PLAYERSTATE.TECHED:
-		overrideAnimation = true;
-		if (animState == PLAYERSTATE.NORMAL){
-			overrideAnimation = false;
-			playerState = PLAYERSTATE.NORMAL;	
+		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
+		if (map[? PLAYER_MAP.ANIMATION_STATE] == PLAYERSTATE.NORMAL){
+			map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
+			map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;	
 		}
 		break;
 	case PLAYERSTATE.KNOCKBACK:
-		canControl = false;
-		overrideAnimation = true;
+		map[? PLAYER_MAP.CAN_CONTROL] = false;
+		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
 		break;
 	case PLAYERSTATE.CANTCONTROL:
-		canControl = false;
+		map[? PLAYER_MAP.CAN_CONTROL] = false;
 		break;
     case PLAYERSTATE.DEAD:
-		overrideAnimation = false;
-        canControl = false;
+		map[? PLAYER_MAP.ANIMATION_STATE] = false;
+        map[? PLAYER_MAP.CAN_CONTROL] = false;
         break;
 	case PLAYERSTATE.WAKING:
-		overrideAnimation = true;
-		animState = ANIMATIONSTATE.WAKING;
-        canControl = false;
+		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
+		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.WAKING;
+        map[? PLAYER_MAP.CAN_CONTROL] = false;
         break;
 	case PLAYERSTATE.SLEEPING:
-		overrideAnimation = true;
-		animState = ANIMATIONSTATE.SLEEPING;
-        canControl = false;
+		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
+		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.SLEEPING;
+        map[? PLAYER_MAP.CAN_CONTROL] = false;
         break;
 	case PLAYERSTATE.TRAPPED:
-		overrideAnimation = true;
-		animState = ANIMATIONSTATE.TRAPPED;
-        canControl = false;
+		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
+		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.TRAPPED;
+        map[? PLAYER_MAP.CAN_CONTROL] = false;
         break;
     case PLAYERSTATE.NORMAL:
 	default:
-        canControl = true;
+        map[? PLAYER_MAP.CAN_CONTROL] = true;
         break;
 }
 

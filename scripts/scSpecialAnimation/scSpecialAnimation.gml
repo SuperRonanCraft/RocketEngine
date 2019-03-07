@@ -4,15 +4,17 @@
 
 var sprite = argument[0];
 var loop = argument[1];
+var map = playerMap;
 
 //Check if loop finished
 var loopFin = false;
 
 //Reset animationVar
-if (animationVar != 0 && currentSprite != sprite)
+var animationVar = map[? PLAYER_MAP.ANIMATION_VAR];
+if (animationVar != 0 && map[? PLAYER_MAP.CURRENT_SPRITE] != sprite)
 	animationVar = (loop == 2) ? sprite_get_number(sprite) - 1 : 0;
 
-currentSprite = sprite;
+map[? PLAYER_MAP.CURRENT_SPRITE] = sprite;
 
 if (loop == 0) {
 	if (floor(animationVar) >= sprite_get_number(sprite) - 1) {
@@ -26,10 +28,11 @@ if (loop == 0) {
 	}
 }
 
+var currentSprite = map[? PLAYER_MAP.CURRENT_SPRITE];
 draw_sprite_ext(currentSprite, floor(animationVar), x, y, facing * image_xscale, image_yscale, 0, c_white, image_alpha);
 
 scFlash(flash_alpha, flash_color, facing * image_xscale, image_yscale, currentSprite, floor(animationVar), x, y); //Flash shader
 
-animationVar += (image_speed * time_dialation) * (loop == 2 ? -1 : 1);
+map[? PLAYER_MAP.ANIMATION_VAR] += (image_speed * time_dialation) * (loop == 2 ? -1 : 1);
 
 return (loopFin);

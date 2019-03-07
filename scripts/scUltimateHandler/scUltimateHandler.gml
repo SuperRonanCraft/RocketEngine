@@ -1,4 +1,4 @@
-if (!ult_enabled || !canControl || rocket_map[? ROCKET_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?
+if (!ult_enabled || !playerMap[? PLAYER_MAP.CAN_CONTROL] || rocket_map[? ROCKET_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?
 
 if (ult_charge < ult_charge_max) {scUltimateAddCharge(id, DAMAGETYPE.TIME); exit;} //Give charge by time, exit
 

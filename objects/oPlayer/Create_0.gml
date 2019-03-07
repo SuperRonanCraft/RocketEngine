@@ -49,21 +49,21 @@ scComboStart();
 scBuffStart();
 
 //Load player states
-canControl = true;
-playerState = PLAYERSTATE.NORMAL;
+//canControl = true;
+//playerState = PLAYERSTATE.NORMAL;
 
 //Load animation states
-alive = true;
-animationVar = 0;
+//alive = true;
+//animationVar = 0;
 image_speed /= TIME_SPEED;
-overrideAnimation = false;
-currentSprite = sprite_index;
+//overrideAnimation = false;
+//currentSprite = sprite_index;
 enum ANIMATIONSTATE {
 	STANDING, RISING, FALLING, WALKING, DEAD, KNOCKBACK, KNOCKBACK2, TECHED,TRAPPED,
 	SLIDING, SLEEPING, WAKING, DEAD2
 }
 
-animState = ANIMATIONSTATE.STANDING;
+//animState = ANIMATIONSTATE.STANDING;
 
 //Movement vars
 controlling = 0; //If the player is controlling AND moving
@@ -76,6 +76,7 @@ recoilMAX = 0;
 teched = false;
 
 //AI Control
+player_aimode = false;
 aiBrain = noone;
 
 //Cheat mode buff id

@@ -3,5 +3,5 @@
 ds_list_destroy(buffs);
 
 //Destroy ai brain
-if (aiBrain != noone)
+if (aiBrain != noone && player_aimode)
 	instance_destroy(aiBrain);

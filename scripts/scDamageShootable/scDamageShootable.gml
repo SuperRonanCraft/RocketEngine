@@ -6,7 +6,6 @@
 /// @arg damage
 /// @arg force-damage* noone to ignore
 
-
 var shootInst = argument[0];
 var damageInst = argument[1];
 var isPlayer = damageInst.object_index == oPlayer; //If the damaging instance is a player
@@ -22,7 +21,7 @@ with (damageInst) {
 			hp_scale = 2;
 			hp_damaged = dmg;
 			hp_flash_alpha = 1;
-			if (hp > 0 || alive)
+			if (hp > 0 || playerMap[? PLAYER_MAP.ALIVE])
 				scData_ConfirmHit();
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
 			with (shootInst)

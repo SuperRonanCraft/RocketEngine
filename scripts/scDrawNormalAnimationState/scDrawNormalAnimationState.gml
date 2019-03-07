@@ -4,6 +4,7 @@
 var overwrite = false;
 
 var state = argument[0];
+var map = playerMap;
 
 switch (state) {
 	case ANIMATIONSTATE.DEAD:
@@ -15,28 +16,28 @@ switch (state) {
 		scSpecialAnimation(sPlayer_dead2, 0);
 		break;
 	case ANIMATIONSTATE.WALKING:
-		currentSprite = sPlayer_walk;	
+		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_walk;	
 		break;	
 	case ANIMATIONSTATE.RISING:
-		currentSprite = sPlayer_rise;	
+		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_rise;	
 		break;	
 	case ANIMATIONSTATE.SLIDING:
-		currentSprite = sPlayer_walkend;	
+		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_walkend;	
 		break;	
 	case ANIMATIONSTATE.FALLING:
-        currentSprite = sPlayer_fall;	
+        map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_fall;	
 		break;
     case ANIMATIONSTATE.STANDING:
 	default:
-        currentSprite = sPlayer_idle;
+        map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_idle;
         break;
 }
 
 //draw sprite normally
 if (!overwrite) {
-	animationVar += image_speed * time_dialation;
-	var sprite = currentSprite;
-	var sprite_img = floor(animationVar);
+	map[? PLAYER_MAP.ANIMATION_VAR] += image_speed * time_dialation;
+	var sprite = map[? PLAYER_MAP.CURRENT_SPRITE];
+	var sprite_img = floor(map[? PLAYER_MAP.ANIMATION_VAR]);
 	draw_sprite_ext(sprite, sprite_img, x, y, 
 		facing * image_xscale, image_yscale, 0, c_white, image_alpha);
 	scFlash(flash_alpha, flash_color, facing * image_xscale, image_yscale, sprite, sprite_img, x, y);

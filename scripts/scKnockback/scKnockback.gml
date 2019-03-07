@@ -7,11 +7,12 @@ knockback_time--;
 part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? PARTICLES.KBSMOKE], 1);
 //hsp_move = 0;
 //animate correctly
-if (playerState == PLAYERSTATE.KNOCKBACK)
+var map = playerMap;
+if (map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
 	if (sign(facing) == sign(hsp_knockback))
-		animState = ANIMATIONSTATE.KNOCKBACK2;
+		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.KNOCKBACK2;
 	else
-		animState = ANIMATIONSTATE.KNOCKBACK;	
+		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.KNOCKBACK;	
 
 //knockback time was just set to 0, do the following
 if (hsp_knockback == 0 || standing || knockback_time == 0) {
@@ -22,9 +23,9 @@ if (hsp_knockback == 0 || standing || knockback_time == 0) {
 }
 
 if (hsp_knockback == 0 && vsp_knockback == 0 && alive){
-	overrideAnimation = false;
-	canControl = true;
-	playerState = PLAYERSTATE.NORMAL;
+	map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
+	map[? PLAYER_MAP.CAN_CONTROL] = true;
+	map[? PLAYER_MAP.ANIMATION_STATE] = PLAYERSTATE.NORMAL;
 	knockback_time = 0;
 }
 

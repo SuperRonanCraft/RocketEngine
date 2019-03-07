@@ -1,9 +1,10 @@
  ///The normal animation for an object
-
-if (alive && hsp == 0 && vsp == 0 && standing){
+var map = playerMap;
+var animState = map[? PLAYER_MAP.ANIMATION_STATE];
+if (map[? PLAYER_MAP.ALIVE] && hsp == 0 && vsp == 0 && standing){
 	animState = ANIMATIONSTATE.STANDING;
 }
-else if (standing && !alive && (animState != ANIMATIONSTATE.DEAD && animState != ANIMATIONSTATE.DEAD2)){
+else if (standing && !map[? PLAYER_MAP.ALIVE] && (animState != ANIMATIONSTATE.DEAD && animState != ANIMATIONSTATE.DEAD2)){
 	
 	if(sign(hsp) == facing)	{
 		animState = ANIMATIONSTATE.DEAD2;
@@ -21,11 +22,13 @@ else if (standing && !alive && (animState != ANIMATIONSTATE.DEAD && animState !=
 	}
 	show_debug_message("someone died");
 }
-else if (alive && controlling != 0 && standing && vsp == 0 && hsp != 0)
+else if (map[? PLAYER_MAP.ALIVE] && controlling != 0 && standing && vsp == 0 && hsp != 0)
 	animState = ANIMATIONSTATE.WALKING;	
-else if (alive && controlling == 0 && standing && vsp == 0 && hsp != 0)
+else if (map[? PLAYER_MAP.ALIVE] && controlling == 0 && standing && vsp == 0 && hsp != 0)
 	animState = ANIMATIONSTATE.SLIDING;	
 else if (!standing && vsp > 0)
 	animState = ANIMATIONSTATE.FALLING;
 else if (!standing && vsp < 0)
 	animState = ANIMATIONSTATE.RISING;
+	
+map[? PLAYER_MAP.ANIMATION_STATE] = animState;

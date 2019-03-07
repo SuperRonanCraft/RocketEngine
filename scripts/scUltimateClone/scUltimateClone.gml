@@ -2,9 +2,12 @@
 
 var inst = instance_create_depth(x, y, depth, oPlayer);
 with (inst) {
+	if (other.player_aimode)
+		aiBrain = other.aiBrain;
+	ult_enabled = false;
+	rockets_enabled = false;
 	keyleft = other.keyright;
 	keyright = other.keyleft;
-	keyjump = other.keyjump;
 	keyshoot = noone; //Cannot shoot
 	team = other.team; //Same team as caster
 	display = false; //No ui

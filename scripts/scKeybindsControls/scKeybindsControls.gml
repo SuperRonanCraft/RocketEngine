@@ -19,14 +19,14 @@ var move = (key_right - key_left) * keydirection;
 
 
 //If cant control, neutralize move
-if(!alive || !canControl)
+if(!playerMap[? PLAYER_MAP.ALIVE] || !playerMap[? PLAYER_MAP.CAN_CONTROL])
 	move = 0;
 	
 	
 controlling = move;
 
 //Check if can control
-if (canControl) {
+if (playerMap[? PLAYER_MAP.CAN_CONTROL]) {
 	
 	//Direction
 	if (move != 0)
@@ -55,7 +55,7 @@ if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
 		hsp_move = 0;
 } 
 //Move hsp
-else if(hsp_knockback == 0 && canControl)
+else if(hsp_knockback == 0 && playerMap[? PLAYER_MAP.CAN_CONTROL])
 	hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
 
 
