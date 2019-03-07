@@ -24,7 +24,6 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.NAME] = "Mr.Huge!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateDefault;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLaser_Draw;
-		ds_map[? "casting_tiem"] = 0;
 		break;
 	case ULTIMATE.BARRAGE: //Dodge the lasers!
 		ds_map[? ULTIMATE_MAP.NAME] = "Termination";
@@ -112,11 +111,12 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateBrickWall_Draw;
 		ds_map[? "size"] = 5; //yscale of wall
 		ds_map[? "offset"] = 0; //how far to offset downward
+		ds_map[? "thickness"] = 2; //how thick walls are
 		ds_map[? "dis"] = 32; //distance between player and wall
 		ds_map[? "ult"] = oUltimateBrickWall;
 		break;
 	case ULTIMATE.AMPWALL:
-		ds_map[? ULTIMATE_MAP.NAME] = "ITS GONNA BE HUGE!";
+		ds_map[? ULTIMATE_MAP.NAME] = "ITS GONNA BE STRONG!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateAmpWall;
 		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateAmpWall_Draw;
 		ds_map[? "size"] = 6; //yscale of wall

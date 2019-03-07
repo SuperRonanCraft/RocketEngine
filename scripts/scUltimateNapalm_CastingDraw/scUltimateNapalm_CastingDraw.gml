@@ -1,8 +1,10 @@
+// @desc Napalm draw event
+// @arg direction
 
 var colliding = false;
-var hspd = !shoot_face ? (team == TEAM.LEFT ? 1 : -1) : (facing == 1 ? 1 : -1) * 24;
-var xx = x, yy = y, yspd = -8 / TIME_SPEED;
-var grv = 1.5;
+var hspd = (argument0 == 0 ? 1 : -1) * 24;
+var xx = x, yy = y, yspd = -14;
+var grv = 1.6;
 while (!colliding) {
 	var inst = instance_place(xx, yy, oWall);
 	if ((inst != noone && inst.object_index != oSeperator) || !(xx > 0 && xx < room_width && yy > 0 && yy < room_height)) {

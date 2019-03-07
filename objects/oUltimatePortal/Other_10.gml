@@ -109,9 +109,17 @@ for (var e = 0; e < 2; e++) {
 			p.image_yscale /= 4;
 		}
 		if (from) {
+			if (p.object_index == oPlayer) //WALL SAFETY
+				with (p)
+					if (instance_place(other.exit_x + offset, other.exit_y, oWall) != noone)
+						exit;
 			p.x = exit_x + offset;
 			p.y = exit_y;
 		} else {
+			if (p.object_index == oPlayer) //WALL SAFETY
+				with (p)
+					if (instance_place(other.x + offset, other.y, oWall) != noone)
+						exit;
 			p.x = x + offset;
 			p.y = y;
 		}

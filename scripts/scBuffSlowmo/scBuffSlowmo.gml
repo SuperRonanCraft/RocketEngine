@@ -39,7 +39,8 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 		var steps = dsBuff[? "steps"];
 		if (dsBuff[? "steps_on"] > dsBuff[? "steps_max"])
 			dsBuff[? "steps_on"] = 0;
-		ds_list_set(steps, dsBuff[? "steps_on"], [x, y, currentSprite, floor(animationVar), 1, facing * image_xscale, image_yscale]);
+		ds_list_set(steps, dsBuff[? "steps_on"], [x, y, owner.playerMap[? PLAYER_MAP.CURRENT_SPRITE], floor(owner.playerMap[? PLAYER_MAP.ANIMATION_VAR]), 
+			1, facing * image_xscale, image_yscale]);
 		dsBuff[? "steps_on"]++;
 	}
 }

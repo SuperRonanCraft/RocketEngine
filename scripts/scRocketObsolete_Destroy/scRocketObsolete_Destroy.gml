@@ -1,1 +1,1 @@
-ds_map_destroy(obsolete);
+ds_map_destroy(obsoleteMap);

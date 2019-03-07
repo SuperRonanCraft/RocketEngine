@@ -28,8 +28,8 @@ if (timer <= 0) {
 	turret_cd--;
 	if (turret_cd <= 0) {
 		var offset = owner.rocket_map[? ROCKET_MAP.OFFSET];
-		var dir = direction + irandom_range(-5, 5);
-		scSpawnRocket(x + lengthdir_x(offset, dir), y, depth + 1, dir, owner, owner.rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false]);
+		scSpawnRocket(x + lengthdir_x(offset, direction), y, depth + 1, direction, owner, owner.rocket_map, 
+			[ROCKET_MAP.ULTIMATE_CHARGE_GIVE], [false]);
 		turret_cd = turret_rate;
 		turret_offset = turret_offset_max;
 	}

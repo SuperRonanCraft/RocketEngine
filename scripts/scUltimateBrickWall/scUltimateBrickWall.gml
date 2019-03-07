@@ -9,5 +9,6 @@ with (instance_create_depth(xx, yy, depth + 1, map[? "ult"])) {
 	//image_yscale = map[? "size"];
 	walls_tospawn = map[? "size"];
 	walls_side = side;
+	walls_thickness = map[? "thickness"];
 	owner = other;
 }

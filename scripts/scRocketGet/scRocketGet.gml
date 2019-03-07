@@ -272,7 +272,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
 		map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
-		map[? ROCKET_MAP.SPEED] = 15 * varspd;
+		map[? ROCKET_MAP.SPEED] = 18 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketLightning_Step;
@@ -356,6 +356,11 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketArching_Destroy;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HACKLOOT;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
+		map[? "spawn_extra"] = true; //Spawn the extra rockets
+		map[? "spawn_rockets"] = 2; //Amount of more rockets to spawn
+		map[? "spawn_hei"] = 5;
+		map[? "spawn_len"] = 0.5;
+		map[? "spawn_clock"] = 0;
 		break;
 		
 	case ROCKET.BOOMERANG:
