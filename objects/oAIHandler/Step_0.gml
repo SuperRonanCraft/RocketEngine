@@ -28,7 +28,7 @@ if (player.standing) {
 }
 
 //As long as you live, shoot!
-if (!ultReady && player.alive) {
+if (!ultReady && player.playerMap[? PLAYER_MAP.ALIVE]) {
 	AIShoot = true;	
 } else {
 	AIShoot = false;	
