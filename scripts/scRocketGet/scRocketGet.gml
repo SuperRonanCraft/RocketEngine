@@ -207,6 +207,7 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.JUMPPAD;
+		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		
 	case ROCKET.SPIKED:
@@ -223,6 +224,7 @@ switch (roc) {
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TRAP;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
+		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		
 	case ROCKET.MAGNET:

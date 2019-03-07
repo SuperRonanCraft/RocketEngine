@@ -15,7 +15,7 @@ vsp = 0
 grv = 0.2;
 
 jump_list = ds_list_create();
-jump_pwr = -10;
+jump_pwr = -22;
 jump_ani_max = 16;
 jump_ani = 0;
 

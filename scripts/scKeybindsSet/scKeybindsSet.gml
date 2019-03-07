@@ -12,5 +12,7 @@ if (argument0 == KEYBIND.PLAYER1) {
 	keyshoot = global.key_p2_shoot;
 	keydirection = 1;
 }
-controller = argument0 - 1;
+controller = argument0;
 keydirection = 1;
+controller_inuse = false;
+controller_lastused = false;

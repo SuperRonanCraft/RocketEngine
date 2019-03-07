@@ -22,6 +22,3 @@ if (build_at <= walls_tospawn) {
 		build_at++;
 	}
 }
-
-if (global.debug)
-	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, image_alpha);

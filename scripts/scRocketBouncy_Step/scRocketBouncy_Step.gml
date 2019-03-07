@@ -23,14 +23,14 @@ if (inst != noone && inst.object_index != oSeperator) {
 }
 
 //Bounce off pad
-if(instance_exists(oUltimateJumpPad)){
+/*if(instance_exists(oUltimateJumpPad)){
 	
 	if(collision_point(x,y+map[?"vsp"],oUltimateJumpPad,false,true) != noone){
 		map[?"vsp"] = abs(map[?"vsp"]) * -2.5;	
 		map[? "hsp"] *= 2;
 	}
 
-}
+}*/
 	
 x += map[? "hsp"] * owner.time_dialation;
 y += map[? "vsp"] * owner.time_dialation;

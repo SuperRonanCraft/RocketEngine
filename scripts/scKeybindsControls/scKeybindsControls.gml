@@ -30,7 +30,7 @@ if (canControl) {
 	
 	//Direction
 	if (move != 0)
-		facing = move;
+		facing = sign(move);
 	
 	//Friction
 
