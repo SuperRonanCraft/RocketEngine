@@ -58,10 +58,6 @@ scBuffStart();
 image_speed /= TIME_SPEED;
 //overrideAnimation = false;
 //currentSprite = sprite_index;
-enum ANIMATIONSTATE {
-	STANDING, RISING, FALLING, WALKING, DEAD, KNOCKBACK, KNOCKBACK2, TECHED,TRAPPED,
-	SLIDING, SLEEPING, WAKING, DEAD2
-}
 
 //animState = ANIMATIONSTATE.STANDING;
 

@@ -18,7 +18,7 @@ switch (map[? PLAYER_MAP.PLAYER_STATE]) {
 		map[? PLAYER_MAP.CAN_CONTROL] = false;
 		break;
     case PLAYERSTATE.DEAD:
-		map[? PLAYER_MAP.ANIMATION_STATE] = false;
+		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
         map[? PLAYER_MAP.CAN_CONTROL] = false;
         break;
 	case PLAYERSTATE.WAKING:
