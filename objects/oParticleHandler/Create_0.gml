@@ -359,11 +359,29 @@ part_type_alpha3(parttype, 1, 0.5, 0);
 ds_map_add(ds_part, PARTICLES.CLEANSE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.CLEANSE, 2);
 
+//TRAIL
+parttype = part_type_create();
+part_type_sprite(parttype, s_ptrail, false, false, false);
+part_type_size(parttype, 1, 1, 0, 0);
+part_type_life(parttype, 15 * life, 15 * life);
+ds_map_add(ds_part, PARTICLES.TRAIL, parttype);
+ds_map_add(ds_part_amt, PARTICLES.TRAIL, 5);
+
+//RELOAD
+parttype = part_type_create();
+part_type_sprite(parttype, s_preload, true, true, false);
+part_type_direction(parttype,90,90,0,0);
+part_type_speed(parttype,0.5,0.5,0.05,0);
+part_type_alpha3(parttype,1,0.7,0.1);
+part_type_size(parttype, 1, 1, 0, 0);
+part_type_life(parttype, 15 * life, 15 * life);
+ds_map_add(ds_part, PARTICLES.RELOAD, parttype);
+ds_map_add(ds_part_amt, PARTICLES.RELOAD, 1);
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE, ANTIHEAL, ABSORBTION, LIFESTEAL,
-	CLEANSE
+	CLEANSE, TRAIL, RELOAD,
 }

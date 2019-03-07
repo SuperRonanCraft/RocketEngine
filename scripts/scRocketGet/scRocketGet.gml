@@ -248,7 +248,7 @@ switch (roc) {
 		break;
 		
 	case ROCKET.OBSOLETE:
-		map[? ROCKET_MAP.NAME] = "OBSOLETE";
+		map[? ROCKET_MAP.NAME] = "Obsolete";
 		map[? ROCKET_MAP.DESCRIPTION] = "It never works ;)";
 		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.OBSOLETE;
@@ -266,7 +266,7 @@ switch (roc) {
 		break;
 	
 	case ROCKET.LIGHTNING:
-		map[? ROCKET_MAP.NAME] = "LIGHTNING";
+		map[? ROCKET_MAP.NAME] = "Lightning";
 		map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
 		map[? ROCKET_MAP.DAMAGE] = 1;
 		map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1;
@@ -288,7 +288,7 @@ switch (roc) {
 		break;
 	
 	case ROCKET.SHOTGUN:
-		map[? ROCKET_MAP.NAME] = "SHOTGUN";
+		map[? ROCKET_MAP.NAME] = "Shotgun";
 		map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
 		map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
@@ -413,6 +413,23 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DRAW_OVER] = scRocketPiercing_Draw;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TURRET;
 		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
+		break;
+		
+	case ROCKET.GLASS:
+		map[? ROCKET_MAP.NAME] = "Glass";
+		map[? ROCKET_MAP.DESCRIPTION] = "Extremely fragile";
+		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.GLASS;
+		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.COOLDOWN] = 50 * varcd;
+		map[? ROCKET_MAP.SPEED] = 30 * varspd;
+		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
+		map[? ROCKET_MAP.SHAKE_FRAMES] = 6 * vartime;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MIRROR;
+		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Glass;
+		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketGlass_Create;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.TRAIL];
+		map[? ROCKET_MAP.PARTICLE_AMT] = 0;
+		
 		break;
 }
 
