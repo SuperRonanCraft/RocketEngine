@@ -1015,18 +1015,18 @@
             }
         },
         {
-            "Key": "2fbb2a02-faba-4f7a-9fc1-2e0e0b7e9646",
+            "Key": "2f71d680-a22e-4051-bb86-74d44dd433c0",
             "Value": {
-                "id": "caed2c1d-7b0f-4f10-b2aa-b845d7161cd7",
-                "resourcePath": "scripts\\scRocketLightning_Destroy\\scRocketLightning_Destroy.yy",
+                "id": "4e746e02-042d-47e9-a15c-38e9ebd0453a",
+                "resourcePath": "scripts\\scUIFlipPageAchivementsPrev\\scUIFlipPageAchivementsPrev.yy",
                 "resourceType": "GMScript"
             }
         },
         {
-            "Key": "2fed0873-8181-430b-8cdd-17d2420c5570",
+            "Key": "2fbb2a02-faba-4f7a-9fc1-2e0e0b7e9646",
             "Value": {
-                "id": "b9632254-3a0e-430d-a0e0-4d27f2b9e2b2",
-                "resourcePath": "scripts\\scAchievementGetDescription\\scAchievementGetDescription.yy",
+                "id": "caed2c1d-7b0f-4f10-b2aa-b845d7161cd7",
+                "resourcePath": "scripts\\scRocketLightning_Destroy\\scRocketLightning_Destroy.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1927,6 +1927,14 @@
             }
         },
         {
+            "Key": "5c9e7833-bf9a-4502-82f1-863c236bab75",
+            "Value": {
+                "id": "42902f27-1b4f-4ab8-a410-0cb89f64a340",
+                "resourcePath": "scripts\\scMenuAchievements\\scMenuAchievements.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5cac4671-ccd7-4700-ac89-1b5942b99f0c",
             "Value": {
                 "id": "dce15f71-76e6-4c6b-8f2f-64456dabae87",
@@ -1955,6 +1963,14 @@
             "Value": {
                 "id": "bafbe41f-87ee-4956-9564-830356306509",
                 "resourcePath": "scripts\\scStatsLoad\\scStatsLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5e5885b5-e793-4ccb-8335-06ce6b44dc87",
+            "Value": {
+                "id": "54ac0307-ff71-4f88-9678-7989804eae47",
+                "resourcePath": "scripts\\scUIFlipPageAchivementsNext\\scUIFlipPageAchivementsNext.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5220,6 +5236,7 @@
         "c963180c-6a2f-4298-8334-1001007702e6",
         "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
         "8eac4b42-f5ef-476d-8ae2-c418564eb9a1",
+        "5c9e7833-bf9a-4502-82f1-863c236bab75",
         "6a122f33-5cba-4db2-abd9-22528acd5997",
         "9f9f6ac5-b899-4c62-812b-9c6165f073a6",
         "0b6a16fd-15b1-4137-8d3e-d13448a2a58c",
@@ -5244,8 +5261,10 @@
         "e6b3fce5-eee5-4b2c-b861-206baa29be0a",
         "6ebc6ea9-db60-4c99-8392-afd18fb048bf",
         "54791054-8f45-4f70-958a-fafb6a31106c",
+        "2f71d680-a22e-4051-bb86-74d44dd433c0",
         "4f496e7c-5b8f-4f44-bd34-75ba158982c8",
         "9a0da5da-81e2-4634-9400-c0e170ae88bc",
+        "5e5885b5-e793-4ccb-8335-06ce6b44dc87",
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
@@ -5292,7 +5311,6 @@
         "2b83c1d9-cae8-4912-9ac9-44e2c2def48f",
         "a3ac6a66-c960-400a-a41e-d67154fd0067",
         "d610a108-85a0-4046-9bea-e52444b0173c",
-        "2fed0873-8181-430b-8cdd-17d2420c5570",
         "aa4905e5-8c29-43d8-a6bb-4aac7b8d2692",
         "b07921d9-8376-4807-9a92-24c903c3e303",
         "a2062bc9-381e-416f-9983-d6c2b1747b17",

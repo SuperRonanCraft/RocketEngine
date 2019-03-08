@@ -170,6 +170,8 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			scMenuRocketList(); break;
 		case menu_element_type.rocket_buffs: //Buffs list
 			scMenuRocketBuffs(); break;
+		case menu_element_type.achievements: //Achievements list
+			scMenuAchievements(); break;
 		case menu_element_type.controls: //Key controls page
 			scMenuControls(); break;
 		case menu_element_type.stats: //Stats page

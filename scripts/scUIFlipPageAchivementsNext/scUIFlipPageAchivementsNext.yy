@@ -1,8 +1,8 @@
 {
-    "id": "2fed0873-8181-430b-8cdd-17d2420c5570",
+    "id": "5e5885b5-e793-4ccb-8335-06ce6b44dc87",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scAchievementGetDescription",
+    "name": "scUIFlipPageAchivementsNext",
     "IsCompatibility": false,
     "IsDnD": false
 }

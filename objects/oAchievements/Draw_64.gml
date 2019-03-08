@@ -2,10 +2,10 @@
 
 if (!achievement_display || ds_list_empty(achievement_display_list)) exit;
 
-var desc = scAchievementGetDescription(achievement_display_list[| 0]);
-var desc_len = string_width(desc) * ach_scale;
-var len = ach_title_len > desc_len ? ach_title_len : desc_len;
-var hei = ach_title_hei + (string_height(desc) * ach_scale);
+var name = scAchievementGetType(ACHIEVEMENT_TYPE.NAME, achievement_display_list[| 0]);
+var name_len = string_width(name) * ach_scale;
+var len = ach_title_len > name_len ? ach_title_len : name_len;
+var hei = ach_title_hei + (string_height(name) * ach_scale);
 var xx = ach_x_crt, xx2 = xx + len + (ach_margin * 2);
 var yy = ach_ystart, yy2 = yy + hei + (ach_margin * 2);
 scDrawRect(xx, yy, xx2, yy2, c_gray, false, ach_box_alpha);
@@ -14,7 +14,7 @@ xx = xx + ((xx2 - xx) / 2);
 yy = yy + ((yy2 - yy) / 2);
 scDrawText(xx, yy, ach_title, c_yellow, ach_scale, noone, ach_alpha, fa_middle, fa_bottom);
 //DESC
-scDrawText(xx, yy, desc, c_white, ach_scale, noone, ach_alpha, fa_middle, fa_top);
+scDrawText(xx, yy, name, c_white, ach_scale, noone, ach_alpha, fa_middle, fa_top);
 
 //travelled, slow down at
 var half = ((len + (ach_margin * 2)) / 2);

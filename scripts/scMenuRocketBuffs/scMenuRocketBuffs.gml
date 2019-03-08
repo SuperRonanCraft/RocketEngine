@@ -31,7 +31,8 @@ for (var i = (pg * (columns * rows)); i < (pg * (columns * rows)) + (columns * r
 	scDrawText(rx + 32, ry + 84 + yoffset, string(time),
 		c_ltgray, 0.6, noone, 0.8, fa_left, fa_top); //Buff time
 	scDrawText(rx, ry + 110, desc, color_element_input, 0.45); //Buff description
-	draw_line_width_color(rx - 64, ry + 122, rx + 64, ry + 122, 2, c_black, c_black); //Seperator line
+	scDrawLine(rx - 64, ry + 122, rx + 64, ry + 122, c_black, 2, 1);
+	//draw_line_width_color(rx - 64, ry + 122, rx + 64, ry + 122, 2, c_black, c_black); //Seperator line
 	ds_map_destroy(map);
 	index++;
 }

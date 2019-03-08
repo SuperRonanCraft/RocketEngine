@@ -2,6 +2,7 @@
 enum menu_page {
 	main, gamemodes, more_gamemodes, settings, audio, graphics, keybinds,
 	keybinds2, controls, info, rocketlist, rocketbuffs, confirm, modes, stats,
+	achievements,
 	//Keep last
 	height
 }
@@ -25,7 +26,9 @@ enum menu_element_type {
 	//Go to a room
 	goto_room,
 	//List all rockets
-	rocket_list, rocket_buffs,
+	rocket_list, rocket_buffs, 
+	//Achivements
+	achievements,
 	//Toggle multiple settings
 	mass_toggle,
 	//Controls page

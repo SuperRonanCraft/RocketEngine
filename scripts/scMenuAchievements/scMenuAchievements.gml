@@ -1,0 +1,37 @@
+var amt = ACHIEVEMENTS.SECTION, columns = 2, rows = 3, offset = 0;
+var pg = page_achievements;
+var index = 0, ioffset = 0;
+
+var disabled = 0;
+
+var newi = (pg * (columns * rows)) + ioffset + (pg > 0 ? disabled : 0);
+for (var i = newi; index < columns * rows && i < amt; i++) {
+	if (index mod columns == 0)
+		offset++;
+	var name = scAchievementGetType(ACHIEVEMENT_TYPE.NAME, i);
+	var desc = scAchievementGetType(ACHIEVEMENT_TYPE.DESCRIPTION, i);
+	var icon = scAchievementGetType(ACHIEVEMENT_TYPE.ICON, i);
+	var rx = ((RES_W / 3) + ((RES_W / 3) * index)) - ((offset - 1) * ((RES_W / 3) * columns));
+	var ry = offset * 130 + 50;
+	var c = color_element;
+	var yoffset = 0;
+	if (scUIHovering(rx, ry + 25, name, x_buffer, 60, scale_element, fa_middle)) {
+		c = color_main_hovering;
+		yoffset = scMovementWave(-3, 3, 1);
+	}
+	scDrawText(rx, ry, name, c, scale_element, noone, noone, noone, fa_bottom); //Achievement Name
+	scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
+	scDrawSpriteExt(rx - 32, ry + 25 + yoffset, icon, 0);
+	scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1);
+	index++;
+}
+
+var max_page = 0;
+while (amt - (((max_page + 1) * (columns * rows)) + 1) > 0)
+	max_page++;
+scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);
+
+//animate hovering rocket
+rockets_img += rockets_spd;
+if (floor(rockets_img) > 3)
+	rockets_img = 0;

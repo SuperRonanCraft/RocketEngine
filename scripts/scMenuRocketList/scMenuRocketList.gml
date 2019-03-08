@@ -68,7 +68,8 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 		}
 	}
 	scDrawText(rx, ry + 60, desc, color_element_input, scale_description); //Rocket Description
-	draw_line_width_color(rx - 64, ry + 106, rx + 64, ry + 106, 2, c_black, c_black);
+	scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1);
+	//draw_line_width_color(rx - 64, ry + 106, rx + 64, ry + 106, 2, c_black, c_black);
 	//ds_map_destroy(roc_map);
 	index++;
 }

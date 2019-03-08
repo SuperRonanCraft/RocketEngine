@@ -7,7 +7,7 @@ var vals = argument1;
 ini_open(scFileGetType(FILES.ACHIEVEMENTS)); //Open stream
 
 //ACHIEVEMENTS
-var sec = scAchievementGetType(ACHIEVEMENTS.SECTION);
+var sec = scAchievementGetType(ACHIEVEMENT_TYPE.SECTION, ACHIEVEMENTS.SECTION);
 var map = oAchievements.achievementMap;
 
 if (array_length_1d(types) > 0)
@@ -19,7 +19,7 @@ if (array_length_1d(types) > 0)
 
 // GAMEMODE
 for (var i = 0; i < array_length_1d(types); i++) {
-	var type = scAchievementGetType(types[i]); //Acheivement type
+	var type = scAchievementGetType(ACHIEVEMENT_TYPE.SECTION, types[i]); //Acheivement type
 	var val = vals[i]; //Get value
 	ini_write_real(sec, type, val); //Save value
 }
