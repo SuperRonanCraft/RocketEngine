@@ -18,6 +18,5 @@ if (p1.hp > 0) {
 calculated = true;
 global.play = false;
 		
-//Print out winner
-
-scData_PrintOutcome();
+//Save winner
+scStatsSavePoints();

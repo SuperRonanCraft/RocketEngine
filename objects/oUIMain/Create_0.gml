@@ -41,6 +41,16 @@ ds_rocketinfo = scUICreateMenuPage(
 );
 //Rockets page
 page_rockets = 0;
+rockets_list = ds_list_create();
+rockets_img = 0;
+rockets_spd = 0.25;
+for (var i = ROCKET.DEFAULT; i < ROCKET.LENGHT; i++) {
+	var map = scRocketGet(i)
+	if (map[? ROCKET_MAP.ENABLED])
+		ds_list_add(rockets_list, map);
+	else
+		ds_map_destroy(map);
+}
 
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],

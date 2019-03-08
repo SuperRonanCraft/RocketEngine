@@ -11,8 +11,7 @@ if (striking != noone) {
 		scDrawLightning(x, y, striking.x, striking.y, irandom_range(light_branches / 2, 
 			light_branches), c_blue);
 	if (damage_cooldown_cur <= 0) {
-		with (striking)
-			scDamageShootable(other.owner, false, false, 1, false);
+		scDamageShootable(owner, striking, false, false, 1, false);
 		damage_cooldown_cur = damage_cooldown;
 	} else
 		damage_cooldown_cur--;

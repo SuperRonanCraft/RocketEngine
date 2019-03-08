@@ -29,4 +29,5 @@ for (var i = 0; i < ds_list_size(p_list); i++) {
 	p.damage_take = false; //Remove the ability to take damage
 }
 
-scData_PrintOutcome();
+//Save winner
+scStatsSavePoints();

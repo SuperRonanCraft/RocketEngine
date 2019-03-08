@@ -21,8 +21,6 @@ with (damageInst) {
 			hp_scale = 2;
 			hp_damaged = dmg;
 			hp_flash_alpha = 1;
-			if (hp > 0 || playerMap[? PLAYER_MAP.ALIVE])
-				scData_ConfirmHit();
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
 			with (shootInst)
 				scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);

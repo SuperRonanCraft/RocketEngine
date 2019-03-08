@@ -1,19 +1,19 @@
-var amt = ROCKET.LENGHT, columns = 4, rows = 3, offset = 0;
+var amt = ds_list_size(rockets_list)/*ROCKET.LENGHT*/, columns = 4, rows = 3, offset = 0;
 var pg = page_rockets;
-var spr, name, desc, buffs, rx, ry, c, yoffset, index = 0, ioffset = ROCKET.DEFAULT;
+var spr, name, desc, buffs, rx, ry, c, index = 0, ioffset = 0;//ROCKET.DEFAULT;
 
 var disabled = 0;
-for (var i = ioffset; i < amt; i++) {
+/*for (var i = ioffset; i < amt; i++) {
 	var roc_map = scRocketGet(i);
 	if (!roc_map[? ROCKET_MAP.ENABLED])
 		disabled++;
 	ds_map_destroy(roc_map);
-}
+}*/
 
 var newi = (pg * (columns * rows)) + ioffset + (pg > 0 ? disabled : 0);
 for (var i = newi; index < columns * rows && i < amt; i++) {
-	var roc_map = scRocketGet(i);
-	if (!roc_map[? ROCKET_MAP.ENABLED]) {ds_map_destroy(roc_map); continue;} //Is it disabled?
+	var roc_map = rockets_list[| i];//scRocketGet(i);
+	//if (!roc_map[? ROCKET_MAP.ENABLED]) {/*ds_map_destroy(roc_map);*/ continue;} //Is it disabled?
 	if (index mod columns == 0)
 		offset++;
 	var spr = roc_map[? ROCKET_MAP.PROJECTILE];
@@ -25,10 +25,11 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	var rx = ((RES_W / 8) + ((RES_W / 4) * index)) - ((offset - 1) * ((RES_W / 4) * columns));
 	var ry = offset * 130 + 50;
 	var c = color_element;
-	var yoffset = 0;
+	var img = 0;
 	if (scUIHovering(rx, ry + 20, name, x_buffer, 34, scale_element, fa_middle)) {
 		c = color_main_hovering;
-		yoffset = scMovementWave(-3, 3, 1);
+		//yoffset = scMovementWave(-3, 3, 1);
+		img = floor(rockets_img);
 		if (mouse_check_button_pressed(mb_left))
 			with (oPlayer)
 				scRocketChange(roc_map[? ROCKET_MAP.TYPE]);
@@ -36,12 +37,12 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	if (clip > 1) { //Show clip
 		var lx = rx + 30;
 		for (var d = 0; d < clip; d++) {
-			var ly = ry + 20 + (5 * d) + yoffset;
+			var ly = ry + 20 + (5 * d);
 			scDrawLine(lx, ly, lx + 10, ly, c_yellow, 2, 0.5);
 		}
 	}
 	scDrawText(rx, ry, name, c, scale_element); //Rocket name
-	draw_sprite(spr, 0, rx, ry + 30 + yoffset); //Rocket icon
+	draw_sprite(spr, img, rx, ry + 30); //Rocket icon
 	if (buffs != noone) { //Rocket buffs if exists
 		var bamt = array_length_1d(buffs);
 		for (var b = 0; b < bamt; b++) {
@@ -53,7 +54,7 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	}
 	if (dmg > 0) { //Show attack damage
 		var scale = 0.5;
-		var ly = ry + 35 + yoffset;
+		var ly = ry + 35;
 		var half = dmg mod 2;
 		var dmgTime = dmg / 2 - half;
 		var lx = rx + 20;
@@ -68,7 +69,7 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	}
 	scDrawText(rx, ry + 60, desc, color_element_input, scale_description); //Rocket Description
 	draw_line_width_color(rx - 64, ry + 106, rx + 64, ry + 106, 2, c_black, c_black);
-	ds_map_destroy(roc_map);
+	//ds_map_destroy(roc_map);
 	index++;
 }
 
@@ -76,3 +77,8 @@ var max_page = 0;
 while (amt - (((max_page + 1) * (columns * rows)) + 1) > 0)
 	max_page++;
 scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);
+
+//animate hovering rocket
+rockets_img += rockets_spd;
+if (floor(rockets_img) > 3)
+	rockets_img = 0;

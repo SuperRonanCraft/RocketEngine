@@ -1,7 +1,6 @@
 /// @desc 
 
-with (trapped){
-	playerState = PLAYERSTATE.NORMAL;
+with (trapped) {
+	playerMap[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
 	overrideAnimation = false;
-	
 }
