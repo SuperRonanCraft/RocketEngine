@@ -1,8 +1,8 @@
 {
-    "id": "d610a108-85a0-4046-9bea-e52444b0173c",
+    "id": "b5cc65ae-c078-440a-9b5f-a6e506061b74",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scAchievementGetType",
+    "name": "scAchievements_GameEnd",
     "IsCompatibility": false,
     "IsDnD": false
 }

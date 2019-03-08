@@ -28,6 +28,8 @@ switch (type) {
 			case ACHIEVEMENTS.GM_1V1_MULTI: val = s_abilityIcon_AntiHeal; break;
 		}
 		break;
+	case ACHIEVEMENT_TYPE.VALUE:
+		val = oAchievements.achievementMap[? scAchievementGetType(ACHIEVEMENT_TYPE.SECTION, enu)]; break;
 }
 
 return val;
@@ -44,5 +46,5 @@ enum ACHIEVEMENTS {
 }
 
 enum ACHIEVEMENT_TYPE {
-	NAME, DESCRIPTION, ICON, SECTION
+	NAME, DESCRIPTION, ICON, SECTION, VALUE
 }

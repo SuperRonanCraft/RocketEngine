@@ -33,4 +33,4 @@ for (var i = 0; i < ds_list_size(p_list); i++) {
 scStatsSavePoints();
 
 //Save any new achievements
-scAchievementHandler();
+scAchievements_GameEnd(gamemode);

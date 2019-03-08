@@ -8,19 +8,21 @@ var newi = (pg * (columns * rows)) + ioffset + (pg > 0 ? disabled : 0);
 for (var i = newi; index < columns * rows && i < amt; i++) {
 	if (index mod columns == 0)
 		offset++;
-	var name = scAchievementGetType(ACHIEVEMENT_TYPE.NAME, i);
-	var desc = scAchievementGetType(ACHIEVEMENT_TYPE.DESCRIPTION, i);
-	var icon = scAchievementGetType(ACHIEVEMENT_TYPE.ICON, i);
+	var name = scAchievementsGetType(ACHIEVEMENT_TYPE.NAME, i);
+	var status = scAchievementsGetType(ACHIEVEMENT_TYPE.VALUE, i); //Is it unlocked? (not `noone`)
+	var desc = scAchievementsGetType(ACHIEVEMENT_TYPE.DESCRIPTION, i);
+	var icon = status != noone ? scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, i) : s_achievement_Locked;
 	var rx = ((RES_W / 3) + ((RES_W / 3) * index)) - ((offset - 1) * ((RES_W / 3) * columns));
 	var ry = offset * 130 + 50;
-	var c = color_element;
+	var c = status != noone ? color_element : color_element_special;
 	var yoffset = 0;
 	if (scUIHovering(rx, ry + 25, name, x_buffer, 60, scale_element, fa_middle)) {
 		c = color_main_hovering;
 		yoffset = scMovementWave(-3, 3, 1);
 	}
 	scDrawText(rx, ry, name, c, scale_element, noone, noone, noone, fa_bottom); //Achievement Name
-	scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
+	if (status != noone)
+		scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
 	scDrawSpriteExt(rx - 32, ry + 25 + yoffset, icon, 0);
 	scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1);
 	index++;
