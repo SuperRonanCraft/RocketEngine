@@ -22,9 +22,25 @@ for (var i = 0; i < ds_list_size(inst_list); i++) {
 		
 		//Check if the wall has space above
 		with(inst){
-			show_debug_message( (other.brickMap[?"touching_floor"]) );
+			//show_debug_message( (other.brickMap[?"touching_floor"]) );
 			
-			if(abs(other.brickMap[?"hsp"]) > 2 && (other.brickMap[?"touching_floor"] || other.brickMap[?"vsp"] < 0 || other.brickMap[?"ramping"]) && collision_point(x,y-2,oWall,false,true) == noone ){
+			//Make sure there is space above the wall
+			//And it isnt a separator
+			var wallList = ds_list_create();
+			var num = collision_point_list(x,y-2,oWall,false,true,wallList,false);
+			var wallHit = false;
+			if(num > 0){
+				for (var i = 0; i < ds_list_size(wallList); i++) {
+				    var wallDet = wallList[|i];
+					if(wallDet.object_index != oSeperator){
+						wallHit = true;
+						break;
+					}
+				}	
+			}
+			ds_list_destroy(wallList);
+			
+			if(abs(other.brickMap[?"hsp"]) > 2 && (other.brickMap[?"touching_floor"] || other.brickMap[?"vsp"] < 0 || other.brickMap[?"ramping"]) && !wallHit ){
 				other.brickMap[? "ramping"] = true;
 				other.y = floor(bbox_top + (other.y - bbox_bottom) - 1);
 				
