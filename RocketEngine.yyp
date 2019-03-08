@@ -887,6 +887,14 @@
             }
         },
         {
+            "Key": "2b83c1d9-cae8-4912-9ac9-44e2c2def48f",
+            "Value": {
+                "id": "f4a6e183-2e7d-4568-bf15-354a72df3d3c",
+                "resourcePath": "scripts\\scAchievementsLoad\\scAchievementsLoad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2c0a101d-108e-465b-85fd-a4f0b7ccd428",
             "Value": {
                 "id": "cd2f3978-3e72-4ec0-9beb-5af759ba6f0f",
@@ -1011,6 +1019,14 @@
             "Value": {
                 "id": "caed2c1d-7b0f-4f10-b2aa-b845d7161cd7",
                 "resourcePath": "scripts\\scRocketLightning_Destroy\\scRocketLightning_Destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2fed0873-8181-430b-8cdd-17d2420c5570",
+            "Value": {
+                "id": "b9632254-3a0e-430d-a0e0-4d27f2b9e2b2",
+                "resourcePath": "scripts\\scAchievementGetDescription\\scAchievementGetDescription.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1563,6 +1579,14 @@
             "Value": {
                 "id": "c617d16e-c3dc-4936-9e7e-ebc7463c0f63",
                 "resourcePath": "objects\\oUltimateJumpPad\\oUltimateJumpPad.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4cb791c3-7f48-4c1c-a196-04195abba9cb",
+            "Value": {
+                "id": "6851a158-777e-40f7-ba19-ffb6ccefa483",
+                "resourcePath": "objects\\oAchievements\\oAchievements.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2236,6 +2260,14 @@
                 "id": "52170d64-86bc-43a1-bbd6-317ef4c2292b",
                 "resourcePath": "sprites\\sRocket_Random\\sRocket_Random.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "70c2bb82-aa9c-4998-a6d7-2dd660dc8a44",
+            "Value": {
+                "id": "316eae73-7896-4819-9783-0f2576a784c4",
+                "resourcePath": "views\\70c2bb82-aa9c-4998-a6d7-2dd660dc8a44.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3247,6 +3279,14 @@
             }
         },
         {
+            "Key": "a3ac6a66-c960-400a-a41e-d67154fd0067",
+            "Value": {
+                "id": "f89db149-2695-40cf-b51a-90f6295f3cb7",
+                "resourcePath": "scripts\\scAchievementsSave\\scAchievementsSave.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a3b80a3b-7dd9-49d0-b348-f28b035b16e1",
             "Value": {
                 "id": "7007873d-2739-444e-85d3-f768872c90e1",
@@ -3436,6 +3476,14 @@
                 "id": "bc65c084-a605-4ca7-9cc3-4205b38365a4",
                 "resourcePath": "objects\\oNuke\\oNuke.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "aa4905e5-8c29-43d8-a6bb-4aac7b8d2692",
+            "Value": {
+                "id": "b39beff5-1b0c-451a-be48-a094a4e0eef1",
+                "resourcePath": "scripts\\scAchievementHandler\\scAchievementHandler.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4259,6 +4307,14 @@
             "Value": {
                 "id": "728df671-dac7-4e70-bb6c-7a20155e1b59",
                 "resourcePath": "scripts\\scUltimateMirror_Draw\\scUltimateMirror_Draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d610a108-85a0-4046-9bea-e52444b0173c",
+            "Value": {
+                "id": "dfa9a023-44d6-475f-af16-735be57901ee",
+                "resourcePath": "scripts\\scAchievementGetType\\scAchievementGetType.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5233,6 +5289,11 @@
         "b5db1945-bb64-468c-aff2-c3552b4fdd86",
         "3cce5a87-9ff3-4e1b-953b-54b0642dcac5",
         "cc16ec0d-763c-4990-a582-a7cb7553e7eb",
+        "2b83c1d9-cae8-4912-9ac9-44e2c2def48f",
+        "a3ac6a66-c960-400a-a41e-d67154fd0067",
+        "d610a108-85a0-4046-9bea-e52444b0173c",
+        "2fed0873-8181-430b-8cdd-17d2420c5570",
+        "aa4905e5-8c29-43d8-a6bb-4aac7b8d2692",
         "b07921d9-8376-4807-9a92-24c903c3e303",
         "a2062bc9-381e-416f-9983-d6c2b1747b17",
         "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",

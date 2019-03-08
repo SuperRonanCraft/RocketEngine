@@ -3,6 +3,4 @@
 data_cache = ds_map_create();
 scStatsLoad();
 
-enum FILES {
-	DATABASE, SETTINGS
-}
+achievement_display = false;

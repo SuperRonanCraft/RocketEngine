@@ -11,7 +11,7 @@ if (global.pause && background != noone)
 
 if (global.debug) { //Debug activated
 	var instancesInGame = instance_count, playersInGame = instance_number(oPlayer), rocketsInGame = instance_number(oRocket);
-	var frames = "\nFPS: " + string(fps_real) + "/" + string(fps);
+	var frames = "\nFPS: " + string(fps) + "/" + string(fps_real);
 	var instances = "\nInstances: " + string(instancesInGame);
 	var players = "\nPlayers: " + string(playersInGame);
 	var rockets = "\nRockets: " + string(rocketsInGame);
