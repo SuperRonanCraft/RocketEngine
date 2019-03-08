@@ -21,10 +21,8 @@ event_user(2);
 //Show players collision box while in debug mode
 if (global.debug) {
 	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);
-	scDrawText(bbox_left, bbox_top - 10, "PLAYER STATE: " + string(playerMap[? PLAYER_MAP.PLAYER_STATE]), noone, 0.3);
-	scDrawText(bbox_left, bbox_top - 25, "ANIM STATE: " + string(playerMap[? PLAYER_MAP.ANIMATION_STATE]), noone, 0.3);
-	scDrawText(bbox_left, bbox_top - 40, "ALIVE: " + string(playerMap[? PLAYER_MAP.ALIVE]), noone, 0.3);
-	scDrawText(bbox_left, bbox_top - 55, "OVERRIDE: " + string(playerMap[? PLAYER_MAP.ANIMATION_OVERRIDE]), noone, 0.3);
+	scDrawText(bbox_left, bbox_top - 10, "HP: " + string(hp), noone, 0.3);
+	scDrawText(bbox_left, bbox_top - 25, "ALIVE: " + string(playerMap[? PLAYER_MAP.ALIVE]), noone, 0.3);
 	/*scDrawText(bbox_left, bbox_top - 10, "Controller ID: " + string(controller), noone, 0.3);
 	scDrawText(bbox_left, bbox_top - 25, "Controller In Use: " + string(controller_inuse), noone, 0.3);
 	scDrawText(bbox_left, bbox_top - 40, "Controller Last Used: " + string(controller_lastused), noone, 0.3);*/

@@ -2,6 +2,7 @@
 var map = playerMap;
 if (hp <= 0) {
 	map[? PLAYER_MAP.ALIVE] = false;
+	hp = 0;
 	if (standing)
 		map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.DEAD;
 	scPlayerDied();

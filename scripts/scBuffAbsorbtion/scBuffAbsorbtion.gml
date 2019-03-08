@@ -57,11 +57,11 @@ if (clock > dsBuff[? BUFF_MAP.TIME] || dsBuff[? "health"] <= 0) { //Remove debuf
 		}
 	}
 	
-	//Add Health
+	/*//Add Health
 	while (owner.hp != dsBuff[? "health_start"] && dsBuff[? "health"] > 0) {
 		owner.hp++;
 		dsBuff[? "health"]--;
 	}
-		
+		*/
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

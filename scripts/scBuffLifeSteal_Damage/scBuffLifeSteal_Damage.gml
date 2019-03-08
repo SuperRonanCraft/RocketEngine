@@ -4,7 +4,8 @@
 
 var owner = argument0;
 var dsBuff = argument1;
-var arry = argument2;
+var dmg = argument2;
+var arry = argument3;
 
 var inst = arry[0];
 var dmg = arry[1];
@@ -36,3 +37,5 @@ if (canHeal) {
 		ds_list_add(list, newPlr);
 	}
 }
+
+return dmg;

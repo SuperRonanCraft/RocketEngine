@@ -1,5 +1,6 @@
 /// @desc Handles individual player buffs
 /// @arg event type
+/// @arg damage
 /// @arg extra* arguments
 
 var type = argument[0];

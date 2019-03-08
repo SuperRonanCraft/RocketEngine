@@ -4095,6 +4095,14 @@
             }
         },
         {
+            "Key": "cafb4171-96a0-4c2e-82e3-d18c3170059a",
+            "Value": {
+                "id": "7e2baed2-5461-4f8d-afb5-5103173aa981",
+                "resourcePath": "scripts\\scBuffAbsorbtion_Damage\\scBuffAbsorbtion_Damage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cb0b55a2-e411-4a24-8296-3f4604ecea71",
             "Value": {
                 "id": "9e46a1b5-e397-469b-b078-0f189ae30ce9",
@@ -4935,6 +4943,14 @@
             }
         },
         {
+            "Key": "fe58e7d4-cd89-431f-8537-af1824c43e91",
+            "Value": {
+                "id": "50334b20-bf1b-43b1-9723-738e81a78863",
+                "resourcePath": "views\\fe58e7d4-cd89-431f-8537-af1824c43e91.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "fec53fa2-f9a0-4286-99e6-6eed12f0a4d8",
             "Value": {
                 "id": "b2476f3c-6d0f-4c20-94d0-863bacc92609",
@@ -5137,6 +5153,7 @@
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "4a0a3fae-a790-4ff3-a95d-bede420fab12",
         "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
+        "cafb4171-96a0-4c2e-82e3-d18c3170059a",
         "40173db7-a5f6-4502-ab7f-232777f15452",
         "cac11421-bb3a-4cbf-9e77-a4a404424fa6",
         "5a44ba40-3360-4a8c-87d7-b24273b2b27a",
