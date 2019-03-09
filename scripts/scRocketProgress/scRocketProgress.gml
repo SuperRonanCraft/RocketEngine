@@ -19,6 +19,9 @@ if (current_delay == 0) {
 		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 		
 		scRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
+		
+		scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ROCKETS_SHOT],
+			[scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ROCKETS_SHOT) + 1]);
 	}
 }
 

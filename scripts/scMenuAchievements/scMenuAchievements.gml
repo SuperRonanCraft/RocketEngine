@@ -23,6 +23,11 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	scDrawText(rx, ry, name, c, scale_element, noone, noone, noone, fa_bottom); //Achievement Name
 	if (status != noone)
 		scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
+	else {
+		var tracking = scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, i);
+		if (tracking != noone)
+			scDrawText(rx, ry, tracking, c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
+	}
 	scDrawSpriteExt(rx - 32, ry + 25 + yoffset, icon, 0);
 	scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1);
 	index++;

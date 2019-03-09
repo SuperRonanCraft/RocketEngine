@@ -120,7 +120,8 @@ switch (type) {
 		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
 	case GAMEMODE.SINGLE:
-		if (scCacheGet(type, CACHE.GM_SINGLE_LIVES) <= 0 || scCacheGet(type, CACHE.GM_SINGLE_CHECKPOINT) == noone)
+		if (scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LIVES, type) <= 0 
+			|| scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT, type) == noone)
 			ds_menu_main = scUICreateMenuPage(
 				["NEW GAME",	menu_element_type.script_runner,	scStageSingle_NewGame, "Start up a new game!"],
 				["BACK",		menu_element_type.script_runner,	scUIExitToTitle]

@@ -19,7 +19,7 @@ if (ds_list_size(types) > 0)
 
 for (var i = 0; i < ds_list_size(types); i++) {
 	var type = scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, types[| i]); //Acheivement type
-	var val = vals[i]; //Get value
+	var val = vals[| i]; //Get value
 	ini_write_real(sec, type, val); //Save value
 	oAchievements.achievementMap[? type] = val;
 }

@@ -10,31 +10,31 @@ ini_open(scFileGetType(FILES.DATABASE)); //Open stream
 
 var map = oDataCollector.data_cache;
 var mode = string(gm);
-var sec = scCacheGetType(CACHE.SECTION) + mode;
+var sec = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.SECTION) + mode;
 switch (gm) {
 	case GAMEMODE.TARGETS: //TARGETS GAMEMODE
 	//GAMEMODE
-		var val = scCacheGetType(CACHE.GM_TARGETS_POINTS); //POINTS
+		var val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.GM_TARGETS_POINTS); //POINTS
 		ini_write_real(sec, val, scr[0]);
 	//CACHE
 		map[? val + mode] = scr[0];
 		break;
 	case GAMEMODE.SINGLE: //TARGETS GAMEMODE
 	//GAMEMODE
-		var val = scCacheGetType(CACHE.GM_SINGLE_LEVEL); //LEVEL
+		var val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LEVEL); //LEVEL
 		ini_write_real(sec, val, scr[0]);
 		map[? val + mode] = scr[0]; //CACHE
-		val = scCacheGetType(CACHE.GM_SINGLE_CHECKPOINT); //CHECKPOINT
+		val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT); //CHECKPOINT
 		ini_write_real(sec, val, scr[1]);
 		map[? val + mode] = scr[1]; //CACHE
-		val = scCacheGetType(CACHE.GM_SINGLE_LIVES); //LIVES
+		val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LIVES); //LIVES
 		ini_write_real(sec, val, scr[2]);
 		map[? val + mode] = scr[2]; //CACHE
 		break;
 	default:
 	// GAMEMODE
-		var valp1 = scCacheGetType(CACHE.GM_GENERAL_P1_WINS); //P1 GAMEMODE WINS
-		var valp2 = scCacheGetType(CACHE.GM_GENERAL_P2_WINS); //P2 GAMEMODE WINS
+		var valp1 = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.GM_GENERAL_P1_WINS); //P1 GAMEMODE WINS
+		var valp2 = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.GM_GENERAL_P2_WINS); //P2 GAMEMODE WINS
 		ini_write_real(sec, valp1, scr[0]);
 		ini_write_real(sec, valp2, scr[1]);
 	// STAGE
@@ -46,4 +46,8 @@ switch (gm) {
 		map[? valp2 + mode] = scr[1];
 		break;
 }
+
+//GENERAL
+
+
 ini_close(); //Close stream

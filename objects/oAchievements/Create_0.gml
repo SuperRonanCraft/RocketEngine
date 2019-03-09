@@ -1,5 +1,6 @@
 /// @desc Achievements
 
+alarm_set(0, room_speed * 10); //Start schievement listener
 achievementMap = ds_map_create();
 scAchievementsLoad();
 

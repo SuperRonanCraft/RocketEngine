@@ -2,7 +2,7 @@
 
 with (other)
 	if (hp > 0) {
-		scDamageShootable(other, false, false, 1, true);
+		scDamageShootable(noone, id, false, false, 1, true);
 		if (hp > 0) {
 			var xx = xstart, yy = ystart;
 			with (oGMMSingle) {

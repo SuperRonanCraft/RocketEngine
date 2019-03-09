@@ -11,11 +11,11 @@ player_checkpoint = 0; //Index of checkpoint
 player_hp = 0;
 player_rocket = noone;
 
-if (!scCacheGet(gamemode, CACHE.GM_SINGLE_NEWGAME))
+if (!scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_NEWGAME, gamemode))
 	with (oPlayer) {
-		hp = scCacheGet(other.gamemode, CACHE.GM_SINGLE_LIVES);
-		scRocketChange(scCacheGet(other.gamemode, CACHE.GM_SINGLE_ROCKET));
-		var check_point_id = scCacheGet(other.gamemode, CACHE.GM_SINGLE_CHECKPOINT);
+		hp = scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LIVES, other.gamemode);
+		scRocketChange(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_ROCKET, other.gamemode));
+		var check_point_id = scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT, other.gamemode);
 		var check_point = scCheckpointGet(check_point_id);
 		if (check_point != noone) {
 			x = check_point.x;
@@ -24,7 +24,7 @@ if (!scCacheGet(gamemode, CACHE.GM_SINGLE_NEWGAME))
 		}
 	}
 
-scStatsSet(gamemode, [CACHE.GM_SINGLE_NEWGAME], [false]);
+scStatsSet(gamemode, [STATISTICS_GAMEMODE.GM_SINGLE_NEWGAME], [false]);
 	
 	
 //--------------

@@ -181,15 +181,16 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var c = c_white;
 			switch (mode) {
 				case GAMEMODE.TARGETS:
-					scDrawText(rtx, rty, "High Score: " + string(scCacheGet(mode, CACHE.GM_TARGETS_POINTS)), c, scale, noone, noone, fa_left);
+					scDrawText(rtx, rty, "High Score: " + string(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_TARGETS_POINTS, mode)), c, scale, noone, noone, fa_left);
 					break;
 				case GAMEMODE.SINGLE:
-					scDrawText(rtx, rty, "Checkpoint: " + string(scCacheGet(mode, CACHE.GM_SINGLE_CHECKPOINT)), c, scale, noone, noone, fa_left);
+					scDrawText(rtx, rty, "Checkpoint: " + string(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT, mode)), c, scale, noone, noone, fa_left);
 					break;
-				default:
-					var text = "P1: " + string(scCacheGet(mode, CACHE.GM_GENERAL_P1_WINS));
+				case GAMEMODE.KNOCKOUT:
+				case GAMEMODE.ONEVONE:
+					var text = "P1: " + string(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_GENERAL_P1_WINS, mode));
 					scDrawText(rtx, rty, text, c, scale, noone, noone, fa_left);
-					scDrawText(rtx + (string_width(text) * scale_element) + x_buffer, rty, "P2: " + string(scCacheGet(mode, CACHE.GM_GENERAL_P2_WINS)), c, scale, noone, noone, fa_left);
+					scDrawText(rtx + (string_width(text) * scale_element) + x_buffer, rty, "P2: " + string(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_GENERAL_P2_WINS, mode)), c, scale, noone, noone, fa_left);
 					break;
 			}
 			break;

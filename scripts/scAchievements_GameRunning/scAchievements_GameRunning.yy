@@ -1,8 +1,8 @@
 {
-    "id": "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",
+    "id": "642537f0-5347-4a8c-9cf9-7cb43338096e",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scCacheGetType",
+    "name": "scAchievements_GameRunning",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -2,7 +2,7 @@
 
 if (!achievement_display || ds_list_empty(achievement_display_list)) exit;
 
-var name = scAchievementGetType(ACHIEVEMENT_TYPE.NAME, achievement_display_list[| 0]);
+var name = scAchievementsGetType(ACHIEVEMENT_TYPE.NAME, achievement_display_list[| 0]);
 var name_len = string_width(name) * ach_scale;
 var len = ach_title_len > name_len ? ach_title_len : name_len;
 var hei = ach_title_hei + (string_height(name) * ach_scale);
