@@ -6,5 +6,5 @@ var pg = page_achievements;
 if (pg != 0) //PREV
 	page_achievements -= 1;
 else
-	while (amt - (((page_achievements + 1) * (columns * rows)) + 1) > 0)
+	while (amt - ((page_achievements + 1) * (columns * rows)) > 0)
 		page_achievements++;

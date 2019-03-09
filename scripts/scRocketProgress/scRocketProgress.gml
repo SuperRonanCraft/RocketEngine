@@ -17,11 +17,11 @@ if (current_delay == 0) {
 		//Sound effects and screen shaking
 		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
 		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
-		
 		scRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
-		
-		scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ROCKETS_SHOT],
-			[scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ROCKETS_SHOT) + 1]);
+		//Add to rockets shot count
+		if (track_stats)
+			scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ROCKETS_SHOT],
+				[scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ROCKETS_SHOT) + 1]);
 	}
 }
 

@@ -7,13 +7,13 @@ var gm = argument0;
 switch (gm) {
 	case GAMEMODE.ONEVONE:
 		if (map[? scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, ACHIEVEMENTS.GM_1V1_MULTI)] == noone)
-			if (global.mode_1v1_singleplayer == 0) //Played with a real person
+			if (global.mode_1v1_singleplayer == 0) {//Played with a real person
 				ds_list_add(achs, ACHIEVEMENTS.GM_1V1_MULTI);
 				ds_list_add(achs_vals, true);
 				break;
+			}
 }
-
-//var index = array_length_1d(achs);
-//var ary = [ACHIEVEMENTS.]
+var games = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.GAMES_COMPLETE);
+scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.GAMES_COMPLETE], [games + 1]);
 
 scAchievementsSave(achs, achs_vals);

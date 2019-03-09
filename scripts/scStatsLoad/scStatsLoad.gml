@@ -41,11 +41,12 @@ for (var i = 0; i < GAMEMODE.LENGTH; i++) {
 //GENERAL
 //var val = scCacheGetType(CACHE.TIME_PLAYED); //TIME PLAYED
 //map[? val + mode] = ini_read_real(sec + mode, val, 0);
+sec = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, STATISTICS_GENERAL.SECTION);
 show_debug_message("LOADING GENERAL STATS...");
 for (var i = 0; i < STATISTICS_GENERAL.SECTION; i++) {
-	var val = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, i);
-	map[? val] = ini_read_real(sec, val, false);
-	show_debug_message("SECTION: " + string(val) + " VALUE: " + string(map[? val]));
+	var key = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, i);
+	map[? key] = ini_read_real(sec, key, false);
+	show_debug_message("-Sec: " + sec + " -Key: " + string(key) + " -Val: " + string(map[? key]));
 }
 
 ini_close(); //Close stream

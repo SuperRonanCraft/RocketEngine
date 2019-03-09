@@ -24,7 +24,9 @@ switch (type) {
 		switch (enu) {
 			case STATISTICS_GENERAL.ROCKETS_SHOT: val = "rockets_shot"; break;
 			case STATISTICS_GENERAL.ROCKETS_HIT: val = "rockets_hit"; break;
+			case STATISTICS_GENERAL.ULTIMATES_CASTED: val = "ultimates_used"; break;
 			case STATISTICS_GENERAL.TIME_PLAYED: val = "time_played"; break;
+			case STATISTICS_GENERAL.GAMES_COMPLETE: val = "games_complete"; break;
 			case STATISTICS_GENERAL.SECTION: val = "General"; break;
 			default: val = "ERROR"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 		}
@@ -50,12 +52,14 @@ enum STATISTICS_GAMEMODE {
 	SECTION
 }
 
-enum STATISTICS_GENERAL {
+enum STATISTICS_GENERAL { //AUTO CACHED WHEN GAME STARTS AND AUTO SAVED WHEN GAME CLOSED
 	//PLAYER
 	ROCKETS_SHOT,
 	ROCKETS_HIT,
+	ULTIMATES_CASTED,
 	//GENERAL
 	TIME_PLAYED,
+	GAMES_COMPLETE,
 	SECTION
 }
 

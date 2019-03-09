@@ -284,6 +284,20 @@
             "value": "0",
             "varName": "player_aimode",
             "varType": 3
+        },
+        {
+            "id": "32e241e2-d664-48e5-b7bb-b313270d3870",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "track_stats",
+            "varType": 3
         }
     ],
     "solid": false,
