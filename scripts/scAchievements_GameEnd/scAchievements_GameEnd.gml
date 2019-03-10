@@ -16,4 +16,4 @@ switch (gm) {
 var games = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.GAMES_COMPLETE);
 scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.GAMES_COMPLETE], [games + 1]);
 
-scAchievementsSave(achs, achs_vals);
+scAchievementsCache(achs, achs_vals);

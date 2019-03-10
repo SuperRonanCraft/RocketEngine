@@ -63,3 +63,7 @@ scPlaySound(map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound
 //No longer casting
 ult_casting = false;
 ult_cast_time = ult_cast_time_max; //Reset for a new chargeup
+
+if (track_stats)
+	scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ULTIMATES_CASTED],
+		[scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ULTIMATES_CASTED) + 1]);

@@ -1,8 +1,4 @@
-/// @arg achivements[...
-/// @arg values[...
-
-var types = argument0;
-var vals = argument1;
+/// @desc save all achievements
 
 ini_open(scFileGetType(FILES.ACHIEVEMENTS)); //Open stream
 
@@ -10,21 +6,10 @@ ini_open(scFileGetType(FILES.ACHIEVEMENTS)); //Open stream
 var sec = scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, ACHIEVEMENTS.SECTION);
 var map = oAchievements.achievementMap;
 
-if (ds_list_size(types) > 0)
-	with (oAchievements) {
-		achievement_display = true;
-		for (var i = 0; i < ds_list_size(types); i++)
-			ds_list_add(achievement_display_list, types[| i]);
-	}
-
-for (var i = 0; i < ds_list_size(types); i++) {
-	var type = scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, types[| i]); //Acheivement type
-	var val = vals[| i]; //Get value
-	ini_write_real(sec, type, val); //Save value
-	oAchievements.achievementMap[? type] = val;
+for (var i = 0; i < ACHIEVEMENTS.SECTION; i++) {
+	var key = scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, i); //Achievement type
+	var val = map[? key]; //Get value
+	ini_write_real(sec, key, val); //Save value
 }
 
 ini_close(); //Close stream
-
-ds_list_destroy(types);
-ds_list_destroy(vals);

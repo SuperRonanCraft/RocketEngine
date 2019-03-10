@@ -17,8 +17,8 @@ ds_gamemodes = scUICreateMenuPage(
 );
 
 ds_info = scUICreateMenuPage(
-	["STATISTICS",	menu_element_type.page_transfer,	menu_page.stats,		"Check your game stats!"],
-	["ACHIVEMENTS",	menu_element_type.page_transfer,	menu_page.achievements,	"Gotta catch em all!"],
+	["&eSTATISTICS",	menu_element_type.page_transfer,	menu_page.stats,		"&aCheck your game stats!"],
+	["&eACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.achievements,	"&aGotta catch em all!"],
 	["ROCKETS",		menu_element_type.page_transfer,	menu_page.rocketlist,	"Learn about every rocket available!"],
 	["BUFFS",		menu_element_type.page_transfer,	menu_page.rocketbuffs,	"Get to know your buff!"],
 	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check ur keys!"],

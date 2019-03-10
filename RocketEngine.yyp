@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "12449f54-1379-48f1-9d5e-45a7d5c97022",
+            "Value": {
+                "id": "26111a56-5d67-40a5-a42c-c4d79b28ea87",
+                "resourcePath": "views\\12449f54-1379-48f1-9d5e-45a7d5c97022.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "12cef5e0-58b2-4e5e-89f6-9362ce03831c",
             "Value": {
                 "id": "f577d9b6-2550-419c-a0d9-5c6ce8e2badf",
@@ -1135,6 +1143,14 @@
             }
         },
         {
+            "Key": "348206bd-7d62-4f92-907a-94dafb9f8355",
+            "Value": {
+                "id": "277153cf-d5f3-4871-adf0-e51b0af07ba5",
+                "resourcePath": "scripts\\scBuffAbsorbtion_Draw\\scBuffAbsorbtion_Draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
             "Value": {
                 "id": "989f5d84-9ce5-4cde-836f-10437417c952",
@@ -1180,6 +1196,14 @@
                 "id": "c14bdcd0-9bc2-4f12-a179-96f18ee54e7f",
                 "resourcePath": "notes\\RONAN!.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "384932d4-1fc1-45fe-91a4-11a322df5b55",
+            "Value": {
+                "id": "cca5fde5-7a56-4353-9c4b-36cf8bae690d",
+                "resourcePath": "scripts\\scDrawRectRound\\scDrawRectRound.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1500,6 +1524,14 @@
                 "id": "1ff1cd7b-89ec-4dab-95fc-05f5ebd25b77",
                 "resourcePath": "views\\4759b713-eb08-488a-9c4b-d95704bcc0e5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "477c1fa2-af08-4b50-81c0-3abd3f237d04",
+            "Value": {
+                "id": "8c3980af-00bb-48bf-a7be-7193c9cb4cbe",
+                "resourcePath": "sounds\\sn_ach_whoosh\\sn_ach_whoosh.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3639,6 +3671,14 @@
             }
         },
         {
+            "Key": "b0717a21-f0f3-4b9a-8148-7e762528c584",
+            "Value": {
+                "id": "0ddd7bf0-8ec2-42b1-a462-5655fff11270",
+                "resourcePath": "scripts\\scAchievementsCache\\scAchievementsCache.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b07921d9-8376-4807-9a92-24c903c3e303",
             "Value": {
                 "id": "2e7e0773-14fb-4416-a300-45ebfcdc1092",
@@ -5265,6 +5305,7 @@
         "440f5199-a9e4-4ed8-b4f4-53010c009aca",
         "4a0a3fae-a790-4ff3-a95d-bede420fab12",
         "34900caf-9f6b-46b2-a177-dce6e90aa6ff",
+        "348206bd-7d62-4f92-907a-94dafb9f8355",
         "cafb4171-96a0-4c2e-82e3-d18c3170059a",
         "40173db7-a5f6-4502-ab7f-232777f15452",
         "cac11421-bb3a-4cbf-9e77-a4a404424fa6",
@@ -5334,6 +5375,7 @@
         "093e6d59-2a90-4ecf-82d1-506fe0325e2d",
         "baa56110-3ad2-4fbd-8848-bd4f43256c5c",
         "10f58b08-0894-4fc8-a43a-b06dc142944a",
+        "384932d4-1fc1-45fe-91a4-11a322df5b55",
         "8435c761-8278-4207-b431-1562529463c0",
         "19455d7d-472c-41ce-a375-87e79c0b8fc9",
         "54391887-2485-456f-8f52-d226cc98a8e9",
@@ -5353,6 +5395,7 @@
         "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",
         "2b83c1d9-cae8-4912-9ac9-44e2c2def48f",
         "a3ac6a66-c960-400a-a41e-d67154fd0067",
+        "b0717a21-f0f3-4b9a-8148-7e762528c584",
         "d610a108-85a0-4046-9bea-e52444b0173c",
         "b5cc65ae-c078-440a-9b5f-a6e506061b74",
         "642537f0-5347-4a8c-9cf9-7cb43338096e",

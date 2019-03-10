@@ -217,6 +217,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Armor up baby!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.ABSORBTION;
 		ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = scBuffAbsorbtion;
+		ds_map[? BUFF_MAP.DRAW] = scBuffAbsorbtion_Draw;
 		ds_map[? BUFF_MAP.DAMAGE_TAKEN] = scBuffAbsorbtion_Damage;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ABSORBTION];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];

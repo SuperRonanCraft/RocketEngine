@@ -6,3 +6,4 @@ var AICore = instance_create_depth(0, 0, 0, oAIHandler);
 player_aimode = true;
 AICore.player = id;
 aiBrain = AICore;
+track_stats = false;

@@ -193,6 +193,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					scDrawText(rtx + (string_width(text) * scale_element) + x_buffer, rty, "P2: " + string(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_GENERAL_P2_WINS, mode)), c, scale, noone, noone, fa_left);
 					break;
 			}
+			scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "STATISTICS", c_orange, 1.5);
 			break;
 	}
 }

@@ -18,4 +18,4 @@ for (var i = 0; i < array_length_1d(check); i++) {
 		}
 }
 
-scAchievementsSave(achs, achs_vals);
+scAchievementsCache(achs, achs_vals);

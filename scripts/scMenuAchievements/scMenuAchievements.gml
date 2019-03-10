@@ -41,7 +41,4 @@ while (amt - ((max_page + 1) * (columns * rows)) > 0)
 	max_page++;
 scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);
 
-//animate hovering rocket
-rockets_img += rockets_spd;
-if (floor(rockets_img) > 3)
-	rockets_img = 0;
+scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "ACHIEVEMENTS", c_orange, 1.5);

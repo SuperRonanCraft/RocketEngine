@@ -78,6 +78,7 @@ var max_page = 0;
 while (amt - (((max_page + 1) * (columns * rows)) + 1) > 0)
 	max_page++;
 scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);
+scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "ROCKETS", c_orange, 1.5);
 
 //animate hovering rocket
 rockets_img += rockets_spd;

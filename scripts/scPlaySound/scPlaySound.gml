@@ -52,5 +52,7 @@ enum SOUND {
 	MUSIC_TITLE = snTitle,
 	//ULTIMATES
 	ULT_SHIELD_BREAK = snUltimateShieldBreak,
-	ULT_SHIELD_CAST = snUltimateShieldCast
+	ULT_SHIELD_CAST = snUltimateShieldCast,
+	//ACHIEVEMENTS
+	ACH_WHOOSH = sn_ach_whoosh
 }
