@@ -157,13 +157,23 @@ switch (type) {
 		ds_map[? "spr"] = sUltJumpPadDraw;
 		ds_map[? "scl"] = 1;
 		break;
+	case ULTIMATE.FROSTY:
+		ds_map[? ULTIMATE_MAP.NAME] = "Frosty the snowman!";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateGeneral_Outline_Object;
+		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateGeneral_Outline_Draw;
+		ds_map[? "dis"] = 80;
+		ds_map[? "hei"] = -32;
+		ds_map[? "obj"] = oUltimateFrosty;
+		ds_map[? "spr"] = sUltFrosty;
+		ds_map[? "scl"] = 1;
+		break;
 }
 
 enum ULTIMATE {
 	DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE,
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 	SLOWMO, SLEEPDART, PORTAL, BRICKWALL, AMPWALL, TURRET,
-	ORBIT, HACKLOOT, JUMPPAD,
+	ORBIT, HACKLOOT, JUMPPAD, FROSTY,
 	NONE,
 	//SWIPE, SHIELD, MINISPRAY,
 	//PUT LAST
@@ -179,11 +189,7 @@ enum ULTIMATE_MAP {
 }
 
 //OLD ULTIMATES
-/*	case ULTIMATE.SWIPE: //Oh wow, point blank and still missed
-		ds_map[? ULTIMATE_MAP.NAME] = "Ur gonna hate this";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwipe;
-		//ds_map[? ULTIMATE_MAP.CAST_TIME] = 30;
-		break;
+/*
 	case ULTIMATE.SHIELD: //Huh, that exists
 		ds_map[? ULTIMATE_MAP.NAME] = "Youuuu shall not Passssss!";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateShield;

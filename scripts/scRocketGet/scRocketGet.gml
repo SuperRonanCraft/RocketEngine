@@ -97,7 +97,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * vartime;
 		map[? ROCKET_MAP.KBAMT] = 20;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MIRROR;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.FROSTY;
 		break;
 		
 	case ROCKET.FIRE:

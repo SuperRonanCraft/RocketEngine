@@ -9,6 +9,6 @@ map[? "hsp"] = rocket_map[? ROCKET_MAP.SPEED];
 map[? "vsp"] = -2;
 map[? "grv"] = 0.6;
 map[? "acc"] = 0.1;
-map[? "max"] = 25
+map[? "max"] = 25;
 map[? "touching_floor"] = false;
 map[? "ramping"] = false;

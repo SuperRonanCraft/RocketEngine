@@ -18,7 +18,8 @@
         "b4c8f1e8-4e0e-40ad-8f7f-1f1dd567e923",
         "a091a818-fcb3-4044-b2b6-3161a08e46ba",
         "9e74666a-3cfa-4dd4-93dd-1a80cc48bf2a",
-        "b6715dcd-0717-4402-bcce-9b25a1a8dd27"
+        "b6715dcd-0717-4402-bcce-9b25a1a8dd27",
+        "31635104-cff8-4601-bf00-a6923856809a"
     ],
     "filterType": "GMSprite",
     "folderName": "Unique",

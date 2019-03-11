@@ -1087,6 +1087,14 @@
             }
         },
         {
+            "Key": "31635104-cff8-4601-bf00-a6923856809a",
+            "Value": {
+                "id": "973a7f87-fe3a-4b88-b5b6-5ccfd7fe359d",
+                "resourcePath": "views\\31635104-cff8-4601-bf00-a6923856809a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "31bdddd3-b75a-47f6-9159-c173f5598dbc",
             "Value": {
                 "id": "a9f395f5-41cc-4514-83b4-4d96c9f4509d",
@@ -3103,6 +3111,14 @@
             }
         },
         {
+            "Key": "9929a253-eef4-4676-a16c-26c7cb041b55",
+            "Value": {
+                "id": "ef6f584f-8bcd-4b6b-b273-408d13f90844",
+                "resourcePath": "objects\\oUltimateFrosty\\oUltimateFrosty.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "995f5d96-3ef0-4abc-a7e2-f42c1b3ff66e",
             "Value": {
                 "id": "2d590c8c-e4b6-4745-bc13-12555853d1b4",
@@ -3983,14 +3999,6 @@
             }
         },
         {
-            "Key": "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
-            "Value": {
-                "id": "4d790bbe-8abc-444c-a9f3-e3919694fa2e",
-                "resourcePath": "scripts\\scUltimateSwipe\\scUltimateSwipe.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "becb47ca-0c0e-484f-8cc6-9fbf3f8bc4b6",
             "Value": {
                 "id": "05933a0b-c2db-4672-b57a-833733e397fb",
@@ -4227,6 +4235,14 @@
             "Value": {
                 "id": "9e46a1b5-e397-469b-b078-0f189ae30ce9",
                 "resourcePath": "sprites\\sRocket_Homing\\sRocket_Homing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cc106f7b-d490-49d8-99a5-30ae03b87374",
+            "Value": {
+                "id": "44889bcb-f4b1-4967-9d59-c74937663321",
+                "resourcePath": "sprites\\sUltFrosty\\sUltFrosty.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4508,6 +4524,14 @@
                 "id": "e9990e15-613c-4dfd-84ab-78f99985f592",
                 "resourcePath": "scripts\\scUltimateOrbit_Draw\\scUltimateOrbit_Draw.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dd00276d-953d-43ae-988e-b0a79026b146",
+            "Value": {
+                "id": "8af66432-aa49-4d95-b3b6-e2d1967fe7a1",
+                "resourcePath": "sprites\\sUltFrosty_Wall\\sUltFrosty_Wall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5225,7 +5249,6 @@
         "a266992a-de67-4219-881c-83d5e7e77ecb",
         "abd65ccc-3624-4fdf-9f48-1d4fcc769ce2",
         "1f21fc11-d952-4e84-9139-b99c6adc2365",
-        "be257f5f-b07f-4b5b-bfa2-1d6d8b0d4f4b",
         "118a5b69-5b45-4d79-ae95-7e59c52e3054",
         "af655ced-6f3f-4d40-bbd3-94dbbaa0a427",
         "059676af-adae-4143-9efd-587ae5ec9fb8",
