@@ -9,85 +9,78 @@ var num = 0;
 var tpX = owner.x;
 var tpY = owner.y;
 
+
+var lineEnd;
+var currentDir = direction;
+var miss = true;
+
 //If facing right, start from player and end at length of room
-if (direction == 0) {
-	num = collision_line_list(owner.x, owner.y, room_width, owner.y, oPlayer, false, true, playerList, true);
-	if (num > 0)
-		for (var i = 0; i < ds_list_size(playerList); i++) {
-		    playerHit = playerList[| i];
-			
-			if (playerHit != owner && playerHit.team != owner.team)
-				break;
-			else
-				playerHit = noone;	
-		}
-	//Check for wall hit
-	num = collision_line_list(owner.x, owner.y, room_width, owner.y, oWall, false, true, wallList, true);
-	if (num > 0)
-		for (var i = 0; i < ds_list_size(wallList); i++) {
-		    wallHit = wallList[| i];
-			if (wallHit.object_index != oSeperator)
-				break;
-			else
-				wallHit = noone;
-		}
-	if (playerHit != noone) {
-		if (wallHit != noone) {
-			//If the player is earlier than the wall
-			//Succesful hit
-			if (playerHit.x <= wallHit.x) {
-				scDamageShootable(owner, playerHit, false, false, rocket_map[? ROCKET_MAP.DAMAGE], false);
-				ds_list_add(hitList, playerHit); //Dont allow explosion to hit player after
-				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD], 1);
-				owner.current_cd /= 2; //Not 0 because that means instant fire o_o
-				tpX = playerHit.x;
-			} else
-				tpX = wallHit.x;
-		}
-	} else if (wallHit != noone)
-		tpX = wallHit.x;	
+if (currentDir == 0) {
+	lineEnd = room_width;
 }
-//Otherwise, start from player and go to front of room
-else {
-	num = collision_line_list(owner.x, owner.y, 0, owner.y, oPlayer, false, true, playerList, true);
-	if (num > 0)
-		for (var i = 0; i < ds_list_size(playerList); i++) {
-		    playerHit = playerList[| i];
-			if (playerHit != owner && playerHit.team != owner.team)
-				break;
-			else
-				playerHit = noone;	
-		}
-	//Check for wall hit
-	num = collision_line_list(owner.x, owner.y, 0, owner.y, oWall, false, true, wallList, true);
+else if(currentDir == 180){
+	lineEnd = 0;
+}
+
 	
-	if (num > 0)
-		for (var i = 0; i < ds_list_size(wallList); i++) {
-		    wallHit = wallList[| i];
-			if (wallHit.object_index != oSeperator)
-				break;
-			else
-				wallHit = noone;	
-		}
-	if (playerHit != noone) {
-		if (wallHit != noone) {
-			//If the player is earlier than the wall
-			//Succesful hit
-			if (playerHit.x >= wallHit.x) {
-				scDamageShootable(owner, playerHit, false, false, rocket_map[?ROCKET_MAP.DAMAGE], false);
-				ds_list_add(hitList, playerHit); //Dont allow explosion to hit player after
-				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD],1);
-				owner.current_cd /= 2; //Not 0 because that means instant fire o_o
+num = collision_line_list(owner.x, owner.y, lineEnd, owner.y, pShootable, false, true, playerList, true);
+
+if (num > 0)
+	for (var i = 0; i < ds_list_size(playerList); i++) {
+		playerHit = playerList[| i];
+			
+		if (playerHit != owner && playerHit.team != owner.team)
+			break;
+		else
+			playerHit = noone;	
+	}
+//Check for wall hit
+num = collision_line_list(owner.x, owner.y, lineEnd, owner.y, oWall, false, true, wallList, true);
+
+if (num > 0)
+	for (var i = 0; i < ds_list_size(wallList); i++) {
+		wallHit = wallList[| i];
+		if (wallHit.object_index != oSeperator)
+			break;
+		else
+			wallHit = noone;
+	}
+	
+if (playerHit != noone) {
+	if (wallHit != noone) {
+		//If the player is earlier than the wall
+		//Succesful hit
+		
+		if(currentDir == 0){
+			if ( (playerHit.x <= wallHit.x && currentDir == 0) || (playerHit.x >= wallHit.x && currentDir == 180)) {
+				scDamageShootable(owner, playerHit, false, false, rocket_map[? ROCKET_MAP.DAMAGE], false);
+				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD], 1);
+				owner.current_cd /= 3;
+				
+				//Blow up at player
 				tpX = playerHit.x;
-			} else
-				tpX = wallHit.x + (wallHit.sprite_width * wallHit.image_xscale);
+				miss = false;	
+			} 
+				
+			
 		}
-	} else if (wallHit != noone)
-		tpX = wallHit.x + (wallHit.sprite_width * wallHit.image_xscale);	
+	}
+} 
+
+//If miss, hit wall
+if (wallHit != noone && miss){
+	if(currentDir == 0)
+		tpX = wallHit.x;
+			
+	else
+		tpX = wallHit.x + (wallHit.image_xscale*wallHit.sprite_width);
 }
 
 x = tpX;
 y = tpY;
+
+//Explode
+event_user(0);
 
 ds_list_destroy(playerList);
 ds_list_destroy(wallList);

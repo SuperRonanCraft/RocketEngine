@@ -871,14 +871,6 @@
             }
         },
         {
-            "Key": "297d4c3b-f851-40c5-ab77-d200e683277e",
-            "Value": {
-                "id": "d3ebb60c-5a63-4973-822e-939cbf1d35a2",
-                "resourcePath": "sprites\\sexplosion_Default2\\sexplosion_Default2.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "2a741722-0663-4e81-8b07-bd3e783c918e",
             "Value": {
                 "id": "d563e14d-3999-470f-a5f2-b311694998f8",

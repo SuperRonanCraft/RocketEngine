@@ -420,6 +420,7 @@ switch (roc) {
 		map[? ROCKET_MAP.DESCRIPTION] = "Extremely fragile";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.GLASS;
 		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.KBAMT] = 0;
 		map[? ROCKET_MAP.COOLDOWN] = 100 * varcd;
 		map[? ROCKET_MAP.SPEED] = 30 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
