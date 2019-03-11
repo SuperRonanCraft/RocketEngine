@@ -5,9 +5,9 @@ var map = oAchievements.achievementMap;
 
 //What to check every 10 seconds
 var check = [ACHIEVEMENTS.ROCKETS_SHOT_100, ACHIEVEMENTS.ROCKETS_SHOT_1000, ACHIEVEMENTS.ROCKETS_SHOT_10000,
-			ACHIEVEMENTS.TIME_PLAYED_10M, ACHIEVEMENTS.GAMES_COMPLETE_10];
+			ACHIEVEMENTS.TIME_PLAYED_10M, ACHIEVEMENTS.GAMES_COMPLETE_10, ACHIEVEMENTS.ULTIMATES_CASTED_10];
 //Values we expect to be equal or greater
-var vals = [100, 1000, 10000, 10, 10];
+var vals = [100, 1000, 10000, 10, 10, 10];
 
 //Check every achievement if NOT completed
 for (var i = 0; i < array_length_1d(check); i++) {

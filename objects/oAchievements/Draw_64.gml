@@ -22,7 +22,7 @@ scDrawText(xx + ach_margin, yy + (ach_title_hei * 1.5), desc, c_ltgray, ach_scal
 scDrawRect(RES_W, ach_ystart, RES_W - (RES_W - xx2) + 20, yy2, c_black, false, 1); //blackout bar (not show when full screened)
 
 //travelled, slow down at
-var half = ((len + (ach_margin * 2)) / 2);
+var half = ((len + (ach_margin * 2)) / 3);
 var spd = ach_xstart - ach_x_crt > half ? (half / (ach_xstart - ach_x_crt)) * ach_speed : ach_speed;
 ach_x_crt = ach_openning ? max(ach_x_crt - spd, ach_xstart - (len + (ach_margin * 2))) : min(ach_x_crt + spd, ach_xstart);
 
