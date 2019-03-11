@@ -37,6 +37,7 @@ if (direction == 0) {
 			//Succesful hit
 			if (playerHit.x <= wallHit.x) {
 				scDamageShootable(owner, playerHit, false, false, rocket_map[? ROCKET_MAP.DAMAGE], false);
+				ds_list_add(hitList, playerHit); //Dont allow explosion to hit player after
 				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD], 1);
 				owner.current_cd /= 2; //Not 0 because that means instant fire o_o
 				tpX = playerHit.x;
@@ -74,6 +75,7 @@ else {
 			//Succesful hit
 			if (playerHit.x >= wallHit.x) {
 				scDamageShootable(owner, playerHit, false, false, rocket_map[?ROCKET_MAP.DAMAGE], false);
+				ds_list_add(hitList, playerHit); //Dont allow explosion to hit player after
 				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD],1);
 				owner.current_cd /= 2; //Not 0 because that means instant fire o_o
 				tpX = playerHit.x;

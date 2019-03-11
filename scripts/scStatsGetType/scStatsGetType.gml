@@ -27,6 +27,7 @@ switch (type) {
 			case STATISTICS_GENERAL.ULTIMATES_CASTED: val = "ultimates_used"; break;
 			case STATISTICS_GENERAL.TIME_PLAYED: val = "time_played"; break;
 			case STATISTICS_GENERAL.GAMES_COMPLETE: val = "games_complete"; break;
+			case STATISTICS_GENERAL.ROCKETS_CHANGED: val = "rockets_changed"; break;
 			case STATISTICS_GENERAL.SECTION: val = "General"; break;
 			default: val = "ERROR"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 		}
@@ -60,7 +61,8 @@ enum STATISTICS_GENERAL { //AUTO CACHED WHEN GAME STARTS AND AUTO SAVED WHEN GAM
 	//GENERAL
 	TIME_PLAYED,
 	GAMES_COMPLETE,
-	SECTION
+	ROCKETS_CHANGED,
+	SECTION //KEEP LAST
 }
 
 enum STATISTICS_TYPE {

@@ -16,6 +16,7 @@ switch (type) {
 			case ACHIEVEMENTS.TIME_PLAYED_10M: val = "time_played_10m_"; break;
 			case ACHIEVEMENTS.GAMES_COMPLETE_10: val = "games_complete_"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = "ultimates_used_"; break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "rockets_changed_10"; break;
 			case ACHIEVEMENTS.SECTION: val = "Achievements."; break;
 			default: val = "ERROR"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 		}
@@ -29,6 +30,7 @@ switch (type) {
 			case ACHIEVEMENTS.TIME_PLAYED_10M: val = "Just getting started"; break;
 			case ACHIEVEMENTS.GAMES_COMPLETE_10: val = "Warming up"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = "Ultimate Seaker"; break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Weapon Noob!"; break;
 			default: val = "Something important"; break;
 		}
 		break;
@@ -41,6 +43,7 @@ switch (type) {
 			case ACHIEVEMENTS.TIME_PLAYED_10M: val = "Play for 10 Minutes"; break;
 			case ACHIEVEMENTS.GAMES_COMPLETE_10: val = "Play 10 games"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = "Cast 10 ultimates"; break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Pickup 10 rockets"; break;
 			default: val = "An achievement"; break;
 		}
 		break;
@@ -52,7 +55,7 @@ switch (type) {
 		break;
 	case ACHIEVEMENT_TYPE.VALUE:
 		val = oAchievements.achievementMap[? scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, enu)]; break;
-	case ACHIEVEMENT_TYPE.TRACKING:
+	case ACHIEVEMENT_TYPE.TRACKING: //REQUIRED
 		switch (enu) {
 			case ACHIEVEMENTS.ROCKETS_SHOT_10000:
 			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
@@ -64,6 +67,8 @@ switch (type) {
 				val = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.GAMES_COMPLETE); break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10:
 				val = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ULTIMATES_CASTED); break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10:
+				val = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ROCKETS_CHANGED); break;
 			default: val = noone; break;
 		}
 		break;
@@ -83,6 +88,8 @@ switch (type) {
 				val = "Games Played: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.GAMES_COMPLETE_10)); break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10:
 				val = "Ultimates Casted: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.ULTIMATES_CASTED_10)); break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10:
+				val = "Rockets Picked up: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.ROCKETS_CHANGED_10)); break;
 			default: val = noone; break;
 		}
 		break;
@@ -99,6 +106,7 @@ enum ACHIEVEMENTS { //Shows up by order
 	ROCKETS_SHOT_1000,
 	ROCKETS_SHOT_10000,
 	TIME_PLAYED_10M,
+	ROCKETS_CHANGED_10,
 	//Keep last
 	SECTION,
 	LENGTH
