@@ -86,8 +86,8 @@ switch (type) {
 		break;
 	case ULTIMATE.LIGHTNING_ORB:
 		ds_map[? ULTIMATE_MAP.NAME] = "Oh, its gonna hurt";
-		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLightning;
-		ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLightning_Draw;
+		ds_map[? ULTIMATE_MAP.CASTED_OBJECT] = oUltimateLightning2; //oUltimateLightning;
+		//ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateLightning_Draw;
 		break;
 	case ULTIMATE.SLOWMO:
 		ds_map[? ULTIMATE_MAP.NAME] = "Bullet time!";

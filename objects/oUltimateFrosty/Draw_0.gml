@@ -11,15 +11,16 @@ if (touching_floor && (hsp > 1 || hsp < -1)) //if sliding, draw particles
 
 if (freezing) { //Freezing area?
 	var offset = 0;
-	var xx = bbox_left - 64 - (bbox_left mod 32); //1 tile left of top left
-	var yy = bbox_top - 32 - (bbox_top mod 32); //1 tile above of top left
+	var xxof = bbox_left mod 32;
+	var yyof = bbox_top mod 32;
+	var xx = bbox_left - (xxof > 16 ? xxof - 32 : xxof) - 32; //1 tile left of top left
+	var yy = bbox_top - (yyof > 16 ? yyof - 32 : yyof) - 32; //1 tile above of top left
 	for (var i = 0; i < 16; i++) {
 		if (i != 0 && (i mod 4) == 0) {
 			yy += 32;
 			xx -= 4 * 32;
 			offset++;
 		}
-		xx += 32;
 		if (collision_point(xx + 16, yy + 16, oWall, false, false)) {
 			var addwall = true;
 			for (var a = 0; a < ds_list_size(frozen_walls); a++) {
@@ -37,6 +38,7 @@ if (freezing) { //Freezing area?
 				map[? "timer"] = frozen_walls_uptime;
 			}
 		}
+		xx += 32;
 	}
 }
 
@@ -55,17 +57,11 @@ for (var i = 0; i < ds_list_size(frozen_walls); i++) { //Draw frozen wall and ap
 		index++;
 }
 
-if (global.debug) { //show area of effect
-	var offset = 0;
-	var xx = bbox_left - 64 - (bbox_left mod 32); //1 tile left of top left
-	var yy = bbox_top - 32 - (bbox_top mod 32); //1 tile above of top left
-	for (var i = 0; i < 16; i++) {
-		if (i != 0 && (i mod 4) == 0) {
-			yy += 32;
-			xx -= 4 * 32;
-			offset++;
-		}
-		xx += 32;
-		scDrawRect(xx, yy, xx + 31, yy + 31, c_red, false, 0.5);	
-	}
+if (global.debug) {
+	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);
+	var xxof = bbox_left mod 32;
+	var yyof = bbox_top mod 32;
+	var xx = bbox_left - (xxof > 16 ? xxof - 32 : xxof) - 32; //1 tile left of top left
+	var yy = bbox_top - (yyof > 16 ? yyof - 32 : yyof) - 32; 
+	scDrawRect(xx, yy, xx + (32 * 4), yy + (32 * 4), c_red, true, 1);
 }

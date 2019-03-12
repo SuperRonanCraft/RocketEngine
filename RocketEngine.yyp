@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "08a58d8e-a0fa-48e1-adba-9c639b45aef2",
+            "Value": {
+                "id": "3ecad24c-4fc4-4c43-909f-eb9e0e517a00",
+                "resourcePath": "views\\08a58d8e-a0fa-48e1-adba-9c639b45aef2.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "08efb6e9-47da-4024-9f40-72386f03a1fb",
             "Value": {
                 "id": "dc6ec60d-5038-41ef-9814-d035f490bc2a",
@@ -2340,6 +2348,14 @@
                 "id": "0262c2d1-6ebd-4f4f-98f8-eac7135936ca",
                 "resourcePath": "scripts\\scBuffUltCharge\\scBuffUltCharge.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "71471e92-691f-4770-bab3-46a72fbd0081",
+            "Value": {
+                "id": "962a1950-b417-4e47-aba5-acf237be44b8",
+                "resourcePath": "sprites\\sUltLightning_Orb\\sUltLightning_Orb.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5052,6 +5068,14 @@
                 "id": "b59d7efa-9f2b-4398-9d11-c4c1da768a32",
                 "resourcePath": "scripts\\scBuffRocketBoots\\scBuffRocketBoots.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fc4047a8-6b9b-4052-bb22-57f6d47618c3",
+            "Value": {
+                "id": "acea85a3-ee1d-43fd-ac8a-bc905c1ee678",
+                "resourcePath": "objects\\oUltimateLightning2\\oUltimateLightning2.yy",
+                "resourceType": "GMObject"
             }
         },
         {
