@@ -18,7 +18,7 @@ switch (type) {
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = "ultimates_used_"; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "rockets_changed_10"; break;
 			case ACHIEVEMENTS.SECTION: val = "Achievements."; break;
-			default: val = "ERROR"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
+			default: val = noone; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 		}
 		break;
 	case ACHIEVEMENT_TYPE.NAME: //NAME OF ACHIEVEMENT
@@ -93,6 +93,22 @@ switch (type) {
 			default: val = noone; break;
 		}
 		break;
+	case ACHIEVEMENT_TYPE.GOAL:
+		switch (enu) {
+			case ACHIEVEMENTS.ROCKETS_SHOT_10000:
+				val = 10000; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
+				val = 1000; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_100:
+				val = 100; break;
+			case ACHIEVEMENTS.TIME_PLAYED_10M:
+			case ACHIEVEMENTS.GAMES_COMPLETE_10:
+			case ACHIEVEMENTS.ULTIMATES_CASTED_10:
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10:
+				val = 10; break;
+			default: val = noone; break; //noone so we dont check the achievement automatically
+		}
+		break;
 }
 
 return val;
@@ -100,6 +116,7 @@ return val;
 enum ACHIEVEMENTS { //Shows up by order
 	//GAMEMODES
 	GM_1V1_MULTI,
+	//GENERAL
 	GAMES_COMPLETE_10,
 	ULTIMATES_CASTED_10,
 	ROCKETS_SHOT_100,
@@ -113,5 +130,12 @@ enum ACHIEVEMENTS { //Shows up by order
 }
 
 enum ACHIEVEMENT_TYPE {
-	NAME, DESCRIPTION, ICON, SECTION, VALUE, TRACKING, TRACKING_DESC
+	NAME, //Name of
+	DESCRIPTION, //Desc of
+	ICON, //Icon to display on achievements page
+	SECTION, //Unique indentifier to be cached
+	VALUE, //Has it been achieved
+	TRACKING, //Number to track
+	TRACKING_DESC, //String version when achievement hasnt been achieved
+	GOAL //Value for the achievement to be or higher
 }

@@ -10,7 +10,7 @@ if (delay_current <= 0)
 			var map = ds_map_create();
 			scBuffGet(i, map);
 			//If the buff is GOOD? Add it to the possible array
-			if (map[? BUFF_MAP.GOOD]) {
+			if (map[? BUFF_MAP.GOOD] && map[? BUFF_MAP.ENABLED]) { //good and enabled buff
 				possible[index] = i;
 				index++;
 			}

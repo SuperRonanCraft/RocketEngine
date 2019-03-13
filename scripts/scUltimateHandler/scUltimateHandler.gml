@@ -65,5 +65,4 @@ ult_casting = false;
 ult_cast_time = ult_cast_time_max; //Reset for a new chargeup
 
 if (track_stats)
-	scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ULTIMATES_CASTED],
-		[scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ULTIMATES_CASTED) + 1]);
+	scStatsCacheAddGeneral(STATISTICS_GENERAL.ULTIMATES_CASTED, 1);

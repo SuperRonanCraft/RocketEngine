@@ -1,8 +1,8 @@
 {
-    "id": "db033e89-0201-4574-98f3-ac4741dcbdf6",
+    "id": "a817e6c6-ab88-41c5-bb24-531cb1ba0cea",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUltimateAmpWall_Amping",
+    "name": "scStatsCacheAddGeneral",
     "IsCompatibility": false,
     "IsDnD": false
 }

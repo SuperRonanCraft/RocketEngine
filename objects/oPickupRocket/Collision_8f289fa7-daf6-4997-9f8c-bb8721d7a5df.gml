@@ -8,8 +8,6 @@ if (item != noone) {
 	item = noone; //Reset item
 	hacked = false;
 	
-	if (other.track_stats) {
-		var val = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ROCKETS_CHANGED);
-		scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ROCKETS_CHANGED], [val + 1]);
-	}
+	if (other.track_stats)
+		scStatsCacheAddGeneral(STATISTICS_GENERAL.ROCKETS_CHANGED, 1);
 }

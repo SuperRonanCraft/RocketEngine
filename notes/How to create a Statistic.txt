@@ -1,0 +1,25 @@
+Head on over to "scStatsGetType" in the "DataCollection.Stats" group
+
+#1) Here add to the enum "STATISTICS_GENERAL" for your stat (STATISTICS_GAMEMODE) are for
+		specific gamemode, but they can also be set here.
+#2) Statistics must have a switch statement "SECTION_GENERAL" value (must be unique)
+#3) Now to track the stat just call the "scStatsCacheAddGeneral(enum, amt)" script and start tracking!
+#3) If need be, to set a stat follow the last blue print below
+#3) You are done, this stat will now be loaded and saved aotumatically!
+
+---BLUEPRINT--- (CREATING THE STAT)
+	case STATISTICS_TYPE.SECTION_GENERAL:
+		switch (enu) {
+			case STATISTICS_GENERAL.<STATISTIC>: val = "<UNIQUE VALUE>"; break;
+			
+---BLUEPRINT--- (TRACKING THE STAT)
+	scStatsCacheAddGeneral(STATISTICS_GENERAL.<STATISTIC>, <AMOUNT>);
+	
+---BLUEPRINT--- (SET THE STAT)
+	var stat = STATISTICS_GENERAL.<STATISTIC>; //This value can also be replaced for an array
+	var amt = <AMOUNT TO SET>; //If above is an array, this must also be an array of values (can produce error if incorrect format)
+	scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [stat], [amt]);
+		
+---Other Details---
+- Stats will not be tracked if game is closed abruptly!
+- Stats can be called and set and added to from anywhere!

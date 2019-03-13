@@ -17,11 +17,7 @@ if (argument_count > 4)
 
 
 var ds_map = ds_map_create();
-ds_map[? BUFF_MAP.CLOCK] = 0;
-ds_map[? BUFF_MAP.TIME] = time * game_get_speed(gamespeed_fps);
-ds_map[? BUFF_MAP.STACKABLE] = false;
-ds_map[? BUFF_MAP.DISABLED] = false;
-ds_map[? BUFF_MAP.GIVEN_BY] = from;
+ds_map[? BUFF_MAP.GIVEN_BY] = from; //Set who gave this buff/debuff
 scBuffGet(buff, ds_map);
 //Check if a buff from the target is the same TYPE, if not, add it, or if its stackable, just add it
 if (!scBuffFind(targ, ds_map[? BUFF_MAP.TYPE]) || ds_map[? BUFF_MAP.STACKABLE])

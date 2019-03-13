@@ -1,0 +1,24 @@
+Head on over to "scAchievementGetType" in the "DataCollection.Achievements" group
+
+#1) Here add to the enum "ACHIEVEMENTS" for your achievements that are custom, they can still be presented here
+#2) Achievements must have a "SECTION", "TRACKING" switch statement.
+#3) If the achievement needs to be checked every now and then, just add a "GOAL" so its checked automatically
+#4) Custom achievement? Make a script to check it when neccessary, or when a game ends add it to "scAchievements_GameEnd"
+	and add a condition for it there.
+
+---BLUEPRINT--- (CREATING THE STAT)
+	case STATISTICS_TYPE.SECTION_GENERAL:
+		switch (enu) {
+			case STATISTICS_GENERAL.<STATISTIC>: val = "<UNIQUE VALUE>"; break;
+			
+---BLUEPRINT--- (TRACKING THE STAT)
+	scStatsCacheAddGeneral(STATISTICS_GENERAL.<STATISTIC>, <AMOUNT>);
+	
+---BLUEPRINT--- (SET THE STAT)
+	var stat = STATISTICS_GENERAL.<STATISTIC>; //This value can also be replaced for an array
+	var amt = <AMOUNT TO SET>; //If above is an array, this must also be an array of values (can produce error if incorrect format)
+	scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [stat], [amt]);
+		
+---Other Details---
+- Stats will not be tracked if game is closed abruptly!
+- Stats can be called and set and added to from anywhere!

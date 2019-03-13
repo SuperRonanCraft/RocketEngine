@@ -9,6 +9,10 @@ ds_map[? BUFF_MAP.NAME] = "Name"; //REQUIRED
 ds_map[? BUFF_MAP.DESCRIPTION] = "Description"; //REQUIRED
 ds_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH; //REQUIRED
 ds_map[? BUFF_MAP.TIME] = 5 * room_speed; //5 seconds uptime by default (noone for infinite)
+ds_map[? BUFF_MAP.CLOCK] = 0;
+ds_map[? BUFF_MAP.STACKABLE] = false;
+ds_map[? BUFF_MAP.ENABLED] = true;
+ds_map[? BUFF_MAP.GIVEN_BY] = noone;
 //OPTIONAL
 ds_map[? BUFF_MAP.DRAW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = noone;
@@ -153,6 +157,7 @@ switch (buff) {
 		ds_map[? "current_delay"] = 0;
 		ds_map[? "duration"] = 15 * TIME_SPEED; //Amount of time to apply force
 		ds_map[? "current_duration"] = 0;
+		ds_map[? BUFF_MAP.ENABLED] = false;
 		break;
 	case BUFFTYPE.SLOWMO:
 		ds_map[? BUFF_MAP.NAME] = "Slowmo";
@@ -264,7 +269,7 @@ enum BUFF_MAP {
 	//SCRIPTS
 	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN,
 	//GENERAL
-	CLOCK, TIME, TYPE, STACKABLE, DISABLED, GOOD, GIVEN_BY
+	CLOCK, TIME, TYPE, STACKABLE, ENABLED, GOOD, GIVEN_BY
 }
 
 enum BUFF_ICON {

@@ -6,10 +6,11 @@
     "children": [
         "e3c78988-d18a-4d86-81a9-f72a8c399e63",
         "1afdbfe6-b4d6-4ab3-9397-fc2405cb6ca3",
-        "db033e89-0201-4574-98f3-ac4741dcbdf6"
+        "db033e89-0201-4574-98f3-ac4741dcbdf6",
+        "44bcab92-a561-4133-ad98-53ac651858a4"
     ],
     "filterType": "GMScript",
-    "folderName": "DamageAmpWall",
+    "folderName": "Amp Wall",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

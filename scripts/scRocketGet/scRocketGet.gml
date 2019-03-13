@@ -97,7 +97,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * vartime;
 		map[? ROCKET_MAP.KBAMT] = 20;
-		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.FROSTY;
+		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.AMPWALL; //FROSTY
 		break;
 		
 	case ROCKET.FIRE:
@@ -189,6 +189,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.AMPWALL;
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SHIELD;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ROCKETBOOTS];
+		map[? ROCKET_MAP.ENABLED] = false; //DISABLED
 		break;
 		
 	case ROCKET.BOUNCY:
@@ -361,6 +362,7 @@ switch (roc) {
 		map[? "spawn_hei"] = 5;
 		map[? "spawn_len"] = 0.5;
 		map[? "spawn_clock"] = 0;
+		map[? ROCKET_MAP.ENABLED] = false; //DISABLED
 		break;
 		
 	case ROCKET.BOOMERANG:
@@ -413,6 +415,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_DRAW_OVER] = scRocketPiercing_Draw;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TURRET;
 		map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
+		map[? ROCKET_MAP.ENABLED] = false;
 		break;
 		
 	case ROCKET.GLASS:
@@ -430,7 +433,6 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketGlass_Create;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.TRAIL];
 		map[? ROCKET_MAP.PARTICLE_AMT] = 0;
-		
 		break;
 }
 

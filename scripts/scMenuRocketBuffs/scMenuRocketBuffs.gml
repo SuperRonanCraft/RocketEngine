@@ -1,10 +1,11 @@
 var amt = BUFFTYPE.LENGHT, columns = 3, rows = 3, offset = 0;
 var pg = page_buffs;
 var map, spr, name, desc, part, part_amt, rx, ry, c, yoffset, index = 0;
-for (var i = (pg * (columns * rows)); i < (pg * (columns * rows)) + (columns * rows) && i < amt; i++) {
+for (var i = (pg * (columns * rows)); index < columns * rows && i < amt; i++) {
 	if (index mod columns == 0)
 		offset++;
 	map = ds_map_create();
+	if (!map[? BUFF_MAP.ENABLED]) { ds_map_destroy(map); continue; }
 	scBuffGet(i, map); //Grab the buff map
 	spr = map[? BUFF_MAP.ICON]; //Grab the icon
 	name = map[? BUFF_MAP.NAME]; //Grab the name

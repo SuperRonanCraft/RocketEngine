@@ -20,8 +20,7 @@ if (current_delay == 0) {
 		scRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
 		//Add to rockets shot count
 		if (track_stats)
-			scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.ROCKETS_SHOT],
-				[scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.ROCKETS_SHOT) + 1]);
+			scStatsCacheAddGeneral(STATISTICS_GENERAL.ROCKETS_SHOT, 1);
 	}
 }
 
