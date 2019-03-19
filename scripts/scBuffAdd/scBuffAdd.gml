@@ -19,6 +19,6 @@ if (argument_count > 4)
 //Add all buffs that were given
 if (is_array(buff))
 	for (var i = 0; i < array_length_1d(buff); i++)
-		scBuffAddList(buff[i], targ, from, time, stackable);
+		scBuffApply(buff[i], targ, from, time, stackable);
 else 
-	scBuffAddList(buff, targ, from, time, stackable);
+	scBuffApply(buff, targ, from, time, stackable);

@@ -5,8 +5,8 @@ for (var i = (pg * (columns * rows)); index < columns * rows && i < amt; i++) {
 	if (index mod columns == 0)
 		offset++;
 	map = ds_map_create();
-	if (!map[? BUFF_MAP.ENABLED]) { ds_map_destroy(map); continue; }
 	scBuffGet(i, map); //Grab the buff map
+	if (!map[? BUFF_MAP.ENABLED]) { ds_map_destroy(map); continue; }
 	spr = map[? BUFF_MAP.ICON]; //Grab the icon
 	name = map[? BUFF_MAP.NAME]; //Grab the name
 	desc = map[? BUFF_MAP.DESCRIPTION]; //Grab the description

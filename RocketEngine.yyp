@@ -850,7 +850,7 @@
             "Key": "283cbbad-ce8b-421f-b248-fdb98249bd28",
             "Value": {
                 "id": "7386f959-0979-456b-b9e7-643739d9eecc",
-                "resourcePath": "scripts\\scBuffAddList\\scBuffAddList.yy",
+                "resourcePath": "scripts\\scBuffApply\\scBuffApply.yy",
                 "resourceType": "GMScript"
             }
         },
