@@ -2399,6 +2399,14 @@
             }
         },
         {
+            "Key": "72f6e36c-cf1f-4309-9c1f-2a6468be9f94",
+            "Value": {
+                "id": "18ce8356-6bd0-49b2-965a-2043789b664d",
+                "resourcePath": "scripts\\scRocketGlass_Draw\\scRocketGlass_Draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "732afc92-9d57-4dcf-8f4b-98f7b33b5d70",
             "Value": {
                 "id": "b53dae57-c5ae-460f-8278-825f507e2068",
@@ -5299,6 +5307,7 @@
         "fc47cce2-49d6-4e4e-9aaa-0bd811ca482a",
         "7464e221-91a1-4865-8714-2444827859d9",
         "27bd21c1-3515-4b58-b1f5-c232a0344d7f",
+        "72f6e36c-cf1f-4309-9c1f-2a6468be9f94",
         "b2582659-683e-43ca-851a-f0ff2b91eea2",
         "09108c2e-932a-4a39-8434-0a112dc0e5cc",
         "4e45b309-8276-49b5-a0bc-21aa629f5f6f",

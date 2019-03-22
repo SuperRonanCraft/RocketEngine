@@ -10,9 +10,9 @@ var tpX = owner.x;
 var tpY = owner.y;
 
 
-var lineEnd;
+lineEnd = noone;
 var currentDir = direction;
-var miss = true;
+miss = true;
 
 //If facing right, start from player and end at length of room
 if (currentDir == 0) {
@@ -59,6 +59,7 @@ if (playerHit != noone) {
 				
 				//Blow up at player
 				tpX = playerHit.x;
+				lineEnd = playerHit.x;
 				miss = false;	
 			} 
 				
@@ -74,6 +75,8 @@ if (wallHit != noone && miss){
 			
 	else
 		tpX = wallHit.x + (wallHit.image_xscale*wallHit.sprite_width);
+		
+	lineEnd = wallHit.x;
 }
 
 x = tpX;

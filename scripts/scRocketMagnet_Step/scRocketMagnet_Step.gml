@@ -3,8 +3,9 @@ var map = magnetMap;
 if ((direction == 0 || direction == 180) && !map[? "movingdir"]) {
 	if (!instance_exists(map[? "target"]))
 		map[? "target"] = scFindTarget(owner.team);
+		
 	with (map[? "target"])
-		if ((other.x > x - 25 && other.x < x + 25)) {
+		if ((other.x > x - other.rocket_map[?ROCKET_MAP.SPEED] - 25 && other.x < x + other.rocket_map[?ROCKET_MAP.SPEED] + 25)) {
 			if (y > other.y)
 				map[? "target_dir"] = 270;
 			else

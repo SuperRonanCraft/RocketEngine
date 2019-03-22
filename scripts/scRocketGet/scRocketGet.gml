@@ -21,7 +21,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Classic";
 		map[? ROCKET_MAP.DESCRIPTION] = "Explosive device";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.DEFAULT;
-		map[? ROCKET_MAP.COOLDOWN] = 20 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 27 * varcd;
 		map[? ROCKET_MAP.SPEED] = 20 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
@@ -83,7 +83,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Ice";
 		map[? ROCKET_MAP.DESCRIPTION] = "It's cold outside";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.ICE;
-		map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
+		map[? ROCKET_MAP.COOLDOWN] = 28 * varcd;
 		map[? ROCKET_MAP.SPEED] = 19 * varspd;
 		map[? ROCKET_MAP.TIMER] = 180 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.ICE];
@@ -430,6 +430,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 6 * vartime;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.MIRROR;
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Glass;
+		map[? ROCKET_MAP.ROCKET_DRAW_EXTRA] = scRocketGlass_Draw;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketGlass_Create;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.TRAIL];
 		map[? ROCKET_MAP.PARTICLE_AMT] = 0;

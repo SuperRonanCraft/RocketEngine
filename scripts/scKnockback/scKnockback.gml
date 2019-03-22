@@ -1,6 +1,6 @@
 //Checks every step
 
-if (knockback_time <= 0) exit; //No knockback, exit
+if (knockback_time == 0) exit; //No knockback, exit
 	knockback_time--;
 
 //Particles
