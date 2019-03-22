@@ -264,6 +264,7 @@ switch (roc) {
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NAPALM;
+		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 	
 	case ROCKET.LIGHTNING:
@@ -399,6 +400,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? "scrape_part"] = PARTICLES.SCRAPE;
+		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		
 	case ROCKET.PIERCING:

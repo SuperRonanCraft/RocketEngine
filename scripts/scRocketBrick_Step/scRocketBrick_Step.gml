@@ -63,7 +63,7 @@ for (var i = 0; i < ds_list_size(inst_list); i++) {
 ds_list_clear(inst_list);
 
 //Slide on floor
-instance_place_list(x, y + map[? "vsp"] +1, oWall, inst_list, false);
+instance_place_list(x, y + map[? "vsp"] + 1, oWall, inst_list, false);
 map[? "touching_floor"] = false;
 
 for (var i = 0; i < ds_list_size(inst_list); i++) {
@@ -84,7 +84,7 @@ for (var i = 0; i < ds_list_size(inst_list); i++) {
 ds_list_destroy(inst_list);
 
 
-if(map[? "ramping"]){
+if (map[? "ramping"]){
 	map[?"hsp"] += 2*sign(map[?"hsp"]);
 	map[? "vsp"] += -7;
 }

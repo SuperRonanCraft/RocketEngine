@@ -9,8 +9,21 @@ switch (type) {
 	case ROCKET.BOUNCY:
 		with (other) {
 			var map = bounceMap;
-			map[?"vsp"] = abs(map[?"vsp"]) * -2.5;	
-			map[? "hsp"] *= 2;
+			map[? "vsp"] = abs(map[? "vsp"]) * -2.5;	
+			map[? "hsp"] *= 1.8;
+		}
+		break;
+	case ROCKET.BRICK:
+		with (other) {
+			var map = brickMap;
+			map[? "vsp"] += -15;
+			map[? "hsp"] *= 1.25;
+		}
+		break;
+	case ROCKET.OBSOLETE:
+		with (other) {
+			var map = obsoleteMap;
+			map[? "vsp"] = abs(map[? "vsp"]) * -2.5;
 		}
 		break;
 	case ROCKET.SPIKED:
