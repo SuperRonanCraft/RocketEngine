@@ -17,7 +17,9 @@ if (doing_damage)
 					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i], parent);
 			}
 			//Damage shootable
-			scDamageShootable(other.parent, p, false, true, dmg);
+			if(scDamageShootable(other.parent, p, false, true, dmg))
+				p.causeOfDeath = deathCause;
+	
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
 				scUltimateAddCharge(parent, DAMAGETYPE.SPLASH, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		}

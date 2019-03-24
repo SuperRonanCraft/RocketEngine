@@ -15,6 +15,14 @@ switch (state) {
 		overwrite = true;
 		scSpecialAnimation(sPlayer_dead2, 0);
 		break;
+	case ANIMATIONSTATE.DEADLASER:
+		overwrite = true;
+		scSpecialAnimation(sPlayer_deadLaser,0);
+		break;
+	case ANIMATIONSTATE.DEADFROZEN:
+		overwrite = true;
+		scSpecialAnimation(sPlayer_deadFrozen,0);
+		break;
 	case ANIMATIONSTATE.WALKING:
 		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_walk;	
 		break;	

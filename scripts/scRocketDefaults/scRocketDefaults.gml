@@ -57,4 +57,8 @@ map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = true; //If the rocket should give ultch
 map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //Multiplier offset of a specific rocket 1 for none
 //KNOCKBACK
 map[? ROCKET_MAP.KBAMT] = 35 / TIME_SPEED;
+
+//DEATH CAUSE
+map[? ROCKET_MAP.DEATHCAUSE] = noone;
+
 return map;

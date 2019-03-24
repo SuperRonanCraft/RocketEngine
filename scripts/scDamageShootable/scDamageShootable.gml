@@ -13,10 +13,15 @@ var delete = argument[2];
 var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
 var didDamage = false;
+var lethalDamage = false;
 
 with (damageInst) {
 	if ((damage_take /*&& shootInst != id*/) || force) {
 		hp -= dmg;
+		
+		if hp <= 0
+			lethalDamage = true;
+			
 		if (isPlayer) {
 			hp_scale = 2;
 			hp_damaged = dmg;
@@ -36,3 +41,9 @@ with (damageInst) {
 }
 if (didDamage && delete)
 	instance_destroy(other);
+	
+	
+if(damageInst.causeOfDeath != noone)
+	lethalDamage = false;
+	
+return lethalDamage;

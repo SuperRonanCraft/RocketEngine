@@ -1687,6 +1687,14 @@
             }
         },
         {
+            "Key": "4f2e19d2-df27-4761-a4a0-375b01786ed7",
+            "Value": {
+                "id": "dd903ebd-b738-472c-a11d-833f2fbe4792",
+                "resourcePath": "scripts\\scDeathAnimations\\scDeathAnimations.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4f3470e5-ce00-4686-b790-664c0a4fd1b2",
             "Value": {
                 "id": "95285f13-920a-47b2-8c1a-dfe160f9c772",
@@ -1804,6 +1812,14 @@
                 "id": "8c4ff392-ba73-4b93-9158-446eafe486b8",
                 "resourcePath": "scripts\\scScreenShake\\scScreenShake.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "52d762bf-9e13-4c71-8f28-552e11bd61c3",
+            "Value": {
+                "id": "e8cd5c85-896c-4d6b-a21e-82592c84c2b4",
+                "resourcePath": "sprites\\sPlayer_deadFrozen\\sPlayer_deadFrozen.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2179,6 +2195,14 @@
             "Value": {
                 "id": "562332a0-9582-4642-8269-af10740b154b",
                 "resourcePath": "sprites\\sUltNapalmTNT\\sUltNapalmTNT.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "66384105-73b6-4b22-95d0-eea768e10c00",
+            "Value": {
+                "id": "395718a9-f9db-48cd-97c7-f2dcfa9c7eea",
+                "resourcePath": "sprites\\s_pash\\s_pash.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4695,6 +4719,14 @@
             }
         },
         {
+            "Key": "e3a0829f-bc54-4f42-9a00-a5635038a3c8",
+            "Value": {
+                "id": "d18b1d3d-3a53-4a14-accd-11c4120e3e48",
+                "resourcePath": "sprites\\sPlayer_deadLaser\\sPlayer_deadLaser.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e3c78988-d18a-4d86-81a9-f72a8c399e63",
             "Value": {
                 "id": "b2eb3ac7-c15f-455d-b6b5-3c424b7e30e4",
@@ -5443,6 +5475,7 @@
         "a2375737-b878-420e-8706-1853b5cc1f7b",
         "88211932-9cea-4adc-a0a3-3b8613abe868",
         "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
+        "4f2e19d2-df27-4761-a4a0-375b01786ed7",
         "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
         "c251b514-5413-4eb8-bda4-3e9c880f56e9",
         "6e1af632-6685-40a9-b0e7-653f1b415768",

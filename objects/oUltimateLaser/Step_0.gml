@@ -16,8 +16,13 @@ if (damage_cooldown_cur > 0) { //Just did damage? Cooldown
 	damage_cooldown_cur--; exit;
 } else if (width_cur == laser_width || !growing) { //Full power or fading out, do damage
 	var width = width_cur / 2;
+	
+	
 	with (hitting) {
-		scDamageShootable(other.owner, id, false, false, 1);
+		if(scDamageShootable(other.owner, id, false, false, 1)){
+			causeOfDeath = DEATH_LIST.LASER;	
+		}
 		other.damage_cooldown_cur = other.laser_damage_cooldown;
 	}
+	
 }

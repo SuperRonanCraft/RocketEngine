@@ -17,3 +17,5 @@ doing_damage = true;
 
 first_step = false;
 first_draw = false;
+
+deathCause = noone;

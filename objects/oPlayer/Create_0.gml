@@ -71,6 +71,10 @@ recoilMAX = 0;
 //If jumped at right time
 teched = false;
 
+//Cause of death
+causeOfDeath = noone;
+animationDebounce = false;
+
 //AI Control
 player_aimode = false;
 aiBrain = noone;

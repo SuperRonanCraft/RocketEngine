@@ -32,7 +32,12 @@ if (scBuffFind(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]){
 	if (owner.standing && owner.hsp == 0) {
 		dsBuff[? "damage_crt"]--;
 		if (dsBuff[? "damage_crt"] < 0) {
-			scDamageShootable(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, true, dsBuff[? "damage"]);
+			if(scDamageShootable(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, true, dsBuff[? "damage"]))
+				owner.causeOfDeath = DEATH_LIST.LASER
+				
+			part_emitter_region(global.ParticleSystem1, global.Emitter1,owner.x-30,owner.x+30,owner.y-30,owner.y+30, ps_shape_ellipse, ps_distr_gaussian)
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.FIRE2],15);
+
 			dsBuff[? "damage_crt"] = dsBuff[? "damage_cd"];
 		}
 	}

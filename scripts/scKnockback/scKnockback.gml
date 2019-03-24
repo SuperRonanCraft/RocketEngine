@@ -8,7 +8,7 @@ part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? P
 //hsp_move = 0;
 //animate correctly
 var map = playerMap;
-if (map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
+if (map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK && map[? PLAYER_MAP.ALIVE])
 	if (sign(facing) == sign(hsp_knockback))
 		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.KNOCKBACK2;
 	else

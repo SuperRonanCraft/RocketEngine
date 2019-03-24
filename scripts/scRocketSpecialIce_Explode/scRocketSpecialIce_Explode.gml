@@ -17,6 +17,7 @@ xplo.image_xscale = size;
 xplo.image_yscale = size;
 xplo.image_speed = 1.5;
 xplo.parent = owner;
+xplo.deathCause = DEATH_LIST.FROZEN;
 ds_map_copy(xplo.rocket_map, rocket_map);
 ds_list_copy(xplo.confirmList, hitList);
 

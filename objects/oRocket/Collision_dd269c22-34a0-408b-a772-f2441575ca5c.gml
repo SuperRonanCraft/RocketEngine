@@ -22,7 +22,9 @@ if (!destroy && owner.team != other.team)
 		if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
 			dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 		
-		scDamageShootable(owner, other, false, true, dmg);
+		if(scDamageShootable(owner, other, false, true, dmg))
+			other.causeOfDeath = rocket_map[?ROCKET_MAP.DEATHCAUSE];
+		
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
 			scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		

@@ -11,8 +11,10 @@ switch (map[? PLAYER_MAP.PLAYER_STATE]) {
 		}
 		break;
 	case PLAYERSTATE.KNOCKBACK:
+		
 		map[? PLAYER_MAP.CAN_CONTROL] = false;
-		map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
+		if(map[? PLAYER_MAP.ALIVE])
+			map[? PLAYER_MAP.ANIMATION_OVERRIDE] = true;
 		break;
 	case PLAYERSTATE.CANTCONTROL:
 		map[? PLAYER_MAP.CAN_CONTROL] = false;

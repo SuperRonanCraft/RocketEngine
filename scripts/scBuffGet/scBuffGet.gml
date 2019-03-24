@@ -29,7 +29,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SMOKE1];
 		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
-		ds_map[? "damage_cd"] = ds_map[? BUFF_MAP.TIME] / 3; //cooldown for taking damage
+		ds_map[? "damage_cd"] = room_speed/2; //cooldown for taking damage
 		ds_map[? "damage_crt"] = ds_map[? "damage_cd"];
 		ds_map[? "damage"] = 1; //damage to take
 		break;
