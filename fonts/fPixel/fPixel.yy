@@ -1,7 +1,7 @@
 {
     "id": "1d3aa673-9fcf-4191-ad31-c623b32cc614",
     "modelName": "GMFont",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "fPixel",
     "AntiAlias": 0,
     "TTFName": "${project_dir}\\fonts\\fPixel\\ARCADECLASSIC.TTF",
@@ -10,6 +10,7 @@
     "charset": 0,
     "first": 0,
     "fontName": "Joystix",
+    "glyphOperations": 0,
     "glyphs": [
         {
             "Key": 32,
@@ -1437,8 +1438,9 @@
             }
         }
     ],
-    "image": null,
+    "hinting": 0,
     "includeTTF": true,
+    "interpreter": 0,
     "italic": false,
     "kerningPairs": [
         {
@@ -5131,6 +5133,8 @@
         }
     ],
     "last": 0,
+    "maintainGms1Font": false,
+    "pointRounding": 0,
     "ranges": [
         {
             "x": 32,

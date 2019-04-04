@@ -1,4 +1,5 @@
 /// @desc slide
+image_xscale = 1;
 
 if (!freezing) {
 	if (ds_list_empty(frozen_walls))
@@ -37,8 +38,19 @@ var wall_touching_y = noone;
 for (var i = 0; i < ds_list_size(inst_list); i++) {
 	var inst = inst_list[| i];
 	if (inst != noone && inst.object_index != oSeperator) {
-		if (vsp > 0) //Falling
+		if (vsp > 0){ //Falling
 			y = floor(inst.bbox_top + (y - bbox_bottom) - 1);
+			if(vsp > 1){
+				
+				var smoke = instance_create_depth(x - (sprite_width/2),y + (sprite_height/2), depth-1,oUltimateFrostyEffect);
+				smoke.image_xscale = -1;
+				smoke.type = MISCEFFECT.SMOKE;
+				var smoke = instance_create_depth(x + (sprite_width/2),y + (sprite_height/2), depth-1,oUltimateFrostyEffect);					
+				smoke.type = MISCEFFECT.SMOKE;
+			
+			}
+		}
+			
 		else if (vsp < 0) //Going up
 			y = ceil(inst.bbox_bottom + (y - bbox_top) + 1);
 		vsp = 0;
@@ -51,6 +63,14 @@ ds_list_destroy(inst_list);
 	
 x += hsp * owner.time_dialation;
 y += vsp * owner.time_dialation;
+
+if(timer % 20 == 0){
+	for (var i = 0; i < irandom_range(2,3); i++) {
+	    var mist = instance_create_depth(irandom_range(x - (sprite_width/2), x + (sprite_width/2)), y + irandom_range(-20,20), depth + (irandom_range(-1,1)),oUltimateFrostyEffect); 	
+		mist.type = MISCEFFECT.MIST;
+		mist.xsp = hsp;
+	}
+}
 
 //Fade away
 if (timer <= 0) {

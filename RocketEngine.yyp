@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "1360ffa7-b75e-4cba-9c29-99dc063b5892",
+            "Value": {
+                "id": "d827c6d5-839d-4424-b2b3-ca41a2572101",
+                "resourcePath": "sprites\\sUltFrostyChill\\sUltFrostyChill.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "136e1036-3526-4b29-b1a4-28f5cdd3ab17",
             "Value": {
                 "id": "a99ab972-d056-4f65-8744-e83a1dd4c194",
@@ -499,6 +507,14 @@
             "Value": {
                 "id": "f033e8cc-7606-4213-947c-6a93619128f2",
                 "resourcePath": "sprites\\s_pember\\s_pember.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "168744af-8d96-4e84-a636-80ad6e2e95d1",
+            "Value": {
+                "id": "210a184c-aa72-43fd-9f72-908bb4144228",
+                "resourcePath": "sprites\\s_achievement_1\\s_achievement_1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1196,6 +1212,14 @@
                 "id": "ee6269fa-3fbb-49a9-8abe-401f595c785c",
                 "resourcePath": "scripts\\scRocketSpecialRandom_Step\\scRocketSpecialRandom_Step.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "36949492-6ff0-4a22-bf6b-8aa9d8511da0",
+            "Value": {
+                "id": "98ef1a70-c4e3-49bb-a9e7-90e311be23fe",
+                "resourcePath": "sprites\\s_achievement_6\\s_achievement_6.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2143,6 +2167,14 @@
             }
         },
         {
+            "Key": "63452b83-f1ee-4e07-91f5-9bc65fe6433a",
+            "Value": {
+                "id": "aa854a8e-fd61-48d4-8a08-24dd86c85ddd",
+                "resourcePath": "sprites\\s_achievement_5\\s_achievement_5.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "634f229d-75af-49d3-9742-8557fcb349e1",
             "Value": {
                 "id": "f4b6e219-11d6-42d1-a96d-1456b819ef92",
@@ -2220,6 +2252,14 @@
                 "id": "1b409804-e99a-47e3-abb3-6d243dca6086",
                 "resourcePath": "scripts\\scBuffReverseControls\\scBuffReverseControls.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "679054b5-3159-4b21-b35e-491f1b4956f4",
+            "Value": {
+                "id": "f44ca118-9082-43fa-a4a1-32116bf8c467",
+                "resourcePath": "sprites\\s_achievement_2\\s_achievement_2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2771,6 +2811,14 @@
             "Value": {
                 "id": "1dc59242-c6c5-44f4-904c-30550c8971ea",
                 "resourcePath": "sprites\\s_pdamageboost\\s_pdamageboost.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "85ad2318-3a25-46bd-abea-4d6d525b9211",
+            "Value": {
+                "id": "c61fbea3-1049-43fe-b654-61d4c7c39ff4",
+                "resourcePath": "sprites\\s_achievement_3\\s_achievement_3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4391,6 +4439,14 @@
             }
         },
         {
+            "Key": "d04793d2-8c24-4771-91fc-51dec95a43f7",
+            "Value": {
+                "id": "385ddb44-0fe0-4bd3-b5e9-6dbb19a20346",
+                "resourcePath": "sprites\\sUltFrostyMist\\sUltFrostyMist.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d093605e-4be1-44f9-ac45-6c7eb4302f0a",
             "Value": {
                 "id": "b5666460-b40f-45e4-824e-8dd2a83a15ee",
@@ -4623,6 +4679,14 @@
             }
         },
         {
+            "Key": "dd044d0d-d95e-4eec-8af2-4b64b479e259",
+            "Value": {
+                "id": "c079b13e-0b81-465d-a584-3cde527ae119",
+                "resourcePath": "objects\\oUltimateFrostyEffect\\oUltimateFrostyEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ddbf18bc-abaf-4c04-ae64-869c45bf9423",
             "Value": {
                 "id": "9fc68e44-1011-4d45-b7cd-5b0c8e08c2fd",
@@ -4795,6 +4859,14 @@
             "Value": {
                 "id": "4265d4a7-b253-4755-aff1-0a8fe23e72f9",
                 "resourcePath": "sprites\\s_abilityIcon_Slowmo\\s_abilityIcon_Slowmo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e69990f2-93f0-4b1d-9b10-c34b8d237143",
+            "Value": {
+                "id": "beb2be5d-09ed-406c-8039-9fa7bc3fa438",
+                "resourcePath": "sprites\\s_achievement_4\\s_achievement_4.yy",
                 "resourceType": "GMSprite"
             }
         },

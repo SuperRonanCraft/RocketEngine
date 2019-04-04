@@ -17,3 +17,5 @@ particle_crt = 0;
 
 frozen_walls = ds_list_create(); //list of maps
 frozen_walls_uptime = 5 * room_speed;
+
+image_xscale = 1;
