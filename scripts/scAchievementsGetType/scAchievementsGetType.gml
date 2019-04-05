@@ -49,7 +49,14 @@ switch (type) {
 		break;
 	case ACHIEVEMENT_TYPE.ICON: //ICON OF ACHIEVEMENT
 		switch (enu) {
-			case ACHIEVEMENTS.GM_1V1_MULTI: val = s_abilityIcon_AntiHeal; break;
+			case ACHIEVEMENTS.GM_1V1_MULTI: val = s_achievement_1; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_10: val = s_achievement_2; break;
+			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = s_achievement_3; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_100:
+			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
+			case ACHIEVEMENTS.ROCKETS_SHOT_10000: val = s_achievement_4; break;
+			case ACHIEVEMENTS.TIME_PLAYED_10M: val = s_achievement_5; break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = s_achievement_6; break;
 			default: val = sTargetBomb; break;
 		}
 		break;

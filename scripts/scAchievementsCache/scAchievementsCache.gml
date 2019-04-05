@@ -1,11 +1,10 @@
 /// @arg achivements[...
 /// @arg values[...
 
-var types = argument0;
-var vals = argument1;
+var types = argument[0];
+var vals = argument[1];
 
 //ACHIEVEMENTS
-var map = oAchievements.achievementMap;
 
 if (ds_list_size(types) > 0)
 	with (oAchievements) {
