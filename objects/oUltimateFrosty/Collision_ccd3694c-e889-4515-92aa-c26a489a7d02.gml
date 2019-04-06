@@ -1,5 +1,6 @@
 /// @desc 
-var dir = point_direction(other.x, other.y, x, y);
+if (!freezing) exit;
+var dir = other.direction;//point_direction(other.x, other.y, x, y);
 hsp += (dir > 90 && dir < 270 ? -1 : 1) * 10; //move faster
 with (other)
 	event_user(0);

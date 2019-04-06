@@ -21,7 +21,8 @@ if (freezing) { //Freezing area?
 			xx -= 4 * 32;
 			offset++;
 		}
-		if (collision_point(xx + 16, yy + 16, oWall, false, false)) {
+		var inst = collision_point(xx + 16, yy + 16, oWall, false, false)
+		if (inst != noone && inst.object_index != oSeperator) {
 			var addwall = true;
 			for (var a = 0; a < ds_list_size(frozen_walls); a++) {
 				var map = frozen_walls[| a];
@@ -47,7 +48,7 @@ for (var i = 0; i < ds_list_size(frozen_walls); i++) { //Draw frozen wall and ap
 	var map = frozen_walls[| index];
 	scDrawSpriteExt(map[? "xx"], map[? "yy"], sUltFrosty_Wall, 0, noone, 0.5);
 	var p = instance_place(map[? "xx"], map[? "yy"], oPlayer);
-	if (p != noone)
+	if (p != noone && p != owner) //Apply buff, ignore owner
 		scBuffAdd(BUFFTYPE.CHILLED, p, owner);
 	map[? "timer"]--; //tick down timer
 	if (map[? "timer"] <= 0) {
