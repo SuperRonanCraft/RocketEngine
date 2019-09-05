@@ -9,35 +9,35 @@ var map = playerMap;
 switch (state) {
 	case ANIMATIONSTATE.DEAD:
 		overwrite = true;
-		scSpecialAnimation(sPlayer_dead1, 0);
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEAD], 0);
 		break;
 	case ANIMATIONSTATE.DEAD2:
 		overwrite = true;
-		scSpecialAnimation(sPlayer_dead2, 0);
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEAD2], 0);
 		break;
 	case ANIMATIONSTATE.DEADLASER:
 		overwrite = true;
-		scSpecialAnimation(sPlayer_deadLaser,0);
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEADLASER],0);
 		break;
 	case ANIMATIONSTATE.DEADFROZEN:
 		overwrite = true;
-		scSpecialAnimation(sPlayer_deadFrozen,0);
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEADFROZEN],0);
 		break;
 	case ANIMATIONSTATE.WALKING:
-		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_walk;	
+		map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.WALKING];	
 		break;	
 	case ANIMATIONSTATE.RISING:
-		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_rise;	
+		map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.RISING];		
 		break;	
 	case ANIMATIONSTATE.SLIDING:
-		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_walkend;	
+		map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.SLIDING];	
 		break;	
 	case ANIMATIONSTATE.FALLING:
-        map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_fall;	
+        map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.FALLING];	
 		break;
     case ANIMATIONSTATE.STANDING:
 	default:
-        map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_idle;
+        map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.STANDING];
         break;
 }
 

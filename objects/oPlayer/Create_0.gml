@@ -1,5 +1,8 @@
 /// @desc Create
 
+character = CHARACTERS.SWORD;
+
+
 scPlayerStart();
 //Load gravity and movement variables
 scGravityStart();
@@ -8,6 +11,9 @@ scKeybindsSet(keys);
 
 //Display health
 event_inherited();
+
+//Load Sprites
+scCharacterSprites();
 
 //Health
 hp = 20;

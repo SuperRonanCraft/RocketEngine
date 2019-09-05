@@ -8,26 +8,26 @@ var map = playerMap;
 
 switch (state) {
 	case ANIMATIONSTATE.TRAPPED:
-		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_trapped;
+		map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.TRAPPED];
 		break;
 	case ANIMATIONSTATE.TECHED:
 		overwrite = true;
-		if (scSpecialAnimation(sPlayer_tech, 0))
+		if (scSpecialAnimation(characterSprites[? ANIMATIONSTATE.TECHED], 0))
 			map[? PLAYER_MAP.ANIMATION_STATE] = PLAYERSTATE.NORMAL;
 		break;
 	case ANIMATIONSTATE.KNOCKBACK2:
-		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_knockBack2;
+		map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.KNOCKBACK2];
 		break;
 	case ANIMATIONSTATE.KNOCKBACK:
-		map[? PLAYER_MAP.CURRENT_SPRITE] = sPlayer_knockBack;
+		map[? PLAYER_MAP.CURRENT_SPRITE] = characterSprites[? ANIMATIONSTATE.KNOCKBACK];
 		break;
 	case ANIMATIONSTATE.SLEEPING:
 		overwrite = true;
-		scSpecialAnimation(sPlayer_dead1, 0);
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEAD], 0);
 		break;
 	case ANIMATIONSTATE.WAKING:
 		overwrite = true;
-		if (scSpecialAnimation(sPlayer_dead1, 2))
+		if (scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEAD], 2))
 			map[? PLAYER_MAP.ANIMATION_STATE] = PLAYERSTATE.NORMAL;
 		break;
 }
