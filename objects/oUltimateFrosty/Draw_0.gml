@@ -45,24 +45,31 @@ if (freezing) { //Freezing area?
 }
 
 var index = 0;
+//var walls_delete = ds_list_create();
 for (var i = 0; i < ds_list_size(frozen_walls); i++) { //Draw frozen wall and apply buff
-	var map = frozen_walls[| index];
-	scDrawSpriteExt(map[? "xx"], map[? "yy"], sUltFrosty_Wall, 0, noone, map[? "alpha"]);
-	var p = instance_place(map[? "xx"], map[? "yy"], oPlayer);
-	if (p != noone && p != owner) //Apply buff, ignore owner
-		scBuffAdd(BUFFTYPE.CHILLED, p, owner);
+	var map = frozen_walls[| i];
+	if (map[? "alpha"] > 0) {
+		scDrawSpriteExt(map[? "xx"], map[? "yy"], sUltFrosty_Wall, 0, noone, map[? "alpha"]);
+		var p = instance_place(map[? "xx"], map[? "yy"], oPlayer);
+		if (p != noone && p != owner) //Apply buff, ignore owner
+			scBuffAdd(BUFFTYPE.CHILLED, p, owner);
+	}
 	map[? "timer"]--; //tick down timer
 	if (map[? "timer"] <= 0) {
 		map[? "alpha"] -= 0.025;
-		if (map[? "alpha"] <= 0) {
-			ds_list_delete(frozen_walls, index);
-			ds_map_destroy(map);
-		}
+		//if (map[? "alpha"] <= 0)
+		//	ds_list_add(walls_delete, index);
 	} else {
 		map[? "alpha"] = min(map[? "alpha"] + 0.025, 0.6);
 		index++;
 	}
 }
+
+/*for (var i = 0; i < ds_list_size(walls_delete); i++) {
+	var map = frozen_walls[walls_delete[| i] - i];
+	ds_map_destroy(map);
+	ds_list_delete(frozen_walls, walls_delete[| i] - i);
+}*/
 
 if (global.debug) {
 	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);

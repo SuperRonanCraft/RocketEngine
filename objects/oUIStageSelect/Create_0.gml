@@ -56,7 +56,7 @@ switch (type) {
 			//["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_pickups",	global.mode_1v1_pickups, "Unleash Mayhem!"],
 			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
 			["ULTIMATES",	menu_element_type.shift,	["Disabled", "x1 Charge", "x10 Charge"],	"mode_1v1_ultimates",	global.mode_1v1_ultimates, "The wombo combos!"],
-			["ROCKETS",		menu_element_type.toggle,	noone,	"mode_1v1_rockets",	global.mode_1v1_rockets, "So, u wont be able to shoot..."],
+			["WEAPONS",		menu_element_type.toggle,	noone,	"mode_1v1_weapon",	global.mode_1v1_weapon, "So, u wont be able to shoot..."],
 			["PLAYERS",		menu_element_type.shift,	["Multi-Player", "Player vs. AI", "AI vs. AI"],	"mode_1v1_singleplayer",	global.mode_1v1_singleplayer, "Play with a friend or machine!"],
 			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
 			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	

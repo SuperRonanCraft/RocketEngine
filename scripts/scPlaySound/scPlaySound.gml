@@ -28,7 +28,7 @@ enum SOUND {
 		//Gotten hit by rocket
 	EFFECT_HIT = noone,
 		//Explosion sound
-	EFFECT_EXP = snSelect,
+	EFFECT_EXP = snExplode_1,
 		//Death effect
 	EFFECT_DEATH = noone,
 		//Hit a target

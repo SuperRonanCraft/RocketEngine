@@ -92,13 +92,13 @@ global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 
 //Gameplay modes
-global.mode_1v1_preset = 1
-global.mode_1v1_pickups = 1;
+global.mode_1v1_preset = 1;
+//global.mode_1v1_pickups = 1; //Pickups enabled?
 global.mode_1v1_health = 2;
-global.mode_1v1_ultimates = 1;
-global.mode_1v1_timer = 2;
-global.mode_1v1_rockets = true;
-global.mode_1v1_singleplayer = 0;
+global.mode_1v1_ultimates = 1; //Ability to use ultimates
+global.mode_1v1_timer = 2; //Timer
+global.mode_1v1_weapon = true; //Ability to use your weapon
+global.mode_1v1_singleplayer = 0; //Multiplayer level
 //global.mode_1v1_lowgravity = false;
 
 global.mode_targets_preset = 1;

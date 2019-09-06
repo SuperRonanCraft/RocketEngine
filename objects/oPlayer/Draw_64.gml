@@ -118,14 +118,14 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 			for (var i = 0; i < array_length_1d(buffsid); i++) {
 				var buff_map = ds_map_create();
 				scBuffGet(buffsid[i], buff_map);
-				draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, rockets_enabled ? 0.5 : 0.2);
+				draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, weapon_map[? WEAPON_MAP.ENABLED] ? 0.5 : 0.2);
 				buffx += (team == TEAM.LEFT ? 22 : -22);
 				ds_map_destroy(buff_map);
 			}
 		else {
 			var buff_map = ds_map_create();
 			scBuffGet(buffsid, buff_map);
-			draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, rockets_enabled ? 0.5 : 0.2);
+			draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, weapon_map[? WEAPON_MAP.ENABLED] ? 0.5 : 0.2);
 			ds_map_destroy(buff_map);
 		}
 	}

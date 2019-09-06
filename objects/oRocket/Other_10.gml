@@ -27,4 +27,4 @@ with (xplo)
 
 //Delete this instance of oRocket
 destroy = true;
-scPlaySound(rocket_map[? ROCKET_MAP.SOUND_EXPLOSION]);
+scPlaySound(SOUND.EFFECT_EXP);

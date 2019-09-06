@@ -18,7 +18,7 @@ with (oPlayer) {
 	player_map[? PLAYER_MAP.HEALTH] = hp;
 	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
 	scStageUltimateStart(global.mode_1v1_ultimates);
-	rockets_enabled = global.mode_1v1_rockets;
+	weapon_map[? WEAPON_MAP.ENABLED] = global.mode_1v1_weapon;
 	if (global.mode_1v1_singleplayer == 1 && team == TEAM.RIGHT)
 		scStartAI();
 	else if (global.mode_1v1_singleplayer == 2)
