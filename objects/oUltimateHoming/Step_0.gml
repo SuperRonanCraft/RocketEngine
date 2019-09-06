@@ -5,7 +5,7 @@ y = owner.y;
 
 if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
-			irandom_range(45, 135), owner, owner.rocket_map, [ROCKET_MAP.SCALE], [1])) {
+			irandom_range(45, 135), owner, owner.weapon_map[? WEAPON_MAP.MAP], [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;
 		//Give it the map of the current rocket
 		rocket_map = ds_map_create(); 

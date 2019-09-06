@@ -28,14 +28,14 @@ if (player.standing) {
 }
 
 //As long as you live, shoot!
-if (!ultReady && player.playerMap[? PLAYER_MAP.ALIVE]) {
+if (!ultReady && player.player_map[? PLAYER_MAP.ALIVE]) {
 	AIShoot = true;	
 } else {
 	AIShoot = false;	
 }
 
 //If ult is ready, fire IMMEDIATELY
-if (player.ult_charge >= player.ult_charge_max) {
+if (player.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] >= player.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {
 	ultReady = true;
 	AIRight = true;
 	AILeft = true;

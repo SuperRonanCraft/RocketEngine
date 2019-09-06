@@ -5,9 +5,9 @@ if (ds_list_size(p_list) == 2) {
 	var p1 = p_list[| 0];
 	var p2 = p_list[| 1];
 	//Check if their hp is the same
-	tie = (p1.hp == p2.hp);
+	tie = (p1.player_map[? PLAYER_MAP.HEALTH] == p2.player_map[? PLAYER_MAP.HEALTH]);
 	if (!tie)
-		if (p1.hp > p2.hp) {
+		if (p1.player_map[? PLAYER_MAP.HEALTH] > p2.player_map[? PLAYER_MAP.HEALTH]) {
 			global.winner = p1.team;
 			global.loser = p2.team;
 		} else {

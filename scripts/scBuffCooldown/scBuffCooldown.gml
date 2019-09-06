@@ -18,6 +18,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 		part_particles_create(global.ParticleSystem1, owner.x, owner.y, dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
 	with (owner) {
 		var map = weapon_map;
+		var rocket_map = map[? WEAPON_MAP.MAP];
 		if (map[? WEAPON_MAP.COOLDOWN_TIME] > rocket_map[? ROCKET_MAP.COOLDOWN] / 2)
 			map[? WEAPON_MAP.COOLDOWN_TIME] = rocket_map[? ROCKET_MAP.COOLDOWN] / 2;
 		if (map[? WEAPON_MAP.RELOAD_TIME] > rocket_map[? ROCKET_MAP.RELOAD_TIME] / 2) {
