@@ -37,8 +37,8 @@ scBuffHandler(BUFF_EVENT.STEP);
 //Collision
 scGravity();
 
-//Rocket shooting
-scRocketProgress(!shoot_face ? team : -1);
+//Weapon activate
+scWeaponProgress();
 
 //Combo handling (alters ultimate charge)
 scComboStep();

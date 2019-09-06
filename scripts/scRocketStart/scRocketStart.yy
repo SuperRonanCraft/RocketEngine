@@ -1,5 +1,5 @@
 {
-    "id": "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
+    "id": "8d677245-483e-47c4-a366-a6bb03bcb76b",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scRocketStart",

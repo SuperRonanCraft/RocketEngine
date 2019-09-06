@@ -202,20 +202,6 @@
             "varType": 3
         },
         {
-            "id": "09a5ff43-f603-4ffc-8d75-45c0d633ad2e",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "ROCKET.DEFAULT",
-            "varName": "starting_weapon",
-            "varType": 4
-        },
-        {
             "id": "022c4a73-55d6-434c-b977-d1d9ef7f0fe3",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

@@ -12,4 +12,5 @@ if (!destroy && other.owner != owner) {
 		//Run the default explosion event/script
 		event_user(0);
 	}
+	scPlaySound(SOUND.EFFECT_EXP);
 }

@@ -4,6 +4,7 @@
     "mvc": "1.0",
     "name": "Linux",
     "option_linux_allow_fullscreen": false,
+    "option_linux_disable_sandbox": false,
     "option_linux_display_cursor": true,
     "option_linux_display_name": "RocketMan 3.0 BETA",
     "option_linux_display_splash": false,

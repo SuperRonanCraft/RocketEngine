@@ -1,5 +1,5 @@
 /// @desc weapon clip
-if (rockets_enabled && hp > 0 && global.play && global.weapon_info) {
+if (!weapon_map[? WEAPON_MAP.ENABLED] && hp > 0 && global.play && global.weapon_info) {
 	var clip = rocket_map[? ROCKET_MAP.CLIP];
 	if (clip > 1) {
 		var xx = x - 30;

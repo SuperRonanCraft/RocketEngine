@@ -34,8 +34,8 @@ with (damageInst) {
 		didDamage = true;
 		scPlaySound(SOUND.EFFECT_HIT);
 	}
-	if (isPlayer) { //Do thing no matter taking damage or not
-		flash_alpha = 1;
+	if (isPlayer) { //Do this thing no matter what
+		playerMap[? PLAYER_MAP.FLASH_ALPHA] = 1;
 		scComboDamaged(shootInst);
 	}
 }

@@ -1,26 +1,30 @@
-if (!ult_enabled || !playerMap[? PLAYER_MAP.CAN_CONTROL] || !global.play) exit; //Is the system even enabled?
+var map = ultimate_map;
+
+if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !playerMap[? PLAYER_MAP.CAN_CONTROL] || !global.play) exit; //Is the system even enabled?
 
 var showultbar = false;
-if (ult_casting) {
+if (map[? ULTIMATE_CASTING_MAP.CASTING]) {
 	//Ultimate casting bar above players heads
 	showultbar = true;
 	//Casting script
-	if (!ds_map_empty(ult_casting_map))
-		if (ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] != noone)
-			script_execute(ult_casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_casting_map);
-} else if (ult_cast_time != ult_cast_time_max)
+	if (!ds_map_empty(map[? ULTIMATE_CASTING_MAP.CASTING_MAP])) {
+		var ult_map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP]
+		if (ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] != noone)
+			script_execute(ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map);
+	}
+} else if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] != map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX])
 	showultbar = true;
 
 if (showultbar && global.weapon_info) {
 	var len = 100, width = 3, margin = 2;
 	var yy = bbox_top - (width + margin), xx = x - (len / 2);
-	var percent = (ult_cast_time_max - ult_cast_time) / ult_cast_time_max;
+	var percent = (map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX] - map[? ULTIMATE_CASTING_MAP.CAST_TIME]) / map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX];
 	scDrawLine(xx - (margin / 2), yy, xx + len + (margin / 2), yy, c_gray, width + margin, 0.5);
 	scDrawLine(xx, yy, xx + (percent * len), yy, c_yellow, width, 0.5);
 }
 
 //Ultimate ready indicator
-if (ult_charge == ult_charge_max && hp > 0) {
+if (map[? ULTIMATE_CASTING_MAP.CHARGE] == map[? ULTIMATE_CASTING_MAP.CHARGE_MAX] && hp > 0) {
 	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
 	var dir = irandom(360);
 	var dis = irandom_range(20, 30);
@@ -28,7 +32,7 @@ if (ult_charge == ult_charge_max && hp > 0) {
 }
 
 //Casted script (one event)
-if (ult_casted_draw != noone) {
-	script_execute(ult_casted_draw);
-	ult_casted_draw = noone;
+if (map[? ULTIMATE_CASTING_MAP.CASTED_DRAW] != noone) {
+	script_execute(map[? ULTIMATE_CASTING_MAP.CASTED_DRAW]);
+	map[? ULTIMATE_CASTING_MAP.CASTED_DRAW] = noone;
 }

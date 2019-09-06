@@ -8,7 +8,8 @@ with (target) {
 	}
 }
 
-if (drawTargetting) {
+if (drawTargetting) { //No target
+	//scDrawPiePart(x, y, 1, 4, c_red, homingMap[? "len"], 0.5, 5);
 	var map = homingMap;
 	map[? "dir"] = clamp(map[? "dir"] + (map[? "dir_side"] * map[? "dir_change"]), -map[? "dir_max"], map[? "dir_max"]);
 	var dir = map[? "dir"];

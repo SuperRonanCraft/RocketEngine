@@ -27,11 +27,11 @@ if (!destroy && owner.team != other.team)
 		
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
 			scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
-		
+		scPlaySound(SOUND.EFFECT_EXP);
 		//Custom Explosion with a pShootable script
 		if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)
 			script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE], other);
 		else
-		//Run the default explosion event/script
-		event_user(0);
+			//Run the default explosion event/script
+			event_user(0);
 	}

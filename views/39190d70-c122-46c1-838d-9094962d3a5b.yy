@@ -6,7 +6,8 @@
     "children": [
         "2e3faef0-8b3b-4e91-bc28-29f582badc65",
         "2dafeaac-dcfc-4533-b268-e020fc82992f",
-        "12449f54-1379-48f1-9d5e-45a7d5c97022"
+        "12449f54-1379-48f1-9d5e-45a7d5c97022",
+        "c4a44cc8-8161-47da-95a7-9492b3f38545"
     ],
     "filterType": "GMSound",
     "folderName": "Effects",
