@@ -1,9 +1,9 @@
 /// @desc touching a player
 
 with (other)
-	if (hp > 0) {
+	if (player_map[? PLAYER_MAP.HEALTH] > 0) {
 		scDamageShootable(noone, id, false, false, 1, true);
-		if (hp > 0) {
+		if (player_map[? PLAYER_MAP.HEALTH] > 0) {
 			var xx = xstart, yy = ystart;
 			with (oGMMSingle) {
 				var check_point = scCheckpointGet(player_checkpoint);
@@ -18,7 +18,7 @@ with (other)
 			vsp_move = 0;
 			ds_map_add(other.respawns, id, other.respawn_time);
 			image_alpha = 0.5;
-			current_cd = other.respawn_time;
+			weapon_map[? WEAPON_MAP.COOLDOWN_TIME] = other.respawn_time;
 			//Toggle getting hit by rocket
 			rockets_hit = false;
 		}

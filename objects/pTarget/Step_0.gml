@@ -1,6 +1,6 @@
 /// @desc despawn
 
-if (timer > 0 && hp > 0) {
+if (timer > 0 && shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 	timer--;
 	image_alpha = min(image_alpha + alpha_reduction, 1);
 } else {
@@ -8,4 +8,4 @@ if (timer > 0 && hp > 0) {
 	if (image_alpha <= 0)
 		instance_destroy();
 }
-rockets_hit = image_alpha == 1;
+shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = image_alpha == 1;

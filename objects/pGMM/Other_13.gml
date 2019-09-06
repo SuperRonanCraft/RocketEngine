@@ -26,7 +26,7 @@ global.play = false;
 //Remove the ability to take damage
 for (var i = 0; i < ds_list_size(p_list); i++) {
 	var p = p_list[| i];
-	p.damage_take = false; //Remove the ability to take damage
+	p.shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = false; //Remove the ability to take damage
 }
 
 //Save winner

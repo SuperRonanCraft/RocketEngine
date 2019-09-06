@@ -16,28 +16,28 @@ var didDamage = false;
 var lethalDamage = false;
 
 with (damageInst) {
-	var map = player_map;
-	if ((damage_take /*&& shootInst != id*/) || force) {
-		map[? PLAYER_MAP.HEALTH] -= dmg;
+	var map = shootable_map;
+	if ((shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] /*&& shootInst != id*/) || force) {
+		map[? SHOOTABLE_MAP.HEALTH] -= dmg;
 		
-		if (map[? PLAYER_MAP.HEALTH] <= 0)
+		if (map[? SHOOTABLE_MAP.HEALTH] <= 0)
 			lethalDamage = true;
 			
 		if (isPlayer) {
+			player_map[? PLAYER_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH];
 			hp_scale = 2;
-			map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
-			
-			map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
+			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
+			player_map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
 			with (shootInst)
 				scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);
 		}
-		shooter = shootInst; //The person who shot them
+		map[? SHOOTABLE_MAP.SHOOTER] = shootInst; //The person who shot them
 		didDamage = true;
 		scPlaySound(SOUND.EFFECT_HIT);
 	}
 	if (isPlayer) { //Do this thing no matter what
-		map[? PLAYER_MAP.FLASH_ALPHA] = 1;
+		player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
 		scComboDamaged(shootInst);
 	}
 }

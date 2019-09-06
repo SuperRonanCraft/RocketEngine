@@ -62,7 +62,7 @@ global.gamemodeSRoom[GAMEMODE.SINGLE] = rSingleSelect;
 //Set on every StageSelect room
 global.stages = -1;
 //Saved after a stage is selected to play
-global.stage_selected = -1;
+//global.stage_selected = -1;
 global.play = true;
 
 //Other
