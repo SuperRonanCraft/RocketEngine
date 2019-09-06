@@ -48,4 +48,5 @@ switch (object_index) {
 		break;
 }
 
-roc.rocket_map[? ROCKET_MAP.HIT_PICKUP] = noone;
+var map = roc.weapon_map[? WEAPON_MAP.MAP];
+map[? ROCKET_MAP.HIT_PICKUP] = noone;

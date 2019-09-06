@@ -1,6 +1,8 @@
 /// @desc Default ultimate
 /// @arg null
 /// @arg direction
+
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 repeat (10)
 	with (scSpawnRocket(x, y, depth + 1, argument0, id, rocket_map)) {
 		rocket_map[? ROCKET_MAP.SPEED] *= 1.5;

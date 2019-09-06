@@ -4,7 +4,7 @@
 
 var sprite = argument[0];
 var loop = argument[1];
-var map = playerMap;
+var map = player_map;
 
 //Check if loop finished
 var loopFin = false;
@@ -35,7 +35,7 @@ if (loop == 0) {
 var currentSprite = map[? PLAYER_MAP.CURRENT_SPRITE];
 draw_sprite_ext(currentSprite, floor(animationVar), x, y, facing * image_xscale, image_yscale, 0, c_white, image_alpha);
 
-scFlash(playerMap[? PLAYER_MAP.FLASH_ALPHA], playerMap[? PLAYER_MAP.FLASH_COLOR],
+scFlash(map[? PLAYER_MAP.FLASH_ALPHA], map[? PLAYER_MAP.FLASH_COLOR],
 	facing * image_xscale, image_yscale, currentSprite, floor(animationVar), x, y); //Flash shader
 
 map[? PLAYER_MAP.ANIMATION_VAR] += (image_speed * time_dialation) * (loop == 2 ? -1 : 1);

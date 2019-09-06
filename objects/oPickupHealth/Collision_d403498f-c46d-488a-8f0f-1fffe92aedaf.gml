@@ -1,13 +1,14 @@
-if (!other.pickups_enabled || !global.play) exit;
+if (!other.player_map[? PLAYER_MAP.ENABLED_PICKUP] || !global.play) exit;
 //Add health to player
 
 if (item != noone) {
 	var added = false;
-	with (other)
-		if (hp > 0)
+	with (other) {
+		var map = player_map;
+		if (map[? PLAYER_MAP.HEALTH] > 0)
 			if (other.healing > 0) {
-				if (canHeal && hp + other.healing <= hp_original) {
-					hp += other.healing;
+				if (canHeal && map[? PLAYER_MAP.HEALTH] + other.healing <= map[? PLAYER_MAP.HEALTH_ORIGINAL]) {
+					map[? PLAYER_MAP.HEALTH] += other.healing;
 					hp_scale += 2;
 					added = true;
 				}
@@ -16,6 +17,7 @@ if (item != noone) {
 				scBuffAdd(BUFFTYPE.ANTIHEAL, id, id);
 				added = true;
 			}
+	}
 	if (added) { //Can collect the hp
 		timer_current = timer_org; //Reset the timer
 		timer = timer_org;

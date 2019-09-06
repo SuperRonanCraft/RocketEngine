@@ -14,21 +14,20 @@ if (clock = 0)
 
 //If the internal clock reaches the time in seconds, expire
 //Or if you are chilled
-if (scBuffFind(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]){
+if (scBuffFind(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Return to normal speed
 	owner.move_adj -= dsBuff[? "overallSpeed"];	
 	//Remove Burn Rush
 	scBuffRemove(owner, dsBuff);
 } else {
 	//Create a new item in the DS Map so that it isn't saved to the object
-	if (owner.hp > 0) {
+	if (owner.player_map[? PLAYER_MAP.HEALTH] > 0) {
 		dsBuff[? "speedup"] = owner.walksp * (1 - (clock / (dsBuff[? BUFF_MAP.TIME])));
 		owner.move_adj -= dsBuff[? "overallSpeed"];
 		owner.move_adj += dsBuff[? "speedup"];
 		dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];
 	} else 
 		dsBuff[? BUFF_MAP.CLOCK] = dsBuff[? BUFF_MAP.TIME];
-	
 	if (owner.standing && owner.hsp == 0) {
 		dsBuff[? "damage_crt"]--;
 		if (dsBuff[? "damage_crt"] < 0) {

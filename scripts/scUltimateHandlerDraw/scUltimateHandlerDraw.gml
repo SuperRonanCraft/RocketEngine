@@ -1,6 +1,14 @@
 var map = ultimate_map;
 
-if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !playerMap[? PLAYER_MAP.CAN_CONTROL] || !global.play) exit; //Is the system even enabled?
+if (map[? ULTIMATE_CASTING_MAP.CHARGE] >= ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {
+	if (!map[? ULTIMATE_CASTING_MAP.READY]) {
+		map[? ULTIMATE_CASTING_MAP.READY] = true;
+		instance_create_depth(x, y, depth - 1, oUltReady);
+	}
+} else
+	map[? ULTIMATE_CASTING_MAP.READY] = false;
+
+if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || !global.play) exit; //Is the system even enabled?
 
 var showultbar = false;
 if (map[? ULTIMATE_CASTING_MAP.CASTING]) {
@@ -24,7 +32,7 @@ if (showultbar && global.weapon_info) {
 }
 
 //Ultimate ready indicator
-if (map[? ULTIMATE_CASTING_MAP.CHARGE] == map[? ULTIMATE_CASTING_MAP.CHARGE_MAX] && hp > 0) {
+if (map[? ULTIMATE_CASTING_MAP.CHARGE] == map[? ULTIMATE_CASTING_MAP.CHARGE_MAX] && player_map[? PLAYER_MAP.HEALTH] > 0) {
 	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
 	var dir = irandom(360);
 	var dis = irandom_range(20, 30);

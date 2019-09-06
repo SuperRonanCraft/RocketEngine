@@ -1,5 +1,5 @@
 ///Determine which animation state the object is in
-var map = playerMap;
+var map = player_map;
 if (!map[? PLAYER_MAP.ANIMATION_OVERRIDE]) {
 	//Get state
 	scGetNormalAnimationState();
@@ -8,6 +8,6 @@ if (!map[? PLAYER_MAP.ANIMATION_OVERRIDE]) {
 	scDrawOtherAnimationState(map[? PLAYER_MAP.ANIMATION_STATE]);
 
 //Reduce the players flash amount
-playerMap[? PLAYER_MAP.FLASH_ALPHA] = 
-	max(playerMap[? PLAYER_MAP.FLASH_ALPHA] - 
-	playerMap[? PLAYER_MAP.FLASH_ALPHA_REDUCE], 0);
+map[? PLAYER_MAP.FLASH_ALPHA] = 
+	max(map[? PLAYER_MAP.FLASH_ALPHA] - 
+	map[? PLAYER_MAP.FLASH_ALPHA_REDUCE], 0);

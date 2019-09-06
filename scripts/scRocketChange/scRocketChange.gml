@@ -1,18 +1,21 @@
 /// @arg Weapon
-var weapon = argument0;
+var roc = argument0;
+var map = weapon_map;
+var old_rocket_map = map[? WEAPON_MAP.MAP];
 //Makes sure rocket is not the same as the one already equipped (everts auto reload)
-if (rocket_map[? ROCKET_MAP.TYPE] != weapon) {
+if (old_rocket_map[? ROCKET_MAP.TYPE] != roc) {
 	//Clear the map
 	//ds_map_destroy(rocket_map);
 	//All default values
 	//scRocketDefaults(rocket_map);
 	//Grab custom weapon keys
 	//scRocketGet(weapons[weapon], rocket_map);
-	rocket_map = scRocketGet(weapon);
-	ammo = rocket_map[? ROCKET_MAP.CLIP];
-	current_cd = 15;
-	rocket_scale = 2;
-	ult_casting = false; //Reset the ult timer
-	current_reload = 0;
-	weapon_map[? WEAPON_MAP.ULTIMATE] = rocket_map[? ROCKET_MAP.ULTIMATE];
+	var rocket_map = scRocketGet(roc);
+	map[? WEAPON_MAP.MAP] = rocket_map;
+	map[? WEAPON_MAP.AMMO] = rocket_map[? ROCKET_MAP.CLIP];
+	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
+	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
+	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
+	map[? WEAPON_MAP.RELOAD_TIME] = 0;
+	map[? WEAPON_MAP.ULTIMATE] = rocket_map[? ROCKET_MAP.ULTIMATE];
 }

@@ -28,8 +28,8 @@ switch (type) {
 }
 //Loop through all buffs
 var extras = argument_count > 1 ? argument[1] : noone;
-for (var b = 0; b < ds_list_size(buffs); b++) {
-    var buf = buffs[| b];
+for (var b = 0; b < ds_list_size(buffs_map); b++) {
+    var buf = buffs_map[| b];
 	//Apply the script contained within the buff DS Map
 	if (buf[? event] != noone)
 		script_execute(buf[? event], id, buf, extras);

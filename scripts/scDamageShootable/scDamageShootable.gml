@@ -16,16 +16,18 @@ var didDamage = false;
 var lethalDamage = false;
 
 with (damageInst) {
+	var map = player_map;
 	if ((damage_take /*&& shootInst != id*/) || force) {
-		hp -= dmg;
+		map[? PLAYER_MAP.HEALTH] -= dmg;
 		
-		if hp <= 0
+		if (map[? PLAYER_MAP.HEALTH] <= 0)
 			lethalDamage = true;
 			
 		if (isPlayer) {
 			hp_scale = 2;
-			hp_damaged = dmg;
-			hp_flash_alpha = 1;
+			map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
+			
+			map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
 			with (shootInst)
 				scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);
@@ -35,7 +37,7 @@ with (damageInst) {
 		scPlaySound(SOUND.EFFECT_HIT);
 	}
 	if (isPlayer) { //Do this thing no matter what
-		playerMap[? PLAYER_MAP.FLASH_ALPHA] = 1;
+		map[? PLAYER_MAP.FLASH_ALPHA] = 1;
 		scComboDamaged(shootInst);
 	}
 }
@@ -43,7 +45,7 @@ if (didDamage && delete)
 	instance_destroy(other);
 	
 	
-if(damageInst.causeOfDeath != noone)
+if (damageInst.causeOfDeath != noone)
 	lethalDamage = false;
 	
 return lethalDamage;

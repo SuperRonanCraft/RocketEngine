@@ -4,6 +4,7 @@
 var dir = 0;
 var amt = argument1[? "amt"];
 var offset = ((90 / amt) / 2);
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 for (var i = 0; i < amt; i++) {
 	//Set direction offset
 	if (argument0 == 0)

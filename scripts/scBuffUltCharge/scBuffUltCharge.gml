@@ -10,11 +10,11 @@ var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 //When the buff firt starts, apply the buff
 if (clock = 0)
-	owner.ult_charge_multiplier *= dsBuff[? "multiplier"];
+	owner.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] *= dsBuff[? "multiplier"];
 
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
-	owner.ult_charge_multiplier /= dsBuff[? "multiplier"];
+	owner.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] /= dsBuff[? "multiplier"];
 	scBuffRemove(owner, dsBuff);
 } else {
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 

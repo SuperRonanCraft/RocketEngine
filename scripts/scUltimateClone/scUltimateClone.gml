@@ -4,8 +4,8 @@ var inst = instance_create_depth(x, y, depth, oPlayer);
 with (inst) {
 	if (other.player_aimode)
 		aiBrain = other.aiBrain;
-	ult_enabled = false;
-	rockets_enabled = false;
+	ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = false;
+	weapon_map[? WEAPON_MAP.ENABLED] = false;
 	keyleft = other.keyright;
 	keyright = other.keyleft;
 	keyshoot = noone; //Cannot shoot

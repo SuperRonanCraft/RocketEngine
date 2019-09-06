@@ -7,10 +7,6 @@ var dsBuff = argument1;
 
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
-if (clock == 0) {
-	dsBuff[? "health_start"] = owner.hp;
-}
-
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	scBuffRemove(owner, dsBuff);
 } else {
@@ -21,8 +17,8 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	} else
 		dsBuff[? "parts_crt"]--;
 	
-	for (var i = 0; i < ds_list_size(owner.buffs); i++)	{
-		var buff = owner.buffs[| i];
+	for (var i = 0; i < ds_list_size(owner.buffs_map); i++)	{
+		var buff = owner.buffs_map[| i];
 		if (buff != dsBuff && !buff[? BUFF_MAP.GOOD])
 			buff[? BUFF_MAP.CLOCK] = buff[? BUFF_MAP.TIME] + 1;
 	}

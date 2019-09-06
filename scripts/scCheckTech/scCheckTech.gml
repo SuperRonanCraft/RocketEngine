@@ -2,7 +2,7 @@
 var key_jump = keyboard_check_pressed(keyjump);
 
 var techPossible = noone;
-var map = playerMap;
+var map = player_map;
 
 if (map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
 	for (var t = 0; t < 3; t++) {

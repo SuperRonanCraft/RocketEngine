@@ -8,7 +8,7 @@ var dsBuff = argument1;
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 if (clock == 0) {
-	dsBuff[? "health_start"] = owner.hp;
+	dsBuff[? "health_start"] = owner.player_map[? PLAYER_MAP.HEALTH];
 	dsBuff[? "sprite"] = sHealthBuff;
 	dsBuff[? "width"] = sprite_get_width(sHealthBuff) - 3;
 	dsBuff[? "alpha"] = 0.8;
@@ -27,8 +27,8 @@ if (clock > dsBuff[? BUFF_MAP.TIME] || dsBuff[? "health"] <= 0) { //Remove debuf
 	//DISPLAY HP
 	var hppart = dsBuff[? "health"] mod 2 / 2;
 	var index = 0, index_val = index;
-	for (var i = 0; i < ds_list_size(owner.buffs); i++) {
-		var buff = owner.buffs[| i];
+	for (var i = 0; i < ds_list_size(owner.buffs_map); i++) {
+		var buff = owner.buffs_map[| i];
 		if (buff[? BUFF_MAP.TYPE] == dsBuff[? BUFF_MAP.TYPE]) {
 			if (buff == dsBuff)
 				index_val = index;
@@ -41,7 +41,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME] || dsBuff[? "health"] <= 0) { //Remove debuf
 			var side = team == TEAM.LEFT ? 1 : -1;
 			var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset + (side * (index_val * (dsBuff[? "width"] * 2)));
 			var ypos = (hpheight + 6) * 2;
-			var scale = i * 2 <= hp + (hp_damaged - 1) && i * 2 > hp - 2 ? hp_scale : 1;
+			var scale = i * 2 <= player_map[? PLAYER_MAP.HEALTH] + (player_map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > player_map[? PLAYER_MAP.HEALTH] - 2 ? hp_scale : 1;
 			if (hppart != 0 && i == (dsBuff[? "health"] - (hppart * 2)) / 2) {
 				//var alpha = 0.9;
 				//var amt = 1;
@@ -57,7 +57,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME] || dsBuff[? "health"] <= 0) { //Remove debuf
 		}
 	}
 	
-	if (owner.hp > dsBuff[? "health_start"])
-		dsBuff[? "health_start"] = owner.hp;
+	if (owner.player_map[? PLAYER_MAP.HEALTH] > dsBuff[? "health_start"])
+		dsBuff[? "health_start"] = owner.player_map[? PLAYER_MAP.HEALTH];
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

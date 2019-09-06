@@ -1,6 +1,6 @@
 var map = ultimate_map;
 
-if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !playerMap[? PLAYER_MAP.CAN_CONTROL] || weapon_map[? WEAPON_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?
+if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || weapon_map[? WEAPON_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?
 
 if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGETYPE.TIME); exit;} //Give charge by time, exit
 
@@ -50,17 +50,16 @@ if (key_shoot) { //Shoot key being held down
 
 if (!shoot) exit; //Not shooting but we still have full ult charge!
 
-var map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP]; //Create an ult map
+var ult_map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP]; //Create an ult map
 //scUltimateGet(ult_casting_last, map); //Grab the ult map
-
-if (map[? ULTIMATE_MAP.CASTED_SCRIPT] != noone)
-	script_execute(map[? ULTIMATE_MAP.CASTED_SCRIPT], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), map); //Run the ult script, no arguments as the player is the shooter
-if (map[? ULTIMATE_MAP.CASTED_OBJECT] != noone)
-	with (instance_create_depth(x, y, depth + map[? ULTIMATE_MAP.CASTED_DEPTH], map[? ULTIMATE_MAP.CASTED_OBJECT]))
+if (ult_map[? ULTIMATE_MAP.CASTED_SCRIPT] != noone)
+	script_execute(ult_map[? ULTIMATE_MAP.CASTED_SCRIPT], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map); //Run the ult script, no arguments as the player is the shooter
+if (ult_map[? ULTIMATE_MAP.CASTED_OBJECT] != noone)
+	with (instance_create_depth(x, y, depth + ult_map[? ULTIMATE_MAP.CASTED_DEPTH], ult_map[? ULTIMATE_MAP.CASTED_OBJECT]))
 		owner = other;
-map[? ULTIMATE_CASTING_MAP.CASTED_DRAW] = map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW];
+map[? ULTIMATE_CASTING_MAP.CASTED_DRAW] = ult_map[? ULTIMATE_MAP.CASTED_SCRIPT_DRAW];
 map[? ULTIMATE_CASTING_MAP.CHARGE] = 0; //Reset the ult charge
-scPlaySound(map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound
+scPlaySound(ult_map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound
 
 //No longer casting
 map[? ULTIMATE_CASTING_MAP.CASTING] = false;

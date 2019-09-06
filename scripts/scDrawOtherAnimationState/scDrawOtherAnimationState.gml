@@ -4,7 +4,7 @@
 var overwrite = false;
 
 var state = argument[0];
-var map = playerMap;
+var map = player_map;
 
 switch (state) {
 	case ANIMATIONSTATE.TRAPPED:
@@ -39,7 +39,7 @@ if (!overwrite) {
 	var sprite_img = floor(map[? PLAYER_MAP.ANIMATION_VAR]);
 	draw_sprite_ext(sprite, sprite_img, x, y, 
 		facing * image_xscale, image_yscale, 0, c_white, image_alpha);
-	scFlash(playerMap[? PLAYER_MAP.FLASH_ALPHA], playerMap[? PLAYER_MAP.FLASH_COLOR], 
+	scFlash(map[? PLAYER_MAP.FLASH_ALPHA], map[? PLAYER_MAP.FLASH_COLOR], 
 		facing * image_xscale, image_yscale, sprite, sprite_img, x, y);
 }
 

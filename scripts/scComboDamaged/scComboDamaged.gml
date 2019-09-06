@@ -1,6 +1,6 @@
 /// @desc check if we're in a knockback state, add to the combo modifier
 /// @arg shooter-instance
-if (playerMap[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
+if (player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
 	with (argument0) {
 		if (object_index != oPlayer) exit;
 		combo_amount++;

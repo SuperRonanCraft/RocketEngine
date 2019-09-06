@@ -1,4 +1,4 @@
-//Progress a weapon (activate weapon)
+//Progress a weapon (step event of weapon)
 
 var map = weapon_map;
 

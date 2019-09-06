@@ -11,7 +11,7 @@ var dmg = arry[1];
 
 if (canHeal) {
 	repeat (dmg)
-		if (hp + 1 <= hp_original)
+		if (hp + 1 <= player_map[? PLAYER_MAP.HEALTH_ORIGINAL])
 			hp++;
 	hp_scale += 2;
 	

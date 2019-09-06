@@ -6,30 +6,33 @@ scBuffHandler(BUFF_EVENT.DRAW_GUI_BELOW);
 if (display) {
 //-----------------
 //Display health
-var hppart = hp mod 2 / 2;
-if (hp <= 2)
+//Display health
+var map = player_map;
+
+var hppart = map[? PLAYER_MAP.HEALTH] mod 2 / 2;
+if (map[? PLAYER_MAP.HEALTH] <= 2)
 	hp_offset = scMovementWave(-3, 3, 1);
 else
 	hp_offset = 0;
-for (var i = 0; i < hp_original / 2; i++) {
+for (var i = 0; i < map[? PLAYER_MAP.HEALTH_ORIGINAL] / 2; i++) {
 	//Show first ten hearts, then show additional hearts in text
 	if (i < 10) {
 		var len = hpwidth * i;
 		var side = team == TEAM.LEFT ? 1 : -1;
 		var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset;
 		var ypos = hpheight + 2;
-		var scale = i * 2 <= hp + (hp_damaged - 1) && i * 2 > hp - 2 ? hp_scale : 1;
-		var c = hp / 2 <= i ? c_white : hp_color;
-		if (hppart != 0 && i == (hp - (hppart * 2)) / 2) {
+		var scale = i * 2 <= map[? PLAYER_MAP.HEALTH] + (map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > map[? PLAYER_MAP.HEALTH] - 2 ? hp_scale : 1;
+		var c = map[? PLAYER_MAP.HEALTH] / 2 <= i ? c_white : hp_color;
+		if (hppart != 0 && i == (map[? PLAYER_MAP.HEALTH] - (hppart * 2)) / 2) {
 			var alpha = 0.9;
 			var amt = 1;
-			if (hp_flash_alpha > 0) //shader
+			if (map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] > 0) //shader
 				amt = 2;
 			for (var a = 0; a < amt; a++) {
 				if (a == 1) { //shader
 			 		shader_set(shFlashAlpha);
-					alpha = hp_flash_alpha;
-					c = hp_flash_color;
+					alpha = map[? PLAYER_MAP.FLASH_HEALTH_ALPHA];
+					c = map[? PLAYER_MAP.FLASH_HEALTH_COLOR];
 				} else {
 					xpos -= ((hpwidth * scale) / 2);
 					ypos -= (hpwidth * scale) / 2;
@@ -39,15 +42,15 @@ for (var i = 0; i < hp_original / 2; i++) {
 				draw_sprite_part_ext(hpsprite, side != 1 ? 0 : 1, hpwidth * hppart, 0, hpwidth - (hpwidth * hppart), hpheight,
 					xpos + (hpwidth * hppart * scale), ypos, scale, scale, side == 1 ? c_white : c, alpha);
 			}
-			if (hp_flash_alpha > 0) //shader
+			if (map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] > 0) //shader
 				shader_reset();
 		} else {
-			draw_sprite_ext(hpsprite, hp / 2 > i ? 0 : 1, xpos, ypos, scale, scale, 0, c, 0.8);
-			scFlash(hp_flash_alpha, hp / 2 > i ? hp_flash_color : c_white, scale, scale, hpsprite, hp > i ? 0 : 1, xpos, ypos);
+			draw_sprite_ext(hpsprite, map[? PLAYER_MAP.HEALTH] / 2 > i ? 0 : 1, xpos, ypos, scale, scale, 0, c, 0.8);
+			scFlash(map[? PLAYER_MAP.FLASH_HEALTH_ALPHA], map[? PLAYER_MAP.HEALTH] / 2 > i ? map[? PLAYER_MAP.FLASH_HEALTH_COLOR] : c_white, scale, scale, hpsprite, map[? PLAYER_MAP.HEALTH] > i ? 0 : 1, xpos, ypos);
 		}
 	} else {
-		if (hp < 20) break;
-		var str = "+" + string(hp - i);
+		if (map[? PLAYER_MAP.HEALTH] < 20) break;
+		var str = "+" + string(map[? PLAYER_MAP.HEALTH] - i);
 		var xpos = team == TEAM.LEFT ? 20 + (hpwidth * 8) : RES_W - 20 - (hpwidth * 8);
 		var ypos = hpheight + 10;
 		c = hp_scale == 1 ? c_white : c_red;
@@ -56,13 +59,13 @@ for (var i = 0; i < hp_original / 2; i++) {
 	}
 }
 hp_scale = max(hp_scale * 0.95, 1);
-hp_flash_alpha = max(hp_flash_alpha - hp_flash_reduce, 0);
+map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = max(map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] - map[? PLAYER_MAP.FLASH_HEALTH_ALPHA_REDUCE], 0);
 //-----------------
 //Display Buffs and Time
 offset = 0;
-for (var i = 0; i < ds_list_size(buffs); i++) {
+for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	//Grab the buff map
-	var ds_list = buffs[| i];
+	var ds_list = buffs_map[| i];
 	//Offset every 10 buffs
 	if (i mod 10 == 0)
 		offset++;
@@ -88,6 +91,7 @@ for (var i = 0; i < ds_list_size(buffs); i++) {
 	scDrawText(xpos + w / 2, ypos + h / 2, string(ceil(time / room_speed)), c_gray, 0.45);
 }
 //Display Rocket Equipped, Cooldown and Ultimate Charge
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	//The projectile sprite
 	var sprite = rocket_map[? ROCKET_MAP.PROJECTILE];
@@ -99,9 +103,9 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	var ypos = h / 2;
 	
 	var c = c_dkgray;
-	for (var i = 0; i < ds_list_size(buffs); i++) {
+	for (var i = 0; i < ds_list_size(buffs_map); i++) {
 		//Grab the buff map
-		var ds_list = buffs[| i];
+		var ds_list = buffs_map[| i];
 		//Is the buff a cooldown?
 		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
 			c = c_green;
@@ -129,54 +133,40 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	
 	//ROCKET COOLDOWN
-	if (rockets_enabled) {
-		var cd = ammo == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
-		var curr_cd = ammo == 0 ? current_reload : current_cd;
+	if (weapon_map[? WEAPON_MAP.ENABLED]) {
+		var cd = weapon_map[? WEAPON_MAP.AMMO] == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
+		var curr_cd = weapon_map[? WEAPON_MAP.AMMO] == 0 ? weapon_map[? WEAPON_MAP.RELOAD_TIME] : weapon_map[? WEAPON_MAP.COOLDOWN_TIME];
 		scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
 	}
 	
 	//ULTIMATE CHARGE CIRCLE
-	if (ult_enabled) {
-		var charge = round(ult_charge * (100 / ult_charge_max));
+	if (ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED]) {
+		var charge = round(ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] * (100 / ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]));
 		if (charge >= 100) {
 			var ang = irandom_range(0, 360);
 			scDrawLightning(xposcir, ypos, xposcir + lengthdir_x(32, ang), ypos + lengthdir_y(32, ang), irandom(5), c_blue);
 		}
 		var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
-		scDrawPiePart(xposcir, ypos, ult_charge, ult_charge_max, c, 28, 0.8, 9);
+		scDrawPiePart(xposcir, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE], ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX], c, 28, 0.8, 9);
 	
 		//ULTIMATE CASTTIME CIRCLE
-		scDrawPiePart(xposcir, ypos, ult_cast_time_max - ult_cast_time, ult_cast_time_max, c_yellow, 32, 0.9, 4);
+		scDrawPiePart(xposcir, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX] - ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME], ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX], c_yellow, 32, 0.9, 4);
 	
 		//ULTIMATE CHARGE TEXT
 		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,
 			0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
 		if (charge >= 100) {
-			if (!ult_justReady) {
-				ult_justReady = true;
-				ult_loc_x = x;
-				ult_loc_y = bbox_top;
-				ult_loc_alpha = 1;
-				ult_loc_timer_cur = 0;
-			}
-			
-			if (ult_loc_alpha > 0) {
-				scDrawText(ult_loc_x, ult_loc_y, "Ultimate ready!", c_yellow, 0.5, noone, ult_loc_alpha);
-				ult_loc_y -= 2 / TIME_SPEED;
-				ult_loc_alpha = max(ult_loc_alpha - (0.04 / TIME_SPEED), 0);
-			}
-			
 			var str = scKeyToString(keyleft) + " + " + scKeyToString(keyright);
 			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
 				0.5, noone, scMovementWave(0.8, 0.4, 1));
-		} else
-			ult_justReady = false;
+		}
 	}
 	//ROCKET EQUIPPED
-	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * rocket_scale, 1 * rocket_scale, 0, 
-		c_white, rockets_enabled ? 0.8 : 0.3);
+	var scale = weapon_map[? WEAPON_MAP.GUI_WEAPON_SCALE];
+	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * scale, 1 * scale, 0, 
+		c_white, weapon_map[? WEAPON_MAP.ENABLED] ? 0.8 : 0.3);
 	//Make the scale smaller over time
-	rocket_scale = max(rocket_scale * 0.95, 1);
+	weapon_map[? WEAPON_MAP.GUI_WEAPON_SCALE] = max(scale * 0.95, 1);
 }
 //Combos
 if (combo_amount > 1) {

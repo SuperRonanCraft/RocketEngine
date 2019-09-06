@@ -8,13 +8,13 @@ var targ = argument0;
 var buff = argument1;
 
 //Loop through each buff until type is found
-for (var b = 0; b < ds_list_size(targ.buffs); b++) {
-    var currentBuff = targ.buffs[| b];
+for (var b = 0; b < ds_list_size(targ.buffs_map); b++) {
+    var currentBuff = targ.buffs_map[| b];
 	
 	//If the buffs are the EXACT SAME
 	if (currentBuff == buff) {
 		//Delete from list
-		ds_list_delete(targ.buffs, b);
+		ds_list_delete(targ.buffs_map, b);
 		//Destroy to free up memory
 		ds_map_destroy(buff);
 		return true;	

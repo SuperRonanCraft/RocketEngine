@@ -1,8 +1,8 @@
 ///Special death animations
 
-var animState = playerMap[?PLAYER_MAP.ANIMATION_STATE];
+var animState = player_map[?PLAYER_MAP.ANIMATION_STATE];
 
-switch(causeOfDeath){
+switch (causeOfDeath) {
 	
 	case DEATH_LIST.FROZEN:
 		if(!animationDebounce){
@@ -14,8 +14,6 @@ switch(causeOfDeath){
 
 		part_emitter_region(global.ParticleSystem1, global.Emitter1,x- 10,x+10,y-10,y+10, ps_shape_ellipse, ps_distr_gaussian)
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SPARKLE],3);
-		
-		
 		break;
 	
 	case DEATH_LIST.LASER:
@@ -29,13 +27,9 @@ switch(causeOfDeath){
 		}
 		part_emitter_region(global.ParticleSystem1, global.Emitter1,x- 10,x+10,y-10,y+10, ps_shape_ellipse, ps_distr_gaussian)
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.ASH],2);
-		
-		break;
-			
-			
+		break;	
 	case noone:
 	default:
-	
 		if(animState != ANIMATIONSTATE.DEAD && animState != ANIMATIONSTATE.DEAD2 && standing){
 			if(sign(hsp) == facing)
 				animState = ANIMATIONSTATE.DEAD2;
@@ -48,13 +42,10 @@ switch(causeOfDeath){
 				else
 					animState = ANIMATIONSTATE.DEAD;	
 			}
-		
 		}
-		else if(!standing){
+		else if(!standing)
 			animState = ANIMATIONSTATE.FALLING;	
-		}
 		break;
-	
 }
 	
 return animState;

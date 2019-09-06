@@ -3,7 +3,7 @@
 
 characterSprites = ds_map_create();
 
-switch (playerMap[? PLAYER_MAP.CHARACTER]) {
+switch (player_map[? PLAYER_MAP.CHARACTER]) {
     case CHARACTERS.SWORD:
         characterSprites[? ANIMATIONSTATE.STANDING] = sPlayer_sword_idle;
 		characterSprites[? ANIMATIONSTATE.SLIDING] = sPlayer_sword_walkend;

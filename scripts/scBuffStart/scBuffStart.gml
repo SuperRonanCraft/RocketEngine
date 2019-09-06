@@ -1,1 +1,1 @@
-buffs = ds_list_create();
+buffs_map = ds_list_create();

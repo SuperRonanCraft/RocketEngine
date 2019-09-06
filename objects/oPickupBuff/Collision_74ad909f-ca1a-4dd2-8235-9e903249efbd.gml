@@ -1,4 +1,4 @@
-if (!other.pickups_enabled || !global.play) exit;
+if (!other.player_map[? PLAYER_MAP.ENABLED_PICKUP] || !global.play) exit;
 //Add buff to player
 
 if (item != noone) {

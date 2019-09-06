@@ -17,11 +17,12 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	if (clock % 2 == 0)
 		part_particles_create(global.ParticleSystem1, owner.x, owner.y, dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
 	with (owner) {
-		if (current_cd > rocket_map[? ROCKET_MAP.COOLDOWN] / 2)
-			current_cd = rocket_map[? ROCKET_MAP.COOLDOWN] / 2;
-		if (current_reload > rocket_map[? ROCKET_MAP.RELOAD_TIME] / 2) {
-			ammo = rocket_map[? ROCKET_MAP.CLIP];
-			current_reload = 0;
+		var map = weapon_map;
+		if (map[? WEAPON_MAP.COOLDOWN_TIME] > rocket_map[? ROCKET_MAP.COOLDOWN] / 2)
+			map[? WEAPON_MAP.COOLDOWN_TIME] = rocket_map[? ROCKET_MAP.COOLDOWN] / 2;
+		if (map[? WEAPON_MAP.RELOAD_TIME] > rocket_map[? ROCKET_MAP.RELOAD_TIME] / 2) {
+			map[? WEAPON_MAP.AMMO] = rocket_map[? ROCKET_MAP.CLIP];
+			map[? WEAPON_MAP.RELOAD_TIME] = 0;
 		}
 	}
 	//Also, increaase the clock. Essential for every buff.

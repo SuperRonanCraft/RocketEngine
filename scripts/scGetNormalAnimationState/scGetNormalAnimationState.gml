@@ -1,5 +1,5 @@
  ///The normal animation for an object
-var map = playerMap;
+var map = player_map;
 var animState = map[? PLAYER_MAP.ANIMATION_STATE];
 if (map[? PLAYER_MAP.ALIVE] && hsp == 0 && vsp == 0 && standing)
 	animState = ANIMATIONSTATE.STANDING;

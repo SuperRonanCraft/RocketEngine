@@ -15,25 +15,19 @@ event_inherited();
 //Load Sprites
 scCharacterSprites();
 
-//Health
-hp = 20;
-hp_original = hp;
+//GUI
 hp_scale = 1;
-hp_damaged = 0; //Amount of damage taken last time
 hpsprite = sHealth;
 hpheight = sprite_get_height(hpsprite);
 hpwidth = sprite_get_width(hpsprite);
-hp_flash_alpha = 0;
-hp_flash_reduce = 0.05 / TIME_SPEED;
-hp_flash_color = c_red;
 hp_color = c_white;
 hp_offset = 0;
 
-//Load Rockets
-scWeaponStart(WEAPON.SHRUKEN);
-
 //Load Ultimates
 scUltimateStart();
+
+//Load Rockets
+scWeaponStart(WEAPON.ROCKET);
 
 //Load Combos
 scComboStart();

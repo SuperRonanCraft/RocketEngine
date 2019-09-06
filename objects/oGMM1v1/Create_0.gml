@@ -6,6 +6,7 @@ timer_current = timer;
 
 //Alter hp and ults
 with (oPlayer) {
+	var hp = player_map[? PLAYER_MAP.HEALTH];
 	switch (global.mode_1v1_health) {
 		case 0: hp /= 10; break;
 		case 1: hp /= 2; break;
@@ -14,7 +15,8 @@ with (oPlayer) {
 		case 4: hp *= 5; break;
 		case 5: hp *= 10; break;
 	}
-	hp_original = hp;
+	player_map[? PLAYER_MAP.HEALTH] = hp;
+	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
 	scStageUltimateStart(global.mode_1v1_ultimates);
 	rockets_enabled = global.mode_1v1_rockets;
 	if (global.mode_1v1_singleplayer == 1 && team == TEAM.RIGHT)

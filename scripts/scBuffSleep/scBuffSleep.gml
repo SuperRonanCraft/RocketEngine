@@ -8,8 +8,8 @@ var dsBuff = argument1;
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
-	owner.playerMap[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
-	owner.playerMap[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
+	owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
+	owner.player_map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
 	scBuffRemove(owner, dsBuff);
 } else {
 	if (dsBuff[? "parts_crt"] <= 0) {
@@ -18,10 +18,10 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 		dsBuff[? "parts_crt"] = dsBuff[? "parts_amt"];
 	} else
 		dsBuff[? "parts_crt"]--;
-	if (owner.playerMap[? PLAYER_MAP.PLAYER_STATE] != PLAYERSTATE.KNOCKBACK)
+	if (owner.player_map[? PLAYER_MAP.PLAYER_STATE] != PLAYERSTATE.KNOCKBACK)
 		if (clock > dsBuff[? BUFF_MAP.TIME] - (10 * TIME_SPEED))
-			owner.playerMap[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.WAKING;
+			owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.WAKING;
 		else
-			owner.playerMap[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.SLEEPING;
+			owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.SLEEPING;
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

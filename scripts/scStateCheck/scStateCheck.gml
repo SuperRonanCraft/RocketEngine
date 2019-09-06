@@ -1,6 +1,6 @@
 ///Check the player states
 
-var map = playerMap;
+var map = player_map;
 
 switch (map[? PLAYER_MAP.PLAYER_STATE]) {
 	case PLAYERSTATE.TECHED:

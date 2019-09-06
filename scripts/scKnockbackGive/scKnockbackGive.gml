@@ -19,8 +19,8 @@ if (side) //facing left
 else
 	dir = clamp(45 + diff, 45, 80);
 
-owner.playerMap[? PLAYER_MAP.CAN_CONTROL] = false;
-owner.playerMap[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.KNOCKBACK;
+owner.player_map[? PLAYER_MAP.CAN_CONTROL] = false;
+owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.KNOCKBACK;
 var hval = lengthdir_x(maxH, dir), vval = lengthdir_y(maxV, dir);
 owner.hsp_knockback = hval;
 owner.vsp_knockback = vval;// * sign(owner.grv_dir);

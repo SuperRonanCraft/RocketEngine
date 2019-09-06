@@ -43,11 +43,13 @@ for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAU
 }
 
 with (oPlayer) {
+	var hp = player_map[? PLAYER_MAP.HEALTH];
 	switch (global.mode_targets_difficulty) {
 		case 0: hp = 10; break;
 		case 1: hp = 6; break;
 		case 2: hp = 2; break;
 	}
-	hp_original = hp;
+	player_map[? PLAYER_MAP.HEALTH] = hp;
+	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
 	scRocketChange(rocindex);
 }

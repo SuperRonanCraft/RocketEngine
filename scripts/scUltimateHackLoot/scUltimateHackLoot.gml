@@ -4,6 +4,7 @@ var keys = [ROCKET_MAP.HIT_PICKUP, ROCKET_MAP.ROCKET_STEP, ROCKET_MAP.ROCKET_CRE
 	ROCKET_MAP.ROCKET_DESTROY, ROCKET_MAP.PARTICLE_TRAIL, ROCKET_MAP.PARTICLE_AMT, ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION];
 var values = [scUltimateHackLoot_ExpLoot, noone, noone, noone, 
 	oParticleHandler.ds_part[? PARTICLES.HACK], 1, false];
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 var amt = instance_number(pPickup);
 for (var i = 0; i < amt; i++) {
 	var inst = instance_find(pPickup, i);

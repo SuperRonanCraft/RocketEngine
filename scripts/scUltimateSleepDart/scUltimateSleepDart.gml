@@ -1,5 +1,6 @@
 /// @desc Sleep ultimate
 /// @arg direction
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 with (scSpawnRocket(x, y, depth + 1, argument0, id, rocket_map, [ROCKET_MAP.ROCKET_ALPHA, ROCKET_MAP.SPEED, ROCKET_MAP.ROCKET_CREATE], [0.5, 15, scRocketSpecialHoming_Create])) {
 	rocket_map[? ROCKET_MAP.DAMAGE] = 3;
 	rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;

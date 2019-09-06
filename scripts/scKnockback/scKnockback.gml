@@ -7,7 +7,7 @@ if (knockback_time == 0) exit; //No knockback, exit
 part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? PARTICLES.KBSMOKE], 1);
 //hsp_move = 0;
 //animate correctly
-var map = playerMap;
+var map = player_map;
 if (map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK && map[? PLAYER_MAP.ALIVE])
 	if (sign(facing) == sign(hsp_knockback))
 		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.KNOCKBACK2;
