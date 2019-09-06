@@ -53,7 +53,7 @@ scCheckHealth();
 scKnockback();
 
 //Mostly meant for clones
-if (despawn && ((playerMap[? PLAYER_MAP.HEALTH] <= 0 && playerMap[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.DEAD && vsp == 0) || image_alpha != 1)) { //Despawn player object
+if (despawn && ((player_map[? PLAYER_MAP.HEALTH] <= 0 && player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.DEAD && vsp == 0) || image_alpha != 1)) { //Despawn player object
 	image_alpha -= 0.025;
 	if (image_alpha <= 0)
 		instance_destroy();

@@ -1,6 +1,6 @@
 /// @arg index of ultimate
 switch (argument0) {
-	case 0: ult_enabled = false; break;
+	case 0: ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = false; break;
 	case 1: break;
-	case 2: ult_charge_multiplier *= 10;
+	case 2: ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] *= 10;
 }
