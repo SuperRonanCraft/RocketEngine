@@ -8,7 +8,7 @@ for (var i = 0; i <	ds_map_size(respawns); i++) {
 	var time = respawns[? p];
 	if (time <= 0) {
 		p.image_alpha = 1;
-		p.rockets_hit = true;
+		p.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT] = true;
 		ds_map_delete(respawns, p);
 		break;
 	} else

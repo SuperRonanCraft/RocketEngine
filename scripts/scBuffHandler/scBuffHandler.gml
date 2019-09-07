@@ -31,8 +31,12 @@ var extras = argument_count > 1 ? argument[1] : noone;
 for (var b = 0; b < ds_list_size(buffs_map); b++) {
     var buf = buffs_map[| b];
 	//Apply the script contained within the buff DS Map
-	if (buf[? event] != noone)
+	if (buf[? event] != noone) {
+		var stack_info = buf[? BUFF_MAP.STACK_INFO]
+		if (stack_info[0] == BUFF_STACK_TYPE.COMBO && stack_info[2] < stack_info[1])
+			exit;
 		script_execute(buf[? event], id, buf, extras);
+	}
 }
 
 enum BUFF_EVENT {

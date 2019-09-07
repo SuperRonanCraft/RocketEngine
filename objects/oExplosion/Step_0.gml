@@ -6,6 +6,9 @@ if (doing_damage)
 			ds_list_add(confirmList, hitList[| i]);
 			if (!instance_exists(hitList[| i])) {ds_list_delete(hitList, i); break;} //Not exist?
 			var p = hitList[| i]; //Shootable instance
+			
+			if (!p.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do not interact with this shootable
+			
 			var isPlayer = p.object_index == oPlayer;
 			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
 			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)

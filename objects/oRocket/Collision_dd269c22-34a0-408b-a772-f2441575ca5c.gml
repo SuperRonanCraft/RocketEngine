@@ -8,7 +8,8 @@ if (!destroy && (isPlayer ? owner.team != other.team : true)) //Not destroy and 
 	if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this player before
 		ds_list_add(confirmList, other);
 		ds_list_add(hitList, other);
-		if (!other.shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE]) exit; //Do nothing to the player, don't allow rocket to interact
+		
+		if (!other.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do nothing to the player, don't allow rocket to interact
 
 		if (isPlayer) {
 			//Add buff

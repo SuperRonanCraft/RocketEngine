@@ -14,7 +14,7 @@ map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 1;
 
 switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.ROCKET:
-		scRocketStart(ROCKET.DEFAULT);
+		scRocketStart(ROCKET.SLIME);
 		break;
 	case WEAPON.SHRUKEN:
 		//scShrukenStart();

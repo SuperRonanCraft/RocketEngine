@@ -10,7 +10,7 @@ ds_map[? BUFF_MAP.DESCRIPTION] = "Description"; //REQUIRED
 ds_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH; //REQUIRED
 ds_map[? BUFF_MAP.TIME] = 5 * room_speed; //5 seconds uptime by default (noone for infinite)
 ds_map[? BUFF_MAP.CLOCK] = 0;
-ds_map[? BUFF_MAP.STACKABLE] = false;
+ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.NONE];
 ds_map[? BUFF_MAP.ENABLED] = true;
 ds_map[? BUFF_MAP.GIVEN_BY] = noone;
 //OPTIONAL
@@ -109,7 +109,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.BLEED];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.BLEED];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.STACKABLE] = true; //Only buff that is stackable (timer doesn't reset)
+		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.MULTIPLE];
 		ds_map[? BUFF_MAP.TIME] = 4 * room_speed;
 		break;
 	case BUFFTYPE.HACKED:
@@ -209,6 +209,8 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
+		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.COMBO, 5, 1]; //Type, amount, current
+		//ds_map[? BUFF_MAP.STACK_TYPE_VALUE] = 5;
 		ds_map[? "color"] = c_purple;
 		ds_map[? "alpha"] = 0.8;
 		ds_map[? "scale_org"] = 0.3;
@@ -228,7 +230,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
-		ds_map[? BUFF_MAP.STACKABLE] = true;
+		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.MULTIPLE, 5];
 		ds_map[? "health"] = 4;
 		ds_map[? "parts_crt"] = 0;
 		ds_map[? "parts_amt"] = 5;
@@ -269,7 +271,8 @@ enum BUFF_MAP {
 	//SCRIPTS
 	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN,
 	//GENERAL
-	CLOCK, TIME, TYPE, STACKABLE, ENABLED, GOOD, GIVEN_BY
+	CLOCK, TIME, TYPE, ENABLED, GOOD, GIVEN_BY, 
+	STACK_INFO, //stack type of buff
 }
 
 enum BUFF_ICON {
@@ -292,4 +295,10 @@ enum BUFFTYPE {
 	
 	//PUT LAST
 	LENGHT
+}
+
+enum BUFF_STACK_TYPE {
+	NONE, //Just reapply the buff
+	MULTIPLE, //Adds another copy of buff
+	COMBO, //stacks up to certain value, then applies buff (requires stack_type_value)
 }

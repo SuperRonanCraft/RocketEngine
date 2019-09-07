@@ -12,7 +12,7 @@ scAllowCharacterSelect(); //Character selector allowed
 //Remove the ability to take damage
 for (var i = 0; i < instance_number(oPlayer); i++) {
 	var p = instance_find(oPlayer, i); //Find the player
-	p.damage_take = false; //Set damage take to false
+	p.shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = false; //Set damage take to false
 }
 
 //Alter hp and ults

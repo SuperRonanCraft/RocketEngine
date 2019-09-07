@@ -9,7 +9,7 @@ var arry = argument2;
 var inst = arry[0];
 var dmg = arry[1];
 
-if (canHeal) {
+if (shootable_map[? SHOOTABLE_MAP.CAN_HEAL]) {
 	repeat (dmg)
 		if (player_map[? PLAYER_MAP.HEALTH] + 1 <= player_map[? PLAYER_MAP.HEALTH_ORIGINAL])
 			player_map[? PLAYER_MAP.HEALTH]++;

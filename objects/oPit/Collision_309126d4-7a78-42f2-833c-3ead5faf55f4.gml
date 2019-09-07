@@ -19,7 +19,7 @@ with (other)
 			ds_map_add(other.respawns, id, other.respawn_time);
 			image_alpha = 0.5;
 			weapon_map[? WEAPON_MAP.COOLDOWN_TIME] = other.respawn_time;
-			//Toggle getting hit by rocket
-			rockets_hit = false;
+			//Toggle getting hit by anything
+			shootable_map[? SHOOTABLE_MAP.CAN_INTERACT] = false;
 		}
 	}

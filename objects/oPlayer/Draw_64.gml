@@ -80,13 +80,16 @@ for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	
 	//BUFF TIME
-	if (ds_list[? BUFF_MAP.TIME] != noone) {
-		var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
-		var maxtime = ds_list[? BUFF_MAP.TIME];
-		scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 4, 0.65);
-	}
+	//if (ds_list[? BUFF_MAP.TIME] != noone) {
+	var time = ds_list[? BUFF_MAP.TIME] - ds_list[? BUFF_MAP.CLOCK];
+	var maxtime = ds_list[? BUFF_MAP.TIME];
+	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 4, 0.65);
+	//}
 	
-	//BUFF ICON
+	var stack_info = ds_list[? BUFF_MAP.STACK_INFO];
+	if (stack_info[0] == BUFF_STACK_TYPE.COMBO && stack_info[2] < stack_info[1])
+		time = (stack_info[2] * room_speed);
+	//BUFF ICON & TIME REMAINING
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.55);
 	scDrawText(xpos + w / 2, ypos + h / 2, string(ceil(time / room_speed)), c_gray, 0.45);
 }
