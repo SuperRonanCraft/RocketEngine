@@ -119,7 +119,7 @@ if (inputting) { //Are we inputting data?
 		mouse_y_old = device_mouse_y_to_gui(0);
 		if (page_workingon == page) //Make sure we are working on the current page
 			for (var i = 0; i < ds_grid_height(ds_grid); i++) {
-				var yoffset = (y_buffer / 3), ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val, xoffset = string_width(text) * scale_main_hovering;
+				var ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
 				for (var a = 0; a < array_length_1d(menu_special); a++)
 					if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
 				if (!ignore && is_array(start_x) && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right)) {
@@ -156,10 +156,10 @@ if (inputting) { //Are we inputting data?
 					if (ds_grid[# 1, option] == menu_element_type.toggle_live) {
 						val = ds_grid[# 4, option];
 						val = clamp(val + ochange, 0, 1);
-						key_enter = true;
 						if (val != ds_grid[# 4, option]) {
 							ds_grid[# 4, option] = val;
-							script_execute(ds_grid[# 2, option], val);
+							//script_execute(ds_grid[# 2, option], val);
+							key_enter = true;
 						}
 					} else if (option + ochange >= 0 && option + ochange < ds_height) {
 						if (start_y[option] == start_y[option + ochange]) 
@@ -213,6 +213,16 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 				variable_global_set(ds_grid[# 5, op], ds_grid[# 6, op]);
 			}
 			inputting = !inputting; break;
+		case menu_element_type.toggle_live:
+			if (key_enter_mouse) {
+				var val = ds_grid[# 4, menu_option[page]];
+				val = clamp(val + 1, 0, 1);
+				if (val == ds_grid[# 4, menu_option[page]])
+					val = clamp(val - 1, 0, 1);
+				ds_grid[# 4, menu_option[page]] = val;
+			}
+			script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+			break;
 		//Input elements
 		case menu_element_type.slider: //If its a slider
 			if (inputting && option == menu_element_type.slider) {

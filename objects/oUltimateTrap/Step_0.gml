@@ -47,8 +47,8 @@ if (!standing) { //Collision
 }
 
 with (trapped) {
-	if (hp == other.trapped_hp) {
-		playerMap[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.TRAPPED;
+	if (player_map[? PLAYER_MAP.HEALTH] == other.trapped_hp) {
+		player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.TRAPPED;
 		other.x = x;
 		other.y = bbox_bottom - (other.bbox_bottom - other.y);
 	} else

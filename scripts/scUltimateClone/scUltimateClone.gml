@@ -12,8 +12,8 @@ with (inst) {
 	team = other.team; //Same team as caster
 	display = false; //No ui
 	ult_enabled = false; //Disable ult
-	hp = 1; //One hit kill
-	hp_original = 1;
+	player_map[? PLAYER_MAP.HEALTH] = 1; //One hit kill
+	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = 1;
 	despawn = true; //Despawn player if dead
 	walksp += random_range(-2, 2);
 }
