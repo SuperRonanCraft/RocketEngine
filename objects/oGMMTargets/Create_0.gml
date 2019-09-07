@@ -49,6 +49,7 @@ with (oPlayer) {
 		case 1: hp = 6; break;
 		case 2: hp = 2; break;
 	}
+	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
 	player_map[? PLAYER_MAP.HEALTH] = hp;
 	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
 	scRocketChange(rocindex);

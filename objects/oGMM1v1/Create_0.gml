@@ -15,6 +15,7 @@ with (oPlayer) {
 		case 4: hp *= 5; break;
 		case 5: hp *= 10; break;
 	}
+	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
 	player_map[? PLAYER_MAP.HEALTH] = hp;
 	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
 	scStageUltimateStart(global.mode_1v1_ultimates);

@@ -1,5 +1,5 @@
-/// @arg type
-/// @arg enum
+/// @arg stat-type
+/// @arg stat-gamemode
 /// @arg gamemode*
 
 var val = "ERROR";
@@ -33,9 +33,9 @@ switch (type) {
 		}
 		break;
 	case STATISTICS_TYPE.VALUE_GAMEMODE:
-		val = oDataCollector.data_cache[? scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, enu) + string(argument[2])]; break;
+		val = oStatisticsHandler.stats_map[? scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, enu) + string(argument[2])]; break;
 	case STATISTICS_TYPE.VALUE_GENERAL:
-		val = oDataCollector.data_cache[? scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, enu)]; break;
+		val = oStatisticsHandler.stats_map[? scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, enu)]; break;
 }
 
 return val;

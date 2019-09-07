@@ -8,10 +8,10 @@ var dsBuff = argument1;
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
 if (clock == 0)
-	owner.canHeal = false;
+	owner.shootable_map[? SHOOTABLE_MAP.CAN_HEAL] = false;
 
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
-	owner.canHeal = true;
+	owner.shootable_map[? SHOOTABLE_MAP.CAN_HEAL] = true;
 	scBuffRemove(owner, dsBuff);
 } else {
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-25, 25), y + irandom_range(-30, 30), 
@@ -25,12 +25,12 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	
 	if (owner.display)
 		with (owner)
-			for (var i = 0; i < hp_original / 2 && i < 10; i++) {
+			for (var i = 0; i < player_map[? PLAYER_MAP.HEALTH_ORIGINAL] / 2 && i < 10; i++) {
 				var len = hpwidth * i;
 				var side = team == TEAM.LEFT ? 1 : -1;
 				var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset;
 				var ypos = hpheight + 2;
-				var scale = i * 2 <= hp + (hp_damaged - 1) && i * 2 > hp - 2 ? hp_scale : 1;
+				var scale = i * 2 <= player_map[? PLAYER_MAP.HEALTH] + (player_map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > player_map[? PLAYER_MAP.HEALTH] - 2 ? hp_scale : 1;
 				scFlash(dsBuff[? "alpha"], dsBuff[? "color"], scale + dsBuff[? "scale"], scale + dsBuff[? "scale"], hpsprite, hp > i ? 0 : 1, xpos, ypos);
 			}
 		

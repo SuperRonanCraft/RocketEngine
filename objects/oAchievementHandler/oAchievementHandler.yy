@@ -2,7 +2,7 @@
     "id": "4cb791c3-7f48-4c1c-a196-04195abba9cb",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oAchievements",
+    "name": "oAchievementHandler",
     "eventList": [
         {
             "id": "095e5f1d-501d-4925-9c44-0bb7ba0c260a",

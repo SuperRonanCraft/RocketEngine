@@ -7,7 +7,7 @@ if (item != noone) {
 		var map = player_map;
 		if (map[? PLAYER_MAP.HEALTH] > 0)
 			if (other.healing > 0) {
-				if (canHeal && map[? PLAYER_MAP.HEALTH] + other.healing <= map[? PLAYER_MAP.HEALTH_ORIGINAL]) {
+				if (shootable_map[? SHOOTABLE_MAP.CAN_HEAL] && map[? PLAYER_MAP.HEALTH] + other.healing <= map[? PLAYER_MAP.HEALTH_ORIGINAL]) {
 					map[? PLAYER_MAP.HEALTH] += other.healing;
 					hp_scale += 2;
 					added = true;

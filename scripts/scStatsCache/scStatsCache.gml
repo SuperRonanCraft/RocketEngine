@@ -12,7 +12,7 @@ var keys = argument[1];
 var vals = argument[2];
 
 //STATISTICS
-var map = oDataCollector.data_cache;
+var map = oStatisticsHandler.stats_map;
 
 switch (type) {
 	case STATISTICS_TYPE.VALUE_GAMEMODE:

@@ -1,3 +1,3 @@
 /// @desc set defaults
 event_inherited();
-hp = 1;
+shootable_map[? SHOOTABLE_MAP.HEALTH] = 1;

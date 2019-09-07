@@ -986,7 +986,7 @@
             "Key": "2c9b5621-953f-420c-a60b-cbf1a1cab1ec",
             "Value": {
                 "id": "613368ca-0736-4464-9a07-7fbb01a5d040",
-                "resourcePath": "objects\\oDataCollector\\oDataCollector.yy",
+                "resourcePath": "objects\\oStatisticsHandler\\oStatisticsHandler.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1738,7 +1738,7 @@
             "Key": "4cb791c3-7f48-4c1c-a196-04195abba9cb",
             "Value": {
                 "id": "6851a158-777e-40f7-ba19-ffb6ccefa483",
-                "resourcePath": "objects\\oAchievements\\oAchievements.yy",
+                "resourcePath": "objects\\oAchievementHandler\\oAchievementHandler.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3252,6 +3252,14 @@
                 "id": "a1efe53a-c7f6-416a-98b1-f6d917d504a1",
                 "resourcePath": "scripts\\scRocketSpecialHoming_Create\\scRocketSpecialHoming_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9380c966-1984-4e24-847c-e598e66eed8e",
+            "Value": {
+                "id": "e3dc5b09-f7e1-42cc-ad68-65c3dc3c4dc1",
+                "resourcePath": "views\\9380c966-1984-4e24-847c-e598e66eed8e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

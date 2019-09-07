@@ -12,7 +12,9 @@ if (global.winner == TEAM.LEFT) {
 var gm = global.gamemode;
 switch (gm) {
 	case GAMEMODE.TARGETS:
-		if (points > scStatsGetType(STATISTICS_GAMEMODE, STATISTICS_GAMEMODE.GM_TARGETS_POINTS, gm)) //High score
+		show_debug_message(points);
+		show_debug_message(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_TARGETS_POINTS, gm));
+		if (points > scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_TARGETS_POINTS, gm)) //High score
 			scStatsSaveGamemode(gm, [points]); break;
 	default:
 		//MODE P1, MODE P2, STAGE P1, STAGE P2

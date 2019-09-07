@@ -4,7 +4,7 @@ ini_open(scFileGetType(FILES.DATABASE)); //Open stream
 
 //STATISTICS
 
-var map = oDataCollector.data_cache;
+var map = oStatisticsHandler.stats_map;
 
 var sec = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, STATISTICS_GENERAL.SECTION);
 for (var i = 0; i < STATISTICS_GENERAL.SECTION; i++) { //Interate through each key

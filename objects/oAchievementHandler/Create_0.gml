@@ -1,7 +1,7 @@
 /// @desc Achievements
 
 alarm_set(0, room_speed * 10); //Start schievement listener
-achievementMap = ds_map_create();
+achieve_map = ds_map_create();
 scAchievementsLoad();
 
 achievement_display = false;
@@ -24,4 +24,4 @@ ach_pause_time_crt = ach_pause_time;
 ach_x_crt = ach_xstart;
 ach_playedsound = false;
 
-ach_save_file = false;
+//ach_save_file = false;

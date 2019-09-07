@@ -2,7 +2,7 @@
     "id": "2c9b5621-953f-420c-a60b-cbf1a1cab1ec",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oDataCollector",
+    "name": "oStatisticsHandler",
     "eventList": [
         {
             "id": "48b40b48-e8c9-4008-a5d2-5ad5814109d9",

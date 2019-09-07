@@ -8,4 +8,4 @@ if (timer > 0 && shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 	if (image_alpha <= 0)
 		instance_destroy();
 }
-shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = image_alpha == 1;
+//shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = image_alpha != 1;

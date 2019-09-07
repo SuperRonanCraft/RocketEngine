@@ -61,7 +61,7 @@ switch (type) {
 		}
 		break;
 	case ACHIEVEMENT_TYPE.VALUE:
-		val = oAchievements.achievementMap[? scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, enu)]; break;
+		val = oAchievementHandler.achieve_map[? scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, enu)]; break;
 	case ACHIEVEMENT_TYPE.TRACKING: //REQUIRED
 		switch (enu) {
 			case ACHIEVEMENTS.ROCKETS_SHOT_10000:

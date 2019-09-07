@@ -4,7 +4,7 @@ ini_open(scFileGetType(FILES.ACHIEVEMENTS)); //Open stream
 
 //ACHIEVEMENTS
 var sec = scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, ACHIEVEMENTS.SECTION);
-var map = oAchievements.achievementMap;
+var map = oAchievementHandler.achieve_map;
 
 for (var i = 0; i < ACHIEVEMENTS.SECTION; i++) {
 	var key = scAchievementsGetType(ACHIEVEMENT_TYPE.SECTION, i); //Achievement type

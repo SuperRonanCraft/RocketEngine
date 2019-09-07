@@ -8,7 +8,7 @@ ini_open(scFileGetType(FILES.DATABASE)); //Open stream
 
 //STATISTICS
 
-var map = oDataCollector.data_cache;
+var map = oStatisticsHandler.stats_map;
 var mode = string(gm);
 var sec = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, STATISTICS_GAMEMODE.SECTION) + mode;
 switch (gm) {

@@ -17,7 +17,7 @@ var lethalDamage = false;
 
 with (damageInst) {
 	var map = shootable_map;
-	if ((shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] /*&& shootInst != id*/) || force) {
+	if ((map[? SHOOTABLE_MAP.CAN_DAMAGE] /*&& shootInst != id*/) || force) {
 		map[? SHOOTABLE_MAP.HEALTH] -= dmg;
 		
 		if (map[? SHOOTABLE_MAP.HEALTH] <= 0)
@@ -29,8 +29,9 @@ with (damageInst) {
 			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
 			player_map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
-			with (shootInst)
-				scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);
+			if (object_exists(shootInst) && shootInst.object_index == oPlayer)
+				with (shootInst)
+					scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);
 		}
 		map[? SHOOTABLE_MAP.SHOOTER] = shootInst; //The person who shot them
 		didDamage = true;
@@ -45,7 +46,7 @@ if (didDamage && delete)
 	instance_destroy(other);
 	
 	
-if (damageInst.causeOfDeath != noone)
+if (isPlayer && damageInst.causeOfDeath != noone)
 	lethalDamage = false;
 	
 return lethalDamage;
