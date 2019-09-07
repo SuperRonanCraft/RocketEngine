@@ -1,7 +1,7 @@
 /// @arg gamemode
 var achs = ds_list_create();
 var achs_vals = ds_list_create();
-var map = oAchievements.achievementMap;
+var map = oAchievementHandler.achieve_map;
 
 var gm = argument0;
 switch (gm) {

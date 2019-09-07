@@ -176,7 +176,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			scMenuControls(); break;
 		case menu_element_type.stats: //Stats page
 			var scale = scale_element;
-			var map = oDataCollector.data_cache;
+			//var map = oStatisticsHandler.stats_map;
 			var mode = ds_grid[# 2, i];
 			var c = c_white;
 			switch (mode) {

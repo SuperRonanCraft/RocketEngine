@@ -1,7 +1,7 @@
 /// @desc achoievements that are always being checked
 var achs = ds_list_create();
 var achs_vals = ds_list_create();
-var map = oAchievements.achievementMap;
+var map = oAchievementHandler.achieve_map;
 
 /*//What to check every 10 seconds
 var check = [ACHIEVEMENTS.ROCKETS_SHOT_100, ACHIEVEMENTS.ROCKETS_SHOT_1000, ACHIEVEMENTS.ROCKETS_SHOT_10000,

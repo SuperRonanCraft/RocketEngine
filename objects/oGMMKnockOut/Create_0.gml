@@ -7,6 +7,7 @@ event_inherited();
 
 timer = scStageTimerStart(global.mode_kb_timer); //New time
 timer_current = timer;
+scAllowCharacterSelect(); //Character selector allowed
 
 //Remove the ability to take damage
 for (var i = 0; i < instance_number(oPlayer); i++) {

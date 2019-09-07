@@ -2,7 +2,7 @@
 
 
 //Advance normally if slowed down
-if(scBuffFind(owner,BUFFTYPE.SLOWMO))
+if (scBuffFind(owner, BUFFTYPE.SLOWMO))
 	exit;
 
 //Define main interactions we want
@@ -20,12 +20,10 @@ var currentDir = direction;
 miss = true;
 
 //If facing right, start from player and end at length of room
-if (currentDir == 0) {
+if (currentDir == 0)
 	lineEnd = room_width;
-}
-else if(currentDir == 180){
+else if (currentDir == 180)
 	lineEnd = 0;
-}
 
 	
 num = collision_line_list(owner.x, owner.y, lineEnd, owner.y, pShootable, false, true, playerList, true);
@@ -58,9 +56,10 @@ if (playerHit != noone) {
 		
 		
 		if ( (playerHit.x <= wallHit.x && currentDir == 0) || (playerHit.x >= wallHit.x && currentDir == 180)) {
+				var rocket_map = owner.weapon_map[? WEAPON_MAP.MAP];
 				scDamageShootable(owner, playerHit, false, false, rocket_map[? ROCKET_MAP.DAMAGE], false);
 				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD], 1);
-				owner.current_cd /= 3;
+				owner.weapon_map[? WEAPON_MAP.COOLDOWN_TIME] /= 3;
 				
 				//Blow up at player
 				tpX = playerHit.x;
@@ -72,7 +71,7 @@ if (playerHit != noone) {
 } 
 
 //If miss, hit wall
-if (wallHit != noone && miss){
+if (wallHit != noone && miss) {
 	if(currentDir == 0)
 		tpX = wallHit.x;
 			

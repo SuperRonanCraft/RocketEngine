@@ -1,8 +1,8 @@
 /// @desc draw timer and count down and endgame
 
-if (timer_enabled) {
+//if (timer_enabled) {
 	//Count down
-	if (wait_timer_current >= 0)
+	if (timer_enabled && wait_timer_current >= 0)
 		scDrawText(RES_W / 2, RES_H / 2, wait_timer_text, wait_timer_color, 
 			wait_timer_scale * 2, noone, noone, fa_middle, fa_middle); //Count down timer
 	//Bar
@@ -18,7 +18,7 @@ if (timer_enabled) {
 	draw_sprite_ext(sTimerBar, 1, xpos, ypos, 1, 1, 0, c_white, 0.8); //Timer bar without color
 	//Time
 	scDrawText(RES_W / 2, 25, string(timer_current), c_black, 1, c_ltgray);
-}
+//}
 
 //Game end draw events
 if (endgame) {

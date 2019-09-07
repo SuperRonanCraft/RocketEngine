@@ -28,6 +28,7 @@ points_top = points_y - (points_itemheight * 1.5);
 lost_text = choose("You Lost!", "Better luck next time!", "Whoops!");
 
 event_inherited();
+scAllowCharacterSelect(); //Character selector allowed
 
 timer = scStageTimerStart(global.mode_targets_timer); //New time
 timer_current = timer;
