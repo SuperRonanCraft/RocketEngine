@@ -137,7 +137,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];
-			var c = inputting && i == menu_option[page] ? color_element_input : color_element	
+			var c = inputting && i == menu_option[page] ? color_element_input : color_element;
 			scDrawText(rtx + 32, rty, current_val == 1 ? "ENABLED" : "DISABLED", c, scale_element, noone, noone, fa_left);
 			draw_sprite(sUIToggle, current_val, rtx, rty - 8);
 			break;

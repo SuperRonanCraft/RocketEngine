@@ -4,10 +4,11 @@
 scDrawText(start_x_default, yy, "Choose Character", color_element, 1);
 
 //UI Draw event
-if (!selected)
-	event_inherited();
-else
-	scDrawText(start_x_default, start_y_default, "Waiting on others...", color_element_special, 0.7, noone, 0.8);
+
+event_inherited();
+
+if (selected)
+	scDrawText(start_x_default, start_y_default + RES_H / 4, "Waiting on others...", color_element_special, 0.7, noone, 0.8);
 
 with (player) {
 	image_alpha = 0;

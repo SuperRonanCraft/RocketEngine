@@ -9,13 +9,13 @@ switch (global.mode_1v1_singleplayer) {
 	case 0: //1 vs 1
 	case 1: //1 vs ai
 		ds_menu_main = scUICreateMenuPage(
-			["ACCEPT",	menu_element_type.script_runner,	scUICharacterConfirm],
-			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],
-			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext],
+			["READY UP >>",menu_element_type.toggle_live,	scUICharacterAccept,	noone,	0, "Accept character"],
+			[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],
+			[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext],
 		);
 		break;
 	default:
-		scUICharacterConfirm();
+		scUICharacterConfirm(true);
 		exit;
 		break;
 }

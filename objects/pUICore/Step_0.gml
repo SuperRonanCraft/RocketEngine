@@ -1,7 +1,7 @@
 if (!control) exit; //Set when we move to another room
 else scUIReloadGlobal(); //Reload global vars
 
-var key_up = keyboard_check_pressed(vk_up), key_down = keyboard_check_pressed(vk_down);
+var key_up = keyboard_check_pressed(button_up), key_down = keyboard_check_pressed(button_down);
 var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left);
 
 //Grid that we are checking based off the page we are on
@@ -11,7 +11,7 @@ if (inputting) { //Are we inputting data?
 	switch (ds_grid[# 1, menu_option[page]]) {
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
-			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 			if (hinput == 0) { //HOVERING SUPPORT
 				var option = menu_option[page];
 				var x1left = start_x[option] + (x_buffer * 2);
@@ -40,7 +40,7 @@ if (inputting) { //Are we inputting data?
 			}
 			break;
 		case menu_element_type.slider:
-			var hinput = keyboard_check(vk_right) - keyboard_check(vk_left);
+			var hinput = keyboard_check(button_right) - keyboard_check(button_left);
 			var option = menu_option[page];
 			if (hinput != 0) {
 				var val = ds_grid[# 4, option] + hinput * 0.01;
@@ -55,7 +55,7 @@ if (inputting) { //Are we inputting data?
 			}
 			break;
 		case menu_element_type.toggle:
-			var hinput = keyboard_check_pressed(vk_left) - keyboard_check_pressed(vk_right);
+			var hinput = keyboard_check_pressed(button_left) - keyboard_check_pressed(button_right);
 			var option = menu_option[page], val = ds_grid[# 4, option];
 			if (hinput != 0)
 				val = clamp(val + hinput, 0, 1);
@@ -78,7 +78,7 @@ if (inputting) { //Are we inputting data?
 			}
 			break;
 		case menu_element_type.mass_toggle:
-			var hinput = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 			if (hinput == 0) { //HOVERING SUPPORT
 				var option = menu_option[page];
 				var x1left = start_x[option] + (x_buffer * 2);
@@ -103,7 +103,10 @@ if (inputting) { //Are we inputting data?
 					val = 0;
 				else if (val < 0)
 					val = array_length_1d(ds_grid[# 3, option]) - 1;
-				ds_grid[# 6, option] = val;
+				if (val != ds_grid[# 6, option]) {
+					//AUDIO
+					ds_grid[# 6, option] = val;
+				}
 			}
 			break;
 	}
@@ -146,13 +149,28 @@ if (inputting) { //Are we inputting data?
 		}
 			//Left and right support on horizontally aligned buttons
 		else {
-			ochange = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+			ochange = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 			if (ochange != 0) {
 				var option = menu_option[page];
-				if (option >= 0 && option + ochange >= 0 && option + ochange < ds_height)
-					if (start_y[option] == start_y[option + ochange]) option += ochange;
-					else if (option - ochange >= 0 && option - ochange < ds_height)
-						if (start_y[option] == start_y[option - ochange]) key_enter = true;
+				if (option >= 0)
+					if (ds_grid[# 1, option] == menu_element_type.toggle_live) {
+						val = ds_grid[# 4, option];
+						val = clamp(val + ochange, 0, 1);
+						key_enter = true;
+						if (val != ds_grid[# 4, option]) {
+							ds_grid[# 4, option] = val;
+							script_execute(ds_grid[# 2, option], val);
+						}
+					} else if (option + ochange >= 0 && option + ochange < ds_height) {
+						if (start_y[option] == start_y[option + ochange]) 
+							option += ochange;
+						else if (option - ochange >= 0 && option - ochange < ds_height)
+							if (start_y[option] == start_y[option - ochange]) 
+								key_enter = true;
+					} else if (option + ochange == ds_height) {
+						if (start_y[option] == start_y[option - ochange]) 
+							key_enter = true;
+					}
 			}
 		}
 	}
@@ -164,7 +182,7 @@ if (inputting) { //Are we inputting data?
 }
 
 //If Enter or Left-Clicking and we have a selection, execute the action
-if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
+if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_option[page] != -1) {
 	button_confirmed = [menu_option[page], page]; 
 	var option = ds_grid[# 1, menu_option[page]];
 	switch (option) {
@@ -197,22 +215,26 @@ if ((key_enter || key_enter_mouse) && menu_option[page] != -1) {
 			inputting = !inputting; break;
 		//Input elements
 		case menu_element_type.slider: //If its a slider
+			if (inputting && option == menu_element_type.slider) {
+				script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]], ds_grid[# 5, menu_option[page]]);
+				variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+			}
 		case menu_element_type.shift: //If we were shifting
+			if (inputting && option == menu_element_type.shift)
+				variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 		case menu_element_type.shift_script: //If we were shifting
+			if (inputting && option == menu_element_type.shift_script) {
+				variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+				script_execute(ds_grid[# 5, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+			}
 		case menu_element_type.toggle: //If we were toggling
-			if (inputting) { 
-				if (option == menu_element_type.slider) {
-					script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]], ds_grid[# 5, menu_option[page]]);
-					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-				} else if (option == menu_element_type.shift) {
-					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-				} else if (option == menu_element_type.shift_script) {
-					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-					script_execute(ds_grid[# 5, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-				} else {
+			 if (inputting) {
+				if (option == menu_element_type.toggle) {
 					if (ds_grid[# 2, menu_option[page]] != noone)
 						script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-					variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);}
+					if (ds_grid[# 3, menu_option[page]] != noone)
+						variable_global_set(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+				}
 				for (var i = 0; i < ds_height; i++)
 					if (ds_grid[# 1, i] == menu_element_type.mass_toggle) {
 						ds_grid[# 6, i] = 0;

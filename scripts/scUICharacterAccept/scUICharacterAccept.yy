@@ -1,8 +1,8 @@
 {
-    "id": "5f634280-c859-4675-b1c3-4be24c111db5",
+    "id": "53c66fce-fc2e-43f7-830f-51e7fda9f36d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUICharacterNextPlayer",
+    "name": "scUICharacterAccept",
     "IsCompatibility": false,
     "IsDnD": false
 }

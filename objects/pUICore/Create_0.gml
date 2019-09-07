@@ -21,6 +21,8 @@ enum menu_element_type {
 	shift_script,
 	//Toggle from true <-> false
 	toggle,
+	//Toggle from true <-> false, without inputting
+	toggle_live,
 	//Takes a key input
 	input,
 	//Go to a room
@@ -82,7 +84,7 @@ keys_update = false;
 //Scale types
 scale_main = 1;
 scale_main_hovering = 1.2;
-scale_comment = 0.45;
+//scale_comment = 0.45;
 scale_element = 0.6;
 scale_description = 0.45;
 scale_option = noone; //An array of scales
@@ -96,13 +98,19 @@ color_main = c_gray; //Button colors
 color_main_hovering = c_orange;//global.menu_color_hover_act; //Button hovering colors
 color_element = c_ltgray; //Element colors (desc or input)
 color_element_input = c_yellow; //Inputting element color
-color_element_input_unselected = c_black; //Inputting element unselected color (toggle)
+//color_element_input_unselected = c_black; //Inputting element unselected color (toggle)
 color_element_special = c_gray; //Special element colors
 color_seperator = c_black; //Seperator color
 
 //Used for scaling and knowing if we should work on a new pages variables
 page_workingon = noone; //The current page we have setup
 centered = false; //Is the whole page centered?
+
+//Custom Buttons
+button_left = vk_left;
+button_right = vk_right;
+button_up = vk_up;
+button_down = vk_down;
 
 ///Default things
 depth -= 1;

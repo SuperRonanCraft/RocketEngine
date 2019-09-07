@@ -13,6 +13,10 @@ for (var i = 0; i < amt; i++) {
 						break;
 				}
 				player = instance_find(oPlayer, i);
+				button_down = player.keyshoot;
+				button_left = player.keyleft;
+				button_up = player.keyjump;
+				button_right = player.keyright;
 			default:
 				break;
 		}
