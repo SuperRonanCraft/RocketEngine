@@ -167,7 +167,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLOWMO];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLOWMO];
 		ds_map[? BUFF_MAP.GOOD] = false;
-		ds_map[? BUFF_MAP.TIME] = 10 * room_speed;
+		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
 		ds_map[? BUFF_MAP.DRAW] = scBuffSlowmo_Draw;
 		ds_map[? "dialation"] = 0.5; //How much to dialate time down to
 		ds_map[? "steps"] = ds_list_create();
@@ -209,8 +209,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
-		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.COMBO, 5, 1]; //Type, amount, current
-		//ds_map[? BUFF_MAP.STACK_TYPE_VALUE] = 5;
+		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.COMBO, 5, 1, 3 * room_speed, 0]; //Type, combo-amount, combo-current, up-time, up-time-current
 		ds_map[? "color"] = c_purple;
 		ds_map[? "alpha"] = 0.8;
 		ds_map[? "scale_org"] = 0.3;
@@ -230,7 +229,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
 		ds_map[? BUFF_MAP.GOOD] = true;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
-		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.MULTIPLE, 5];
+		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.MULTIPLE];
 		ds_map[? "health"] = 4;
 		ds_map[? "parts_crt"] = 0;
 		ds_map[? "parts_amt"] = 5;
@@ -300,5 +299,5 @@ enum BUFFTYPE {
 enum BUFF_STACK_TYPE {
 	NONE, //Just reapply the buff
 	MULTIPLE, //Adds another copy of buff
-	COMBO, //stacks up to certain value, then applies buff (requires stack_type_value)
+	COMBO //stacks up to certain value, ARRAY [type, combo-amount, combo-current, up-time, up-time-current]
 }

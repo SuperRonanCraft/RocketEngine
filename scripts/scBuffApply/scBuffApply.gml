@@ -30,6 +30,7 @@ if (ds_map[? BUFF_MAP.ENABLED]) {
 			var stack_info = buff[? BUFF_MAP.STACK_INFO];
 			if (stack_info[2] < stack_info[1]) {
 				stack_info[2]++;
+				stack_info[4] = 0;
 				buff[? BUFF_MAP.STACK_INFO] = stack_info;
 			} else if (buff[? BUFF_MAP.CLOCK] > 0)
 				buff[? BUFF_MAP.CLOCK] = 1;

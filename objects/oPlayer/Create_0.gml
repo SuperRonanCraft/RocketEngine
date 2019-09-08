@@ -56,7 +56,7 @@ recoilKB = 0;
 recoilMAX = 0;
 
 //If jumped at right time
-teched = false;
+//teched = false;
 
 //Cause of death
 causeOfDeath = noone;

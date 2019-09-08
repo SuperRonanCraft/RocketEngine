@@ -1,6 +1,5 @@
 /// @desc Handles individual player buffs
 /// @arg event type
-/// @arg damage
 /// @arg extra* arguments
 
 var type = argument[0];
@@ -29,13 +28,23 @@ switch (type) {
 //Loop through all buffs
 var extras = argument_count > 1 ? argument[1] : noone;
 for (var b = 0; b < ds_list_size(buffs_map); b++) {
-    var buf = buffs_map[| b];
+    var buff = buffs_map[| b];
+	
 	//Apply the script contained within the buff DS Map
-	if (buf[? event] != noone) {
-		var stack_info = buf[? BUFF_MAP.STACK_INFO]
-		if (!(stack_info[0] == BUFF_STACK_TYPE.COMBO && stack_info[2] < stack_info[1]))
-			script_execute(buf[? event], id, buf, extras);
+	var stack_info = buff[? BUFF_MAP.STACK_INFO]
+	if (stack_info[0] == BUFF_STACK_TYPE.COMBO && stack_info[2] < stack_info[1]) {
+		//BUFF is a COMBO type and not given yet
+		if (event == BUFF_MAP.STEP) { //Progress Timer on step event only
+			//Apply the script contained within the buff DS Map
+			stack_info[4]++;
+			buff[? BUFF_MAP.STACK_INFO] = stack_info;
+			if (stack_info[4] >= stack_info[3])
+				scBuffRemove(id, buff);
+		}
+		continue;
 	}
+	if (buff[? event] != noone)
+		script_execute(buff[? event], id, buff, extras);
 }
 
 enum BUFF_EVENT {

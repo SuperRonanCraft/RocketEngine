@@ -29,8 +29,8 @@ with (damageInst) {
 			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
 			player_map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [shootInst, dmg]);
-			if (object_exists(shootInst) && shootInst.object_index == oPlayer)
-				with (shootInst)
+			with (shootInst)
+				if (object_index == oPlayer) //Is a player
 					scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damageInst, dmg]);
 		}
 		map[? SHOOTABLE_MAP.SHOOTER] = shootInst; //The person who shot them
