@@ -8,6 +8,7 @@ with (inst) {
 	weapon_map[? WEAPON_MAP.ENABLED] = false;
 	keyleft = other.keyright;
 	keyright = other.keyleft;
+	keyjump = other.keyjump;
 	keyshoot = noone; //Cannot shoot
 	team = other.team; //Same team as caster
 	display = false; //No ui

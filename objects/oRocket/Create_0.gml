@@ -5,7 +5,7 @@ owner = noone;
 //up-time
 timer = 0;
 //Size of explosion
-size = 1;
+//size = 1;
 //Destroy variable for explosions
 destroy = false;
 //What this rocket has his, add it to its explosion

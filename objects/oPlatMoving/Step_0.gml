@@ -17,7 +17,7 @@ y += vsp;
 //}
 //Add horizontal speed to player
 
-/*var list = ds_list_create();
+var list = ds_list_create();
 var obj = instance_place_list(x, y - 1, oPlayer, list, true);
 if (obj > 0)
 	for (var i = 0; i < obj; i++)

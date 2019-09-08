@@ -9,6 +9,11 @@ with (object_index)
 		all_selected = false;
 
 if (all_selected || force) {
+	if (force)
+		with (oPlayer) { //random character
+			player_map[? PLAYER_MAP.CHARACTER] = irandom_range(0, CHARACTERS.LENGTH - 1);
+			scCharacterSprites();
+		}
 	with (pGMM)
 		timer_enabled = true;
 	with (object_index)

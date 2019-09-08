@@ -8,7 +8,7 @@ if (!destroy && other.owner != owner) {
 	else {
 		//No custom script, so lets make same rockets explode 3 times bigger by default
 		if (rocket_map[? ROCKET_MAP.TYPE] == other.rocket_map[? ROCKET_MAP.TYPE])
-			size *= 3;
+			rocket_map[? ROCKET_MAP.EXPLOSION_SCALE] *= 2.5;
 		//Run the default explosion event/script
 		event_user(0);
 	}

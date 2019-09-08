@@ -8,6 +8,7 @@ var arry = argument2;
 
 var inst = arry[0];
 var dmg = arry[1];
+show_debug_message("Life Steal Damaged Other Event!")
 
 if (shootable_map[? SHOOTABLE_MAP.CAN_HEAL]) {
 	repeat (dmg)

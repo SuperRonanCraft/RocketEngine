@@ -66,6 +66,7 @@ offset = 0;
 for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	//Grab the buff map
 	var ds_list = buffs_map[| i];
+	var c = c_gray;
 	//Offset every 10 buffs
 	if (i mod 10 == 0)
 		offset++;
@@ -86,12 +87,15 @@ for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c_dkgray, (w / 4) + 4, 0.65);
 	//}
 	
+	var text = ceil(time / room_speed);
 	var stack_info = ds_list[? BUFF_MAP.STACK_INFO];
-	if (stack_info[0] == BUFF_STACK_TYPE.COMBO && stack_info[2] < stack_info[1])
-		time = (stack_info[2] * room_speed);
+	if (stack_info[0] == BUFF_STACK_TYPE.COMBO && stack_info[2] < stack_info[1]) {
+		text = "x" + string(stack_info[2]);
+		c = c_white;
+	}
 	//BUFF ICON & TIME REMAINING
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.55);
-	scDrawText(xpos + w / 2, ypos + h / 2, string(ceil(time / room_speed)), c_gray, 0.45);
+	scDrawText(xpos + w / 2, ypos + h / 2, text, c, 0.45);
 }
 //Display Rocket Equipped, Cooldown and Ultimate Charge
 var rocket_map = weapon_map[? WEAPON_MAP.MAP];

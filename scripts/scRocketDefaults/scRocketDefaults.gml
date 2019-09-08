@@ -48,6 +48,7 @@ map[? ROCKET_MAP.EXPLOSION_WALL] = noone; //Explosion with a wall
 map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = noone; //Explosion with a shootable
 map[? ROCKET_MAP.EXPLOSION_STEP] = noone; //Explosion step event
 map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = noone; //Explosion draw create event
+map[? ROCKET_MAP.EXPLOSION_SCALE] = 1.3; //Explosions sprite size
 //SOUNDS
 map[? ROCKET_MAP.SOUND_SHOOT] = SOUND.EFFECT_SHOOT; //Rocket shoot sound
 map[? ROCKET_MAP.SOUND_EXPLOSION] = SOUND.EFFECT_EXP; //Rocket explode sound

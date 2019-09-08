@@ -23,18 +23,21 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "0f11ad53-e677-43ea-9b19-bdcdc1fbdb21"
+        },
+        {
+            "id": "1a11d257-8cd3-4569-888b-0057a4b2b59c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "0f11ad53-e677-43ea-9b19-bdcdc1fbdb21"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        {
-            "id": "80213c32-9672-41b8-a46d-dab674ac16f9",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
-            "propertyId": "9ef7b6bc-83bd-4077-96e2-a22d3d0b9e78",
-            "value": "2"
-        }
+        
     ],
     "parentObjectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
     "persistent": false,
@@ -89,7 +92,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "2",
+            "value": "0",
             "varName": "vsp",
             "varType": 0
         },
@@ -103,7 +106,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "2",
             "varName": "hsp",
             "varType": 0
         }

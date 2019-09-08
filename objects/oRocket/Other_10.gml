@@ -2,8 +2,8 @@
 var xplo = instance_create_depth(x, y, 10, oExplosion);
 xplo.sprite_index = rocket_map[? ROCKET_MAP.EXPLOSION_SPRITE];
 xplo.image_speed = 1.5;
-xplo.image_xscale = size;
-xplo.image_yscale = size;
+xplo.image_xscale = rocket_map[? ROCKET_MAP.EXPLOSION_SCALE];
+xplo.image_yscale = rocket_map[? ROCKET_MAP.EXPLOSION_SCALE];
 xplo.parent = owner;
 ds_map_copy(xplo.rocket_map, rocket_map);
 ds_list_copy(xplo.confirmList, hitList);
