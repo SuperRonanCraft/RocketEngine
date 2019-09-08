@@ -14,7 +14,7 @@
         "68bb57a2-eddd-4387-a96d-3eaee593d51b"
     ],
     "filterType": "GMScript",
-    "folderName": "UserInterface",
+    "folderName": "User Interface",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

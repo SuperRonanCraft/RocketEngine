@@ -19,16 +19,19 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
 			c = c_green;
 	}
+	//Buff of the rocket
 	if (rocket_map[? ROCKET_MAP.BUFF] != noone) {
+		var buffsid = rocket_map[? ROCKET_MAP.BUFF];
 		var buffy = RES_H / 16;
 		var buffx = xpos + (team == TEAM.LEFT ? 32 : -50);
-		var buffsid = rocket_map[? ROCKET_MAP.BUFF];
 		if (is_array(buffsid))
 			for (var i = 0; i < array_length_1d(buffsid); i++) {
 				var buff_map = ds_map_create();
 				scBuffGet(buffsid[i], buff_map);
-				draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, map[? WEAPON_MAP.ENABLED] ? 0.5 : 0.2);
-				buffx += (team == TEAM.LEFT ? 22 : -22);
+				if (buff_map[? BUFF_MAP.ENABLED]) {
+					draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, map[? WEAPON_MAP.ENABLED] ? 0.5 : 0.2);
+					buffx += (team == TEAM.LEFT ? 22 : -22);
+				}
 				ds_map_destroy(buff_map);
 			}
 		else {

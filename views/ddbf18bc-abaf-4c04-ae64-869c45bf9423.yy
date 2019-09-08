@@ -29,7 +29,7 @@
         "5028b3cc-3e0e-454f-bb34-9857bf64b57c"
     ],
     "filterType": "GMScript",
-    "folderName": "Ults",
+    "folderName": "Types",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
