@@ -2,4 +2,4 @@
 if (!devmode_allow) exit;
 global.devmode = !global.devmode;
 with (oPlayer)
-	damage_take = !global.devmode;
+	shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = !global.devmode;

@@ -46,7 +46,7 @@ switch (type) {
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
+			["MODIFIERS",		menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 
@@ -81,7 +81,7 @@ switch (type) {
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODIFERS",		menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
+			["MODIFIERS",		menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 		
@@ -101,7 +101,7 @@ switch (type) {
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm, "NO WALL KNOCKBACK, BEWARE!"],
 			[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-			["MODIFERS",	menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
+			["MODIFIERS",	menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
 			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
 		);
 
