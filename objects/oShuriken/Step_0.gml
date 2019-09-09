@@ -19,6 +19,12 @@ if (timer < time)
 else if (timer == time)
 	event_user(0);
 
+if(deactivate && stuckTo != noone){
+	x = stuckTo.x + newX;
+	y = stuckTo.y + newY;
+}
+
+
 if (checkroom)
 	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20))
 		event_user(0);

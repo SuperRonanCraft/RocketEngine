@@ -18,3 +18,8 @@ deactivate = false;
 //What this weapon has hit, add it to its list
 hitList = ds_list_create();
 confirmList = ds_list_create();
+
+//Sticky variables
+stuckTo = noone;
+newX = x;
+newY = y;
