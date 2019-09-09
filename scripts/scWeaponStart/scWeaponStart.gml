@@ -15,15 +15,15 @@ map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 1;
 
 switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.ROCKET:
-		scRocketStart(ROCKET.SLIME);
+		scRocketStart(ROCKET.DEFAULT);
 		break;
-	case WEAPON.SHRUKEN:
-		//scShrukenStart();
+	case WEAPON.SHURIKEN:
+		scShurikenStart(SHURIKEN.DEFAULT);
 		break;
 }
 
 enum WEAPON {
-	ROCKET, SHRUKEN
+	ROCKET, SHURIKEN
 }
 
 enum WEAPON_MAP {

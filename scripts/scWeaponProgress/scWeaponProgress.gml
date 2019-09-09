@@ -6,7 +6,7 @@ switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.ROCKET:
 		scRocketProgress(!shoot_face ? team : -1);
 		break;
-	case WEAPON.SHRUKEN:
-		//scShrukenStart();
+	case WEAPON.SHURIKEN:
+		scShurikenProgress(!shoot_face ? team : -1);
 		break;
 }

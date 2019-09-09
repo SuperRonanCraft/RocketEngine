@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "09a3f638-e6de-4ac5-8650-6519e3abfb67",
+            "Value": {
+                "id": "e45c26b4-9acc-4532-b47a-bbe8dccc3ef7",
+                "resourcePath": "scripts\\scShurikenDefaults\\scShurikenDefaults.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0b2326de-465c-4c64-839a-e40115a8c88c",
             "Value": {
                 "id": "39487cc1-0dde-4659-84ae-5ee8eb4e4935",
@@ -468,6 +476,14 @@
                 "id": "071e0be8-06fc-40e2-80ab-2205cced251f",
                 "resourcePath": "scripts\\scUltimateShield\\scUltimateShield.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "11ef59ef-87c9-40b1-b6a0-6c169ca83a42",
+            "Value": {
+                "id": "0a0b9079-633b-47d8-a788-ba67553cb2a0",
+                "resourcePath": "views\\11ef59ef-87c9-40b1-b6a0-6c169ca83a42.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1663,6 +1679,14 @@
             }
         },
         {
+            "Key": "483e1c54-e32e-4837-b4ec-da3ac733df64",
+            "Value": {
+                "id": "618769cc-0b11-4d4a-8cd7-0dd6fe749bcf",
+                "resourcePath": "scripts\\scShurikenStart\\scShurikenStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "48989206-5c50-4341-a2f3-726523f2d808",
             "Value": {
                 "id": "bf5c56c7-40ca-4233-b7ca-eb5b8d73d552",
@@ -1892,6 +1916,14 @@
                 "id": "a191a0c7-9106-462b-b5ef-e257d6de11af",
                 "resourcePath": "rooms\\r1v1Stage4\\r1v1Stage4.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "50f9d5cf-bfd3-432b-b025-b5ef366cf21c",
+            "Value": {
+                "id": "b32b3fbc-ded8-4d93-9fdf-333af13f70b5",
+                "resourcePath": "scripts\\scShurikenProgress\\scShurikenProgress.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2207,6 +2239,14 @@
             }
         },
         {
+            "Key": "5e646fca-ca67-4330-a6ca-62aa240db456",
+            "Value": {
+                "id": "41edfda3-3494-4ec9-9d60-8d8d9e697092",
+                "resourcePath": "scripts\\scShurikenGet\\scShurikenGet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5f08ef30-97bc-46b8-b446-8f0ab223e619",
             "Value": {
                 "id": "9662aa0e-29a5-454c-93d8-356c12698f3a",
@@ -2228,6 +2268,14 @@
                 "id": "05993925-22b3-401d-8c5a-37bf605a85ec",
                 "resourcePath": "views\\5fe00d2b-4230-4d20-92cf-efb328f9daac.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "60acd54f-23d9-4f57-9bb4-632fce14116e",
+            "Value": {
+                "id": "acaff449-05bd-4937-a23c-215454390240",
+                "resourcePath": "sprites\\sShuriken_Default\\sShuriken_Default.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2292,6 +2340,14 @@
                 "id": "ed20befb-c18b-4a14-a7f6-f7e76328223c",
                 "resourcePath": "scripts\\scUltimateHackLoot_ExpLoot\\scUltimateHackLoot_ExpLoot.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "632b8323-4ccc-45a4-b23c-a0862d00c66e",
+            "Value": {
+                "id": "8364b96f-a5bd-406a-8300-15cf686e3793",
+                "resourcePath": "views\\632b8323-4ccc-45a4-b23c-a0862d00c66e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3447,6 +3503,14 @@
             }
         },
         {
+            "Key": "9965ca03-d1ab-4539-a6d5-df93b1739740",
+            "Value": {
+                "id": "9797ce36-8127-427d-83bd-62238c098c89",
+                "resourcePath": "scripts\\scSpawnShuriken\\scSpawnShuriken.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
             "Value": {
                 "id": "e866da4d-33ac-436d-b15d-80cd9d93ef27",
@@ -4511,6 +4575,14 @@
             }
         },
         {
+            "Key": "c3a5a26a-8de7-46c5-a87c-209715d6b2b8",
+            "Value": {
+                "id": "809297ac-3c7f-4636-85cf-d9a0c62d1369",
+                "resourcePath": "views\\c3a5a26a-8de7-46c5-a87c-209715d6b2b8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c3c61c40-8fd8-4b0e-bf0e-d140871687d8",
             "Value": {
                 "id": "bce680ce-fbe4-4898-8165-43b8863da549",
@@ -4719,6 +4791,14 @@
             }
         },
         {
+            "Key": "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
+            "Value": {
+                "id": "24ec57da-6819-406a-a4ab-726714badd95",
+                "resourcePath": "scripts\\scShurikenChange\\scShurikenChange.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d093605e-4be1-44f9-ac45-6c7eb4302f0a",
             "Value": {
                 "id": "b5666460-b40f-45e4-824e-8dd2a83a15ee",
@@ -4884,6 +4964,14 @@
                 "id": "5b11c5cf-7e3f-4768-8c60-adebd34e7dcd",
                 "resourcePath": "sprites\\sNuke_Default\\sNuke_Default.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d801e0f1-0215-4de8-94a8-c6504d240272",
+            "Value": {
+                "id": "99da7c37-6ed8-49aa-816b-190e90a1f6e5",
+                "resourcePath": "objects\\oShuriken\\oShuriken.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5809,6 +5897,12 @@
         "297a0b73-fb7d-4140-80ac-53fbab032405",
         "9beed5d5-b978-4366-8638-ef79a32d3637",
         "62d81973-9b38-4c0f-a0e0-6a2c2781f9f6",
+        "483e1c54-e32e-4837-b4ec-da3ac733df64",
+        "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
+        "5e646fca-ca67-4330-a6ca-62aa240db456",
+        "09a3f638-e6de-4ac5-8650-6519e3abfb67",
+        "50f9d5cf-bfd3-432b-b025-b5ef366cf21c",
+        "9965ca03-d1ab-4539-a6d5-df93b1739740",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",

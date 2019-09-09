@@ -4,6 +4,7 @@
 var autodestroy = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY];
 var time = rocket_map[? ROCKET_MAP.TIMER];
 var checkroom = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM];
+
 if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---

@@ -12,7 +12,10 @@ if ((map[? WEAPON_MAP.ENABLED] && map[? WEAPON_MAP.RELOAD_TIME] <= 0 && map[? WE
 			map[? WEAPON_MAP.COOLDOWN_TIME] = rocket_map[? ROCKET_MAP.COOLDOWN];
 			map[? WEAPON_MAP.DELAY_TIME] = rocket_map[? ROCKET_MAP.STARTUP];
 			break;
-		case WEAPON.SHRUKEN:
-		
+		case WEAPON.SHURIKEN:
+			var shuriken_map = map[?WEAPON_MAP.MAP];
+			
+			map[? WEAPON_MAP.COOLDOWN_TIME] = shuriken_map[? SHURIKEN_MAP.COOLDOWN];
+			map[? WEAPON_MAP.DELAY_TIME] = shuriken_map[? SHURIKEN_MAP.STARTUP];
 			break;
 	}
