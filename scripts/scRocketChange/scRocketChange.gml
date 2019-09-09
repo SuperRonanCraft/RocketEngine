@@ -14,6 +14,8 @@ if (old_rocket_map[? ROCKET_MAP.TYPE] != roc) {
 	map[? WEAPON_MAP.MAP] = rocket_map;
 	map[? WEAPON_MAP.AMMO] = rocket_map[? ROCKET_MAP.CLIP];
 	map[? WEAPON_MAP.CLIP] = map[? WEAPON_MAP.AMMO];
+	map[? WEAPON_MAP.GUI_ICON] = rocket_map[? ROCKET_MAP.PROJECTILE];
+	map[? WEAPON_MAP.GUI_BUFFS] = rocket_map[? ROCKET_MAP.BUFF];
 	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
 	///
 	//NEW

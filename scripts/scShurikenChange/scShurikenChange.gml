@@ -15,6 +15,8 @@ if (old_shuriken_map[? SHURIKEN_MAP.TYPE] != shur) {
 	var shuriken_map = scShurikenGet(shur);
 	map[? WEAPON_MAP.MAP] = shuriken_map;
 	map[? WEAPON_MAP.AMMO] = shuriken_map[? SHURIKEN_MAP.CLIP];
+	map[? WEAPON_MAP.GUI_ICON] = shuriken_map[? SHURIKEN_MAP.PROJECTILE];
+	//map[? WEAPON_MAP.GUI_BUFFS] = shuriken_map[? SHURIKEN_MAP.BUFF];
 	map[? WEAPON_MAP.CLIP] = map[? WEAPON_MAP.AMMO];
 	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
 	///

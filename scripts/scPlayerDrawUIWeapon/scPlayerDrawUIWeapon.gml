@@ -1,9 +1,8 @@
 //DRAW PLAYER WEAPON/ULTIMATE
 var map = weapon_map;
-var rocket_map = map[? WEAPON_MAP.MAP];
-if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
+if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	//The projectile sprite
-	var sprite = rocket_map[? ROCKET_MAP.PROJECTILE];
+	var sprite = map[? WEAPON_MAP.GUI_ICON];
 	//Dimentions of sprite
 	var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
@@ -19,9 +18,9 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
 			c = c_green;
 	}
-	//Buff of the rocket
-	if (rocket_map[? ROCKET_MAP.BUFF] != noone) {
-		var buffsid = rocket_map[? ROCKET_MAP.BUFF];
+	//Buff of the weapon
+	if (map[? WEAPON_MAP.GUI_BUFFS] != noone) {
+		var buffsid = map[? WEAPON_MAP.GUI_BUFFS];
 		var buffy = RES_H / 16;
 		var buffx = xpos + (team == TEAM.LEFT ? 32 : -50);
 		if (is_array(buffsid))
@@ -44,9 +43,9 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 	
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	
-	//ROCKET COOLDOWN
+	//WEAPON COOLDOWN
 	if (map[? WEAPON_MAP.ENABLED]) {
-		var cd = map[? WEAPON_MAP.AMMO] == 0 ? rocket_map[? ROCKET_MAP.RELOAD_TIME] : rocket_map[? ROCKET_MAP.COOLDOWN];
+		var cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] : map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL];
 		var curr_cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME] : map[? WEAPON_MAP.COOLDOWN_TIME];
 		scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
 	}
@@ -73,7 +72,7 @@ if (rocket_map[? ROCKET_MAP.TYPE] != ROCKET.NONE) {
 				0.5, noone, scMovementWave(0.8, 0.4, 1));
 		}
 	}
-	//ROCKET EQUIPPED
+	//WEAPON SPRITE EQUIPPED
 	var scale = map[? WEAPON_MAP.GUI_WEAPON_SCALE];
 	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * scale, 1 * scale, 0, 
 		c_white, map[? WEAPON_MAP.ENABLED] ? 0.8 : 0.3);
