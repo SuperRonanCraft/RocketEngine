@@ -1,5 +1,6 @@
 /// @description UI for stage select
 
+xx = RES_W / 2;
 yy = RES_H / 4;
 
 //Setup ui

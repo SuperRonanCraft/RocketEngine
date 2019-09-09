@@ -1,8 +1,9 @@
-/// @arg weapon type
+//Load characters weapon
 
 weapon_map = ds_map_create();
 var map = weapon_map;
-map[? WEAPON_MAP.TYPE] = argument0;
+var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
+map[? WEAPON_MAP.TYPE] = char[? CHARACTER_MAP.WEAPON];
 map[? WEAPON_MAP.ULTIMATE] = ULTIMATE.NONE;
 map[? WEAPON_MAP.ENABLED] = true;
 map[? WEAPON_MAP.RELOAD_TIME] = 0;

@@ -1,8 +1,9 @@
 with (player) {
-	var val = player_map[? PLAYER_MAP.CHARACTER];
+	var map = player_map[? PLAYER_MAP.CHARACTER_INFO]
+	var val = map[? CHARACTER_MAP.TYPE];
 	val++;
 	if (val >= CHARACTERS.LENGTH)
 		val = 0;
-	player_map[? PLAYER_MAP.CHARACTER] = val;
+	scPlayerCharacterChange(val);
 	scCharacterSprites();
 }

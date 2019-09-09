@@ -2,8 +2,9 @@
 ///Loads up specific sprites into a ds_map for use in animation
 
 characterSprites = ds_map_create();
+var map = player_map[? PLAYER_MAP.CHARACTER_INFO];
 
-switch (player_map[? PLAYER_MAP.CHARACTER]) {
+switch (map[? CHARACTER_MAP.TYPE]) {
     case CHARACTERS.SWORD:
         characterSprites[? ANIMATIONSTATE.STANDING] = sPlayer_sword_idle;
 		characterSprites[? ANIMATIONSTATE.SLIDING] = sPlayer_sword_walkend;

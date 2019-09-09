@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "0cbe3861-56c8-4ae9-8ef2-6750091ad6ef",
+            "Value": {
+                "id": "00cc22dc-29ce-47e3-be9c-77ce6f44dfec",
+                "resourcePath": "scripts\\scPlayerCharacterChange\\scPlayerCharacterChange.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0cfaef1a-439d-4830-9f33-a32cef5cc1a3",
             "Value": {
                 "id": "c139a5b4-3784-4333-beab-692ef9e59a12",
@@ -3975,6 +3983,14 @@
             }
         },
         {
+            "Key": "afd3feae-b33d-4cee-93c1-180416ea1747",
+            "Value": {
+                "id": "e5cb4cfc-a048-4aa4-a3a9-d1c34b8080dd",
+                "resourcePath": "views\\afd3feae-b33d-4cee-93c1-180416ea1747.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "afd8dfc6-af60-4120-9e86-7587396be5f5",
             "Value": {
                 "id": "a64af5f5-4c3d-4539-b26b-662ec3750c0e",
@@ -5567,6 +5583,14 @@
             }
         },
         {
+            "Key": "fe550ad5-2a23-4fa2-9b23-3d597ee6ff3c",
+            "Value": {
+                "id": "fb1291a2-8860-41cf-8545-dc790c1ff34c",
+                "resourcePath": "notes\\How to create a Weapon.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "fe58e7d4-cd89-431f-8537-af1824c43e91",
             "Value": {
                 "id": "50334b20-bf1b-43b1-9723-738e81a78863",
@@ -5831,6 +5855,11 @@
         "9a0da5da-81e2-4634-9400-c0e170ae88bc",
         "5e5885b5-e793-4ccb-8335-06ce6b44dc87",
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
+        "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
+        "c251b514-5413-4eb8-bda4-3e9c880f56e9",
+        "6e1af632-6685-40a9-b0e7-653f1b415768",
+        "38944597-eaf0-4f99-8a24-11ebe9391c21",
+        "a62e83a3-5049-4bc1-85be-fd514e25dc62",
         "4c2ebf23-69d3-4519-9343-37c5a8edf95b",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",
@@ -5840,11 +5869,8 @@
         "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
         "4f2e19d2-df27-4761-a4a0-375b01786ed7",
         "8b62636a-ad25-4fde-a9ab-9868838ebd68",
-        "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
-        "c251b514-5413-4eb8-bda4-3e9c880f56e9",
-        "6e1af632-6685-40a9-b0e7-653f1b415768",
-        "38944597-eaf0-4f99-8a24-11ebe9391c21",
-        "a62e83a3-5049-4bc1-85be-fd514e25dc62",
+        "1f17ce40-ccde-4977-86b8-8da3b5ad9a63",
+        "0cbe3861-56c8-4ae9-8ef2-6750091ad6ef",
         "22340016-76dd-4ca3-9586-882cef09cf3d",
         "52bf7011-b434-455b-b401-3945ebf3821b",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
@@ -5886,8 +5912,7 @@
         "d610a108-85a0-4046-9bea-e52444b0173c",
         "b5cc65ae-c078-440a-9b5f-a6e506061b74",
         "642537f0-5347-4a8c-9cf9-7cb43338096e",
-        "b07921d9-8376-4807-9a92-24c903c3e303",
-        "1f17ce40-ccde-4977-86b8-8da3b5ad9a63"
+        "b07921d9-8376-4807-9a92-24c903c3e303"
     ],
     "tutorial": ""
 }

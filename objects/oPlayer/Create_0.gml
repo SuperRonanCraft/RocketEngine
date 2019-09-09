@@ -1,16 +1,19 @@
 /// @desc Create
 
+//Load up health
+event_inherited();
+
 //Load basic player variables
 scPlayerStart();
+
+//Load Character
+scPlayerCharacterChange(CHARACTERS.SWORD);
 
 //Load gravity and movement variables
 scGravityStart();
 
 //Load keybinds
 scKeybindsSet(keys);
-
-//Load up health
-event_inherited();
 
 //Load Sprites
 scCharacterSprites();
@@ -26,8 +29,8 @@ hp_offset = 0;
 //Load Ultimates
 scUltimateStart();
 
-//Load Rockets
-scWeaponStart(WEAPON.ROCKET);
+//Load weapon
+scWeaponStart();
 
 //Load Combos
 scComboStart();

@@ -1,0 +1,29 @@
+Head on over to "scWeaponStart" in the "Weapons" group
+
+#1) Here add to the enum "WEAPON" for your weapon
+#2) Weapons can have a custom script called to initiate variables
+#3) The weapons ds_map must be saved under a players "weapon_map" with the id "WEAPON_MAP.MAP"
+#4) The weapons step event must be called from "scWeaponActivate" script with a new enum case
+
+---BLUEPRINT--- (CREATING/INITIALIZING THE WEAPON)
+	case WEAPON.<WEAPON>: 
+		map[? WEAPON_MAP.MAP] = <WEAPON CUSTOM MAP STUFF>;
+		map[? WEAPON_MAP.AMMO] = <AMMO OF WEAPON BEFORE RELOAD>; //0 to not have a clip
+		map[? WEAPON_MAP.COOLDOWN_TIME] = <COOLDOWN BEFORE EACH WEAPON ACTIVATION>;
+		map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2; //Set this to any value above 1 to show u pickedup the weapon
+		ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
+		map[? WEAPON_MAP.RELOAD_TIME] = 0; //Reload time of weapon "0 to never have a reload time"
+		map[? WEAPON_MAP.ULTIMATE] = <WEAPON ULTIMATE>;
+		break;
+			
+---BLUEPRINT--- (STEP EVENT OF WEAPON)
+	case WEAPON.<WEAPON>: 
+		<CUSTOM STEP WEAPON SCRIPT CALLED>;
+		break;
+	
+---BLUEPRINT--- (SAVE WEAPON MAP)
+	weapon_map[? WEAPON_MAP.MAP] = <WEAPON DS_MAP>
+		
+---Other Details---
+- A weapon is updated, given a cooldown, and reloaded automatically, all you need to do is set the
+	default values in the "scWeaponStart" script
