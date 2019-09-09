@@ -6,6 +6,9 @@ event_inherited();
 //Load basic player variables
 scPlayerStart();
 
+//Load Ultimates
+scUltimateStart();
+
 //Load Character
 scPlayerCharacterChange(scPlayerCharacterGet());
 
@@ -23,11 +26,8 @@ hpwidth = sprite_get_width(hpsprite);
 hp_color = c_white;
 hp_offset = 0;
 
-//Load Ultimates
-scUltimateStart();
-
 //Load weapon
-scWeaponStart();
+//scWeaponStart();
 
 //Load Combos
 scComboStart();

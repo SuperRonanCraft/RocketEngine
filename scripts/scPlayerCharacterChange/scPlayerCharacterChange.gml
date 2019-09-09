@@ -42,6 +42,8 @@ switch (map[? CHARACTER_MAP.TYPE]) {
 		break;
 }
 
+scWeaponStart();
+
 //Do some stuff
 player_map[? PLAYER_MAP.HEALTH] = map[? CHARACTER_MAP.HEALTH];
 player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = map[? CHARACTER_MAP.HEALTH];
