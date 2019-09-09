@@ -8,6 +8,7 @@ if (value == 1) { //TRUE
 		//[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],
 		//[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext],
 	);
+	char_scale_cur_max = char_scale_cur_selected;
 	scUICharacterConfirm(false);
 } else { //FALSE
 	ds_menu_main = scUICreateMenuPage(
@@ -15,6 +16,7 @@ if (value == 1) { //TRUE
 		[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],
 		[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext],
 	);
+	char_scale_cur_max = char_scale_cur_max_org;
 	selected = false;
 }
 

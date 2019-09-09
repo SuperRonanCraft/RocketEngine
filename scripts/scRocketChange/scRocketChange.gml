@@ -13,7 +13,14 @@ if (old_rocket_map[? ROCKET_MAP.TYPE] != roc) {
 	var rocket_map = scRocketGet(roc);
 	map[? WEAPON_MAP.MAP] = rocket_map;
 	map[? WEAPON_MAP.AMMO] = rocket_map[? ROCKET_MAP.CLIP];
+	map[? WEAPON_MAP.CLIP] = map[? WEAPON_MAP.AMMO];
 	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
+	///
+	//NEW
+	map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL] = rocket_map[? ROCKET_MAP.COOLDOWN];
+	map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] = rocket_map[? ROCKET_MAP.RELOAD_TIME];
+	//NEW
+	//
 	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
 	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
 	map[? WEAPON_MAP.RELOAD_TIME] = 0;

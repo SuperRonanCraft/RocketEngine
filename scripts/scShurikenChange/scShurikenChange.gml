@@ -15,7 +15,14 @@ if (old_shuriken_map[? SHURIKEN_MAP.TYPE] != shur) {
 	var shuriken_map = scShurikenGet(shur);
 	map[? WEAPON_MAP.MAP] = shuriken_map;
 	map[? WEAPON_MAP.AMMO] = shuriken_map[? SHURIKEN_MAP.CLIP];
+	map[? WEAPON_MAP.CLIP] = map[? WEAPON_MAP.AMMO];
 	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
+	///
+	//NEW
+	map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL] = shuriken_map[? SHURIKEN_MAP.COOLDOWN];
+	map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] = shuriken_map[? SHURIKEN_MAP.RELOAD_TIME];
+	//NEW
+	//
 	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
 	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
 	map[? WEAPON_MAP.RELOAD_TIME] = 0;

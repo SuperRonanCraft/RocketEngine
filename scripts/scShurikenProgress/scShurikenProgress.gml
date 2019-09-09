@@ -14,7 +14,8 @@ if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 		show_debug_message(map[?WEAPON_MAP.AMMO]);
 		facing = dir > -90 && dir <= 90 ? 1 : -1;
 		scSpawnShuriken(x,y,depth+1,dir,id,shuriken_map);
-		map[? WEAPON_MAP.AMMO]--;
+		if (map[? WEAPON_MAP.AMMO] > 0)
+			map[? WEAPON_MAP.AMMO]--;
 		//No statistics yet!
 
 	}
