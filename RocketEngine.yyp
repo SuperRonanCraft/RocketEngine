@@ -3138,7 +3138,7 @@
             "Key": "8b62636a-ad25-4fde-a9ab-9868838ebd68",
             "Value": {
                 "id": "7a0a600c-35f2-4110-8190-53c7a544351d",
-                "resourcePath": "scripts\\scCharacterSprites\\scCharacterSprites.yy",
+                "resourcePath": "scripts\\scPlayerCharacterGetSprites\\scPlayerCharacterGetSprites.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5868,9 +5868,9 @@
         "88211932-9cea-4adc-a0a3-3b8613abe868",
         "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
         "4f2e19d2-df27-4761-a4a0-375b01786ed7",
-        "8b62636a-ad25-4fde-a9ab-9868838ebd68",
         "1f17ce40-ccde-4977-86b8-8da3b5ad9a63",
         "0cbe3861-56c8-4ae9-8ef2-6750091ad6ef",
+        "8b62636a-ad25-4fde-a9ab-9868838ebd68",
         "22340016-76dd-4ca3-9586-882cef09cf3d",
         "52bf7011-b434-455b-b401-3945ebf3821b",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",

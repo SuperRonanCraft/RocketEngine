@@ -15,9 +15,6 @@ scGravityStart();
 //Load keybinds
 scKeybindsSet(keys);
 
-//Load Sprites
-scCharacterSprites();
-
 //GUI
 hp_scale = 1;
 hpsprite = sHealth;

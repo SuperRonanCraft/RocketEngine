@@ -6,6 +6,8 @@ map[? CHARACTER_MAP.TYPE] = argument0;
 map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
 map[? CHARACTER_MAP.HEALTH] = 20; //Default health
 map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
+//Load Sprites
+characterSprites = scPlayerCharacterGetSprites(map[? CHARACTER_MAP.TYPE]);
 
 switch (map[? CHARACTER_MAP.TYPE]) {
 	case CHARACTERS.DEFAULT:

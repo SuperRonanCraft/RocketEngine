@@ -23,6 +23,11 @@ switch (global.mode_1v1_singleplayer) {
 
 selected = false;
 player = oPlayer;
+char_last = noone;
+char_scale_min = 1.2;
+char_scale = char_scale_min;
+char_x_offset = 100;
+char_x = char_x_offset;
 
 //Pages of the menu
 menu_pages = [ds_menu_main];
