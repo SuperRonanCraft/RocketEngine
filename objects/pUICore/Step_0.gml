@@ -157,7 +157,7 @@ if (inputting) { //Are we inputting data?
 						val = ds_grid[# 4, option];
 						val = clamp(val + ochange, 0, 1);
 						if (val != ds_grid[# 4, option]) {
-							ds_grid[# 4, option] = val;
+							//ds_grid[# 4, option] = val;
 							//script_execute(ds_grid[# 2, option], val);
 							key_enter = true;
 						}
@@ -214,13 +214,13 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 			}
 			inputting = !inputting; break;
 		case menu_element_type.toggle_live:
-			if (key_enter_mouse) {
+			//if (key_enter_mouse) {
 				var val = ds_grid[# 4, menu_option[page]];
 				val = clamp(val + 1, 0, 1);
 				if (val == ds_grid[# 4, menu_option[page]])
 					val = clamp(val - 1, 0, 1);
 				ds_grid[# 4, menu_option[page]] = val;
-			}
+			//}
 			script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 			break;
 		//Input elements

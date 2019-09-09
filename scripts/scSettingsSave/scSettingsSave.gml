@@ -23,4 +23,12 @@ ini_write_real(sec, "p2_shoot", global.key_p2_shoot);
 //GRAPHICS
 ini_write_real(sec, "pause_onfocus", global.pause_onfocus);
 
+//CACHE
+sec = scSettingsGetType(SETTINGS_TYPE.SECTION, SETTINGS.SECTION);
+for (var i = 0; i < SETTINGS.SECTION; i++) {
+	var key = scSettingsGetType(SETTINGS_TYPE.SECTION, i);
+	var val = scSettingsGetType(SETTINGS_TYPE.VALUE, i);
+	ini_write_real(sec, key, val);
+}
+
 ini_close(); //Close stream

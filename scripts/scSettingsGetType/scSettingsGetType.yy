@@ -1,8 +1,8 @@
 {
-    "id": "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
+    "id": "034c8d0e-9a5c-4ecb-9693-9fab48783be5",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scLoadSettings",
+    "name": "scSettingsGetType",
     "IsCompatibility": false,
     "IsDnD": false
 }

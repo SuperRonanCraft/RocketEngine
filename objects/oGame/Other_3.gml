@@ -1,2 +1,0 @@
-/// @desc Save stuff
-scSaveSettings();

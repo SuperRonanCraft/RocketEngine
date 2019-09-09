@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "034c8d0e-9a5c-4ecb-9693-9fab48783be5",
+            "Value": {
+                "id": "b5d3123b-b000-437c-ae99-7db1260f6794",
+                "resourcePath": "scripts\\scSettingsGetType\\scSettingsGetType.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0378c52b-0d41-40b1-8b55-41b306c931ba",
             "Value": {
                 "id": "50feb544-b39e-455a-b034-7fa5849905e3",
@@ -938,7 +946,7 @@
             "Key": "2869aac5-8803-4652-90fa-42a2b0dafde3",
             "Value": {
                 "id": "c3a88b1b-267c-47a6-9498-249637445fb7",
-                "resourcePath": "scripts\\scSaveSettings\\scSaveSettings.yy",
+                "resourcePath": "scripts\\scSettingsSave\\scSettingsSave.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2783,6 +2791,14 @@
             }
         },
         {
+            "Key": "7cdace1b-d31e-46b4-ad93-fa4531d22fbb",
+            "Value": {
+                "id": "49531ec3-f668-404d-b266-389d8590c555",
+                "resourcePath": "scripts\\scSettingsCache\\scSettingsCache.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7cdd9206-2ac7-42ff-ba77-5a55c8dbc6c7",
             "Value": {
                 "id": "4ccb7f64-dff8-494b-8f4e-4d56533b93b6",
@@ -3594,7 +3610,7 @@
             "Key": "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
             "Value": {
                 "id": "508592d5-7e93-44b9-8490-3a5877175a69",
-                "resourcePath": "scripts\\scLoadSettings\\scLoadSettings.yy",
+                "resourcePath": "scripts\\scSettingsLoad\\scSettingsLoad.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4727,6 +4743,14 @@
             }
         },
         {
+            "Key": "d1862692-361d-4fe7-b160-4928cb06954e",
+            "Value": {
+                "id": "aa57aa84-b251-4338-9060-b61996040762",
+                "resourcePath": "scripts\\scPlayerCharacterGet\\scPlayerCharacterGet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d28e40b5-df64-4398-9199-b3c5d683fc81",
             "Value": {
                 "id": "e74318eb-508d-42e6-be58-41664eba7722",
@@ -5108,6 +5132,14 @@
                 "id": "36b3736a-431a-411f-8d60-6a721e73f94d",
                 "resourcePath": "scripts\\scRocketLightning_CreateExplode\\scRocketLightning_CreateExplode.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e51b6ab9-abc3-4ad2-99e2-740966dcfa13",
+            "Value": {
+                "id": "f8098d40-c7f5-4aab-9a31-5da2bf9152ce",
+                "resourcePath": "objects\\oSettingsHandler\\oSettingsHandler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5871,6 +5903,7 @@
         "1f17ce40-ccde-4977-86b8-8da3b5ad9a63",
         "0cbe3861-56c8-4ae9-8ef2-6750091ad6ef",
         "8b62636a-ad25-4fde-a9ab-9868838ebd68",
+        "d1862692-361d-4fe7-b160-4928cb06954e",
         "22340016-76dd-4ca3-9586-882cef09cf3d",
         "52bf7011-b434-455b-b401-3945ebf3821b",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
@@ -5895,6 +5928,8 @@
         "01cfe7e1-8967-4426-a649-233b97758fea",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
+        "034c8d0e-9a5c-4ecb-9693-9fab48783be5",
+        "7cdace1b-d31e-46b4-ad93-fa4531d22fbb",
         "5e55b293-f3e4-4ad3-aae9-a5ec05874b2e",
         "e24b4d5b-f5a0-4af6-a452-0f4fdcf5fc75",
         "7eec10ae-de29-493a-afc4-60ffa416df7d",

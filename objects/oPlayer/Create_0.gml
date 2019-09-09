@@ -7,7 +7,7 @@ event_inherited();
 scPlayerStart();
 
 //Load Character
-scPlayerCharacterChange(CHARACTERS.SWORD);
+scPlayerCharacterChange(scPlayerCharacterGet());
 
 //Load gravity and movement variables
 scGravityStart();

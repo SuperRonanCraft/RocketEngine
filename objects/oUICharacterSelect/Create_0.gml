@@ -25,9 +25,13 @@ selected = false;
 player = oPlayer;
 char_last = noone;
 char_scale_min = 1.2;
-char_scale = char_scale_min;
+char_scale_b = char_scale_min;
+char_scale_a = char_scale_min;
+char_scale_cur_max = 2;
+char_scale_cur = char_scale_cur_max;
 char_x_offset = 100;
 char_x = char_x_offset;
+char_x_cur = 0;
 
 //Pages of the menu
 menu_pages = [ds_menu_main];

@@ -1,0 +1,3 @@
+/// @desc save settings
+
+scSettingsSave()

@@ -9,6 +9,26 @@ map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
 //Load Sprites
 characterSprites = scPlayerCharacterGetSprites(map[? CHARACTER_MAP.TYPE]);
 
+for (var i = 0; i < instance_number(object_index); i++)
+	if (instance_find(object_index, i) == self) {
+		switch (i) {
+			case 0:
+				scSettingsCache(SETTINGS.PLAYER_1_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				break;
+			case 1:
+				scSettingsCache(SETTINGS.PLAYER_2_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				break;
+			case 2:
+				scSettingsCache(SETTINGS.PLAYER_3_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				break;
+			case 3:
+				scSettingsCache(SETTINGS.PLAYER_4_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				break;
+		}
+		break;
+	}
+
+
 switch (map[? CHARACTER_MAP.TYPE]) {
 	case CHARACTERS.DEFAULT:
 		map[? CHARACTER_MAP.NAME] = "Steve";
