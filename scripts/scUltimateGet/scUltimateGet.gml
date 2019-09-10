@@ -167,13 +167,6 @@ switch (type) {
 		ds_map[? "spr"] = sUltFrosty;
 		ds_map[? "scl"] = 1;
 		break;
-		
-	case ULTIMATE.DEFAULT_SWORD:
-		ds_map[? ULTIMATE_MAP.NAME] = "A sophisticated slash.";
-		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordDefault;
-		ds_map[? ULTIMATE_MAP.CAST_TIME] = 1;
-		break;
-		
 }
 
 enum ULTIMATE {
@@ -181,9 +174,6 @@ enum ULTIMATE {
 	MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 	SLOWMO, SLEEPDART, PORTAL, BRICKWALL, AMPWALL, TURRET,
 	ORBIT, HACKLOOT, JUMPPAD, FROSTY,
-	
-	//SWORD ULTS
-	DEFAULT_SWORD,
 	NONE,
 	//SWIPE, SHIELD, MINISPRAY,
 	//PUT LAST

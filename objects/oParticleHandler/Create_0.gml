@@ -388,19 +388,11 @@ part_type_size(parttype,0.5,1,0,0);
 ds_map_add(ds_part,PARTICLES.ASH,parttype);
 ds_map_add(ds_part_amt, PARTICLES.ASH, 5);
 
-//SPARK
-parttype = part_type_create();
-part_type_sprite(parttype, s_pslash,true,true,false);
-part_type_life(parttype, 4,5);
-part_type_size(parttype,0.4,0.8,0,0);
-ds_map_add(ds_part,PARTICLES.SPARK,parttype);
-ds_map_add(ds_part_amt,PARTICLES.SPARK,1);
-
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE, ANTIHEAL, ABSORBTION, LIFESTEAL,
-	CLEANSE, TRAIL, RELOAD, ASH, SPARK,
+	CLEANSE, TRAIL, RELOAD, ASH,
 }
