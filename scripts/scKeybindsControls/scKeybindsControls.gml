@@ -51,7 +51,7 @@ if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
 	hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base + friction_adj)));	
 	hsp_move += recoilKB;
 	//Ease into 0
-	if (abs(hsp_move) < 0.5)
+	if (abs(hsp_move) < 0.1)
 		hsp_move = 0;
 } 
 //Move hsp

@@ -36,6 +36,6 @@ if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy a
 		
 		if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])
 			scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
-		scPlaySound(SOUND.EFFECT_EXP);
+		scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
 		
 	}

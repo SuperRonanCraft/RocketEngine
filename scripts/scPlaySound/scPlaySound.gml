@@ -39,6 +39,17 @@ enum SOUND {
 	EFFECT_PICKUP = noone,
 		//Nuke explosion sound
 	EFFECT_NUKE_EXP = noone,
+		//Sword ult
+	EFFECT_SLASH = snSwordSlash,
+		//Reflect
+	EFFECT_REFLECT = snSwordReflect,
+		//Throw shuriken
+	EFFECT_SHUR_THROW = snShurikenThrow,
+		//Shuriken hit surface
+	EFFECT_SHUR_WALL = snShurikenHit,
+		//Shuriken hit player
+	EFFECT_SHUR_PLAYER = snShurikenStrike,
+	
 	//GAMEPLAY
 		//Game ended
 	GP_ENDGAME = snEndGame,
@@ -54,5 +65,7 @@ enum SOUND {
 	ULT_SHIELD_BREAK = snUltimateShieldBreak,
 	ULT_SHIELD_CAST = snUltimateShieldCast,
 	//ACHIEVEMENTS
-	ACH_WHOOSH = sn_ach_whoosh
+	ACH_WHOOSH = sn_ach_whoosh,
+	
+	
 }

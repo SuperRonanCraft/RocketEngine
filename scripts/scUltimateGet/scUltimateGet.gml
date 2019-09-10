@@ -171,7 +171,7 @@ switch (type) {
 	case ULTIMATE.DEFAULT_SWORD:
 		ds_map[? ULTIMATE_MAP.NAME] = "A sophisticated slash.";
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordDefault;
-		ds_map[? ULTIMATE_MAP.CAST_TIME] = 1;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 		break;
 		
 }
