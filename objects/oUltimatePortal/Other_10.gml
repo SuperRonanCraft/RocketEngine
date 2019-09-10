@@ -2,7 +2,7 @@
 if (!global.play) exit;
 
 for (var e = 0; e < 2; e++) {
-	var inst = e == 0 ? oPlayer : oRocket;
+	var inst = e == 0 ? oPlayer : pWeapon;
 	var listentry = ds_list_create();
 	var listexit = ds_list_create();
 	var teleport = ds_list_create();

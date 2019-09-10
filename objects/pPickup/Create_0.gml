@@ -20,4 +20,4 @@ hacked = false;
 image_index = irandom(image_number);
 
 image_alpha = 0; //Hide by default
-instance_destroy(); //DISABLED :D
+//instance_destroy(); //ENABLED :D

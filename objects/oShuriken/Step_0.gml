@@ -16,14 +16,25 @@ else if(!deactivate){
 
 if (timer < time)
 	timer++;
-else if (timer == time)
+	
+else if (timer == time && stuckTo != "WALL")
 	event_user(0);
+	
+else
+	instance_destroy();
 
-if(deactivate && stuckTo != noone){
-	x = stuckTo.x + newX;
-	y = stuckTo.y + newY;
+if(deactivate && stuckTo != noone && stuckTo != "WALL"){
+	if(!stuckTo.player_map[?PLAYER_MAP.ALIVE]){
+		event_user(0);
+	}
+	else{
+		x = stuckTo.x + newX;
+		y = stuckTo.y + newY;
+	}
 }
-
+else if(deactivate && stuckTo == noone){
+	event_user(0);	
+}
 
 if (checkroom)
 	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20))

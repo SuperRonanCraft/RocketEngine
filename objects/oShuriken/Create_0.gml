@@ -23,3 +23,9 @@ confirmList = ds_list_create();
 stuckTo = noone;
 newX = x;
 newY = y;
+
+//movement variables
+debounce = false;
+hsp = 0;
+vsp = 0;
+
