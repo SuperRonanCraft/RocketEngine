@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "1dba75da-3ddd-4565-99f4-8164dd1a6d04",
+            "Value": {
+                "id": "0af51f75-4bcd-481a-97e7-03789ee55960",
+                "resourcePath": "objects\\pWeapon\\pWeapon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1dcb14c7-6222-4df4-a25f-a7552dacc89e",
             "Value": {
                 "id": "e9ec5a6f-d257-4042-bb3d-1b1bd630b857",
@@ -2713,7 +2721,7 @@
         {
             "Key": "74f530e7-7b26-4f54-8398-0e146c4876c9",
             "Value": {
-                "id": "f7bfdf4e-9a0b-4e64-80a1-342cde727cb0",
+                "id": "16756935-87e7-45f8-b7fb-ca957985b3f7",
                 "resourcePath": "scripts\\scUltimateGet\\scUltimateGet.yy",
                 "resourceType": "GMScript"
             }
@@ -2796,6 +2804,14 @@
                 "id": "142b90b6-12b4-4f10-8a12-a7a9a7ffe218",
                 "resourcePath": "views\\78bb18ef-144e-4cf4-89c5-ed3b6d2b21ed.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
+            "Value": {
+                "id": "cc0b0dfd-2de8-4317-b549-9c34ce90cc65",
+                "resourcePath": "scripts\\scUltimateSwordDefault\\scUltimateSwordDefault.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5375,6 +5391,14 @@
             }
         },
         {
+            "Key": "ecd1627b-b76e-425d-b0c4-656b9be00ca6",
+            "Value": {
+                "id": "387d77b4-f00f-407b-822b-0d993ec6585e",
+                "resourcePath": "objects\\oSwordSlash_Default\\oSwordSlash_Default.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ed189651-15fe-4ace-ae8a-c1850da9b6c8",
             "Value": {
                 "id": "571a64f3-dc92-4461-9280-f004745ef2bb",
@@ -5499,6 +5523,14 @@
             "Value": {
                 "id": "44a3d1a3-de11-487b-adaa-35a6c4cf7839",
                 "resourcePath": "sprites\\sRocket_Magnet\\sRocket_Magnet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f4e0001b-b73d-4a68-b343-f00d6c7564e2",
+            "Value": {
+                "id": "f8f9fe63-66fb-4b06-99af-231cbb6b4b8a",
+                "resourcePath": "sprites\\sShuriken_Default_Ult\\sShuriken_Default_Ult.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5897,6 +5929,7 @@
         "297a0b73-fb7d-4140-80ac-53fbab032405",
         "9beed5d5-b978-4366-8638-ef79a32d3637",
         "62d81973-9b38-4c0f-a0e0-6a2c2781f9f6",
+        "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
         "483e1c54-e32e-4837-b4ec-da3ac733df64",
         "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
         "5e646fca-ca67-4330-a6ca-62aa240db456",
