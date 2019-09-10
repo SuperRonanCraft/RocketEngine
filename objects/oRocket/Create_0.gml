@@ -8,6 +8,7 @@ timer = 0;
 //size = 1;
 //Destroy variable for explosions
 destroy = false;
+deactivate = false;
 //What this rocket has hit, add it to its explosion
 hitList = ds_list_create();
 confirmList = ds_list_create();

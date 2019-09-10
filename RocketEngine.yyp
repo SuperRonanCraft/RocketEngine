@@ -2439,6 +2439,14 @@
             }
         },
         {
+            "Key": "64cbd7c7-2c38-4c1c-8291-503625ec9bc7",
+            "Value": {
+                "id": "c752be3a-074b-4f75-ae64-dcdafd088459",
+                "resourcePath": "objects\\pSlash\\pSlash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6530c244-fc42-42ec-bd1b-67a43f3c863c",
             "Value": {
                 "id": "f37051f1-94f6-427e-953d-bf7cee0e1633",
