@@ -44,7 +44,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	
 	//WEAPON COOLDOWN
-	if (map[? WEAPON_MAP.ENABLED]) {
+	if (map[? WEAPON_MAP.ENABLED] && global.play) {
 		var cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] : map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL];
 		var curr_cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME] : map[? WEAPON_MAP.COOLDOWN_TIME];
 		scDrawPie(xposcir, ypos, curr_cd, cd, c, 20, 0.8);
