@@ -7,7 +7,7 @@ scAllowCharacterSelect(); //Character selector allowed
 
 //Alter hp and ults
 with (oPlayer) {
-	var hp = player_map[? PLAYER_MAP.HEALTH];
+	var hp = shootable_map[? SHOOTABLE_MAP.HEALTH];
 	switch (global.mode_1v1_health) {
 		case 0: hp /= 10; break;
 		case 1: hp /= 2; break;
@@ -17,8 +17,7 @@ with (oPlayer) {
 		case 5: hp *= 10; break;
 	}
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
-	player_map[? PLAYER_MAP.HEALTH] = hp;
-	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
+	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = hp;
 	scStageUltimateStart(global.mode_1v1_ultimates);
 	weapon_map[? WEAPON_MAP.ENABLED] = global.mode_1v1_weapon;
 	if (global.mode_1v1_singleplayer == 1 && team == TEAM.RIGHT)

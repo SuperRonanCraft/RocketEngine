@@ -4,11 +4,11 @@ if (!other.player_map[? PLAYER_MAP.ENABLED_PICKUP] || !global.play) exit;
 if (item != noone) {
 	var added = false;
 	with (other) {
-		var map = player_map;
-		if (map[? PLAYER_MAP.HEALTH] > 0)
+		var map = shootable_map;
+		if (shootable_map[? SHOOTABLE_MAP.HEALTH] > 0)
 			if (other.healing > 0) {
-				if (shootable_map[? SHOOTABLE_MAP.CAN_HEAL] && map[? PLAYER_MAP.HEALTH] + other.healing <= map[? PLAYER_MAP.HEALTH_ORIGINAL]) {
-					map[? PLAYER_MAP.HEALTH] += other.healing;
+				if (shootable_map[? SHOOTABLE_MAP.CAN_HEAL] && map[? SHOOTABLE_MAP.HEALTH] + other.healing <= map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]) {
+					map[? SHOOTABLE_MAP.HEALTH] += other.healing;
 					hp_scale += 2;
 					added = true;
 				}

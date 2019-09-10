@@ -8,8 +8,11 @@ var newi = (pg * (columns * rows)) + ioffset + (pg > 0 ? disabled : 0);
 for (var i = newi; index < columns * rows && i < amt; i++) {
 	if (index mod columns == 0)
 		offset++;
+	var ingroup = scAchievementsGetType(ACHIEVEMENT_TYPE.GROUP, i);
 	var name = scAchievementsGetType(ACHIEVEMENT_TYPE.NAME, i);
 	var status = scAchievementsGetType(ACHIEVEMENT_TYPE.VALUE, i); //Is it unlocked? (not `noone`)
+	if (ingroup && status != noone)
+		continue;
 	var desc = scAchievementsGetType(ACHIEVEMENT_TYPE.DESCRIPTION, i);
 	var icon = status != noone ? scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, i) : s_achievement_Locked;
 	var rx = ((RES_W / 3) + ((RES_W / 3) * index)) - ((offset - 1) * ((RES_W / 3) * columns));

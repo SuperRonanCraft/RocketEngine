@@ -11,6 +11,6 @@ if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && shootable_map[? SHOOTABLE_MAP.
 	timer = 10 * TIME_SPEED;
 	show_debug_message("BOMB HIT!");
 	var p = shootable_map[? SHOOTABLE_MAP.SHOOTER];
-	show_debug_message(p.player_map[? PLAYER_MAP.HEALTH]);
-	show_debug_message(p.player_map[? PLAYER_MAP.HEALTH_ORIGINAL]);
+	show_debug_message(p.shootable_map[? SHOOTABLE_MAP.HEALTH]);
+	show_debug_message(p.shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]);
 }

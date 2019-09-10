@@ -12,9 +12,9 @@ with (inst) {
 	keyshoot = noone; //Cannot shoot
 	team = other.team; //Same team as caster
 	display = false; //No ui
-	player_map[? PLAYER_MAP.HEALTH] = 1; //One hit kill
+	//player_map[? PLAYER_MAP.HEALTH] = 1; //One hit kill
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = 1; //One hit kill
-	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = 1;
+	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = 1;
 	despawn = true; //Despawn player if dead
 	walksp += random_range(-2, 2);
 }

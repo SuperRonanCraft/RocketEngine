@@ -1,20 +1,20 @@
 //DRAW PLAYER HEALTH
 var map = player_map;
-var hppart = map[? PLAYER_MAP.HEALTH] mod 2 / 2;
-if (map[? PLAYER_MAP.HEALTH] <= 2)
+var hppart = shootable_map[? SHOOTABLE_MAP.HEALTH] mod 2 / 2;
+if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 2)
 	hp_offset = scMovementWave(-3, 3, 1);
 else
 	hp_offset = 0;
-for (var i = 0; i < map[? PLAYER_MAP.HEALTH_ORIGINAL] / 2; i++) {
+for (var i = 0; i < shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] / 2; i++) {
 	//Show first ten hearts, then show additional hearts in text
 	if (i < 10) {
 		var len = hpwidth * i;
 		var side = team == TEAM.LEFT ? 1 : -1;
 		var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset;
 		var ypos = hpheight + 2;
-		var scale = i * 2 <= map[? PLAYER_MAP.HEALTH] + (map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > map[? PLAYER_MAP.HEALTH] - 2 ? hp_scale : 1;
-		var c = map[? PLAYER_MAP.HEALTH] / 2 <= i ? c_white : hp_color;
-		if (hppart != 0 && i == (map[? PLAYER_MAP.HEALTH] - (hppart * 2)) / 2) {
+		var scale = i * 2 <= shootable_map[? SHOOTABLE_MAP.HEALTH] + (map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > shootable_map[? SHOOTABLE_MAP.HEALTH] - 2 ? hp_scale : 1;
+		var c = shootable_map[? SHOOTABLE_MAP.HEALTH] / 2 <= i ? c_white : hp_color;
+		if (hppart != 0 && i == (shootable_map[? SHOOTABLE_MAP.HEALTH] - (hppart * 2)) / 2) {
 			var alpha = 0.9;
 			var amt = 1;
 			if (map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] > 0) //shader
@@ -36,12 +36,12 @@ for (var i = 0; i < map[? PLAYER_MAP.HEALTH_ORIGINAL] / 2; i++) {
 			if (map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] > 0) //shader
 				shader_reset();
 		} else {
-			draw_sprite_ext(hpsprite, map[? PLAYER_MAP.HEALTH] / 2 > i ? 0 : 1, xpos, ypos, scale, scale, 0, c, 0.8);
-			scFlash(map[? PLAYER_MAP.FLASH_HEALTH_ALPHA], map[? PLAYER_MAP.HEALTH] / 2 > i ? map[? PLAYER_MAP.FLASH_HEALTH_COLOR] : c_white, scale, scale, hpsprite, map[? PLAYER_MAP.HEALTH] > i ? 0 : 1, xpos, ypos);
+			draw_sprite_ext(hpsprite, shootable_map[? SHOOTABLE_MAP.HEALTH] / 2 > i ? 0 : 1, xpos, ypos, scale, scale, 0, c, 0.8);
+			scFlash(map[? PLAYER_MAP.FLASH_HEALTH_ALPHA], shootable_map[? SHOOTABLE_MAP.HEALTH] / 2 > i ? map[? PLAYER_MAP.FLASH_HEALTH_COLOR] : c_white, scale, scale, hpsprite, shootable_map[? SHOOTABLE_MAP.HEALTH] > i ? 0 : 1, xpos, ypos);
 		}
 	} else {
-		if (map[? PLAYER_MAP.HEALTH] < 20) break;
-		var str = "+" + string(map[? PLAYER_MAP.HEALTH] - i);
+		if (shootable_map[? SHOOTABLE_MAP.HEALTH] < 20) break;
+		var str = "+" + string(shootable_map[? SHOOTABLE_MAP.HEALTH] - i);
 		var xpos = team == TEAM.LEFT ? 20 + (hpwidth * 8) : RES_W - 20 - (hpwidth * 8);
 		var ypos = hpheight + 10;
 		c = hp_scale == 1 ? c_white : c_red;

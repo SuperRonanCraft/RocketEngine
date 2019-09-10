@@ -1,9 +1,9 @@
 /// @desc touching a player
 
 with (other)
-	if (player_map[? PLAYER_MAP.HEALTH] > 0) {
+	if (shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 		scDamageShootable(noone, id, false, false, 1, true);
-		if (player_map[? PLAYER_MAP.HEALTH] > 0) {
+		if (shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 			var xx = xstart, yy = ystart;
 			with (oGMMSingle) {
 				var check_point = scCheckpointGet(player_checkpoint);

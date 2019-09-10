@@ -24,7 +24,7 @@ with (damageInst) {
 			lethalDamage = true;
 			
 		if (isPlayer) {
-			player_map[? PLAYER_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH];
+			//player_map[? PLAYER_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH];
 			hp_scale = 2;
 			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
 			player_map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;

@@ -13,7 +13,7 @@ player_rocket = noone;
 
 if (!scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_NEWGAME, gamemode))
 	with (oPlayer) {
-		player_map[? PLAYER_MAP.HEALTH] = scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LIVES, other.gamemode);
+		shootable_map[? SHOOTABLE_MAP.HEALTH] = scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LIVES, other.gamemode);
 		scRocketChange(scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_ROCKET, other.gamemode));
 		var check_point_id = scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT, other.gamemode);
 		var check_point = scCheckpointGet(check_point_id);

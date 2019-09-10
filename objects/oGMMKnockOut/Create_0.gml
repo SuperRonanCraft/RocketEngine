@@ -17,7 +17,7 @@ for (var i = 0; i < instance_number(oPlayer); i++) {
 
 //Alter hp and ults
 with (oPlayer) {
-	var hp = player_map[? PLAYER_MAP.HEALTH];
+	var hp = shootable_map[? SHOOTABLE_MAP.HEALTH];
 	switch (global.mode_kb_health) {
 		case 0: hp = 2; break;
 		case 1: hp = 4; break;
@@ -26,8 +26,7 @@ with (oPlayer) {
 		case 4: hp = 20; break;
 	}
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
-	player_map[? PLAYER_MAP.HEALTH] = hp;
-	player_map[? PLAYER_MAP.HEALTH_ORIGINAL] = hp;
+	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = hp;
 	scStageUltimateStart(global.mode_kb_ultimates);
 	player_tech = false; //Disable wall bounce
 }

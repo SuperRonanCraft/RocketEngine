@@ -4,7 +4,7 @@
 var p1 = p_list[| 0];
 var p2 = instance_create_depth(0, 0, depth, oTargetBomb);
 
-if (p1.player_map[? PLAYER_MAP.HEALTH] > 0) {
+if (p1.shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 	global.winner = p1.team;
 	global.loser = p2.team;
 } else {

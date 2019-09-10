@@ -29,7 +29,7 @@ switch (type) {
 			case ACHIEVEMENTS.ROCKETS_SHOT_10000: val = "Rocket Expert!"; break;
 			case ACHIEVEMENTS.TIME_PLAYED_10M: val = "Just getting started"; break;
 			case ACHIEVEMENTS.GAMES_COMPLETE_10: val = "Warming up"; break;
-			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = "Ultimate Seaker"; break;
+			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = "Ultimate Seeker"; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Weapon Noob!"; break;
 			default: val = "Something important"; break;
 		}
@@ -116,6 +116,16 @@ switch (type) {
 			default: val = noone; break; //noone so we dont check the achievement automatically
 		}
 		break;
+	case ACHIEVEMENT_TYPE.GROUP:
+		switch (enu) {
+			case ACHIEVEMENTS.ROCKETS_SHOT_100:
+			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
+			case ACHIEVEMENTS.ROCKETS_SHOT_10000:
+				val = true; break;
+			default: //No Group
+				val = noone;
+				break;
+		}
 }
 
 return val;
@@ -144,5 +154,6 @@ enum ACHIEVEMENT_TYPE {
 	VALUE, //Has it been achieved
 	TRACKING, //Number to track
 	TRACKING_DESC, //String version when achievement hasnt been achieved
-	GOAL //Value for the achievement to be or higher
+	GOAL, //Value for the achievement to be or higher
+	GROUP
 }

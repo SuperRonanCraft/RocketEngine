@@ -6,7 +6,7 @@ var owner = argument0;
 var dsBuff = argument1;
 
 //Add Health
-while (owner.player_map[? PLAYER_MAP.HEALTH] != dsBuff[? "health_start"] && dsBuff[? "health"] > 0) {
-	owner.player_map[? PLAYER_MAP.HEALTH]++;
+while (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] != dsBuff[? "health_start"] && dsBuff[? "health"] > 0) {
+	owner.shootable_map[? SHOOTABLE_MAP.HEALTH]++;
 	dsBuff[? "health"]--;
 }
