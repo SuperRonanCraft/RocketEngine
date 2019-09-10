@@ -209,7 +209,7 @@ switch (buff) {
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ANTIHEAL];
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.TIME] = 12 * room_speed;
-		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.COMBO, 5, 1, 3 * room_speed, 0]; //Type, combo-amount, combo-current, up-time, up-time-current
+		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.COMBO, 5, 1, 3 * room_speed, 0]; //Type, combo-amount, combo-current, up-time, up-time-current, refreshable?
 		ds_map[? "color"] = c_purple;
 		ds_map[? "alpha"] = 0.8;
 		ds_map[? "scale_org"] = 0.3;

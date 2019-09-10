@@ -3,7 +3,7 @@ var offset = 0;
 for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	//Grab the buff map
 	var ds_list = buffs_map[| i];
-	var c = c_dkgray;
+	var c = ds_list[? BUFF_MAP.GOOD] ? c_aqua : c_fuchsia;
 	//Offset every 10 buffs
 	if (i mod 10 == 0)
 		offset++;
@@ -34,8 +34,8 @@ for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	}
 	
 	scDrawPieRect(xpos + (w / 4), ypos + (h / 4), time, maxtime, c, (w / 4) + 4, 0.65); //BUFF TIME ROUND-OUT
-	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 0.55); //BUFF SPRITE
+	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 1); //BUFF SPRITE
 	if (display_combo)
-		scDrawText(xpos, ypos, "x" + string(stack_info[2]), c_white, 0.45); //BUFF COMBO
+		scDrawText(xpos, ypos, "x" + string(stack_info[2]) + "/" + string(stack_info[1]), c_white, 0.45); //BUFF COMBO
 	scDrawText(xpos + w / 2, ypos + h / 2, string(ceil(time / room_speed)), c_gray, 0.45); //BUFF TIME
 }

@@ -34,7 +34,7 @@ if (key_shoot) { //Shoot key being held down
 			ds_map_clear(map[? ULTIMATE_CASTING_MAP.CASTING_MAP]);
 			ds_map_copy(map[? ULTIMATE_CASTING_MAP.CASTING_MAP], ult_map);
 			map[? ULTIMATE_CASTING_MAP.CAST_TIME] = ult_map[? ULTIMATE_MAP.CAST_TIME];
-			map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX] = map[? ULTIMATE_CASTING_MAP.CAST_TIME];
+			map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL] = map[? ULTIMATE_CASTING_MAP.CAST_TIME];
 			map[? ULTIMATE_CASTING_MAP.CASTING_LAST] = ult;
 			ds_map_destroy(ult_map); //Delete the ult map
 		}
@@ -44,7 +44,7 @@ if (key_shoot) { //Shoot key being held down
 } else {
 	//Reset casting
 	map[? ULTIMATE_CASTING_MAP.CASTING] = false;
-	if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] < map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX])
+	if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] < map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL])
 		map[? ULTIMATE_CASTING_MAP.CAST_TIME] += 1;
 }
 
@@ -63,7 +63,7 @@ scPlaySound(ult_map[? ULTIMATE_MAP.SOUND_CAST]); //Play the cast sound
 
 //No longer casting
 map[? ULTIMATE_CASTING_MAP.CASTING] = false;
-map[? ULTIMATE_CASTING_MAP.CAST_TIME] = map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX]; //Reset for a new chargeup
+map[? ULTIMATE_CASTING_MAP.CAST_TIME] = map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL]; //Reset for a new chargeup
 
 if (track_stats)
 	scStatsCacheAddGeneral(STATISTICS_GENERAL.ULTIMATES_CASTED, 1);

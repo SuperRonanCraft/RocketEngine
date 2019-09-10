@@ -32,8 +32,8 @@ if (ds_map[? BUFF_MAP.ENABLED]) {
 				stack_info[2]++;
 				stack_info[4] = 0;
 				buff[? BUFF_MAP.STACK_INFO] = stack_info;
-			} else if (buff[? BUFF_MAP.CLOCK] > 0)
-				buff[? BUFF_MAP.CLOCK] = 1;
+			} //else if (buff[? BUFF_MAP.CLOCK] > 0)
+				//buff[? BUFF_MAP.CLOCK] = 1;
 		}
 		ds_map_destroy(ds_map);
 	} else {

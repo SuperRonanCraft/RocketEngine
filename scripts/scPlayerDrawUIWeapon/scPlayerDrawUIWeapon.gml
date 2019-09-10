@@ -61,7 +61,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 		scDrawPiePart(xposcir, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE], ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX], c, 28, 0.8, 9);
 	
 		//ULTIMATE CASTTIME CIRCLE
-		scDrawPiePart(xposcir, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX] - ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME], ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX], c_yellow, 32, 0.9, 4);
+		scDrawPiePart(xposcir, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL] - ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME], ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL], c_yellow, 32, 0.9, 4);
 	
 		//ULTIMATE CHARGE TEXT
 		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,

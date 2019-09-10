@@ -15,7 +15,7 @@ else if (width_cur == 0) //Destroy
 if (damage_cooldown_cur > 0) { //Just did damage? Cooldown
 	damage_cooldown_cur--; exit;
 } else if (width_cur == laser_width || !growing) { //Full power or fading out, do damage
-	var width = width_cur / 2;
+	//var width = width_cur / 2;
 	
 	
 	with (hitting) {

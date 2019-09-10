@@ -8,6 +8,6 @@ with (scSpawnRocket(x, y, depth + 1, argument0, id, r_map, [ROCKET_MAP.SCALE], [
 	rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;
 	rocket_map[? ROCKET_MAP.KBAMT] *= 1.5;
 	//Explosion Size
-	size = 3;
+	rocket_map[? ROCKET_MAP.EXPLOSION_SCALE] *= 3;
 	x += lengthdir_x(rocket_map[? ROCKET_MAP.OFFSET], direction);
 }

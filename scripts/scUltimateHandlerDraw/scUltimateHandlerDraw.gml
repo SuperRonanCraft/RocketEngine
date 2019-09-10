@@ -20,13 +20,13 @@ if (map[? ULTIMATE_CASTING_MAP.CASTING]) {
 		if (ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] != noone)
 			script_execute(ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map);
 	}
-} else if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] != map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX])
-	showultbar = true;
+} else if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] != map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL])
+	showultbar = false;
 
 if (showultbar && global.weapon_info) {
 	var len = 100, width = 3, margin = 2;
 	var yy = bbox_top - (width + margin), xx = x - (len / 2);
-	var percent = (map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX] - map[? ULTIMATE_CASTING_MAP.CAST_TIME]) / map[? ULTIMATE_CASTING_MAP.CAST_TIME_MAX];
+	var percent = (map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL] - map[? ULTIMATE_CASTING_MAP.CAST_TIME]) / map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL];
 	scDrawLine(xx - (margin / 2), yy, xx + len + (margin / 2), yy, c_gray, width + margin, 0.5);
 	scDrawLine(xx, yy, xx + (percent * len), yy, c_yellow, width, 0.5);
 }

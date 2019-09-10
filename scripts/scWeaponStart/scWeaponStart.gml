@@ -21,9 +21,12 @@ map[? WEAPON_MAP.GUI_ICON] = noone;
 switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.ROCKET:
 		scRocketStart(ROCKET.DEFAULT);
+		ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 1;
+		ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME] = 1;
 		break;
 	case WEAPON.SHURIKEN:
 		scShurikenStart(SHURIKEN.DEFAULT);
+		ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 5;
 		break;
 }
 
