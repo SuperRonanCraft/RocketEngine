@@ -50,7 +50,7 @@ switch (type) {
 		break;
 	case ACHIEVEMENT_TYPE.DESCRIPTION: //DESCRIPTION OF ACHIEVEMENT
 		switch (enu) {
-			case ACHIEVEMENTS.GM_1V1_MULTI: val = "Playing with friends"; break;
+			case ACHIEVEMENTS.GM_1V1_MULTI: val = "Play local 1v1"; break;
 			case ACHIEVEMENTS.ROCKETS_SHOT_100: val = "Shoot 100 Rockets"; break;
 			case ACHIEVEMENTS.ROCKETS_SHOT_1000: val = "Shoot 1,000 Rockets"; break;
 			case ACHIEVEMENTS.ROCKETS_SHOT_10000: val = "Shoot 10,000 Rockets"; break;

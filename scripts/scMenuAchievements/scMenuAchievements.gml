@@ -13,12 +13,17 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 	var ach_before = [];
 	if (group != noone) { //We are in a group
 		var display = i;
+		var anyComplete = false;
 		for (var gr = 0; gr < array_length_1d(group); gr++) {
 			var val = scAchievementsGetType(ACHIEVEMENT_TYPE.VALUE, group[gr]);
-			if (val == true)
+			if (val == true) {
 				display = group[gr];
+				anyComplete = true;
+			}
 		}
 		if (display != i) //Not completed yet
+			continue;
+		else if (!anyComplete && i != group[0]) //None are complete (display only first)
 			continue;
 		else { //Completed, show previous and after achievements
 			index++;
@@ -49,14 +54,17 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 		hovering = true;
 	}
 	scDrawText(rx, ry, name, c, scale_element, noone, noone, noone, fa_bottom); //Achievement Name
-	if (hovering && status == noone) { //hovering and locked show progress
-		var tracking = scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, i);
+	if (hovering && (status == noone || array_length_1d(ach_after) > 0)) { //hovering and locked show progress
+		var tracking = array_length_1d(ach_after) > 0 ? 
+			scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, ach_after[0]) : 
+			scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, i);
 		if (tracking != noone)
 			scDrawText(rx, ry, string(tracking), c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
 		else
 			scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
-	} else
+	} else {
 		scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
+	}
 	scDrawSpriteExt(rx - 32, ry + 25 + ryo, icon, 0); //Icon
 	if (array_length_1d(ach_before) != 0)
 		for (var ach_bf = 0; ach_bf < array_length_1d(ach_before); ach_bf++)
