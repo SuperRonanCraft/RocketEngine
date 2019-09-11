@@ -4,7 +4,6 @@
 var dir = 0;
 var amt = argument1[? "amt"];
 var offset = ((90 / amt) / 2);
-var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 for (var i = 0; i < amt; i++) {
 	//Set direction offset
 	if (argument0 == 0)
@@ -12,9 +11,10 @@ for (var i = 0; i < amt; i++) {
 	else
 		dir = (135 + offset) + ((90 / amt) * i);
 	//Create the rocket with the new direction
-	with (scSpawnRocket(x, y, depth - 1, dir, id, rocket_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE, ROCKET_MAP.ROCKET_STEP], [false, noone])) {
+	with (scSpawnRocket(x, y, depth - 1, dir, id, weapon_map, [ROCKET_MAP.ULTIMATE_CHARGE_GIVE, ROCKET_MAP.ROCKET_STEP], [false, noone])) {
 		x += lengthdir_x(35, direction);
 		y += lengthdir_y(35, direction);
+		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
 	}
 }

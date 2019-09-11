@@ -1,9 +1,12 @@
 /// @desc 
+if (other.weapon_map[? WEAPON_MAP.TYPE] != WEAPON.ROCKET) //Is it a rocket?
+	exit;
+var rocket_map = other.weapon_map[? WEAPON_MAP.MAP];
 
-if (is_undefined(other.rocket_map[? ROCKET_MAP.UNIQUE_CANBOUNCE])) exit;
+if (is_undefined(rocket_map[? ROCKET_MAP.UNIQUE_CANBOUNCE])) exit;
 if (jump_ani != 0) exit;
 
-var type = other.rocket_map[? ROCKET_MAP.TYPE]
+var type = rocket_map[? ROCKET_MAP.TYPE];
 
 switch (type) {
 	case ROCKET.BOUNCY:

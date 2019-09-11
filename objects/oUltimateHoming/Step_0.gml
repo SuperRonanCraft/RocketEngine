@@ -5,7 +5,7 @@ y = owner.y;
 
 if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
-			irandom_range(45, 135), owner, owner.weapon_map[? WEAPON_MAP.MAP], [ROCKET_MAP.SCALE], [1])) {
+			irandom_range(45, 135), owner, owner.weapon_map, [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;
 		//Give it the map of the current rocket
 		rocket_map = ds_map_create(); 
@@ -28,7 +28,8 @@ if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 		homing[? "clock"] = 0;
 		homing[? "locX"] = xx;// + irandom_range(-30, 30);
 		homing[? "locY"] = yy;// + irandom_range(-30, 30);
-		rocket_map[? ROCKET_MAP.SPEED] = 0.1 / TIME_SPEED;
+		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
+		weapon_map[? WEAPON_MAP.SPEED] = 0.1 / TIME_SPEED;
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	
