@@ -1719,6 +1719,14 @@
             }
         },
         {
+            "Key": "4850629c-f1c1-4b92-940d-1733147a4a6c",
+            "Value": {
+                "id": "3a30cd22-bde8-4779-bf70-91cc1c40cb38",
+                "resourcePath": "scripts\\scAchievementsGetPages\\scAchievementsGetPages.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "48989206-5c50-4341-a2f3-726523f2d808",
             "Value": {
                 "id": "bf5c56c7-40ca-4233-b7ca-eb5b8d73d552",
@@ -6071,11 +6079,11 @@
         "bc52f200-8726-4ff9-ad86-55bb3c461b15",
         "b888dc2c-40b4-4802-b8db-4d8c9e60095c",
         "e6b3fce5-eee5-4b2c-b861-206baa29be0a",
-        "6ebc6ea9-db60-4c99-8392-afd18fb048bf",
         "54791054-8f45-4f70-958a-fafb6a31106c",
-        "2f71d680-a22e-4051-bb86-74d44dd433c0",
-        "4f496e7c-5b8f-4f44-bd34-75ba158982c8",
         "9a0da5da-81e2-4634-9400-c0e170ae88bc",
+        "6ebc6ea9-db60-4c99-8392-afd18fb048bf",
+        "4f496e7c-5b8f-4f44-bd34-75ba158982c8",
+        "2f71d680-a22e-4051-bb86-74d44dd433c0",
         "5e5885b5-e793-4ccb-8335-06ce6b44dc87",
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
         "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
@@ -6136,6 +6144,7 @@
         "a3ac6a66-c960-400a-a41e-d67154fd0067",
         "b0717a21-f0f3-4b9a-8148-7e762528c584",
         "d610a108-85a0-4046-9bea-e52444b0173c",
+        "4850629c-f1c1-4b92-940d-1733147a4a6c",
         "b5cc65ae-c078-440a-9b5f-a6e506061b74",
         "642537f0-5347-4a8c-9cf9-7cb43338096e",
         "b07921d9-8376-4807-9a92-24c903c3e303"

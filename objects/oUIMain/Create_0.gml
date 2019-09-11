@@ -69,7 +69,7 @@ ds_rocketbuffs = scUICreateMenuPage(
 page_buffs = 0;
 
 //Achivements page
-page_achievements = 0;
+page_achievements = 1;
 
 ds_achievements = scUICreateMenuPage(
 	["",		menu_element_type.achievements],
