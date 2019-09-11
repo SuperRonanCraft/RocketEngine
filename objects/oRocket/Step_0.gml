@@ -10,7 +10,7 @@ if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 else {
-	var spd = weapon_map[? ROCKET_MAP.SPEED];
+	var spd = weapon_map[? WEAPON_MAP.SPEED];
 	scMovementLine(spd, direction);
 }
 

@@ -3,7 +3,7 @@ var map = shotgunMap;
 if (map[? "dist_trv"] > map[? "dist"]) {
 	var dir = direction - 15;
 	for (var i = 0; i < 4; i++) {
-		var rocket = scSpawnRocket(x, y, depth, dir, owner, rocket_map, [ROCKET_MAP.ROCKET_STEP, ROCKET_MAP.SCALE,
+		var rocket = scSpawnRocket(x, y, depth, dir, owner, weapon_map, [ROCKET_MAP.ROCKET_STEP, ROCKET_MAP.SCALE,
 			ROCKET_MAP.OFFSET, ROCKET_MAP.TIMER], [noone, 0.5, 15, room_speed / 2]);
 		rocket.size = 0.5;
 		var spd = 10;
@@ -13,7 +13,7 @@ if (map[? "dist_trv"] > map[? "dist"]) {
 	}
 	event_user(0); //Explode this rocket
 } else {
-	var spd = rocket_map[? ROCKET_MAP.SPEED];
+	var spd = weapon_map[? WEAPON_MAP.SPEED];
 	scMovementLine(spd, direction);
 	map[? "dist_trv"] += spd;
 }

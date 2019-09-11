@@ -6,6 +6,7 @@ var size = map[? "portal_size"]
 if (size > 0) {
 	//scDrawCircle(xstart + map[? "target_dis"], map[? "target_y"], rad, c_blue, false, 1);
 	//scDrawCircle(xstart + map[? "target_dis"], ystart, rad, c_blue, false, 1);
+	var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 	var xx = xstart + map[? "target_dis"] - (sign(map[? "target_dis"]) * (rocket_map[? ROCKET_MAP.OFFSET] / 2)), yy = map[? "target_y"];
 	var sprite = map[? "portal_sprite"], img = floor(map[? "portal_img"]), alpha = 0.75 * size;
 	scDrawSpriteExt(xx, yy, sprite, img, c_white, alpha);

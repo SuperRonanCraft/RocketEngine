@@ -7,6 +7,8 @@ xplo.image_xscale = rocket_map[? ROCKET_MAP.EXPLOSION_SCALE];
 xplo.image_yscale = rocket_map[? ROCKET_MAP.EXPLOSION_SCALE];
 xplo.parent = owner;
 ds_map_copy(xplo.weapon_map, weapon_map);
+//xplo.weapon_map[? WEAPON_MAP.MAP] = ds_map_create();
+//ds_map_copy(xplo.weapon_map[? WEAPON_MAP.MAP], rocket_map);
 ds_list_copy(xplo.confirmList, hitList);
 
 //Particle explosion to look pretty.

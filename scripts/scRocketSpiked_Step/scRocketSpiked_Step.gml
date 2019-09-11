@@ -17,5 +17,5 @@ else if (direction > 90 && direction < 260)
 
 image_angle = direction;
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = weapon_map[? WEAPON_MAP.SPEED];
 scMovementLine(spd, direction);

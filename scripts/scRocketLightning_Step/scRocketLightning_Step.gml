@@ -1,5 +1,5 @@
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = weapon_map[? WEAPON_MAP.SPEED];
 if (lightning[? "dis_travelled"] > lightning[? "dis_slowed"])
 	spd = (lightning[? "dis_slowed"] / lightning[? "dis_travelled"]) * spd;
 

@@ -8,7 +8,7 @@ if (sand[? "target_current"] != sand[? "target"]) {
 	}
 }
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = weapon_map[? WEAPON_MAP.SPEED];
 scMovementLine(spd, direction);
 //x += lengthdir_x(spd, direction);
 //y += lengthdir_y(spd, direction);

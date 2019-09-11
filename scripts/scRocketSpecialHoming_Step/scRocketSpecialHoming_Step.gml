@@ -9,5 +9,5 @@ with (target) {
 	}
 }
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = weapon_map[? WEAPON_MAP.SPEED];
 scMovementLine(spd, direction);
