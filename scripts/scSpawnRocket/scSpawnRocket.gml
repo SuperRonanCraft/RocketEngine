@@ -40,6 +40,7 @@ with (inst) {
 	sprite_index = rocket_map[? ROCKET_MAP.PROJECTILE];
 	//timer = rocket_map[? ROCKET_MAP.TIMER];
 	//SCALE
+	var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 	var scale = rocket_map[? ROCKET_MAP.SCALE];
 	original_xscale = scale;
 	original_yscale = scale;
