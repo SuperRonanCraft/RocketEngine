@@ -1,6 +1,7 @@
 /// @desc grow into the stage
 if (first_draw) exit;
 
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 image_alpha = rocket_map[? ROCKET_MAP.ROCKET_ALPHA];
 var scale = rocket_map[? ROCKET_MAP.SCALE];
 
