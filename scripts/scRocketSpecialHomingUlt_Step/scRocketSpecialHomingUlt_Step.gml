@@ -16,6 +16,6 @@ with (map[? "target"]) {
 	}
 	map[? "clock"] = clock + 1;
 }
-scMovementLine(rocket_map[? ROCKET_MAP.SPEED], direction);
+scMovementLine(weapon_map[? WEAPON_MAP.SPEED], direction);
 
-rocket_map[? ROCKET_MAP.SPEED] += 0.2 / TIME_SPEED;
+weapon_map[? WEAPON_MAP.SPEED] += 0.2 / TIME_SPEED;

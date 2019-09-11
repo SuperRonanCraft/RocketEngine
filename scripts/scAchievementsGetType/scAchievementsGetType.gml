@@ -116,6 +116,7 @@ switch (type) {
 		break;
 	case ACHIEVEMENT_TYPE.TRACKING_DESC:
 		switch (enu) {
+			case ACHIEVEMENTS.GM_1V1_MULTI: val = "Be social!"; break;
 			case ACHIEVEMENTS.ROCKETS_SHOT_10000:
 			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
 			case ACHIEVEMENTS.ROCKETS_SHOT_100:

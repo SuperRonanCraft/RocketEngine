@@ -1,3 +1,4 @@
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 if (brickMap[? "touching_floor"]) {
 	var part = rocket_map[? "scrape_part"];
 	var dirs = direction == 0 ? [-10, 10] : [170, 190];

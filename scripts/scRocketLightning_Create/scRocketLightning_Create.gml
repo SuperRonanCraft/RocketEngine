@@ -7,4 +7,5 @@ lightning[? "branches"] = 3;
 lightning[? "dis_target"] = RES_W / 1.5;
 lightning[? "dis_travelled"] = 0;
 lightning[? "dis_slowed"] = lightning[? "dis_target"] / 2;
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 rocket_map[? ROCKET_MAP.EXPLOSION_SCALE] *= 2; //Increase explosion size

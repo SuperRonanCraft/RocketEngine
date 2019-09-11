@@ -1,8 +1,9 @@
 /// @desc a sand rockets explosion create event
 /// @arg explosion-instance
 
-var side = direction == 0 ? 1 : -1;
+//var side = direction == 0 ? 1 : -1;
 
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 brickMap = ds_map_create();
 var map = brickMap;
 map[? "hsp"] = rocket_map[? ROCKET_MAP.SPEED];

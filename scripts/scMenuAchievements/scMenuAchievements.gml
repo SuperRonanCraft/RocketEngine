@@ -54,7 +54,7 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 		hovering = true;
 	}
 	scDrawText(rx, ry, name, c, scale_element, noone, noone, noone, fa_bottom); //Achievement Name
-	if (hovering && (status == noone || array_length_1d(ach_after) > 0)) { //hovering and locked show progress
+	if (hovering) { //hovering and locked show progress
 		var tracking = array_length_1d(ach_after) > 0 ? 
 			scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, ach_after[0]) : 
 			scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, i);
@@ -66,13 +66,15 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 		scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
 	}
 	scDrawSpriteExt(rx - 32, ry + 25 + ryo, icon, 0); //Icon
+	if (status != noone && array_length_1d(ach_after) == 0)
+		scDrawSpriteExt(rx + 32, ry + 25 + 64 + ryo, s_achievement_complete, 0); //Complete
 	if (array_length_1d(ach_before) != 0)
 		for (var ach_bf = 0; ach_bf < array_length_1d(ach_before); ach_bf++)
 			scDrawSpriteExt(rx - 66 - (34 * ach_bf), ry + 25 + ryo + 16, scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, ach_before[ach_bf]), 0, noone, noone, 0.5, 0.5); //Icon after
 	if (array_length_1d(ach_after) != 0)
 		for (var ach_aft = 0; ach_aft < array_length_1d(ach_after); ach_aft++)
 			scDrawSpriteExt(rx + 34 + (34 * ach_aft), ry + 25 + ryo + 16, s_achievement_Locked, 0, noone, noone, 0.5, 0.5); //Icon after
-	scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1); //Seperation line
+	//scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1); //Seperation line
 	index_on_page++; //Succefully displayed achievement
 	if (index_on_page mod columns == 0)
 		y_offset++; //Offset every column

@@ -10,7 +10,8 @@
         "85ad2318-3a25-46bd-abea-4d6d525b9211",
         "e69990f2-93f0-4b1d-9b10-c34b8d237143",
         "63452b83-f1ee-4e07-91f5-9bc65fe6433a",
-        "36949492-6ff0-4a22-bf6b-8aa9d8511da0"
+        "36949492-6ff0-4a22-bf6b-8aa9d8511da0",
+        "c72a8afc-6016-4085-b981-d19384b352b5"
     ],
     "filterType": "GMSprite",
     "folderName": "Achievements",

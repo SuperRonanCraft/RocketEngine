@@ -1,9 +1,10 @@
 var map = teleportMap;
 if (!map[? "teleporting"]) {
-	var spd = rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation;
+	var spd = weapon_map[? WEAPON_MAP.SPEED] * owner.time_dialation;
 	x += lengthdir_x(spd, direction);
 	y += lengthdir_y(spd, direction);
 } else {
+	var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 	var scale = rocket_map[? ROCKET_MAP.SCALE] / 4;
 	if (!map[? "teleported"])
 		if (image_xscale <= scale && image_yscale <= scale) {

@@ -2,7 +2,7 @@ var map = boomMap;
 
 map[? "side"] = direction == map[? "dir"] ? map[? "side"] : -map[? "side"];
 var side = map[? "side"];
-var spd = rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation;
+var spd = weapon_map[? WEAPON_MAP.SPEED] * owner.time_dialation;
 var xorg = map[? "x"] * (direction == map[? "dir"] ? 1 : -1), yorg = map[? "y"];
 map[? "y"] -= spd;
 var yy = map[? "y"], dis = map[? "dis"];
@@ -13,7 +13,7 @@ x += xx - xorg;
 y += yy - yorg;
 
 if (!map[? "damage_buffed"] && yy < -(dis / 2)) {
-	rocket_map[? ROCKET_MAP.DAMAGE] *= 2;
+	weapon_map[? WEAPON_MAP.DAMAGE] *= 2;
 	map[? "damage_buffed"] = true;
 }
 

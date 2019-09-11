@@ -1,4 +1,4 @@
-
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 var offset = rocket_map[? ROCKET_MAP.OFFSET];
 var xx = x - lengthdir_x(offset, direction), yy = y - lengthdir_y(offset, direction);
 repeat (lightning[? "sparks"]) {

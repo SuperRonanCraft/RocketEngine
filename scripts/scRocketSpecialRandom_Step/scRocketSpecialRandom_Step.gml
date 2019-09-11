@@ -9,7 +9,7 @@ if (side) {
 
 image_angle = direction;
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = weapon_map[? WEAPON_MAP.SPEED];
 scMovementLine(spd, direction);
 //x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED], direction);
 //y += lengthdir_y(rocket_map[? ROCKET_MAP.SPEED], direction);

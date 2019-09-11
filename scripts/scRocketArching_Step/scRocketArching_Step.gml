@@ -8,7 +8,7 @@ var map = archMap;
 
 //x += xx - xorg;
 //y += yy - yorg;
-
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 x += lengthdir_x(rocket_map[? ROCKET_MAP.SPEED] * owner.time_dialation, direction);
 y += (map[? "height"] * cos(map[? "length"] * (map[? "clock"] / 5)));
 

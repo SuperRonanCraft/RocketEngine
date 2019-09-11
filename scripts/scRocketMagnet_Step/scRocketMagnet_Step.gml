@@ -25,5 +25,5 @@ if ((direction == 0 || direction == 180) && !map[? "movingdir"]) {
 	image_angle = direction;
 }
 
-var spd = rocket_map[? ROCKET_MAP.SPEED];
+var spd = weapon_map[? WEAPON_MAP.SPEED];
 scMovementLine(spd, direction);

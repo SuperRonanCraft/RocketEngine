@@ -10,7 +10,8 @@ if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 		//Give it the map of the current rocket
 		rocket_map = ds_map_create(); 
 		ds_map_copy(rocket_map, other.owner.rocket_map);*/
-		rocket_map[? ROCKET_MAP.DAMAGE] = 1;
+		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
+		weapon_map[? WEAPON_MAP.DAMAGE] = 1;
 		//Give it the map of the current rocket
 		sprite_index = sRocket_Homing_Ult;
 		//Sizes
@@ -28,7 +29,6 @@ if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 		homing[? "clock"] = 0;
 		homing[? "locX"] = xx;// + irandom_range(-30, 30);
 		homing[? "locY"] = yy;// + irandom_range(-30, 30);
-		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 		weapon_map[? WEAPON_MAP.SPEED] = 0.1 / TIME_SPEED;
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
