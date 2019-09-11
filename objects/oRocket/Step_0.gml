@@ -5,11 +5,12 @@ var autodestroy = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY];
 var time = rocket_map[? ROCKET_MAP.TIMER];
 var checkroom = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM];
 
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 else {
-	var spd = rocket_map[? ROCKET_MAP.SPEED];
+	var spd = weapon_map[? ROCKET_MAP.SPEED];
 	scMovementLine(spd, direction);
 }
 

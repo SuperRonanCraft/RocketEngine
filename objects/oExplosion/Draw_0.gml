@@ -1,4 +1,5 @@
 
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 if (!first_draw) {
 	if (rocket_map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] != noone) //Create draw event for rocket
 		script_execute(rocket_map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW]);

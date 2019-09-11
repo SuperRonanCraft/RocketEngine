@@ -3,7 +3,7 @@
 
 //parent shooter (player that shot)
 parent = noone;
-rocket_map = ds_map_create();
+weapon_map = ds_map_create();
 
 hitList = ds_list_create();
 confirmList = ds_list_create();

@@ -11,6 +11,7 @@ if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy a
 		
 		if (!other.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do nothing to the player, don't allow shuriken to interact
 
+		var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 		if (isPlayer) {
 			//Add buff
 			if (shuriken_map[? SHURIKEN_MAP.BUFF] != noone)
@@ -29,7 +30,7 @@ if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy a
 		}
 		
 		//Damage player
-		var dmg = shuriken_map[? SHURIKEN_MAP.DAMAGE];
+		var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
 		
 		if (scDamageShootable(owner, other, false, true, dmg) && isPlayer)
 			other.causeOfDeath = shuriken_map[? SHURIKEN_MAP.DEATHCAUSE];

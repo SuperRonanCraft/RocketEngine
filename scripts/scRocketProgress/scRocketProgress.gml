@@ -13,7 +13,7 @@ if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 	if (map[? WEAPON_MAP.AMMO] != 0) {
 		facing = dir > -90 && dir <= 90 ? 1 : -1;
 		var offset = rocket_map[? ROCKET_MAP.OFFSET];
-		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, rocket_map);
+		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, map);
 		if (map[? WEAPON_MAP.AMMO] > 0)
 			map[? WEAPON_MAP.AMMO]--;
 		//Sound effects and screen shaking

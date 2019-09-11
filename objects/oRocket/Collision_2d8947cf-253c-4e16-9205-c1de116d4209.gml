@@ -1,5 +1,6 @@
 /// @desc hit a wall
 
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 //Check if the rocket ignores walls and if the wall is shootable
 if (!destroy && !rocket_map[? ROCKET_MAP.IGNORE_WALL] && other.shootable || other.is_wall) {
 	scPlaySound(SOUND.EFFECT_EXP);

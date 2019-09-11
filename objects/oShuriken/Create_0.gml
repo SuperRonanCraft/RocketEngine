@@ -1,6 +1,6 @@
 /// @desc Initialize variables
 
-shuriken_map = 0;
+//shuriken_map = 0;
 
 //owner of rocket
 

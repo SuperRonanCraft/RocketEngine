@@ -1,3 +1,4 @@
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRA] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRA]);
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER] != noone)

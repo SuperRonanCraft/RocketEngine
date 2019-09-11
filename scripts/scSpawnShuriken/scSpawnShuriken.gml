@@ -13,23 +13,24 @@ var yy = argument[1];
 var dep = argument[2];
 var dir = argument[3]
 var own = argument[4];
-var map = ds_map_create();
-ds_map_copy(map, argument[5]);
+var w_map = ds_map_create();
+ds_map_copy(w_map, argument[5]);
 var inst = instance_create_depth(xx, yy, dep, oShuriken);
 
 //SHURIKEN_MAP
 //Set all the values for the two arrays given to the map, reducing programming repetition
+var s_map = w_map[? WEAPON_MAP.MAP];
 if (argument_count >= 8) { //Must have both keys and values
 	var keys = argument[6]
 	var values = argument[7];
 	for (var i = 0; i < array_length_1d(keys); i++)
-		ds_map_set(map, keys[i], values[i]);
+		ds_map_set(s_map, keys[i], values[i]);
 }
 
 //All defaults
 with (inst) {
 	owner = own;
-	shuriken_map = map;
+	weapon_map = w_map;
 	direction = dir;
 	image_angle = direction;
 	if (direction > 90 && direction < 270)

@@ -3,6 +3,7 @@
 
 //Run special step script and override movement
 
+var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 var time = shuriken_map[? SHURIKEN_MAP.TIMER];
 var checkroom = shuriken_map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY_ROOM];
 
@@ -10,7 +11,7 @@ if (shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP] != noone)
 	script_execute(shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 else if(!deactivate){
-	var spd = shuriken_map[? SHURIKEN_MAP.SPEED];
+	var spd = weapon_map[? WEAPON_MAP.SPEED];
 	scMovementLine(spd, direction);
 }
 

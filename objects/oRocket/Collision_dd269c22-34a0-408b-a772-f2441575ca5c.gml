@@ -10,7 +10,7 @@ if (!destroy && (isPlayer ? owner.team != other.team : true)) //Not destroy and 
 		ds_list_add(hitList, other);
 		
 		if (!other.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do nothing to the player, don't allow rocket to interact
-
+		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 		if (isPlayer) {
 			//Add buff
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
@@ -20,9 +20,9 @@ if (!destroy && (isPlayer ? owner.team != other.team : true)) //Not destroy and 
 		}
 		
 		//Damage player
-		var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
-		if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
-			dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
+		var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
+		//if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
+		//	dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 		
 		if (scDamageShootable(owner, other, false, true, dmg) && isPlayer)
 			other.causeOfDeath = rocket_map[? ROCKET_MAP.DEATHCAUSE];

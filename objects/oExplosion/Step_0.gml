@@ -8,11 +8,11 @@ if (doing_damage)
 			var p = hitList[| i]; //Shootable instance
 			
 			if (!p.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do not interact with this shootable
-			
+			var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 			var isPlayer = p.object_index == oPlayer;
-			var dmg = rocket_map[? ROCKET_MAP.DAMAGE];
-			if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
-				dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
+			var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
+			//if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
+			///	dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			if (isPlayer) {
 				//Knockback
 				scKnockbackGive(p, rocket_map[? ROCKET_MAP.KBAMT] * p.knockback_multiplier, point_direction(x, y, p.x, p.y));

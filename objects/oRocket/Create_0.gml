@@ -1,5 +1,5 @@
 //A whole map list of what a rocket has
-rocket_map = 0;
+//rocket_map = 0;
 //Who shot this rocket
 owner = noone;
 //up-time
