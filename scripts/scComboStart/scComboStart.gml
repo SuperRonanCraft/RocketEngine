@@ -8,5 +8,5 @@ combo_scale = 1; //Scale of combo
 //combo_cooldown_current = 0; //Internal timer
 
 enum COMBO {
-	ENTITY, TEXTS = ["GREAT!", "WONDERFUL", "AMAZING!", "KILLING SPREE!"]
+	ENTITY, 
 }
