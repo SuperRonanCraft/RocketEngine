@@ -7,20 +7,20 @@ var dsBuff = argument1;
 
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
-var map = owner.weapon_map[? WEAPON_MAP.MAP];
+var map = owner.weapon_map;
 if (clock == 0) {
-	dsBuff[? "roc_type"] = map[? ROCKET_MAP.TYPE];
-	map[? ROCKET_MAP.DAMAGE] *= 2;
+	dsBuff[? "wep_type"] = map[? WEAPON_MAP.TYPE];
+	map[? WEAPON_MAP.DAMAGE] *= 2;
 }
 
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
-	if (map[? ROCKET_MAP.TYPE] == dsBuff[? "roc_type"])
-		map[? ROCKET_MAP.DAMAGE] /= 2;
+	if (map[? WEAPON_MAP.TYPE] == dsBuff[? "wep_type"])
+		map[? WEAPON_MAP.DAMAGE] /= 2;
 	scBuffRemove(owner, dsBuff);
 } else {
-	if (map[? ROCKET_MAP.TYPE] != dsBuff[? "roc_type"]) {
-		dsBuff[? "roc_type"] = map[? ROCKET_MAP.TYPE];
-		map[? ROCKET_MAP.DAMAGE] *= 2;
+	if (map[? WEAPON_MAP.TYPE] != dsBuff[? "wep_type"]) {
+		dsBuff[? "wep_type"] = map[? WEAPON_MAP.TYPE];
+		map[? WEAPON_MAP.DAMAGE] *= 2;
 	}
 	if (dsBuff[? "parts_crt"] <= 0) {
 		part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 

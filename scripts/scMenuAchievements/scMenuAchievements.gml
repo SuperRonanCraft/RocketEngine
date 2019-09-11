@@ -78,10 +78,6 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 		y_offset++; //Offset every column
 }
 
-//var max_page = 0;
-//while (amt - ((max_page + 1) * (columns * rows)) > 0)
-//	max_page++;
-
 scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg) + "/" + string(scAchievementsGetPages()), color_element, scale_element);
 
 scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "ACHIEVEMENTS", c_orange, 1.5);

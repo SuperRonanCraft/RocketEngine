@@ -13,8 +13,8 @@ var yy = argument[1];
 var dep = argument[2];
 var dir = argument[3]
 var own = argument[4];
-var map = ds_map_create();
-ds_map_copy(map, argument[5]);
+var r_map = ds_map_create(); //custom weapon map
+ds_map_copy(r_map, argument[5]);
 var inst = instance_create_depth(xx, yy, dep, oRocket);
 
 //ROCKET_MAP
@@ -23,13 +23,13 @@ if (argument_count >= 8) { //Must have both keys and values
 	var keys = argument[6]
 	var values = argument[7];
 	for (var i = 0; i < array_length_1d(keys); i++)
-		ds_map_set(map, keys[i], values[i]);
+		ds_map_set(r_map, keys[i], values[i]);
 }
 
 //All defaults
 with (inst) {
 	owner = own;
-	rocket_map = map;
+	rocket_map = r_map;
 	direction = dir;
 	image_angle = direction;
 	if (direction > 90 && direction < 270)

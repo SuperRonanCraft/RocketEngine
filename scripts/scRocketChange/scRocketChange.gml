@@ -17,13 +17,11 @@ if (old_rocket_map[? ROCKET_MAP.TYPE] != roc) {
 	map[? WEAPON_MAP.GUI_ICON] = rocket_map[? ROCKET_MAP.PROJECTILE];
 	map[? WEAPON_MAP.GUI_BUFFS] = rocket_map[? ROCKET_MAP.BUFF];
 	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
-	///
-	//NEW
 	map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL] = rocket_map[? ROCKET_MAP.COOLDOWN];
 	map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] = rocket_map[? ROCKET_MAP.RELOAD_TIME];
-	//NEW
-	//
 	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
+	map[? WEAPON_MAP.DAMAGE] = rocket_map[? ROCKET_MAP.DAMAGE];
+	map[? WEAPON_MAP.SPEED] = rocket_map[? ROCKET_MAP.SPEED];
 	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
 	map[? WEAPON_MAP.RELOAD_TIME] = 0;
 	map[? WEAPON_MAP.ULTIMATE] = rocket_map[? ROCKET_MAP.ULTIMATE];
