@@ -4,7 +4,7 @@
 //initialize variables
 var hit = argument0;
 
-
+var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 //If you're hitting a wall that you shoot
 if (hit.shootable && !rocket_map[? ROCKET_MAP.IGNORE_WALL])
 	//Simply explode bigger than when you hit a shootable
