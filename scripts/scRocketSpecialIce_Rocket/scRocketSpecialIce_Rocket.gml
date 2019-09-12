@@ -9,8 +9,9 @@ var hit = argument0;
 //rocket finishes it's checks on (this) rocket.
 //Basically: Always include it in rocket-rocket collisions
 collideRocket = 1;
+var hit_rocket_map = hit.weapon_map[? WEAPON_MAP.MAP];
 //If you hit an ice rocket, explode 3x as much
-if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
+if (hit_rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
 	scRocketSpecialIce_Explode(3);
 //But if you hit a fire rocket, minimize your explosion.
 else if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
