@@ -24,6 +24,11 @@ switch (type) {
 			case ACHIEVEMENTS.ULTIMATES_CASTED_100: val = "ultimates_used_100"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = "ultimates_used_1000"; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "rockets_changed_10"; break;
+			case ACHIEVEMENTS.MEDIC: val = "medic_5"; break;
+			case ACHIEVEMENTS.COMBO: val = "combo_3"; break;
+			case ACHIEVEMENTS.PORTALS: val = "portals_4"; break;
+			case ACHIEVEMENTS.CLONES: val = "clones_2"; break;
+			case ACHIEVEMENTS.SPRING_SLIME: val = "spring_slime"; break;
 			case ACHIEVEMENTS.SECTION: val = "Achievements."; break;
 			default: val = noone; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 		}
@@ -45,6 +50,11 @@ switch (type) {
 			case ACHIEVEMENTS.ULTIMATES_CASTED_100: val = "Ultimate Handler"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = "Ultimate Expert"; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Weapon Noob!"; break;
+			case ACHIEVEMENTS.MEDIC: val = "MEDIC!"; break;
+			case ACHIEVEMENTS.COMBO: val = "Combo Beginner"; break;
+			case ACHIEVEMENTS.PORTALS: val = "Now You're Thinking!"; break;
+			case ACHIEVEMENTS.CLONES: val = "Power in Numbers"; break;
+			case ACHIEVEMENTS.SPRING_SLIME: val = "A Spring in your Step"; break;
 			default: val = "Something important"; break;
 		}
 		break;
@@ -65,7 +75,7 @@ switch (type) {
 			case ACHIEVEMENTS.ULTIMATES_CASTED_100: val = "Cast 100 ultimates"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = "Cast 1,000 ultimates"; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Pickup 10 rockets"; break;
-			default: val = "An achievement"; break;
+			default: val = ""; break;
 		}
 		break;
 	case ACHIEVEMENT_TYPE.ICON: //ICON OF ACHIEVEMENT
@@ -140,12 +150,21 @@ switch (type) {
 				val = "Ultimates Casted: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.ULTIMATES_CASTED_10)); break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10:
 				val = "Rockets Picked up: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.ROCKETS_CHANGED_10)); break;
+			case ACHIEVEMENTS.MEDIC: val = "Restore 5 health in one game"; break;
+			case ACHIEVEMENTS.COMBO: val = "Land a 3+ hit combo"; break;
+			case ACHIEVEMENTS.PORTALS: val = "Have multiple portals up"; break;
+			case ACHIEVEMENTS.CLONES: val = "Control more than one clone"; break;
+			case ACHIEVEMENTS.SPRING_SLIME: val = "Use a spring while affected by the Slime!"; break;
 			default: val = noone; break;
 		}
 		break;
 	case ACHIEVEMENT_TYPE.GOAL:
 		switch (enu) {
 			//10
+			case ACHIEVEMENTS.MEDIC:
+				val = 5; break;
+			case ACHIEVEMENTS.COMBO:
+				val = 3; break;
 			case ACHIEVEMENTS.TIME_PLAYED_10M:
 			case ACHIEVEMENTS.GAMES_COMPLETE_10:
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10:
@@ -221,7 +240,12 @@ enum ACHIEVEMENTS { //Shows up by order
 	TIME_PLAYED_60M, //set
 	TIME_PLAYED_360M, //set
 	ROCKETS_CHANGED_10, //set
-	//TEST,
+	//Run Time
+	MEDIC,
+	COMBO,
+	PORTALS,
+	CLONES,
+	SPRING_SLIME,
 	//Keep last
 	SECTION
 }

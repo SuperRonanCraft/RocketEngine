@@ -1,7 +1,7 @@
 /// @desc save a value to the database and save it to cache
 /// @arg stat
 /// @arg amount to add
-/// @arg call-achievement-event
+/// @arg call-achievement-event*
 
 var stat = argument[0];
 var amt = argument[1];

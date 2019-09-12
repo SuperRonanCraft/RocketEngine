@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "034faf28-3157-4243-a219-66b594245894",
+            "Value": {
+                "id": "a1dc3c5a-ed27-482c-9f72-7a8241a34242",
+                "resourcePath": "scripts\\scStatsResetUnsaved\\scStatsResetUnsaved.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0378c52b-0d41-40b1-8b55-41b306c931ba",
             "Value": {
                 "id": "50feb544-b39e-455a-b034-7fa5849905e3",
@@ -2884,6 +2892,14 @@
                 "id": "21ae92df-a773-4fbd-91aa-a8afe4588457",
                 "resourcePath": "views\\79a83312-11d1-4470-a08b-6adc4d900de1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7a2d403c-3d62-4bc1-a37c-c7990a5ec6d2",
+            "Value": {
+                "id": "49e60e28-6bb1-4a5e-9a61-740b86598939",
+                "resourcePath": "scripts\\scAchievements_CustomEvent\\scAchievements_CustomEvent.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6156,6 +6172,7 @@
         "a817e6c6-ab88-41c5-bb24-531cb1ba0cea",
         "cc16ec0d-763c-4990-a582-a7cb7553e7eb",
         "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",
+        "034faf28-3157-4243-a219-66b594245894",
         "2b83c1d9-cae8-4912-9ac9-44e2c2def48f",
         "a3ac6a66-c960-400a-a41e-d67154fd0067",
         "b0717a21-f0f3-4b9a-8148-7e762528c584",
@@ -6163,6 +6180,7 @@
         "4850629c-f1c1-4b92-940d-1733147a4a6c",
         "b5cc65ae-c078-440a-9b5f-a6e506061b74",
         "642537f0-5347-4a8c-9cf9-7cb43338096e",
+        "7a2d403c-3d62-4bc1-a37c-c7990a5ec6d2",
         "b07921d9-8376-4807-9a92-24c903c3e303"
     ],
     "tutorial": ""

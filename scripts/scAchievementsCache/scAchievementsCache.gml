@@ -9,7 +9,7 @@ var vals = argument[1];
 if (ds_list_size(types) > 0)
 	with (oAchievementHandler) {
 		achievement_display = true;
-		for (var i = 0; i < ds_list_size(types); i++)
+		for (var i = 0; i < ds_list_size(types); i++) //Display newly gotten achievements
 			ds_list_add(achievement_display_list, types[| i]);
 	}
 

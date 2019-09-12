@@ -1,6 +1,6 @@
 /// @arg stat-type
-/// @arg stat-gamemode
-/// @arg gamemode*
+/// @arg stat
+/// @arg gamemode* (for value_gamemode stat-type)
 
 var val = "ERROR";
 var type = argument[0];
@@ -17,7 +17,7 @@ switch (type) {
 			case STATISTICS_GAMEMODE.GM_GENERAL_P1_WINS: val = "p1_wins_"; break;
 			case STATISTICS_GAMEMODE.GM_GENERAL_P2_WINS: val = "p2_wins_"; break;
 			case STATISTICS_GAMEMODE.SECTION: val = "Statistics."; break;
-			default: val = "ERROR"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
+			default: val = "noone"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 		}
 		break;
 	case STATISTICS_TYPE.SECTION_GENERAL:
@@ -29,13 +29,20 @@ switch (type) {
 			case STATISTICS_GENERAL.GAMES_COMPLETE: val = "games_complete"; break;
 			case STATISTICS_GENERAL.ROCKETS_CHANGED: val = "rockets_changed"; break;
 			case STATISTICS_GENERAL.SECTION: val = "General"; break;
-			default: val = "ERROR"; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
+			case STATISTICS_GENERAL.HEALED: val = "health"; break;
+			default: val = noone; show_debug_message("NO SECTION FOR STAT ENUM " + string(enu)); break;
 		}
 		break;
 	case STATISTICS_TYPE.VALUE_GAMEMODE:
 		val = oStatisticsHandler.stats_map[? scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, enu) + string(argument[2])]; break;
 	case STATISTICS_TYPE.VALUE_GENERAL:
 		val = oStatisticsHandler.stats_map[? scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, enu)]; break;
+	case STATISTICS_TYPE.SAVE:
+		switch (enu) {
+			case STATISTICS_GENERAL.HEALED: val = false; break;
+			default: val = true; break;
+		}
+		break;
 }
 
 return val;
@@ -62,6 +69,7 @@ enum STATISTICS_GENERAL { //AUTO CACHED WHEN GAME STARTS AND AUTO SAVED WHEN GAM
 	TIME_PLAYED,
 	GAMES_COMPLETE,
 	ROCKETS_CHANGED,
+	HEALED,
 	SECTION //KEEP LAST
 }
 
@@ -69,5 +77,6 @@ enum STATISTICS_TYPE {
 	SECTION_GAMEMODE,
 	VALUE_GAMEMODE, //Requires gamemode argument
 	SECTION_GENERAL, 
-	VALUE_GENERAL
+	VALUE_GENERAL,
+	SAVE //should we save this stat to a file?
 }

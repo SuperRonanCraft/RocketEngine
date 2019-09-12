@@ -1,5 +1,5 @@
 /// @desc fake achievement
-var types = [ACHIEVEMENTS.GM_1V1_MULTI, ACHIEVEMENTS.ULTIMATES_CASTED_10];
+var types = [ACHIEVEMENTS.COMBO, ACHIEVEMENTS.MEDIC];
 
 //var index = array_length_1d(achs);
 //var ary = [ACHIEVEMENTS.]

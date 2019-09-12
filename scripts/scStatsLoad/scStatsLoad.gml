@@ -48,7 +48,8 @@ sec = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, STATISTICS_GENERAL.SECTION
 //show_debug_message("LOADING GENERAL STATS...");
 for (var i = 0; i < STATISTICS_GENERAL.SECTION; i++) {
 	var key = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, i);
-	map[? key] = ini_read_real(sec, key, false);
+	if (key != noone)
+		map[? key] = ini_read_real(sec, key, false);
 	//show_debug_message("-Sec: " + sec + " -Key: " + string(key) + " -Val: " + string(map[? key]));
 }
 

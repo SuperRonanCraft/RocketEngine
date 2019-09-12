@@ -14,7 +14,8 @@
         "d28e40b5-df64-4398-9199-b3c5d683fc81",
         "a817e6c6-ab88-41c5-bb24-531cb1ba0cea",
         "cc16ec0d-763c-4990-a582-a7cb7553e7eb",
-        "5bb371ed-9f8c-456e-a54c-4c30c87f7fea"
+        "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",
+        "034faf28-3157-4243-a219-66b594245894"
     ],
     "filterType": "GMScript",
     "folderName": "Stats",

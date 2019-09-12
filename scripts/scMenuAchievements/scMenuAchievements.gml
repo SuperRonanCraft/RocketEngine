@@ -62,9 +62,8 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 			scDrawText(rx, ry, string(tracking), c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
 		else
 			scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
-	} else {
+	} else
 		scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
-	}
 	scDrawSpriteExt(rx - 32, ry + 25 + ryo, icon, 0); //Icon
 	if (status != noone && array_length_1d(ach_after) == 0)
 		scDrawSpriteExt(rx + 32, ry + 25 + 64 + ryo, s_achievement_complete, 0); //Complete

@@ -4,6 +4,8 @@ global.gamemode = gamemode;
 
 scStatsResetStage(false);
 
+scStatsResetUnsaved();
+
 timer = 90; //global.stage_timer;
 
 scStatsLoadMode();

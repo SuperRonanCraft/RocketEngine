@@ -17,7 +17,7 @@ with (inst) {
 		case DAMAGETYPE.TIME: charge += map[? ULTIMATE_CASTING_MAP.CHARGE_TIME]; break;
 	}
 	map[? ULTIMATE_CASTING_MAP.CHARGE] = !global.devmode ? min(map[? ULTIMATE_CASTING_MAP.CHARGE] + ((charge * 
-		(map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] + (combo_amount + 1))) * multi), 
+		(map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] + (combo_map[? COMBO_MAP.STREAK] + 1))) * multi), 
 			map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) : map[? ULTIMATE_CASTING_MAP.CHARGE_MAX];
 }
 
