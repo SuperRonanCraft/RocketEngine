@@ -72,11 +72,6 @@ char_scale_cur = lerp(char_scale_cur, char_scale_cur_max, 0.1);
 if (char_cur != char_last) {
 	var scale_cur = char_scale_cur;
 	char_scale_cur = char_cur > char_last ? char_scale_b : char_scale_a;
-	show_debug_message("--------------");
-	show_debug_message(char_x);
-	show_debug_message(char_x_offset);
-	show_debug_message(char_cur);
-	show_debug_message(char_last);
 	char_x = char_x_offset * (char_cur - char_last);
 	if (char_cur > char_last) { //GOING BACK
 		char_scale_a = scale_cur;

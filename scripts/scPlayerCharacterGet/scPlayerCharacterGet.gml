@@ -17,5 +17,5 @@ for (var i = 0; i < instance_number(object_index); i++)
 				break;
 			default: show_debug_message("NO PLAYER #" = string(i + 2)); break;
 		}
-
+show_debug_message("GETTING PLAYER CHARACTER " + string(val));
 return val;
