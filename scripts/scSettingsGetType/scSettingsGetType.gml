@@ -27,8 +27,8 @@ switch (type) {
 		break;
 	case SETTINGS_TYPE.VALUE:
 		val = oSettingsHandler.settings_map[? scSettingsGetType(SETTINGS_TYPE.SECTION, setting)];
-		show_debug_message("RETURNING SETTING VALUE = " + string(val));
-		show_debug_message("RETURNING SETTING ENUM = " + string(setting));
+		//show_debug_message("RETURNING SETTING VALUE = " + string(val));
+		//show_debug_message("RETURNING SETTING ENUM = " + string(setting));
 		break;
 	default: show_debug_message("UNKNOWN SETTING " + string(type)); break;
 }
