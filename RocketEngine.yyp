@@ -959,6 +959,14 @@
             }
         },
         {
+            "Key": "27b0bc27-5ba5-4ffa-9c7c-b305354ffc76",
+            "Value": {
+                "id": "a473de15-5509-4783-adb0-4cba790cc2ec",
+                "resourcePath": "sprites\\s_abilityIcon_Frozen\\s_abilityIcon_Frozen.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "27b0d615-2fba-4f17-abd9-48c282d140de",
             "Value": {
                 "id": "6075824e-7402-4bc0-9628-eeadecd4f8d3",
@@ -1019,6 +1027,14 @@
             "Value": {
                 "id": "d563e14d-3999-470f-a5f2-b311694998f8",
                 "resourcePath": "sprites\\s_pwinter\\s_pwinter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2ad004d7-1831-49e1-b907-dc4b95ad196a",
+            "Value": {
+                "id": "258687f0-84fe-40ad-a755-abe9369f60ca",
+                "resourcePath": "sprites\\sShuriken_Ice\\sShuriken_Ice.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2539,6 +2555,14 @@
             "Value": {
                 "id": "4a20aa6b-52cc-4623-a78f-e60b5df78f86",
                 "resourcePath": "sprites\\sPickupWall\\sPickupWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6858a746-f364-4257-b96f-de581f240a29",
+            "Value": {
+                "id": "117f573b-777b-4e99-a14d-d0e819ba1fe3",
+                "resourcePath": "sprites\\s_pfrost\\s_pfrost.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5535,6 +5559,14 @@
             }
         },
         {
+            "Key": "f019f4aa-7ecd-4826-ae49-b445a13720c1",
+            "Value": {
+                "id": "c9fa6794-d3eb-44c6-9586-7601f07bc761",
+                "resourcePath": "scripts\\scBuffFrozen\\scBuffFrozen.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f049437b-f0f6-434f-9fb2-b525903bf967",
             "Value": {
                 "id": "9c8fe5d2-c9bd-464b-993c-f5fefa828cf0",
@@ -6061,6 +6093,7 @@
         "93c0f3dd-0605-48de-811a-2a13bed0930c",
         "61a3a3c1-f3cb-46f8-a290-1ea6cb5be30a",
         "d6ba92e2-a45a-49aa-bdbf-5ab91afc2838",
+        "f019f4aa-7ecd-4826-ae49-b445a13720c1",
         "b64f6760-5397-42e0-8981-45efc7879f70",
         "a8a72bd7-3732-4cfe-b57d-e4f4dd832e45",
         "6751a009-9e34-4abb-84c2-f3003c527488",

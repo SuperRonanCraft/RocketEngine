@@ -17,7 +17,8 @@ if(!debounce){
 
 }
 
-vsp += 2;
+vsp += 1.1;
+image_alpha -= 0.01;
 
 
 x += hsp;

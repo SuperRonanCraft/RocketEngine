@@ -23,7 +23,10 @@ map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY_ROOM] = true; //auto destroy when out o
 map[? SHURIKEN_MAP.SHURIKEN_STEP] = noone; //script to override step (including movement)
 map[? SHURIKEN_MAP.BUFF] = noone;
 map[? SHURIKEN_MAP.DEATHCAUSE] = noone;
-map[? SHURIKEN_MAP.KBAMT] = 0;
+map[? SHURIKEN_MAP.KBAMT] = 2;
+
+map[? SHURIKEN_MAP.PARTICLE] = noone; // Particle to emit
+map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 
 map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability
 map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE] = true; //if weapon gives ult charge

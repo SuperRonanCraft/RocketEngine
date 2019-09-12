@@ -437,6 +437,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketGlass_Create;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.TRAIL];
 		map[? ROCKET_MAP.PARTICLE_AMT] = 0;
+		map[? ROCKET_MAP.ENABLED] = false;
 		break;
 }
 

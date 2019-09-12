@@ -6,5 +6,5 @@ if(!deactivate && shuriken_map[?SHURIKEN_MAP.STICK] && other.shootable || other.
 	image_speed = 0;
 	depth = other.depth;
 	scPlaySound(SOUND.EFFECT_SHUR_WALL);
-	stuckTo = "WALL";
+	stuckTo = other.id;
 }

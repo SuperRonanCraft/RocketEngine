@@ -30,6 +30,10 @@ switch (state) {
 		if (scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEAD], 2))
 			map[? PLAYER_MAP.ANIMATION_STATE] = PLAYERSTATE.NORMAL;
 		break;
+	case ANIMATIONSTATE.FROZEN:
+		overwrite = true;
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEADFROZEN],0);
+		break;
 }
 
 //draw sprite normally

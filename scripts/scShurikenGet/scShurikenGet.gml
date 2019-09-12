@@ -21,6 +21,16 @@ switch (shur) {
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		break;
+	case SHURIKEN.ICE:
+		map[? SHURIKEN_MAP.NAME] = "Frost Star";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "Cold to the touch";
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.ICE;
+		map[? SHURIKEN_MAP.COOLDOWN] = 45;
+		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.FROST];
+		map[? SHURIKEN_MAP.SPEED] = 23;
+		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.FROZEN];
+		break;
 }
 
 return map;

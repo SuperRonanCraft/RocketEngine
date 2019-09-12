@@ -17,7 +17,7 @@ if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy a
 			if (shuriken_map[? SHURIKEN_MAP.BUFF] != noone)
 				scBuffAdd(shuriken_map[? SHURIKEN_MAP.BUFF], other, owner);
 			//Knockback
-			scKnockbackGive(other, shuriken_map[? SHURIKEN_MAP.KBAMT] * other.knockback_multiplier, direction);
+			//scKnockbackGive(other, shuriken_map[? SHURIKEN_MAP.KBAMT] * other.knockback_multiplier, direction);
 			
 			//Stick to player
 			deactivate = true;
@@ -26,8 +26,19 @@ if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy a
 			newY = irandom_range(-5,5);
 			image_speed = 0;
 			depth = other.depth - 10;
-		
+
+			//Knockback
+			var facing = 1;
+			if(direction > 90 && direction < 270)
+				facing = -1;
+			
+			
+			other.hsp_move += facing * (weapon_map[? WEAPON_MAP.SPEED]/2 +shuriken_map[? SHURIKEN_MAP.KBAMT]);
+
+
 		}
+		
+
 		
 		//Damage player
 		var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
