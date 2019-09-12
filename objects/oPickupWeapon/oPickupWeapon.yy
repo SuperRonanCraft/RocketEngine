@@ -2,7 +2,7 @@
     "id": "82456896-61ba-4055-9bf6-e6a1b3875d73",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oPickupRocket",
+    "name": "oPickupWeapon",
     "eventList": [
         {
             "id": "8f289fa7-daf6-4997-9f8c-bb8721d7a5df",

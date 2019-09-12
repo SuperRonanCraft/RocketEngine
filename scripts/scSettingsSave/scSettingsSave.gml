@@ -1,5 +1,5 @@
 var fileStr = scFileGetType(FILES.SETTINGS); //File name
-if (file_exists(fileStr)) file_delete(fileStr); //Delete the last save file
+//if (file_exists(fileStr)) file_delete(fileStr); //Delete the last save file
 
 ini_open(fileStr); //Open stream
 

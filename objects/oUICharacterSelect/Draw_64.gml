@@ -48,18 +48,20 @@ if (char_draw != noone) {
 		char_scale_cur, char_scale_cur, 0, c_white, 1);
 }
 
-with (player) {
-	image_alpha = 0;
-	var sprite = characterSprites[? ANIMATIONSTATE.STANDING];
-	other.char_img += image_speed * time_dialation;
-	if (other.char_img >= sprite_get_number(sprite))
-		other.char_img = 0;
-	if (!other.selected) {
-		var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
-		scDrawText(other.start_x_default, other.start_y_default + RES_H / 4, char[? CHARACTER_MAP.NAME], c_yellow, 0.5);
-		other.char_last = char[? CHARACTER_MAP.TYPE];
+if (instance_exists(player))
+	with (player) {
+		image_alpha = 0;
+		var sprite = characterSprites[? ANIMATIONSTATE.STANDING];
+		other.char_img += image_speed * time_dialation;
+		if (other.char_img >= sprite_get_number(sprite))
+			other.char_img = 0;
+		if (!other.selected) {
+			var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
+			scDrawText(other.start_x_default, other.start_y_default + RES_H / 4, char[? CHARACTER_MAP.NAME], c_yellow, 0.5);
+			if (char[? CHARACTER_MAP.TYPE] != undefined)
+				other.char_last = char[? CHARACTER_MAP.TYPE];
+		}
 	}
-}
 
 char_x = lerp(char_x, 0, 0.1);
 //char_x_cur = lerp(char_x_cur, 0, 0.1);
@@ -70,6 +72,11 @@ char_scale_cur = lerp(char_scale_cur, char_scale_cur_max, 0.1);
 if (char_cur != char_last) {
 	var scale_cur = char_scale_cur;
 	char_scale_cur = char_cur > char_last ? char_scale_b : char_scale_a;
+	show_debug_message("--------------");
+	show_debug_message(char_x);
+	show_debug_message(char_x_offset);
+	show_debug_message(char_cur);
+	show_debug_message(char_last);
 	char_x = char_x_offset * (char_cur - char_last);
 	if (char_cur > char_last) { //GOING BACK
 		char_scale_a = scale_cur;

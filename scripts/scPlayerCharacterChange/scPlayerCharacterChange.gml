@@ -7,6 +7,7 @@ map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
 map[? CHARACTER_MAP.HEALTH] = 20; //Default health
 map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
 //Load Sprites
+show_debug_message("CHANGING CHARACTER TO " + string(argument0));
 characterSprites = scPlayerCharacterGetSprites(map[? CHARACTER_MAP.TYPE]);
 
 for (var i = 0; i < instance_number(object_index); i++)

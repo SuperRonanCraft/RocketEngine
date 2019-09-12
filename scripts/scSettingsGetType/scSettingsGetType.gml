@@ -22,12 +22,16 @@ switch (type) {
 			case SETTINGS.PLAYER_4_CHARACTER:
 				val = "player_4_character";
 				break;
+			default: val = noone; break;
 		}
 		break;
 	case SETTINGS_TYPE.VALUE:
 		val = oSettingsHandler.settings_map[? scSettingsGetType(SETTINGS_TYPE.SECTION, setting)];
 		break;
 }
+
+show_debug_message("RETURNING SETTING VALUE = " + string(val));
+show_debug_message("RETURNING SETTING ENUM = " + string(setting));
 
 return val;
 

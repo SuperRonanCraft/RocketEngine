@@ -879,6 +879,14 @@
             }
         },
         {
+            "Key": "238aa5dc-eb3f-4b05-8aa0-05a4a8b3ba00",
+            "Value": {
+                "id": "0933afb4-f328-4a6d-845b-78fc34961b0d",
+                "resourcePath": "scripts\\scWeaponModify\\scWeaponModify.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "23ad50eb-6c8d-4e74-9c49-4a90a5ad4635",
             "Value": {
                 "id": "c829b8d7-f8ab-41ed-a1ef-2bc44ec4b763",
@@ -3082,7 +3090,7 @@
             "Key": "82456896-61ba-4055-9bf6-e6a1b3875d73",
             "Value": {
                 "id": "d17bbf27-2bc8-458e-bf7b-75ad93b566a2",
-                "resourcePath": "objects\\oPickupRocket\\oPickupRocket.yy",
+                "resourcePath": "objects\\oPickupWeapon\\oPickupWeapon.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5907,13 +5915,14 @@
         "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
         "ea910044-8ba1-412f-b62c-58b8fac7fbea",
         "b4cbad0d-4085-4aff-954c-ce595b63b3a8",
-        "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
+        "238aa5dc-eb3f-4b05-8aa0-05a4a8b3ba00",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",
         "819c3721-6078-47b0-91cb-c171738ea97b",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
+        "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
         "8d677245-483e-47c4-a366-a6bb03bcb76b",
         "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",

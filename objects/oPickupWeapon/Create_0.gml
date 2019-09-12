@@ -1,4 +1,4 @@
 event_inherited();
 
-item_rocket = noone;
+item_weapon = noone;
 item_xoffset = 10;
