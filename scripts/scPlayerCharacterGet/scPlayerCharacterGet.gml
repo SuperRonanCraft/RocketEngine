@@ -15,6 +15,7 @@ for (var i = 0; i < instance_number(object_index); i++)
 			case 3:
 				val = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_4_CHARACTER);
 				break;
+			default: show_debug_message("NO PLAYER #" = string(i + 2)); break;
 		}
 
 return val;

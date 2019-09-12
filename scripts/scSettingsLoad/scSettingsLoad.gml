@@ -23,7 +23,7 @@ global.key_p2_shoot = ini_read_real(sec, "p2_shoot", global.key_p2_shoot_default
 global.pause_onfocus = ini_read_real(sec, "pause_onfocus", global.pause_onfocus);
 
 //CACHE
-var map = settings_map;
+var map = oSettingsHandler.settings_map;
 sec = scSettingsGetType(SETTINGS_TYPE.SECTION, SETTINGS.SECTION);
 for (var i = 0; i < SETTINGS.SECTION; i++) {
 	var val = scSettingsGetType(SETTINGS_TYPE.SECTION, i);

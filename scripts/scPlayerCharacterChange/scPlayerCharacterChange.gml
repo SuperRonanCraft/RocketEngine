@@ -25,6 +25,7 @@ for (var i = 0; i < instance_number(object_index); i++)
 			case 3:
 				scSettingsCache(SETTINGS.PLAYER_4_CHARACTER, map[? CHARACTER_MAP.TYPE]);
 				break;
+			default: show_debug_message("No Player #" + string(i + 2))
 		}
 		break;
 	}
