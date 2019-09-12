@@ -11,7 +11,7 @@ var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 var hit_rocket_map = hit.weapon_map[? WEAPON_MAP.MAP];
 if (hit_rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
 	scRocketSpecialFire_Explode(3 * rocket_map[? ROCKET_MAP.EXPLOSION_SCALE]);
-else if (hit.rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
+else if (hit_rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
 	scRocketSpecialFire_Explode(0.1);	
 else
 	scRocketSpecialFire_Explode(1.5 * rocket_map[? ROCKET_MAP.EXPLOSION_SCALE]);
