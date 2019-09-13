@@ -11,7 +11,7 @@ if (global.play) { //If game play is enabled
 		with (instance_create_depth(0, 0, depth, irandom_range(0, 100) < 95 ? oTarget : oTargetBomb)) {
 			other.targets_created++;
 			owner = other;
-			timer = other.diff * 3;
+			timer = other.diff * 10;
 		}
 }
 //Item ease in the score

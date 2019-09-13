@@ -17,12 +17,12 @@ points_y = 10;
 points_x_target = gui_width - gui_width / 32;
 points_speed = 15; //lower is faster
 points_scale = 1;
-points_itemheight = font_get_size(fPixel);
+//points_itemheight = font_get_size(fPixel);
 points = 0;
 points_current = points;
 points_str_pre = "Score ";
 points_str = points_str_pre + string(points);
-points_top = points_y - (points_itemheight * 1.5);
+//points_top = points_y - (points_itemheight * 1.5);
 
 //End game
 lost_text = choose("You Lost!", "Better luck next time!", "Whoops!");
@@ -33,7 +33,7 @@ scAllowCharacterSelect(); //Character selector allowed
 timer = scStageTimerStart(global.mode_targets_timer); //New time
 timer_current = timer;
 
-var roc = ROCKET.DEFAULT;
+/*var roc = ROCKET.DEFAULT;
 var rocindex = roc;
 for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAULT && i < ROCKET.LENGHT; i++) {
 	var list = scRocketGet(i);
@@ -41,7 +41,7 @@ for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAU
 		roc++;
 	rocindex++;
 	ds_map_destroy(list);
-}
+}*/
 
 with (oPlayer) {
 	var hp = shootable_map[? SHOOTABLE_MAP.HEALTH];
@@ -52,5 +52,5 @@ with (oPlayer) {
 	}
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
 	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = hp;
-	scRocketChange(rocindex);
+	scWeaponModify(id, WEAPON_MODIFIER.FIRE);
 }

@@ -103,7 +103,7 @@ global.mode_1v1_singleplayer = 0; //Multiplayer level
 
 global.mode_targets_preset = 1;
 global.mode_targets_difficulty = 0;
-global.mode_targets_rockettype = 1;
+//global.mode_targets_rockettype = 1;
 global.mode_targets_timer = 2;
 
 global.mode_kb_preset = 1;
