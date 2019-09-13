@@ -62,6 +62,10 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 			scDrawText(rx, ry, string(tracking), c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
 		else
 			scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
+		if (array_length_1d(ach_after) > 0) { //show next goal
+			desc = scAchievementsGetType(ACHIEVEMENT_TYPE.DESCRIPTION, ach_after[0]);
+			scDrawText(rx, ry + 64 + 30, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
+		}
 	} else if (desc != noone)
 		scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
 	scDrawSpriteExt(rx - 32, ry + 25 + ryo, icon, 0); //Icon
@@ -69,7 +73,7 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 		scDrawSpriteExt(rx + 32, ry + 25 + 64 + ryo, s_achievement_complete, 0); //Complete
 	if (array_length_1d(ach_before) != 0)
 		for (var ach_bf = 0; ach_bf < array_length_1d(ach_before); ach_bf++)
-			scDrawSpriteExt(rx - 66 - (34 * ach_bf), ry + 25 + ryo + 16, scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, ach_before[ach_bf]), 0, noone, noone, 0.5, 0.5); //Icon after
+			scDrawSpriteExt(rx - 66 - (34 * ach_bf), ry + 25 + ryo + 16, scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, ach_before[array_length_1d(ach_before) - ach_bf - 1]), 0, noone, noone, 0.5, 0.5); //Icon before
 	if (array_length_1d(ach_after) != 0)
 		for (var ach_aft = 0; ach_aft < array_length_1d(ach_after); ach_aft++)
 			scDrawSpriteExt(rx + 34 + (34 * ach_aft), ry + 25 + ryo + 16, s_achievement_Locked, 0, noone, noone, 0.5, 0.5); //Icon after

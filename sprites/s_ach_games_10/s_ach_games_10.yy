@@ -2,7 +2,7 @@
     "id": "679054b5-3159-4b21-b35e-491f1b4956f4",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_achievement_2",
+    "name": "s_ach_games_10",
     "For3D": false,
     "HTile": false,
     "VTile": false,

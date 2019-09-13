@@ -81,20 +81,25 @@ switch (type) {
 	case ACHIEVEMENT_TYPE.ICON: //ICON OF ACHIEVEMENT
 		switch (enu) {
 			case ACHIEVEMENTS.GM_1V1_MULTI: val = s_achievement_1; break;
-			case ACHIEVEMENTS.GAMES_COMPLETE_10:
-			case ACHIEVEMENTS.GAMES_COMPLETE_25:
-			case ACHIEVEMENTS.GAMES_COMPLETE_50:
-			case ACHIEVEMENTS.GAMES_COMPLETE_100: val = s_achievement_2; break;
-			case ACHIEVEMENTS.ULTIMATES_CASTED_10:
-			case ACHIEVEMENTS.ULTIMATES_CASTED_100:
-			case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = s_achievement_3; break;
-			case ACHIEVEMENTS.ROCKETS_SHOT_100:
-			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
-			case ACHIEVEMENTS.ROCKETS_SHOT_10000: val = s_achievement_4; break;
-			case ACHIEVEMENTS.TIME_PLAYED_10M:
-			case ACHIEVEMENTS.TIME_PLAYED_60M:
-			case ACHIEVEMENTS.TIME_PLAYED_360M: val = s_achievement_5; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_10: val = s_ach_games_10; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_25: val = s_ach_games_25; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_50: val = s_ach_games_50; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_100: val = s_ach_games_100; break;
+			case ACHIEVEMENTS.ULTIMATES_CASTED_10: val = s_ach_ults_10; break;
+			case ACHIEVEMENTS.ULTIMATES_CASTED_100: val = s_ach_ults_100; break;
+			case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = s_ach_ults_1000; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_100: val = s_ach_shoot_100; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_1000: val = s_ach_shoot_1000; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_10000:  val = s_ach_shoot_10000; break;
+			case ACHIEVEMENTS.TIME_PLAYED_10M: val = s_ach_time_10; break;
+			case ACHIEVEMENTS.TIME_PLAYED_60M: val = s_ach_time_60; break;
+			case ACHIEVEMENTS.TIME_PLAYED_360M: val = s_ach_time_360; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = s_achievement_6; break;
+			case ACHIEVEMENTS.MEDIC: val = s_achievement_7; break;
+			case ACHIEVEMENTS.COMBO: val = s_achievement_8; break;
+			case ACHIEVEMENTS.PORTALS: val = s_achievement_9; break;
+			case ACHIEVEMENTS.CLONES: val = s_achievement_10; break;
+			case ACHIEVEMENTS.SPRING_SLIME: val = s_achievement_11; break;
 			default: val = sTargetBomb; break;
 		}
 		break;
@@ -160,38 +165,31 @@ switch (type) {
 		break;
 	case ACHIEVEMENT_TYPE.GOAL:
 		switch (enu) {
+			case ACHIEVEMENTS.SPRING_SLIME: val = true; break;
+			case ACHIEVEMENTS.CLONES: val = 2; break;
+			case ACHIEVEMENTS.PORTALS: val = 2; break;
 			//10
-			case ACHIEVEMENTS.MEDIC:
-				val = 5; break;
-			case ACHIEVEMENTS.COMBO:
-				val = 3; break;
+			case ACHIEVEMENTS.MEDIC: val = 5; break;
+			case ACHIEVEMENTS.COMBO: val = 3; break;
 			case ACHIEVEMENTS.TIME_PLAYED_10M:
 			case ACHIEVEMENTS.GAMES_COMPLETE_10:
 			case ACHIEVEMENTS.ULTIMATES_CASTED_10:
-			case ACHIEVEMENTS.ROCKETS_CHANGED_10:
-				val = 10; break;
+			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = 10; break;
 			//10+
-			case ACHIEVEMENTS.GAMES_COMPLETE_25:
-				val = 25; break;
-			case ACHIEVEMENTS.GAMES_COMPLETE_50:
-				val = 50; break;
-			case ACHIEVEMENTS.TIME_PLAYED_60M:
-				val = 60; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_25: val = 25; break;
+			case ACHIEVEMENTS.GAMES_COMPLETE_50: val = 50; break;
+			case ACHIEVEMENTS.TIME_PLAYED_60M: val = 60; break;
 			//100
 			case ACHIEVEMENTS.ULTIMATES_CASTED_100:
 			case ACHIEVEMENTS.GAMES_COMPLETE_100:
-			case ACHIEVEMENTS.ROCKETS_SHOT_100:
-				val = 100; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_100: val = 100; break;
 			//100+
-			case ACHIEVEMENTS.TIME_PLAYED_360M:
-				val = 360; break;
+			case ACHIEVEMENTS.TIME_PLAYED_360M: val = 360; break;
 			//1,000
 			case ACHIEVEMENTS.ULTIMATES_CASTED_1000:
-			case ACHIEVEMENTS.ROCKETS_SHOT_1000:
-				val = 1000; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_1000: val = 1000; break;
 			//10,000
-			case ACHIEVEMENTS.ROCKETS_SHOT_10000:
-				val = 10000; break;
+			case ACHIEVEMENTS.ROCKETS_SHOT_10000: val = 10000; break;
 			default: val = noone; break; //noone so we dont check the achievement automatically
 		}
 		break;

@@ -17,4 +17,12 @@ with (inst) {
 	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = 1;
 	despawn = true; //Despawn player if dead
 	walksp += random_range(-2, 2);
+	owner = other; //Owner of this clone
+	if (other.player_map[? "clones"] == undefined)
+		other.player_map[? "clones"] = 0;
+	other.player_map[? "clones"]++;
+	player_map[? PLAYER_MAP.DESTROY_SCRIPT] = scUltimateClone_Destroy;
 }
+
+if (player_map[? "clones"] != undefined)
+	scAchievements_CustomEvent(ACHIEVEMENTS.CLONES, player_map[? "clones"]);

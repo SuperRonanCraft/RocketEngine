@@ -15,3 +15,7 @@ with (other) {
 	vsp_move = max(vsp_move, -32); //Maximum jump
 }
 ds_list_add(jump_list, other.id); //Dont allow the jump till we are off this list
+
+//Achievement
+if (scBuffFind(other, BUFFTYPE.SLIME))
+	scAchievements_CustomEvent(ACHIEVEMENTS.SPRING_SLIME, true);

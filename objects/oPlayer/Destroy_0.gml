@@ -1,5 +1,9 @@
 /// @description Clean up data structures
 // You can write your code in this editor
+
+if (player_map[? PLAYER_MAP.DESTROY_SCRIPT] != noone)
+	script_execute(player_map[? PLAYER_MAP.DESTROY_SCRIPT]);
+
 ds_list_destroy(buffs_map);
 ds_map_destroy(weapon_map);
 ds_map_destroy(player_map);

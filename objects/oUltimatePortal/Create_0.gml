@@ -28,3 +28,12 @@ portal_yscale = image_yscale;
 portal_xscale = image_xscale;
 max_alpha = 0.8;
 alpha_change = 0.02;
+
+if (instance_number(object_index) > 1) {
+	var all_up = true;
+	with (object_index)
+		if (portal_timer <= 0)
+			all_up = false;
+	if (all_up)
+		scAchievements_CustomEvent(ACHIEVEMENTS.PORTALS, instance_number(object_index));
+}
