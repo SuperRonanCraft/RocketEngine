@@ -30,3 +30,7 @@ enum COMBO_MAP {
 	STREAK, //curent combo streak
 	STREAK_HIGHEST
 }
+
+enum COMBO_TYPE { //Set in a weapon map
+	KNOCKBACK, NO_MISS
+}

@@ -7,4 +7,5 @@ if(!deactivate && shuriken_map[?SHURIKEN_MAP.STICK] && other.shootable || other.
 	depth = other.depth;
 	scPlaySound(SOUND.EFFECT_SHUR_WALL);
 	stuckTo = other.id;
+	event_user(1); //missed
 }

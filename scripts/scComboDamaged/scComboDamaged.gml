@@ -1,8 +1,19 @@
 /// @desc check if we're in a knockback state, add to the combo modifier
 /// @arg shooter-instance
-if (player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
-	with (argument0) {
-		if (object_index != oPlayer) exit;
+var p = argument0;
+if (p.object_index != oPlayer) exit;
+var type = p.weapon_map[? WEAPON_MAP.COMBO_TYPE];
+var count_up = false;
+switch (type) {
+	case COMBO_TYPE.KNOCKBACK:
+		if (player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
+			count_up = true;
+		break;
+	case COMBO_TYPE.NO_MISS: count_up = true; break;
+}
+
+if (count_up)
+	with (p) {
 		var map = combo_map;
 		//combo_amount++;
 		map[? COMBO_MAP.STREAK]++;

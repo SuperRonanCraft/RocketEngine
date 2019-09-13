@@ -71,12 +71,22 @@ for (var i = 0; i < amt && index_on_page < (columns * rows); i++) {
 	scDrawSpriteExt(rx - 32, ry + 25 + ryo, icon, 0); //Icon
 	if (status != noone && array_length_1d(ach_after) == 0)
 		scDrawSpriteExt(rx + 32, ry + 25 + 64 + ryo, s_achievement_complete, 0); //Complete
-	if (array_length_1d(ach_before) != 0)
+	//Before and after current achievement
+	if (array_length_1d(ach_before) != 0) {
+		//var ach_bf_total = 0;
 		for (var ach_bf = 0; ach_bf < array_length_1d(ach_before); ach_bf++)
-			scDrawSpriteExt(rx - 66 - (34 * ach_bf), ry + 25 + ryo + 16, scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, ach_before[array_length_1d(ach_before) - ach_bf - 1]), 0, noone, noone, 0.5, 0.5); //Icon before
+			if (ach_bf < 2)
+				scDrawSpriteExt(rx - 66 - (34 * ach_bf), ry + 25 + ryo + 16, scAchievementsGetType(ACHIEVEMENT_TYPE.ICON,
+				ach_before[array_length_1d(ach_before) - ach_bf - 1]), 0, noone, noone, 0.5, 0.5); //Icon before
+			//else
+				//ach_bf_total++;
+		//if (ach_bf_total != 0)
+			//scDrawText(rx - 120, ry + 25 + ryo + 32, "+" + string(ach_bf_total), color_element, scale_description, noone, noone, fa_middle, fa_middle);
+	}
 	if (array_length_1d(ach_after) != 0)
 		for (var ach_aft = 0; ach_aft < array_length_1d(ach_after); ach_aft++)
-			scDrawSpriteExt(rx + 34 + (34 * ach_aft), ry + 25 + ryo + 16, s_achievement_Locked, 0, noone, noone, 0.5, 0.5); //Icon after
+			if (ach_aft < 2)
+				scDrawSpriteExt(rx + 34 + (34 * ach_aft), ry + 25 + ryo + 16, s_achievement_Locked, 0, noone, noone, 0.5, 0.5); //Icon after
 	//scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1); //Seperation line
 	index_on_page++; //Succefully displayed achievement
 	if (index_on_page mod columns == 0)

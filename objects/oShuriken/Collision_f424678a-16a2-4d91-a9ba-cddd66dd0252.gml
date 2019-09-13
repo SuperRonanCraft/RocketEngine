@@ -29,16 +29,11 @@ if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy a
 
 			//Knockback
 			var facing = 1;
-			if(direction > 90 && direction < 270)
-				facing = -1;
-			
-			
-			other.hsp_move += facing * (weapon_map[? WEAPON_MAP.SPEED]/2 +shuriken_map[? SHURIKEN_MAP.KBAMT]);
-
-
-		}
-		
-
+			if (direction > 90 && direction < 270)
+				facing = -1;	
+			other.hsp_move += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
+		} else
+			event_user(1); //missed
 		
 		//Damage player
 		var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
