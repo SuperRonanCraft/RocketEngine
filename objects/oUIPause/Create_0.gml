@@ -27,6 +27,3 @@ depth -= 1; //Draw in front of transition
 
 //Disabled unfolding
 unfolding = false;
-
-//Set default font
-draw_set_font(fPixel);

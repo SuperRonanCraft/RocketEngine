@@ -23,5 +23,3 @@ ach_pause_time = 3 * room_speed;
 ach_pause_time_crt = ach_pause_time;
 ach_x_crt = ach_xstart;
 ach_playedsound = false;
-
-//ach_save_file = false;

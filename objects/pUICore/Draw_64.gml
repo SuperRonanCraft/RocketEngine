@@ -131,9 +131,9 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			//Slider button
 			var scl = 1;
 			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, c_white, 0.8);
-			var xleft = rtx;
-			var ycheck = rty;
-			scUIHoveringBox(xleft, xleft + slider_width, ycheck, ycheck, x_buffer, y_buffer);
+			//var xleft = rtx;
+			//var ycheck = rty;
+			//scUIHoveringBox(xleft, xleft + slider_width, ycheck, ycheck, x_buffer, y_buffer);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];

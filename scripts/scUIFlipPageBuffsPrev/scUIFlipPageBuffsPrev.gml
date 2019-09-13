@@ -1,5 +1,5 @@
 /// @desc previous buffs page
-var amt = BUFFTYPE.LENGHT, columns = 3, rows = 3;
+var amt = BUFFTYPE.LENGHT - 1, columns = 3, rows = 3;
 var pg = page_buffs;
 
 //Page flip

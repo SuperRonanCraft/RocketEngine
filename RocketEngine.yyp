@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "0522500f-5c54-41e6-940c-1120e34bb72a",
+            "Value": {
+                "id": "d0cf7a70-d52f-4761-8472-805b41ba8fac",
+                "resourcePath": "views\\0522500f-5c54-41e6-940c-1120e34bb72a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
             "Value": {
                 "id": "b985dcf7-a1a7-4f7c-9d3f-880f00b367a6",
@@ -2639,6 +2647,14 @@
             }
         },
         {
+            "Key": "6d437edb-2687-4121-92e9-b324a6695fbe",
+            "Value": {
+                "id": "c4c32299-23b1-46fd-91c5-ce21de910594",
+                "resourcePath": "sprites\\s_modifier_magnet\\s_modifier_magnet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6d5d87ef-47f5-45b8-adf1-b44e88d739c4",
             "Value": {
                 "id": "221b73cc-4312-4998-bd6f-cac0a30a347c",
@@ -3351,6 +3367,14 @@
             }
         },
         {
+            "Key": "8c21a994-3c6e-488b-b790-82f87bd55106",
+            "Value": {
+                "id": "157f3280-9eea-414c-91a7-4d5358ddeed4",
+                "resourcePath": "sprites\\s_modifier_ice\\s_modifier_ice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8ce34aba-697e-4137-ae6a-97b1f4006141",
             "Value": {
                 "id": "3b0a9b7d-06e3-45bf-837a-2f575d48f2ea",
@@ -3615,6 +3639,14 @@
             }
         },
         {
+            "Key": "97caaad8-59f3-43b5-9915-dcd69d5d2c26",
+            "Value": {
+                "id": "0deecbcb-0747-46a8-85a2-7b75baf1b684",
+                "resourcePath": "sprites\\s_modifier_default\\s_modifier_default.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9929a253-eef4-4676-a16c-26c7cb041b55",
             "Value": {
                 "id": "ef6f584f-8bcd-4b6b-b273-408d13f90844",
@@ -3756,6 +3788,14 @@
                 "id": "3be4b188-48b4-41a5-a607-f589f2c3e738",
                 "resourcePath": "views\\9ea10b9a-afcf-4768-8b8b-d4f29f5ba939.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9ec574d6-8069-4dfa-aa1d-de09a5581657",
+            "Value": {
+                "id": "c6f15c94-b76c-41a1-b8ae-cb5ddf866b94",
+                "resourcePath": "scripts\\scWeaponModifyGetIcon\\scWeaponModifyGetIcon.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4076,6 +4116,14 @@
                 "id": "73c329c1-5432-4ef0-a178-5c5c3f08b0e9",
                 "resourcePath": "scripts\\scRocketTeleport_Create\\scRocketTeleport_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a8f0b023-12de-4b9c-a10f-bc3b1f1f98cb",
+            "Value": {
+                "id": "5962722c-056d-4bdf-b98e-a828c10e7e84",
+                "resourcePath": "sprites\\s_modifier_fire\\s_modifier_fire.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5215,6 +5263,14 @@
             }
         },
         {
+            "Key": "dccc55ef-73ed-4537-a1a9-664395a02436",
+            "Value": {
+                "id": "9ae0ed1f-e326-436d-8d31-993db3ae8ad8",
+                "resourcePath": "sprites\\s_modifier_portal\\s_modifier_portal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dd00276d-953d-43ae-988e-b0a79026b146",
             "Value": {
                 "id": "8af66432-aa49-4d95-b3b6-e2d1967fe7a1",
@@ -5948,6 +6004,7 @@
         "ea910044-8ba1-412f-b62c-58b8fac7fbea",
         "b4cbad0d-4085-4aff-954c-ce595b63b3a8",
         "238aa5dc-eb3f-4b05-8aa0-05a4a8b3ba00",
+        "9ec574d6-8069-4dfa-aa1d-de09a5581657",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "b06581ab-c385-498f-9940-64f5a039dcab",

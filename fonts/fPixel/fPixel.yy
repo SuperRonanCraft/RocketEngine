@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "fPixel",
     "AntiAlias": 0,
-    "TTFName": "${project_dir}\\fonts\\fPixel\\ARCADECLASSIC.TTF",
+    "TTFName": "fonts\\fPixel\\ARCADECLASSIC.TTF",
     "ascenderOffset": 2,
     "bold": false,
     "charset": 0,

@@ -48,7 +48,7 @@ if (inputting) { //Are we inputting data?
 			} else if (mouse_check_button(mb_right)) { //Must be pressing right to move slider
 				var xleft = start_x[option] + (x_buffer * 2);
 				var ycheck = start_y[option];
-				if (scUIHoveringBox(xleft, xleft + slider_width, ycheck, ycheck, x_buffer, y_buffer)) {
+				if (scUIHoveringBox(xleft, ycheck, xleft + slider_width, ycheck, x_buffer, y_buffer)) {
 					var val = (device_mouse_x_to_gui(0) - xleft) / slider_width;
 					ds_grid[# 4, option] = clamp(val, 0, 1);
 				}

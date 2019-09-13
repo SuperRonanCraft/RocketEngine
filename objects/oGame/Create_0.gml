@@ -115,3 +115,6 @@ global.mode_kb_timer = 2;
 //STAGE SCORE
 global.score_mode_p1_wins = 0;
 global.score_mode_p2_wins = 0;
+
+//Set default font
+draw_set_font(fPixel);

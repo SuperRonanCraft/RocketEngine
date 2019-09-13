@@ -1,6 +1,4 @@
-var fileStr = scFileGetType(FILES.SETTINGS); //File name
-if (!file_exists(fileStr)) exit; //No save file
-ini_open(fileStr); //Open stream
+ini_open(scFileGetType(FILES.SETTINGS)); //Open stream
 
 //SOUNDS
 var sec = "Sound";

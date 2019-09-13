@@ -15,8 +15,9 @@ if (timer_current <= 0) {
 	//}
 	//Pick a random rocket from the possible array
 	//var map = scRocketGet(possible[irandom_range(0, array_length_1d(possible) - 1)]);
-	item = sRocket_Fast;//map[? ROCKET_MAP.PROJECTILE];
+	//item = sRocket_Fast;//map[? ROCKET_MAP.PROJECTILE];
 	item_weapon = irandom_range(0, WEAPON_MODIFIER.LENGTH - 1);
+	item = scWeaponModifyGetIcon(item_weapon);
 	//ds_map_destroy(map);
 	timer_current = timer_org; //Reset the timer
 	timer = timer_org;

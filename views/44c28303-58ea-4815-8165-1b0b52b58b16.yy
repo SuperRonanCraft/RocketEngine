@@ -26,7 +26,7 @@
         "27b0bc27-5ba5-4ffa-9c7c-b305354ffc76"
     ],
     "filterType": "GMSprite",
-    "folderName": "Icons",
+    "folderName": "Buff Icons",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

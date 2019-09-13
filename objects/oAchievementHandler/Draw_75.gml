@@ -4,14 +4,22 @@ if (!achievement_display || ds_list_empty(achievement_display_list)) exit;
 
 var name = scAchievementsGetType(ACHIEVEMENT_TYPE.NAME, achievement_display_list[| 0]);
 var desc = scAchievementsGetType(ACHIEVEMENT_TYPE.DESCRIPTION, achievement_display_list[| 0]);
+if (desc == noone)
+	desc = scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, achievement_display_list[| 0]);
+if (desc == noone)
+	desc = "";
 var icon = scAchievementsGetType(ACHIEVEMENT_TYPE.ICON, achievement_display_list[| 0]);
 
 var offset = sprite_get_width(icon) * 0.8;
 var name_len = string_width(name) * ach_scale;
-var len = (ach_title_len > name_len ? ach_title_len : name_len) + offset + ach_margin;
+var desc_len = string_width(desc) * ach_scale_desc;
+var len = (ach_title_len > name_len ? 
+	(ach_title_len > desc_len ? ach_title_len : desc_len) :
+	(name_len > desc_len ? name_len : desc_len)) +
+	offset + ach_margin;
 var hei = ach_title_hei * 2;
-var xx = ach_x_crt, xx2 = xx + len + (ach_margin * 3);
-var yy = ach_ystart, yy2 = yy + hei + (ach_margin * 3);
+var xx = ach_x_crt, xx2 = xx + len + (ach_margin * 2);
+var yy = ach_ystart, yy2 = yy + hei + (ach_margin * 2);
 scDrawRectRound(xx, yy, xx2 + 20, yy2, c_gray, false, ach_box_alpha, 20, 20);
 //TITLE
 yy = yy + ((yy2 - yy) / 2);
@@ -20,7 +28,8 @@ scDrawText(xx + (ach_margin * 2) + offset, yy, ach_title, c_yellow, ach_scale, n
 //NAME
 scDrawText(xx + (ach_margin * 2) + offset, yy, name, c_white, ach_scale, noone, ach_alpha, fa_left, fa_top);
 //DESC
-scDrawText(xx + (ach_margin * 2) + offset, yy + (ach_title_hei * 1.5), desc, c_ltgray, ach_scale_desc, noone, ach_alpha, fa_left, fa_top);
+if (desc != noone)
+	scDrawText(xx + (ach_margin * 2) + offset, yy + (ach_title_hei), desc, c_ltgray, ach_scale_desc, noone, ach_alpha, fa_left, fa_top);
 //BLACK BAR
 scDrawRect(RES_W, ach_ystart, RES_W - (RES_W - xx2) + 20, yy2, c_black, false, 1); //blackout bar (not show when full screened)
 

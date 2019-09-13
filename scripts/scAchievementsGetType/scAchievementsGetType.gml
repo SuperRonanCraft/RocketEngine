@@ -75,7 +75,7 @@ switch (type) {
 			case ACHIEVEMENTS.ULTIMATES_CASTED_100: val = "Cast 100 ultimates"; break;
 			case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = "Cast 1,000 ultimates"; break;
 			case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Pickup 10 rockets"; break;
-			default: val = ""; break;
+			default: val = noone; break;
 		}
 		break;
 	case ACHIEVEMENT_TYPE.ICON: //ICON OF ACHIEVEMENT
