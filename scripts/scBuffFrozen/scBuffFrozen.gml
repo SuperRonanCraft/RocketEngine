@@ -20,7 +20,12 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
 	owner.player_map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
 	owner.friction_adj += dsBuff[? "sliding"];	
-	//Remove Slime
+	
+	part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left-30, bbox_right+30, bbox_top-30, bbox_bottom+30, ps_shape_ellipse, ps_distr_gaussian);
+	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.ICE], 45);
+
+	
+	//Remove Frozen
 	scBuffRemove(owner, dsBuff);
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator

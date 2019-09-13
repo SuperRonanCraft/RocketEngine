@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "007df83b-15ab-4a48-bc90-90efb9bc6703",
+            "Value": {
+                "id": "b9905c1b-9753-497f-8abe-316396eaa1ae",
+                "resourcePath": "sprites\\sShuriken_Ice_Ult\\sShuriken_Ice_Ult.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "00ca8237-9f77-4bab-8063-1419bbed946c",
             "Value": {
                 "id": "cac0f69a-882f-492e-9476-8a149adc8e19",
@@ -3271,6 +3279,14 @@
             }
         },
         {
+            "Key": "860f6c71-1aec-4b22-9c63-324f81cf49fd",
+            "Value": {
+                "id": "d0bc9028-a43e-4d0f-8004-9612bee70474",
+                "resourcePath": "scripts\\scShuriken_Ice_Despawn\\scShuriken_Ice_Despawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "865c2c03-6d3c-4750-8b0c-1284db59b9e5",
             "Value": {
                 "id": "231228d3-e9bb-4f15-bc38-e37e9f7b48a1",
@@ -5183,6 +5199,14 @@
             }
         },
         {
+            "Key": "d43f85d0-92e7-4d37-8392-8f2476bd7262",
+            "Value": {
+                "id": "b5c8f69f-395a-4d16-b8a9-903471c7443e",
+                "resourcePath": "objects\\oSwordSlash_Ice\\oSwordSlash_Ice.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d47d0884-2949-4ccf-ae41-060bad012c6b",
             "Value": {
                 "id": "5e74aff0-8f09-4d61-a629-117c87f50880",
@@ -5675,6 +5699,14 @@
             "Value": {
                 "id": "b9c339f1-7428-477c-b035-fb772b439c9b",
                 "resourcePath": "scripts\\scRocketDefaults\\scRocketDefaults.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e9b756e7-36df-4095-bde1-955dd35338b9",
+            "Value": {
+                "id": "89fec7eb-84de-4324-98c6-4f23c688f276",
+                "resourcePath": "scripts\\scUltimateSwordIce\\scUltimateSwordIce.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6295,12 +6327,14 @@
         "9beed5d5-b978-4366-8638-ef79a32d3637",
         "62d81973-9b38-4c0f-a0e0-6a2c2781f9f6",
         "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
+        "e9b756e7-36df-4095-bde1-955dd35338b9",
         "483e1c54-e32e-4837-b4ec-da3ac733df64",
         "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
         "5e646fca-ca67-4330-a6ca-62aa240db456",
         "09a3f638-e6de-4ac5-8650-6519e3abfb67",
         "50f9d5cf-bfd3-432b-b025-b5ef366cf21c",
         "9965ca03-d1ab-4539-a6d5-df93b1739740",
+        "860f6c71-1aec-4b22-9c63-324f81cf49fd",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",

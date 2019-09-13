@@ -21,9 +21,11 @@ map[? SHURIKEN_MAP.SCALE] = 1; //size of sprite
 map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY] = false; //auto destroy on collision
 map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY_ROOM] = true; //auto destroy when out of room
 map[? SHURIKEN_MAP.SHURIKEN_STEP] = noone; //script to override step (including movement)
-map[? SHURIKEN_MAP.BUFF] = noone;
-map[? SHURIKEN_MAP.DEATHCAUSE] = noone;
-map[? SHURIKEN_MAP.KBAMT] = 2;
+map[? SHURIKEN_MAP.BUFF] = noone; //buff to apply
+map[? SHURIKEN_MAP.DEATHCAUSE] = noone; //A deathcause
+map[? SHURIKEN_MAP.KBAMT] = 2; //HSP to apply on hit
+map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = noone; //Special script to apply when destroyed
+map[? SHURIKEN_MAP.WALL_SCRIPT] = noone; //Special script to apply when hitting a wall
 
 map[? SHURIKEN_MAP.PARTICLE] = noone; // Particle to emit
 map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit

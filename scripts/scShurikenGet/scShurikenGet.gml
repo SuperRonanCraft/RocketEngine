@@ -30,6 +30,10 @@ switch (shur) {
 		map[? SHURIKEN_MAP.SPEED] = 23;
 		map[? SHURIKEN_MAP.DAMAGE] = 1;
 		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.FROZEN];
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.ICE_SWORD;
+		map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Ice_Despawn;
+		map[? SHURIKEN_MAP.WALL_SCRIPT] = scShuriken_Ice_Despawn;
+		map[? SHURIKEN_MAP.DEATHCAUSE] = DEATH_LIST.FROZEN;
 		break;
 }
 

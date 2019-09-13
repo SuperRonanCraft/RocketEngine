@@ -43,7 +43,7 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	if (key_shoot)
 		scWeaponActivate();
 } else {
-	hsp_move = hsp;
+	//hsp_move = hsp;
 }
 
 //Friction

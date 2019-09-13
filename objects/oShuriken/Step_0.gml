@@ -13,9 +13,12 @@ if (shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP] != noone)
 else if (!deactivate) {
 	var spd = weapon_map[? WEAPON_MAP.SPEED];
 	scMovementLine(spd, direction);
+	if(weapon_map[? WEAPON_MAP.SPEED] <= 1){
+		weapon_map[? WEAPON_MAP.SPEED] = 1;	
+	}
 }
 
-if (shuriken_map[? SHURIKEN_MAP.PARTICLE] != noone) {
+if (!deactivate && shuriken_map[? SHURIKEN_MAP.PARTICLE] != noone) {
 	part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.FROST], shuriken_map[? SHURIKEN_MAP.PARTICLE_AMT]);
 }

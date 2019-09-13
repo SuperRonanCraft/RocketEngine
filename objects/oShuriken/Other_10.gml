@@ -1,23 +1,32 @@
 /// @description  Despawn
 
-if (!debounce) {
-	var randdirx = irandom_range(-7,7);
-	var randdiry = irandom_range(-12,-8);
+var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
+
+if (shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT] == noone) {
+		
+	if(!debounce){
+		var randdirx = irandom_range(-7,7);
+		var randdiry = irandom_range(-12,-8);
 	
-	image_speed = sign(randdirx);
+		image_speed = sign(randdirx);
 	
-	stuckTo = noone;
-	deactivate = true;
+		stuckTo = noone;
+		deactivate = true;
 	
-	debounce = true;
-	hsp = randdirx
-	vsp = randdiry;
+		debounce = true;
+		hsp = randdirx
+		vsp = randdiry;
+	}
+	vsp += 1.1;
+	image_alpha -= 0.01;
+
+
 }
 
-vsp += 1.1;
-image_alpha -= 0.01;
+else{
+	script_execute(shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT]);
+}
 
 x += hsp;
 y += vsp;
-
 //instance_destroy();
