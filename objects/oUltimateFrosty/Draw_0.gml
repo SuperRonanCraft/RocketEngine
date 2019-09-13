@@ -45,7 +45,7 @@ if (freezing) { //Freezing area?
 }
 
 var index = 0;
-//var walls_delete = ds_list_create();
+var walls_delete = ds_list_create();
 for (var i = 0; i < ds_list_size(frozen_walls); i++) { //Draw frozen wall and apply buff
 	var map = frozen_walls[| i];
 	if (map[? "alpha"] > 0) {
@@ -57,19 +57,20 @@ for (var i = 0; i < ds_list_size(frozen_walls); i++) { //Draw frozen wall and ap
 	map[? "timer"]--; //tick down timer
 	if (map[? "timer"] <= 0) {
 		map[? "alpha"] -= 0.025;
-		//if (map[? "alpha"] <= 0)
-		//	ds_list_add(walls_delete, index);
+		if (map[? "alpha"] <= 0)
+			ds_list_add(walls_delete, index);
 	} else {
 		map[? "alpha"] = min(map[? "alpha"] + 0.025, 0.6);
 		index++;
 	}
 }
 
-/*for (var i = 0; i < ds_list_size(walls_delete); i++) {
-	var map = frozen_walls[walls_delete[| i] - i];
+for (var i = 0; i < ds_list_size(walls_delete); i++) {
+	var map = frozen_walls[| walls_delete[| i]];
 	ds_map_destroy(map);
-	ds_list_delete(frozen_walls, walls_delete[| i] - i);
-}*/
+	ds_list_delete(frozen_walls, walls_delete[| i]);
+}
+ds_list_destroy(walls_delete);
 
 if (global.debug) {
 	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);

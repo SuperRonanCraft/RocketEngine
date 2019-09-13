@@ -17,8 +17,8 @@ if (argument_count > 4)
 
 
 var ds_map = ds_map_create();
-ds_map[? BUFF_MAP.GIVEN_BY] = from; //Set who gave this buff/debuff
 scBuffGet(buff, ds_map);
+ds_map[? BUFF_MAP.GIVEN_BY] = from; //Set who gave this buff/debuff
 //Check if a buff from the target is the same TYPE, if not, add it, or if its stackable, just add it
 if (ds_map[? BUFF_MAP.ENABLED]) {
 	var stack_info = ds_map[? BUFF_MAP.STACK_INFO];

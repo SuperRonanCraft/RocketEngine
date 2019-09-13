@@ -32,6 +32,8 @@ with (player) {
 	}
 }
 
+return weapon == noone;
+
 enum WEAPON_MODIFIER {
 	DEFAULT, ICE, FIRE, PORTAL, MAGNET,
 	//keep last

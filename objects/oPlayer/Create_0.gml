@@ -68,6 +68,7 @@ aiBrain = noone;
 
 //Cheat mode buff id
 buffs_cur = -1;
+weapons_cur = 0;
 
 //Smoke moving effect
 smoke_cur = 0;

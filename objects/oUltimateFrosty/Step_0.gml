@@ -1,5 +1,4 @@
-/// @desc slide
-image_xscale = 1;
+/// @desc slide/fade/delete
 
 if (!freezing) {
 	if (ds_list_empty(frozen_walls))

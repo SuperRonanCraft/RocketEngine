@@ -13,11 +13,12 @@ scStateCheck();
 //JUMP + F6 = APPLY BUFF
 if (global.devmode && global.debug && keyboard_check(keyjump))
 	if (keyboard_check_pressed(keyshoot)) {
-		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
-		var newwep = rocket_map[? ROCKET_MAP.TYPE] + 1;
-		if (newwep >= ROCKET.LENGHT)
-			newwep = ROCKET.DEFAULT;
-		scRocketChange(newwep);
+		weapons_cur++;
+		while(scWeaponModify(id, weapons_cur))
+			if (weapons_cur >= WEAPON_MODIFIER.LENGTH)
+				weapons_cur = 0;
+			else
+				weapons_cur++;
 	} else if (keyboard_check_pressed(vk_f5)) {
 		buffs_cur++;
 		if (buffs_cur >= BUFFTYPE.LENGHT)
