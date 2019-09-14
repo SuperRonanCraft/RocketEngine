@@ -1903,6 +1903,14 @@
             }
         },
         {
+            "Key": "4cc2cdeb-97c7-48e4-98aa-8ab5a64bd164",
+            "Value": {
+                "id": "250e33a8-c348-4f99-b75f-0c8d6bb21479",
+                "resourcePath": "scripts\\scMenuWeapons\\scMenuWeapons.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
             "Value": {
                 "id": "be8ddf78-203a-4379-8852-55183aa54535",
@@ -2938,7 +2946,7 @@
             "Key": "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
             "Value": {
                 "id": "48c3fb6a-6f45-48be-ae44-5e48e49ba897",
-                "resourcePath": "scripts\\scMenuRocketList\\scMenuRocketList.yy",
+                "resourcePath": "scripts\\scMenuRocketsOLD\\scMenuRocketsOLD.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3514,7 +3522,7 @@
             "Key": "8eac4b42-f5ef-476d-8ae2-c418564eb9a1",
             "Value": {
                 "id": "e03b8599-3a1f-4520-9b38-87d7f5ed443c",
-                "resourcePath": "scripts\\scMenuRocketBuffs\\scMenuRocketBuffs.yy",
+                "resourcePath": "scripts\\scMenuBuffs\\scMenuBuffs.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3874,7 +3882,7 @@
             "Key": "9ec574d6-8069-4dfa-aa1d-de09a5581657",
             "Value": {
                 "id": "c6f15c94-b76c-41a1-b8ae-cb5ddf866b94",
-                "resourcePath": "scripts\\scWeaponModifyGetIcon\\scWeaponModifyGetIcon.yy",
+                "resourcePath": "scripts\\scWeaponModifyGetType\\scWeaponModifyGetType.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6378,6 +6386,7 @@
         "b4976653-506c-48da-a5a6-798c696a4d78",
         "c963180c-6a2f-4298-8334-1001007702e6",
         "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
+        "4cc2cdeb-97c7-48e4-98aa-8ab5a64bd164",
         "8eac4b42-f5ef-476d-8ae2-c418564eb9a1",
         "5c9e7833-bf9a-4502-82f1-863c236bab75",
         "6a122f33-5cba-4db2-abd9-22528acd5997",

@@ -1,10 +1,10 @@
 /// @desc previous buffs page
-var amt = ROCKET.LENGHT, columns = 4, rows = 3;
-var pg = page_rockets;
+var amt = WEAPON_MODIFIER.LENGTH, columns = 2, rows = 3;
+var pg = page_weapons;
 
 //Page flip
 if (pg != 0) //PREV
-	page_rockets -= 1;
+	page_weapons -= 1;
 else
-	while (amt - (((page_rockets + 1) * (columns * rows)) + 1) > 0)
-		page_rockets++;
+	while (amt - (((page_weapons + 1) * (columns * rows)) + 1) > 0)
+		page_weapons++;

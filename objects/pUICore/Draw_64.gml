@@ -166,11 +166,11 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			}
 			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
-		case menu_element_type.rocket_list: //Rocket info page
-			scMenuRocketList(); break;
-		case menu_element_type.rocket_buffs: //Buffs list
-			scMenuRocketBuffs(); break;
-		case menu_element_type.achievements: //Achievements list
+		case menu_element_type.list_weapons: //Rocket info page
+			scMenuWeapons(); break;
+		case menu_element_type.list_buffs: //Buffs list
+			scMenuBuffs(); break;
+		case menu_element_type.list_achievements: //Achievements list
 			scMenuAchievements(); break;
 		case menu_element_type.controls: //Key controls page
 			scMenuControls(); break;

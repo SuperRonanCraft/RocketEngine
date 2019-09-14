@@ -18,9 +18,9 @@ ds_gamemodes = scUICreateMenuPage(
 
 ds_info = scUICreateMenuPage(
 	["&eSTATISTICS",	menu_element_type.page_transfer,	menu_page.stats,		"&aCheck your game stats!"],
-	["&eACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.achievements,	"&aGotta catch em all!"],
-	["ROCKETS",		menu_element_type.page_transfer,	menu_page.rocketlist,	"Learn about every rocket available!"],
-	["BUFFS",		menu_element_type.page_transfer,	menu_page.rocketbuffs,	"Get to know your buff!"],
+	["&eACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.list_achievements,	"&aGotta catch em all!"],
+	["WEAPONS",		menu_element_type.page_transfer,	menu_page.list_weapons,	"Learn about every weapon modifier!"],
+	["BUFFS",		menu_element_type.page_transfer,	menu_page.list_buffs,	"Get to know your buff!"],
 	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check ur keys!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.main]
 );
@@ -34,24 +34,14 @@ ds_stats = scUICreateMenuPage(
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 
-ds_rocketinfo = scUICreateMenuPage(
-	["",			menu_element_type.rocket_list],
+ds_list_weapons = scUICreateMenuPage(
+	["",			menu_element_type.list_weapons],
 	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageRocketsPrev],
 	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageRocketsNext],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
-//Rockets page
-page_rockets = 0;
-rockets_list = ds_list_create();
-rockets_img = 0;
-rockets_spd = 0.25;
-for (var i = ROCKET.DEFAULT; i < ROCKET.LENGHT; i++) {
-	var map = scRocketGet(i)
-	if (map[? ROCKET_MAP.ENABLED])
-		ds_list_add(rockets_list, map);
-	else
-		ds_map_destroy(map);
-}
+//Weapons page
+page_weapons = 0;
 
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],
@@ -59,8 +49,8 @@ ds_controls = scUICreateMenuPage(
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 
-ds_rocketbuffs = scUICreateMenuPage(
-	["",		menu_element_type.rocket_buffs],
+ds_list_buffs = scUICreateMenuPage(
+	["",		menu_element_type.list_buffs],
 	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageBuffsPrev],
 	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageBuffsNext],
 	["BACK",	menu_element_type.page_transfer,	menu_page.info]
@@ -71,8 +61,8 @@ page_buffs = 0;
 //Achivements page
 page_achievements = 1;
 
-ds_achievements = scUICreateMenuPage(
-	["",		menu_element_type.achievements],
+ds_list_achievements = scUICreateMenuPage(
+	["",		menu_element_type.list_achievements],
 	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageAchivementsPrev],
 	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageAchivementsNext],
 	["BACK",	menu_element_type.page_transfer,	menu_page.info]
@@ -90,17 +80,17 @@ ds_keybinds2[# 2, ds_grid_height(ds_keybinds2) - 1] = menu_page.controls;
 
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics,
-	ds_menu_keybinds, ds_info, ds_rocketinfo, ds_controls, ds_rocketbuffs,
-	ds_keybinds2, ds_confirm, ds_stats, ds_achievements];
+	ds_menu_keybinds, ds_info, ds_list_weapons, ds_controls, ds_list_buffs,
+	ds_keybinds2, ds_confirm, ds_stats, ds_list_achievements];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
-	menu_page.keybinds, menu_page.info, menu_page.rocketlist, menu_page.controls, menu_page.rocketbuffs,
-	menu_page.keybinds2, menu_page.confirm, menu_page.stats, menu_page.achievements];
+	menu_page.keybinds, menu_page.info, menu_page.list_weapons, menu_page.controls, menu_page.list_buffs,
+	menu_page.keybinds2, menu_page.confirm, menu_page.stats, menu_page.list_achievements];
 //Pages that are centered and have no input side
-menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_info, ds_rocketinfo, ds_rocketbuffs, ds_controls, ds_confirm, ds_achievements];
+menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_info, ds_list_weapons, ds_list_buffs, ds_controls, ds_confirm, ds_list_achievements];
 
 //Ignore specific menu elements from being selected
-menu_special = [menu_element_type.rocket_buffs, menu_element_type.rocket_list, menu_element_type.controls, menu_element_type.stats, menu_element_type.achievements];
+menu_special = [menu_element_type.list_buffs, menu_element_type.list_weapons, menu_element_type.controls, menu_element_type.stats, menu_element_type.list_achievements];
 var pos = RES_H - (RES_H / 8) - (RES_H / 16);
 menu_special_start_y = [pos + (RES_H / 16), pos + (RES_H / 16), pos, noone, pos + (RES_H / 16)];
 
@@ -110,9 +100,9 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 		if (ds_grid[# 1, 0] == menu_special[a]) menu_option[i] = 1; //Default selection for each special page
 		else menu_option[i] = 0; //Default selection for each page
 	}
-menu_option[page] = -1; //Default main page is -1 for the animation phase
+menu_option[page] = 0; //Default main page is -1 for the animation phase
 
 //Unfolding animation
-unfolding = false;
+unfolding = true;
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
 	unfold[i] = 0; //Position multiplier of page text

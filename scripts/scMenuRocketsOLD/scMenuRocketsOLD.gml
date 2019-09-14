@@ -1,5 +1,5 @@
-var amt = ds_list_size(rockets_list)/*ROCKET.LENGHT*/, columns = 4, rows = 3, offset = 0;
-var pg = page_rockets;
+var amt = ds_list_size(weapons_list), columns = 4, rows = 3, offset = 0;
+var pg = page_weapons;
 var spr, name, desc, buffs, rx, ry, c, index = 0, ioffset = 0;//ROCKET.DEFAULT;
 
 var disabled = 0;
@@ -12,7 +12,7 @@ var disabled = 0;
 
 var newi = (pg * (columns * rows)) + ioffset + (pg > 0 ? disabled : 0);
 for (var i = newi; index < columns * rows && i < amt; i++) {
-	var roc_map = rockets_list[| i];//scRocketGet(i);
+	var roc_map = weapons_list[| i];//scRocketGet(i);
 	//if (!roc_map[? ROCKET_MAP.ENABLED]) {/*ds_map_destroy(roc_map);*/ continue;} //Is it disabled?
 	if (index mod columns == 0)
 		offset++;
@@ -29,7 +29,7 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 	if (scUIHovering(rx, ry + 20, name, x_buffer, 34, scale_element, fa_middle)) {
 		c = color_main_hovering;
 		//yoffset = scMovementWave(-3, 3, 1);
-		img = floor(rockets_img);
+		img = floor(weapons_img);
 		if (mouse_check_button_pressed(mb_left))
 			with (oPlayer)
 				scRocketChange(roc_map[? ROCKET_MAP.TYPE]);
@@ -81,6 +81,6 @@ scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + 
 scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "ROCKETS", c_orange, 1.5);
 
 //animate hovering rocket
-rockets_img += rockets_spd;
-if (floor(rockets_img) > 3)
-	rockets_img = 0;
+weapons_img += weapons_spd;
+if (floor(weapons_img) > 3)
+	weapons_img = 0;

@@ -1,8 +1,8 @@
 {
-    "id": "76bc376f-1ae0-4b6f-90f8-cfc4554d5622",
+    "id": "4cc2cdeb-97c7-48e4-98aa-8ab5a64bd164",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scMenuRocketList",
+    "name": "scMenuWeapons",
     "IsCompatibility": false,
     "IsDnD": false
 }
