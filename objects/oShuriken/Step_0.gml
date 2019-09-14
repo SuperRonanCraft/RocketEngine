@@ -26,8 +26,9 @@ if (!deactivate && shuriken_map[? SHURIKEN_MAP.PARTICLE] != noone) {
 if (timer < time)
 	timer++;
 	
-else if (timer == time && stuckTo != "WALL")
-	event_user(0);
+else if (timer == time && stuckTo != noone)
+	if(stuckTo.object_index != oWall)
+		event_user(0);
 else
 	instance_destroy();
 
