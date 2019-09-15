@@ -23,6 +23,7 @@ switch (room) {
 	case rvTargetSelect: mode = global.gamemodes[GAMEMODE.TARGETS]; break;
 	case rKnockOutSelect: mode = global.gamemodes[GAMEMODE.KNOCKOUT]; break;
 	case rSingleSelect: mode = global.gamemodes[GAMEMODE.SINGLE]; break;
+	case rRumbleSelect: mode = global.gamemodes[GAMEMODE.RUMBLE]; break;
 }
 
 //Setup ui

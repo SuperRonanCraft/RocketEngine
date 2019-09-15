@@ -19,7 +19,6 @@ for (var i = 0; i < GAMEMODE.LENGTH; i++) {
 				show_debug_message(string(val + mode));
 				show_debug_message(map[? val + mode]);
 			}
-			show_debug_message("TEST");
 			break;
 		case GAMEMODE.SINGLE:
 			//Level, checkpoint, lives, rocket
@@ -30,13 +29,15 @@ for (var i = 0; i < GAMEMODE.LENGTH; i++) {
 				map[? val + mode] = ini_read_real(sec + mode, val, 0);
 			}
 			break;
-		default:
+		case GAMEMODE.ONEVONE:
 			//P1 wins, P2 wins
 			var ary = [STATISTICS_GAMEMODE.GM_GENERAL_P1_WINS, STATISTICS_GAMEMODE.GM_GENERAL_P2_WINS];
 			for (var i = 0; i < array_length_1d(ary); i++) {
 				var val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, ary[i]);
 				map[? val + mode] = ini_read_real(sec + mode, val, 0);
 			}
+			break;
+		default:
 			break;
 	}
 }
