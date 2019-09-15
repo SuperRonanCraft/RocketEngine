@@ -4,10 +4,11 @@
 //First step
 if (timer == EXPIRETIMER) {
 	//determine direction
-	direction = !owner.shoot_face ? (owner.team == TEAM.LEFT ? 0 : 180) : (owner.facing == 1 ? 0 : 180);
+	direction = owner.team != TEAM.NONE ? (owner.team == TEAM.LEFT ? 0 : 180) : (owner.facing == 1 ? 0 : 180);
 	//Find a target
 	target = scFindTarget(owner.team);
 }
+
 if (pull) {
 	with (target) {
 		if((y < other.y + other.MAXRANGE && y > other.y - other.MAXRANGE) && (x < other.x + other.MAXRANGE && x > other.x - other.MAXRANGE)){
@@ -25,7 +26,6 @@ if (pull) {
 		}
 	}
 }
-
 
 //Don't go too fast!
 if (abs(hsp_pull) > MAXPULL)
@@ -58,11 +58,10 @@ else {
 	pull = true;	
 }
 
-
 timer--;
 
 if (timer < 0) {
-	with(target) {
+	with (target) {
 		hsp_override = 0;
 		vsp_override = 0;
 		vsp_move = other.vsp_pull;	

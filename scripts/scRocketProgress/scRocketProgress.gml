@@ -1,12 +1,12 @@
 /// @desc Check when to shoot a rocket
-/// @arg team (-1 to disable team checking)
+/// @arg team
 
 var map = weapon_map;
 var rocket_map = map[? WEAPON_MAP.MAP];
 
 if (rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
 //Set the direction of the rocket
-var dir = argument0 == -1 ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
+var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
 
 //Rocket
 if (map[? WEAPON_MAP.DELAY_TIME] == 0) {

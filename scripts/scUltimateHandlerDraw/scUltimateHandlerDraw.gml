@@ -18,7 +18,7 @@ if (map[? ULTIMATE_CASTING_MAP.CASTING]) {
 	if (!ds_map_empty(map[? ULTIMATE_CASTING_MAP.CASTING_MAP])) {
 		var ult_map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP]
 		if (ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] != noone)
-			script_execute(ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map);
+			script_execute(ult_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW], team != TEAM.NONE ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map);
 	}
 } else if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] != map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL])
 	showultbar = false;

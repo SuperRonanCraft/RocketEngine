@@ -1,16 +1,15 @@
 ///@arg team
 
-
 var map = weapon_map;
 var shuriken_map = map[? WEAPON_MAP.MAP];
 
 if(shuriken_map[? SHURIKEN_MAP.TYPE] == SHURIKEN.NONE) exit;
 
 //Set the direction of the shuriken
-var dir = argument0 == -1 ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
+var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
 
 if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
-	if(map[?WEAPON_MAP.AMMO] != 0){
+	if (map[?WEAPON_MAP.AMMO] != 0) {
 		//show_debug_message(map[?WEAPON_MAP.AMMO]);
 		facing = dir > -90 && dir <= 90 ? 1 : -1;
 		scSpawnShuriken(x,y,depth+1,dir,id,map);
@@ -18,7 +17,6 @@ if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 		if (map[? WEAPON_MAP.AMMO] > 0)
 			map[? WEAPON_MAP.AMMO]--;
 		//No statistics yet!
-
 	}
 }
 

@@ -4,9 +4,9 @@ var map = weapon_map;
 
 switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.ROCKET:
-		scRocketProgress(!shoot_face ? team : -1);
+		scRocketProgress(team);
 		break;
 	case WEAPON.SHURIKEN:
-		scShurikenProgress(!shoot_face ? team : -1);
+		scShurikenProgress(team);
 		break;
 }

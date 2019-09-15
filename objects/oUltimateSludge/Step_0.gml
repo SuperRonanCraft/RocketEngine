@@ -35,7 +35,7 @@ for (var i = 0; i < ds_list_size(list); i++) {
 		istouchingy = true;
 		if (sludge_vsp > 0) //Falling
 			y = floor(touchingy.bbox_top + (y - bbox_bottom) - offset);
-		else if (sludge_vsp < 0){ //Going up
+		else if (sludge_vsp < 0) { //Going up
 			y = ceil(touchingy.bbox_bottom + (y - bbox_top) + offset);
 			ceilingStick = true;
 		}
@@ -58,22 +58,18 @@ if (wallStick != 0 || ceilingStick || (sludge_vsp == 0 && sludge_hsp == 0 && ist
 }
 
 if (standing)
-	otherSludge = instance_place(x,y,oUltimateSludge);
-	if(otherSludge != noone){
-		
-		if(otherSludge.x > x && wallStick == 0){
-			x-= 2;	
-		}
-		else if(wallStick == 0){
-			x+= 2;	
-		}
-		
-	}
+	otherSludge = instance_place(x, y, oUltimateSludge);
+if (otherSludge != noone){	
+	if (otherSludge.x > x && wallStick == 0)
+		x -= 2;	
+	else if (wallStick == 0)
+		x += 2;		
+}
 
 
-	if (sludge_timer > sludge_despawn) {
-		image_alpha -= 0.1;
-		if (image_alpha <= 0)
-			instance_destroy();
-	} else
-		sludge_timer++;
+if (sludge_timer > sludge_despawn) {
+	image_alpha -= 0.1;
+	if (image_alpha <= 0)
+		instance_destroy();
+} else
+	sludge_timer++;

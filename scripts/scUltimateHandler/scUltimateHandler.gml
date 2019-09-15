@@ -53,7 +53,7 @@ if (!shoot) exit; //Not shooting but we still have full ult charge!
 var ult_map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP]; //Create an ult map
 //scUltimateGet(ult_casting_last, map); //Grab the ult map
 if (ult_map[? ULTIMATE_MAP.CASTED_SCRIPT] != noone)
-	script_execute(ult_map[? ULTIMATE_MAP.CASTED_SCRIPT], !shoot_face ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map); //Run the ult script, no arguments as the player is the shooter
+	script_execute(ult_map[? ULTIMATE_MAP.CASTED_SCRIPT], team != TEAM.NONE ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180), ult_map); //Run the ult script, no arguments as the player is the shooter
 if (ult_map[? ULTIMATE_MAP.CASTED_OBJECT] != noone)
 	with (instance_create_depth(x, y, depth + ult_map[? ULTIMATE_MAP.CASTED_DEPTH], ult_map[? ULTIMATE_MAP.CASTED_OBJECT]))
 		owner = other;

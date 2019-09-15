@@ -5735,6 +5735,14 @@
             }
         },
         {
+            "Key": "e99cdda8-a0d7-4c48-b2ae-d793879eebe7",
+            "Value": {
+                "id": "182d1ca1-dbf2-4e29-b74a-cd21829c79d6",
+                "resourcePath": "objects\\oGMMRumble\\oGMMRumble.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e9b756e7-36df-4095-bde1-955dd35338b9",
             "Value": {
                 "id": "89fec7eb-84de-4324-98c6-4f23c688f276",

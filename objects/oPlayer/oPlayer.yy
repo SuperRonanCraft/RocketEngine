@@ -244,20 +244,6 @@
             "varType": 3
         },
         {
-            "id": "c8d9aabb-af46-4dc9-8a96-70c58610d9c7",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "shoot_face",
-            "varType": 3
-        },
-        {
             "id": "164ce779-eb0f-4bb9-afbd-132562c86591",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
