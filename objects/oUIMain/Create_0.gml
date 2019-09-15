@@ -12,7 +12,7 @@ ds_gamemodes = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player", true],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!", true],
 	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs...", true],
-	//[global.gamemodes[GAMEMODE.RUMBLE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],		"Duke Nuke'm!"],
+	//[global.gamemodes[GAMEMODE.RUMBLE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],			"Duke Nuke'm!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );
 
@@ -22,7 +22,7 @@ ds_info = scUICreateMenuPage(
 	["WEAPONS",		menu_element_type.page_transfer,	menu_page.list_weapons,	"Learn about every weapon modifier!"],
 	["BUFFS",		menu_element_type.page_transfer,	menu_page.list_buffs,	"Get to know your buff!"],
 	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check ur keys!"],
-	[global.gamemodes[GAMEMODE.TUTORIAL],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TUTORIAL],	"Learn more about the game", true],
+	//[global.gamemodes[GAMEMODE.TUTORIAL],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TUTORIAL],	"Learn how to play!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.main]
 );
 

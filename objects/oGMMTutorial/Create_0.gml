@@ -15,4 +15,4 @@ tutorial_start = false;
 tutorial_part = 0;
 //Action
 player_action = noone;
-player_action_time = 0; //Time iin action
+player_action_time = 0; //Time in action
