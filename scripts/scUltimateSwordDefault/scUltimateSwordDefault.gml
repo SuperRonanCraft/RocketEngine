@@ -2,7 +2,7 @@
 
 var slash = instance_create_depth(x,y,depth-20,oSwordSlash_Default);
 
-var dir = shoot_face ? (facing == 1 ? 0 : 180) : (team == TEAM.LEFT ? 0 : 180);
+var dir = team == TEAM.NONE ? (facing == 1 ? 0 : 180) : (team == TEAM.LEFT ? 0 : 180);
 facing = dir > -90 && dir <= 90 ? 1 : -1;
 
 if(vsp_move > 0)

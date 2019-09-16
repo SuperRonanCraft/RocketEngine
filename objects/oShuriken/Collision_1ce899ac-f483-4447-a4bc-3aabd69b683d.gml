@@ -9,6 +9,8 @@ if(shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
 		depth = other.depth;
 		scPlaySound(SOUND.EFFECT_SHUR_WALL);
 		stuckTo = other.id;
+		hsp = 0;
+		vsp = 0;
 		event_user(1); //missed
 	}
 }

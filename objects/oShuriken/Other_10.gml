@@ -27,6 +27,4 @@ else{
 	script_execute(shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT]);
 }
 
-x += hsp;
-y += vsp;
 //instance_destroy();

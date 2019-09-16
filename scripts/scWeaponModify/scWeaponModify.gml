@@ -23,6 +23,8 @@ with (player) {
 			switch (modifier) {
 				case WEAPON_MODIFIER.DEFAULT: weapon = SHURIKEN.DEFAULT; break;
 				case WEAPON_MODIFIER.ICE: weapon = SHURIKEN.ICE; break;
+				case WEAPON_MODIFIER.FIRE: weapon = SHURIKEN.FIRE; break;
+				case WEAPON_MODIFIER.PORTAL: weapon = SHURIKEN.PORTAL; break;
 				default: weapon = noone; break;
 			}
 			if (weapon != noone)

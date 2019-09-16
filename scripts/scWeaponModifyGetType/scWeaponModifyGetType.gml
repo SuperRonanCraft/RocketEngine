@@ -31,7 +31,7 @@ switch (modifier) {
 		break;
 	case WEAPON_MODIFIER.MAGNET: 
 		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
-		map[? WEAPON_MODIFIER_MAP.NAME] = "MAGNT"
+		map[? WEAPON_MODIFIER_MAP.NAME] = "MAGNET"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Don't bring your watch";
 		break;
 	default: break;

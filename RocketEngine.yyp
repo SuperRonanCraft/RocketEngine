@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "09f6ab08-c1b2-4612-baaf-22a63809be3d",
+            "Value": {
+                "id": "b8c3452d-e46c-410c-9b70-df51547db3d9",
+                "resourcePath": "sprites\\sShuriken_Portal\\sShuriken_Portal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0a1fb52f-3cac-4796-b659-aeb05b51b456",
             "Value": {
                 "id": "efb6c97d-a8ed-4458-bcdc-a7db3e9d0d12",
@@ -1287,6 +1295,14 @@
             }
         },
         {
+            "Key": "326e1261-540f-48f9-adab-0157d837c1d7",
+            "Value": {
+                "id": "3725f4d5-18fa-460c-9567-8a9d96deefa5",
+                "resourcePath": "sprites\\sexplosion_Portal\\sexplosion_Portal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "32ccad7a-ac61-403b-af9c-4be3bf75af5c",
             "Value": {
                 "id": "1aac82f6-087a-4061-a441-6633954d4967",
@@ -1439,11 +1455,27 @@
             }
         },
         {
+            "Key": "3ab9f644-b692-47f4-bb08-22829f857019",
+            "Value": {
+                "id": "bbf453aa-7916-4392-b9a0-b45d96aa6499",
+                "resourcePath": "sprites\\sShuriken_Fire\\sShuriken_Fire.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3bee1d08-634e-492b-88e1-614dff39e398",
             "Value": {
                 "id": "3a27aa31-e555-419f-8cf9-c61ad419761c",
                 "resourcePath": "views\\3bee1d08-634e-492b-88e1-614dff39e398.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3c4015ab-95c8-473d-937c-a0cae539f1f6",
+            "Value": {
+                "id": "05b60ada-06e8-463d-af7f-f586e4d4a547",
+                "resourcePath": "scripts\\scUltimateSwordFire\\scUltimateSwordFire.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3551,6 +3583,14 @@
             }
         },
         {
+            "Key": "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
+            "Value": {
+                "id": "420f90cc-f67e-4760-a276-7191e0fcbdf5",
+                "resourcePath": "scripts\\scShuriken_Portal_Despawn\\scShuriken_Portal_Despawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8f53504e-be81-43e2-9d46-452b87c4fd65",
             "Value": {
                 "id": "48119d05-b440-4565-93fd-e043632f772d",
@@ -4655,6 +4695,14 @@
             }
         },
         {
+            "Key": "b8e51992-468f-4d06-a3b7-22cea0234dd0",
+            "Value": {
+                "id": "ccba0d3a-a89c-41c4-ae24-f6d77efafdc5",
+                "resourcePath": "objects\\oExplosion_Shuriken\\oExplosion_Shuriken.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b98f217d-6e7d-4cb6-86b2-57d4413a546b",
             "Value": {
                 "id": "3b6ef982-6574-4fa7-bef4-f385b29ecd62",
@@ -5023,6 +5071,14 @@
             }
         },
         {
+            "Key": "c9203e63-1cb5-4db3-9c1a-86f1a69d7aeb",
+            "Value": {
+                "id": "15e0703f-cf49-48bf-8f93-b8aae7fc459a",
+                "resourcePath": "sprites\\sShuriken_Fire_Ult\\sShuriken_Fire_Ult.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c963180c-6a2f-4298-8334-1001007702e6",
             "Value": {
                 "id": "20265473-e8dd-4541-a7bf-418d2dae298f",
@@ -5335,6 +5391,14 @@
             }
         },
         {
+            "Key": "d6e90925-6f32-44b9-959c-8608bc8cf0d1",
+            "Value": {
+                "id": "39a6f15a-42a7-4b6a-817a-4d63ef7f65d2",
+                "resourcePath": "objects\\oSwordSlash_fire\\oSwordSlash_fire.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d738cdf9-1d91-470e-9347-8e90abc40dc7",
             "Value": {
                 "id": "9728f26f-3a31-4ae9-ae09-fac18288a9c7",
@@ -5372,6 +5436,14 @@
                 "id": "1e4f8ca1-5fd0-462a-b626-9ca7034b28fd",
                 "resourcePath": "sprites\\sPlayer_default_walk\\sPlayer_default_walk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
+            "Value": {
+                "id": "573f7cbd-91ad-4265-9153-f2aca5d5605e",
+                "resourcePath": "scripts\\scShuriken_Portal_Weapon\\scShuriken_Portal_Weapon.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5684,6 +5756,14 @@
                 "id": "4265d4a7-b253-4755-aff1-0a8fe23e72f9",
                 "resourcePath": "sprites\\s_abilityIcon_Slowmo\\s_abilityIcon_Slowmo.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e60794b0-9b4b-4438-8153-eff68128b944",
+            "Value": {
+                "id": "6b4a306c-7265-4342-ada2-8c7fd3370b73",
+                "resourcePath": "scripts\\scShuriken_Fire_Despawn\\scShuriken_Fire_Despawn.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6207,6 +6287,14 @@
             }
         },
         {
+            "Key": "fe7bfc59-eae7-4325-9ad8-be469bde3b00",
+            "Value": {
+                "id": "3ce889d9-a367-46e3-994f-cb493a5994f4",
+                "resourcePath": "scripts\\scShuriken_Portal_Wall\\scShuriken_Portal_Wall.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fec53fa2-f9a0-4286-99e6-6eed12f0a4d8",
             "Value": {
                 "id": "b2476f3c-6d0f-4c20-94d0-863bacc92609",
@@ -6392,6 +6480,7 @@
         "62d81973-9b38-4c0f-a0e0-6a2c2781f9f6",
         "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
         "e9b756e7-36df-4095-bde1-955dd35338b9",
+        "3c4015ab-95c8-473d-937c-a0cae539f1f6",
         "483e1c54-e32e-4837-b4ec-da3ac733df64",
         "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
         "5e646fca-ca67-4330-a6ca-62aa240db456",
@@ -6399,6 +6488,10 @@
         "50f9d5cf-bfd3-432b-b025-b5ef366cf21c",
         "9965ca03-d1ab-4539-a6d5-df93b1739740",
         "860f6c71-1aec-4b22-9c63-324f81cf49fd",
+        "e60794b0-9b4b-4438-8153-eff68128b944",
+        "fe7bfc59-eae7-4325-9ad8-be469bde3b00",
+        "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
+        "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",

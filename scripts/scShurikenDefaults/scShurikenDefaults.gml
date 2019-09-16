@@ -11,7 +11,7 @@ map[? SHURIKEN_MAP.DESCRIPTION] = "Hidden like a ninja."; //Description of weapo
 map[? SHURIKEN_MAP.SPEED] = 0; //speed of weapon
 map[? SHURIKEN_MAP.STICK] = true; //allow wall stick
 map[? SHURIKEN_MAP.TYPE] = SHURIKEN.NONE;//weapon type*
-map[? SHURIKEN_MAP.COOLDOWN] = 0; //cooldown between shots
+map[? SHURIKEN_MAP.COOLDOWN] = 5; //cooldown between shots
 map[? SHURIKEN_MAP.DAMAGE] = 1; //base damage
 map[? SHURIKEN_MAP.RELOAD_TIME] = -1;
 map[? SHURIKEN_MAP.TIMER] = 125; //uptime
@@ -26,6 +26,9 @@ map[? SHURIKEN_MAP.DEATHCAUSE] = noone; //A deathcause
 map[? SHURIKEN_MAP.KBAMT] = 2; //HSP to apply on hit
 map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = noone; //Special script to apply when destroyed
 map[? SHURIKEN_MAP.WALL_SCRIPT] = noone; //Special script to apply when hitting a wall
+map[? SHURIKEN_MAP.PLAYER_SCRIPT] = noone; //Special script to apply when hitting a pShootable object
+map[? SHURIKEN_MAP.WEAPON_SCRIPT] = noone; //Special script to apply when hitting a pWeapon object
+
 
 map[? SHURIKEN_MAP.PARTICLE] = noone; // Particle to emit
 map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
