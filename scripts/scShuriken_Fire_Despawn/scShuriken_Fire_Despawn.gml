@@ -12,6 +12,11 @@ if(!debounce){
 	debounce = true;
 
 	image_alpha = 0;
+	
+	if(ds_list_empty(confirmList)){
+		event_user(1);	
+	}
+	
 	event_user(0);
 }
 

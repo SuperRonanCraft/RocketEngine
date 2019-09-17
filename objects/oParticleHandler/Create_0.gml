@@ -41,18 +41,20 @@ ds_map_add(ds_part, PARTICLES.SPARKLE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SPARKLE, 5 * amt);
 
 parttype = part_type_create();
-part_type_sprite(parttype, s_pfire1, true, false, false);
-part_type_size(parttype, 1.2, 2, -0.2, 0);
+part_type_sprite(parttype, s_pfire1, true, true, false);
+part_type_size(parttype, 1, 2, -0.02, 0);
 part_type_direction(parttype, 30, 120, 0, 0);
+part_type_life(parttype,12,18);
 part_type_speed(parttype, 1 * spd, 5.3 * spd, 0.2 * spd, 0);
 ds_map_add(ds_part, PARTICLES.FIRE1, parttype);
-ds_map_add(ds_part_amt, PARTICLES.FIRE1, 20 * amt);
+ds_map_add(ds_part_amt, PARTICLES.FIRE1, 5 * amt);
 
 parttype = part_type_create();
-part_type_sprite(parttype, s_pfire2, true, false,false);
-part_type_size(parttype, 1.2, 2, -0.2, 0);
+part_type_sprite(parttype, s_pfire2, true, true,false);
+part_type_size(parttype, 0.5, 1, -0.02, 0);
 part_type_direction(parttype, 30, 120, 0, 0);
 part_type_speed(parttype, 1 * spd, 5.3 * spd, 0.2 * spd, 0);
+part_type_life(parttype,15,20);
 ds_map_add(ds_part, PARTICLES.FIRE2, parttype);
 ds_map_add(ds_part_amt, PARTICLES.FIRE2, 20 * amt);
 

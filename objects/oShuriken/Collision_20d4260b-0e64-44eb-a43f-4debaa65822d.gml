@@ -9,7 +9,7 @@ if(shuriken_map[? SHURIKEN_MAP.WEAPON_SCRIPT] == noone){
 	}
 }
 else if(other.owner != owner && !deactivate){
-	script_execute(shuriken_map[?SHURIKEN_MAP.WEAPON_SCRIPT]);	
+	script_execute(shuriken_map[?SHURIKEN_MAP.WEAPON_SCRIPT], other.id);	
 }
 
 

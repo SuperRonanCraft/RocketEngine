@@ -27,7 +27,17 @@ if (doing_damage)
 	
 		}
 
-if (destroy && image_speed == 0)
+if (destroy && image_speed == 0){
+
+	if(ds_list_empty(confirmList)){
+		with(parent){
+			
+			scComboMiss();
+			
+		}
+	}
+
 	instance_destroy();
+}
 	
 	
