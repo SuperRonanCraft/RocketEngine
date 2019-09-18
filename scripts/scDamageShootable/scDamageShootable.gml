@@ -41,6 +41,10 @@ with (damageInst) {
 		player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
 		scComboDamaged(shootInst);
 	}
+	
+	//Damage Numebers
+	with (instance_create_depth(x, y, depth - 1, oDamageNum))
+		value_damage = dmg;
 }
 if (didDamage && delete)
 	instance_destroy(other);

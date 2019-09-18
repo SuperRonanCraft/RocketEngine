@@ -2247,6 +2247,14 @@
             }
         },
         {
+            "Key": "56981a18-7170-4181-a805-5b2371b89004",
+            "Value": {
+                "id": "0d5742e9-2cfd-4249-a4c4-e555f934b857",
+                "resourcePath": "objects\\oDamageNum\\oDamageNum.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "56d8456b-7284-437a-be82-955f6209b9dc",
             "Value": {
                 "id": "663593ec-189e-43b3-9f75-1450c1dd3816",
@@ -2300,6 +2308,14 @@
                 "id": "ef927956-bf5e-46d2-a386-935526ab01cf",
                 "resourcePath": "scripts\\scBuffLifeSteal_Draw\\scBuffLifeSteal_Draw.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5a5a07c9-8d64-42aa-a6f6-d2f61193ac36",
+            "Value": {
+                "id": "9f3fdcb9-6dfc-4dcb-b0a2-02dd5e2ea7cb",
+                "resourcePath": "sprites\\sUINumbers\\sUINumbers.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

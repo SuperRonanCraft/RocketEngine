@@ -9,6 +9,7 @@
 /// @arg alpha* set to "noone" to ignore
 /// @arg haligh* set to "noone" to ignore
 /// @arg valigh* set to "noone" to ignore
+/// @arg angle* set to "noone" to ignore
 
 var xx = argument[0];
 var yy = argument[1];
@@ -19,6 +20,7 @@ var c2 = argument_count >= 6 ? (argument[5] == noone ? c_black : argument[5]) : 
 var alpha = argument_count >= 7 ? (argument[6] != noone ? argument[6] : 1) : 1;
 var haligh = argument_count >= 8 ? (argument[7] != noone ? argument[7] : fa_middle) : fa_middle;
 var valigh = argument_count >= 9 ? (argument[8] != noone ? argument[8] : fa_middle) : fa_middle;
+var angle = argument_count >= 10 ? (argument[9] != noone ? argument[9] : 0) : 0;
 
 if (string_count("&", text) >= 1) {
 	var pos = string_pos("&", text);
@@ -46,5 +48,5 @@ if (string_count("&", text) >= 1) {
 draw_set_halign(haligh);
 draw_set_valign(valigh);
 
-draw_text_transformed_color(xx + 2, yy + 2, text, scale, scale, 0, c2, c2, c2, c2, alpha);
-draw_text_transformed_color(xx, yy, text, scale, scale, 0, c, c, c, c, alpha);
+draw_text_transformed_color(xx + 2, yy + 2, text, scale, scale, angle, c2, c2, c2, c2, alpha);
+draw_text_transformed_color(xx, yy, text, scale, scale, angle, c, c, c, c, alpha);
