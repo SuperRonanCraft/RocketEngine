@@ -2,24 +2,28 @@
 /// @arg keyboard-only?*
 var keyboard = false;
 var onlyboard = argument_count > 1 ? argument[1] : false;
+var map = key_map;
 
 //Keyboard
 if (!controller_inuse)
 	switch (argument[0]) {
 		case KEYBIND_TYPE.LEFT:
-			keyboard = keyboard_check(keyleft);
+			keyboard = keyboard_check(map[? KEYBIND_MAP.LEFT]);
 			break;
 		case KEYBIND_TYPE.RIGHT:
-			keyboard = keyboard_check(keyright);
+			keyboard = keyboard_check(map[? KEYBIND_MAP.RIGHT]);
 			break;
 		case KEYBIND_TYPE.JUMP:
-			keyboard = keyboard_check_pressed(keyjump);
+			keyboard = keyboard_check_pressed(map[? KEYBIND_MAP.JUMP]);
 			break;
 		case KEYBIND_TYPE.SHOOT:
-			keyboard = keyboard_check(keyshoot);
+			keyboard = keyboard_check(map[? KEYBIND_MAP.SHOOT]);
 			break;
 		case KEYBIND_TYPE.ULT:
-			keyboard = scKeybindsGet(KEYBIND_TYPE.LEFT, true) && scKeybindsGet(KEYBIND_TYPE.RIGHT, true);
+			keyboard = keyboard_check(map[? KEYBIND_MAP.ULTIMATE]);
+			break;
+		case KEYBIND_TYPE.ABILITY:
+			keyboard = keyboard_check(map[? KEYBIND_MAP.ABILITY]);
 			break;
 	}
 
@@ -39,14 +43,13 @@ if (!onlyboard && !keyboard && gamepad_is_connected(controller))
 				keyboard = abs(gamepad_axis_value(controller, gp_axislh));
 			break;
 		case KEYBIND_TYPE.JUMP:
-			keyboard = gamepad_button_check_pressed(controller, gp_face1);
-			break;
+			keyboard = gamepad_button_check_pressed(controller, gp_face1); break;
 		case KEYBIND_TYPE.SHOOT:
-			keyboard = gamepad_button_check(controller, gp_shoulderr);
-			break;
+			keyboard = gamepad_button_check(controller, gp_shoulderr); break;
 		case KEYBIND_TYPE.ULT:
-			keyboard = gamepad_button_check(controller, gp_face4);
-			break;
+			keyboard = gamepad_button_check(controller, gp_face4); break;
+		case KEYBIND_TYPE.ABILITY:
+			keyboard = gamepad_button_check(controller, gp_face2); break;
 	}
 
 if (keyboard != keyboard_keys) {
@@ -58,5 +61,5 @@ if (keyboard != keyboard_keys) {
 return keyboard;
 
 enum KEYBIND_TYPE {
-	LEFT, RIGHT, JUMP, SHOOT, ULT
+	LEFT, RIGHT, JUMP, SHOOT, ULT, ABILITY
 }

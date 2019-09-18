@@ -13,10 +13,10 @@ for (var i = 0; i < amt; i++) {
 						break;
 				}
 				player = instance_find(oPlayer, i);
-				button_down = player.keyshoot;
-				button_left = player.keyleft;
-				button_up = player.keyjump;
-				button_right = player.keyright;
+				button_down = player.key_map[? KEYBIND_MAP.SHOOT];
+				button_left = player.key_map[? KEYBIND_MAP.LEFT];
+				button_up = player.key_map[? KEYBIND_MAP.JUMP];
+				button_right = player.key_map[? KEYBIND_MAP.RIGHT];
 			default:
 				break;
 		}

@@ -1,5 +1,5 @@
 ///@desc Check to see if tech is possible/performed
-var key_jump = keyboard_check_pressed(keyjump);
+var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
 
 var techPossible = noone;
 var map = player_map;

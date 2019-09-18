@@ -1,18 +1,34 @@
 /// @desc Set the key binds to a specific player
 /// @arg index-of-player
+
+key_map = ds_map_create();
+var map = key_map;
+
 if (argument0 == KEYBIND.PLAYER1) {
-	keyleft = global.key_p1_left;
-	keyright = global.key_p1_right;
-	keyjump = global.key_p1_jump;
-	keyshoot = global.key_p1_shoot;
+	map[? KEYBIND_MAP.LEFT] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_LEFT);
+	map[? KEYBIND_MAP.RIGHT] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_RIGHT);
+	map[? KEYBIND_MAP.JUMP] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_JUMP);
+	map[? KEYBIND_MAP.SHOOT] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_SHOOT);
+	map[? KEYBIND_MAP.ABILITY] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_ABILITY);
+	map[? KEYBIND_MAP.ULTIMATE] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_ULTIMATE);
 } else if (argument0 == KEYBIND.PLAYER2) {
-	keyleft = global.key_p2_left;
-	keyright = global.key_p2_right;
-	keyjump = global.key_p2_jump;
-	keyshoot = global.key_p2_shoot;
-	keydirection = 1;
+	map[? KEYBIND_MAP.LEFT] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_LEFT);
+	map[? KEYBIND_MAP.RIGHT] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_RIGHT);
+	map[? KEYBIND_MAP.JUMP] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_JUMP);
+	map[? KEYBIND_MAP.SHOOT] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_SHOOT);
+	map[? KEYBIND_MAP.ABILITY] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_ABILITY);
+	map[? KEYBIND_MAP.ULTIMATE] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_ULTIMATE);
 }
 controller = argument0;
 keydirection = 1;
 controller_inuse = false;
 controller_lastused = false;
+
+//Keybinds
+enum KEYBIND {
+	PLAYER1, PLAYER2, PLAYER3, PLAYER4
+}
+
+enum KEYBIND_MAP {
+	LEFT, RIGHT, JUMP, SHOOT, ULTIMATE, ABILITY
+}

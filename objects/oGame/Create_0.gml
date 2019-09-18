@@ -77,11 +77,6 @@ global.weapon_info = true;
 //global.menu_color_hover = 0;
 //global.menu_color_hover_act = c_orange;
 
-//Keybinds
-enum KEYBIND {
-	PLAYER1, PLAYER2, PLAYER3, PLAYER4
-}
-
 enum TEAM {
 	NONE, LEFT, RIGHT
 }

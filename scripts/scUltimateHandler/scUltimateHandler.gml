@@ -13,14 +13,14 @@ var shoot = false;
 
 if (key_shoot) { //Shoot key being held down
 	if (map[? ULTIMATE_CASTING_MAP.CASTING]) {
-		if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] <= 0)
+		//if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] <= 0)
 			shoot = true;
-		else
-			map[? ULTIMATE_CASTING_MAP.CAST_TIME]--;
+		//else
+			//map[? ULTIMATE_CASTING_MAP.CAST_TIME]--;
 		//current_cd = rocket_map[? ROCKET_MAP.COOLDOWN]; //Reset rocket cooldown
-		var casting_map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP];
-		if (casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP] != noone)
-			script_execute(casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP]); //Casting an ult but not calling one (pre-animation?)
+		//var casting_map = map[? ULTIMATE_CASTING_MAP.CASTING_MAP];
+		//if (casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP] != noone)
+		//	script_execute(casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP]); //Casting an ult but not calling one (pre-animation?)
 	} else {
 		//if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
 		var ult = weapon_map[? WEAPON_MAP.ULTIMATE];

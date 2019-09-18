@@ -67,7 +67,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 		scDrawText(xposcir, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,
 			0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
 		if (charge >= 100) {
-			var str = scKeyToString(keyleft) + " + " + scKeyToString(keyright);
+			var str = scKeyToString(key_map[? KEYBIND_MAP.ULTIMATE]);
 			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
 				0.5, noone, scMovementWave(0.8, 0.4, 1));
 		}

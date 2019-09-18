@@ -11,8 +11,8 @@ scStateCheck();
 //JUMP + KEYSHOOT = CHANGE ROCKET
 //JUMP + F5 = CHANGE AND APPLY BUFF
 //JUMP + F6 = APPLY BUFF
-if (global.devmode && global.debug && keyboard_check(keyjump))
-	if (keyboard_check_pressed(keyshoot)) {
+if (global.devmode && global.debug && scKeybindsGet(KEYBIND_TYPE.JUMP))
+	if (keyboard_check_pressed(key_map[? KEYBIND_MAP.SHOOT])) {
 		weapons_cur++;
 		while(scWeaponModify(id, weapons_cur))
 			if (weapons_cur >= WEAPON_MODIFIER.LENGTH)
