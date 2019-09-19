@@ -66,15 +66,26 @@ if (inputting) { //Are we inputting data?
 				ds_grid[# 4, option] = val;
 			}
 			break;
+		case menu_element_type.input_cache:
 		case menu_element_type.input:
 			var key = noone;
 			if (keyboard_check_pressed(vk_anykey))
 				key = keyboard_lastkey;
 			if (key == noone /*No key*/ || key == 13 /*Enter key*/) break; //Invalid key, break out
-			if (key != variable_global_get(ds_grid[# 2, menu_option[page]])) {
-				//AUDIO
-				variable_global_set(ds_grid[# 2, menu_option[page]], key);
-				keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
+			var option = ds_grid[# 1, menu_option[page]];
+			if (option == menu_element_type.input) {
+				if (key != variable_global_get(ds_grid[# 2, menu_option[page]])) {
+					//AUDIO
+					variable_global_set(ds_grid[# 2, menu_option[page]], key);
+					keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
+				}
+			} else if (option == menu_element_type.input_cache) { //CACHING
+				if (key != ds_grid[# 3, menu_option[page]]) {
+					//AUDIO
+					scSettingsCache(ds_grid[# 2, menu_option[page]], key);
+					ds_grid[# 3, menu_option[page]] = key;
+					keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
+				}
 			}
 			break;
 		case menu_element_type.mass_toggle:
@@ -251,6 +262,7 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 						variable_global_set(ds_grid[# 5, i], ds_grid[# 6, i]);
 					}
 			}
+		case menu_element_type.input_cache:
 		case menu_element_type.input: //Simply inputting a character
 			inputting = !inputting; break;
 	}

@@ -76,6 +76,7 @@ for (var i = 0; i < ds_height; i++) {
 			scUIDescription(ltx, lty, ds_grid, 6, i); break;
 		case menu_element_type.shift:
 		case menu_element_type.input:
+		case menu_element_type.input_cache:
 		case menu_element_type.toggle:
 			scUIDescription(ltx, lty, ds_grid, 5, i); break;
 		case menu_element_type.page_transfer:
@@ -94,8 +95,14 @@ var rtx, rty; //right-Xpos, right-Ypos
 for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current page
 	rty = start_y[i];
 	rtx = start_x[i] + x_buffer * 2;
-	if (inputting && menu_option[page] == i && ds_grid[# 1, i] != menu_element_type.input)
-		scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
+	switch (ds_grid[# 1, i]) {
+		case menu_element_type.input_cache:
+		case menu_element_type.input:
+			break;
+		default:
+			if (inputting && menu_option[page] == i)
+				scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
+	}
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
@@ -143,6 +150,11 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			break;
 		case menu_element_type.input:
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, i])), c = color_element;
+			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
+			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
+			break;
+		case menu_element_type.input_cache:
+			var string_val = scKeyToString(ds_grid[# 3, i]), c = color_element;
 			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
@@ -200,10 +212,9 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 
 
 //Show hover boxes over buttons
-if (global.debug && !inputting && !unfolding) {
+if (global.debug && !inputting && !unfolding)
 	if (page_workingon == page)
 		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 			var val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
 			scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right);
 		}
-}

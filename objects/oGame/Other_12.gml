@@ -7,4 +7,5 @@ instance_activate_object(oTransition);
 instance_activate_object(oUIPause);
 instance_activate_object(oMusic);
 instance_activate_object(oTips);
+instance_activate_object(oSettingsHandler);
 global.pause = true;

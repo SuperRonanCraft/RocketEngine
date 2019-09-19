@@ -46,7 +46,7 @@ page_weapons = 0;
 
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],
-	["KEYBINDS",	menu_element_type.page_transfer,	menu_page.keybinds2, "Change your keys!"],
+	["KEYBINDS",	menu_element_type.page_transfer,	menu_page.keybinds2_1, "Change your keys!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 
@@ -75,18 +75,24 @@ ds_confirm = scUICreateMenuPage(
 );
 
 //Same as normal keybinds, just set the back button to the controls page
-ds_keybinds2 = ds_grid_create(ds_grid_width(ds_menu_keybinds), ds_grid_height(ds_menu_keybinds));
-ds_grid_copy(ds_keybinds2, ds_menu_keybinds);
-ds_keybinds2[# 2, ds_grid_height(ds_keybinds2) - 1] = menu_page.controls;
+ds_keybinds2_1 = ds_grid_create(ds_grid_width(ds_menu_keybinds_p1), ds_grid_height(ds_menu_keybinds_p1));
+ds_grid_copy(ds_keybinds2_1, ds_menu_keybinds_p1);
+ds_keybinds2_1[# 2, ds_grid_height(ds_keybinds2_1) - 1] = menu_page.controls;
+ds_keybinds2_1[# 2, ds_grid_height(ds_keybinds2_1) - 3] = menu_page.keybinds2_2;
+
+ds_keybinds2_2 = ds_grid_create(ds_grid_width(ds_menu_keybinds_p2), ds_grid_height(ds_menu_keybinds_p2));
+ds_grid_copy(ds_keybinds2_2, ds_menu_keybinds_p2);
+ds_keybinds2_2[# 2, ds_grid_height(ds_keybinds2_2) - 1] = menu_page.controls;
+ds_keybinds2_2[# 2, ds_grid_height(ds_keybinds2_2) - 2] = menu_page.keybinds2_1;
 
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_gamemodes, ds_settings, ds_menu_audio, ds_menu_graphics,
-	ds_menu_keybinds, ds_info, ds_list_weapons, ds_controls, ds_list_buffs,
-	ds_keybinds2, ds_confirm, ds_stats, ds_list_achievements];
+	ds_menu_keybinds_p1, ds_menu_keybinds_p2, ds_info, ds_list_weapons, ds_controls, ds_list_buffs,
+	ds_keybinds2_1, ds_keybinds2_2, ds_confirm, ds_stats, ds_list_achievements];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.gamemodes, menu_page.settings, menu_page.audio, menu_page.graphics,
-	menu_page.keybinds, menu_page.info, menu_page.list_weapons, menu_page.controls, menu_page.list_buffs,
-	menu_page.keybinds2, menu_page.confirm, menu_page.stats, menu_page.list_achievements];
+	menu_page.keybinds_1, menu_page.keybinds_2, menu_page.info, menu_page.list_weapons, menu_page.controls, menu_page.list_buffs,
+	menu_page.keybinds2_1, menu_page.keybinds2_2, menu_page.confirm, menu_page.stats, menu_page.list_achievements];
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_main, ds_gamemodes, ds_settings, ds_info, ds_list_weapons, ds_list_buffs, ds_controls, ds_confirm, ds_list_achievements];
 

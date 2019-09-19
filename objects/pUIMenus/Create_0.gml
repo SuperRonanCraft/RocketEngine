@@ -3,7 +3,7 @@ event_inherited();
 ds_settings = scUICreateMenuPage(
 	["AUDIO",			menu_element_type.page_transfer,	menu_page.audio, "Change your hearing perspective"],
 	["GRAPHICS",		menu_element_type.page_transfer,	menu_page.graphics, "Change your eyeballs perspective"],
-	["KEYBINDS",		menu_element_type.page_transfer,	menu_page.keybinds, "Change your hands perspective"],
+	["KEYBINDS",		menu_element_type.page_transfer,	menu_page.keybinds_1, "Change your hands perspective"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
 );
 
@@ -24,15 +24,27 @@ ds_menu_graphics = scUICreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
-ds_menu_keybinds = scUICreateMenuPage(
-	["JUMP P1",		menu_element_type.input,		"key_p1_jump",		global.key_p1_jump],
-	["LEFT P1",		menu_element_type.input,		"key_p1_left",		global.key_p1_left],
-	["RIGHT P1",	menu_element_type.input,		"key_p1_right",		global.key_p1_right],
-	["SHOOT P1",	menu_element_type.input,		"key_p1_shoot",		global.key_p1_shoot],
-	["JUMP P2",		menu_element_type.input,		"key_p2_jump",		global.key_p2_jump],
-	["LEFT P2",		menu_element_type.input,		"key_p2_left",		global.key_p2_left],
-	["RIGHT P2",	menu_element_type.input,		"key_p2_right",		global.key_p2_right],
-	["SHOOT P2",	menu_element_type.input,		"key_p2_shoot",		global.key_p2_shoot],
-	["RESET",		menu_element_type.script_runner,	scUIResetKeybinds, "&cThis will reset all keys!"],
+ds_menu_keybinds_p1 = scUICreateMenuPage(
+	//["PLAYER 1",	menu_element_type.title],
+	["JUMP",		menu_element_type.input_cache,		SETTINGS.PLAYER_1_JUMP,		scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_JUMP)],
+	["LEFT",		menu_element_type.input_cache,		SETTINGS.PLAYER_1_LEFT,		scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_LEFT)],
+	["RIGHT",	menu_element_type.input_cache,		SETTINGS.PLAYER_1_RIGHT,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_RIGHT)],
+	["SHOOT",	menu_element_type.input_cache,		SETTINGS.PLAYER_1_SHOOT,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_SHOOT)],
+	["ULTIMATE",	menu_element_type.input_cache,		SETTINGS.PLAYER_1_ULTIMATE,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_ULTIMATE)],
+	["ABILITY",	menu_element_type.input_cache,		SETTINGS.PLAYER_1_ABILITY,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_ABILITY)],
+	["PLAYER 2 >>",		menu_element_type.page_transfer,	menu_page.keybinds_2, "Edit player 2 keys"],
+	["RESET",		menu_element_type.script_runner,	scUIResetKeybinds, "&cThis will reset all players keys!"],
+	["BACK",		menu_element_type.page_transfer,	menu_page.settings],
+);
+
+ds_menu_keybinds_p2 = scUICreateMenuPage(
+	//["PLAYER 2",	menu_element_type.title],
+	["JUMP",		menu_element_type.input_cache,		SETTINGS.PLAYER_2_JUMP,		scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_JUMP)],
+	["LEFT",		menu_element_type.input_cache,		SETTINGS.PLAYER_2_LEFT,		scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_LEFT)],
+	["RIGHT",	menu_element_type.input_cache,		SETTINGS.PLAYER_2_RIGHT,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_RIGHT)],
+	["SHOOT",	menu_element_type.input_cache,		SETTINGS.PLAYER_2_SHOOT,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_SHOOT)],
+	["ULTIMATE",	menu_element_type.input_cache,		SETTINGS.PLAYER_2_ULTIMATE,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_ULTIMATE)],
+	["ABILITY",	menu_element_type.input_cache,		SETTINGS.PLAYER_2_ABILITY,	scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_ABILITY)],
+	["<< PLAYER 1",		menu_element_type.page_transfer,	menu_page.keybinds_1, "Edit player 2 keys"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.settings],
 );

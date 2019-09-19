@@ -19,7 +19,7 @@ var move = (key_right - key_left) * keydirection;
 
 
 //If cant control, neutralize move
-if(!player_map[? PLAYER_MAP.ALIVE] || !player_map[? PLAYER_MAP.CAN_CONTROL])
+if (!player_map[? PLAYER_MAP.ALIVE] || !player_map[? PLAYER_MAP.CAN_CONTROL])
 	move = 0;
 	
 	

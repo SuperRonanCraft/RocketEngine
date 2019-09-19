@@ -39,8 +39,8 @@ switch (type) {
 			case SETTINGS.PLAYER_2_RIGHT: val = vk_right; break;
 			case SETTINGS.PLAYER_2_JUMP: val = vk_up; break;
 			case SETTINGS.PLAYER_2_SHOOT: val = vk_down; break;
-			case SETTINGS.PLAYER_2_ABILITY: val = ord(","); break;
-			case SETTINGS.PLAYER_2_ULTIMATE: val = ord("."); break;
+			case SETTINGS.PLAYER_2_ABILITY: val = ord("<"); break;
+			case SETTINGS.PLAYER_2_ULTIMATE: val = ord(">"); break;
 			default: val = 0; break;
 		}
 		break;

@@ -1,29 +1,5 @@
 toggled_audio = false;
 
-//Player 1 keybinds
-global.key_p1_left = ord("A");
-global.key_p1_right = ord("D");
-global.key_p1_jump = ord("W");
-global.key_p1_shoot = ord("S");
-
-//Player 2 keybinds
-global.key_p2_left = vk_left;
-global.key_p2_right = vk_right;
-global.key_p2_jump = vk_up;
-global.key_p2_shoot = vk_down;
-
-//Player 1 keybinds DEFAULT
-global.key_p1_left_default = global.key_p1_left;
-global.key_p1_right_default = global.key_p1_right;
-global.key_p1_jump_default = global.key_p1_jump;
-global.key_p1_shoot_default = global.key_p1_shoot;
-
-//Player 2 keybinds DEFAULT
-global.key_p2_left_default = global.key_p2_left;
-global.key_p2_right_default = global.key_p2_right;
-global.key_p2_jump_default = global.key_p2_jump;
-global.key_p2_shoot_default = global.key_p2_shoot;
-
 //Players id
 //global.players = 0;
 

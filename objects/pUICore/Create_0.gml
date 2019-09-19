@@ -1,7 +1,10 @@
 ///Page types
 enum menu_page {
-	main, gamemodes, more_gamemodes, settings, audio, graphics, keybinds,
-	keybinds2, controls, info, confirm, modes, stats,
+	main, gamemodes, more_gamemodes, settings, audio, graphics, 
+	//main keys
+	keybinds_1, keybinds_2,
+	keybinds2_1, keybinds2_2, 
+	controls, info, confirm, modes, stats,
 	//custom
 	list_weapons, list_buffs, list_achievements,
 	//Keep last
@@ -26,6 +29,8 @@ enum menu_element_type {
 	toggle_live,
 	//Takes a key input
 	input,
+	//Takes a key input, and caches
+	input_cache,
 	//Go to a room
 	goto_room,
 	//List all weapon modifiers
@@ -38,7 +43,8 @@ enum menu_element_type {
 	mass_toggle,
 	//Controls page
 	controls,
-	stats
+	stats,
+	title
 }
 
 enum menu_centered {

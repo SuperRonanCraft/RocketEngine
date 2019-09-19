@@ -1,4 +1,4 @@
-/// @desc reload the global variables of a menu
+/// @desc reload the variables of a menu (mostly for pause menu)
 
 if (checked) exit; //Do we need to check?
 
@@ -12,6 +12,9 @@ for (var a = 0; a < array_length_1d(menu_pages); a++) {
 					ds_g[# 4, i] = variable_global_get(ds_g[# 3, i]);
 				break;
 			case menu_element_type.input: ds_g[# 3, i] = variable_global_get(ds_g[# 2, i]); break;
+			case menu_element_type.input_cache:
+				ds_g[# 3, i] = scSettingsGetType(SETTINGS_TYPE.VALUE, ds_g[# 2, i]);
+				break;
 		}
 	}
 }
