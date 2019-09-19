@@ -34,6 +34,21 @@ switch (modifier) {
 		map[? WEAPON_MODIFIER_MAP.NAME] = "MAGNET"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Don't bring your watch";
 		break;
+	case WEAPON_MODIFIER.SHOTGUN: 
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
+		map[? WEAPON_MODIFIER_MAP.NAME] = "SHOTGUN"
+		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "The best one shot";
+		break;
+	case WEAPON_MODIFIER.SLIME: 
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
+		map[? WEAPON_MODIFIER_MAP.NAME] = "SLIME"
+		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Sticky stuff";
+		break;
+	case WEAPON_MODIFIER.BRICK: 
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
+		map[? WEAPON_MODIFIER_MAP.NAME] = "BRICK"
+		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Better start jumping";
+		break;
 	default: break;
 }
 

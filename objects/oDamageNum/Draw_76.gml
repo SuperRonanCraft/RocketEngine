@@ -13,3 +13,9 @@ else if (damage_type == DAMAGETYPE.HEALING)
 	color = c_lime;
 else
 	color = c_red;
+
+if (damage_killed || damage_type == DAMAGETYPE.HEALING) {
+	color = c_fuchsia;
+	hsp = 0;
+	alpha_reduce = 0.02 / TIME_SPEED;
+}
