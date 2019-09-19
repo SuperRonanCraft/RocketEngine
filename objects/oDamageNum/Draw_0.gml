@@ -3,7 +3,7 @@
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
 for (var i = 0; i < array_length_1d(value_cached); i++) {
-	scDrawSpriteExt(x + (offset * i), y, sprite_index, value_cached[i], noone, alpha);
+	scDrawSpriteExt(x + (offset * (i - 1)), y, sprite_index, value_cached[i], noone, alpha);
 }
 
 if (damage_killed)
