@@ -1,9 +1,12 @@
 /// @desc draw sprites
 
+up_time += (8 * min(combo, 3));
+c_rainbow = make_color_hsv(up_time mod 255,255,255);
+
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
 for (var i = 0; i < array_length_1d(value_cached); i++) {
-	scDrawSpriteExt(x + (offset * (i - 1)), y, sprite_index, value_cached[i], noone, alpha);
+	scDrawSpriteExt(x + (offset * (i - 1)), y, sprite_index, value_cached[i], c_rainbow, alpha);
 }
 
 if (damage_killed)

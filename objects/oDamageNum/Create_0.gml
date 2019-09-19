@@ -1,10 +1,11 @@
 /// @desc convert damage values to sprites
 
 first_draw = false;
-offset = sprite_width;
+offset = sprite_width - 4;
 value_damage = 0;
 damage_type = DAMAGETYPE.DIRECT;
 damage_killed = false;
+combo = 0;
 color = c_red;
 value_cached = []; //Sprites in an array
 
@@ -17,3 +18,4 @@ alpha_reduce = 0.075 / TIME_SPEED;
 vsp = -(20 / TIME_SPEED) + random_range(-3, 6);
 grv = 1.2 / TIME_SPEED;
 scale = 0.8;
+up_time = 0;

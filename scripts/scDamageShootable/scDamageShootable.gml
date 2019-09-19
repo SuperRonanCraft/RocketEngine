@@ -46,14 +46,16 @@ with (damageInst) {
 	}
 	if (isPlayer) { //Do this thing no matter what
 		player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
-		scComboDamaged(shootInst);
 		//Damage Numbers
 		if (player_map[? PLAYER_MAP.ALIVE]) //Alive? Show damage indicators
 			with (instance_create_depth(x, y, depth - 1, oDamageNum)) {
 				value_damage = dmg;
 				damage_type = type;
 				damage_killed = lethalDamage;
+				if (shootInst.object_index == oPlayer)
+					combo = shootInst.combo_map[? COMBO_MAP.STREAK];
 			}
+		scComboDamaged(shootInst);
 	}
 }
 if (didDamage && delete)

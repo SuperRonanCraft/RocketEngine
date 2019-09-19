@@ -19,3 +19,15 @@ if (damage_killed || damage_type == DAMAGETYPE.HEALING) {
 	hsp = 0;
 	alpha_reduce = 0.02 / TIME_SPEED;
 }
+
+//Side check
+switch (sign(hsp)) {
+	case 1: //RIGHT
+		if (x >= RES_W - 100)
+			hsp *= -1;
+		break;
+	case -1: //LEFT
+		if (x <= 100)
+			hsp *= -1;
+		break;
+}
