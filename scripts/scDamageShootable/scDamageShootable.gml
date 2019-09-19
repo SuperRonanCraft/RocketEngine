@@ -17,6 +17,11 @@ var type = argument_count > 6 ? (argument[6] != noone ? argument[6] : DAMAGETYPE
 var didDamage = false;
 var lethalDamage = false;
 
+if (shootInst.object_index == oPlayer)
+	with (shootInst)
+		if (scBuffFind(id, BUFFTYPE.DAMAGE, false))
+			dmg = scBuffHandler(BUFF_EVENT.DAMAGE_PREAPPLY, dmg);
+
 with (damageInst) {
 	var map = shootable_map;
 	if ((map[? SHOOTABLE_MAP.CAN_DAMAGE] /*&& shootInst != id*/) || force) {

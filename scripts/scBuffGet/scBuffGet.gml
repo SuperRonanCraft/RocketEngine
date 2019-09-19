@@ -18,6 +18,7 @@ ds_map[? BUFF_MAP.DRAW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_ABOVE] = noone;
 ds_map[? BUFF_MAP.STEP] = noone;
+ds_map[? BUFF_MAP.DAMAGE_PREAPPLY] = noone;
 ds_map[? BUFF_MAP.DAMAGE_APPLIED] = noone;
 ds_map[? BUFF_MAP.DAMAGE_TAKEN] = noone;
 switch (buff) {
@@ -192,7 +193,8 @@ switch (buff) {
 		ds_map[? BUFF_MAP.NAME] = "Double Damage";
 		ds_map[? BUFF_MAP.DESCRIPTION] = "Skull piercing!";
 		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.DAMAGE;
-		ds_map[? BUFF_MAP.STEP] = scBuffDamage;
+		ds_map[? BUFF_MAP.STEP] = scBuffDamage_Step;
+		ds_map[? BUFF_MAP.DAMAGE_PREAPPLY] = scBuffDamage_PreApply;
 		ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.DAMAGE];
 		ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.DAMAGE];
 		ds_map[? BUFF_MAP.GOOD] = true;
@@ -283,7 +285,7 @@ ds_map[? BUFF_MAP.TYPE] = buff;
 enum BUFF_MAP {
 	NAME, DESCRIPTION, ICON, PARTICLE, PARTICLE_AMT,
 	//SCRIPTS
-	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN,
+	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN, DAMAGE_PREAPPLY,
 	//GENERAL
 	CLOCK, TIME, TYPE, ENABLED, GOOD, GIVEN_BY, 
 	STACK_INFO, //stack type of buff

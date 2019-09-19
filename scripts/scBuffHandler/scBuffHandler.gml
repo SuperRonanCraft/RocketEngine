@@ -21,6 +21,9 @@ switch (type) {
 	case BUFF_EVENT.DAMAGE_TAKEN:
 		event = BUFF_MAP.DAMAGE_TAKEN; //[damager, damage]
 		break;
+	case BUFF_EVENT.DAMAGE_PREAPPLY:
+		event = BUFF_MAP.DAMAGE_PREAPPLY; //[damager, damage]
+		break;
 	default:
 		event = BUFF_MAP.STEP;
 		break;
@@ -44,9 +47,12 @@ for (var b = 0; b < ds_list_size(buffs_map); b++) {
 		continue;
 	}
 	if (buff[? event] != noone)
+		if (event == BUFF_MAP.DAMAGE_PREAPPLY)
+			return script_execute(buff[? event], id, buff, extras);
+		else
 		script_execute(buff[? event], id, buff, extras);
 }
 
 enum BUFF_EVENT {
-	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN
+	STEP, DRAW, DRAW_GUI_BELOW, DRAW_GUI_ABOVE, DAMAGE_APPLIED, DAMAGE_TAKEN, DAMAGE_PREAPPLY
 }
