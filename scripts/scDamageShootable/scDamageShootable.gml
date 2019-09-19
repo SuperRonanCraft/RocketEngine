@@ -5,6 +5,7 @@
 /// @arg play-sound-hit
 /// @arg damage
 /// @arg force-damage* noone to ignore
+/// @arg damage-type* noone to ignore
 
 var shootInst = argument[0];
 var damageInst = argument[1];
@@ -12,6 +13,7 @@ var isPlayer = damageInst.object_index == oPlayer; //If the damaging instance is
 var delete = argument[2];
 var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
+var type = argument_count > 6 ? (argument[6] != noone ? argument[6] : DAMAGETYPE.DIRECT) : DAMAGETYPE.DIRECT;
 var didDamage = false;
 var lethalDamage = false;
 
@@ -43,8 +45,10 @@ with (damageInst) {
 	}
 	
 	//Damage Numebers
-	with (instance_create_depth(x, y, depth - 1, oDamageNum))
+	with (instance_create_depth(x, y, depth - 1, oDamageNum)) {
 		value_damage = dmg;
+		damage_type = type;
+	}
 }
 if (didDamage && delete)
 	instance_destroy(other);
