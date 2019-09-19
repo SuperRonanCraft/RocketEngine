@@ -2255,6 +2255,14 @@
             }
         },
         {
+            "Key": "56c3fe18-f47d-4c05-b117-54e0d952c076",
+            "Value": {
+                "id": "5aa171e4-11de-4f9f-a506-837b99946683",
+                "resourcePath": "sprites\\sShuriken_Brick\\sShuriken_Brick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "56d8456b-7284-437a-be82-955f6209b9dc",
             "Value": {
                 "id": "663593ec-189e-43b3-9f75-1450c1dd3816",
@@ -5410,7 +5418,7 @@
             "Key": "d6e90925-6f32-44b9-959c-8608bc8cf0d1",
             "Value": {
                 "id": "39a6f15a-42a7-4b6a-817a-4d63ef7f65d2",
-                "resourcePath": "objects\\oSwordSlash_fire\\oSwordSlash_fire.yy",
+                "resourcePath": "objects\\oSwordSlash_Fire\\oSwordSlash_Fire.yy",
                 "resourceType": "GMObject"
             }
         },

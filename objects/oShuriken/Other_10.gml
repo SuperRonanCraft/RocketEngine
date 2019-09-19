@@ -19,6 +19,8 @@ if (shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT] == noone) {
 	}
 	vsp += 1.1;
 	image_alpha -= 0.01;
+	
+	
 
 
 }
@@ -27,4 +29,3 @@ else{
 	script_execute(shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT]);
 }
 
-//instance_destroy();

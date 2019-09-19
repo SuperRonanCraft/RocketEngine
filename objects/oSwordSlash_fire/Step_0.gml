@@ -14,6 +14,10 @@ timer = timer-(owner.time_dialation);
 trueTimer--;
 
 if(timer <= 0 && image_index == image_number-1){
+	if(ds_list_empty(confirmList)){
+		with (owner)
+			scComboMiss();		
+	}
 	instance_destroy();	
 }
 
@@ -21,7 +25,7 @@ if(trueTimer == 0){
 	trueTimer = -1;
 	scScreenShake(25,5);
 	//owner.time_dialation += 1;
-	show_debug_message(owner.time_dialation);
+	//show_debug_message(owner.time_dialation);
 	if(oldOwner != noone){
 		//oldOwner.time_dialation += oldOwner_time_dialation_adjust;
 	}

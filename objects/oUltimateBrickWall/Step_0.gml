@@ -4,6 +4,7 @@ if (placed) {
 	timer--;
 	if (timer <= 0) {
 		image_alpha = max(image_alpha - alpha_change, 0);
+		destroy= true;
 		if (image_alpha <= 0)
 			instance_destroy();
 	}

@@ -2,6 +2,7 @@
 
 owner = noone;
 
+destroy = false;
 timer_org = 10 * room_speed;
 timer = timer_org;
 alpha_change = 0.02;

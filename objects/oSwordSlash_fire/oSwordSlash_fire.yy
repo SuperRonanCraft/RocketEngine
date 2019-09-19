@@ -2,7 +2,7 @@
     "id": "d6e90925-6f32-44b9-959c-8608bc8cf0d1",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oSwordSlash_fire",
+    "name": "oSwordSlash_Fire",
     "eventList": [
         {
             "id": "7ce9f0b3-db47-4a0c-bb1a-5786595e1983",

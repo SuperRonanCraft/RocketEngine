@@ -50,6 +50,13 @@ else if (timer == time && stuckTo != noone)
 else
 	event_user(0);
 
+
+if(deactivate && stuckTo != noone){
+	if(variable_instance_exists(stuckTo,"destroy"))
+		if(stuckTo.destroy)
+			event_user(0);
+}
+
 //Stick to a (usually moving) object
 if (deactivate && stuckTo != noone && stuckTo.object_index != oWall && instance_exists(stuckTo)){
 	x = stuckTo.x + newX;
@@ -75,4 +82,4 @@ y += vsp;
 //Despawn if out of room.
 if (checkroom)
 	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20))
-		event_user(0);
+		instance_destroy();
