@@ -28,6 +28,9 @@ with (player) {
 				case WEAPON_MODIFIER.ICE: weapon = SHURIKEN.ICE; break;
 				case WEAPON_MODIFIER.FIRE: weapon = SHURIKEN.FIRE; break;
 				case WEAPON_MODIFIER.PORTAL: weapon = SHURIKEN.PORTAL; break;
+				case WEAPON_MODIFIER.MAGNET: weapon = SHURIKEN.MAGNET; break;
+				case WEAPON_MODIFIER.SLIME: weapon = SHURIKEN.SLIME; break;
+				case WEAPON_MODIFIER.BRICK: weapon = SHURIKEN.BRICK; break;
 				default: weapon = noone; break;
 			}
 			if (weapon != noone)

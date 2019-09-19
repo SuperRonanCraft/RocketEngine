@@ -70,6 +70,57 @@ switch (shur) {
 		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Portal_Weapon;
 		
 		break;
+    case SHURIKEN.BRICK:
+		map[? SHURIKEN_MAP.NAME] = "A Brick";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "It's a brick";
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.BRICK;
+		map[? SHURIKEN_MAP.COOLDOWN] = 50;
+		map[? SHURIKEN_MAP.SPEED] = 20;
+		map[? SHURIKEN_MAP.DAMAGE] = 3;
+		break;
+		
+    case SHURIKEN.MAGNET:
+		map[? SHURIKEN_MAP.NAME] = "Magnetic Mark";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "With polarized points";
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.MAGNET;
+		map[? SHURIKEN_MAP.COOLDOWN] = 30;
+		map[? SHURIKEN_MAP.SPEED] = 30;
+		map[? SHURIKEN_MAP.CLIP] = 3;
+		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 80;
+		break;
+		
+    case SHURIKEN.SAND:
+		map[? SHURIKEN_MAP.NAME] = "Scarab Scythe";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "In shrouded clouds";
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SAND;
+		map[? SHURIKEN_MAP.COOLDOWN] = 45;
+		map[? SHURIKEN_MAP.SPEED] = 15;
+		map[? SHURIKEN_MAP.CLIP] = 5;
+		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 80;
+		break;
+	
+    case SHURIKEN.SHOTGUN:
+		map[? SHURIKEN_MAP.NAME] = "Tri Kunai";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "Three strikes";
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SHOTGUN;
+		map[? SHURIKEN_MAP.COOLDOWN] = 30;
+		map[? SHURIKEN_MAP.SPEED] = 20;
+		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		break;
+		
+    case SHURIKEN.SLIME:
+		map[? SHURIKEN_MAP.NAME] = "Experimental entity";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "Use at your own risk";
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SLIME;
+		map[? SHURIKEN_MAP.COOLDOWN] = 28;
+		map[? SHURIKEN_MAP.SPEED] = 25;
+		map[? SHURIKEN_MAP.CLIP] = 3;
+		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 40;
+		break;
+		
 }
 
 return map;

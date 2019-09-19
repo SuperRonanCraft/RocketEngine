@@ -2359,6 +2359,14 @@
             }
         },
         {
+            "Key": "5b0a4dd4-14b1-4d99-a74c-86f87668bf49",
+            "Value": {
+                "id": "5cb71adb-3348-4181-983a-364b01f3d095",
+                "resourcePath": "sprites\\sShuriken_Shotgun\\sShuriken_Shotgun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",
             "Value": {
                 "id": "26b8c7a1-09e5-4114-a961-55ce119c81c4",
@@ -4431,6 +4439,14 @@
             }
         },
         {
+            "Key": "af561258-6093-4adf-abc6-f241e1a93d0e",
+            "Value": {
+                "id": "f7c64cbf-2048-435b-9765-0a7c85ceda04",
+                "resourcePath": "sprites\\sShuriken_Sand\\sShuriken_Sand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "af655ced-6f3f-4d40-bbd3-94dbbaa0a427",
             "Value": {
                 "id": "ed8252de-5fb9-41b7-ad83-c2558dc61d6e",
@@ -4548,6 +4564,14 @@
                 "id": "d2d7b729-a4d5-41fb-ab4b-cf2ed0895c6f",
                 "resourcePath": "scripts\\scUltimateMagnet_Draw\\scUltimateMagnet_Draw.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b1a93f08-c4b6-4dc0-806a-ae182b14c293",
+            "Value": {
+                "id": "a89e1472-8c6e-406d-ac8e-20978408d192",
+                "resourcePath": "sprites\\sShuriken_Slime\\sShuriken_Slime.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5239,6 +5263,14 @@
             }
         },
         {
+            "Key": "cfba07b5-81b0-4a74-9d37-3865fb035e97",
+            "Value": {
+                "id": "dd62cd18-5ccc-4d72-8f5e-2e08d22fde4f",
+                "resourcePath": "sprites\\sPickupWallOld\\sPickupWallOld.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d02c7b49-db3d-4b54-a180-27e44039ac2f",
             "Value": {
                 "id": "15aa06a6-38a4-4b58-9e93-82e9c26dc3bd",
@@ -5892,6 +5924,14 @@
                 "id": "89fec7eb-84de-4324-98c6-4f23c688f276",
                 "resourcePath": "scripts\\scUltimateSwordIce\\scUltimateSwordIce.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ea443c2b-ccc2-40d1-9841-fbb11846c979",
+            "Value": {
+                "id": "ed75036a-71b4-4935-a802-787550d317d1",
+                "resourcePath": "sprites\\sShuriken_Magnet\\sShuriken_Magnet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -2,11 +2,13 @@
 scShurikenChange(argument0);
 
 enum SHURIKEN {
-	NONE,DEFAULT,ICE,FIRE,PORTAL,
+	NONE,DEFAULT,ICE,FIRE,PORTAL,BRICK,MAGNET,SLIME,SAND,SHOTGUN,
 }
 
 enum SHURIKEN_SPRITE{
 	NONE = noone, DEFAULT = sShuriken_Default,ICE = sShuriken_Ice, FIRE = sShuriken_Fire, PORTAL = sShuriken_Portal, 
+	BRICK = sShuriken_Brick,  MAGNET = sShuriken_Magnet, SAND = sShuriken_Sand, SHOTGUN = sShuriken_Shotgun,
+	SLIME = sShuriken_Slime,
 }
 
 enum SHURIKEN_MAP{
