@@ -24,7 +24,7 @@ enum SOUND {
 	UI_SELECT = snSelect,
 	//EFFECTS
 		//Shoot rocket
-	EFFECT_SHOOT = snShoot_Default,
+	EFFECT_SHOOT = snRocketShoot,
 		//Gotten hit by rocket
 	EFFECT_HIT = noone,
 		//Explosion sound
@@ -64,8 +64,8 @@ enum SOUND {
 	//ULTIMATES
 	ULT_SHIELD_BREAK = snUltimateShieldBreak,
 	ULT_SHIELD_CAST = snUltimateShieldCast,
+	ULT_JUMPPAD_BOUNCE = snUltJumppad,
+	ULT_TELEPORT_USE = snUltTeleport,
 	//ACHIEVEMENTS
 	ACH_WHOOSH = sn_ach_whoosh,
-	
-	
 }

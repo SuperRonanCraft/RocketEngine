@@ -124,6 +124,7 @@ for (var e = 0; e < 2; e++) {
 			p.x = x + offset;
 			p.y = y;
 		}
+		scPlaySound(SOUND.ULT_TELEPORT_USE, random_range(0.8, 1.2));
 	}
 	ds_list_destroy(listentry);
 	ds_list_destroy(listexit);

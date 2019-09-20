@@ -1,12 +1,12 @@
 /// @desc check if we're in a knockback state, add to the combo modifier
-/// @arg shooter-instance
+/// @arg combo-instance
 var p = argument0;
 if (p.object_index != oPlayer) exit;
 var type = p.weapon_map[? WEAPON_MAP.COMBO_TYPE];
 var count_up = false;
 switch (type) {
 	case COMBO_TYPE.KNOCKBACK:
-		if (player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
+		//if (player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK)
 			count_up = true;
 		break;
 	case COMBO_TYPE.NO_MISS: count_up = true; break;
@@ -33,5 +33,5 @@ if (count_up)
 		}
 		map[? COMBO_MAP.POS_X] = x;
 		map[? COMBO_MAP.POS_Y] = bbox_top - 10;
-		map[? COMBO_MAP.ALPHA] = 1;
+		map[? COMBO_MAP.ALPHA] = 1 * min(5, max(1, map[? COMBO_MAP.STREAK_LAST]));
 	}

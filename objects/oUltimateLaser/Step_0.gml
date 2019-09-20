@@ -19,9 +19,8 @@ if (damage_cooldown_cur > 0) { //Just did damage? Cooldown
 	
 	
 	with (hitting) {
-		if(scDamageShootable(other.owner, id, false, false, 1)){
-			causeOfDeath = DEATH_LIST.LASER;	
-		}
+		if (scDamageShootable(other.owner, id, false, false, 1, noone, noone, false))
+			causeOfDeath = DEATH_LIST.LASER;
 		other.damage_cooldown_cur = other.laser_damage_cooldown;
 	}
 	

@@ -15,6 +15,7 @@ switch (type) {
 			map[? "vsp"] = abs(map[? "vsp"]) * -2.5;	
 			map[? "hsp"] += 1.8;
 		}
+		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE, 1.4);
 		break;
 	case ROCKET.BRICK:
 		with (other) {
@@ -22,12 +23,14 @@ switch (type) {
 			map[? "vsp"] += -15;
 			map[? "hsp"] += 1.25;
 		}
+		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE, 0.3);
 		break;
 	case ROCKET.OBSOLETE:
 		with (other) {
 			var map = obsoleteMap;
 			map[? "vsp"] = abs(map[? "vsp"]) * -2.5;
 		}
+		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE, 0.7);
 		break;
 	case ROCKET.SPIKED:
 		with (other) {
@@ -36,6 +39,7 @@ switch (type) {
 			else if (direction > 90 && direction < 260)
 				direction -= 40;
 		}
+		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE);
 		break;
 }
 
