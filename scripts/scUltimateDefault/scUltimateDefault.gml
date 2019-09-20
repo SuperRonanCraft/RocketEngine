@@ -1,5 +1,4 @@
 /// @desc Default ultimate
-/// @arg null
 /// @arg direction
 var r_map = weapon_map;
 with (scSpawnRocket(x, y, depth + 1, argument0, id, r_map, [ROCKET_MAP.SCALE], [2])) {

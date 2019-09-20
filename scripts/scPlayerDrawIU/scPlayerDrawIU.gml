@@ -3,4 +3,3 @@
 scPlayerDrawUIHealth();
 scPlayerDrawUIBuffs();
 scPlayerDrawUIWeapon();
-scPlayerDrawIUCombo();

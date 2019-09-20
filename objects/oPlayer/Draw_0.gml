@@ -9,6 +9,9 @@ scUltimateHandlerDraw();
 //Animate the player in their current state
 scAnimationState();
 
+//Combo draw
+scComboDraw();
+
 //Moving dust
 event_user(0);
 

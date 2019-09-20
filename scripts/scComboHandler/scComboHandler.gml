@@ -8,7 +8,7 @@ switch (type) {
 				if ((player_tech && player_map[? PLAYER_MAP.PLAYER_STATE] != PLAYERSTATE.KNOCKBACK) || standing)
 					count_down = true;
 		break;
-	case COMBO_TYPE.NO_MISS: count_down = false; break; //Let the miss event handle this
+	case COMBO_TYPE.NO_MISS: count_down = true; break; //Let the miss event handle this
 }
 
 if (count_down) {

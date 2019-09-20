@@ -35,19 +35,29 @@ switch (modifier) {
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Don't bring your watch";
 		break;
 	case WEAPON_MODIFIER.SHOTGUN: 
-		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_shotgun;
 		map[? WEAPON_MODIFIER_MAP.NAME] = "SHOTGUN"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "The best one shot";
 		break;
 	case WEAPON_MODIFIER.SLIME: 
-		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_slime;
 		map[? WEAPON_MODIFIER_MAP.NAME] = "SLIME"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Sticky stuff";
 		break;
 	case WEAPON_MODIFIER.BRICK: 
-		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_brick;
 		map[? WEAPON_MODIFIER_MAP.NAME] = "BRICK"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Better start jumping";
+		break;
+	case WEAPON_MODIFIER.SAND: 
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_sand; 
+		map[? WEAPON_MODIFIER_MAP.NAME] = "SAND"
+		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Slow, but deadly";
+		break;
+	case WEAPON_MODIFIER.METAL: 
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_metal; 
+		map[? WEAPON_MODIFIER_MAP.NAME] = "METAL"
+		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Heavy hitter";
 		break;
 	default: break;
 }

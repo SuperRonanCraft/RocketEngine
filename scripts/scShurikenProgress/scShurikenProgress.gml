@@ -8,6 +8,9 @@ if(shuriken_map[? SHURIKEN_MAP.TYPE] == SHURIKEN.NONE) exit;
 //Set the direction of the shuriken
 var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
 
+if (auto_aim)
+	dir = scAutoAim();
+
 if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 	if (map[?WEAPON_MAP.AMMO] != 0) {
 		//show_debug_message(map[?WEAPON_MAP.AMMO]);

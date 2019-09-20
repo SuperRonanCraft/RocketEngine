@@ -17,6 +17,8 @@ with (player) {
 				case WEAPON_MODIFIER.SHOTGUN: weapon = ROCKET.SHOTGUN; break;
 				case WEAPON_MODIFIER.SLIME: weapon = ROCKET.SLIME; break;
 				case WEAPON_MODIFIER.BRICK: weapon = ROCKET.BRICK; break;
+				case WEAPON_MODIFIER.SAND: weapon = ROCKET.SAND; break;
+				case WEAPON_MODIFIER.METAL: weapon = ROCKET.SPIKED; break;
 				default: weapon = noone; break;
 			}
 			if (weapon != noone)
@@ -44,7 +46,7 @@ return weapon == noone;
 
 enum WEAPON_MODIFIER {
 	DEFAULT, ICE, FIRE, PORTAL, MAGNET,
-	SHOTGUN, SLIME, BRICK,
+	SHOTGUN, SLIME, BRICK, SAND, METAL,
 	//keep last
 	LENGTH
 }

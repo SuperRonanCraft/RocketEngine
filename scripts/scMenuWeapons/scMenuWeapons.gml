@@ -1,8 +1,8 @@
-var amt = WEAPON_MODIFIER.LENGTH - 1, columns = 2, rows = 3, offset = 0;
+var amt = WEAPON_MODIFIER.LENGTH, columns = 2, rows = 3, offset = 0;
 var pg = page_weapons;
-var spr, name, desc, rx, ry, c, index = 0, ioffset = 0;
+var spr, name, desc, rx, ry, c, index = 0;
 
-var newi = (pg * (columns * rows)) + ioffset;
+var newi = (pg * (columns * rows));
 for (var i = newi; index < columns * rows && i < amt; i++) {
 	if (index mod columns == 0)
 		offset++;

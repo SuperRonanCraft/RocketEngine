@@ -17,8 +17,9 @@ if (count_up)
 		var map = combo_map;
 		//combo_amount++;
 		map[? COMBO_MAP.STREAK]++;
+		map[? COMBO_MAP.STREAK_LAST] = map[? COMBO_MAP.STREAK];
 		//combo_cooldown_current = 0;
-		map[? COMBO_MAP.COOLDOWN] = map[? COMBO_MAP.COOLDOWN_MAX];
+		map[? COMBO_MAP.COOLDOWN] = p.weapon_map[? WEAPON_MAP.COMBO_COOLDOWN];
 		//combo_player = other.id;
 		map[? COMBO_MAP.ENTITY] = other.id;
 		//combo_text_current = combo_text[irandom_range(0, array_length_1d(combo_text) - 1)];
@@ -30,4 +31,7 @@ if (count_up)
 			map[? COMBO_MAP.STREAK_HIGHEST] = map[? COMBO_MAP.STREAK];
 			scAchievements_CustomEvent(ACHIEVEMENTS.COMBO, map[? COMBO_MAP.STREAK]);
 		}
+		map[? COMBO_MAP.POS_X] = x;
+		map[? COMBO_MAP.POS_Y] = bbox_top - 10;
+		map[? COMBO_MAP.ALPHA] = 1;
 	}
