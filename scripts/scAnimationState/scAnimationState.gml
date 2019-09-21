@@ -7,6 +7,9 @@ if (!map[? PLAYER_MAP.ANIMATION_OVERRIDE]) {
 } else
 	scDrawOtherAnimationState(map[? PLAYER_MAP.ANIMATION_STATE]);
 
+if (map[? PLAYER_MAP.ANIMATION_VAR] > sprite_get_number(map[? PLAYER_MAP.CURRENT_SPRITE]))
+	map[? PLAYER_MAP.ANIMATION_VAR] = 0;
+
 //Reduce the players flash amount
 map[? PLAYER_MAP.FLASH_ALPHA] = 
 	max(map[? PLAYER_MAP.FLASH_ALPHA] - 

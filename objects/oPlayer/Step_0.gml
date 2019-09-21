@@ -54,6 +54,19 @@ scCheckHealth();
 //Knockback handling
 scKnockback();
 
+
+//Step Sound
+switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
+	case ANIMATIONSTATE.WAKING:
+		if (floor(player_map[? PLAYER_MAP.ANIMATION_VAR]) == 0 || 
+				floor(player_map[? PLAYER_MAP.ANIMATION_VAR]) == 
+				sprite_get_number(characterSprites[? ANIMATIONSTATE.WALKING]) / 2)
+			scPlaySound(SOUND.EFFECT_PLAYER_STEP, random_range(0.7, 1));
+			break;
+	case ANIMATIONSTATE.TECHED:
+}
+
+
 //Mostly meant for clones
 if (despawn && ((shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.DEAD && vsp == 0) || image_alpha != 1)) { //Despawn player object
 	image_alpha -= 0.025;

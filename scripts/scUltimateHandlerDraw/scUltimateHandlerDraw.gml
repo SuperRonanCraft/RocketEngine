@@ -3,7 +3,7 @@ var map = ultimate_map;
 if (map[? ULTIMATE_CASTING_MAP.CHARGE] >= ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {
 	if (!map[? ULTIMATE_CASTING_MAP.READY]) {
 		map[? ULTIMATE_CASTING_MAP.READY] = true;
-		instance_create_depth(x, y, depth - 1, oUltReady);
+		instance_create_depth(x, y, depth - 1, oPartUltReady);
 	}
 } else
 	map[? ULTIMATE_CASTING_MAP.READY] = false;

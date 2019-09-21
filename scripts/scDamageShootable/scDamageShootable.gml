@@ -49,7 +49,7 @@ with (damaging) {
 		player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
 		//Damage Numbers
 		if (player_map[? PLAYER_MAP.ALIVE]) //Alive? Show damage indicators
-			with (instance_create_depth(x, y, depth - 1, oDamageNum)) {
+			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 				value_damage = dmg;
 				damage_type = type;
 				damage_killed = lethalDamage;
@@ -58,6 +58,7 @@ with (damaging) {
 			}
 		if (combo)
 			scComboDamaged(damager);
+		scSpawnParticle(x, bbox_top, irandom_range(6 * dmg, 10 * dmg));
 	}
 }
 

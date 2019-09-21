@@ -18,6 +18,7 @@ if (standing) {
 		dirs = [-20, 200];
 		range = 15;
 		smoke_lastvsp = 0;
+		scPlaySound(SOUND.EFFECT_PLAYER_FALL, random_range(0.5, 0.6));
 	}
 	if (amt > 0)
 		scDrawParticle(bbox_left - range, bbox_bottom - 5, bbox_right + range, 
