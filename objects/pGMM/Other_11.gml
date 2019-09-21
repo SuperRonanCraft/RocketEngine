@@ -5,5 +5,5 @@ if (endgame) exit;
 
 endgame = true;
 //End game sound...
-with (oMusic)
+with (oMusicHandler)
 	event_user(2);

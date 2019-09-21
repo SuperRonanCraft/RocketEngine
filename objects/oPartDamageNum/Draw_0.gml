@@ -1,16 +1,17 @@
 /// @desc draw sprites
 
 up_time += (5 * min(combo, 5));
-c_rainbow = make_color_hsv(up_time mod 255,255,255);
+c_rainbow = make_color_hsv(up_time mod 255, 255, 255);
 
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
-for (var i = 0; i < array_length_1d(value_cached); i++) {
+for (var i = 0; i < array_length_1d(value_cached); i++)
 	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], c_rainbow, alpha, scale, scale);
-}
 
 if (damage_killed)
-	scale = lerp(scale, 1.2, 0.04);
+	scale = lerp(scale, scale_max, 0.04);
+else if (vsp < 0)
+	scale = lerp(scale, scale_goal, 0.1);
 
 switch (damage_type) {
 	case DAMAGETYPE.HEALING:
@@ -23,9 +24,10 @@ switch (damage_type) {
 		break;
 	default:
 		if (damage_killed)
-			vsp = lerp(vsp, -1, 0.05)
+			vsp = lerp(vsp, -0.2, 0.07)
 		else {
-			scale = lerp(scale, 0.3, 0.05 / max(1, combo));
+			if (vsp > 0)
+				scale = lerp(scale, scale_min, 0.05 / max(1, combo));
 			vsp += vsp < 0 ? grv : grv / 2;
 			hsp = lerp(hsp, 0, 0.05);
 		}
@@ -41,7 +43,7 @@ switch (damage_type) {
 		reduce = vsp >= -2; break;
 	default:
 		if (damage_killed)
-			reduce = vsp >= -2;
+			reduce = vsp >= -1;
 		else
 			reduce = vsp >= 0;
 		break;

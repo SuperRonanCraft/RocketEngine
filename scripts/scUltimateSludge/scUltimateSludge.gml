@@ -12,6 +12,6 @@ ultObj.dir = dir;
 ultObj.amtMax = amt;
 
 with (ultObj) {
-	maxtimer = 3 * room_speed;
+	maxtimer = 5 * room_speed;
 	owner = other;
 }

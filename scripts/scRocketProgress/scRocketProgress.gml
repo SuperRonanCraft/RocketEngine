@@ -19,9 +19,6 @@ if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, map);
 		if (map[? WEAPON_MAP.AMMO] > 0)
 			map[? WEAPON_MAP.AMMO]--;
-		//Sound effects and screen shaking
-		scPlaySound(rocket_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
-		scScreenShake(rocket_map[? ROCKET_MAP.SHAKE_MAGNITUDE], rocket_map[? ROCKET_MAP.SHAKE_FRAMES]);
 		scRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
 		//Add to rockets shot count
 		if (track_stats)

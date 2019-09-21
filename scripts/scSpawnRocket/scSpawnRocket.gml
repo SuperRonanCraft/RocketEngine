@@ -40,12 +40,16 @@ if (argument_count >= 8) { //Must have both keys and values
 		ds_map_set(r_map, keys[i], values[i]);
 }
 
+scPlaySound(r_map[? ROCKET_MAP.SOUND_SHOOT], random_range(0.8, 1.2));
+scScreenShake(r_map[? ROCKET_MAP.SHAKE_MAGNITUDE], r_map[? ROCKET_MAP.SHAKE_FRAMES]);
+
 //All defaults
 with (inst) {
 	owner = own;
 	weapon_map = w_map;
 	direction = dir;
 	image_angle = direction;
+	image_index = irandom(image_number - 1);
 	if (direction > 90 && direction < 270)
 		image_yscale *= -1;
 	var rocket_map = weapon_map[? WEAPON_MAP.MAP];

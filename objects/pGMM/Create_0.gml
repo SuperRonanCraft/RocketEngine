@@ -40,7 +40,7 @@ p_list = ds_list_create();
 with (oPlayer)
 	ds_list_add(other.p_list, self); //For every oPlayer, add players to the p_list
 
-with (oMusic)
+with (oMusicHandler)
 	event_user(1); //Start a new song
 	
 //Kick back timer

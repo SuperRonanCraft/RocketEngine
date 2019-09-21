@@ -18,37 +18,41 @@ for (var e = 0; e < 2; e++) {
 	for (var i = 0; i < ds_list_size(listexit); i++)
 		ds_list_add(listentry, listexit[| i])
 	
+	//Check who to ignore
 	for (var a = 0; a < ds_list_size(teleported); a++) {
 		var found = false;
 		var ary = teleported[| a];
-		var p = ary[0];
+		var p = ary[0]; //Previously teleported object
 		for (var i = 0; i < ds_list_size(listentry); i++) {
-			var pl = listentry[| i];
-			if (p == pl) {
+			var pl = listentry[| i]; //Object inside the ignore box
+			if (p == pl) { //inside ignore and was teleported
 				found = true;
 				break;
 			}
 		}
 		if (!found)
-			ds_list_add(removelist, p);
+			ds_list_add(removelist, p); //Dont remove, as still inside ignore box
 	}
 	
 	//Delete ignored
-	var index = 0;
 	for (var i = 0; i < ds_list_size(removelist); i++) {
 		var p = removelist[| i];
-		var found = false;
 		for (var a = 0; a < ds_list_size(teleported); a++) {
 			var ary = teleported[| a];
 			var obj = ary[0];
-			if (!instance_exists(obj) || (obj.object_index == inst && obj == p)) {
-				ds_list_delete(teleported, index);
-				found = true;
+			var remove = !instance_exists(obj);
+			if (!remove)
+				switch (inst) {
+					case pWeapon:
+						remove = object_get_parent(obj.object_index) == inst; break;
+					default:
+						remove = obj.object_index == inst && obj == p; break;
+				}
+			if (remove) {
+				ds_list_delete(teleported, a);
 				break;
 			}
 		}
-		if (!found)
-			index++;
 	}
 	ds_list_destroy(removelist);
 	ds_list_clear(listentry);
@@ -99,7 +103,7 @@ for (var e = 0; e < 2; e++) {
 	for (var i = 0; i < ds_list_size(teleport); i++) {
 		var ary = teleport[| i];
 		var p = ary[0];
-		var from = ary[1];
+		var from = ary[1]; //Came in from? (true = entrance)
 		ds_list_add(teleported, [p, from]);
 		var offset = 0;
 		if (p.object_index == oRocket) {
@@ -109,15 +113,15 @@ for (var e = 0; e < 2; e++) {
 			p.image_xscale /= 4;
 			p.image_yscale /= 4;
 		}
-		if (from) {
-			if (p.object_index == oPlayer) //WALL SAFETY
+		if (from) { //Came in from entrance
+			if (p.object_index == oPlayer) //WALL SAFETY (Like dynamic walls (brick ult))
 				with (p)
 					if (instance_place(other.exit_x + offset, other.exit_y, oWall) != noone)
 						exit;
 			p.x = exit_x + offset;
 			p.y = exit_y;
-		} else {
-			if (p.object_index == oPlayer) //WALL SAFETY
+		} else { //Came in from exit
+			if (p.object_index == oPlayer) //WALL SAFETY (Like dynamic walls (brick ult))
 				with (p)
 					if (instance_place(other.x + offset, other.y, oWall) != noone)
 						exit;

@@ -31,6 +31,7 @@ if (!exit_created) {
 	image_xscale = sign(image_xscale) * image_yscale;
 	portal_yscale = portal_alpha + (1 - max_alpha);
 	portal_xscale = portal_yscale * -sign(image_xscale);
+	//Collision
 	event_user(0);
 	if (portal_alpha == 0 && image_alpha == 0)
 		instance_destroy();

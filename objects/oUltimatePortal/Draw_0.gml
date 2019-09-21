@@ -25,7 +25,7 @@ if (exit_created) //Portal exit particles
 
 amt = 1;
 type = PARTICLES.PORTAL
-if (portal_used_exit) {//Exit used particles
+if (portal_used_exit) { //Exit used particles
 	portal_used_exit = false;
 	amt = 100;
 	type = PARTICLES.SPARKLE;

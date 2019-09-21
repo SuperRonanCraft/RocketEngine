@@ -3922,7 +3922,7 @@
             "Key": "97c654c9-dda0-4c9f-862a-39f5aa1191fc",
             "Value": {
                 "id": "4fe2f793-e574-48b7-8e4c-eea620bf9d33",
-                "resourcePath": "objects\\oMusic\\oMusic.yy",
+                "resourcePath": "objects\\oMusicHandler\\oMusicHandler.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6832,6 +6832,7 @@
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
         "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
         "c251b514-5413-4eb8-bda4-3e9c880f56e9",
+        "8b67ca91-d986-48e9-92e2-cc2063238cf1",
         "6e1af632-6685-40a9-b0e7-653f1b415768",
         "38944597-eaf0-4f99-8a24-11ebe9391c21",
         "a62e83a3-5049-4bc1-85be-fd514e25dc62",
@@ -6851,7 +6852,6 @@
         "52bf7011-b434-455b-b401-3945ebf3821b",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
         "a6070534-903b-4493-b956-7c258781b24d",
-        "8b67ca91-d986-48e9-92e2-cc2063238cf1",
         "f09d4512-4ade-433d-9562-a902e6daceb8",
         "2c533d0b-af1d-444f-b4c9-2892f0e1535d",
         "f7d6fc04-3a48-4de8-b59a-db634520599c",
