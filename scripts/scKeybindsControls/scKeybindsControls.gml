@@ -38,7 +38,7 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	if (key_jump && standing) {
 		vsp_move = (-jump_height - jump_adj) * grv_dir;
 		standing = false;
-		scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
+		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
 	}
 	//Weapon
 	if (key_shoot)

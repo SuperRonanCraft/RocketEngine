@@ -19,7 +19,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.DEFAULT;
 		map[? SHURIKEN_MAP.COOLDOWN] = 40;
 		map[? SHURIKEN_MAP.SPEED] = 20;
-		map[? SHURIKEN_MAP.DAMAGE] = 58;
+		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		break;
 	case SHURIKEN.ICE:
 		map[? SHURIKEN_MAP.NAME] = "Frost Star";
