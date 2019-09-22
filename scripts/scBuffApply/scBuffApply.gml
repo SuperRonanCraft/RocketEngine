@@ -3,21 +3,16 @@
 /// @arg target
 /// @arg given-by
 /// @arg time* of buff
-/// @arg stackable* buff
 
 var buff = argument[0];
 var targ = argument[1];
 var from = argument[2];
-var time = 5;
-if (argument_count > 3)
-	time = argument[3];
-var stackable = false;
-if (argument_count > 4)
-	stackable = argument[4];
-
+var time = argument_count > 3 ? (argument[3] != noone ? argument[3] : noone) : noone;
 
 var ds_map = ds_map_create();
 scBuffGet(buff, ds_map);
+if (time != noone)
+	ds_map[? BUFF_MAP.TIME] = time;
 ds_map[? BUFF_MAP.GIVEN_BY] = from; //Set who gave this buff/debuff
 //Check if a buff from the target is the same TYPE, if not, add it, or if its stackable, just add it
 if (ds_map[? BUFF_MAP.ENABLED]) {
@@ -51,6 +46,5 @@ if (ds_map[? BUFF_MAP.ENABLED]) {
 			buff[? BUFF_MAP.CLOCK] = 1;
 		ds_map_destroy(ds_map);
 	}
-}
-else
+} else
 	ds_map_destroy(ds_map);

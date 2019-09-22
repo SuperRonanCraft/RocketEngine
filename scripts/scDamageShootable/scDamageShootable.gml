@@ -6,7 +6,7 @@
 /// @arg damage
 /// @arg force-damage* noone to ignore
 /// @arg damage-type* noone to ignore
-/// @arg combo-count* noone to ignore
+/// @arg combo-apply* noone to ignore
 
 var damager = argument[0];
 var damaging = argument[1];
