@@ -301,8 +301,8 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketShotgun_Create;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketShotgun_Step;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketShotgun_Destroy;
-		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SMOKE3];
-		map[? ROCKET_MAP.PARTICLE_AMT] = 100;
+		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SMOKE2];
+		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SMOKE2];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
 		break;
 	

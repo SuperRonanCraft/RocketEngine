@@ -1,5 +1,4 @@
- /// @description Insert description here
-// You can write your code in this editor
+/// @desc Stuff
 if (!global.play) exit;
 
 //scPlayerHandler(PLAYER_EVENT.STEP);
@@ -57,11 +56,12 @@ scKnockback();
 
 //Step Sound
 switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
-	case ANIMATIONSTATE.WAKING:
-		if (floor(player_map[? PLAYER_MAP.ANIMATION_VAR]) == 0 || 
-				floor(player_map[? PLAYER_MAP.ANIMATION_VAR]) == 
+	case ANIMATIONSTATE.WALKING:
+		if (player_map[? PLAYER_MAP.ANIMATION_VAR] == 0 || 
+				player_map[? PLAYER_MAP.ANIMATION_VAR] == 
 				sprite_get_number(characterSprites[? ANIMATIONSTATE.WALKING]) / 2)
-			scPlaySound(SOUND.EFFECT_PLAYER_STEP, random_range(0.7, 1));
+			scPlaySound(choose(SOUND.EFFECT_PLAYER_STEP_1), 
+				random_range(0.5, 0.6));
 			break;
 	case ANIMATIONSTATE.TECHED:
 }

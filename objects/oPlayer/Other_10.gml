@@ -9,7 +9,7 @@ if (standing) {
 	if (hsp != 0)
 		if (smoke_cur >= (smoke_act / time_dialation) - irandom(smoke_act / 2)) {
 			amt = irandom_range(1, 3);
-			dirs = facing != 1 ? [-5, 5] : [175, 185];
+			dirs = hsp < 0 ? [-5, 5] : [175, 185];
 			smoke_cur = 0;
 		} else
 			smoke_cur++;

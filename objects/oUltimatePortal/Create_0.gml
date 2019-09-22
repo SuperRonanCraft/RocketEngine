@@ -26,7 +26,7 @@ image_yscale = 0;
 image_xscale = 0;
 portal_yscale = image_yscale;
 portal_xscale = image_xscale;
-max_alpha = 0.8;
+max_alpha = 0.9;
 alpha_change = 0.02;
 
 if (instance_number(object_index) > 1) {

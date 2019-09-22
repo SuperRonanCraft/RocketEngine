@@ -24,11 +24,11 @@ enum SOUND {
 	UI_SELECT = snSelect,
 	//EFFECTS
 		//Shoot rocket
-	EFFECT_SHOOT = snRocketShoot1,
+	EFFECT_SHOOT = snRocketShoot,
 		//Gotten hit by rocket
 	EFFECT_HIT = noone,
 		//Explosion sound
-	EFFECT_EXP = snRocketExplosion1,
+	EFFECT_EXP = snRocketExplosion,
 		//Death effect
 	EFFECT_DEATH = noone,
 		//Hit a target
@@ -52,7 +52,8 @@ enum SOUND {
 		//Player Fall
 	EFFECT_PLAYER_FALL = snFall,
 		//Player Step
-	EFFECT_PLAYER_STEP = snStep,
+	EFFECT_PLAYER_STEP_1 = snPlayerStep1,
+	EFFECT_PLAYER_STEP_2 = snPlayerStep2,
 	EFFECT_PLAYER_JUMP = snJump2,
 		//Player Tech
 	EFFECT_PLAYER_TECH = noone,

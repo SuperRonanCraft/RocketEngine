@@ -13,17 +13,18 @@ if (portal_used_entry || portal_used_exit || portal_connect_img != 0) {
 		portal_connect_img = 0;
 }
 
-var amt = 1, type = PARTICLES.PORTAL;
+//Particles
+var margx = marginx * 3, margy = marginy * 3;
+var amt = 5, type = PARTICLES.PORTAL;
 if (portal_used_entry) { //Entry used particles
 	portal_used_entry = false;
 	amt = 100;
 	type = PARTICLES.SPARKLE;
 }
-var margx = marginx * 3, margy = marginy * 3;
 if (exit_created) //Portal exit particles
 	scDrawParticle(exit_x - margx, exit_y - margy, exit_x + margx, exit_y + margy, type, amt);
 
-amt = 1;
+amt = 5;
 type = PARTICLES.PORTAL
 if (portal_used_exit) { //Exit used particles
 	portal_used_exit = false;
