@@ -2,53 +2,57 @@
 ///@arg key
 var type = argument0;
 var key = argument1;
-
+var val = noone;
 switch (type) {
 	case GAMEPAD_TYPE.KEYBOARD:
 		return scKeyToString(key);
 		break;
 	case GAMEPAD_TYPE.PS4:
+		val[0] = sUIGamepadBtns;
+		val[2] = 1;
 		switch (key) {
-			case gp_face1: return 0;
-			case gp_face2: return 1;
-			case gp_face3: return 2;
-			case gp_face4: return 3;
-			case gp_shoulderl: return 4;
-			case gp_shoulderlb: return 6;
-			case gp_shoulderr: return 5;
-			case gp_shoulderrb: return 7;
-			case gp_axisrv: return 17;
-			case gp_axisrh: return 17;
-			case gp_axislv: return 16;
-			case gp_axislh: return 16;
-			case gp_padu: return 35;
-			case gp_padr: return 34;
-			case gp_padd: return 36;
-			case gp_padl: return 33;
-			default:
-				return 8;
+			case gp_face1: val[1] = 8; break;
+			case gp_face2: val[1] = 10; break;
+			case gp_face3: val[1] = 9; break;
+			case gp_face4: val[1] = 11; break;
+			case gp_shoulderl: val[1] = 4; break;
+			case gp_shoulderlb: val[1] = 6; break;
+			case gp_shoulderr: val[1] = 5; break;
+			case gp_shoulderrb: val[1] = 7; break;
+			case gp_axisrv: val[0] = sUIGamepadLR; val[1] = 1; val[2] = 0.7; break;
+			case gp_axisrh: val[0] = sUIGamepadLR; val[1] = 1; val[2] = 0.7; break;
+			case gp_axislv: val[0] = sUIGamepadLR; val[1] = 0; val[2] = 0.7; break;
+			case gp_axislh: val[0] = sUIGamepadLR; val[1] = 0; val[2] = 0.7; break;
+			case gp_padu: val[1] = 1; break;
+			case gp_padr: val[1] = 2; break;
+			case gp_padd: val[1] = 0; break;
+			case gp_padl: val[1] = 3; break;
+			default: val[1] = 17; break;
 		}
+		return val;
 	case GAMEPAD_TYPE.XBOX:
+		val[0] = sUIGamepadBtns;
+		val[2] = 1;
 		switch (key) {
-			case gp_face1: return 160;
-			case gp_face2: return 161;
-			case gp_face3: return 162;
-			case gp_face4: return 163;
-			case gp_shoulderl: return 166;
-			case gp_shoulderlb: return 164;
-			case gp_shoulderr: return 167;
-			case gp_shoulderrb: return 165;
-			case gp_axisrv: return 177;
-			case gp_axisrh: return 177;
-			case gp_axislv: return 176;
-			case gp_axislh: return 176;
-			case gp_padu: return 35;
-			case gp_padr: return 34;
-			case gp_padd: return 36;
-			case gp_padl: return 33;
-			default:
-				return 8;
+			case gp_face1: val[1] = 12; break;
+			case gp_face2: val[1] = 14; break;
+			case gp_face3: val[1] = 13; break;
+			case gp_face4: val[1] = 15; break;
+			case gp_shoulderl: val[1] = 20; break;
+			case gp_shoulderlb: val[1] = 23; break;
+			case gp_shoulderr: val[1] = 21; break;
+			case gp_shoulderrb: val[1] = 22; break;
+			case gp_axisrv: val[0] = sUIGamepadLR; val[1] = 1; val[2] = 0.7; break;
+			case gp_axisrh: val[0] = sUIGamepadLR; val[1] = 1; val[2] = 0.7; break;
+			case gp_axislv: val[0] = sUIGamepadLR; val[1] = 0; val[2] = 0.7; break;
+			case gp_axislh: val[0] = sUIGamepadLR; val[1] = 0; val[2] = 0.7; break;
+			case gp_padu: val[1] = 1; break;
+			case gp_padr: val[1] = 2; break;
+			case gp_padd: val[1] = 0; break;
+			case gp_padl: val[1] = 3; break;
+			default: val[1] = 17; break;
 		}
+		return val;
 }
 
 enum GAMEPAD_TYPE {

@@ -162,7 +162,8 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			//var string_val = scKeyToString(ds_grid[# 3, i]);
 			c = c_white;
 			var index = 3;
-			var scale = 2.5;
+			var scale = 1.2;
+			rtx += x_buffer;
 			if (global.gamepad_type == GAMEPAD_TYPE.KEYBOARD) {
 				c = color_element;
 				index = 2;

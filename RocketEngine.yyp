@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "1d47b160-076e-4bae-9d0d-4adbc9529678",
+            "Value": {
+                "id": "df12c3ca-0957-463e-bcca-4c673e929bab",
+                "resourcePath": "sprites\\sUIGamepadLR\\sUIGamepadLR.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d87f8ea-483e-44fb-aaaa-b59da597ae73",
             "Value": {
                 "id": "197ded7b-fcb6-455a-a230-abb6db834a27",
@@ -1403,14 +1411,6 @@
             "Value": {
                 "id": "f6e703eb-c07a-4da4-b9ab-9faac120be32",
                 "resourcePath": "sprites\\bg_Main\\bg_Main.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "34590938-ef83-4780-891d-b68724bfb858",
-            "Value": {
-                "id": "500d282a-fce4-4bc9-a7dd-0d680c3d75d6",
-                "resourcePath": "sprites\\sUIGamepadBtns\\sUIGamepadBtns.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2455,6 +2455,14 @@
             }
         },
         {
+            "Key": "5a20c2e8-bddb-4b81-a34a-44fd4ae269d1",
+            "Value": {
+                "id": "b2d784cd-1e7d-4f12-aa69-91574dbb241b",
+                "resourcePath": "sprites\\sUIGamepadWii\\sUIGamepadWii.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5a44ba40-3360-4a8c-87d7-b24273b2b27a",
             "Value": {
                 "id": "ef927956-bf5e-46d2-a386-935526ab01cf",
@@ -3490,7 +3498,7 @@
             "Key": "83964d63-4c3e-471a-b836-d61e519096fb",
             "Value": {
                 "id": "bd5d0a70-04d3-475f-82be-6c6d8b0377d1",
-                "resourcePath": "sprites\\sUIGamepadBtns2\\sUIGamepadBtns2.yy",
+                "resourcePath": "sprites\\sUIGamepadBtns\\sUIGamepadBtns.yy",
                 "resourceType": "GMSprite"
             }
         },

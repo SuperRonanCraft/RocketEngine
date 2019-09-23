@@ -28,7 +28,8 @@ switch (type) {
 		break;
 	case GAMEPAD_TYPE.PS4:
 	case GAMEPAD_TYPE.XBOX:
-		scDrawSpriteExt(xx, yy, sUIGamepadBtns, val, c, alpha, scale, scale);
+		scale *= val[2];
+		scDrawSpriteExt(xx, yy, val[0], val[1], c, alpha, scale, scale);
 		//DRAW SPRITE
 		break;
 }
