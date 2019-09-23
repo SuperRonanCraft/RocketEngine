@@ -1,6 +1,3 @@
-/// @desc
-
-var xx = x;
 var yy = y + (32 * (image_yscale - 1));
 for (var i = 0; i < image_yscale; i++) {
 	draw_sprite_part_ext(sprite_index, image_index, 0, 0, sprite_width * (build_per / build_per_max), sprite_height,

@@ -4,7 +4,6 @@ if (!standing) {
 	vsp += grv * owner.time_dialation;
 
 	//Fall on floor
-	var coly = false;
 	var inst = instance_place(x, y + vsp, oWall);
 	if (inst != noone && inst.object_index != oSeperator) {
 		if (vsp > 0) //Falling

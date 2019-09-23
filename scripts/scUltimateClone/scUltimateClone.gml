@@ -9,7 +9,7 @@ with (inst) {
 	keyleft = other.keyright;
 	keyright = other.keyleft;
 	keyjump = other.keyjump;
-	keyshoot = noone; //Cannot shoot
+	//keyshoot = noone; //Cannot shoot
 	team = other.team; //Same team as caster
 	display = false; //No ui
 	//player_map[? PLAYER_MAP.HEALTH] = 1; //One hit kill

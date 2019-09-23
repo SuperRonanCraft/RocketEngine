@@ -1,5 +1,3 @@
-var side = argument[0] == 0 ? 1 : -1;
-
 var amt = instance_number(pPickup);
 var hackable = 0;
 for (var i = 0; i < amt; i++) {

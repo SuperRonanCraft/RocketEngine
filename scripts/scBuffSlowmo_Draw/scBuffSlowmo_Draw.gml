@@ -2,9 +2,8 @@
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 
-var owner = argument0;
-var dsBuff = argument1;
-
+//var owner = argument0;
+var dsBuff = argument[1];
 
 var map = dsBuff[? "steps"];
 for (var i = 0; i < ds_list_size(map); i++) {

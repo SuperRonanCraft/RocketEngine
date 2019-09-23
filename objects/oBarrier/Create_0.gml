@@ -1,4 +1,4 @@
 /// @desc
 
-falling = true;
+//falling = true;
 y = sprite_height / 2;

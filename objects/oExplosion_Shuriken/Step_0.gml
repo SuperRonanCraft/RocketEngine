@@ -1,6 +1,6 @@
 
 
-var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
+//var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 
 if (doing_damage)
 	for (var i = 0; i < ds_list_size(hitList); i++)

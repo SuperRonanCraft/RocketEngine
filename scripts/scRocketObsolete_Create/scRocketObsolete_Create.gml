@@ -1,7 +1,7 @@
 obsoleteMap = ds_map_create();
 
 var map = obsoleteMap;
-var offset = owner.shoot_face ? owner.facing : (owner.team == TEAM.LEFT ? 1 : -1);
+var offset = owner.team == TEAM.NONE ? owner.facing : (owner.team == TEAM.LEFT ? 1 : -1);
 map[? "hsp"] = weapon_map[? WEAPON_MAP.SPEED] + (owner.hsp * offset * 0.5);
 map[? "vsp"] = (-7 * sign(owner.image_yscale) ) + (owner.vsp/2);
 map[? "grv"] = 0.4 * sign(owner.image_yscale);

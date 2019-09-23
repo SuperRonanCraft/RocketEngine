@@ -2,8 +2,8 @@
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 
-var owner = argument0;
-var dsBuff = argument1;
+//var owner = argument0;
+var dsBuff = argument[1];
 
 if (dsBuff[? BUFF_MAP.CLOCK] <= 0) exit;
 

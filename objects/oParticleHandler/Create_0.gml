@@ -451,10 +451,25 @@ part_type_size(parttype,0.5,1,-0.05,0);
 ds_map_add(ds_part,PARTICLES.FROST,parttype);
 ds_map_add(ds_part_amt, PARTICLES.FROST, 3);
 
+//LIGHTNING
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_flare);
+part_type_size(parttype,0.10,0.33,0,0);
+part_type_scale(parttype,2.29,2.67);
+part_type_color3(parttype,15061023,16777088,16777215);
+part_type_alpha3(parttype,0.69,0.58,0.06);
+part_type_speed(parttype,1,2,0.08,1);
+part_type_direction(parttype,0,360,0,0);
+part_type_gravity(parttype,0,270);
+part_type_blend(parttype,1);
+part_type_life(parttype,20,30);
+ds_map_add(ds_part,PARTICLES.LIGHTNING, parttype);
+ds_map_add(ds_part_amt, PARTICLES.LIGHTNING, 3);
+
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE, ANTIHEAL, ABSORBTION, LIFESTEAL,
-	CLEANSE, TRAIL, RELOAD, ASH, FROST,
+	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING
 }

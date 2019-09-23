@@ -2,9 +2,9 @@
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 
-var owner = argument0;
-var dsBuff = argument1;
-var arry = argument2;
+//var owner = argument0;
+var dsBuff = argument[1];
+var arry = argument[2];
 
 var inst = arry[0];
 var dmg = arry[1];

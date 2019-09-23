@@ -26,5 +26,5 @@ switch (c) {
 		break;
 }
 
-global.menu_color_hover_act = newc;
+//global.menu_color_hover_act = newc;
 color_main_hovering = newc;

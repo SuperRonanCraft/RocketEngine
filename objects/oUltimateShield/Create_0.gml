@@ -16,7 +16,7 @@ color = c_aqua;
 timer = 6 * room_speed;
 
 fading = true;
-fading_time = 30 * (room_speed / 30);
+//fading_time = 30 * (room_speed / 30);
 //false is fading in, true is out
 fading_type = false;
 //The alpha that we are at

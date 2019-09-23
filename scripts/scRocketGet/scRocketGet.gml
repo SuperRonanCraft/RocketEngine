@@ -281,11 +281,12 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketLightning_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketLightning_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketLightning_Destroy;
-		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketLightning_Draw;
+		//map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketLightning_Draw;
 		map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = scRocketLightning_DrawExplode;
 		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketLightning_CreateExplode;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
-		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.LIGHTNING];
+		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.LIGHTNING];
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.REVERSEGRAVITY];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_ORB;
 		break;

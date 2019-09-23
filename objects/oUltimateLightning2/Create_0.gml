@@ -8,4 +8,4 @@ grv = 0.05;
 first_step = false;
 
 spreading = false;
-spead_max = 10;
+//spead_max = 10;
