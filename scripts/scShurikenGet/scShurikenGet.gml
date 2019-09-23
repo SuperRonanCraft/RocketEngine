@@ -77,6 +77,9 @@ switch (shur) {
 		map[? SHURIKEN_MAP.COOLDOWN] = 50;
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 3;
+		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Brick_Player;
+		map[? SHURIKEN_MAP.STICK] = false;
+		map[? SHURIKEN_MAP.KBAMT] = 7;
 		break;
 		
     case SHURIKEN.MAGNET:

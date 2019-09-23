@@ -14,7 +14,8 @@
         "e60794b0-9b4b-4438-8153-eff68128b944",
         "fe7bfc59-eae7-4325-9ad8-be469bde3b00",
         "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
-        "8f0cdcf4-1cc8-4f4f-8707-f713f881b297"
+        "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
+        "015fe8bc-9f59-4c57-8ad3-b1dc8c8f81b8"
     ],
     "filterType": "GMScript",
     "folderName": "Shuriken",

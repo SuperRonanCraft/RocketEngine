@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "015fe8bc-9f59-4c57-8ad3-b1dc8c8f81b8",
+            "Value": {
+                "id": "df627f32-1d47-48b6-8d8c-4655ba10de83",
+                "resourcePath": "scripts\\scShuriken_Brick_Player\\scShuriken_Brick_Player.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "01a37422-a30a-42ae-a420-e16dd710cb6a",
             "Value": {
                 "id": "59fea421-8e17-401c-80e1-46cc35f66e74",
@@ -1708,6 +1716,14 @@
                 "id": "30f40cd7-cbed-4033-b6ff-4637c2d40ee3",
                 "resourcePath": "views\\41d8885a-28b4-444d-9673-a3c712437b74.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "42263c6a-258d-47b0-ae15-6b472227bc3f",
+            "Value": {
+                "id": "17a851ad-9750-449b-9380-584186480a81",
+                "resourcePath": "sprites\\sShuriken_Metal\\sShuriken_Metal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5399,6 +5415,14 @@
             }
         },
         {
+            "Key": "cd347484-d78f-4e1b-8cb1-bce105adf50e",
+            "Value": {
+                "id": "7fd220c7-7bbf-41da-bc5c-bae6715d058c",
+                "resourcePath": "sprites\\sShuriken_Shock\\sShuriken_Shock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cd4b082d-2f94-4f5e-aa15-324b2078ecc9",
             "Value": {
                 "id": "17252d7e-243b-47cd-9efe-69c419107b36",
@@ -6782,6 +6806,7 @@
         "fe7bfc59-eae7-4325-9ad8-be469bde3b00",
         "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
         "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
+        "015fe8bc-9f59-4c57-8ad3-b1dc8c8f81b8",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",

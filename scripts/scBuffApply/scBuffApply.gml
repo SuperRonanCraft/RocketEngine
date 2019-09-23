@@ -1,4 +1,4 @@
-/// @desc Apply a buff type to a shootable
+	/// @desc Apply a buff type to a shootable
 /// @arg buff-type
 /// @arg target
 /// @arg given-by
