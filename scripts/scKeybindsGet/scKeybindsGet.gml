@@ -1,6 +1,6 @@
 /// @arg key-type
 /// @arg keyboard-only?*
-var keyboard = false;
+var input = false;
 var onlyboard = argument_count > 1 ? argument[1] : false;
 var map = key_map;
 
@@ -8,57 +8,61 @@ var map = key_map;
 if (!controller_inuse)
 	switch (argument[0]) {
 		case KEYBIND_TYPE.LEFT:
-			keyboard = keyboard_check(map[? KEYBIND_MAP.LEFT]);
+			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.LEFT]));
 			break;
 		case KEYBIND_TYPE.RIGHT:
-			keyboard = keyboard_check(map[? KEYBIND_MAP.RIGHT]);
+			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.RIGHT]));
 			break;
 		case KEYBIND_TYPE.JUMP:
-			keyboard = keyboard_check_pressed(map[? KEYBIND_MAP.JUMP]);
+			input = keyboard_check_pressed(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.JUMP]));
 			break;
 		case KEYBIND_TYPE.SHOOT:
-			keyboard = keyboard_check(map[? KEYBIND_MAP.SHOOT]);
+			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.SHOOT]));
 			break;
 		case KEYBIND_TYPE.ULT:
-			keyboard = keyboard_check(map[? KEYBIND_MAP.ULTIMATE]);
+			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ULTIMATE]));
 			break;
 		case KEYBIND_TYPE.ABILITY:
-			keyboard = keyboard_check(map[? KEYBIND_MAP.ABILITY]);
+			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY]));
 			break;
 	}
 
-var keyboard_keys = keyboard;
-if (keyboard != false)
+var keyboard = input;
+if (input != false)
 	controller_lastused = false;
 
 //Gamepad
-if (!onlyboard && !keyboard && gamepad_is_connected(controller))
+if (!onlyboard && !input && gamepad_is_connected(keys))
 	switch (argument[0]) {
 		case KEYBIND_TYPE.LEFT:
-			if (gamepad_axis_value(controller, gp_axislh) < -0.2)
-				keyboard = abs(gamepad_axis_value(controller, gp_axislh));
+			if (gamepad_axis_value(keys, gp_axislh) < -0.2)
+				input = abs(gamepad_axis_value(keys, gp_axislh));
+			else
+				input = gamepad_button_check(keys, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.LEFT]));
 			break;
 		case KEYBIND_TYPE.RIGHT:
-			if (gamepad_axis_value(controller, gp_axislh) > 0.2)
-				keyboard = abs(gamepad_axis_value(controller, gp_axislh));
+			if (gamepad_axis_value(keys, gp_axislh) > 0.2)
+				input = abs(gamepad_axis_value(keys, gp_axislh));
+			else
+				input = gamepad_button_check(keys, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.RIGHT]));
 			break;
 		case KEYBIND_TYPE.JUMP:
-			keyboard = gamepad_button_check_pressed(controller, gp_face1); break;
+			input = gamepad_button_check_pressed(keys, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.JUMP_GP])); break;
 		case KEYBIND_TYPE.SHOOT:
-			keyboard = gamepad_button_check(controller, gp_shoulderr); break;
+			input = gamepad_button_check(keys, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.SHOOT_GP])); break;
 		case KEYBIND_TYPE.ULT:
-			keyboard = gamepad_button_check(controller, gp_face4); break;
+			input = gamepad_button_check(keys, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ULTIMATE_GP])); break;
 		case KEYBIND_TYPE.ABILITY:
-			keyboard = gamepad_button_check(controller, gp_face2); break;
+			input = gamepad_button_check(keys, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY_GP])); break;
 	}
 
-if (keyboard != keyboard_keys) {
+if (input != keyboard) {
 	controller_inuse = true;
 	controller_lastused = true;
 } else
 	controller_inuse = false;
 
-return keyboard;
+return input;
 
 enum KEYBIND_TYPE {
 	LEFT, RIGHT, JUMP, SHOOT, ULT, ABILITY

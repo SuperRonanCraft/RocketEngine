@@ -66,7 +66,9 @@ if (inputting) { //Are we inputting data?
 				ds_grid[# 4, option] = val;
 			}
 			break;
-		case menu_element_type.input_cache:
+		case menu_element_type.keybind:
+			if (global.gamepad_type != GAMEPAD_TYPE.KEYBOARD)
+				break;
 		case menu_element_type.input:
 			var key = noone;
 			if (keyboard_check_pressed(vk_anykey))
@@ -79,10 +81,14 @@ if (inputting) { //Are we inputting data?
 					variable_global_set(ds_grid[# 2, menu_option[page]], key);
 					keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
 				}
-			} else if (option == menu_element_type.input_cache) { //CACHING
-				if (key != ds_grid[# 3, menu_option[page]]) {
+			} else if (option == menu_element_type.keybind) { //CACHING
+				//ds_grid[# 3, menu_option[page]]
+				var index = 3;
+				if (global.gamepad_type == GAMEPAD_TYPE.KEYBOARD)
+					index = 2;
+				if (key != scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# index, i])) {
 					//AUDIO
-					scSettingsCache(ds_grid[# 2, menu_option[page]], key);
+					scSettingsCache(ds_grid[# index, i], key);
 					ds_grid[# 3, menu_option[page]] = key;
 					keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
 				}
@@ -204,7 +210,7 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 		case menu_element_type.page_transfer: //Change the page
 			for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
 				if (menu_pages_index[i] != ds_grid[# 2, menu_option[page]]) continue; //Find the index of the page related to the order
-				page = i; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
+				page = i; checked = false; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
 			break;
 		case menu_element_type.mass_toggle: //If mass toggling
 			if (inputting) {
@@ -262,7 +268,7 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 						variable_global_set(ds_grid[# 5, i], ds_grid[# 6, i]);
 					}
 			}
-		case menu_element_type.input_cache:
+		case menu_element_type.keybind:
 		case menu_element_type.input: //Simply inputting a character
 			inputting = !inputting; break;
 	}

@@ -30,7 +30,7 @@ enum menu_element_type {
 	//Takes a key input
 	input,
 	//Takes a key input, and caches
-	input_cache,
+	keybind,
 	//Go to a room
 	goto_room,
 	//List all weapon modifiers

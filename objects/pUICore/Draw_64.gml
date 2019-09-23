@@ -76,7 +76,7 @@ for (var i = 0; i < ds_height; i++) {
 			scUIDescription(ltx, lty, ds_grid, 6, i); break;
 		case menu_element_type.shift:
 		case menu_element_type.input:
-		case menu_element_type.input_cache:
+		case menu_element_type.keybind:
 		case menu_element_type.toggle:
 			scUIDescription(ltx, lty, ds_grid, 5, i); break;
 		case menu_element_type.page_transfer:
@@ -96,7 +96,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	rty = start_y[i];
 	rtx = start_x[i] + x_buffer * 2;
 	switch (ds_grid[# 1, i]) {
-		case menu_element_type.input_cache:
+		case menu_element_type.keybind:
 		case menu_element_type.input:
 			break;
 		default:
@@ -110,9 +110,13 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var left_shift = "<<", right_shift = ">>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
-			if (inputting && i == menu_option[page]) {
+			if (centered) { //We are centered
+				rty = start_y[i] + 25;
+				rtx = start_x[i];
+			}
+			if (inputting && i == menu_option[page])
 				c = color_element_input;
-				//HOVERING SUPPORT
+			/*	//HOVERING SUPPORT
 				var x1left = rtx;
 				var x2left = x1left + (string_width(left_shift) * scale_element);
 				var x1right = x2left + (string_width(string(current_array[current_val]) + "  ") * scale_element);
@@ -122,9 +126,10 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					left_shift = "<<<";
 				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, right_shift, buffer * 2, buffer, scale_element, fa_middle))
 					right_shift = ">>>";
-			}
+			}*/
 			//TEXT
-			scDrawText(rtx, rty, left_shift + " " + string(current_array[current_val]) + " " + right_shift, c, scale_element, noone, noone, fa_left);
+			scDrawText(rtx, rty, left_shift + " " + string(current_array[current_val]) + " " + right_shift, c, scale_element, noone, noone, !centered ? fa_left : fa_middle);
+			//scDrawText(rtx, rty, left_shift + " " + string(ds_grid[# 2, i]) + " " + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
@@ -153,10 +158,20 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
-		case menu_element_type.input_cache:
-			var string_val = scKeyToString(ds_grid[# 3, i]), c = color_element;
-			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
-			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
+		case menu_element_type.keybind:
+			//var string_val = scKeyToString(ds_grid[# 3, i]);
+			c = c_white;
+			var index = 3;
+			var scale = 2.5;
+			if (global.gamepad_type == GAMEPAD_TYPE.KEYBOARD) {
+				c = color_element;
+				index = 2;
+				scale = scale_element;
+				if (inputting && i == menu_option[page])
+					c = color_element_input;
+			}
+			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
+			//scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.mass_toggle:
 			var current_val = ds_grid[# 6, i], current_array = ds_grid[# 3, i], c = color_element;
@@ -185,7 +200,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		case menu_element_type.list_achievements: //Achievements list
 			scMenuAchievements(); break;
 		case menu_element_type.controls: //Key controls page
-			scMenuControls(); break;
+			scMenuControls(global.gamepad_type); break;
 		case menu_element_type.stats: //Stats page
 			var scale = scale_element;
 			//var map = oStatisticsHandler.stats_map;

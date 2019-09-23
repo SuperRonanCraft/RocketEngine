@@ -13,7 +13,8 @@
         "4625c1d0-30ae-4f6a-baf4-29b72253244d",
         "f3ed05dc-5349-48c1-8576-3dc5a4291ef4",
         "fd9125ea-14d1-4910-bba8-57b7aa71de84",
-        "17bc78cb-de05-47a7-9dc3-633d6c912999"
+        "17bc78cb-de05-47a7-9dc3-633d6c912999",
+        "c16d16e6-2b0d-4bde-9cd4-ee85bf232ef0"
     ],
     "filterType": "GMSprite",
     "folderName": "Weapon Modifiers",

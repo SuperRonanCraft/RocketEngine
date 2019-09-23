@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "1aace334-4b62-4771-9966-828d30264d83",
+            "Value": {
+                "id": "5500efee-e1ed-4ee7-891b-271e750c0194",
+                "resourcePath": "scripts\\scUIGamepadGet\\scUIGamepadGet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1ab9532c-4b5e-43c2-9107-c209038decdb",
             "Value": {
                 "id": "32603cc2-0237-4fff-9d74-1a182add07d4",
@@ -1399,6 +1407,14 @@
             }
         },
         {
+            "Key": "34590938-ef83-4780-891d-b68724bfb858",
+            "Value": {
+                "id": "500d282a-fce4-4bc9-a7dd-0d680c3d75d6",
+                "resourcePath": "sprites\\sUIGamepadBtns\\sUIGamepadBtns.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "348206bd-7d62-4f92-907a-94dafb9f8355",
             "Value": {
                 "id": "277153cf-d5f3-4871-adf0-e51b0af07ba5",
@@ -1492,6 +1508,14 @@
                 "id": "cb1eb799-a52c-4140-abe0-651acf8c302e",
                 "resourcePath": "views\\39190d70-c122-46c1-838d-9094962d3a5b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3951507e-1fcb-4c28-a9ff-ccdf6b0f09a9",
+            "Value": {
+                "id": "5e2392c9-6094-4110-bc4a-423f77a54fdc",
+                "resourcePath": "scripts\\scUIFlipPageGamepadNext\\scUIFlipPageGamepadNext.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2068,6 +2092,14 @@
                 "id": "19db3838-5bd7-4ab6-9f54-91758246d226",
                 "resourcePath": "sprites\\sPlayer_sword_knockBack2\\sPlayer_sword_knockBack2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4dc5f02b-3d00-433c-8f1c-a15ef7615a33",
+            "Value": {
+                "id": "e0079daf-d279-4902-9149-8ca5c18b9247",
+                "resourcePath": "scripts\\scUIGamepadDraw\\scUIGamepadDraw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3455,6 +3487,14 @@
             }
         },
         {
+            "Key": "83964d63-4c3e-471a-b836-d61e519096fb",
+            "Value": {
+                "id": "bd5d0a70-04d3-475f-82be-6c6d8b0377d1",
+                "resourcePath": "sprites\\sUIGamepadBtns2\\sUIGamepadBtns2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "83fdb6e8-b5e3-47d6-b780-461ed4c8a96c",
             "Value": {
                 "id": "95a38741-bc42-4595-919b-317a39f26c09",
@@ -3620,6 +3660,14 @@
                 "id": "98aec73b-33aa-49c7-81fc-a44c24fa5969",
                 "resourcePath": "sprites\\sRocket_Ice\\sRocket_Ice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "88e02e19-4085-4cc5-b0c0-2b9f13506f80",
+            "Value": {
+                "id": "b3533ed1-1a07-4b95-9051-dc733cc78be5",
+                "resourcePath": "scripts\\scUIFlipPageGamepadPrev\\scUIFlipPageGamepadPrev.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4791,6 +4839,14 @@
             }
         },
         {
+            "Key": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
+            "Value": {
+                "id": "9c863b83-f629-472f-b3e8-168ef0574e61",
+                "resourcePath": "sprites\\sUIGamepad\\sUIGamepad.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b4752211-23d4-4bb6-81c7-abfdef36c05a",
             "Value": {
                 "id": "e8c63a29-d245-47b3-b241-9cd5fd1c43c1",
@@ -5124,6 +5180,14 @@
                 "id": "ce250ad5-3634-43b6-ba98-3fb84555bbb4",
                 "resourcePath": "views\\c0f3ed0e-31e3-4ab8-b434-72cf3cac1d29.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c16d16e6-2b0d-4bde-9cd4-ee85bf232ef0",
+            "Value": {
+                "id": "79596480-11ba-4481-a368-6bdc604567b4",
+                "resourcePath": "sprites\\s_modifier_electric\\s_modifier_electric.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6828,6 +6892,8 @@
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "8d728d6f-9105-4198-8af2-8e218a26f3ba",
+        "1aace334-4b62-4771-9966-828d30264d83",
+        "4dc5f02b-3d00-433c-8f1c-a15ef7615a33",
         "5238e325-fb37-4c36-b216-e884eaababf9",
         "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
         "b4976653-506c-48da-a5a6-798c696a4d78",
@@ -6869,6 +6935,8 @@
         "4f496e7c-5b8f-4f44-bd34-75ba158982c8",
         "2f71d680-a22e-4051-bb86-74d44dd433c0",
         "5e5885b5-e793-4ccb-8335-06ce6b44dc87",
+        "88e02e19-4085-4cc5-b0c0-2b9f13506f80",
+        "3951507e-1fcb-4c28-a9ff-ccdf6b0f09a9",
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
         "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
         "c251b514-5413-4eb8-bda4-3e9c880f56e9",

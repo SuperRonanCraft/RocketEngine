@@ -46,6 +46,7 @@ page_weapons = 0;
 
 ds_controls = scUICreateMenuPage(
 	["",			menu_element_type.controls],
+	["GAMEPAD TYPE",	menu_element_type.shift,	["KEYBOARD", "PS4", "XBOX"],	"gamepad_type",	global.gamepad_type],
 	["KEYBINDS",	menu_element_type.page_transfer,	menu_page.keybinds2_1, "Change your keys!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );

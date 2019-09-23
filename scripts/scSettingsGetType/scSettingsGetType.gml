@@ -18,29 +18,59 @@ switch (type) {
 			case SETTINGS.PLAYER_1_SHOOT: val = "player_1_shoot"; break;
 			case SETTINGS.PLAYER_1_ABILITY: val = "player_1_ability"; break;
 			case SETTINGS.PLAYER_1_ULTIMATE: val = "player_1_ultimate"; break;
+			case SETTINGS.PLAYER_1_LEFT_GP: val = "player_1_left_gp"; break;
+			case SETTINGS.PLAYER_1_RIGHT_GP: val = "player_1_right_gp"; break;
+			case SETTINGS.PLAYER_1_JUMP_GP: val = "player_1_jump_gp"; break;
+			case SETTINGS.PLAYER_1_SHOOT_GP: val = "player_1_shoot_gp"; break;
+			case SETTINGS.PLAYER_1_ABILITY_GP: val = "player_1_ability_gp"; break;
+			case SETTINGS.PLAYER_1_ULTIMATE_GP: val = "player_1_ultimate_gp"; break;
+			case SETTINGS.PLAYER_1_GAMEPAD_TYPE: val = "player_1_gamepad"; break;
 			case SETTINGS.PLAYER_2_LEFT: val = "player_2_left"; break;
 			case SETTINGS.PLAYER_2_RIGHT: val = "player_2_right"; break;
 			case SETTINGS.PLAYER_2_JUMP: val = "player_2_jump"; break;
 			case SETTINGS.PLAYER_2_SHOOT: val = "player_2_shoot"; break;
 			case SETTINGS.PLAYER_2_ABILITY: val = "player_2_ability"; break;
 			case SETTINGS.PLAYER_2_ULTIMATE: val = "player_2_ultimate"; break;
+			case SETTINGS.PLAYER_2_LEFT_GP: val = "player_2_left_gp"; break;
+			case SETTINGS.PLAYER_2_RIGHT_GP: val = "player_2_right_gp"; break;
+			case SETTINGS.PLAYER_2_JUMP_GP: val = "player_2_jump_gp"; break;
+			case SETTINGS.PLAYER_2_SHOOT_GP: val = "player_2_shoot_gp"; break;
+			case SETTINGS.PLAYER_2_ABILITY_GP: val = "player_2_ability_gp"; break;
+			case SETTINGS.PLAYER_2_ULTIMATE_GP: val = "player_2_ultimate_gp"; break;
+			case SETTINGS.PLAYER_2_GAMEPAD_TYPE: val = "player_2_gamepad"; break;
 			default: val = noone; break;
 		}
 		break;
 	case SETTINGS_TYPE.DEFAULT:
 		switch (setting) {
+			//PLAYER 1
 			case SETTINGS.PLAYER_1_LEFT: val = ord("A"); break;
 			case SETTINGS.PLAYER_1_RIGHT: val = ord("D"); break;
 			case SETTINGS.PLAYER_1_JUMP: val = ord("W"); break;
 			case SETTINGS.PLAYER_1_SHOOT: val = ord("S"); break;
 			case SETTINGS.PLAYER_1_ABILITY: val = ord("E"); break;
 			case SETTINGS.PLAYER_1_ULTIMATE: val = ord("Q"); break;
+			case SETTINGS.PLAYER_1_LEFT_GP: val = gp_axislh; break;
+			case SETTINGS.PLAYER_1_RIGHT_GP: val = gp_axislh; break;
+			case SETTINGS.PLAYER_1_JUMP_GP: val = gp_face1; break;
+			case SETTINGS.PLAYER_1_SHOOT_GP: val = gp_shoulderr; break;
+			case SETTINGS.PLAYER_1_ABILITY_GP: val = gp_face4; break;
+			case SETTINGS.PLAYER_1_ULTIMATE_GP: val = gp_face2; break;
+			case SETTINGS.PLAYER_1_GAMEPAD_TYPE: val = GAMEPAD_TYPE.PS4; break;
+			//PLAYER 2
 			case SETTINGS.PLAYER_2_LEFT: val = vk_left; break;
 			case SETTINGS.PLAYER_2_RIGHT: val = vk_right; break;
 			case SETTINGS.PLAYER_2_JUMP: val = vk_up; break;
 			case SETTINGS.PLAYER_2_SHOOT: val = vk_down; break;
 			case SETTINGS.PLAYER_2_ABILITY: val = ord("<"); break;
 			case SETTINGS.PLAYER_2_ULTIMATE: val = ord(">"); break;
+			case SETTINGS.PLAYER_2_LEFT_GP: val = gp_axislh; break;
+			case SETTINGS.PLAYER_2_RIGHT_GP: val = gp_axislh; break;
+			case SETTINGS.PLAYER_2_JUMP_GP: val = gp_face1; break;
+			case SETTINGS.PLAYER_2_SHOOT_GP: val = gp_shoulderr; break;
+			case SETTINGS.PLAYER_2_ABILITY_GP: val = gp_face4; break;
+			case SETTINGS.PLAYER_2_ULTIMATE_GP: val = gp_face2; break;
+			case SETTINGS.PLAYER_2_GAMEPAD_TYPE: val = GAMEPAD_TYPE.PS4; break;
 			default: val = 0; break;
 		}
 		break;
@@ -67,6 +97,13 @@ enum SETTINGS {
 	PLAYER_1_SHOOT,
 	PLAYER_1_ABILITY,
 	PLAYER_1_ULTIMATE,
+	PLAYER_1_LEFT_GP,
+	PLAYER_1_RIGHT_GP,
+	PLAYER_1_JUMP_GP,
+	PLAYER_1_SHOOT_GP,
+	PLAYER_1_ABILITY_GP,
+	PLAYER_1_ULTIMATE_GP,
+	PLAYER_1_GAMEPAD_TYPE,
 	//Keybinds 2
 	PLAYER_2_LEFT,
 	PLAYER_2_RIGHT,
@@ -74,6 +111,13 @@ enum SETTINGS {
 	PLAYER_2_SHOOT,
 	PLAYER_2_ABILITY,
 	PLAYER_2_ULTIMATE,
+	PLAYER_2_LEFT_GP,
+	PLAYER_2_RIGHT_GP,
+	PLAYER_2_JUMP_GP,
+	PLAYER_2_SHOOT_GP,
+	PLAYER_2_ABILITY_GP,
+	PLAYER_2_ULTIMATE_GP,
+	PLAYER_2_GAMEPAD_TYPE,
 	SECTION
 }
 

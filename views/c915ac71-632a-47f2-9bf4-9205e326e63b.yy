@@ -10,7 +10,7 @@
         "8d728d6f-9105-4198-8af2-8e218a26f3ba"
     ],
     "filterType": "GMScript",
-    "folderName": "PlayerUI",
+    "folderName": "Player",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

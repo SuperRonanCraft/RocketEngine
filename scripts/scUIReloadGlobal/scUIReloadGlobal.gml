@@ -7,14 +7,12 @@ for (var a = 0; a < array_length_1d(menu_pages); a++) {
 	for (var i = 0; i < ds_grid_height(ds_g); i++) {
 		switch (ds_g[# 1, i]) { //Only update specific grids that have global variables
 			case menu_element_type.slider:
+			case menu_element_type.shift:
 			case menu_element_type.toggle:
 				if (ds_g[# 3, i] != noone)
 					ds_g[# 4, i] = variable_global_get(ds_g[# 3, i]);
 				break;
 			case menu_element_type.input: ds_g[# 3, i] = variable_global_get(ds_g[# 2, i]); break;
-			case menu_element_type.input_cache:
-				ds_g[# 3, i] = scSettingsGetType(SETTINGS_TYPE.VALUE, ds_g[# 2, i]);
-				break;
 		}
 	}
 }

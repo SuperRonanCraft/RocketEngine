@@ -59,6 +59,11 @@ switch (modifier) {
 		map[? WEAPON_MODIFIER_MAP.NAME] = "METAL"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Heavy hitter";
 		break;
+	case WEAPON_MODIFIER.ELECTRIC: 
+		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_electric; 
+		map[? WEAPON_MODIFIER_MAP.NAME] = "ELECTRIC"
+		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "High voltage mayhem!";
+		break;
 	default: break;
 }
 
