@@ -2,7 +2,8 @@
 var map = weapon_map;
 if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	//The projectile sprite
-	var sprite = map[? WEAPON_MAP.GUI_ICON];
+	//var sprite = map[? WEAPON_MAP.GUI_ICON];
+	var sprite = s_modifier_default; //scWeaponModifyGetType(map[? WEAPON_MAP.TYPE], WEAPON_MODIFIER_MAP.ICON);
 	//Dimentions of sprite
 	var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
@@ -86,8 +87,9 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	
 	//WEAPON SPRITE EQUIPPED
 	var scale = map[? WEAPON_MAP.GUI_WEAPON_SCALE];
-	draw_sprite_ext(sprite, 0, xpos, ypos, (team == TEAM.LEFT ? 1 : -1) * scale, 1 * scale, 0, 
+	var xpos = xpos + ((team == TEAM.LEFT ? -1 : 1) * (w / 2))
+	draw_sprite_ext(sprite, 0, xpos + ((scale) / 4), ypos - (h / 4) + ((h * scale) / 4), scale / 2, scale / 2, 0, 
 		c_white, map[? WEAPON_MAP.ENABLED] ? 0.8 : 0.3);
 	//Make the scale smaller over time
-	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = max(scale * 0.95, 1);
+	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = max(map[? WEAPON_MAP.GUI_WEAPON_SCALE] * 0.95, 1);
 }
