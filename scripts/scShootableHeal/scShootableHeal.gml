@@ -1,12 +1,14 @@
 /// @desc Hit a shootable
 /// @arg healing-inst
 /// @arg health
-/// @arg play-sound
+/// @arg show-healing
+/// @arg play-sound*
 
 var healable = argument[0];
 var heal = argument[1];
 var healed = 0; //Amount we actually healed
-var sound = argument[2];
+var show = argument[2];
+var sound = argument_count > 3 ? (argument[3] != noone ? argument[3] : true ) : true;
 
 with (healable) {
 	var map = shootable_map;
@@ -17,12 +19,14 @@ with (healable) {
 		}
 	}
 	hp_scale += 2; //GUI hp scale
-	//if (sound)
-	//	scPlaySound(SOUND.EFFECT_HIT);
-	with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
-		value_damage = healed;
-		damage_type = DAMAGETYPE.HEALING;
+	if (sound) {
+		//scPlaySound(SOUND.EFFECT_HIT);
 	}
+	if (show && healed > 0)
+		with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
+			value_damage = healed;
+			damage_type = DAMAGETYPE.HEALING;
+		}
 }
 
 return healed;

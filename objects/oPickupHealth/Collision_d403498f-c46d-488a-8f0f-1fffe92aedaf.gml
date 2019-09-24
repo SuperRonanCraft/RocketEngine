@@ -6,7 +6,7 @@ if (item != noone) {
 	with (other) {
 		if (shootable_map[? SHOOTABLE_MAP.HEALTH] > 0)
 			if (other.healing > 0) {
-				if (scShootableHeal(id, other.healing, true) > 0)
+				if (scShootableHeal(id, other.healing, true, true) > 0)
 					added = true;
 			} else {
 				scShootableDamage(id, id, false, false, abs(other.healing), false);

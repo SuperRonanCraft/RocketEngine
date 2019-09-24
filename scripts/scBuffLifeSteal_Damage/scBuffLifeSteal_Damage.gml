@@ -10,11 +10,11 @@ var inst = arry[0];
 var dmg = arry[1];
 
 if (shootable_map[? SHOOTABLE_MAP.CAN_HEAL]) {
-	repeat (dmg)
-		if (shootable_map[? SHOOTABLE_MAP.HEALTH] + 1 <= shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL])
-			shootable_map[? SHOOTABLE_MAP.HEALTH]++;
-	hp_scale += 2;
-	
+	scShootableHeal(id, dmg, true, false);
+	//repeat (dmg)
+	//	if (shootable_map[? SHOOTABLE_MAP.HEALTH] + 1 <= shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL])
+	//		shootable_map[? SHOOTABLE_MAP.HEALTH]++;
+	//hp_scale += 2;
 	var updated = false; //Have we updated a previous player?
 	
 	var list = dsBuff[? "players_hit"];
