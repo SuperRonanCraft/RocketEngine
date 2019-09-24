@@ -36,7 +36,7 @@ map[? ROCKET_MAP.ROCKET_ALPHA] = 1; //Rockets alpha value
 map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE3]; //rocket particle trail
 map[? ROCKET_MAP.PARTICLE_EXPLOSION] = noone; //Explosion particle
 map[? ROCKET_MAP.PARTICLE_AMT] = 5; //rocket particle trail amount
-map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = true; //Make the orientation of particle respect to rocket
+map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false; //Make the orientation of particle respect its direction
 //SCREEN SHAKE
 map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2 * TIME_SPEED; //Screen shake magnitude
 map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * TIME_SPEED; //Screen shake frame

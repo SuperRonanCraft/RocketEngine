@@ -7,7 +7,9 @@ scBuffHandler(BUFF_EVENT.DRAW);
 scUltimateHandlerDraw();
 
 //Animate the player in their current state
+scPalleteSwapSet(sPallete_default, index_pallete);
 scAnimationState();
+scPalleteSwapReset();
 
 //Combo draw
 scComboDraw();

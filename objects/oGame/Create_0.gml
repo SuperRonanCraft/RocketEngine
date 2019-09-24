@@ -93,3 +93,6 @@ global.score_mode_p2_wins = 0;
 
 //Set default font
 draw_set_font(fPixel);
+
+//Pallete Stuff
+scPalleteSwapStart(shPaletteSwap);

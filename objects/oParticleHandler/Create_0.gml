@@ -99,14 +99,14 @@ ds_map_add(ds_part_amt, PARTICLES.SMOKE1, 2 * amt);
 
 parttype = part_type_create();
 part_type_shape(parttype,pt_shape_square);
-part_type_size(parttype,0.15,0.35,0,0);
+part_type_size(parttype,0.1,0.2,0,0);
 part_type_scale(parttype,1,1);
 part_type_color3(parttype,8421504,128,16777215);
 part_type_alpha3(parttype,1,1,0);
 part_type_speed(parttype,1,1,0,0);
 part_type_direction(parttype,0,359,0,0);
 part_type_gravity(parttype,0,270);
-part_type_orientation(parttype,0,0,0,1,0);
+part_type_orientation(parttype,0,0,0,1,1);
 part_type_blend(parttype,1);
 part_type_life(parttype,30,50);
 ds_map_add(ds_part, PARTICLES.SMOKE2, parttype);
@@ -135,14 +135,26 @@ ds_map_add(ds_part, PARTICLES.SMOKE3, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SMOKE3, 5 * amt);
 
 parttype = part_type_create();
-part_type_sprite(parttype, s_psand, false, false, true);
+part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.10,0.10,0,0);
+part_type_scale(parttype,1,1);
+part_type_color1(parttype,7451122);
+part_type_alpha2(parttype,1,0);
+part_type_speed(parttype,0.50,1,-0.02,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0,270);
+part_type_orientation(parttype,0,0,0,0,1);
+part_type_blend(parttype,1);
+part_type_life(parttype,40,60);
+
+/*part_type_sprite(parttype, s_psand, false, false, true);
 part_type_size(parttype, 0.4, 0.6, 0.02 * spd, 0);
 part_type_direction(parttype, 90, 270, 0, 1);
 part_type_alpha3(parttype,1,0.6,0);
 part_type_speed(parttype, 0.75 * spd, 1.2 * spd, 0, 0);
-part_type_life(parttype, 15 * life, 30 * life);
+part_type_life(parttype, 15 * life, 30 * life);*/
 ds_map_add(ds_part, PARTICLES.SAND, parttype);
-ds_map_add(ds_part_amt, PARTICLES.SAND, 3 * amt);
+ds_map_add(ds_part_amt, PARTICLES.SAND, 1 * amt);
 
 parttype = part_type_create();
 part_type_sprite(parttype, s_pslime, false, false, true);
@@ -360,17 +372,6 @@ part_type_direction(parttype, 90, 90, 0, 0);
 ds_map_add(ds_part, PARTICLES.DAMAGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.DAMAGE, 1);
 
-//SCRAPE
-parttype = part_type_create();
-part_type_sprite(parttype, s_pscrape, false, false, true);
-part_type_direction(parttype, 90, 90, 0, 0);
-part_type_size(parttype, 0.55, 0.85, -0.025 * spd, 0);
-part_type_speed(parttype, 5 * spd, 7 * spd, 0 * spd, 0);
-part_type_life(parttype, 5 * life, 10 * life);
-//part_type_gravity(parttype, 0.8,270);
-ds_map_add(ds_part, PARTICLES.SCRAPE, parttype);
-ds_map_add(ds_part_amt, PARTICLES.SCRAPE, 1);
-
 //ANTIHEAL
 parttype = part_type_create();
 part_type_sprite(parttype, s_pantiheal, false, false, true);
@@ -453,12 +454,11 @@ ds_map_add(ds_part_amt, PARTICLES.FROST, 3);
 
 //LIGHTNING
 parttype = part_type_create();
-part_type_shape(parttype,pt_shape_flare);
-part_type_size(parttype,0.10,0.33,0,0);
-part_type_scale(parttype,2.29,2.67);
+part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.05,0.1,0,0);
 part_type_color3(parttype,15061023,16777088,16777215);
 part_type_alpha3(parttype,0.69,0.58,0.06);
-part_type_speed(parttype,1,2,0.08,1);
+part_type_speed(parttype,1,2,-0.02,2);
 part_type_direction(parttype,0,360,0,0);
 part_type_gravity(parttype,0,270);
 part_type_blend(parttype,1);
@@ -466,10 +466,60 @@ part_type_life(parttype,20,30);
 ds_map_add(ds_part,PARTICLES.LIGHTNING, parttype);
 ds_map_add(ds_part_amt, PARTICLES.LIGHTNING, 3);
 
+//SCRAPE_FLARE
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.10,0.15,-0.01,0);
+part_type_scale(parttype,1,1);
+part_type_color2(parttype,4227327,16777215);
+part_type_alpha2(parttype,1,0);
+part_type_speed(parttype,1.5,2,-0.02,1);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0,270);
+part_type_orientation(parttype,0,0,0,0,0);
+part_type_blend(parttype,1);
+part_type_life(parttype,60,60);
+ds_map_add(ds_part,PARTICLES.SCRAPE_FLARE, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SCRAPE_FLARE, 1);
+
+//SCRAPING
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.05,0.15,0,0);
+part_type_scale(parttype,1,1);
+part_type_color3(parttype,16777215,33023,65535);
+part_type_alpha1(parttype,1);
+part_type_speed(parttype,2,2.50,-0.02,1);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0,270);
+part_type_orientation(parttype,0,0,0,0,0);
+part_type_blend(parttype,1);
+part_type_life(parttype,4,8);
+part_type_death(parttype, 3, ds_part[? PARTICLES.SCRAPE_FLARE]);
+ds_map_add(ds_part,PARTICLES.SCRAPING, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SCRAPING, 1);
+
+//METAL
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.08,0.12,0,0);
+part_type_scale(parttype,1,1);
+part_type_color2(parttype,128,0);
+part_type_alpha2(parttype,1,0);
+part_type_speed(parttype,0.50,1,0,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0,270);
+part_type_orientation(parttype,0,0,0,0,1);
+part_type_blend(parttype,1);
+part_type_life(parttype,40,60);
+ds_map_add(ds_part,PARTICLES.METAL, parttype);
+ds_map_add(ds_part_amt, PARTICLES.METAL, 1);
+
+
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
-	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, SCRAPE, ANTIHEAL, ABSORBTION, LIFESTEAL,
-	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING
+	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
+	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL
 }

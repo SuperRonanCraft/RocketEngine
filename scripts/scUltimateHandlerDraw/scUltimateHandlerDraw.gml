@@ -36,7 +36,7 @@ if (map[? ULTIMATE_CASTING_MAP.CHARGE] == map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]
 	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
 	var dir = irandom(360);
 	var dis = irandom_range(20, 30);
-	scDrawLightning(x, y, x + lengthdir_x(dis, dir), y + lengthdir_y(dis, dir), irandom_range(2, 5), c_aqua);
+	scDrawLightning(x, y, x + lengthdir_x(dis, dir), y + lengthdir_y(dis, dir), irandom_range(2, 5), c_yellow);
 }
 
 //Casted script (one event)

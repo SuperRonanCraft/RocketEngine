@@ -222,7 +222,8 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpiked_Step;
-		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.METAL];
+		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.METAL];
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.TRAP;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
@@ -281,7 +282,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_STEP] = scRocketLightning_Step;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketLightning_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketLightning_Destroy;
-		//map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketLightning_Draw;
+		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketLightning_Draw;
 		map[? ROCKET_MAP.EXPLOSION_CREATE_DRAW] = scRocketLightning_DrawExplode;
 		map[? ROCKET_MAP.EXPLOSION_CREATE] = scRocketLightning_CreateExplode;
 		map[? ROCKET_MAP.TIMER] = 120 * vartime;
@@ -323,7 +324,7 @@ switch (roc) {
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Peace;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.HACKED];
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLEEPDART;
-		map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
+		//map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
 		break;
 	
 	case ROCKET.TELEPORT:
@@ -397,11 +398,12 @@ switch (roc) {
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketBrick_Create;
 		map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketBrick_Destroy;
 		map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = scRocketBrick_Draw;
-		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SMOKE1];
+		map[? ROCKET_MAP.PARTICLE_TRAIL] = noone;//oParticleHandler.ds_part[? PARTICLES.SMOKE2];
+		map[? ROCKET_MAP.PARTICLE_AMT] = 1;
 		map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Brick;
 		map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BRICKWALL;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
-		map[? "scrape_part"] = PARTICLES.SCRAPE;
+		map[? "scrape_part"] = PARTICLES.SCRAPING;
 		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		

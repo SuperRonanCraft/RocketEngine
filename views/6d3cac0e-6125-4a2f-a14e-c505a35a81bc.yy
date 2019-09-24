@@ -18,7 +18,8 @@
         "01a37422-a30a-42ae-a420-e16dd710cb6a",
         "d9014ee8-e1aa-4d07-800f-7bb82a6e734a",
         "0037f48f-fa68-4284-9328-98450ac10730",
-        "9c3aae89-90b3-4a3d-8655-7eefa58dcf6d"
+        "9c3aae89-90b3-4a3d-8655-7eefa58dcf6d",
+        "0796b6a8-c1a8-4869-936c-1afb722137f1"
     ],
     "filterType": "GMSprite",
     "folderName": "PlayerAnimation_RM",
