@@ -1,4 +1,5 @@
 /// @arg Weapon
+/// @arg Modifier
 var roc = argument0;
 var map = weapon_map;
 var old_rocket_map = map[? WEAPON_MAP.MAP];

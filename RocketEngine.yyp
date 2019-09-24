@@ -2271,6 +2271,14 @@
             }
         },
         {
+            "Key": "52e8355b-310e-4b7b-82e5-fd720d385a73",
+            "Value": {
+                "id": "6ba85ea5-1e36-4b99-9970-bac27bf933ea",
+                "resourcePath": "scripts\\scWeaponModifyGetWeapon\\scWeaponModifyGetWeapon.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "52faa32f-1111-4519-8b9e-9fea2c333549",
             "Value": {
                 "id": "7e2458a5-3c0e-4d32-bded-57e3a9f544ff",
@@ -6716,6 +6724,7 @@
         "ea910044-8ba1-412f-b62c-58b8fac7fbea",
         "b4cbad0d-4085-4aff-954c-ce595b63b3a8",
         "238aa5dc-eb3f-4b05-8aa0-05a4a8b3ba00",
+        "52e8355b-310e-4b7b-82e5-fd720d385a73",
         "9ec574d6-8069-4dfa-aa1d-de09a5581657",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "b06581ab-c385-498f-9940-64f5a039dcab",
