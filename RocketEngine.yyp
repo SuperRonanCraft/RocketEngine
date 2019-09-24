@@ -3351,6 +3351,14 @@
             }
         },
         {
+            "Key": "7cdfb4a6-348c-4854-8f1f-45d90f4837cd",
+            "Value": {
+                "id": "94ad7657-6f4b-4242-9d62-a437c3bdd1f6",
+                "resourcePath": "datafiles_yy\\PalleteSword.pal.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "7cf70f27-e8da-4d90-9c36-a7431b22ca02",
             "Value": {
                 "id": "915ba9f1-0412-46d3-8787-4630fe298bb4",
@@ -3844,6 +3852,14 @@
                 "id": "e1295172-36a1-4a32-b959-2d7ce09639a6",
                 "resourcePath": "views\\8f62e0c2-4fc9-4e53-ab8e-0cd44a955b70.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "900b03fa-a59d-4381-b0d5-16e96eff6b1c",
+            "Value": {
+                "id": "db259610-7496-4f22-9d73-623dc5f1db6c",
+                "resourcePath": "sprites\\sPallete_sword\\sPallete_sword.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
