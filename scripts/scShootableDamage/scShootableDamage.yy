@@ -1,8 +1,8 @@
 {
-    "id": "30927b15-6586-479c-b2ee-1fbced56dcc6",
+    "id": "27b0d615-2fba-4f17-abd9-48c282d140de",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scKnockbackGive",
+    "name": "scShootableDamage",
     "IsCompatibility": false,
     "IsDnD": false
 }

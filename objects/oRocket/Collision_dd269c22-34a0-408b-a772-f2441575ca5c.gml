@@ -16,7 +16,7 @@ if (!destroy && (isPlayer ? owner.team != other.team : true)) //Not destroy and 
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other, owner);
 			//Knockback
-			scKnockbackGive(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
+			scShootableKnockback(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
 		}
 		
 		//Damage player
@@ -24,7 +24,7 @@ if (!destroy && (isPlayer ? owner.team != other.team : true)) //Not destroy and 
 		//if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
 		//	dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 		
-		if (scDamageShootable(owner, other, false, true, dmg) && isPlayer)
+		if (scShootableDamage(owner, other, false, true, dmg) && isPlayer)
 			other.causeOfDeath = rocket_map[? ROCKET_MAP.DEATHCAUSE];
 		
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])

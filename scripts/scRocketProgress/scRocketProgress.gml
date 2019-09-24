@@ -19,7 +19,7 @@ if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 		scSpawnRocket(x + lengthdir_x(offset, dir), y + lengthdir_y(offset, dir), depth + 1, dir, id, map);
 		if (map[? WEAPON_MAP.AMMO] > 0)
 			map[? WEAPON_MAP.AMMO]--;
-		scRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
+		scShootableRecoil(rocket_map[? ROCKET_MAP.RECOIL]);
 		//Add to rockets shot count
 		if (track_stats)
 			scStatsCacheAddGeneral(STATISTICS_GENERAL.ROCKETS_SHOT, 1);

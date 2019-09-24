@@ -2,7 +2,7 @@
 
 with (other)
 	if (shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
-		scDamageShootable(noone, id, false, false, 1, true);
+		scShootableDamage(noone, id, false, false, 1, true);
 		if (shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 			var xx = xstart, yy = ystart;
 			with (oGMMSingle) {

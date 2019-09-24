@@ -14,7 +14,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEEDEXPLOSION], 10);
 	if (dsBuff[? BUFF_MAP.GIVEN_BY] != noone && scBuffFind(dsBuff[? BUFF_MAP.GIVEN_BY], BUFFTYPE.DAMAGE))
 		dmg *= 2;
-	scDamageShootable(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, false, dmg, noone, noone, false);
+	scShootableDamage(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, false, dmg, noone, noone, false);
 	if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0)
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEEDEXPLOSION], 25);	
 	scBuffRemove(owner, dsBuff);

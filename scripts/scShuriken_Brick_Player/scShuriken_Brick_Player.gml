@@ -32,7 +32,7 @@ if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this playe
 			//Damage player
 			var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
 		
-			if (scDamageShootable(owner, other, false, true, dmg) && isPlayer)
+			if (scShootableDamage(owner, other, false, true, dmg) && isPlayer)
 				other.causeOfDeath = shuriken_map[? SHURIKEN_MAP.DEATHCAUSE];
 		
 			if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])

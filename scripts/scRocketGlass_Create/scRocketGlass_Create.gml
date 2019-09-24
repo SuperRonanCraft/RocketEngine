@@ -57,7 +57,7 @@ if (playerHit != noone) {
 		
 		if ( (playerHit.x <= wallHit.x && currentDir == 0) || (playerHit.x >= wallHit.x && currentDir == 180)) {
 				var rocket_map = owner.weapon_map[? WEAPON_MAP.MAP];
-				scDamageShootable(owner, playerHit, false, false, rocket_map[? ROCKET_MAP.DAMAGE], false);
+				scShootableDamage(owner, playerHit, false, false, rocket_map[? ROCKET_MAP.DAMAGE], false);
 				part_particles_create(global.ParticleSystem1, owner.x, owner.y - 50, oParticleHandler.ds_part[? PARTICLES.RELOAD], 1);
 				owner.weapon_map[? WEAPON_MAP.COOLDOWN_TIME] /= 3;
 				

@@ -15,13 +15,13 @@ if (doing_damage)
 			///	dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			if (isPlayer) {
 				//Knockback
-				scKnockbackGive(p, rocket_map[? ROCKET_MAP.KBAMT] * p.knockback_multiplier, point_direction(x, y, p.x, p.y));
+				scShootableKnockback(p, rocket_map[? ROCKET_MAP.KBAMT] * p.knockback_multiplier, point_direction(x, y, p.x, p.y));
 				//Add buff
 				if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i], parent);
 			}
 			//Damage shootable
-			if(scDamageShootable(other.parent, p, false, true, dmg) && isPlayer)
+			if(scShootableDamage(other.parent, p, false, true, dmg) && isPlayer)
 				p.causeOfDeath = deathCause;
 	
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?

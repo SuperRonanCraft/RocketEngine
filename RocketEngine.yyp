@@ -1098,7 +1098,7 @@
             "Key": "27b0d615-2fba-4f17-abd9-48c282d140de",
             "Value": {
                 "id": "6075824e-7402-4bc0-9628-eeadecd4f8d3",
-                "resourcePath": "scripts\\scDamageShootable\\scDamageShootable.yy",
+                "resourcePath": "scripts\\scShootableDamage\\scShootableDamage.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1330,7 +1330,7 @@
             "Key": "30927b15-6586-479c-b2ee-1fbced56dcc6",
             "Value": {
                 "id": "2bd7d6b1-b5c6-4665-85dc-240a173709fe",
-                "resourcePath": "scripts\\scKnockbackGive\\scKnockbackGive.yy",
+                "resourcePath": "scripts\\scShootableKnockback\\scShootableKnockback.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2250,7 +2250,7 @@
             "Key": "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
             "Value": {
                 "id": "6cd3ccda-9fe1-42c0-b4d8-2b8544c05379",
-                "resourcePath": "scripts\\scRecoil\\scRecoil.yy",
+                "resourcePath": "scripts\\scShootableRecoil\\scShootableRecoil.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5135,6 +5135,14 @@
             }
         },
         {
+            "Key": "be330bc3-bd8d-4f5d-8f6d-f43b1def1a9c",
+            "Value": {
+                "id": "dbede0f2-1666-4ada-b9c4-c044d1e6c586",
+                "resourcePath": "scripts\\scShootableHeal\\scShootableHeal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "becb47ca-0c0e-484f-8cc6-9fbf3f8bc4b6",
             "Value": {
                 "id": "05933a0b-c2db-4672-b57a-833733e397fb",
@@ -5420,6 +5428,14 @@
                 "id": "6e91c59d-9028-43a1-b770-80a5511a1d7e",
                 "resourcePath": "scripts\\scBuffLifeSteal_Damage\\scBuffLifeSteal_Damage.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "caf1b992-1084-4003-acc1-cc9de2975271",
+            "Value": {
+                "id": "098a9471-9f43-4c92-b8ce-164c99b9e6d3",
+                "resourcePath": "views\\caf1b992-1084-4003-acc1-cc9de2975271.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6726,15 +6742,12 @@
         "238aa5dc-eb3f-4b05-8aa0-05a4a8b3ba00",
         "52e8355b-310e-4b7b-82e5-fd720d385a73",
         "9ec574d6-8069-4dfa-aa1d-de09a5581657",
-        "27b0d615-2fba-4f17-abd9-48c282d140de",
         "b06581ab-c385-498f-9940-64f5a039dcab",
         "819c3721-6078-47b0-91cb-c171738ea97b",
         "49bfee05-af25-4fd2-9718-94f2cf1ccc2f",
         "0057775c-c45c-43a4-9949-ab4d3b9998dc",
         "a0180b61-f5da-4c63-91f0-ced21ec54f66",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
-        "30927b15-6586-479c-b2ee-1fbced56dcc6",
-        "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
         "b386a635-6456-466a-9dc6-6f2d438ff1e3",
         "8d677245-483e-47c4-a366-a6bb03bcb76b",
         "e9299095-87f4-4b5e-a689-8746fbc3f450",
@@ -6951,6 +6964,10 @@
         "88e02e19-4085-4cc5-b0c0-2b9f13506f80",
         "3951507e-1fcb-4c28-a9ff-ccdf6b0f09a9",
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
+        "27b0d615-2fba-4f17-abd9-48c282d140de",
+        "30927b15-6586-479c-b2ee-1fbced56dcc6",
+        "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
+        "be330bc3-bd8d-4f5d-8f6d-f43b1def1a9c",
         "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
         "c251b514-5413-4eb8-bda4-3e9c880f56e9",
         "8b67ca91-d986-48e9-92e2-cc2063238cf1",

@@ -1,8 +1,12 @@
 /// @desc draw sprites
 
 up_time += (5 * min(combo, 5));
-c_rainbow = make_color_hsv(up_time mod 255, 255, 255);
-
+switch (damage_type) {
+	case DAMAGETYPE.HEALING:
+		c_rainbow = c_green; break;
+	default:
+		c_rainbow = make_color_hsv(up_time mod 255, 255, 255); break;
+}
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
 for (var i = 0; i < array_length_1d(value_cached); i++)

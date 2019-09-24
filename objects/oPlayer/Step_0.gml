@@ -53,7 +53,6 @@ scCheckHealth();
 //Knockback handling
 scKnockback();
 
-
 //Step Sound
 switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 	case ANIMATIONSTATE.WALKING:

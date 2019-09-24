@@ -1,8 +1,8 @@
 {
-    "id": "27b0d615-2fba-4f17-abd9-48c282d140de",
+    "id": "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scDamageShootable",
+    "name": "scShootableRecoil",
     "IsCompatibility": false,
     "IsDnD": false
 }

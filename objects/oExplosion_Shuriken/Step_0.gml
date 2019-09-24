@@ -22,7 +22,7 @@ if (doing_damage)
 			}
 		
 			//Damage shootable
-			if(scDamageShootable(other.parent, p, false, true, dmg) && isPlayer)
+			if(scShootableDamage(other.parent, p, false, true, dmg) && isPlayer)
 				p.causeOfDeath = deathCause;
 	
 		}

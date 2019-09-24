@@ -5,7 +5,7 @@ event_inherited();
 if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE]) {
 	//Bomb sound effect
 	scPlaySound(SOUND.EFFECT_TARGET_BOMB);
-	scDamageShootable(self, shootable_map[? SHOOTABLE_MAP.SHOOTER], false, false, 1, true);
+	scShootableDamage(self, shootable_map[? SHOOTABLE_MAP.SHOOTER], false, false, 1, true);
 	//flash = 10;
 	shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = false;
 	timer = 10 * TIME_SPEED;
