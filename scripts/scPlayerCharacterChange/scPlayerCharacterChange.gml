@@ -12,15 +12,19 @@ for (var i = 0; i < instance_number(object_index); i++)
 		switch (i) {
 			case 0:
 				scSettingsCache(SETTINGS.PLAYER_1_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_PALETTE);
 				break;
 			case 1:
 				scSettingsCache(SETTINGS.PLAYER_2_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_PALETTE);
 				break;
 			case 2:
 				scSettingsCache(SETTINGS.PLAYER_3_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_3_PALETTE);
 				break;
 			case 3:
 				scSettingsCache(SETTINGS.PLAYER_4_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_4_PALETTE);
 				break;
 			default: show_debug_message("No Player #" + string(i + 2))
 		}

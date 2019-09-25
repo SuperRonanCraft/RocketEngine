@@ -3,7 +3,8 @@ with (player) {
 	var val = map[? CHARACTER_MAP.PALETTE_INDEX];
 	val--;
 	if (val >= 0) {
-		map[? CHARACTER_MAP.PALETTE_INDEX] = val;
+		scPlayerCharacterPaletteChange(val);
+		//map[? CHARACTER_MAP.PALETTE_INDEX] = val;
 		other.char_palette = val;
 	}
 }

@@ -12,6 +12,10 @@ switch (type) {
 			case SETTINGS.PLAYER_2_CHARACTER: val = "player_2_character"; break;
 			case SETTINGS.PLAYER_3_CHARACTER: val = "player_3_character"; break;
 			case SETTINGS.PLAYER_4_CHARACTER: val = "player_4_character"; break;
+			case SETTINGS.PLAYER_1_PALETTE: val = "player_1_palette"; break;
+			case SETTINGS.PLAYER_2_PALETTE: val = "player_2_palette"; break;
+			case SETTINGS.PLAYER_3_PALETTE: val = "player_3_palette"; break;
+			case SETTINGS.PLAYER_4_PALETTE: val = "player_4_palette"; break;
 			case SETTINGS.PLAYER_1_LEFT: val = "player_1_left"; break;
 			case SETTINGS.PLAYER_1_RIGHT: val = "player_1_right"; break;
 			case SETTINGS.PLAYER_1_JUMP: val = "player_1_jump"; break;
@@ -85,11 +89,16 @@ switch (type) {
 return val;
 
 enum SETTINGS {
-	//GAMEMODES
+	//Character
 	PLAYER_1_CHARACTER,
 	PLAYER_2_CHARACTER,
 	PLAYER_3_CHARACTER,
 	PLAYER_4_CHARACTER,
+	//Palette
+	PLAYER_1_PALETTE,
+	PLAYER_2_PALETTE,
+	PLAYER_3_PALETTE,
+	PLAYER_4_PALETTE,
 	//Keybinds 1
 	PLAYER_1_LEFT,
 	PLAYER_1_RIGHT,

@@ -5775,6 +5775,14 @@
             }
         },
         {
+            "Key": "d778a163-a5d7-4959-aa38-ca02460f48c7",
+            "Value": {
+                "id": "10e42286-4922-4e0e-9b1d-3f1f0289c258",
+                "resourcePath": "scripts\\scPlayerCharacterPaletteChange\\scPlayerCharacterPaletteChange.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d801e0f1-0215-4de8-94a8-c6504d240272",
             "Value": {
                 "id": "99da7c37-6ed8-49aa-816b-190e90a1f6e5",
@@ -7028,6 +7036,7 @@
         "8b62636a-ad25-4fde-a9ab-9868838ebd68",
         "0fb75587-6b56-493f-95cb-abaf215f165a",
         "d1862692-361d-4fe7-b160-4928cb06954e",
+        "d778a163-a5d7-4959-aa38-ca02460f48c7",
         "32b6d655-063a-403d-bba0-9f76f2373ca3",
         "af7fb6d8-9826-4676-b85a-1ae173f7bcf4",
         "0ac59313-0faa-4348-beac-7b8d9834d7d2",
