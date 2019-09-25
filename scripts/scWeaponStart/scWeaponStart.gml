@@ -1,5 +1,6 @@
 //Load characters weapon
 
+ds_map_destroy(weapon_map);
 weapon_map = ds_map_create();
 var map = weapon_map;
 var char = player_map[? PLAYER_MAP.CHARACTER_INFO];

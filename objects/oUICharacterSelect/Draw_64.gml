@@ -20,8 +20,12 @@ else if (char_last != noone) {
 	if (char_draw != noone) {
 		var char_map = scPlayerCharacterGetSprites(char_draw);
 		var sprite = char_map[? ANIMATIONSTATE.STANDING];
+		var char_map = scPlayerCharacterGetInfo(char_cur);
+		scPalleteSwapSet(char_map[? CHARACTER_MAP.PALETTE], 0);
 		draw_sprite_ext(sprite, 0, start_x_default - (char_x_offset + char_x), start_y_default + RES_H / 6, 
 			char_scale_b, char_scale_b, 0, c_white, 0.6);
+		scPalleteSwapReset();
+		ds_map_destroy(char_map);
 	}
 
 	//Character front of current

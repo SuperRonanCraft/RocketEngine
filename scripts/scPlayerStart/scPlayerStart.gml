@@ -1,4 +1,5 @@
 player_map = ds_map_create();
+weapon_map = ds_map_create();
 
 var map = player_map;
 
@@ -18,7 +19,7 @@ map[? PLAYER_MAP.ANIMATION_VAR] = irandom(image_number);
 map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
 map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
 map[? PLAYER_MAP.CURRENT_SPRITE] = sprite_index;
-map[? PLAYER_MAP.CHARACTER_INFO] = ds_map_create();
+map[? PLAYER_MAP.CHARACTER_INFO] = ds_map_create(); //Info set in scPlayerCharacterChange
 //FLASH PLAYER
 map[? PLAYER_MAP.FLASH_ALPHA] = 0;
 map[? PLAYER_MAP.FLASH_ALPHA_REDUCE] = 0.05;

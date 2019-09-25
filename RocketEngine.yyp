@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "0fb75587-6b56-493f-95cb-abaf215f165a",
+            "Value": {
+                "id": "b605e564-b022-4ea4-8593-c814fcb7690a",
+                "resourcePath": "scripts\\scPlayerCharacterGetInfo\\scPlayerCharacterGetInfo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "102bbae4-005b-47af-8e67-c15c7976d835",
             "Value": {
                 "id": "ccae2b31-8855-4863-8e0b-19a6f4b837d3",
@@ -7000,6 +7008,7 @@
         "1f17ce40-ccde-4977-86b8-8da3b5ad9a63",
         "0cbe3861-56c8-4ae9-8ef2-6750091ad6ef",
         "8b62636a-ad25-4fde-a9ab-9868838ebd68",
+        "0fb75587-6b56-493f-95cb-abaf215f165a",
         "d1862692-361d-4fe7-b160-4928cb06954e",
         "32b6d655-063a-403d-bba0-9f76f2373ca3",
         "af7fb6d8-9826-4676-b85a-1ae173f7bcf4",

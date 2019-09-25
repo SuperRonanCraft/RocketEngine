@@ -1,13 +1,10 @@
-//Change a players character
+///@desc Change a players character
 ///@arg character
+
 ds_map_destroy(player_map[? PLAYER_MAP.CHARACTER_INFO]);
-var map = ds_map_create();
-map[? CHARACTER_MAP.TYPE] = argument0;
-map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
-map[? CHARACTER_MAP.HEALTH] = 20; //Default health
-map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
+var map = scPlayerCharacterGetInfo(argument0);
+
 //Load Sprites
-//show_debug_message("CHANGING CHARACTER TO " + string(argument0));
 characterSprites = scPlayerCharacterGetSprites(map[? CHARACTER_MAP.TYPE]);
 
 for (var i = 0; i < instance_number(object_index); i++)
@@ -30,20 +27,6 @@ for (var i = 0; i < instance_number(object_index); i++)
 		break;
 	}
 
-
-switch (map[? CHARACTER_MAP.TYPE]) {
-	case CHARACTERS.DEFAULT:
-		map[? CHARACTER_MAP.NAME] = "Steve";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET;
-		map[? CHARACTER_MAP.HEALTH] = 20;
-		break;
-	case CHARACTERS.SWORD:
-		map[? CHARACTER_MAP.NAME] = "Sword Guy";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.SHURIKEN; //CHANGE TO SWORD WHEN DONE!
-		map[? CHARACTER_MAP.HEALTH] = 16;
-		break;
-}
-
 scWeaponStart();
 
 //Do some stuff
@@ -56,5 +39,5 @@ enum CHARACTERS {
 }
 
 enum CHARACTER_MAP {
-	NAME, TYPE, WEAPON, HEALTH
+	NAME, TYPE, WEAPON, HEALTH, PALETTE, PALETTE_INDEX
 }
