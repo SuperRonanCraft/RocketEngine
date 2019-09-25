@@ -2927,6 +2927,14 @@
             }
         },
         {
+            "Key": "694ac4c3-b94e-486c-959f-54b71990b9f5",
+            "Value": {
+                "id": "7aeed61a-0248-446a-8537-904e513d19aa",
+                "resourcePath": "scripts\\scUIPalettePrev\\scUIPalettePrev.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6a122f33-5cba-4db2-abd9-22528acd5997",
             "Value": {
                 "id": "8ed52d4b-0433-4ba4-8a26-e5f6a7cc8402",
@@ -4139,6 +4147,14 @@
             "Value": {
                 "id": "c047e2dd-e593-4007-9e97-183f8bd6996f",
                 "resourcePath": "scripts\\scRocketTeleport_Step\\scRocketTeleport_Step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9ba9d44c-d85e-4fcd-9dc6-29c3c2c25ce4",
+            "Value": {
+                "id": "abd2d838-d4a9-4901-b647-baf523e64d9b",
+                "resourcePath": "scripts\\scUIPaletteNext\\scUIPaletteNext.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6968,6 +6984,8 @@
         "d134a2bf-a87a-4247-a13b-29f642e9dd5e",
         "635da036-1d54-45c3-bc52-e911aa799598",
         "e071ad1d-9e06-4504-9771-c86be0bfd436",
+        "9ba9d44c-d85e-4fcd-9dc6-29c3c2c25ce4",
+        "694ac4c3-b94e-486c-959f-54b71990b9f5",
         "53c66fce-fc2e-43f7-830f-51e7fda9f36d",
         "797f318c-0fd9-4480-83f2-baeb242f2fdf",
         "daedfe57-0a5c-47d7-8019-46837f3ed7a4",

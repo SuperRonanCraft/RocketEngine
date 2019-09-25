@@ -25,7 +25,7 @@ switch (global.mode_1v1_singleplayer) {
 
 selected = false;
 player = oPlayer;
-char_last = noone;
+char_last = 0;
 char_palette = 0;
 char_scale_min = 1.2;
 char_scale_b = char_scale_min;
@@ -35,7 +35,7 @@ char_scale_cur_selected = 3;
 char_scale_cur_max = char_scale_cur_max_org;
 char_scale_cur = char_scale_cur_max;
 char_x_offset = 100;
-char_x = char_x_offset;
+char_x = 0;
 //char_x_cur = 0;
 char_img = 0;
 
@@ -53,3 +53,13 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 
 //Disabled unfolding
 unfolding = false;
+
+//Load Player and Palette
+if (instance_exists(player))
+	with (player) {
+		var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
+		if (char[? CHARACTER_MAP.TYPE] != undefined) {
+			other.char_last = char[? CHARACTER_MAP.TYPE];
+			other.char_palette = char[? CHARACTER_MAP.PALETTE_INDEX];
+		}
+	}
