@@ -23,7 +23,11 @@ if (workingon != page) { //New page, lets set it up
 		start_x[i] = centered ? start_x_default : start_x_default - x_buffer;
 		if (is_array(ds_grid[# 0, i])) {
 			var arr = ds_grid[# 0, i];
-			var bffr = (x_buffer * 4)
+			var offset = 0;
+			if (ds_grid[# 1, i] == menu_element_type.script_runner) //Check if this has a text option
+				if (ds_grid[# 3, index] != 0) //Text option
+					offset = string_width(ds_grid[# 3, index]) / 4;
+			var bffr = (x_buffer * 4) + offset
 			switch (arr[1]) {
 				case menu_centered.left: start_x[i] -= bffr; break;
 				case menu_centered.right: start_x[i] += bffr; break;}

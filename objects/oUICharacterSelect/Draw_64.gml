@@ -15,17 +15,15 @@ else if (char_last != noone) {
 	
 	//Character behind of current
 	var char_draw = char_last - 1;
-	if (char_last - 1 < 0)
+	if (char_draw < 0)
 		char_draw = noone;
 	if (char_draw != noone) {
-		var char_map = scPlayerCharacterGetSprites(char_draw);
-		var sprite = char_map[? ANIMATIONSTATE.STANDING];
-		var char_map = scPlayerCharacterGetInfo(char_cur);
-		scPalleteSwapSet(char_map[? CHARACTER_MAP.PALETTE], 0);
+		var char_anim_map = scPlayerCharacterGetSprites(char_draw);
+		var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
 		draw_sprite_ext(sprite, 0, start_x_default - (char_x_offset + char_x), start_y_default + RES_H / 6, 
 			char_scale_b, char_scale_b, 0, c_white, 0.6);
-		scPalleteSwapReset();
-		ds_map_destroy(char_map);
+		//Destroy the draw char map
+		ds_map_destroy(char_anim_map);
 	}
 
 	//Character front of current
@@ -33,23 +31,29 @@ else if (char_last != noone) {
 	if (char_draw >= CHARACTERS.LENGTH)
 		char_draw = noone;
 	if (char_draw != noone) {
-		var char_map = scPlayerCharacterGetSprites(char_draw);
-		var sprite = char_map[? ANIMATIONSTATE.STANDING];
+		var char_anim_map = scPlayerCharacterGetSprites(char_draw);
+		var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
+		var char_map = scPlayerCharacterGetInfo(char_draw);
 		draw_sprite_ext(sprite, 0, start_x_default + (char_x_offset - char_x), start_y_default + RES_H / 6, 
 			char_scale_a, char_scale_a, 0, c_white, 0.6);
+		//Destroy the draw char map
+		ds_map_destroy(char_anim_map);
 	}
-	
-	//Destroy the draw char map
-	ds_map_destroy(char_map);
 }
 
 //Current Character
 var char_draw = char_last;
 if (char_draw != noone) {
-	var char_map = scPlayerCharacterGetSprites(char_draw);
-	var sprite = char_map[? ANIMATIONSTATE.STANDING];
+	var char_anim_map = scPlayerCharacterGetSprites(char_draw);
+	var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
+	var char_map = scPlayerCharacterGetInfo(char_draw);
+	scPalleteSwapSet(char_map[? CHARACTER_MAP.PALETTE], char_palette);
 	draw_sprite_ext(sprite, floor(char_img), start_x_default - char_x, start_y_default + RES_H / 6, 
 		char_scale_cur, char_scale_cur, 0, c_white, 1);
+	scPalleteSwapReset();
+	ds_map_destroy(char_map);
+	//Destroy the draw char map
+	ds_map_destroy(char_anim_map);
 }
 
 if (instance_exists(player))
@@ -62,8 +66,10 @@ if (instance_exists(player))
 		if (!other.selected) {
 			var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
 			scDrawText(other.start_x_default, other.start_y_default + RES_H / 4, char[? CHARACTER_MAP.NAME], c_yellow, 0.5);
-			if (char[? CHARACTER_MAP.TYPE] != undefined)
+			if (char[? CHARACTER_MAP.TYPE] != undefined) {
 				other.char_last = char[? CHARACTER_MAP.TYPE];
+				other.char_palette = char[? CHARACTER_MAP.PALETTE_INDEX];
+			}
 		}
 	}
 

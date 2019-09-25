@@ -11,6 +11,17 @@ var value = argument3;
 var index = argument4;
 
 if (grid[# value, index] == 0) exit; //No text option
-if (grid[# value + 1, index] != true && menu_option[page] != index) exit; //Always show description
+if (grid[# value + 1, index] == -1) exit; //Show description
+var isDesc = is_array(grid[# 0, index]); //Is a normal description
+if (grid[# value + 1, index] != true && menu_option[page] != index && !isDesc) exit; //Always show description
 var string_val = grid[# value, index];
-scDrawText(xx, yy + 25, string_val, color_element, scale_description, noone, noone, centered ? fa_middle : fa_right);
+var scale = scale_description;
+var c = color_element
+if (!isDesc)
+	yy += 25;
+else {
+	scale = 1;
+	xx = start_x_default;
+}
+scDrawText(xx, yy, string_val, c, scale, noone, noone, centered ? fa_middle : fa_right);
+	

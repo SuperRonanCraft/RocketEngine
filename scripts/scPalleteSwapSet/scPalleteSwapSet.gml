@@ -5,7 +5,7 @@
 var _pal_sprite = argument0;
 var _pal_index = argument1;
 
-if (_pal_index == 0) exit;
+if (_pal_index == 0 || _pal_sprite == noone) exit; //index 0 or no palette
 
 var mode = Pal_Shader_Type.Standard;
 
