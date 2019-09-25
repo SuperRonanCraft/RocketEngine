@@ -31,7 +31,7 @@ if (count_up)
 			map[? COMBO_MAP.STREAK_HIGHEST] = map[? COMBO_MAP.STREAK];
 			scAchievements_CustomEvent(ACHIEVEMENTS.COMBO, map[? COMBO_MAP.STREAK]);
 		}
-		map[? COMBO_MAP.POS_X] = x;
-		map[? COMBO_MAP.POS_Y] = bbox_top - 10;
+		map[? COMBO_MAP.POS_X] = map[? COMBO_MAP.ENTITY].x;
+		map[? COMBO_MAP.POS_Y] = map[? COMBO_MAP.ENTITY].bbox_top - 10;
 		map[? COMBO_MAP.ALPHA] = 1 * min(5, max(1, map[? COMBO_MAP.STREAK_LAST]));
 	}

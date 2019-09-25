@@ -10,9 +10,11 @@ switch (global.mode_1v1_singleplayer) {
 	case 0: //1 vs 1
 	case 1: //1 vs ai
 		ds_menu_main = scUICreateMenuPage(
-			["READY UP >>",menu_element_type.toggle_live,	scUICharacterAccept,	noone,	0, "Accept character"],
-			[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],
-			[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext],
+			["READY UP >>", menu_element_type.toggle_live,	scUICharacterAccept,	noone,	0],
+			[["<<",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev, "Character"], //Prev character
+			[[">>",	menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext, "Character", -1], //Next character
+			[["<<",	menu_centered.left],		menu_element_type.script_runner,	scUIPalettePrev, "Color"], //Prev Palette
+			[[">>",	menu_centered.right],		menu_element_type.script_runner,	scUIPaletteNext, "Color", -1] //Next Palette
 		);
 		break;
 	default:
@@ -24,6 +26,7 @@ switch (global.mode_1v1_singleplayer) {
 selected = false;
 player = oPlayer;
 char_last = noone;
+char_palette = 0;
 char_scale_min = 1.2;
 char_scale_b = char_scale_min;
 char_scale_a = char_scale_min;
