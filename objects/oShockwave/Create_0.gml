@@ -1,10 +1,9 @@
 /// @description Init
-event_inherited();
 
 //-----------------------------------------------------------------------------
-#region TITLE, INFO, CORNER, CLICK (optional):
+//#region TITLE, INFO, CORNER, CLICK (optional):
 //-----------------------------------------------------------------------------
-title_text	= @"Shockwave Distortion
+/*title_text	= @"Shockwave Distortion
 				multiple shockwaves
 				with normal maps";
 
@@ -35,7 +34,7 @@ corner_text	= "";			// if wanted/needed, update this in a step or draw event
 
 click_region_gui	= true; // false: mouse click region in room space | true: mouse click region in gui space
 deselectable		= false;	// Allow deselecting by clicking on the module again
-#endregion
+#endregion*/
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
@@ -52,9 +51,9 @@ aspect			= camera_get_view_width(view_camera[0]) / camera_get_view_height(view_c
 tex_waves		= -1;
 
 // wave parameters:
-wave_life		= 1.5 * game_get_speed(gamespeed_fps);	// life in seconds
-wave_scale_max	= 1600 / sprite_get_width(sprite);		// size in pixels in room space
-enum waveparam {xx, yy, age, scale, alpha}				// should be in unreferenced script rather
+wave_life		= 1 * game_get_speed(gamespeed_fps);	// life in seconds
+//wave_scale_max	= (RES_W / 4) / sprite_get_width(sprite);		// size in pixels in room space
+enum waveparam {xx, yy, age, scale, scale_max, alpha}				// should be in unreferenced script rather
 
 // create waves list which will hold lists for each active wave.
 // those lists will be created in step event on click
@@ -104,6 +103,7 @@ toggle_set_caption(3, 0, "info");
 #endregion
 //-----------------------------------------------------------------------------
 */
+/*
 var new_wave = ds_list_create();
 new_wave[|waveparam.xx]		= x;
 new_wave[|waveparam.yy]		= y;

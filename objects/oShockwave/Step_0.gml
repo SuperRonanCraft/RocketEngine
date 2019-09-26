@@ -21,11 +21,11 @@ if (wave_list_size > 0) {
 	var w, this_wave;
 	for (w = 0; w < wave_list_size; w++) {
 		this_wave = list_of_waves[|w];
-		this_wave[|waveparam.age]	+= 0.7;
+		this_wave[|waveparam.age]	+= 1;
 		
 		if (this_wave[|waveparam.age] < wave_life) {
 			var in_value = (this_wave[|waveparam.age] / wave_life) - 1;
-			this_wave[|waveparam.scale]	= (in_value * in_value * in_value + 1) * wave_scale_max;
+			this_wave[|waveparam.scale]	= (in_value * in_value * in_value + 1) * this_wave[|waveparam.scale_max];
 			in_value = -1 * (this_wave[|waveparam.age] / wave_life) * ((this_wave[|waveparam.age] / wave_life) - 2)
 			this_wave[|waveparam.alpha]	= 1 - in_value;
 		} else {

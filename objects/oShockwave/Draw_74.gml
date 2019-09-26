@@ -9,9 +9,9 @@ if (wave_list_size <= 0) {
 	draw_surface(application_surface, 0, 0);
 } else {
 	// set values based on sliders. In a game you'd use constants inside the shader instead
-	var fx_strength	= 0.85 * 0.2 - 0.1; //Strength
-	var aberration	= 0.65 * 2 - 1; //Distortion
-	var subimage	= 0;
+	var fx_strength	= 0.15 * 0.2 - 0.1; //Strength
+	var aberration	= 0.35 * 2 - 1; //Distortion
+	var subimage	= 2;
 		
 	// create waves surface:
 	if (!surface_exists(srf_waves)) {
