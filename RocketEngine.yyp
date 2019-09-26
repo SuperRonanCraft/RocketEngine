@@ -2127,6 +2127,14 @@
             }
         },
         {
+            "Key": "4de26b11-29e9-4983-aff6-1c6f9030edad",
+            "Value": {
+                "id": "914affbc-3b11-4b9b-83c2-db2b2ff7cf52",
+                "resourcePath": "shaders\\shd_shockwave_distortion_normals\\shd_shockwave_distortion_normals.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "4e45b309-8276-49b5-a0bc-21aa629f5f6f",
             "Value": {
                 "id": "f013cbb7-5d79-4f7c-a3a7-0f26a61f4b6d",
@@ -2515,6 +2523,14 @@
             "Value": {
                 "id": "751ff228-ca65-4895-8453-341ba73c5f46",
                 "resourcePath": "sprites\\sTargetBomb\\sTargetBomb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5abd7707-8d1f-4279-bdc1-b1bd91cd88ac",
+            "Value": {
+                "id": "1fc71b13-8baf-4647-82ba-0810f028784f",
+                "resourcePath": "sprites\\spr_shockwave_distortion_normals_64\\spr_shockwave_distortion_normals_64.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3263,6 +3279,14 @@
             }
         },
         {
+            "Key": "789c0a81-652f-4e2b-b796-20d6720da7fa",
+            "Value": {
+                "id": "0195a937-9dbf-4849-8407-536d5e95b6f2",
+                "resourcePath": "shaders\\shShockwave\\shShockwave.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "78bb18ef-144e-4cf4-89c5-ed3b6d2b21ed",
             "Value": {
                 "id": "142b90b6-12b4-4f10-8a12-a7a9a7ffe218",
@@ -3412,6 +3436,14 @@
                 "id": "13b684e6-1c5d-4f82-8a97-7cf7ed62aa09",
                 "resourcePath": "views\\7efb0829-d3fc-42e3-bf5f-34fbafd2a0f8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7f0d0c23-fe4a-4966-9502-1c93b0b2aada",
+            "Value": {
+                "id": "ffb9ae91-1ada-437c-82e6-9b6dbd75e8f3",
+                "resourcePath": "objects\\oShockwave\\oShockwave.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6439,6 +6471,14 @@
             }
         },
         {
+            "Key": "f3e202d2-f073-4516-90d3-f4a154d0ae3e",
+            "Value": {
+                "id": "955509ce-24dd-4c46-b9fd-a333d6295aac",
+                "resourcePath": "shaders\\shd_add_normals\\shd_add_normals.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "f3e43d95-a6c7-4930-8d05-927f9c23c62a",
             "Value": {
                 "id": "c9cfbf3a-cb02-4e35-b54d-87ffddc83687",
@@ -6708,6 +6748,14 @@
                 "id": "010b635e-ad17-49b6-9407-7c8c4f6f1c5b",
                 "resourcePath": "views\\fe1033fc-a994-419a-8fb7-cda81cf69839.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fe44367b-e274-4883-a03e-709b458300df",
+            "Value": {
+                "id": "247c29e5-6a59-4e64-9621-91a4625c3518",
+                "resourcePath": "sprites\\spr_placeholder_module\\spr_placeholder_module.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
