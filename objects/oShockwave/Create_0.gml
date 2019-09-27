@@ -67,7 +67,7 @@ srf_waves_scale	= 1/4;
 //view_h			= camera_get_view_height(view_camera[0]);
 
 // turn off automatic drawing of the application surface:
-application_surface_draw_enable(false);
+//application_surface_draw_enable(false);
 #endregion
 //-----------------------------------------------------------------------------
 

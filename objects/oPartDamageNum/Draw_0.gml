@@ -2,6 +2,8 @@
 
 up_time += (5 * min(combo, 5));
 switch (damage_type) {
+	case DAMAGETYPE.CRITICAL:
+		c_rainbow = c_orange; break;
 	case DAMAGETYPE.HEALING:
 		c_rainbow = c_green; break;
 	default:
@@ -10,7 +12,7 @@ switch (damage_type) {
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
 for (var i = 0; i < array_length_1d(value_cached); i++)
-	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], c_rainbow, alpha, scale, scale);
+	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], c_rainbow, alpha, scale, scale, angle);
 
 if (damage_killed)
 	scale = lerp(scale, scale_max, 0.04);

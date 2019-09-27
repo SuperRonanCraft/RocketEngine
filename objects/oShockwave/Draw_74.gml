@@ -24,7 +24,8 @@ if (wave_list_size <= 0) {
 	// draw wave sprite to waves surface:
 	surface_set_target(srf_waves);
 		draw_clear_alpha($FF7F7F, 1);
-		gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
+		gpu_set_blendmode_ext(bm_one,bm_zero);
+		//gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
 		shader_set(shShockwave_Normal);
 		
 		var w, this_wave;
@@ -43,11 +44,13 @@ if (wave_list_size <= 0) {
 	surface_reset_target();
 	// draw application surface with waves surface as 2nd texture:
 	shader_set(shader);
+		gpu_set_blendmode_ext(bm_one,bm_zero);
 		shader_set_uniform_f(u_fx_strength, fx_strength);
 		shader_set_uniform_f(u_aspect, aspect);
 		shader_set_uniform_f(u_aberration, aberration);
 		texture_set_stage(u_tex_waves, tex_waves);
 		draw_surface(application_surface, 0, 0);
+		gpu_set_blendmode(bm_normal);
 	shader_reset();
 	
 	gpu_set_texfilter(false);
