@@ -2,15 +2,23 @@
 /// @arg sound* to play
 /// @arg pitch* of sound
 /// @arg [cancel-sound]* sound you would like to cancel
+/// @arg multiple* have multiple of the same sound be played?
 
 var sound = argument[0];
+var allow_multi = argument_count > 3 ? (argument[3] != noone ? argument[3] : true) : true;
 if (sound != noone) {
-	if (argument_count >= 2 && argument[1] != noone)
-		audio_sound_pitch(sound, argument[1]);
-	audio_play_sound(sound, 5, false);
+	var play = true;
+	if (!allow_multi)
+		if (audio_is_playing(sound))
+			play = false;
+	if (play) {
+		if (argument_count > 1 && argument[1] != noone)
+			audio_sound_pitch(sound, argument[1]);
+		audio_play_sound(sound, 5, false);
+	}
 }
 //Cancel some sounds
-if (argument_count >= 3 && argument[2] != noone) {
+if (argument_count > 2 && argument[2] != noone) {
 	var array = argument[2];
 	for (var i = 0; i < array_length_1d(array); i++)
 		audio_stop_sound(array[i]);

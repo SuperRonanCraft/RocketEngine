@@ -14,6 +14,8 @@ map[? COMBO_MAP.COOLDOWN] = 0;
 map[? COMBO_MAP.POS_X] = 0;
 map[? COMBO_MAP.POS_Y] = 0;
 map[? COMBO_MAP.ALPHA] = 0;
+map[? COMBO_MAP.DIALATED] = 0; //Current dialation
+map[? COMBO_MAP.DIALATED_MAX] = 4; //Max dialating amount
 
 enum COMBO_MAP {
 	ENTITY, //Entity we are combo-ing with
@@ -27,7 +29,9 @@ enum COMBO_MAP {
 	STREAK_HIGHEST,
 	POS_X,
 	POS_Y,
-	ALPHA
+	ALPHA,
+	DIALATED,
+	DIALATED_MAX
 }
 
 enum COMBO_TYPE { //Set in a weapon map

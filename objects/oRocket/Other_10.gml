@@ -30,4 +30,4 @@ with (xplo)
 
 //Delete this instance of oRocket
 destroy = true;
-scPlaySound(SOUND.EFFECT_EXP);
+scPlaySound(SOUND.EFFECT_EXP, noone, noone, true);

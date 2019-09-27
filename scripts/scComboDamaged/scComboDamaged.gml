@@ -16,6 +16,7 @@ if (count_up)
 	with (p) {
 		var map = combo_map;
 		//combo_amount++;
+		map[? COMBO_MAP.DIALATED] = 0;
 		map[? COMBO_MAP.STREAK]++;
 		map[? COMBO_MAP.STREAK_LAST] = map[? COMBO_MAP.STREAK];
 		//combo_cooldown_current = 0;
