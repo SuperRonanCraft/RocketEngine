@@ -29,6 +29,10 @@ switch (type) {
 			case WEAPON_MODIFIER.MAGNET: weapon = SHURIKEN.MAGNET; break;
 			case WEAPON_MODIFIER.SLIME: weapon = SHURIKEN.SLIME; break;
 			case WEAPON_MODIFIER.BRICK: weapon = SHURIKEN.BRICK; break;
+			case WEAPON_MODIFIER.SAND: weapon = SHURIKEN.SAND; break;
+			case WEAPON_MODIFIER.SHOTGUN: weapon = SHURIKEN.SHOTGUN; break;
+			case WEAPON_MODIFIER.METAL: weapon = SHURIKEN.METAL; break;
+			case WEAPON_MODIFIER.ELECTRIC: weapon = SHURIKEN.ELECTRIC; break;
 			default: weapon = noone; break;
 		}
 		break;

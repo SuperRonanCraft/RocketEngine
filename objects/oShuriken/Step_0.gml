@@ -26,6 +26,8 @@ else if (!deactivate) {
 	hsp = lengthdir_x(spd, dir);
 	vsp = lengthdir_y(spd, dir);
 	
+	
+		
 	//Check speed to never go negative or reach 0.
 	if(weapon_map[? WEAPON_MAP.SPEED] <= 1){
 		weapon_map[? WEAPON_MAP.SPEED] = 1;	
@@ -77,9 +79,18 @@ if (deactivate && stuckTo != noone && stuckTo.object_index != oWall && instance_
 } else if (deactivate && (stuckTo == noone || !instance_exists(stuckTo)))
 	event_user(0); //Failsafe check.
 
+
+
 //Move shuriken by hsp and vsp ALWAYS
-x += hsp;
-y += vsp;
+x += hsp * owner.time_dialation;
+y += vsp * owner.time_dialation;
+
+
+//Rotate with hsp
+imgdir -= hsp;
+image_angle = imgdir;
+show_debug_message("+" + string(hsp) + ": " + string(image_angle));
+
 
 //Despawn if out of room.
 if (checkroom)

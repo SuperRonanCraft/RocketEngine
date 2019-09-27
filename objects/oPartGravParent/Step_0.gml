@@ -19,7 +19,7 @@ if (touchingx != noone) { //If touching a wall in the horizontal
 	else if (hsp < 0) //Going Left
 		x = ceil(touchingx.bbox_right + (x - bbox_left) + offset);
 	
-	hsp = (hsp * weight) * -1; //bounce
+	hsp = (hsp * weight) * -1 * bounce_coeff; //bounce
 	hsp_real = hsp;
 }
 
@@ -30,12 +30,17 @@ if (touchingy != noone) { //If touching a wall in the vertical
 	else if (vsp < 0) //Going up
 		y = ceil(touchingy.bbox_bottom + (y - bbox_top) + offset);
 	
-	vsp = (vsp * weight) * -1; //bounce
+	vsp = (vsp * weight) * -1 * bounce_coeff; //bounce
 	vsp_real = vsp;
 }
 
-if (touchingx != noone || touchingy != noone) //Hit a wall? Get stuck maybe?
+if (touchingx != noone || touchingy != noone && sticky) //Hit a wall? Get stuck maybe?
 	stuck = random(1) < stuck_chance;
+
+//Rotate if moving
+if(rotate && hsp != 0)
+	image_angle += hsp;
+
 
 if (stuck) exit;
 //Start moving

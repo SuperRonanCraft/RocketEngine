@@ -124,6 +124,27 @@ switch (shur) {
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 40;
 		break;
 		
+	case SHURIKEN.METAL:
+		map[? SHURIKEN_MAP.NAME] = "The Razor";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "Crude and effective";		
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.METAL;
+		map[? SHURIKEN_MAP.SPEED] = 25;
+		map[? SHURIKEN_MAP.KBAMT] = 0;
+		map[? SHURIKEN_MAP.COOLDOWN] = 25;
+		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
+		break;
+		
+	case SHURIKEN.ELECTRIC:
+		map[? SHURIKEN_MAP.NAME] = "Sparkling Star";
+		map[? SHURIKEN_MAP.DESCRIPTION] = "A mild buzz";		
+		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.ELECTRIC;
+		map[? SHURIKEN_MAP.SPEED] = 30;
+		map[? SHURIKEN_MAP.KBAMT] = 0;
+		map[? SHURIKEN_MAP.CLIP] = 2;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 45;
+		map[? SHURIKEN_MAP.COOLDOWN] = 25;
+		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SCRAPING];
+		break;
 }
 
 return map;

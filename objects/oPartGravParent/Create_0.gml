@@ -12,7 +12,9 @@ timer = 180;
 alpha_reduce = 0.04;
 stuck_chance = 1 / 5;
 stuck = false;
+sticky = false;
+type = noone;
+rotate = false;
+bounce_coeff = 1;
 
-image_xscale /= 2;
-image_yscale /= 2;
-image_alpha = 0.8;
+image_speed = 0;

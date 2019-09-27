@@ -48,6 +48,7 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone){
 			if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])
 				scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 			scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
+			scScreenShake(25,5);
 		
 		}
 }

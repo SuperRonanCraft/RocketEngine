@@ -58,7 +58,7 @@ with (damaging) {
 			}
 		if (combo)
 			scComboDamaged(damager);
-		scSpawnParticle(x, bbox_top, irandom_range(4 * power(dmg, 2), 6 * power(dmg, 2)));
+		scSpawnParticle(x, bbox_top, irandom_range(4 * power(dmg, 2), 6 * power(dmg, 2)), 20,  spBlood,WORLDPART_TYPE.BLOOD);
 	}
 }
 

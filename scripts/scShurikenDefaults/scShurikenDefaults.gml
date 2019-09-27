@@ -30,7 +30,7 @@ map[? SHURIKEN_MAP.PLAYER_SCRIPT] = noone; //Special script to apply when hittin
 map[? SHURIKEN_MAP.WEAPON_SCRIPT] = noone; //Special script to apply when hitting a pWeapon object
 
 
-map[? SHURIKEN_MAP.PARTICLE] = noone; // Particle to emit
+map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
 map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 
 map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability

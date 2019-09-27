@@ -5191,6 +5191,14 @@
             }
         },
         {
+            "Key": "bcb89076-fbe7-4762-8231-2edd9c835867",
+            "Value": {
+                "id": "4855a3e3-a0d8-49b4-ad8e-56faf832d2d2",
+                "resourcePath": "sprites\\spDebris\\spDebris.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd26d61e-04df-42ee-8ec5-f5855cf1c5b3",
             "Value": {
                 "id": "48429592-fa10-419f-88e3-5c9dfb728976",
