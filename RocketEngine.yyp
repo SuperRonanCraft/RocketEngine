@@ -2130,7 +2130,7 @@
             "Key": "4de26b11-29e9-4983-aff6-1c6f9030edad",
             "Value": {
                 "id": "914affbc-3b11-4b9b-83c2-db2b2ff7cf52",
-                "resourcePath": "shaders\\shd_shockwave_distortion_normals\\shd_shockwave_distortion_normals.yy",
+                "resourcePath": "shaders\\shShockwave\\shShockwave.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -2530,7 +2530,7 @@
             "Key": "5abd7707-8d1f-4279-bdc1-b1bd91cd88ac",
             "Value": {
                 "id": "1fc71b13-8baf-4647-82ba-0810f028784f",
-                "resourcePath": "sprites\\spr_shockwave_distortion_normals_64\\spr_shockwave_distortion_normals_64.yy",
+                "resourcePath": "sprites\\s_Shockwave\\s_Shockwave.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3282,7 +3282,7 @@
             "Key": "789c0a81-652f-4e2b-b796-20d6720da7fa",
             "Value": {
                 "id": "0195a937-9dbf-4849-8407-536d5e95b6f2",
-                "resourcePath": "shaders\\shShockwave\\shShockwave.yy",
+                "resourcePath": "shaders\\shShockwaveOLD\\shShockwaveOLD.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -6474,7 +6474,7 @@
             "Key": "f3e202d2-f073-4516-90d3-f4a154d0ae3e",
             "Value": {
                 "id": "955509ce-24dd-4c46-b9fd-a333d6295aac",
-                "resourcePath": "shaders\\shd_add_normals\\shd_add_normals.yy",
+                "resourcePath": "shaders\\shShockwave_Normal\\shShockwave_Normal.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -6748,14 +6748,6 @@
                 "id": "010b635e-ad17-49b6-9407-7c8c4f6f1c5b",
                 "resourcePath": "views\\fe1033fc-a994-419a-8fb7-cda81cf69839.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "fe44367b-e274-4883-a03e-709b458300df",
-            "Value": {
-                "id": "247c29e5-6a59-4e64-9621-91a4625c3518",
-                "resourcePath": "sprites\\spr_placeholder_module\\spr_placeholder_module.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

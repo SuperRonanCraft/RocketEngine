@@ -2,7 +2,7 @@
     "id": "5abd7707-8d1f-4279-bdc1-b1bd91cd88ac",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_shockwave_distortion_normals_64",
+    "name": "s_Shockwave",
     "For3D": false,
     "HTile": false,
     "VTile": false,

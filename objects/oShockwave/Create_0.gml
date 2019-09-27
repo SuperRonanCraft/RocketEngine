@@ -40,9 +40,9 @@ deselectable		= false;	// Allow deselecting by clicking on the module again
 //-----------------------------------------------------------------------------
 #region SPRITE & SHADER (mandatory):
 //-----------------------------------------------------------------------------
-sprite			= spr_shockwave_distortion_normals_64; //_256
+sprite			= s_Shockwave; //_256
 
-shader			= shd_shockwave_distortion_normals;
+shader			= shShockwave;
 u_fx_strength	= shader_get_uniform(shader, "fx_strength");
 u_aspect		= shader_get_uniform(shader, "aspect");
 u_aberration	= shader_get_uniform(shader, "aberration");
@@ -63,8 +63,8 @@ list_of_waves	= ds_list_create();
 // prepare waves surface
 srf_waves		= -1;
 srf_waves_scale	= 1/4;
-view_w			= camera_get_view_width(view_camera[0]);
-view_h			= camera_get_view_height(view_camera[0]);
+//view_w			= camera_get_view_width(view_camera[0]);
+//view_h			= camera_get_view_height(view_camera[0]);
 
 // turn off automatic drawing of the application surface:
 application_surface_draw_enable(false);

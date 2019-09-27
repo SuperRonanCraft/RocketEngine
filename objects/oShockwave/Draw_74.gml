@@ -15,7 +15,7 @@ if (wave_list_size <= 0) {
 		
 	// create waves surface:
 	if (!surface_exists(srf_waves)) {
-		srf_waves = surface_create(view_w * srf_waves_scale, view_h * srf_waves_scale);
+		srf_waves = surface_create(RES_W * srf_waves_scale, RES_H * srf_waves_scale);
 		tex_waves = surface_get_texture(srf_waves);
 	}
 	
@@ -25,10 +25,9 @@ if (wave_list_size <= 0) {
 	surface_set_target(srf_waves);
 		draw_clear_alpha($FF7F7F, 1);
 		gpu_set_blendmode_ext(bm_dest_color, bm_src_color);
-		shader_set(shd_add_normals);
+		shader_set(shShockwave_Normal);
 		
 		var w, this_wave;
-		//var wave_list_size = ds_list_size(list_of_waves);
 		for (w = 0; w < wave_list_size; w++) {
 			this_wave = list_of_waves[|w];
 			draw_sprite_ext(sprite, subimage,
@@ -42,7 +41,6 @@ if (wave_list_size <= 0) {
 		shader_reset();
 		gpu_set_blendmode(bm_normal);
 	surface_reset_target();
-	
 	// draw application surface with waves surface as 2nd texture:
 	shader_set(shader);
 		shader_set_uniform_f(u_fx_strength, fx_strength);
@@ -55,10 +53,10 @@ if (wave_list_size <= 0) {
 	gpu_set_texfilter(false);
 	
 	// debug only: draw waves surface if toggle 0 in toggle group 1 is active:
-	switch (0) {
+	/*switch (0) {
 		case 0: break;
 		case 1: draw_surface_ext(srf_waves, 0, 0, 1 / srf_waves_scale, 1 / srf_waves_scale, 0, c_white, 0.8); break;
 		case 2: draw_surface_ext(srf_waves, 0, 0, 1, 1, 0, c_white, 1);
-	}
+	}*/
 }
 
