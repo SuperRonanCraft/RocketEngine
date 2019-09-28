@@ -4,6 +4,7 @@ event_inherited();
 var player = oPlayer;
 
 with (player) {
+	//scPlayerCharacterChange(CHARACTERS.DEFAULT); INF LOOP
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = 20;
 	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = 20;
 	player_aimode = true;

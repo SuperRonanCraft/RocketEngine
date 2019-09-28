@@ -38,8 +38,14 @@ shootable_map[? SHOOTABLE_MAP.HEALTH] = map[? CHARACTER_MAP.HEALTH];
 shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = map[? CHARACTER_MAP.HEALTH];
 player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 
+//if (instance_exists(pGMM))
+//	with (pGMM)
+//		event_user(10); //APPLY GAMEMODE MODIFIERS
+
 enum CHARACTERS {
-	DEFAULT, SWORD, LENGTH
+	DEFAULT, SWORD, 
+	//KEEP LAST
+	LENGTH
 }
 
 enum CHARACTER_MAP {

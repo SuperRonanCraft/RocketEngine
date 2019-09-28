@@ -33,24 +33,5 @@ scAllowCharacterSelect(); //Character selector allowed
 timer = scStageTimerStart(global.mode_targets_timer); //New time
 timer_current = timer;
 
-/*var roc = ROCKET.DEFAULT;
-var rocindex = roc;
-for (var i = ROCKET.DEFAULT; roc < global.mode_targets_rockettype + ROCKET.DEFAULT && i < ROCKET.LENGHT; i++) {
-	var list = scRocketGet(i);
-	if (list[? ROCKET_MAP.ENABLED])
-		roc++;
-	rocindex++;
-	ds_map_destroy(list);
-}*/
-
-with (oPlayer) {
-	var hp = shootable_map[? SHOOTABLE_MAP.HEALTH];
-	switch (global.mode_targets_difficulty) {
-		case 0: hp = 10; break;
-		case 1: hp = 6; break;
-		case 2: hp = 2; break;
-	}
-	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
-	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = hp;
-	scWeaponModify(id, WEAPON_MODIFIER.FIRE);
-}
+//Apply Modifiers
+event_user(10);

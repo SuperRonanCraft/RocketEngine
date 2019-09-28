@@ -19,7 +19,7 @@ if (item != noone) {
 } else
 	image_alpha = max(image_alpha - (0.05 / TIME_SPEED), alpha_cooldown);
 
-draw_self();
+//draw_self();
 
 if (hacked)
 	scDrawParticle(bbox_left, bbox_top, bbox_right, bbox_bottom, PARTICLES.HACK, 2);

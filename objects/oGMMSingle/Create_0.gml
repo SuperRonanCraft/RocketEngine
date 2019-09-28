@@ -50,3 +50,6 @@ start_y_default = RES_H - RES_H / 4;
 
 //Disabled unfolding
 unfolding = false;
+
+//Apply Modifiers
+event_user(10);
