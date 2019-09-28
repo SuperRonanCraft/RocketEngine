@@ -67,25 +67,32 @@ global.debug = false; //Debug mode?
 global.devmode = false; //Developer mode enabled?
 
 //Gameplay modes
+//1V1
 global.mode_1v1_preset = 1;
-//global.mode_1v1_pickups = 1; //Pickups enabled?
 global.mode_1v1_health = 2;
 global.mode_1v1_ultimates = 1; //Ability to use ultimates
 global.mode_1v1_timer = 2; //Timer
 global.mode_1v1_weapon = true; //Ability to use your weapon
 global.mode_1v1_singleplayer = 0; //Multiplayer level
-//global.mode_1v1_lowgravity = false;
 
+//TARGETS
 global.mode_targets_preset = 1;
 global.mode_targets_difficulty = 0;
-//global.mode_targets_rockettype = 1;
 global.mode_targets_timer = 2;
 
+//KNOCKBACK
 global.mode_kb_preset = 1;
-global.mode_kb_pickups = 1;
+//global.mode_kb_pickups = 1;
 global.mode_kb_health = 2;
 global.mode_kb_ultimates = 1;
 global.mode_kb_timer = 2;
+
+//RUMBLE
+global.mode_rumble_preset = 1;
+global.mode_rumble_health = 2;
+global.mode_rumble_ultimates = 1;
+global.mode_rumble_timer = 2;
+global.mode_rumble_singleplayer = 0; //Multiplayer level
 
 //STAGE SCORE
 global.score_mode_p1_wins = 0;

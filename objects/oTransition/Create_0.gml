@@ -1,7 +1,7 @@
 //Size Variables and Mode Setup
 
-w = display_get_gui_width();
-h = display_get_gui_height();
+w = RES_W;
+h = RES_H;
 
 enum TRANS_MODE {
 	OFF, NEXT, GOTO, RESTART, INTRO, PAUSE, UNPAUSE, ONE_V_ONE

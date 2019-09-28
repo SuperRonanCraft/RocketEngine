@@ -1,14 +1,14 @@
 /// @desc Spawn targets config
 
 event_inherited();
-timer = scStageTimerStart(global.mode_1v1_timer); //New time
+timer = scStageTimerStart(global.mode_rumble_timer); //New time
 timer_current = timer;
 scAllowCharacterSelect(); //Character selector allowed
 
 //Alter hp and ults
 with (oPlayer) {
 	var hp = shootable_map[? SHOOTABLE_MAP.HEALTH];
-	switch (global.mode_1v1_health) {
+	switch (global.mode_rumble_health) {
 		case 0: hp /= 10; break;
 		case 1: hp /= 2; break;
 		case 2: hp *= 1; break;
@@ -18,11 +18,11 @@ with (oPlayer) {
 	}
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = hp;
 	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = hp;
-	scStageUltimateStart(global.mode_1v1_ultimates);
-	weapon_map[? WEAPON_MAP.ENABLED] = global.mode_1v1_weapon;
-	if (global.mode_1v1_singleplayer == 1 && team == TEAM.RIGHT)
+	scStageUltimateStart(global.mode_rumble_ultimates);
+	//weapon_map[? WEAPON_MAP.ENABLED] = global.mode_1v1_weapon;
+	if (global.mode_rumble_singleplayer == 1 && team == TEAM.RIGHT)
 		scStartAI();
-	else if (global.mode_1v1_singleplayer == 2)
+	else if (global.mode_rumble_singleplayer == 2)
 		scStartAI();
 	auto_aim = true;
 }

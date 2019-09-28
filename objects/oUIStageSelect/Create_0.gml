@@ -109,7 +109,7 @@ switch (type) {
 		ds_modes = scUICreateMenuPage(
 			["HEALTH",		menu_element_type.shift,	["1", "2", "3", "5", "10"],	"mode_kb_health",	global.mode_kb_health, "Spawn kill!?"],
 			["TIMER",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_kb_timer",	global.mode_kb_timer, "Become a time master"],
-			["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_kb_pickups",	global.mode_kb_pickups, "Unleash Mayhem!"],
+			//["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_kb_pickups",	global.mode_kb_pickups, "Unleash Mayhem!"],
 			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
 			["ULTIMATES",	menu_element_type.shift,	["Disabled", "x1 Charge", "x10 Charge"],	"mode_kb_ultimates",	global.mode_kb_ultimates, "The wombo combos!"],
 			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
@@ -135,6 +135,31 @@ switch (type) {
 			);
 		menu_pages = [ds_menu_main];
 		menu_pages_index = [menu_page.main];
+		break;
+	case GAMEMODE.RUMBLE:
+		ds_menu_main = scUICreateMenuPage(
+			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
+			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
+			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
+			["MODIFIERS",		menu_element_type.page_transfer,	menu_page.modes, "&eALTER YOUR GAMEPLAY"],
+			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+		);
+
+		ds_modes = scUICreateMenuPage(
+			["HEALTH",		menu_element_type.shift,	["1", "5", "10", "20", "50", "100"],	"mode_rumble_health",	global.mode_rumble_health, "Be an angel, or a jerk!"],
+			["TIMER",		menu_element_type.shift,	["30 sec", "60 sec", "90 sec", "3 min", "5 min"],	"mode_rumble_timer",	global.mode_rumble_timer, "Become a time master"],
+			//["PICKUPS",		menu_element_type.shift,	["Disabled", "x1", "x10"],	"mode_1v1_pickups",	global.mode_1v1_pickups, "Unleash Mayhem!"],
+			//["LOW GRAVITY",		menu_element_type.toggle,	noone,	"mode_1v1_lowgravity",	global.mode_1v1_lowgravity, "You are one with the ceiling"],
+			["ULTIMATES",	menu_element_type.shift,	["Disabled", "x1 Charge", "x10 Charge"],	"mode_rumble_ultimates",	global.mode_rumble_ultimates, "The wombo combos!"],
+			//["WEAPONS",		menu_element_type.toggle,	noone,	"mode_1v1_weapon",	global.mode_1v1_weapon, "So, u wont be able to shoot..."],
+			["PLAYERS",		menu_element_type.shift,	["Multi-Player", "Player vs. AI", "AI vs. AI"],	"mode_rumble_singleplayer",	global.mode_rumble_singleplayer, "Play with a friend or machine!"],
+			//NAME, ELEMENT, ELEMENTS TO CHANGE, PRESET NAMES, PRESET VALUES, NEW VALUE, CURRENT VALUE
+			["PRESETS",	menu_element_type.mass_toggle,	[0, 1, 2],	["Custom", "Classic", "Boss Battle", "No Ultimates", "One Shot Kill"],	
+				[[2, 2, 1], [5, 4, 2], [2, 2, 0], [0, 0, 0]], "mode_rumble_preset", global.mode_rumble_preset],
+			["BACK",		menu_element_type.page_transfer,	menu_page.main],
+		);
+		menu_pages = [ds_menu_main, ds_modes];
+		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
 }
 
