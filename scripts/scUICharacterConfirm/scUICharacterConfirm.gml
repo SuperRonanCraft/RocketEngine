@@ -13,6 +13,7 @@ if (all_selected || force) {
 		with (oPlayer) { //random character
 			var val = irandom_range(0, CHARACTERS.LENGTH - 1);
 			scPlayerCharacterChange(val);
+			scPlayerLoadModifiers(id);
 		}
 	with (pGMM)
 		timer_enabled = true;

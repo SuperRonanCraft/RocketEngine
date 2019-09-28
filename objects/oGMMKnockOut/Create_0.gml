@@ -15,5 +15,4 @@ for (var i = 0; i < instance_number(oPlayer); i++) {
 	p.shootable_map[? SHOOTABLE_MAP.CAN_DAMAGE] = false; //Set damage take to false
 }
 
-//Apply Modifiers
-event_user(10);
+//MODIFIERS are now loaded in scPlayerLoadModifiers

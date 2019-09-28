@@ -37,8 +37,10 @@ tie = false;
 //list of players in gamemode
 p_list = ds_list_create();
 
-with (oPlayer)
+with (oPlayer) {
 	ds_list_add(other.p_list, self); //For every oPlayer, add players to the p_list
+	scPlayerLoadModifiers(id); //Load modifiers
+}
 
 with (oMusicHandler)
 	event_user(1); //Start a new song

@@ -1407,6 +1407,14 @@
             }
         },
         {
+            "Key": "320bc476-28cc-4fa5-93d9-7e9e09a177b4",
+            "Value": {
+                "id": "2edff728-c9cf-4bee-951d-774b4356c33a",
+                "resourcePath": "scripts\\scPlayerLoadModifiers\\scPlayerLoadModifiers.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "326e1261-540f-48f9-adab-0157d837c1d7",
             "Value": {
                 "id": "3725f4d5-18fa-460c-9567-8a9d96deefa5",
@@ -7096,6 +7104,7 @@
         "32b6d655-063a-403d-bba0-9f76f2373ca3",
         "af7fb6d8-9826-4676-b85a-1ae173f7bcf4",
         "0ac59313-0faa-4348-beac-7b8d9834d7d2",
+        "320bc476-28cc-4fa5-93d9-7e9e09a177b4",
         "12f54edf-5527-4ddb-9dda-dc5099ad848c",
         "22340016-76dd-4ca3-9586-882cef09cf3d",
         "52bf7011-b434-455b-b401-3945ebf3821b",

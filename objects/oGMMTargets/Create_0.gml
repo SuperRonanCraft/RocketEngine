@@ -33,5 +33,4 @@ scAllowCharacterSelect(); //Character selector allowed
 timer = scStageTimerStart(global.mode_targets_timer); //New time
 timer_current = timer;
 
-//Apply Modifiers
-event_user(10);
+//MODIFIERS are now loaded in scPlayerLoadModifiers

@@ -6,7 +6,12 @@ yy = RES_H / 4;
 //Setup ui
 event_inherited();
 
-switch (global.mode_1v1_singleplayer) {
+var ai_mode = 0;
+switch (global.gamemode) {
+	case GAMEMODE.ONEVONE: ai_mode = global.mode_1v1_singleplayer; break;
+	case GAMEMODE.RUMBLE: ai_mode = global.mode_rumble_singleplayer; break;
+}
+switch (ai_mode) {
 	case 0: //1 vs 1
 	case 1: //1 vs ai
 		ds_menu_main = scUICreateMenuPage(
@@ -17,7 +22,7 @@ switch (global.mode_1v1_singleplayer) {
 			[[">>",	menu_centered.right],		menu_element_type.script_runner,	scUIPaletteNext, "Color", -1] //Next Palette
 		);
 		break;
-	default:
+	default: //ai vs ai
 		scUICharacterConfirm(true);
 		exit;
 		break;
