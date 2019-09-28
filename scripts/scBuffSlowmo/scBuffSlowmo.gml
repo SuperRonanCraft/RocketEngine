@@ -29,7 +29,6 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
 		dsBuff[? BUFF_MAP.PARTICLE], dsBuff[? BUFF_MAP.PARTICLE_AMT]);
 	dsBuff[? BUFF_MAP.CLOCK]++;
-	owner.time_dialation *= dsBuff[? "dialation"];
 	//Matrix effect
 	dsBuff[? "steps_crt"]++;
 	if (dsBuff[? "steps_amt"] mod dsBuff[? BUFF_MAP.CLOCK] == 0)

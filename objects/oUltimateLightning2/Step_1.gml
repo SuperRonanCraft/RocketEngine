@@ -1,4 +1,4 @@
 if (first_step) exit;
 first_step = true;
 
-direction = owner.team != TEAM.NONE ? (owner.team == TEAM.LEFT ? 0 : 180) : (owner.facing == 1 ? 0 : 180); 
+hsp *= owner.team != TEAM.NONE ? (owner.team == TEAM.LEFT ? 1 : -1) : (owner.facing == 1 ? 1 : -1); 

@@ -2,7 +2,7 @@
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 
-//var owner = argument0;
+var owner = argument[0];
 var dsBuff = argument[1];
 
 var map = dsBuff[? "steps"];
@@ -12,3 +12,6 @@ for (var i = 0; i < ds_list_size(map); i++) {
 	steps[4] -= 0.05;
 	map[| i] = steps;
 }
+
+//Change time dialation before player is drawn
+owner.time_dialation *= dsBuff[? "dialation"];

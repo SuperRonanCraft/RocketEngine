@@ -17,11 +17,3 @@ if (count_down) {
 	else
 		map[? COMBO_MAP.COOLDOWN]--;
 }
-
-if (map[? COMBO_MAP.STREAK] > 1) {
-	if (map[? COMBO_MAP.DIALATED] < map[? COMBO_MAP.DIALATED_MAX]) {
-		map[? COMBO_MAP.DIALATED]++;
-		with (oPlayer)
-			time_dialation = 0;
-	}
-}
