@@ -2,12 +2,17 @@
 
 ds_list_add(hitList, other);
 
-var slash = instance_create_depth(other.x,other.y,depth,oUltimateSlashEffect);
-scPlaySound(SOUND.EFFECT_REFLECT);
-slash.owner = id;
-slash.image_blend = c_yellow;
 
-owner.hsp_move += (other.owner.facing * 20);
-owner.vsp_move -= 5;
+if(other.owner != owner){
+	
+	var slash = instance_create_depth(other.x,other.y,depth,oUltimateSlashEffect);
+	scPlaySound(SOUND.EFFECT_REFLECT);
+	slash.owner = id;
+	slash.image_blend = c_yellow;
 
-schwing = true;
+	owner.hsp_move += (other.owner.facing * 20);
+	owner.vsp_move -= 5;
+
+	schwing = true;
+
+}
