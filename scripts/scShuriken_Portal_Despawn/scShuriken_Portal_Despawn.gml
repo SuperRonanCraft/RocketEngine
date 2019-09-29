@@ -9,5 +9,5 @@ xplo.image_yscale = 1.5;
 ds_map_copy(xplo.weapon_map, weapon_map);
 ds_list_copy(xplo.hitList, hitList);
 
-
+scScreenShake(25,5);
 instance_destroy();

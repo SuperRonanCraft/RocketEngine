@@ -38,8 +38,9 @@ if (key_shoot) { //Shoot key being held down
 			map[? ULTIMATE_CASTING_MAP.CASTING_LAST] = ult;
 			ds_map_destroy(ult_map); //Delete the ult map
 		}
-		map[? ULTIMATE_CASTING_MAP.CASTING] = true; //Run this only once
-		exit;
+		//map[? ULTIMATE_CASTING_MAP.CASTING] = true; //Run this only once **DEBUGGED**
+		shoot = true;
+		//exit;
 	}
 } else {
 	//Reset casting

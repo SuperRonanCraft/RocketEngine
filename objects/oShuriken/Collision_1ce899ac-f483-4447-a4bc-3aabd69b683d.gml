@@ -14,7 +14,7 @@ if(shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
 		stuckTo = other.id;
 		
 		scSpawnParticle(x-hsp, y-vsp, spd*.3, abs(vsp) + abs(hsp), spDebris,WORLDPART_TYPE.DEBRIS);
-		show_debug_message( string(image_angle) + ".");
+		
 		hsp = 0;
 		vsp = 0;
 		

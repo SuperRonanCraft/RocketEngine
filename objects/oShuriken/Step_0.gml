@@ -89,7 +89,6 @@ y += vsp * owner.time_dialation;
 //Rotate with hsp
 imgdir -= hsp;
 image_angle = imgdir;
-show_debug_message("+" + string(hsp) + ": " + string(image_angle));
 
 
 //Despawn if out of room.

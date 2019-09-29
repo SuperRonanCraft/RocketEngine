@@ -144,6 +144,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 45;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
 		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SCRAPING];
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_SWORD;
 		break;
 }
 

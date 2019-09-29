@@ -30,4 +30,3 @@ hsp = 0;
 vsp = 0;
 
 imgdir = irandom_range(0,359);
-show_debug_message(imgdir);

@@ -20,7 +20,7 @@ if (!controller_inuse)
 			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.SHOOT]));
 			break;
 		case KEYBIND_TYPE.ULT:
-			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ULTIMATE]));
+			input = keyboard_check_pressed(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ULTIMATE]));
 			break;
 		case KEYBIND_TYPE.ABILITY:
 			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY]));

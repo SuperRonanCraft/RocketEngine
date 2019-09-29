@@ -186,6 +186,12 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 		break;
 		
+	case ULTIMATE.LIGHTNING_SWORD:
+		ds_map[? ULTIMATE_MAP.NAME] = "A sharp spark.";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordLightning;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
+		break;
+		
 }
 
 enum ULTIMATE {
@@ -195,7 +201,7 @@ enum ULTIMATE {
 	ORBIT, HACKLOOT, JUMPPAD, FROSTY,
 	
 	//SWORD ULTS
-	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,
+	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,
 	
 	
 	NONE,

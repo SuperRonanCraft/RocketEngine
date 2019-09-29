@@ -1495,6 +1495,14 @@
             }
         },
         {
+            "Key": "34b63518-6818-44d1-b588-f8d37e6ae745",
+            "Value": {
+                "id": "e0b61651-679b-4fed-a818-7f1e59d5718e",
+                "resourcePath": "sprites\\sShuriken_Lightning_Ult\\sShuriken_Lightning_Ult.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
             "Value": {
                 "id": "ccbf0b1a-1fca-40f0-9dfc-f9672a37e043",
@@ -6023,6 +6031,14 @@
             }
         },
         {
+            "Key": "dee82466-dbf1-4b22-8a41-1cbe44e69a7f",
+            "Value": {
+                "id": "27a70659-6bfd-40d1-b9b1-2439a3b3f1db",
+                "resourcePath": "scripts\\scUltimateSwordLightning\\scUltimateSwordLightning.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e02a2303-a556-4d20-ab08-e9a2978b49cf",
             "Value": {
                 "id": "61ade6b8-ccc5-4320-a6e4-91424de1503e",
@@ -6076,6 +6092,14 @@
                 "id": "52647085-445e-4876-bd8b-bdccb658e12c",
                 "resourcePath": "views\/e120f2cf-c5bb-43da-b13b-0c3fa73e3327.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e2455110-7a41-43ff-8e53-e4154f9dece1",
+            "Value": {
+                "id": "289c2be9-4f9e-459f-84d3-266294bc4d95",
+                "resourcePath": "objects\\oSwordSlash_Lightning\\oSwordSlash_Lightning.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6983,6 +7007,7 @@
         "9beed5d5-b978-4366-8638-ef79a32d3637",
         "62d81973-9b38-4c0f-a0e0-6a2c2781f9f6",
         "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
+        "dee82466-dbf1-4b22-8a41-1cbe44e69a7f",
         "e9b756e7-36df-4095-bde1-955dd35338b9",
         "3c4015ab-95c8-473d-937c-a0cae539f1f6",
         "483e1c54-e32e-4837-b4ec-da3ac733df64",
