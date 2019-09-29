@@ -1663,6 +1663,14 @@
             }
         },
         {
+            "Key": "3d0eeb88-744d-4c8b-89f9-ccc1ac1ac841",
+            "Value": {
+                "id": "c03f1fdb-206f-4847-95c3-e8e601255841",
+                "resourcePath": "sprites\\s_abilityIcon_Invisible\\s_abilityIcon_Invisible.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3d9d1734-de3d-4754-8164-2a8911a8656a",
             "Value": {
                 "id": "de4fa8b2-bd9b-4e84-a3a6-ca4af779a5aa",
@@ -3131,6 +3139,14 @@
             "Value": {
                 "id": "0262c2d1-6ebd-4f4f-98f8-eac7135936ca",
                 "resourcePath": "scripts\/scBuffUltCharge\/scBuffUltCharge.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "714165ea-2c95-4f22-b72d-9069d845801e",
+            "Value": {
+                "id": "64e2d748-7baf-42d5-93c9-f94f2620a7a3",
+                "resourcePath": "scripts\\scBuffInvisble\\scBuffInvisble.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7056,6 +7072,7 @@
         "cac11421-bb3a-4cbf-9e77-a4a404424fa6",
         "5a44ba40-3360-4a8c-87d7-b24273b2b27a",
         "d4fcf6f8-1d92-4162-b191-fc3d8ee02efe",
+        "714165ea-2c95-4f22-b72d-9069d845801e",
         "f049437b-f0f6-434f-9fb2-b525903bf967",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",

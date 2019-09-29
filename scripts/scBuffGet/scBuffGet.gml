@@ -261,10 +261,18 @@ switch (buff) {
 		ds_map[? BUFF_MAP.TIME] = 2 * room_speed;
 		ds_map[? BUFF_MAP.GOOD] = false;
 		ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.COMBO, 2, 1, 2 * room_speed, 0]; //Type, combo-amount, combo-current, up-time, up-time-current, refreshable?
-		
 		break;
 		
-		
+	case BUFFTYPE.INVISIBLE:
+		ds_map[? BUFF_MAP.NAME] = "Invisible";
+		ds_map[? BUFF_MAP.DESCRIPTION] = "I swear they were here!";
+		ds_map[? BUFF_MAP.ICON] = BUFF_ICON.INVISIBLE;
+		ds_map[? BUFF_MAP.STEP] = scBuffInvisble; 
+		//ds_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.FROST];
+		//ds_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.FROST];
+		ds_map[? BUFF_MAP.TIME] = 5 * room_speed;
+		ds_map[? BUFF_MAP.GOOD] = true;
+		break;
 	// FOR LATER TECHNOLOGICAL ADVANCES
 	/*case BUFFTYPE.CLEANSE:
 		ds_map[? BUFF_MAP.NAME] = "Cleanse";
@@ -301,7 +309,7 @@ enum BUFF_ICON {
 	SLOWMO = s_abilityIcon_Slowmo, SLEEP = s_abilityIcon_Sleep, DAMAGE = s_abilityIcon_Damage,
 	ANTIHEAL = s_abilityIcon_AntiHeal, ABSORBTION = s_abilityIcon_Absorbtion,
 	LIFESTEAL = s_abilityIcon_LifeSteal, CLEANSE = s_abilityIcon_Cleanse,
-	FROZEN = s_abilityIcon_Frozen,
+	FROZEN = s_abilityIcon_Frozen, INVISIBLE = s_abilityIcon_Invisible
 }
 
 enum BUFFTYPE {
@@ -309,7 +317,7 @@ enum BUFFTYPE {
 	REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 	REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
 	ANTIHEAL, ABSORBTION, LIFESTEAL, FROZEN, //CLEANSE,
-	
+	INVISIBLE,
 	//PUT LAST
 	LENGHT
 }
