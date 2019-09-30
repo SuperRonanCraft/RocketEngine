@@ -41,7 +41,7 @@ map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false; //Make the orientation of
 map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2 * TIME_SPEED; //Screen shake magnitude
 map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * TIME_SPEED; //Screen shake frame
 //EXPLOSIONS
-map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Default; //Sprite of explosion
+map[? ROCKET_MAP.EXPLOSION_SPRITE] = s_boom; //Sprite of explosion
 map[? ROCKET_MAP.EXPLOSION_CREATE] = noone; //Only if no event for rocket, wall or shootable
 map[? ROCKET_MAP.EXPLOSION_ROCKET] = noone; //Explosion with a rocket
 map[? ROCKET_MAP.EXPLOSION_WALL] = noone; //Explosion with a wall
