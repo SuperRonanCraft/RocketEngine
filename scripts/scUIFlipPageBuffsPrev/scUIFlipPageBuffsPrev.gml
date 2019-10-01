@@ -8,3 +8,6 @@ if (pg != 0) //PREV
 else
 	while (amt - ((page_buffs + 1) * (columns * rows)) > 0)
 		page_buffs++;
+
+if (pg != page_buffs)
+	scParticlesClear();

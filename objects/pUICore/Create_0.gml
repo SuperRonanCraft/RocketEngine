@@ -17,6 +17,8 @@ enum menu_element_type {
 	script_runner,
 	//Go to another page (enum value)
 	page_transfer,
+	//Go to another page and run a script
+	page_transfer_script,
 	//Is a type of input
 	slider,
 	//Go from one value to another

@@ -55,7 +55,7 @@ ds_list_buffs = scUICreateMenuPage(
 	["",		menu_element_type.list_buffs],
 	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageBuffsPrev],
 	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageBuffsNext],
-	["BACK",	menu_element_type.page_transfer,	menu_page.info]
+	["BACK",	menu_element_type.page_transfer_script,	menu_page.info, scParticlesClear]
 );
 //Buffs page
 page_buffs = 0;

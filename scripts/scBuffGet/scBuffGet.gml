@@ -14,6 +14,8 @@ ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.NONE];
 ds_map[? BUFF_MAP.ENABLED] = true;
 ds_map[? BUFF_MAP.GIVEN_BY] = noone;
 //OPTIONAL
+ds_map[? BUFF_MAP.PARTICLE] = noone;
+ds_map[? BUFF_MAP.PARTICLE_AMT] = 1;
 ds_map[? BUFF_MAP.DRAW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_BELOW] = noone;
 ds_map[? BUFF_MAP.DRAW_GUI_ABOVE] = noone;

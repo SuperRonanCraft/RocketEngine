@@ -1,7 +1,7 @@
 var amt = BUFFTYPE.LENGHT, columns = 3, rows = 3, offset = 0;
 var pg = page_buffs;
 var map, spr, name, desc, part, part_amt, rx, ry, c, yoffset, index = 0;
-for (var i = (pg * (columns * rows)); index < columns * rows && i < amt; i++) {
+for (var i = (pg * (columns * rows)) + (clamp(pg - 1, 0, pg)); index < columns * rows && i < amt; i++) {
 	if (index mod columns == 0)
 		offset++;
 	map = ds_map_create();
@@ -24,9 +24,11 @@ for (var i = (pg * (columns * rows)); index < columns * rows && i < amt; i++) {
 	}
 	scDrawText(rx, ry, name, c, scale_element); //Buff name
 	//Particles
-	part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - 42, rx + 42,
-		ry + 94, ry + 74, ps_shape_rectangle, ps_distr_linear)
-	part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
+	if (part != noone) {
+		part_emitter_region(global.ParticleSystem1, global.Emitter1, rx - 42, rx + 42,
+			ry + 94, ry + 74, ps_shape_rectangle, ps_distr_linear)
+		part_emitter_burst(global.ParticleSystem1, global.Emitter1, part, part_amt);
+	}
 	draw_sprite(spr, 0, rx - 32, ry + 20 + yoffset); //Buff icon
 	var time = map[? BUFF_MAP.TIME] != noone ? ceil(map[? BUFF_MAP.TIME] / room_speed) : "inf";
 	scDrawText(rx + 32, ry + 84 + yoffset, string(time),
