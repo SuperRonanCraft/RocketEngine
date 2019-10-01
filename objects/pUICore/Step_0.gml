@@ -12,7 +12,7 @@ if (inputting) { //Are we inputting data?
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
 			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
-			if (hinput == 0) { //HOVERING SUPPORT
+			/*if (hinput == 0) { //HOVERING SUPPORT
 				var option = menu_option[page];
 				var x1left = start_x[option] + (x_buffer * 2);
 				var x2left = x1left + (string_width("<< ") * scale_element);
@@ -27,8 +27,30 @@ if (inputting) { //Are we inputting data?
 					//	hinput = 1;
 					else
 						hinput = 1;
+			}*/
+			if (mouse_check_button_pressed(mb_right)) //Right button
+				hinput = 1;
+			else if (key_enter_mouse) { //Left button and hovering
+				var option = menu_option[page];
+				var len = -1;
+				var current_val = ds_grid[# 4, option]
+				var current_array = ds_grid[# 2, option];
+				for (var d = 0; d < array_length_1d(current_array); d++)
+					if (string_width(current_array[d]) * scale_element > len)
+						len = string_width(current_array[d]) * scale_element;
+				len += x_buffer;
+				var rty = start_y[option];
+				var rtx = start_x[option] + x_buffer * 2;
+				if (centered) { //We are centered
+					rty = start_y[option] + 25;
+					rtx = start_x[option];
+				} else
+					rtx += (len / 2) + x_buffer;
+				if (current_val != 0 && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) //Left
+					hinput = -1;
+				else if (current_val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
+					hinput = 1;
 			}
-				
 			if (hinput != 0) {
 				//AUDIO
 				var val = ds_grid[# 4, menu_option[page]] + hinput;
@@ -37,6 +59,7 @@ if (inputting) { //Are we inputting data?
 				else if (val < 0)
 					val = array_length_1d(ds_grid[# 2, menu_option[page]]) - 1;
 				ds_grid[# 4, menu_option[page]] = val;
+				key_enter_mouse = false;
 			}
 			break;
 		case menu_element_type.slider:

@@ -110,36 +110,45 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
-			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element;
+			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element, len = -1;
 			var left_shift = "<<", right_shift = ">>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
+			//Find the longest string (to center on this)
+			for (var d = 0; d < array_length_1d(current_array); d++)
+				if (string_width(current_array[d]) * scale_element > len)
+					len = string_width(current_array[d]) * scale_element;
+			len += x_buffer;
 			if (centered) { //We are centered
 				rty = start_y[i] + 25;
 				rtx = start_x[i];
-			}
+			} else
+				rtx += (len / 2) + x_buffer;
 			if (inputting && i == menu_option[page])
 				c = color_element_input;
-			/*	//HOVERING SUPPORT
-				var x1left = rtx;
-				var x2left = x1left + (string_width(left_shift) * scale_element);
-				var x1right = x2left + (string_width(string(current_array[current_val]) + "  ") * scale_element);
-				var x2right = x1right + (string_width(right_shift) * scale_element);
-				var buffer = string_width("<<<") * scale_element;
-				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, left_shift, buffer * 2, buffer, scale_element, fa_middle))
-					left_shift = "<<<";
-				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, right_shift, buffer * 2, buffer, scale_element, fa_middle))
-					right_shift = ">>>";
-			}*/
-			//TEXT
-			scDrawText(rtx, rty, left_shift + " " + string(current_array[current_val]) + " " + right_shift, c, scale_element, noone, noone, !centered ? fa_left : fa_middle);
-			//scDrawText(rtx, rty, left_shift + " " + string(ds_grid[# 2, i]) + " " + right_shift, c, scale_element, noone, noone, fa_left);
+			//Draw Left
+			var offset = 0;
+			var shift_scale = scale_element;
+			if (inputting && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) {
+				shift_scale *= 1.3;
+				offset = scMovementWave(-3, 3, 1);
+			}
+			scDrawText(rtx - len / 2 + offset, rty, left_shift, c, shift_scale, noone, noone, fa_right);
+			//Option
+			scDrawText(rtx, rty, string(current_array[current_val]), c, scale_element, noone, noone, fa_middle);
+			//Draw Right
+			shift_scale = scale_element;
+			offset = 0;
+			if (inputting && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) {
+				shift_scale *= 1.1;
+				offset = scMovementWave(-3, 3, 1);
+			}
+			scDrawText(rtx + len / 2 + offset, rty, right_shift, c, scale_element, noone, noone, fa_left);
+			
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
 			if (inputting && i == menu_option[page]) c = c_yellow;
-			//draw_line_width_color(rtx, rty, rtx + len, rty, 4, c, c);
-			//draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
 			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left);
 			//Slider bar
 			draw_sprite_part_ext(sUISliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
@@ -147,9 +156,6 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			//Slider button
 			var scl = 1;
 			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, c_white, 0.8);
-			//var xleft = rtx;
-			//var ycheck = rty;
-			//scUIHoveringBox(xleft, xleft + slider_width, ycheck, ycheck, x_buffer, y_buffer);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];
@@ -163,7 +169,6 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.keybind:
-			//var string_val = scKeyToString(ds_grid[# 3, i]);
 			c = c_white;
 			var index = 3;
 			var scale = 1.2;
@@ -176,7 +181,6 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					c = color_element_input;
 			}
 			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
-			//scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.mass_toggle:
 			var current_val = ds_grid[# 6, i], current_array = ds_grid[# 3, i], c = color_element;

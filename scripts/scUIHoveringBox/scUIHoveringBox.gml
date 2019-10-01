@@ -1,7 +1,7 @@
 /// @desc helps with seeing if a mouse is hovering over a certain part of the screen with the arguments provided
 /// @arg x1
-/// @arg x2
 /// @arg y1
+/// @arg x2
 /// @arg y2
 /// @arg xbuffer
 /// @arg ybuffer

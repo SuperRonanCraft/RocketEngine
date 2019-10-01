@@ -2402,7 +2402,7 @@
             "Key": "54791054-8f45-4f70-958a-fafb6a31106c",
             "Value": {
                 "id": "3718b7d1-1743-459e-b332-e0704dd0ed05",
-                "resourcePath": "scripts\/scUIFlipPageRocketsPrev\/scUIFlipPageRocketsPrev.yy",
+                "resourcePath": "scripts\\scUIFlipPageWeaponPrev\\scUIFlipPageWeaponPrev.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4218,7 +4218,7 @@
             "Key": "9a0da5da-81e2-4634-9400-c0e170ae88bc",
             "Value": {
                 "id": "1f8bd27e-762f-4c4b-8ccd-361530f88ce4",
-                "resourcePath": "scripts\/scUIFlipPageRocketsNext\/scUIFlipPageRocketsNext.yy",
+                "resourcePath": "scripts\\scUIFlipPageWeaponNext\\scUIFlipPageWeaponNext.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -1,8 +1,8 @@
 {
-    "id": "54791054-8f45-4f70-958a-fafb6a31106c",
+    "id": "9a0da5da-81e2-4634-9400-c0e170ae88bc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scUIFlipPageRocketsPrev",
+    "name": "scUIFlipPageWeaponNext",
     "IsCompatibility": false,
     "IsDnD": false
 }

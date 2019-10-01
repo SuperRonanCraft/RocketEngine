@@ -30,15 +30,15 @@ ds_stats = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.stats,	GAMEMODE.ONEVONE],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.stats,	GAMEMODE.KNOCKOUT],
 	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.stats,	GAMEMODE.TARGETS],
-	[global.gamemodes[GAMEMODE.SINGLE],		menu_element_type.stats,	GAMEMODE.SINGLE],
+	//[global.gamemodes[GAMEMODE.SINGLE],		menu_element_type.stats,	GAMEMODE.SINGLE],
 	["RESET",		menu_element_type.script_runner,	scStatsResetGame, "&cThis will reset all stats!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 
 ds_list_weapons = scUICreateMenuPage(
 	["",			menu_element_type.list_weapons],
-	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageRocketsPrev],
-	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageRocketsNext],
+	[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scUIFlipPageWeaponPrev],
+	[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scUIFlipPageWeaponNext],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
 );
 //Weapons page
