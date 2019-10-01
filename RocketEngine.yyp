@@ -4703,6 +4703,14 @@
             }
         },
         {
+            "Key": "ac571ee1-1963-43d0-9524-31306706336b",
+            "Value": {
+                "id": "4ccf1eb5-f693-4d9c-9714-b9990a7b73ef",
+                "resourcePath": "sprites\\s_pExplosionPixel\\s_pExplosionPixel.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "accfa0df-4e1c-4868-adc9-8521a42746ab",
             "Value": {
                 "id": "278d7844-502a-463d-944d-e55d1fedb8bf",

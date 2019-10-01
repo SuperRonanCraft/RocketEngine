@@ -515,11 +515,28 @@ part_type_life(parttype,40,60);
 ds_map_add(ds_part,PARTICLES.METAL, parttype);
 ds_map_add(ds_part_amt, PARTICLES.METAL, 1);
 
+//EXPLOSION
+parttype = part_type_create();
+part_type_sprite(parttype,s_pExplosionPixel,0,0,true);
+part_type_size(parttype,1,1,-0.01,0);
+part_type_scale(parttype,1,1);
+part_type_color3(parttype,255,33023,65535);
+part_type_alpha3(parttype,1,0.30,0.10);
+part_type_speed(parttype,2,3,0,0);
+part_type_direction(parttype,80,110,0,0);
+part_type_gravity(parttype,0.10,270);
+part_type_orientation(parttype,0,0,0,0,0);
+part_type_blend(parttype,1);
+part_type_life(parttype,90,180);
+ds_map_add(ds_part,PARTICLES.EXPLOSION_DEFAULT, parttype);
+ds_map_add(ds_part_amt, PARTICLES.EXPLOSION_DEFAULT, 25);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
-	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL
+	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL,
+	EXPLOSION_DEFAULT,
 }

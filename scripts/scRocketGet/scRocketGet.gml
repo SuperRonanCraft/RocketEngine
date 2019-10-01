@@ -26,6 +26,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
 		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];
 		break;
 		
 	case ROCKET.FAST:
