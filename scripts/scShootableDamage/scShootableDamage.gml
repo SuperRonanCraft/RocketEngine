@@ -19,7 +19,7 @@ var combo =  argument_count > 7 ? (argument[7] != noone ? argument[7] : true) : 
 var didDamage = false;
 var lethalDamage = false;
 
-if (damager.object_index == oPlayer)
+if (damager != noone && damager.object_index == oPlayer)
 	with (damager)
 		if (scBuffFind(id, BUFFTYPE.DAMAGE, false))
 			dmg = scBuffHandler(BUFF_EVENT.DAMAGE_PREAPPLY, dmg);
@@ -37,9 +37,10 @@ with (damaging) {
 			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
 			player_map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [damager, dmg]);
-			with (damager)
-				if (object_index == oPlayer) //Is a player
-					scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damaging, dmg]);
+			if (damager != noone)
+				with (damager)
+					if (object_index == oPlayer) //Is a player
+						scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damaging, dmg]);
 		}
 		map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
 		didDamage = true;
@@ -53,10 +54,10 @@ with (damaging) {
 				value_damage = dmg;
 				damage_type = type;
 				damage_killed = lethalDamage;
-				if (combo && damager.object_index == oPlayer)
+				if (damager != noone && combo && damager.object_index == oPlayer)
 					id.combo = damager.combo_map[? COMBO_MAP.STREAK];
 			}
-		if (combo)
+		if (damager != noone && combo)
 			scComboDamaged(damager);
 		scSpawnParticle(x, bbox_top, irandom_range(4 * power(dmg, 2), 6 * power(dmg, 2)), 20,  spBlood,WORLDPART_TYPE.BLOOD);
 	}
