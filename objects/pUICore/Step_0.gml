@@ -10,21 +10,22 @@ var confirm_list = ds_list_create();
 
 for (var i = 0; i < ds_height; i++) {
 	switch (ds_grid[# 1, i]) {
+		case menu_element_type.mass_toggle:
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
-			var val = 0;
+			var current_id = 4, current_array_id = 2;
+			if (ds_grid[# 1, i] == menu_element_type.mass_toggle) {
+				current_id = 6;
+				current_array_id = 3;
+			}
+			var val = ds_grid[# current_id, i];
 			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 			if (hinput != 0 && menu_option[page] == i) {
 				//AUDIO
-				var val = hinput;
-				if (val >= array_length_1d(ds_grid[# 2, i]))
-					val = 0;
-				else if (val < 0)
-					val = array_length_1d(ds_grid[# 2, i]) - 1;
+				val += hinput;
 			} else if (mouse_check_button_pressed(mb_left)) { //Left button and hovering
 				var len = -1;
-				var current_val = ds_grid[# 4, i]
-				var current_array = ds_grid[# 2, i];
+				var current_array = ds_grid[# current_array_id, i];
 				for (var d = 0; d < array_length_1d(current_array); d++)
 					if (string_width(current_array[d]) * scale_element > len)
 						len = string_width(current_array[d]) * scale_element;
@@ -36,19 +37,18 @@ for (var i = 0; i < ds_height; i++) {
 					rtx = start_x[i];
 				} else
 					rtx += (len / 2) + x_buffer;
-				if (current_val != 0 && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) //Left
-					val = -1;
-				else if (current_val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
-					val = 1;
+				if (val != 0 && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) //Left
+					val += -1;
+				else if (val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
+					val += 1;
 			}
-			if (val != 0) {
+			if (val != ds_grid[# current_id, i]) {
 				//AUDIO
-				var val = ds_grid[# 4, i] + val;
-				if (val >= array_length_1d(ds_grid[# 2, i]))
+				if (val >= array_length_1d(ds_grid[# current_array_id, i]))
 					val = 0;
 				else if (val < 0)
-					val = array_length_1d(ds_grid[# 2, i]) - 1;
-				ds_grid[# 4, i] = val;
+					val = array_length_1d(ds_grid[# current_array_id, i]) - 1;
+				ds_grid[# current_id, i] = val;
 				ds_list_add(confirm_list, i);
 				enter_change = true;
 			}
@@ -126,7 +126,7 @@ for (var i = 0; i < ds_height; i++) {
 				}
 			}
 			break;
-		case menu_element_type.mass_toggle:
+		/*case menu_element_type.mass_toggle:
 			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 			var val = ds_grid[# 6, i];
 			if (hinput != 0 && menu_option[page] == i) {
@@ -155,7 +155,7 @@ for (var i = 0; i < ds_height; i++) {
 				ds_list_add(confirm_list, i);
 				enter_change = true;
 			}
-			break;
+			break;*/
 		default: //No custom values, just queue it up for confirm event
 			if (menu_option[page] == i)
 				ds_list_add(confirm_list, i);
