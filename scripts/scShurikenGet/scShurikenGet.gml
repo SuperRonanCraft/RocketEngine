@@ -68,6 +68,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Portal_Despawn;
 		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Portal_Despawn;
 		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Portal_Weapon;
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.PORTAL_SWORD;
 		
 		break;
     case SHURIKEN.BRICK:
@@ -97,11 +98,12 @@ switch (shur) {
 		map[? SHURIKEN_MAP.NAME] = "Scarab Scythe";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "In shrouded clouds";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SAND;
-		map[? SHURIKEN_MAP.COOLDOWN] = 45;
-		map[? SHURIKEN_MAP.SPEED] = 15;
+		map[? SHURIKEN_MAP.COOLDOWN] = 25;
+		map[? SHURIKEN_MAP.SPEED] = 10;
 		map[? SHURIKEN_MAP.CLIP] = 5;
-		map[? SHURIKEN_MAP.DAMAGE] = 1;
-		map[? SHURIKEN_MAP.RELOAD_TIME] = 80;
+		map[? SHURIKEN_MAP.DAMAGE] = 2;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SAND_SWORD;
 		break;
 	
     case SHURIKEN.SHOTGUN:

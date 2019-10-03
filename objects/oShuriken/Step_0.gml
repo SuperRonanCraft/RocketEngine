@@ -54,11 +54,12 @@ else
 
 
 if(deactivate && stuckTo != noone){
-	if(variable_instance_exists(stuckTo,"destroy"))
+	if(variable_instance_exists(stuckTo,"destroy")){
 		if(stuckTo.destroy){
 			event_user(0);
 			exit;
 		}
+	}
 }
 
 //Stick to a (usually moving) object

@@ -25,7 +25,7 @@ for (var a = 0; a < 2; a++) {
 		place_walls = true;
 }
 
-show_debug_message("place = " + string(place_walls) + ", detected = " + string(detected_player))
+//show_debug_message("place = " + string(place_walls) + ", detected = " + string(detected_player))
 
 if (place_walls)
 	first_step = true;

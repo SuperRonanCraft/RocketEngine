@@ -192,6 +192,18 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 		break;
 		
+	case ULTIMATE.PORTAL_SWORD:
+		ds_map[? ULTIMATE_MAP.NAME] = "A warping slice.";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordPortal;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
+		break;
+		
+	case ULTIMATE.SAND_SWORD:
+		ds_map[? ULTIMATE_MAP.NAME] = "A blinding bite.";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordSand;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
+		break;
+		
 }
 
 enum ULTIMATE {
@@ -201,7 +213,7 @@ enum ULTIMATE {
 	ORBIT, HACKLOOT, JUMPPAD, FROSTY,
 	
 	//SWORD ULTS
-	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,
+	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,PORTAL_SWORD,SAND_SWORD,
 	
 	
 	NONE,
