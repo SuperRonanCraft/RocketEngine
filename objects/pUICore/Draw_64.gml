@@ -119,10 +119,8 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				current_id = 6;
 				current_array_id = 3;
 			}
-			var current_val = ds_grid[# current_id, i], current_array = ds_grid[# current_array_id, i], c = color_element, len = -1;
+			var current_val = ds_grid[# current_id, i], current_array = ds_grid[# current_array_id, i], c = color_element; len = -1;
 			var c_left = color_element, c_right = c_left;
-			if (current_val == 0) c_left = c_dkgray; //left_shift = "";
-			else if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray; //right_shift = "";
 			//Find the longest string (to center on this)
 			for (var d = 0; d < array_length_1d(current_array); d++)
 				if (string_width(current_array[d]) * scale_element > len)
@@ -141,8 +139,9 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) {
 				shift_scale *= 1.3;
 				offset = scMovementWave(-3, 3, 1);
-				c = color_element_input;
-			}
+				c_left = color_element_input;
+			} else c_left = c;
+			if (current_val == 0) c_left = c_dkgray;
 			scDrawText(rtx - len / 2 + offset, rty, "<<", c_left, shift_scale, noone, noone, fa_right);
 			//Option
 			scDrawText(rtx, rty, string(current_array[current_val]), color_element, scale_element, noone, noone, fa_middle);
@@ -152,8 +151,10 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) {
 				shift_scale *= 1.3;
 				offset = scMovementWave(-3, 3, 1);
-				c = color_element_input;
-			}
+				c_right = color_element_input;
+			} else
+				c_right = c;
+			if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray;
 			scDrawText(rtx + len / 2 + offset, rty, ">>", c_right, shift_scale, noone, noone, fa_left);
 			
 			break;
@@ -168,20 +169,24 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var scl = 1;
 			var xleft = start_x[i] + (x_buffer * 2);
 			var ycheck = start_y[i];
-			if (scUIHoveringBox(xleft, ycheck, xleft + len, ycheck, x_buffer, y_buffer))
+			if (scUIHoveringBox(xleft, ycheck, xleft + len, ycheck, x_buffer, y_buffer)) {
 				scl *= 1.3;
+				rtx += scMovementWave(-3, 3, 1);
+			}
 			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, scl == 1 ? c_white : c_yellow, 0.8);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];
 			var c = i == menu_option[page] ? color_element_input : color_element;
 			var text = current_val == 1 ? "ENABLED" : "DISABLED";
-			scDrawText(rtx + 32, rty, text, c, scale_element, noone, noone, fa_left);
 			var xleft = start_x[i] + (x_buffer * 2);
 			var ycheck = start_y[i];
 			var scl = 1;
-			if (scUIHoveringBox(xleft, ycheck, xleft + (string_width(text) * scale_element) + 32, ycheck, x_buffer, y_buffer))
+			if (scUIHoveringBox(xleft, ycheck, xleft + (string_width(text) * scale_element) + 32, ycheck, x_buffer, y_buffer)) {
 				scl *= 1.3;
+				c = color_element_input;
+			}
+			scDrawText(rtx + 32, rty, text, c, scale_element, noone, noone, fa_left);
 			draw_sprite_ext(sUIToggle, current_val, rtx, rty - 8, scl, scl, 0, c_white, 1);
 			break;
 		case menu_element_type.input:
@@ -198,8 +203,14 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				c = color_element;
 				index = 2;
 				scale = scale_element;
+				var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# index, i]))) * scale;
 				if (i == menu_option[page])
 					c = color_element_input;
+				else if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0)) {
+					scale *= 1.3;
+					rtx += scMovementWave(-3, 3, 1);
+					c = color_element_input;
+				}
 			}
 			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
 			break;

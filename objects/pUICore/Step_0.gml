@@ -3,6 +3,7 @@ else scUIReloadGlobal(); //Reload global vars
 
 var key_up = keyboard_check_pressed(button_up), key_down = keyboard_check_pressed(button_down);
 var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left), enter_change = false;
+var play_sound = true;
 
 //Grid that we are checking based off the page we are on
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
@@ -58,16 +59,23 @@ for (var i = 0; i < ds_height; i++) {
 			var val = -1;
 			if (hinput != 0 && menu_option[page] == i) //Must be pressing btn to move slider
 				val = ds_grid[# 4, i] + hinput * 0.01;
-			else if (mouse_check_button(mb_left)) {
+			else if (mouse_check_button(mb_left) || mouse_check_button_released(mb_left)) {
 				var xleft = start_x[i] + (x_buffer * 2);
 				var ycheck = start_y[i];
-				if (scUIHoveringBox(xleft, ycheck, xleft + slider_width, ycheck, x_buffer, y_buffer))
-					val = (device_mouse_x_to_gui(0) - xleft) / slider_width;
+				if (scUIHoveringBox(xleft, ycheck, xleft + slider_width, ycheck, x_buffer, y_buffer)) {
+					if (mouse_check_button(mb_left))
+						val = (device_mouse_x_to_gui(0) - xleft) / slider_width;
+					else {
+						ds_list_add(confirm_list, i);
+						enter_change = true;
+					}
+				}
 			}
 			if (val != -1) {
 				ds_grid[# 4, i] = clamp(val, 0, 1);
 				ds_list_add(confirm_list, i);
 				enter_change = true;
+				play_sound = false;
 				//script_execute(ds_grid[# 2, i], ds_grid[# 4, i], ds_grid[# 5, i]);
 				//variable_global_set(ds_grid[# 3, i], ds_grid[# 4, i]);
 			}
@@ -312,7 +320,8 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 			case menu_element_type.input: //Simply inputting a character
 				//inputting = !inputting; break;
 		}
-		audio_play_sound(SOUND.UI_SELECT, 5, false); //Confirm sound
+		if (play_sound)
+			audio_play_sound(SOUND.UI_SELECT, 5, false); //Confirm sound
 	}
 
 ds_list_destroy(confirm_list);

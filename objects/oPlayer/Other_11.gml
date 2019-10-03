@@ -1,6 +1,6 @@
 /// @desc weapon clip
 var map = weapon_map;
-if (map[? WEAPON_MAP.ENABLED] && shootable_map[? SHOOTABLE_MAP.HEALTH] > 0 && global.play && global.weapon_info) {
+if (map[? WEAPON_MAP.ENABLED] && shootable_map[? SHOOTABLE_MAP.HEALTH] > 0 && global.play && global.weapon_info && player_map[? PLAYER_MAP.HUD_SHOW]) {
 	var clip = map[? WEAPON_MAP.CLIP];
 	if (clip > 1) {
 		var xx = x - 30;
