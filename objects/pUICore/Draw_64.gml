@@ -100,20 +100,23 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	rty = start_y[i];
 	rtx = start_x[i] + x_buffer * 2;
 	switch (ds_grid[# 1, i]) {
-		case menu_element_type.keybind:
-		case menu_element_type.input:
-			break;
-		default:
-			if (inputting && menu_option[page] == i)
-				scDrawText(rtx, rty - (y_buffer / 2), "Use Right-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
+		case menu_element_type.mass_toggle:
+		case menu_element_type.toggle:
+		case menu_element_type.toggle_live:
+		case menu_element_type.shift:
+		case menu_element_type.shift_script:
+		case menu_element_type.slider:
+			if (menu_option[page] == i)
+				scDrawText(rtx, rty - (y_buffer / 2), "Use Left-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
+		default: break;
 	}
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
 			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element, len = -1;
-			var left_shift = "<<", right_shift = ">>";
-			if (current_val == 0) left_shift = "";
-			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
+			var c_left = color_element, c_right = c_left;
+			if (current_val == 0) c_left = c_dkgray; //left_shift = "";
+			else if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray; //right_shift = "";
 			//Find the longest string (to center on this)
 			for (var d = 0; d < array_length_1d(current_array); d++)
 				if (string_width(current_array[d]) * scale_element > len)
@@ -124,48 +127,60 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				rtx = start_x[i];
 			} else
 				rtx += (len / 2) + x_buffer;
-			if (inputting && i == menu_option[page])
+			if (i == menu_option[page])
 				c = color_element_input;
 			//Draw Left
 			var offset = 0;
 			var shift_scale = scale_element;
-			if (inputting && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) {
+			if (scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) {
 				shift_scale *= 1.3;
 				offset = scMovementWave(-3, 3, 1);
+				c = color_element_input;
 			}
-			scDrawText(rtx - len / 2 + offset, rty, left_shift, c, shift_scale, noone, noone, fa_right);
+			scDrawText(rtx - len / 2 + offset, rty, "<<", c_left, shift_scale, noone, noone, fa_right);
 			//Option
-			scDrawText(rtx, rty, string(current_array[current_val]), c, scale_element, noone, noone, fa_middle);
+			scDrawText(rtx, rty, string(current_array[current_val]), color_element, scale_element, noone, noone, fa_middle);
 			//Draw Right
 			shift_scale = scale_element;
 			offset = 0;
-			if (inputting && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) {
-				shift_scale *= 1.1;
+			if (scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) {
+				shift_scale *= 1.3;
 				offset = scMovementWave(-3, 3, 1);
+				c = color_element_input;
 			}
-			scDrawText(rtx + len / 2 + offset, rty, right_shift, c, scale_element, noone, noone, fa_left);
+			scDrawText(rtx + len / 2 + offset, rty, ">>", c_right, shift_scale, noone, noone, fa_left);
 			
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
-			if (inputting && i == menu_option[page]) c = c_yellow;
+			if (i == menu_option[page]) c = c_yellow;
 			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left);
 			//Slider bar
 			draw_sprite_part_ext(sUISliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
 			draw_sprite_part_ext(sUISliderBar, 0, circle_pos * len, 0, len, 10, rtx + circle_pos * len, rty - 4, 1, 1, c_white, 0.8);
 			//Slider button
 			var scl = 1;
-			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, c_white, 0.8);
+			var xleft = start_x[i] + (x_buffer * 2);
+			var ycheck = start_y[i];
+			if (scUIHoveringBox(xleft, ycheck, xleft + len, ycheck, x_buffer, y_buffer))
+				scl *= 1.3;
+			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, scl == 1 ? c_white : c_yellow, 0.8);
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];
-			var c = inputting && i == menu_option[page] ? color_element_input : color_element;
-			scDrawText(rtx + 32, rty, current_val == 1 ? "ENABLED" : "DISABLED", c, scale_element, noone, noone, fa_left);
-			draw_sprite(sUIToggle, current_val, rtx, rty - 8);
+			var c = i == menu_option[page] ? color_element_input : color_element;
+			var text = current_val == 1 ? "ENABLED" : "DISABLED";
+			scDrawText(rtx + 32, rty, text, c, scale_element, noone, noone, fa_left);
+			var xleft = start_x[i] + (x_buffer * 2);
+			var ycheck = start_y[i];
+			var scl = 1;
+			if (scUIHoveringBox(xleft, ycheck, xleft + (string_width(text) * scale_element) + 32, ycheck, x_buffer, y_buffer))
+				scl *= 1.3;
+			draw_sprite_ext(sUIToggle, current_val, rtx, rty - 8, scl, scl, 0, c_white, 1);
 			break;
 		case menu_element_type.input:
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, i])), c = color_element;
-			if (inputting && i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
+			if (i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.keybind:
@@ -177,7 +192,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				c = color_element;
 				index = 2;
 				scale = scale_element;
-				if (inputting && i == menu_option[page])
+				if (i == menu_option[page])
 					c = color_element_input;
 			}
 			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
@@ -187,19 +202,18 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var left_shift = "<< ", right_shift = " >>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
-			if (inputting && i == menu_option[page]) {
+			if (i == menu_option[page])
 				c = color_element_input;
-				//HOVERING SUPPORT
-				var x1left = rtx;
-				var x2left = x1left + (string_width("<< ") * scale_element);
-				var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element);
-				var x2right = x1right + (string_width(" >>") * scale_element);
-				var buffer = string_width(left_shift) * scale_element;
-				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, "<< ", buffer, buffer, scale_element, true))
-					left_shift = "<<< ";
-				else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, true))
-					right_shift = " >>>";
-			}
+			//HOVERING SUPPORT
+			var x1left = rtx;
+			var x2left = x1left + (string_width("<< ") * scale_element);
+			var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element);
+			var x2right = x1right + (string_width(" >>") * scale_element);
+			var buffer = string_width(left_shift) * scale_element;
+			if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, "<< ", buffer, buffer, scale_element, fa_left))
+				left_shift = "<<< ";
+			else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, fa_left))
+				right_shift = " >>>";
 			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.list_weapons: //Rocket info page
@@ -236,7 +250,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 
 
 //Show hover boxes over buttons
-if (global.debug && !inputting && !unfolding)
+if (global.debug && !unfolding)
 	if (page_workingon == page)
 		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 			var val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
