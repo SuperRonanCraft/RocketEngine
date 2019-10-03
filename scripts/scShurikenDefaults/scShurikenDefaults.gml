@@ -22,12 +22,14 @@ map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY] = false; //auto destroy on collision
 map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY_ROOM] = true; //auto destroy when out of room
 map[? SHURIKEN_MAP.SHURIKEN_STEP] = noone; //script to override step (including movement)
 map[? SHURIKEN_MAP.BUFF] = noone; //buff to apply
+map[? SHURIKEN_MAP.ROTATE] = true; //rotate the projectile
 map[? SHURIKEN_MAP.DEATHCAUSE] = noone; //A deathcause
 map[? SHURIKEN_MAP.KBAMT] = 2; //HSP to apply on hit
 map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = noone; //Special script to apply when destroyed
 map[? SHURIKEN_MAP.WALL_SCRIPT] = noone; //Special script to apply when hitting a wall
 map[? SHURIKEN_MAP.PLAYER_SCRIPT] = noone; //Special script to apply when hitting a pShootable object
 map[? SHURIKEN_MAP.WEAPON_SCRIPT] = noone; //Special script to apply when hitting a pWeapon object
+map[? SHURIKEN_MAP.SPAWN_SCRIPT] = noone; //Special script to apply when spawning a shuriken. Overrides shoot and aim action.
 
 
 map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit

@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "07927c46-8cc5-468c-9943-e27c3c48ab80",
+            "Value": {
+                "id": "42461d55-4f28-4e57-95ab-2b078a96f7f0",
+                "resourcePath": "scripts\\scShuriken_Shotgun_Spawn\\scShuriken_Shotgun_Spawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0796b6a8-c1a8-4869-936c-1afb722137f1",
             "Value": {
                 "id": "8a9f6cdd-d28f-4cbf-adf5-3e34c8cbabb8",
@@ -2932,6 +2940,14 @@
                 "id": "395718a9-f9db-48cd-97c7-f2dcfa9c7eea",
                 "resourcePath": "sprites\/s_pash\/s_pash.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6669a961-db33-4c1a-9547-1587408b79be",
+            "Value": {
+                "id": "52e0565e-a5c2-47e7-ae48-f821bd6af0f6",
+                "resourcePath": "scripts\\scShuriken_Brick_Weapon\\scShuriken_Brick_Weapon.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7128,6 +7144,8 @@
         "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
         "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
         "015fe8bc-9f59-4c57-8ad3-b1dc8c8f81b8",
+        "6669a961-db33-4c1a-9547-1587408b79be",
+        "07927c46-8cc5-468c-9943-e27c3c48ab80",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",

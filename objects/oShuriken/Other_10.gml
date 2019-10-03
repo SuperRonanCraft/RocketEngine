@@ -5,6 +5,7 @@ var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 if (shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT] == noone) {
 		
 	if(!debounce){
+		rotate = true;
 		var randdirx = irandom_range(-7,7);
 		var randdiry = irandom_range(-12,-8);
 	

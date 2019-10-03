@@ -14,11 +14,18 @@ if (auto_aim)
 if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 	if (map[?WEAPON_MAP.AMMO] != 0) {
 		//show_debug_message(map[?WEAPON_MAP.AMMO]);
-		facing = dir > -90 && dir <= 90 ? 1 : -1;
-		scSpawnShuriken(x,y,depth+1,dir,id,map);
-		scPlaySound(SOUND.EFFECT_SHUR_THROW);
-		if (map[? WEAPON_MAP.AMMO] > 0)
-			map[? WEAPON_MAP.AMMO]--;
+		if(shuriken_map[? SHURIKEN_MAP.SPAWN_SCRIPT] == noone){
+			facing = dir > -90 && dir <= 90 ? 1 : -1;
+			scSpawnShuriken(x,y,depth+1,dir,id,map);
+			scPlaySound(SOUND.EFFECT_SHUR_THROW);
+			if (map[? WEAPON_MAP.AMMO] > 0)
+				map[? WEAPON_MAP.AMMO]--;
+			
+		}
+		else
+			script_execute(shuriken_map[? SHURIKEN_MAP.SPAWN_SCRIPT]);
+			
+			
 		//No statistics yet!
 	}
 }

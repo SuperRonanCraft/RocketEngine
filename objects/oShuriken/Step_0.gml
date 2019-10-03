@@ -14,6 +14,7 @@ if (shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP] != noone)
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 
 
+
 //Otherwise, if it is not deactivated:
 else if (!deactivate) {
 	
@@ -32,6 +33,13 @@ else if (!deactivate) {
 	if(weapon_map[? WEAPON_MAP.SPEED] <= 1){
 		weapon_map[? WEAPON_MAP.SPEED] = 1;	
 	}
+}
+
+//Rotate with hsp
+
+if(shuriken_map[? SHURIKEN_MAP.ROTATE] || rotate){
+	imgdir -= hsp;
+	image_angle = imgdir;
 }
 
 //Create particles if not deactivated
@@ -85,11 +93,6 @@ if (deactivate && stuckTo != noone && stuckTo.object_index != oWall && instance_
 //Move shuriken by hsp and vsp ALWAYS
 x += hsp * owner.time_dialation;
 y += vsp * owner.time_dialation;
-
-
-//Rotate with hsp
-imgdir -= hsp;
-image_angle = imgdir;
 
 
 //Despawn if out of room.

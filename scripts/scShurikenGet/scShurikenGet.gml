@@ -76,11 +76,13 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DESCRIPTION] = "It's a brick";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.BRICK;
 		map[? SHURIKEN_MAP.COOLDOWN] = 50;
-		map[? SHURIKEN_MAP.SPEED] = 20;
+		map[? SHURIKEN_MAP.SPEED] = 12;
 		map[? SHURIKEN_MAP.DAMAGE] = 3;
 		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Brick_Player;
 		map[? SHURIKEN_MAP.STICK] = false;
 		map[? SHURIKEN_MAP.KBAMT] = 7;
+		map[? SHURIKEN_MAP.ROTATE] = false;
+		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Brick_Weapon;
 		break;
 		
     case SHURIKEN.MAGNET:
@@ -110,9 +112,11 @@ switch (shur) {
 		map[? SHURIKEN_MAP.NAME] = "Tri Kunai";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Three strikes";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SHOTGUN;
-		map[? SHURIKEN_MAP.COOLDOWN] = 30;
+		map[? SHURIKEN_MAP.COOLDOWN] = 50;
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.ROTATE] = false;
+		map[? SHURIKEN_MAP.SPAWN_SCRIPT] = scShuriken_Shotgun_Spawn;
 		break;
 		
     case SHURIKEN.SLIME:

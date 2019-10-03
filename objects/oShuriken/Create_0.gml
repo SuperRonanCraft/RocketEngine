@@ -29,4 +29,5 @@ debounce = false;
 hsp = 0;
 vsp = 0;
 
+rotate = false;
 imgdir = irandom_range(0,359);
