@@ -111,9 +111,15 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		default: break;
 	}
 	switch (ds_grid[# 1, i]) {
+		case menu_element_type.mass_toggle:
 		case menu_element_type.shift_script:
 		case menu_element_type.shift:
-			var current_val = ds_grid[# 4, i], current_array = ds_grid[# 2, i], c = color_element, len = -1;
+			var current_id = 4, current_array_id = 2;
+			if (ds_grid[# 1, i] == menu_element_type.mass_toggle) {
+				current_id = 6;
+				current_array_id = 3;
+			}
+			var current_val = ds_grid[# current_id, i], current_array = ds_grid[# current_array_id, i], c = color_element, len = -1;
 			var c_left = color_element, c_right = c_left;
 			if (current_val == 0) c_left = c_dkgray; //left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray; //right_shift = "";
@@ -197,13 +203,16 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			}
 			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
 			break;
-		case menu_element_type.mass_toggle:
-			var current_val = ds_grid[# 6, i], current_array = ds_grid[# 3, i], c = color_element;
+		/*case menu_element_type.mass_toggle:
+			var current_val = ds_grid[# 6, i], current_array = ds_grid[# 3, i], c = color_element, len = -1;
 			var left_shift = "<< ", right_shift = " >>";
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
 			if (i == menu_option[page])
 				c = color_element_input;
+			for (var d = 0; d < array_length_1d(current_array); d++)
+				if (string_width(current_array[d]) * scale_element > len)
+					len = string_width(current_array[d]) * scale_element;
 			//HOVERING SUPPORT
 			var x1left = rtx;
 			var x2left = x1left + (string_width("<< ") * scale_element);
@@ -215,7 +224,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, fa_left))
 				right_shift = " >>>";
 			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
-			break;
+			break;*/
 		case menu_element_type.list_weapons: //Rocket info page
 			scMenuWeapons(); break;
 		case menu_element_type.list_buffs: //Buffs list
