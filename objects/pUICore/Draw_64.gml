@@ -67,7 +67,7 @@ for (var i = 0; i < ds_height; i++) {
 	var c = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i];
 	if (unfolding) lty += (RES_H / 2 * (1 - unfold[i]));
 	if (i == menu_option[page]) {ltx += scMovementWave(-4, 4, 2); c = color_main_hovering; xo = -(x_buffer / 2);}
-	else if (ds_grid[# 1, i] == menu_element_type.stats) {c = color_element_input;}
+	else if (ds_grid[# 1, i] == menu_element_type.stats) {c = color_element_hover;}
 	scDrawText(centered ? ltx : ltx + xo, lty, is_array(text) ? text[0] : text, c, scale, noone, noone, centered ? fa_middle : fa_right);
 	
 	//DESCRIPTIONS
@@ -107,7 +107,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		case menu_element_type.shift_script:
 		case menu_element_type.slider:
 			if (menu_option[page] == i)
-				scDrawText(rtx, rty - (y_buffer / 2), "Use Left-Mouse Button or Arrow keys", color_element_special, 0.4, noone, 0.8, fa_left);
+				scDrawText(rtx, rty - (y_buffer / 2), "Use Arrow keys to change selection", color_element_special, 0.4, noone, 0.8, fa_left);
 		default: break;
 	}
 	switch (ds_grid[# 1, i]) {
@@ -120,7 +120,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				current_array_id = 3;
 			}
 			var current_val = ds_grid[# current_id, i], current_array = ds_grid[# current_array_id, i], c = color_element; len = -1;
-			var c_left = color_element, c_right = c_left;
+			//var c_left, c_right;
 			//Find the longest string (to center on this)
 			for (var d = 0; d < array_length_1d(current_array); d++)
 				if (string_width(current_array[d]) * scale_element > len)
@@ -132,14 +132,14 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			} else
 				rtx += (len / 2) + x_buffer;
 			if (i == menu_option[page])
-				c = color_element_input;
+				c = color_element_hover;
 			//Draw Left
 			var offset = 0;
 			var shift_scale = scale_element;
 			if (scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) {
 				shift_scale *= 1.3;
 				offset = scMovementWave(-3, 3, 1);
-				c_left = color_element_input;
+				c_left = color_element_hover;
 			} else c_left = c;
 			if (current_val == 0) c_left = c_dkgray;
 			scDrawText(rtx - len / 2 + offset, rty, "<<", c_left, shift_scale, noone, noone, fa_right);
@@ -151,17 +151,15 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) {
 				shift_scale *= 1.3;
 				offset = scMovementWave(-3, 3, 1);
-				c_right = color_element_input;
-			} else
-				c_right = c;
+				c_right = color_element_hover;
+			} else c_right = c;
 			if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray;
 			scDrawText(rtx + len / 2 + offset, rty, ">>", c_right, shift_scale, noone, noone, fa_left);
 			
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
-			if (i == menu_option[page]) c = c_yellow;
-			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left);
+			if (i == menu_option[page]) c = color_element_hover;
 			//Slider bar
 			draw_sprite_part_ext(sUISliderBar, 1, 0, 0, circle_pos * len, len, rtx, rty - 4, 1, 1, c_white, 0.8);
 			draw_sprite_part_ext(sUISliderBar, 0, circle_pos * len, 0, len, 10, rtx + circle_pos * len, rty - 4, 1, 1, c_white, 0.8);
@@ -170,28 +168,29 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var xleft = start_x[i] + (x_buffer * 2);
 			var ycheck = start_y[i];
 			if (scUIHoveringBox(xleft, ycheck, xleft + len, ycheck, x_buffer, y_buffer)) {
-				scl *= 1.3;
-				rtx += scMovementWave(-3, 3, 1);
+				scl *= scMovementWave(1, 1.5, 1);
+				c = color_element_hover;
 			}
-			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, scl == 1 ? c_white : c_yellow, 0.8);
+			scDrawText(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%", c, scale_element, noone, noone, fa_left); //Percent
+			draw_sprite_ext(sUISliderButton, 0, rtx + (circle_pos * len), rty, scl, scl, 0, c_white, 0.8); //Button
 			break;
 		case menu_element_type.toggle:
 			var current_val = ds_grid[# 4, i];
-			var c = i == menu_option[page] ? color_element_input : color_element;
+			var c = i == menu_option[page] ? color_element_hover : color_element;
 			var text = current_val == 1 ? "ENABLED" : "DISABLED";
 			var xleft = start_x[i] + (x_buffer * 2);
 			var ycheck = start_y[i];
 			var scl = 1;
 			if (scUIHoveringBox(xleft, ycheck, xleft + (string_width(text) * scale_element) + 32, ycheck, x_buffer, y_buffer)) {
 				scl *= 1.3;
-				c = color_element_input;
+				c = color_element_hover;
 			}
 			scDrawText(rtx + 32, rty, text, c, scale_element, noone, noone, fa_left);
 			draw_sprite_ext(sUIToggle, current_val, rtx, rty - 8, scl, scl, 0, c_white, 1);
 			break;
 		case menu_element_type.input:
 			var string_val = scKeyToString(variable_global_get(ds_grid[# 2, i])), c = color_element;
-			if (i == menu_option[page]) { c = color_element_input; string_val = string(string_val) + " | Press any key!"}
+			if (i == menu_option[page]) { c = color_element_hover; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.keybind:
@@ -205,11 +204,11 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				scale = scale_element;
 				var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# index, i]))) * scale;
 				if (i == menu_option[page])
-					c = color_element_input;
+					c = color_element_hover;
 				else if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0)) {
 					scale *= 1.3;
 					rtx += scMovementWave(-3, 3, 1);
-					c = color_element_input;
+					c = color_element_hover;
 				}
 			}
 			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
@@ -220,7 +219,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (current_val == 0) left_shift = "";
 			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
 			if (i == menu_option[page])
-				c = color_element_input;
+				c = color_element_hover;
 			for (var d = 0; d < array_length_1d(current_array); d++)
 				if (string_width(current_array[d]) * scale_element > len)
 					len = string_width(current_array[d]) * scale_element;
