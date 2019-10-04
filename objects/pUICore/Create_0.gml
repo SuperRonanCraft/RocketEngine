@@ -46,7 +46,8 @@ enum menu_element_type {
 	//Controls page
 	controls,
 	stats,
-	title
+	title,
+	set_gamepad
 }
 
 enum menu_centered {
@@ -64,8 +65,8 @@ menu_pages = 0;
 menu_pages_index = 0;
 //All the pages we want centered (should only include 'script_runner', 'page_transfer' or 'goto_room' elements)
 menu_pages_centered = 0;
-//If we are inputting values 'slider', 'shift', 'toggle' or 'input')
-inputting = false;
+//If we are inputting values 'input'
+input = noone; //[page, index]
 //If we have refreshed the values to global values, such as the keybinds, resolution and volume
 checked = false;
 //Enable manipulating the menu (must always be true by default)
@@ -108,8 +109,8 @@ slider_width = 128; //Length of the sliders
 color_main = c_gray; //Button colors
 color_main_hovering = c_orange;//global.menu_color_hover_act; //Button hovering colors
 color_element = c_ltgray; //Element colors (desc or input)
-//color_element_input = c_yellow; //Inputting element color
-color_element_hover = c_white; //Selected/editting this input
+color_element_input = c_yellow; //Inputting element color
+color_element_hover = c_yellow; //Selected/editting this input
 //color_element_input_unselected = c_black; //Inputting element unselected color (toggle)
 color_element_special = c_gray; //Special element colors
 color_seperator = c_black; //Seperator color

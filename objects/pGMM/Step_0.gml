@@ -11,6 +11,7 @@ if (timer_enabled)
 				case 2: wait_timer_color = c_orange; break;
 				case 1: wait_timer_color = c_yellow; break;
 				case 0: wait_timer_color = c_lime; wait_timer_text = wait_timer_go; break;
+				default: wait_timer_color = c_red; break;
 			}
 			if (wait_timer_current <= 0)
 				global.play = true;
@@ -18,9 +19,9 @@ if (timer_enabled)
 		wait_timer_scale = max(wait_timer_scale * 0.95, 1);
 		exit;
 	} else if (global.play && !endgame) {
-		if (timer_room <= 0) {
+		if (timer_room <= 0)
 			timer_room = room_speed;
-		} else 
+		else 
 			timer_room--;
 		if (timer_room == 0)
 			event_user(0);

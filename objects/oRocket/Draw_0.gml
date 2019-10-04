@@ -3,8 +3,10 @@ if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRA] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRA]);
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER]);
-if (sprite_index != noone)
-	draw_self();
+if (sprite_index != noone) {
+	scDrawSpriteExt(x, y, sprite_index, image_index, noone, image_alpha, image_xscale, image_yscale, image_angle + scMovementWave(-5, 5, 1/2));
+	//draw_self();
+}
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER]);
 	

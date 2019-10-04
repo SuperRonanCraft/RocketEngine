@@ -206,35 +206,19 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				if (i == menu_option[page])
 					c = color_element_hover;
 				else if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0)) {
-					scale *= 1.3;
+					scale =  scale_element * 1.3;
 					rtx += scMovementWave(-3, 3, 1);
 					c = color_element_hover;
 				}
 			}
+			if (input != noone)
+				if (input[0] == page && input[1] == i) {
+					scDrawText(start_x[i] + x_buffer * 2, rty - (y_buffer / 2), "Press any key!", color_element_special, 0.4, noone, 0.8, fa_left);
+					c = c_red;
+					scale =  scale_element * 1.6;
+				}
 			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
 			break;
-		/*case menu_element_type.mass_toggle:
-			var current_val = ds_grid[# 6, i], current_array = ds_grid[# 3, i], c = color_element, len = -1;
-			var left_shift = "<< ", right_shift = " >>";
-			if (current_val == 0) left_shift = "";
-			else if (current_val == array_length_1d(current_array) - 1) right_shift = "";
-			if (i == menu_option[page])
-				c = color_element_hover;
-			for (var d = 0; d < array_length_1d(current_array); d++)
-				if (string_width(current_array[d]) * scale_element > len)
-					len = string_width(current_array[d]) * scale_element;
-			//HOVERING SUPPORT
-			var x1left = rtx;
-			var x2left = x1left + (string_width("<< ") * scale_element);
-			var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element);
-			var x2right = x1right + (string_width(" >>") * scale_element);
-			var buffer = string_width(left_shift) * scale_element;
-			if (current_val != 0 && scUIHovering((x1left + x2left) / 2, rty, "<< ", buffer, buffer, scale_element, fa_left))
-				left_shift = "<<< ";
-			else if (current_val != array_length_1d(current_array) - 1 && scUIHovering((x1right + x2right) / 2, rty, "<< ", buffer, buffer, scale_element, fa_left))
-				right_shift = " >>>";
-			scDrawText(rtx, rty, left_shift + string(current_array[current_val]) + right_shift, c, scale_element, noone, noone, fa_left);
-			break;*/
 		case menu_element_type.list_weapons: //Rocket info page
 			scMenuWeapons(); break;
 		case menu_element_type.list_buffs: //Buffs list
@@ -245,7 +229,6 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			scMenuControls(global.gamepad_type); break;
 		case menu_element_type.stats: //Stats page
 			var scale = scale_element;
-			//var map = oStatisticsHandler.stats_map;
 			var mode = ds_grid[# 2, i];
 			var c = c_white;
 			switch (mode) {
@@ -269,9 +252,8 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 
 
 //Show hover boxes over buttons
-if (global.debug && !unfolding)
-	if (page_workingon == page)
-		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
-			var val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
-			scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right);
-		}
+if (global.debug && !unfolding && page_workingon == page)
+	for (var i = 0; i < ds_grid_height(ds_grid); i++) {
+		var val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
+		scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right);
+	}

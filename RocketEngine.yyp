@@ -543,6 +543,14 @@
             }
         },
         {
+            "Key": "10147f0e-4a6c-4d63-b85d-57d2f762f6c2",
+            "Value": {
+                "id": "9ceaf1bd-dbee-4113-a77d-698f66078604",
+                "resourcePath": "objects\\oUIGamepadLost\\oUIGamepadLost.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "102bbae4-005b-47af-8e67-c15c7976d835",
             "Value": {
                 "id": "ccae2b31-8855-4863-8e0b-19a6f4b837d3",
@@ -6287,6 +6295,14 @@
             }
         },
         {
+            "Key": "e50bf749-0b1a-4afe-8f35-ef733d74dca3",
+            "Value": {
+                "id": "82cfbee4-43c5-4047-b0bc-9ff2106feaa5",
+                "resourcePath": "scripts\\scUIGamepadContinue\\scUIGamepadContinue.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e51366d6-d1b4-4db2-99a5-cc9108b9a4f6",
             "Value": {
                 "id": "36b3736a-431a-411f-8d60-6a721e73f94d",
@@ -7228,6 +7244,7 @@
         "88e02e19-4085-4cc5-b0c0-2b9f13506f80",
         "3951507e-1fcb-4c28-a9ff-ccdf6b0f09a9",
         "15569e88-3fdc-4af7-ad85-e6d86b803416",
+        "e50bf749-0b1a-4afe-8f35-ef733d74dca3",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",

@@ -65,7 +65,7 @@ for (var i = 0; i < ds_height; i++) {
 				if (scUIHoveringBox(xleft, ycheck, xleft + slider_width, ycheck, x_buffer, y_buffer)) {
 					if (mouse_check_button(mb_left))
 						val = (device_mouse_x_to_gui(0) - xleft) / slider_width;
-					else {
+					else { //Fake add to have audio play
 						ds_list_add(confirm_list, i);
 						enter_change = true;
 					}
@@ -76,8 +76,6 @@ for (var i = 0; i < ds_height; i++) {
 				ds_list_add(confirm_list, i);
 				enter_change = true;
 				play_sound = false;
-				//script_execute(ds_grid[# 2, i], ds_grid[# 4, i], ds_grid[# 5, i]);
-				//variable_global_set(ds_grid[# 3, i], ds_grid[# 4, i]);
 			}
 			break;
 		case menu_element_type.toggle:
@@ -104,12 +102,36 @@ for (var i = 0; i < ds_height; i++) {
 			if (global.gamepad_type != GAMEPAD_TYPE.KEYBOARD)
 				break;
 		case menu_element_type.input:
-			var editting = false;
-			if (!editting) continue;
+			//HOVERING
+			if (key_enter_mouse || key_enter) //Pressed enter
+				if (i == menu_option[page])
+					input = [page, i, false]; //Got here from selection
+				else {
+					var rty = start_y[i];
+					var rtx = start_x[i] + x_buffer * 2 + x_buffer;
+					var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale_element;
+					if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0))
+						input = [page, i, true]; //Got here from hovering
+				}
+			if (input != noone && input[0] == page && input[1] == i) {
+				//Selection
+				switch (input[2]) {
+					case false:
+						if (i != menu_option[page]) input = noone; break;
+					case true:
+						var rty = start_y[i];
+						var rtx = start_x[i] + x_buffer * 2 + x_buffer;
+						var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale_element;
+						if (!scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0))
+							input = noone; //Got here from hovering
+						break;
+				}
+			} else
+				break; //Not on the same page
 			var key = noone;
 			if (keyboard_check_pressed(vk_anykey))
 				key = keyboard_lastkey;
-			if (key == noone /*No key*/ || key == 13 /*Enter key*/) break; //Invalid key, break out
+			if (key == noone /*No key*/ || key == 13 /*Enter key*/ || key == button_down && key == button_up) break; //Invalid key, break out
 			var option = ds_grid[# 1, i];
 			if (option == menu_element_type.input) {
 				if (key != variable_global_get(ds_grid[# 2, i])) {
@@ -120,7 +142,6 @@ for (var i = 0; i < ds_height; i++) {
 					enter_change = true;
 				}
 			} else if (option == menu_element_type.keybind) { //CACHING
-				//ds_grid[# 3, menu_option[page]]
 				var index = 3;
 				if (global.gamepad_type == GAMEPAD_TYPE.KEYBOARD)
 					index = 2;
@@ -134,36 +155,6 @@ for (var i = 0; i < ds_height; i++) {
 				}
 			}
 			break;
-		/*case menu_element_type.mass_toggle:
-			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
-			var val = ds_grid[# 6, i];
-			if (hinput != 0 && menu_option[page] == i) {
-				//AUDIO
-				val = hinput;
-			} else if (mouse_check_button_pressed(mb_left)) {
-				var current_array = ds_grid[# 3, i];
-				var x1left = start_x[i] + (x_buffer * 2);
-				var x2left = x1left + (string_width("<< ") * scale_element);
-				var current_val = ds_grid[# 6, i];//, current_array = ds_grid[# 2, option];
-				var x1right = x2left + (string_width(string(current_array[current_val])) * scale_element)
-				var x2right = x1right + (string_width("<< ") * scale_element);
-				var buffer = string_width("<< ") * scale_element;
-				if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[i], "<< ", buffer, buffer, scale_element, fa_left))
-					val += -1;
-				else if (current_val != array_length_1d(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[i], "<< ", buffer, buffer, scale_element, fa_left))
-					val += 1;
-			}
-			if (val != ds_grid[# 6, i]) {
-				//AUDIO
-				if (val >= array_length_1d(ds_grid[# 3, i]))
-					val = 0;
-				else if (val < 0)
-					val = array_length_1d(ds_grid[# 3, i]) - 1;
-				ds_grid[# 6, i] = val;
-				ds_list_add(confirm_list, i);
-				enter_change = true;
-			}
-			break;*/
 		default: //No custom values, just queue it up for confirm event
 			if (menu_option[page] == i)
 				ds_list_add(confirm_list, i);
@@ -260,7 +251,6 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 					page = i; checked = false; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
 				break;
 			case menu_element_type.mass_toggle: //If mass toggling
-				//if (inputting) {
 					var op = page_opt;
 					var selection = ds_grid[# 6, op] - 1;
 					if (selection != -1) {
@@ -275,20 +265,15 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 						}
 					}
 					variable_global_set(ds_grid[# 5, op], ds_grid[# 6, op]);
-				//}
-				//inputting = !inputting; 
 				break;
-			case menu_element_type.toggle_live:
-				//if (key_enter_mouse) {
-					var val = ds_grid[# 4, page_opt];
-					val = clamp(val + 1, 0, 1);
-					if (val == ds_grid[# 4, page_opt])
-						val = clamp(val - 1, 0, 1);
-					ds_grid[# 4, page_opt] = val;
-				//}
+			case menu_element_type.toggle_live: //Toggle with a script
+				var val = ds_grid[# 4, page_opt];
+				val = clamp(val + 1, 0, 1);
+				if (val == ds_grid[# 4, page_opt])
+					val = clamp(val - 1, 0, 1);
+				ds_grid[# 4, page_opt] = val;
 				script_execute(ds_grid[# 2, page_opt], ds_grid[# 4, page_opt]);
 				break;
-			//Input elements
 			case menu_element_type.slider: //If its a slider
 				if (option == menu_element_type.slider) {
 					script_execute(ds_grid[# 2, page_opt], ds_grid[# 4, page_opt], ds_grid[# 5, page_opt]);
@@ -303,7 +288,6 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 					script_execute(ds_grid[# 5, page_opt], ds_grid[# 4, page_opt]);
 				}
 			case menu_element_type.toggle: //If we were toggling
-				 //if (inputting) {
 					if (option == menu_element_type.toggle) {
 						if (ds_grid[# 2, page_opt] != noone)
 							script_execute(ds_grid[# 2, page_opt], ds_grid[# 4, page_opt]);
@@ -315,13 +299,12 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 							ds_grid[# 6, i] = 0;
 							variable_global_set(ds_grid[# 5, i], ds_grid[# 6, i]);
 						}
-				//}
 			case menu_element_type.keybind:
-			case menu_element_type.input: //Simply inputting a character
-				//inputting = !inputting; break;
+			case menu_element_type.input:
 		}
 		if (play_sound)
 			audio_play_sound(SOUND.UI_SELECT, 5, false); //Confirm sound
+		input = noone;
 	}
 
 ds_list_destroy(confirm_list);

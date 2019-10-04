@@ -66,8 +66,8 @@ switch (type) {
 			case SETTINGS.PLAYER_2_RIGHT: val = vk_right; break;
 			case SETTINGS.PLAYER_2_JUMP: val = vk_up; break;
 			case SETTINGS.PLAYER_2_SHOOT: val = vk_down; break;
-			case SETTINGS.PLAYER_2_ABILITY: val = ord("<"); break;
-			case SETTINGS.PLAYER_2_ULTIMATE: val = ord(">"); break;
+			case SETTINGS.PLAYER_2_ABILITY: val = 188; break;
+			case SETTINGS.PLAYER_2_ULTIMATE: val = 190; break;
 			case SETTINGS.PLAYER_2_LEFT_GP: val = gp_axislh; break;
 			case SETTINGS.PLAYER_2_RIGHT_GP: val = gp_axislh; break;
 			case SETTINGS.PLAYER_2_JUMP_GP: val = gp_face1; break;
@@ -99,6 +99,11 @@ enum SETTINGS {
 	PLAYER_2_PALETTE,
 	PLAYER_3_PALETTE,
 	PLAYER_4_PALETTE,
+	//Gamepad
+	PLAYER_1_GAMEPAD,
+	PLAYER_2_GAMEPAD,
+	PLAYER_3_GAMEPAD,
+	PLAYER_4_GAMEPAD,
 	//Keybinds 1
 	PLAYER_1_LEFT,
 	PLAYER_1_RIGHT,
