@@ -16,6 +16,10 @@ switch (type) {
 			case SETTINGS.PLAYER_2_PALETTE: val = "player_2_palette"; break;
 			case SETTINGS.PLAYER_3_PALETTE: val = "player_3_palette"; break;
 			case SETTINGS.PLAYER_4_PALETTE: val = "player_4_palette"; break;
+			case SETTINGS.PLAYER_1_GAMEPAD: val = "player_1_gamepad"; break;
+			case SETTINGS.PLAYER_2_GAMEPAD: val = "player_2_gamepad"; break;
+			case SETTINGS.PLAYER_3_GAMEPAD: val = "player_3_gamepad"; break;
+			case SETTINGS.PLAYER_4_GAMEPAD: val = "player_4_gamepad"; break;
 			case SETTINGS.PLAYER_1_LEFT: val = "player_1_left"; break;
 			case SETTINGS.PLAYER_1_RIGHT: val = "player_1_right"; break;
 			case SETTINGS.PLAYER_1_JUMP: val = "player_1_jump"; break;

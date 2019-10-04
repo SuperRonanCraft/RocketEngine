@@ -13,12 +13,13 @@ ds_confirm = scUICreateMenuPage(
 
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_confirm, ds_settings, ds_menu_audio, ds_menu_graphics, 
-	ds_menu_keybinds_p1, ds_menu_keybinds_p2];
+	ds_menu_keybinds, ds_menu_keybinds_p1, ds_menu_keybinds_p2, ds_menu_keybinds];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, menu_page.confirm, menu_page.settings, menu_page.audio, 
-	menu_page.graphics, menu_page.keybinds_1, menu_page.keybinds_2];
+	menu_page.graphics, menu_page.keybinds, menu_page.keybinds_1, menu_page.keybinds_2,
+	menu_page.keybinds_controller];
 //Pages that are centered and have no input side
-menu_pages_centered = [ds_menu_main, ds_confirm, ds_settings];
+menu_pages_centered = [ds_menu_main, ds_confirm, ds_settings, ds_menu_keybinds];
 
 for (var i = 0; i < array_length_1d(menu_pages); i++)
 	menu_option[i] = 0;

@@ -2,8 +2,8 @@
 enum menu_page {
 	main, gamemodes, more_gamemodes, settings, audio, graphics, 
 	//main keys
-	keybinds_1, keybinds_2,
-	keybinds2_1, keybinds2_2, 
+	keybinds, keybinds_1, keybinds_2, keybinds_controller,
+	//keybinds2_1, keybinds2_2, 
 	controls, info, confirm, modes, stats,
 	//custom
 	list_weapons, list_buffs, list_achievements,
@@ -43,10 +43,11 @@ enum menu_element_type {
 	list_achievements,
 	//Toggle multiple settings
 	mass_toggle,
-	//Controls page
+	//Control type
 	controls,
+	//Stats type
 	stats,
-	title,
+	//Gamepad Setting
 	set_gamepad
 }
 
@@ -65,12 +66,14 @@ menu_pages = 0;
 menu_pages_index = 0;
 //All the pages we want centered (should only include 'script_runner', 'page_transfer' or 'goto_room' elements)
 menu_pages_centered = 0;
-//If we are inputting values 'input'
+//If we are inputting values 'input/keybind'
 input = noone; //[page, index]
 //If we have refreshed the values to global values, such as the keybinds, resolution and volume
 checked = false;
 //Enable manipulating the menu (must always be true by default)
 control = true;
+//Titles for a page (array)
+menu_titles = noone;
 
 ///Mouse control
 mouse_x_old = device_mouse_x_to_gui(0);
@@ -127,3 +130,9 @@ button_down = vk_down;
 
 ///Default things
 depth -= 1;
+
+//Titles
+menu_titles = [[menu_page.graphics, "GRAPHICS"], [menu_page.keybinds, "KEYBINDS"],
+	[menu_page.keybinds_1, "PLAYER 1"], [menu_page.keybinds_2, "PLAYER 2"],
+	[menu_page.keybinds_controller, "CONTROLLERS"], [menu_page.settings, "SETTINGS"],
+	[menu_page.audio, "AUDIO"], [menu_page.info, "EXTRAS"]];

@@ -19,30 +19,36 @@ for (var a = 0; a < 2; a++) { //Playerid
 			}
 		var btn_x = (a == 0 ? btn_x : btn_x + RES_W / 2);
 		draw_roundrect_color_ext(btn_x + width, btn_y + width, btn_x - width, btn_y - width, rad, rad, c_black, c_black, true);
+		var key = noone;
+		var key_value = 0;
 		if (gamepad == GAMEPAD_TYPE.KEYBOARD) {
 			scale = 0.7;
 			switch (i) { //btn x/y, reason and id
-				case 0: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_JUMP : SETTINGS.PLAYER_2_JUMP), btn_x, btn_y, c_yellow, scale); break;
-				case 1: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_SHOOT : SETTINGS.PLAYER_2_SHOOT), btn_x, btn_y, c_yellow, scale); break;
-				case 2: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_LEFT : SETTINGS.PLAYER_2_LEFT), btn_x, btn_y, c_yellow, scale); break;
-				case 3: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_RIGHT : SETTINGS.PLAYER_2_RIGHT), btn_x, btn_y, c_yellow, scale); break;
-				case 4: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_ULTIMATE : SETTINGS.PLAYER_2_ULTIMATE), btn_x, btn_y, c_yellow, scale); break;
-				case 5: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_ABILITY : SETTINGS.PLAYER_2_ABILITY), btn_x, btn_y, c_yellow, scale); break;
+				case 0: key = a == 0 ? SETTINGS.PLAYER_1_JUMP : SETTINGS.PLAYER_2_JUMP; break;
+				case 1: key = a == 0 ? SETTINGS.PLAYER_1_SHOOT : SETTINGS.PLAYER_2_SHOOT; break;
+				case 2: key = a == 0 ? SETTINGS.PLAYER_1_LEFT : SETTINGS.PLAYER_2_LEFT; break;
+				case 3: key = a == 0 ? SETTINGS.PLAYER_1_RIGHT : SETTINGS.PLAYER_2_RIGHT; break;
+				case 4: key = a == 0 ? SETTINGS.PLAYER_1_ULTIMATE : SETTINGS.PLAYER_2_ULTIMATE; break;
+				case 5: key = a == 0 ? SETTINGS.PLAYER_1_ABILITY : SETTINGS.PLAYER_2_ABILITY; break;
 			}
+			key_value = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, key));
 		} else {
 			scale = 1.5;
 			switch (i) { //btn x/y, reason and id
-				case 0: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_JUMP_GP : SETTINGS.PLAYER_2_JUMP_GP), btn_x, btn_y, noone, scale); break;
-				case 1: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_SHOOT_GP : SETTINGS.PLAYER_2_SHOOT_GP), btn_x, btn_y, noone, scale); break;
-				case 2: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_LEFT_GP : SETTINGS.PLAYER_2_LEFT_GP), btn_x, btn_y, noone, scale); break;
-				case 3: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_RIGHT_GP : SETTINGS.PLAYER_2_RIGHT_GP), btn_x, btn_y, noone, scale); break;
-				case 4: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_ULTIMATE_GP : SETTINGS.PLAYER_2_ULTIMATE_GP), btn_x, btn_y, noone, scale); break;
-				case 5: scUIGamepadDraw(gamepad, (a == 0 ? SETTINGS.PLAYER_1_ABILITY_GP : SETTINGS.PLAYER_2_ABILITY_GP), btn_x, btn_y, noone, scale); break;
+				case 0: key = a == 0 ? SETTINGS.PLAYER_1_JUMP_GP : SETTINGS.PLAYER_2_JUMP_GP; break;
+				case 1: key = a == 0 ? SETTINGS.PLAYER_1_SHOOT_GP : SETTINGS.PLAYER_2_SHOOT_GP; break;
+				case 2: key = a == 0 ? SETTINGS.PLAYER_1_LEFT_GP : SETTINGS.PLAYER_2_LEFT_GP; break;
+				case 3: key = a == 0 ? SETTINGS.PLAYER_1_RIGHT_GP : SETTINGS.PLAYER_2_RIGHT_GP; break;
+				case 4: key = a == 0 ? SETTINGS.PLAYER_1_ULTIMATE_GP : SETTINGS.PLAYER_2_ULTIMATE_GP; break;
+				case 5: key = a == 0 ? SETTINGS.PLAYER_1_ABILITY_GP : SETTINGS.PLAYER_2_ABILITY_GP; break;
 			}
+			key_value = gamepad_button_check(0, scSettingsGetType(SETTINGS_TYPE.VALUE, key));
 		}
-		//var scale = 0.65;
-		//if (keyboard_check(btn)) scale = 0.8; //Scale up if pressing button
-		//scDrawText(btn_x, btn_y, scKeyToString(btn), color_element_input, scale); //Button text
 		scDrawText(btn_x, btn_y - width - 10, btn_reason, color_element, 0.7); //Button reason
+		if (key_value != 0) {
+			scale *= 1.3;
+			btn_x += scMovementWave(-3, 3, 1);
+		}
+		scUIGamepadDraw(gamepad, key, btn_x, btn_y, noone, scale);
 	}
 }

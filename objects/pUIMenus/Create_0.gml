@@ -3,7 +3,7 @@ event_inherited();
 ds_settings = scUICreateMenuPage(
 	["AUDIO",			menu_element_type.page_transfer,	menu_page.audio, "Change your hearing perspective"],
 	["GRAPHICS",		menu_element_type.page_transfer,	menu_page.graphics, "Change your eyeballs perspective"],
-	["KEYBINDS",		menu_element_type.page_transfer,	menu_page.keybinds_1, "Change your hands perspective"],
+	["KEYBINDS",		menu_element_type.page_transfer,	menu_page.keybinds, "Change your hands perspective"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main],
 );
 
@@ -24,28 +24,42 @@ ds_menu_graphics = scUICreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	menu_page.settings],
 );
 
-ds_menu_keybinds_p1 = scUICreateMenuPage(
+ds_menu_keybinds = scUICreateMenuPage(
 	//["PLAYER 1",	menu_element_type.title],
-	["GAMEPAD TYPE",	menu_element_type.shift,	["KEYBOARD", "PS4", "XBOX"],	"gamepad_type",	global.gamepad_type, "Edit keybinds related to input style"],
-	["JUMP",	menu_element_type.keybind,		SETTINGS.PLAYER_1_JUMP,			SETTINGS.PLAYER_1_JUMP_GP],
-	["LEFT",	menu_element_type.keybind,		SETTINGS.PLAYER_1_LEFT,			SETTINGS.PLAYER_1_LEFT_GP],
-	["RIGHT",	menu_element_type.keybind,		SETTINGS.PLAYER_1_RIGHT,		SETTINGS.PLAYER_1_RIGHT_GP],
-	["SHOOT",	menu_element_type.keybind,		SETTINGS.PLAYER_1_SHOOT,		SETTINGS.PLAYER_1_SHOOT_GP],
-	["ULTIMATE",	menu_element_type.keybind,	SETTINGS.PLAYER_1_ULTIMATE,		SETTINGS.PLAYER_1_ULTIMATE_GP],
-	["ABILITY",	menu_element_type.keybind,		SETTINGS.PLAYER_1_ABILITY,		SETTINGS.PLAYER_1_ABILITY_GP],
-	["PLAYER 2 >>",		menu_element_type.page_transfer,	menu_page.keybinds_2, "Edit player 2 keys"],
+	//["GAMEPAD TYPE",	menu_element_type.shift,	["KEYBOARD", "PS4", "XBOX"],	"gamepad_type",	global.gamepad_type, "View keybinds related to input style"],
+	["PLAYER 1",		menu_element_type.page_transfer,	menu_page.keybinds_1, "Edit player 1 keys"],
+	["PLAYER 2",		menu_element_type.page_transfer,	menu_page.keybinds_2, "Edit player 2 Keys"],
+	["CONTROLLERS",		menu_element_type.page_transfer,	menu_page.keybinds_controller, "Set party controllers"],
 	["RESET",	menu_element_type.script_runner,	scUIResetKeybinds, "&cThis will reset all players keys!"],
 	["BACK",	menu_element_type.page_transfer,	menu_page.settings],
 );
 
+ds_menu_keybinds_p1 = scUICreateMenuPage(
+	//["PLAYER 1",	menu_element_type.title],
+	["JUMP",	menu_element_type.keybind,		SETTINGS.PLAYER_1_JUMP],
+	["LEFT",	menu_element_type.keybind,		SETTINGS.PLAYER_1_LEFT],
+	["RIGHT",	menu_element_type.keybind,		SETTINGS.PLAYER_1_RIGHT],
+	["SHOOT",	menu_element_type.keybind,		SETTINGS.PLAYER_1_SHOOT],
+	["ULTIMATE",	menu_element_type.keybind,	SETTINGS.PLAYER_1_ULTIMATE],
+	["ABILITY",	menu_element_type.keybind,		SETTINGS.PLAYER_1_ABILITY],
+	["BACK",	menu_element_type.page_transfer,	menu_page.keybinds],
+);
+
 ds_menu_keybinds_p2 = scUICreateMenuPage(
 	//["PLAYER 2",	menu_element_type.title],
-	["JUMP",		menu_element_type.keybind,	SETTINGS.PLAYER_2_JUMP,			SETTINGS.PLAYER_2_JUMP_GP],
-	["LEFT",		menu_element_type.keybind,	SETTINGS.PLAYER_2_LEFT,			SETTINGS.PLAYER_2_LEFT_GP],
-	["RIGHT",	menu_element_type.keybind,		SETTINGS.PLAYER_2_RIGHT,		SETTINGS.PLAYER_2_RIGHT_GP],
-	["SHOOT",	menu_element_type.keybind,		SETTINGS.PLAYER_2_SHOOT,		SETTINGS.PLAYER_2_SHOOT_GP],
-	["ULTIMATE",	menu_element_type.keybind,	SETTINGS.PLAYER_2_ULTIMATE,		SETTINGS.PLAYER_2_ULTIMATE_GP],
-	["ABILITY",	menu_element_type.keybind,		SETTINGS.PLAYER_2_ABILITY,		SETTINGS.PLAYER_2_ABILITY_GP],
-	["<< PLAYER 1",		menu_element_type.page_transfer,	menu_page.keybinds_1, "Edit player 1 keys"],
-	["BACK",		menu_element_type.page_transfer,		menu_page.settings],
+	["JUMP",		menu_element_type.keybind,	SETTINGS.PLAYER_2_JUMP],
+	["LEFT",		menu_element_type.keybind,	SETTINGS.PLAYER_2_LEFT],
+	["RIGHT",	menu_element_type.keybind,		SETTINGS.PLAYER_2_RIGHT],
+	["SHOOT",	menu_element_type.keybind,		SETTINGS.PLAYER_2_SHOOT],
+	["ULTIMATE",	menu_element_type.keybind,	SETTINGS.PLAYER_2_ULTIMATE],
+	["ABILITY",	menu_element_type.keybind,		SETTINGS.PLAYER_2_ABILITY],
+	["BACK",	menu_element_type.page_transfer,	menu_page.keybinds],
+);
+
+ds_menu_controllers = scUICreateMenuPage(
+	["PLAYER 1",		menu_element_type.set_gamepad, SETTINGS.PLAYER_1_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 2",		menu_element_type.set_gamepad, SETTINGS.PLAYER_2_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 3",		menu_element_type.set_gamepad, SETTINGS.PLAYER_3_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 4",		menu_element_type.set_gamepad, SETTINGS.PLAYER_4_GAMEPAD, "Setup controllers for players"],
+	["BACK",			menu_element_type.page_transfer,	menu_page.keybinds]
 );

@@ -39,9 +39,9 @@ for (var i = 0; i < ds_height; i++) {
 				} else
 					rtx += (len / 2) + x_buffer;
 				if (val != 0 && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) //Left
-					val += -1;
-				else if (val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
-					val += 1;
+					val--;
+				else if (i == menu_option[page] || val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
+					val++;
 			}
 			if (val != ds_grid[# current_id, i]) {
 				//AUDIO
@@ -88,7 +88,7 @@ for (var i = 0; i < ds_height; i++) {
 				var text = ds_grid[# 4, i] == 1 ? "ENABLED" : "DISABLED";
 				var xleft = start_x[i] + (x_buffer * 2);
 				var ycheck = start_y[i];
-				if (scUIHoveringBox(xleft, ycheck, xleft + (string_width(text) * scale_element) + 32, ycheck, x_buffer, y_buffer))
+				if (i == menu_option[page] || scUIHoveringBox(xleft, ycheck, xleft + (string_width(text) * scale_element) + 32, ycheck, x_buffer, y_buffer))
 					val = !val;
 			}
 			if (val != ds_grid[# 4, i]) {
@@ -99,8 +99,6 @@ for (var i = 0; i < ds_height; i++) {
 			}
 			break;
 		case menu_element_type.keybind:
-			if (global.gamepad_type != GAMEPAD_TYPE.KEYBOARD)
-				break;
 		case menu_element_type.input:
 			//HOVERING
 			if (key_enter_mouse || key_enter) //Pressed enter
@@ -142,13 +140,9 @@ for (var i = 0; i < ds_height; i++) {
 					enter_change = true;
 				}
 			} else if (option == menu_element_type.keybind) { //CACHING
-				var index = 3;
-				if (global.gamepad_type == GAMEPAD_TYPE.KEYBOARD)
-					index = 2;
-				if (key != scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# index, i])) {
+				if (key != scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i])) {
 					//AUDIO
-					scSettingsCache(ds_grid[# index, i], key);
-					ds_grid[# 3, i] = key;
+					scSettingsCache(ds_grid[# 2, i], key);
 					keys_update = true; //Update the keybinds when unpaused (only works in pause screen)
 					ds_list_add(confirm_list, i);
 					enter_change = true;

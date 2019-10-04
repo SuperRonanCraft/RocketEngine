@@ -11,8 +11,7 @@ if (workingon != page) { //New page, lets set it up
 	//Centered?
 	var centering = false;
 	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
-		if (menu_pages[page] == menu_pages_centered[i])
-			centering = true;
+		if (menu_pages[page] == menu_pages_centered[i]) { centering = true; break; }
 	centered = centering;
 	//Positions
 	start_x = 0;
@@ -62,6 +61,13 @@ if (workingon != page) { //New page, lets set it up
 scUIUnfold(); //Unfolding event
 
 // Draw left
+if (menu_titles != noone) { //Draw Titles
+	for (var i = 0; i < array_length_1d(menu_titles); i++) {
+		var title = menu_titles[i];
+		if (title[0] == menu_pages_index[page])
+			scDrawText(RES_W / 2 + RES_W / 4, RES_H / 8, title[1], c_ltgray, 1.4);
+	}
+}
 for (var i = 0; i < ds_height; i++) {
 	//Color, Scale, Y-pos, X-offset
 	var c = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i];
@@ -102,12 +108,15 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.mass_toggle:
 		case menu_element_type.toggle:
-		case menu_element_type.toggle_live:
 		case menu_element_type.shift:
 		case menu_element_type.shift_script:
+			if (menu_option[page] == i)
+				scDrawText(rtx, rty - (y_buffer / 2), "Use Arrow keys or click to change selection", color_element_special, 0.4, noone, 0.8, fa_left);
+			break;
 		case menu_element_type.slider:
 			if (menu_option[page] == i)
-				scDrawText(rtx, rty - (y_buffer / 2), "Use Arrow keys to change selection", color_element_special, 0.4, noone, 0.8, fa_left);
+				scDrawText(rtx, rty - (y_buffer / 2), "Use Arrow keys or click and drag", color_element_special, 0.4, noone, 0.8, fa_left);
+			break;
 		default: break;
 	}
 	switch (ds_grid[# 1, i]) {
@@ -194,39 +203,48 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
 		case menu_element_type.keybind:
-			c = c_white;
-			var index = 3;
-			var scale = 1.2;
+			var scale = 1.2, c = color_element, scale = scale_element;
 			rtx += x_buffer;
-			if (global.gamepad_type == GAMEPAD_TYPE.KEYBOARD) {
-				c = color_element;
-				index = 2;
-				scale = scale_element;
-				var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# index, i]))) * scale;
-				if (i == menu_option[page])
-					c = color_element_hover;
-				else if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0)) {
-					scale =  scale_element * 1.3;
-					rtx += scMovementWave(-3, 3, 1);
-					c = color_element_hover;
-				}
+			var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale;
+			if (i == menu_option[page])
+				c = color_element_hover;
+			else if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0)) {
+				scale =  scale_element * 1.3;
+				rtx += scMovementWave(-3, 3, 1);
+				c = color_element_hover;
 			}
-			if (input != noone)
-				if (input[0] == page && input[1] == i) {
+			if (input != noone) {
+				if (input[0] == page && input[1] == i) { //Editting
 					scDrawText(start_x[i] + x_buffer * 2, rty - (y_buffer / 2), "Press any key!", color_element_special, 0.4, noone, 0.8, fa_left);
 					c = c_red;
 					scale =  scale_element * 1.6;
 				}
-			scUIGamepadDraw(global.gamepad_type, ds_grid[# index, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
+			} else if (c == color_element_hover) //Hovering
+				scDrawText(start_x[i] + x_buffer * 2, rty - (y_buffer / 2), "Click to edit!", color_element_special, 0.4, noone, 0.8, fa_left);
+			scUIGamepadDraw(GAMEPAD_TYPE.KEYBOARD, ds_grid[# 2, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
 			break;
-		case menu_element_type.list_weapons: //Rocket info page
+		case menu_element_type.set_gamepad:
+			var list = oGame.controllers;
+			var c = c_red;
+			var text = "No Controller connected!"
+			if (ds_list_size(list) > 0) { //Are there any controllers connected?
+				var gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]) //Get the gamepad index
+				if (ds_list_find_index(list, gamepad)) { //Controller connected?
+					text = "Controller " + string(gamepad) + " Connected!";
+					c = c_lime;
+				} else //Controller not connected
+					text = "Controller " + string(gamepad) + " not Connected!";
+			}
+			scDrawText(rtx, rty, text, c, scale_element, noone, noone, fa_left);
+			break;
+		case menu_element_type.list_weapons: //Weapon info page
 			scMenuWeapons(); break;
 		case menu_element_type.list_buffs: //Buffs list
 			scMenuBuffs(); break;
 		case menu_element_type.list_achievements: //Achievements list
 			scMenuAchievements(); break;
 		case menu_element_type.controls: //Key controls page
-			scMenuControls(global.gamepad_type); break;
+			scMenuControls(GAMEPAD_TYPE.KEYBOARD); break;
 		case menu_element_type.stats: //Stats page
 			var scale = scale_element;
 			var mode = ds_grid[# 2, i];

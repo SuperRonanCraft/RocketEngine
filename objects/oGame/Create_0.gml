@@ -50,7 +50,6 @@ global.vol_music = 0.15;
 global.vol_sounds = 0.2;
 global.fullscreen = false;
 global.weapon_info = true;
-global.gamepad_type = GAMEPAD_TYPE.KEYBOARD;
 //global.menu_color_hover = 0;
 //global.menu_color_hover_act = c_orange;
 
