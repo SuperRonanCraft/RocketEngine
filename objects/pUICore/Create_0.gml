@@ -127,6 +127,7 @@ button_left = vk_left;
 button_right = vk_right;
 button_up = vk_up;
 button_down = vk_down;
+button_gamepad = 0;
 
 ///Default things
 depth -= 1;

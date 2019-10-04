@@ -61,6 +61,3 @@ smoke_lastvsp = 0;
 
 //Aim type
 auto_aim = false;
-
-//TEST PALETTE
-index_pallete = 1;

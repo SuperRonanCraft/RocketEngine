@@ -1,9 +1,21 @@
 if (!control) exit; //Set when we move to another room
 else scUIReloadGlobal(); //Reload global vars
 
-var key_up = keyboard_check_pressed(button_up), key_down = keyboard_check_pressed(button_down);
+var key_up = false, key_down = false;
+var hinput = 0;
+if (button_up != noone && button_down != noone && button_left != noone && button_right != noone) { //Keyboard disabled
+	key_up = keyboard_check_pressed(button_up);
+	key_down = keyboard_check_pressed(button_down);
+	hinput = hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
+}
 var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left), enter_change = false;
 var play_sound = true;
+
+if (!key_up && !key_down && hinput == 0 && gamepad_is_connected(button_gamepad)) { //No keys, has a controller
+	key_up = gamepad_button_check(button_gamepad, gp_padu);
+	key_down = gamepad_button_check(button_gamepad, gp_padd);
+	key_enter = gamepad_button_check(button_gamepad, gp_face1);
+}
 
 //Grid that we are checking based off the page we are on
 var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
@@ -20,7 +32,6 @@ for (var i = 0; i < ds_height; i++) {
 				current_array_id = 3;
 			}
 			var val = ds_grid[# current_id, i];
-			var hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 			if (hinput != 0 && menu_option[page] == i) {
 				//AUDIO
 				val += hinput;
@@ -55,7 +66,6 @@ for (var i = 0; i < ds_height; i++) {
 			}
 			break;
 		case menu_element_type.slider:
-			var hinput = keyboard_check(button_right) - keyboard_check(button_left);
 			var val = -1;
 			if (hinput != 0 && menu_option[page] == i) //Must be pressing btn to move slider
 				val = ds_grid[# 4, i] + hinput * 0.01;
@@ -80,7 +90,6 @@ for (var i = 0; i < ds_height; i++) {
 			break;
 		case menu_element_type.toggle:
 			var val = ds_grid[# 4, i];
-			var hinput = keyboard_check_pressed(button_left) - keyboard_check_pressed(button_right);
 			if (hinput != 0 && menu_option[page] == i) {
 				if (hinput != 0)
 					val = clamp(val + hinput, 0, 1);

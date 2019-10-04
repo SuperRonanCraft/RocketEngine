@@ -4,6 +4,15 @@ if (async_load[? "event_type"] == "gamepad discovered") { //This controller was 
 	var index = async_load[? "pad_index"];
 	show_debug_message("+ Gamepad #" + string(index) + " was connected!");
 	ds_list_add(controllers, index);
+	/*var pads = [SETTINGS.PLAYER_1_GAMEPAD, SETTINGS.PLAYER_2_GAMEPAD, 
+		SETTINGS.PLAYER_3_GAMEPAD, SETTINGS.PLAYER_4_GAMEPAD];
+	for (var cur = 0; cur < array_length_1d(pads); cur++) {
+		for (var a = 0; a < array_length_1d(pads); a++)
+			if (a != cur)
+				if (scSettingsGetType(SETTINGS_TYPE.VALUE, a) == 
+					scSettingsGetType(SETTINGS_TYPE.VALUE, cur)) //Current gamepad equals another gamepad
+					
+	}*/
 } else if (async_load[? "event_type"] == "gamepad lost") {
 	var index = async_load[? "pad_index"];
 	show_debug_message("- Gamepad #" + string(index) + " was lost!");

@@ -19,7 +19,7 @@ ds_gamemodes = scUICreateMenuPage(
 ds_info = scUICreateMenuPage(
 	["&eSTATISTICS",	menu_element_type.page_transfer,	menu_page.stats,		"&aCheck your game stats!"],
 	["&eACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.list_achievements,	"&aGotta catch em all!"],
-	["WEAPONS",		menu_element_type.page_transfer,	menu_page.list_weapons,	"Learn about every weapon modifier!"],
+	["MODIFIERS",		menu_element_type.page_transfer,	menu_page.list_weapons,	"Learn about every weapon modifier!"],
 	["BUFFS",		menu_element_type.page_transfer,	menu_page.list_buffs,	"Get to know your buff!"],
 	["CONTROLS",	menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check ur keys!"],
 	//[global.gamemodes[GAMEMODE.TUTORIAL],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TUTORIAL],	"Learn how to play!"],

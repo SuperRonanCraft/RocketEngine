@@ -1,5 +1,5 @@
 /// @desc Explosion
-sprite_index = sexplosion_Default;
+sprite_index = s_boom;
 image_xscale = explosion_scale;
 image_yscale = explosion_scale;
 destroy = true;
