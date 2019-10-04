@@ -204,6 +204,12 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 		break;
 		
+	case ULTIMATE.BRICK_SWORD:
+		ds_map[? ULTIMATE_MAP.NAME] = "A colossal clash.";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordBrick;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
+		break;
+		
 }
 
 enum ULTIMATE {
@@ -214,6 +220,7 @@ enum ULTIMATE {
 	
 	//SWORD ULTS
 	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,PORTAL_SWORD,SAND_SWORD,
+	BRICK_SWORD,
 	
 	
 	NONE,

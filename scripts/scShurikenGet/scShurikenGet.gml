@@ -83,6 +83,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.KBAMT] = 7;
 		map[? SHURIKEN_MAP.ROTATE] = false;
 		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Brick_Weapon;
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.BRICK_SWORD;
 		break;
 		
     case SHURIKEN.MAGNET:

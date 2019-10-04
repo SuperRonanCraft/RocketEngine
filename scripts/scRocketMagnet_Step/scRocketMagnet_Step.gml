@@ -1,10 +1,10 @@
 ///Magnet Step
 var map = magnetMap;
 if ((direction == 0 || direction == 180) && !map[? "movingdir"]) {
-	if (!instance_exists(map[? "target"]))
-		map[? "target"] = scFindTarget(owner.team);
+	if (!instance_exists(target))
+		target = scFindTarget(owner.team);
 		
-	with (map[? "target"])
+	with (target)
 		if ((other.x > x - other.weapon_map[? WEAPON_MAP.SPEED] - 25 && other.x < x + other.weapon_map[? WEAPON_MAP.SPEED] + 25)) {
 			if (y > other.y)
 				map[? "target_dir"] = 270;

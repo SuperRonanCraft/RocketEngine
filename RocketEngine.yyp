@@ -2151,6 +2151,14 @@
             }
         },
         {
+            "Key": "4c767790-17f3-4259-b209-9e940181932d",
+            "Value": {
+                "id": "9ab47413-55e6-4eca-b071-1508d4381e64",
+                "resourcePath": "sprites\\sbrickBall_explode\\sbrickBall_explode.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4cb791c3-7f48-4c1c-a196-04195abba9cb",
             "Value": {
                 "id": "6851a158-777e-40f7-ba19-ffb6ccefa483",
@@ -3132,6 +3140,14 @@
                 "id": "6985bac6-fe8a-4d59-95b4-87121bfb4b7f",
                 "resourcePath": "notes\/JOHN!.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "6e53f625-431f-494a-9fdd-d9a9a54cd8c6",
+            "Value": {
+                "id": "1563d7df-7e2e-430c-b466-c85b11e1711f",
+                "resourcePath": "scripts\\scUltimateSwordBrick\\scUltimateSwordBrick.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4239,6 +4255,14 @@
             }
         },
         {
+            "Key": "98e1d1fe-106f-4a1a-9564-b89e29f239ef",
+            "Value": {
+                "id": "c394f232-0349-424d-a467-1eb3ebb3149f",
+                "resourcePath": "sprites\\sbrickBall\\sbrickBall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9929a253-eef4-4676-a16c-26c7cb041b55",
             "Value": {
                 "id": "ef6f584f-8bcd-4b6b-b273-408d13f90844",
@@ -5255,6 +5279,14 @@
             }
         },
         {
+            "Key": "bacefe2e-67f8-46a1-81ff-0921a99ea867",
+            "Value": {
+                "id": "d0c38b4e-77e8-4e27-a150-47d66116596d",
+                "resourcePath": "sprites\\sShuriken_Default_Ult1\\sShuriken_Default_Ult1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bad5ec47-1e21-45a1-8411-9f1bb5506fc8",
             "Value": {
                 "id": "3d5edade-86e5-438c-8ff5-a877cf342f24",
@@ -5863,6 +5895,14 @@
             }
         },
         {
+            "Key": "d47cdd7d-dc9a-441f-a949-6d26453c7bfb",
+            "Value": {
+                "id": "7ad94e41-0fd9-460f-953c-e1f4e8fb6b56",
+                "resourcePath": "objects\\oBrickBall\\oBrickBall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d47d0884-2949-4ccf-ae41-060bad012c6b",
             "Value": {
                 "id": "5e74aff0-8f09-4d61-a629-117c87f50880",
@@ -6107,6 +6147,14 @@
             "Value": {
                 "id": "c079b13e-0b81-465d-a584-3cde527ae119",
                 "resourcePath": "objects\/oUltimateFrostyEffect\/oUltimateFrostyEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dd7b7193-1c15-4759-93af-93c1499201b1",
+            "Value": {
+                "id": "7c87d6a0-290a-486b-83b6-10e4ea545c8c",
+                "resourcePath": "objects\\oSwordSlash_Brick\\oSwordSlash_Brick.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -7143,6 +7191,7 @@
         "9beed5d5-b978-4366-8638-ef79a32d3637",
         "62d81973-9b38-4c0f-a0e0-6a2c2781f9f6",
         "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
+        "6e53f625-431f-494a-9fdd-d9a9a54cd8c6",
         "12847d2e-0080-461f-9300-d0c758c61916",
         "881165b1-78c6-461c-8ec6-9855ec2f873a",
         "dee82466-dbf1-4b22-8a41-1cbe44e69a7f",
