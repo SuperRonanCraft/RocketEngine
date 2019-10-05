@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "057c8a11-f567-4c23-aa02-34e2fdc28d73",
+            "Value": {
+                "id": "bbc42c44-b645-4db0-b354-f05e794c6c3f",
+                "resourcePath": "objects\\oSwordSlash_Metal\\oSwordSlash_Metal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
             "Value": {
                 "id": "b985dcf7-a1a7-4f7c-9d3f-880f00b367a6",
@@ -3127,6 +3135,14 @@
             }
         },
         {
+            "Key": "6cbe8108-5895-4426-97be-daa9ba3a795d",
+            "Value": {
+                "id": "866c79fd-cd83-44c2-90c9-81a86cf73f20",
+                "resourcePath": "sprites\\sShuriken_Metal_UltSword\\sShuriken_Metal_UltSword.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6d3cac0e-6125-4a2f-a14e-c505a35a81bc",
             "Value": {
                 "id": "f1b23373-0d58-4ab0-a421-39fba930e570",
@@ -4684,6 +4700,14 @@
                 "id": "66e0fda7-071d-4a18-a09d-e4c778439cc7",
                 "resourcePath": "scripts\/scUltimateHugesplosion_Create\/scUltimateHugesplosion_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a58b699c-e803-46ba-b6ea-10e64ce965ab",
+            "Value": {
+                "id": "b80c848d-c2b8-40ca-9a18-643778b727bc",
+                "resourcePath": "sprites\\sShuriken_Metal_Ult\\sShuriken_Metal_Ult.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6527,6 +6551,14 @@
             }
         },
         {
+            "Key": "e8153eb1-8892-4151-8b81-c9fa69d71ecc",
+            "Value": {
+                "id": "d5d2a005-0c42-4457-81b3-af0083a97242",
+                "resourcePath": "scripts\\scUltimateSwordMetal\\scUltimateSwordMetal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e8958ecd-db37-4420-8365-d502b8a7a409",
             "Value": {
                 "id": "4ffca2c2-5857-4ea5-ba5e-dbedff972ab0",
@@ -7270,6 +7302,7 @@
         "dee82466-dbf1-4b22-8a41-1cbe44e69a7f",
         "e9b756e7-36df-4095-bde1-955dd35338b9",
         "3c4015ab-95c8-473d-937c-a0cae539f1f6",
+        "e8153eb1-8892-4151-8b81-c9fa69d71ecc",
         "483e1c54-e32e-4837-b4ec-da3ac733df64",
         "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
         "5e646fca-ca67-4330-a6ca-62aa240db456",
