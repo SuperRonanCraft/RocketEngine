@@ -68,17 +68,17 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 		scDrawText(xpos, ypos * 2, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,
 			0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
 		if (charge >= 100) {
-			var gamepad = !controller_lastused ? GAMEPAD_TYPE.KEYBOARD : scSettingsGetType(SETTINGS_TYPE.VALUE, key_map[? KEYBIND_MAP.GAMEPAD_TYPE]);
-			var scale = 2.5;
+			var gamepad = !controller_lastused ? GAMEPAD_TYPE.KEYBOARD : GAMEPAD_TYPE.PS4;//scSettingsGetType(SETTINGS_TYPE.VALUE, key_map[? KEYBIND_MAP.GAMEPAD]); //Get the gamepad index
+			var scale = 1;
 			var ultypos = ypos;
 			var c = c_white;
-			if (gamepad == GAMEPAD_TYPE.KEYBOARD) {
+			if (gamepad == GAMEPAD_TYPE.KEYBOARD) { //No Gamepad
 				scale = 0.5;
 				ultypos = ultypos * 1.8 + (string_height(scKeyToString(key_map[? KEYBIND_MAP.ULTIMATE])) * scale);
 				c = c_yellow;
 			} else
 				ultypos = ultypos * 2.8;
-			scUIGamepadDraw(gamepad, !controller_lastused ? key_map[? KEYBIND_MAP.ULTIMATE] : key_map[? KEYBIND_MAP.ULTIMATE_GP], xpos, ultypos, c, scale, 1 /*scMovementWave(0.8, 0.4, 1)*/, fa_middle, fa_top);
+			scUIGamepadDraw(gamepad, !controller_lastused ? key_map[? KEYBIND_MAP.ULTIMATE] : key_map[? KEYBIND_MAP.ULTIMATE_GP], xpos, ultypos, c, scale, 1, fa_middle, fa_top);
 			/*var str = scKeyToString(key_map[? KEYBIND_MAP.ULTIMATE]);
 			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
 				0.5, noone, scMovementWave(0.8, 0.4, 1));*/

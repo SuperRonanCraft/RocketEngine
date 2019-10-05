@@ -100,9 +100,13 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 		if (ds_grid[# 1, 0] == menu_special[a]) menu_option[i] = 1; //Default selection for each special page
 		else menu_option[i] = 0; //Default selection for each page
 	}
-menu_option[page] = 0; //Default main page is -1 for the animation phase
+menu_option[page] = 0;
 
 //Unfolding animation
 unfolding = true;
 for (var i = 0; i < ds_grid_height(menu_pages[menu_page.main]); i++)
 	unfold[i] = 0; //Position multiplier of page text
+
+if (global.gamemode_select)
+	page = 1;
+global.gamemode_select = false;

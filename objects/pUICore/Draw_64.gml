@@ -164,7 +164,6 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			} else c_right = c;
 			if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray;
 			scDrawText(rtx + len / 2 + offset, rty, ">>", c_right, shift_scale, noone, noone, fa_left);
-			
 			break;
 		case menu_element_type.slider:
 			var len = slider_width, circle_pos = ds_grid[# 4, i], c = c_ltgray;
@@ -226,16 +225,45 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		case menu_element_type.set_gamepad:
 			var list = oGame.controllers;
 			var c = c_red;
-			var text = "No Controller connected!"
+			var text = "No Controller connected";
+			var gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]);
+			var scale = scale_element;
 			if (ds_list_size(list) > 0) { //Are there any controllers connected?
-				var gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]) //Get the gamepad index
-				if (ds_list_find_index(list, gamepad)) { //Controller connected?
-					text = "Controller " + string(gamepad) + " Connected!";
+				if (ds_list_find_index(list, gamepad) != -1) { //Controller connected?
+					text = "Controller " + string(gamepad) + " Connected";
 					c = c_lime;
-				} else //Controller not connected
-					text = "Controller " + string(gamepad) + " not Connected!";
+				} else if (gamepad != noone) //Controller not connected
+					text = "Controller " + string(gamepad) + " not Connected";
+				else
+					text = "Controller not Connected";
+			} else {
+				scDrawText(rtx, rty, text, color_element, scale_element, noone, noone, fa_left); //Info
+				break;
 			}
-			scDrawText(rtx, rty, text, c, scale_element, noone, noone, fa_left);
+			scDrawText(rtx, rty - (y_buffer / 2), text, color_element_special, 0.4, noone, noone, fa_left); //Info
+			//Draw Left
+			var len = x_buffer * 4, c_left = color_element, c_right = c_left;
+			rtx += (len / 2) + x_buffer;
+			var offset = 0;
+			var shift_scale = scale_element;
+			if (scUIHovering(rtx - (len / 2), rty, "<<", x_buffer / 2, y_buffer / 2, shift_scale, fa_right)) {
+				shift_scale *= 1.3;
+				offset = scMovementWave(-3, 3, 1);
+				c_left = color_element_hover;
+			}
+			if (gamepad == noone) c_left = c_gray;
+			scDrawText(rtx - len / 2 + offset, rty, "<<", c_left, shift_scale, noone, noone, fa_right);
+			//Option
+			scDrawText(rtx, rty, gamepad != noone ? string(gamepad) : "N/A", c, scale, noone, noone, fa_middle);
+			//Draw Right
+			shift_scale = scale_element;
+			offset = 0;
+			if (scUIHovering(rtx + len / 2, rty, ">>", x_buffer / 2, y_buffer / 2, shift_scale, fa_left)) {
+				shift_scale *= 1.3;
+				offset = scMovementWave(-3, 3, 1);
+				c_right = color_element_hover;
+			}
+			scDrawText(rtx + len / 2 + offset, rty, ">>", c_right, shift_scale, noone, noone, fa_left);
 			break;
 		case menu_element_type.list_weapons: //Weapon info page
 			scMenuWeapons(); break;

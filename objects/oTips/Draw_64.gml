@@ -1,9 +1,14 @@
 /// @desc draw the tip
 
+if (not_enabled) { //Notifications
+	scDrawText(RES_W / 2 + RES_W / 4, y, not_text_title, c_yellow, scale, noone, not_alpha, noone, fa_top); //Text
+	scDrawText(RES_W / 2 + RES_W / 4, y + 25, not_text[| 0], c_gray, scale, noone, not_alpha, noone, fa_top); //Text
+}
+
 if (global.play || tip_delay_current > 0) exit; //Disabled, just exit
 
-var tip = tip_current;
 var xx = x, yy = y;
+var tip = tip_current;
 switch (tip_list[# 0, tip]) {
 	case tip_element.sprite:
 		scDrawText(xx, yy, tip_list[# 2, tip], color_title, scale, noone, alpha); //Sprite name

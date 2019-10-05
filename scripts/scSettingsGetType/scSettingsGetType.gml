@@ -32,7 +32,6 @@ switch (type) {
 			case SETTINGS.PLAYER_1_SHOOT_GP: val = "player_1_shoot_gp"; break;
 			case SETTINGS.PLAYER_1_ABILITY_GP: val = "player_1_ability_gp"; break;
 			case SETTINGS.PLAYER_1_ULTIMATE_GP: val = "player_1_ultimate_gp"; break;
-			case SETTINGS.PLAYER_1_GAMEPAD_TYPE: val = "player_1_gamepad"; break;
 			case SETTINGS.PLAYER_2_LEFT: val = "player_2_left"; break;
 			case SETTINGS.PLAYER_2_RIGHT: val = "player_2_right"; break;
 			case SETTINGS.PLAYER_2_JUMP: val = "player_2_jump"; break;
@@ -45,7 +44,6 @@ switch (type) {
 			case SETTINGS.PLAYER_2_SHOOT_GP: val = "player_2_shoot_gp"; break;
 			case SETTINGS.PLAYER_2_ABILITY_GP: val = "player_2_ability_gp"; break;
 			case SETTINGS.PLAYER_2_ULTIMATE_GP: val = "player_2_ultimate_gp"; break;
-			case SETTINGS.PLAYER_2_GAMEPAD_TYPE: val = "player_2_gamepad"; break;
 			default: val = noone; break;
 		}
 		break;
@@ -64,7 +62,7 @@ switch (type) {
 			case SETTINGS.PLAYER_1_SHOOT_GP: val = gp_shoulderr; break;
 			case SETTINGS.PLAYER_1_ABILITY_GP: val = gp_face4; break;
 			case SETTINGS.PLAYER_1_ULTIMATE_GP: val = gp_face2; break;
-			case SETTINGS.PLAYER_1_GAMEPAD_TYPE: val = GAMEPAD_TYPE.PS4; break;
+			case SETTINGS.PLAYER_1_GAMEPAD: val = noone; break;
 			//PLAYER 2
 			case SETTINGS.PLAYER_2_LEFT: val = vk_left; break;
 			case SETTINGS.PLAYER_2_RIGHT: val = vk_right; break;
@@ -78,7 +76,9 @@ switch (type) {
 			case SETTINGS.PLAYER_2_SHOOT_GP: val = gp_shoulderr; break;
 			case SETTINGS.PLAYER_2_ABILITY_GP: val = gp_face4; break;
 			case SETTINGS.PLAYER_2_ULTIMATE_GP: val = gp_face2; break;
-			case SETTINGS.PLAYER_2_GAMEPAD_TYPE: val = GAMEPAD_TYPE.PS4; break;
+			case SETTINGS.PLAYER_2_GAMEPAD: val = noone; break;
+			case SETTINGS.PLAYER_3_GAMEPAD: val = noone; break;
+			case SETTINGS.PLAYER_4_GAMEPAD: val = noone; break;
 			default: val = 0; break;
 		}
 		break;
@@ -87,6 +87,16 @@ switch (type) {
 		//show_debug_message("RETURNING SETTING VALUE = " + string(val));
 		//show_debug_message("RETURNING SETTING ENUM = " + string(setting));
 		break;
+	case SETTINGS_TYPE.SAVE:
+		switch (setting) {
+			case SETTINGS.PLAYER_1_GAMEPAD:
+			case SETTINGS.PLAYER_2_GAMEPAD:
+			case SETTINGS.PLAYER_3_GAMEPAD:
+			case SETTINGS.PLAYER_4_GAMEPAD:
+				val = false;
+				break;
+			default: val = true;
+		}
 	default: show_debug_message("UNKNOWN SETTING " + string(type)); break;
 }
 
@@ -121,7 +131,6 @@ enum SETTINGS {
 	PLAYER_1_SHOOT_GP,
 	PLAYER_1_ABILITY_GP,
 	PLAYER_1_ULTIMATE_GP,
-	PLAYER_1_GAMEPAD_TYPE,
 	//Keybinds 2
 	PLAYER_2_LEFT,
 	PLAYER_2_RIGHT,
@@ -135,12 +144,12 @@ enum SETTINGS {
 	PLAYER_2_SHOOT_GP,
 	PLAYER_2_ABILITY_GP,
 	PLAYER_2_ULTIMATE_GP,
-	PLAYER_2_GAMEPAD_TYPE,
 	SECTION
 }
 
 enum SETTINGS_TYPE {
 	VALUE,
 	DEFAULT,
-	SECTION
+	SECTION,
+	SAVE
 }

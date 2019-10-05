@@ -6,15 +6,16 @@ var hinput = 0;
 if (button_up != noone && button_down != noone && button_left != noone && button_right != noone) { //Keyboard disabled
 	key_up = keyboard_check_pressed(button_up);
 	key_down = keyboard_check_pressed(button_down);
-	hinput = hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
+	hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
 }
 var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left), enter_change = false;
 var play_sound = true;
 
-if (!key_up && !key_down && hinput == 0 && gamepad_is_connected(button_gamepad)) { //No keys, has a controller
-	key_up = gamepad_button_check(button_gamepad, gp_padu);
-	key_down = gamepad_button_check(button_gamepad, gp_padd);
-	key_enter = gamepad_button_check(button_gamepad, gp_face1);
+if (!key_up && !key_down && hinput == 0 && !key_enter && gamepad_is_connected(button_gamepad)) { //No keys, has a controller
+	key_up = gamepad_button_check_pressed(button_gamepad, gp_padu);
+	key_down = gamepad_button_check_pressed(button_gamepad, gp_padd);
+	key_enter = gamepad_button_check_pressed(button_gamepad, gp_face1);
+	hinput = gamepad_button_check_pressed(button_gamepad, gp_padr) - gamepad_button_check_pressed(button_gamepad, gp_padl);
 }
 
 //Grid that we are checking based off the page we are on
@@ -32,9 +33,12 @@ for (var i = 0; i < ds_height; i++) {
 				current_array_id = 3;
 			}
 			var val = ds_grid[# current_id, i];
-			if (hinput != 0 && menu_option[page] == i) {
+			if ((hinput != 0 || key_enter) && menu_option[page] == i) {
 				//AUDIO
-				val += hinput;
+				if (hinput != 0)
+					val += hinput;
+				else
+					val++;
 			} else if (mouse_check_button_pressed(mb_left)) { //Left button and hovering
 				var len = -1;
 				var current_array = ds_grid[# current_array_id, i];
@@ -67,9 +71,11 @@ for (var i = 0; i < ds_height; i++) {
 			break;
 		case menu_element_type.slider:
 			var val = -1;
-			if (hinput != 0 && menu_option[page] == i) //Must be pressing btn to move slider
+			if (hinput != 0 && menu_option[page] == i) { //Must be pressing btn to move slider
+				if (!key_up && !key_down && hinput == 0 && !key_enter && gamepad_is_connected(button_gamepad))
+					hinput = gamepad_button_check(button_gamepad, gp_padr) - gamepad_button_check(button_gamepad, gp_padl);
 				val = ds_grid[# 4, i] + hinput * 0.01;
-			else if (mouse_check_button(mb_left) || mouse_check_button_released(mb_left)) {
+			} else if (mouse_check_button(mb_left) || mouse_check_button_released(mb_left)) {
 				var xleft = start_x[i] + (x_buffer * 2);
 				var ycheck = start_y[i];
 				if (scUIHoveringBox(xleft, ycheck, xleft + slider_width, ycheck, x_buffer, y_buffer)) {
@@ -90,9 +96,8 @@ for (var i = 0; i < ds_height; i++) {
 			break;
 		case menu_element_type.toggle:
 			var val = ds_grid[# 4, i];
-			if (hinput != 0 && menu_option[page] == i) {
-				if (hinput != 0)
-					val = clamp(val + hinput, 0, 1);
+			if ((hinput != 0 || key_enter) && menu_option[page] == i) {
+				val = !val;
 			} else if (mouse_check_button_pressed(mb_left)) {
 				var text = ds_grid[# 4, i] == 1 ? "ENABLED" : "DISABLED";
 				var xleft = start_x[i] + (x_buffer * 2);
@@ -134,7 +139,7 @@ for (var i = 0; i < ds_height; i++) {
 						break;
 				}
 			} else
-				break; //Not on the same page
+				break; //Not on the same option
 			var key = noone;
 			if (keyboard_check_pressed(vk_anykey))
 				key = keyboard_lastkey;
@@ -157,6 +162,53 @@ for (var i = 0; i < ds_height; i++) {
 					enter_change = true;
 				}
 			}
+			break;
+		case menu_element_type.set_gamepad: //Rebind a controller to a player
+			var val = 0;
+			var controls = oGame.controllers;
+			if (ds_list_size(controls) > 0)
+				if (key_enter_mouse || key_enter || hinput != 0) { //Pressed enter
+					if (i == menu_option[page] && hinput != 0)
+						val += hinput; //Got here from selection
+					else if (i == menu_option[page] && (key_enter_mouse || key_enter))
+						val++;
+					else {
+						var rty = start_y[i];
+						var rtx = start_x[i] + x_buffer * 2;
+						var len = x_buffer * 4;
+						rtx += (len / 2) + x_buffer;
+						if (scUIHovering(rtx - (len / 2), rty, "<<", x_buffer / 2, y_buffer / 2, scale_element, fa_right)) //Left
+							val--;
+						else if (scUIHovering(rtx + (len / 2), rty, "<<", x_buffer / 2, y_buffer / 2, scale_element, fa_left))
+							val++;
+						else
+							break;
+						var rty = start_y[i];
+						var rtx = start_x[i] + x_buffer * 2 + x_buffer;
+						var len = string_width("Controller not Connected") * scale_element;
+					}
+				} else
+					break; //No changes
+			else
+				break; //No controllers
+			var pad = ds_grid[# 2, i]; //Pad Type
+			var pads = [SETTINGS.PLAYER_1_GAMEPAD, SETTINGS.PLAYER_2_GAMEPAD, 
+				SETTINGS.PLAYER_3_GAMEPAD, SETTINGS.PLAYER_4_GAMEPAD];
+			var available = noone;
+			for (var a = 0; a < ds_list_size(controls); a++) {
+				var found = false;
+				for (var b = 0; b < array_length_1d(pads); b++)
+					if (controls[| a] == scSettingsGetType(SETTINGS_TYPE.VALUE, pads[b])) { //Is an element in controllers on the gamepad list?
+						found = true; break; } //Break out, we dont have this key available
+				if (!found)
+					if (available == noone)
+						available[0] = controls[| a];
+			}
+			if (available != noone) { //We have an available key!
+				//if (val == -1) { //Set lower pad or loop if available, else set noone
+				scSettingsCache(pad, available[0]);
+			} else //None available, so set it to nothing
+				scSettingsCache(pad, noone);
 			break;
 		default: //No custom values, just queue it up for confirm event
 			if (menu_option[page] == i)
@@ -204,26 +256,25 @@ if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_
 	}
 		//Left and right support on horizontally aligned buttons
 	else {
-		ochange = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
-		if (ochange != 0) {
+		if (hinput != 0) {
 			var option = menu_option[page];
 			if (option >= 0)
 				if (ds_grid[# 1, option] == menu_element_type.toggle_live) {
 					val = ds_grid[# 4, option];
-					val = clamp(val + ochange, 0, 1);
+					val = clamp(val + hinput, 0, 1);
 					if (val != ds_grid[# 4, option]) {
 						//ds_grid[# 4, option] = val;
 						//script_execute(ds_grid[# 2, option], val);
 						key_enter = true;
 					}
-				} else if (option + ochange >= 0 && option + ochange < ds_height) {
-					if (start_y[option] == start_y[option + ochange]) 
-						option += ochange;
-					else if (option - ochange >= 0 && option - ochange < ds_height)
-						if (start_y[option] == start_y[option - ochange]) 
+				} else if (option + hinput >= 0 && option + hinput < ds_height) {
+					if (start_y[option] == start_y[option + hinput]) 
+						option += hinput;
+					else if (option - hinput >= 0 && option - hinput < ds_height)
+						if (start_y[option] == start_y[option - hinput]) 
 							key_enter = true;
-				} else if (option + ochange == ds_height) {
-					if (start_y[option] == start_y[option - ochange]) 
+				} else if (option + hinput == ds_height) {
+					if (start_y[option] == start_y[option - hinput]) 
 						key_enter = true;
 				}
 		}

@@ -1,5 +1,20 @@
 /// @desc count down timer
 
+if (not_enabled) //Notifications
+	if (not_timer_cur > 0) {
+		not_alpha = clamp(not_alpha + alpha_change, 0, 1);
+		not_timer_cur--;
+	} else {
+		not_alpha = clamp(not_alpha - alpha_change, 0, 1);
+		if (not_alpha <= 0) {
+			ds_list_delete(not_text, 0);
+			if (ds_list_size(not_text) == 0)
+				not_enabled = false;
+			else
+				not_timer_cur = not_timer;
+		}
+	}
+
 if (global.play) exit; //Disabled, just exit
 else if (tip_delay_current > 0) { //Count down the delay, exit out
 	tip_delay_current--;

@@ -17,6 +17,7 @@ for (var i = 0; i < amt; i++) {
 				button_left = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.LEFT]);
 				button_up = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.JUMP]);
 				button_right = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.RIGHT]);
+				button_gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.GAMEPAD]);
 			default:
 				break;
 		}

@@ -1,3 +1,4 @@
 /// @desc save settings
 
-scSettingsSave()
+scSettingsSave();
+ds_map_destroy(settings_map);

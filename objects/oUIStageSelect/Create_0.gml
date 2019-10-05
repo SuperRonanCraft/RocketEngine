@@ -33,7 +33,7 @@ ds_menu_main = scUICreateMenuPage(
 	["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 	//[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 	//[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
-	["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+	["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 );
 //Pages of the menu
 menu_pages = [ds_menu_main];
@@ -48,7 +48,7 @@ switch (type) {
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
 			["MODIFIERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
-			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+			["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 		);
 
 		ds_modes = scUICreateMenuPage(
@@ -83,7 +83,7 @@ switch (type) {
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
 			["MODIFIERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
-			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+			["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 		);
 		
 		ds_modes = scUICreateMenuPage(
@@ -103,7 +103,7 @@ switch (type) {
 			[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scStageNext],
 			["MODIFIERS",	menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
-			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+			["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 		);
 
 		ds_modes = scUICreateMenuPage(
@@ -125,13 +125,13 @@ switch (type) {
 			|| scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT, type) == noone)
 			ds_menu_main = scUICreateMenuPage(
 				["NEW GAME",	menu_element_type.script_runner,	scStageSingle_NewGame, "Start up a new game!"],
-				["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+				["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 			);
 		else
 			ds_menu_main = scUICreateMenuPage(
 				["CONTINUE",	menu_element_type.script_runner,	scStageSingle_Continue, "Pickup where you left off!"],
 				["NEW GAME",	menu_element_type.script_runner,	scStageSingle_NewGame, "Start up a new game!"],
-				["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+				["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 			);
 		menu_pages = [ds_menu_main];
 		menu_pages_index = [menu_page.main];
@@ -142,7 +142,7 @@ switch (type) {
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],
 			[["NEXT >>", menu_centered.right],		menu_element_type.script_runner,	scStageNext],
 			["MODIFIERS",		menu_element_type.page_transfer,	menu_page.modes, "ALTER YOUR GAMEPLAY"],
-			["BACK",		menu_element_type.script_runner,	scUIExitToTitle]
+			["BACK",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 		);
 
 		ds_modes = scUICreateMenuPage(

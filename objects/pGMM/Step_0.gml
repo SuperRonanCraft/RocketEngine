@@ -1,5 +1,5 @@
 /// @desc Wait delay before starting stage, if allowed to play, call countdown delay every second
-if (timer_enabled)
+if (timer_enabled && !endgame)
 	if (wait_timer_current >= 0) {
 		wait_timer_current_abs--;
 		if (wait_timer_current_abs == 0) {

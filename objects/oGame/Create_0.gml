@@ -16,6 +16,7 @@ background = noone;
 global.pause = false;
 global.pause_possible = true;
 global.pause_onfocus = true;
+global.gamemode_select = false; //Set to false every main menu load (sets to load up gamemode select not main page)
 
 //Gamemodes
 //Preset

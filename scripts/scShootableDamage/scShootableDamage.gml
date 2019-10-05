@@ -34,6 +34,10 @@ with (damaging) {
 			
 		if (isPlayer) {
 			hp_scale = 2;
+			if (gamepad_is_connected(keys)) {
+				gamepad_set_vibration(keys, 1, 1);
+				alarm[0] = room_speed / 2;
+			}
 			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
 			player_map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 1;
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [damager, dmg]);

@@ -6191,6 +6191,14 @@
             }
         },
         {
+            "Key": "de60f1df-8548-4b66-a0c3-e61b5c53de5b",
+            "Value": {
+                "id": "287de659-6a51-4ce7-951b-c945511ae3de",
+                "resourcePath": "scripts\\scUIExitToGamemodeSelect\\scUIExitToGamemodeSelect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "deb17bfa-50b9-4836-8941-cd57aa0c61f9",
             "Value": {
                 "id": "1a2d1ede-6635-4246-b8c3-38b9eb2e2dec",
@@ -7287,6 +7295,7 @@
         "0302c78d-63c7-4a1b-a186-ec4494652c18",
         "629e7bea-6edd-4695-8e76-70aed14f0001",
         "4feff080-c2ca-471c-a07b-d3e79032357b",
+        "de60f1df-8548-4b66-a0c3-e61b5c53de5b",
         "af1bfdd2-1334-40aa-8444-ddb713405383",
         "6c94f478-e681-4d26-bb6c-476da0da1b53",
         "bc52f200-8726-4ff9-ad86-55bb3c461b15",

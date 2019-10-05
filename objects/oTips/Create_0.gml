@@ -6,7 +6,7 @@ enum tip_element {
 	text //Just text
 }
 
-tip_delay = 5 * room_speed; //Delay to not display a tip (spawning or in  new room)
+tip_delay = 5 * room_speed; //Delay to not display a tip (spawning or in new room)
 tip_delay_current = tip_delay;
 tip_timer = 10; //Default timer in seconds
 tip_timer_frames = room_speed; //Timer in frames
@@ -36,3 +36,11 @@ y = RES_H - RES_H / 8;
 
 //Front of pause menu
 depth -= 2;
+
+//Notifications
+not_timer = 4 * room_speed; //Default timer in seconds
+not_timer_cur = 0; //Timer in frames
+not_enabled = false; //Hide the not, but fade first
+not_alpha = 0;
+not_text_title = "NOTIFICATION";
+not_text = ds_list_create();
