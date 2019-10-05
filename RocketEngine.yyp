@@ -3191,6 +3191,14 @@
             }
         },
         {
+            "Key": "6ead8aed-bfa6-401c-a6d4-6957eb9ab8f0",
+            "Value": {
+                "id": "0c67cb51-e4e9-49da-b289-12a9aa95a668",
+                "resourcePath": "scripts\\scDrawNineSplice\\scDrawNineSplice.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6ebc6ea9-db60-4c99-8392-afd18fb048bf",
             "Value": {
                 "id": "d1bc8564-6481-4591-a714-56d547e7fefd",
@@ -4116,6 +4124,14 @@
                 "id": "ab369b7c-452a-4916-84f9-bb2f745d37d3",
                 "resourcePath": "views\/901315a8-9858-4241-b1bd-0dff66a4c542.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "90172393-f8e5-4e6d-ad50-d4c30913310a",
+            "Value": {
+                "id": "01726a7a-b334-4e11-b4ac-5b0be9a4cc35",
+                "resourcePath": "sprites\\sUIBox\\sUIBox.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7447,6 +7463,7 @@
         "8435c761-8278-4207-b431-1562529463c0",
         "19455d7d-472c-41ce-a375-87e79c0b8fc9",
         "54391887-2485-456f-8f52-d226cc98a8e9",
+        "6ead8aed-bfa6-401c-a6d4-6957eb9ab8f0",
         "fa5855a1-186b-4e43-aefc-704bba09dcbb",
         "01cfe7e1-8967-4426-a649-233b97758fea",
         "25b3ba2b-6d76-4fd5-9d16-79addc23b878",

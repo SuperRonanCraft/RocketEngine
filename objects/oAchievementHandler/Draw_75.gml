@@ -20,7 +20,9 @@ var len = (ach_title_len > name_len ?
 var hei = ach_title_hei * 2;
 var xx = ach_x_crt, xx2 = xx + len + (ach_margin * 2);
 var yy = ach_ystart, yy2 = yy + hei + (ach_margin * 2);
-scDrawRectRound(xx, yy, xx2 + 20, yy2, c_gray, false, ach_box_alpha, 20, 20);
+//scDrawRectRound(xx, yy, xx2 + 20, yy2, c_gray, false, ach_box_alpha, 20, 20);
+scDrawNineSplice(sUIBox, xx, yy, xx2 + 20, yy2, ach_box_alpha);
+//scDrawNineSplice(sUIBox, RES_W / 4, RES_H / 4, RES_W / 4 + RES_W / 2, RES_H / 2 + RES_H / 4);
 //TITLE
 yy = yy + ((yy2 - yy) / 2);
 scDrawSpriteExt(xx + ach_margin , yy - (offset / 2), icon, 0, noone, 0.8, 0.8, 0.8);
