@@ -703,6 +703,14 @@
             }
         },
         {
+            "Key": "16375fc1-1035-479d-a0d5-2e9be8fde0d3",
+            "Value": {
+                "id": "d8a9717b-4c0f-43d3-912f-2649a6e75f5a",
+                "resourcePath": "sprites\\sShuriken_Slime_Hit\\sShuriken_Slime_Hit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "168744af-8d96-4e84-a636-80ad6e2e95d1",
             "Value": {
                 "id": "210a184c-aa72-43fd-9f72-908bb4144228",
