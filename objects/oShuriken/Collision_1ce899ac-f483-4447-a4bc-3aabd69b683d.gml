@@ -17,6 +17,14 @@ if(shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
 		
 		hsp = 0;
 		vsp = 0;
+		
+		/*
+		if(shuriken_map[? SHURIKEN_MAP.SPRITE_STICK] != noone){
+			image_index = 0;
+			image_speed = 1;
+			sprite_index = 	shuriken_map[? SHURIKEN_MAP.SPRITE_STICK];
+		}
+		*/
 	
 	}
 	

@@ -30,7 +30,7 @@ map[? SHURIKEN_MAP.WALL_SCRIPT] = noone; //Special script to apply when hitting 
 map[? SHURIKEN_MAP.PLAYER_SCRIPT] = noone; //Special script to apply when hitting a pShootable object
 map[? SHURIKEN_MAP.WEAPON_SCRIPT] = noone; //Special script to apply when hitting a pWeapon object
 map[? SHURIKEN_MAP.SPAWN_SCRIPT] = noone; //Special script to apply when spawning a shuriken. Overrides shoot and aim action.
-
+map[? SHURIKEN_MAP.SPRITE_STICK] = noone; //Change sprite on stick
 
 map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
 map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit

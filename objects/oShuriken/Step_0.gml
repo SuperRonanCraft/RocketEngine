@@ -94,6 +94,11 @@ if (deactivate && stuckTo != noone && stuckTo.object_index != oWall && instance_
 x += hsp * owner.time_dialation;
 y += vsp * owner.time_dialation;
 
+//Dont loop sprite stick animation
+if(!loop){
+	if(image_index > image_number -1)
+		image_index = image_number - 1;
+}
 
 //Despawn if out of room.
 if (checkroom)

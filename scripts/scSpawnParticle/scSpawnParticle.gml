@@ -50,10 +50,26 @@ repeat(amt){
 			}			
 			
 	        break;
+			
+	    case WORLDPART_TYPE.SLIME:
+		
+			with (worldPart) {
+				weight = random_range(0.2, 0.85);
+				friction_base = random_range(0.2, 1);
+				hsp_real = random_range(-10, 10);
+				vsp_real = random_range(-20, 2);
+				timer += irandom_range(-25, 25);
+				sticky = true;
+				image_alpha = 0.8;
+				image_xscale = .5;
+				image_yscale = .5;
+			}
+			
+	        break;
 	}
 	
 }
 	
 enum WORLDPART_TYPE{
-		BLOOD, DEBRIS, 
+		BLOOD, DEBRIS, SLIME,
 }

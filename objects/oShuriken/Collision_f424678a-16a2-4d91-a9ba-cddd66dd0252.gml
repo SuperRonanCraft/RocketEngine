@@ -24,11 +24,32 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone){
 				if(shuriken_map[? SHURIKEN_MAP.STICK]){
 					deactivate = true;
 					stuckTo = other.id;
-					newX = irandom_range(-5,5);
-					newY = irandom_range(-5,5);
+					
+					/*
+					show_debug_message(string(other.bbox_left) + ", " + string(other.bbox_right));
+					show_debug_message(string(other.bbox_top) + ", " + string(other.bbox_bottom));
+					show_debug_message(string(other.x) + ", " + string(other.y));
+					*/
+					
+					
+					newX = irandom_range(other.bbox_left,other.bbox_right);
+					newY = irandom_range(other.bbox_top,other.bbox_bottom);
+					
+					newX = other.x - newX;
+					newY = other.y - newY;
 					image_speed = 0;
 					depth = other.depth - 10;
 				}
+				
+				//If the sprite changes on stick, change it!
+				
+				/*
+				if(shuriken_map[? SHURIKEN_MAP.SPRITE_STICK] != noone){
+					image_index = 0;
+					image_speed = 1;
+					sprite_index = 	shuriken_map[? SHURIKEN_MAP.SPRITE_STICK];
+				}
+				*/
 
 				//Knockback
 				var facing = 1;

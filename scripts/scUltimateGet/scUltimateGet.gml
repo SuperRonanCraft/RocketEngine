@@ -210,6 +210,12 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 		break;
 		
+	case ULTIMATE.SLIME_SWORD:
+		ds_map[? ULTIMATE_MAP.NAME] = "A slimy splash.";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordSlime;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
+		break;
+		
 }
 
 enum ULTIMATE {
@@ -220,7 +226,7 @@ enum ULTIMATE {
 	
 	//SWORD ULTS
 	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,PORTAL_SWORD,SAND_SWORD,
-	BRICK_SWORD,
+	BRICK_SWORD, SLIME_SWORD,
 	
 	
 	NONE,

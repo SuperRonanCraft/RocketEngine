@@ -18,7 +18,6 @@ if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this playe
 				deactivate = true;
 				newX = irandom_range(-5,5);
 				newY = irandom_range(-5,5);
-				image_speed = 0;
 
 				//Knockback
 				var facing = 1;

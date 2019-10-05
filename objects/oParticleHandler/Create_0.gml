@@ -531,6 +531,22 @@ part_type_life(parttype,90,180);
 ds_map_add(ds_part,PARTICLES.EXPLOSION_DEFAULT, parttype);
 ds_map_add(ds_part_amt, PARTICLES.EXPLOSION_DEFAULT, 25);
 
+//Slime
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_disk);
+part_type_size(parttype,0.10,0.80,-0.01,0);
+part_type_scale(parttype,1,1);
+part_type_color1(parttype,4259584);
+part_type_alpha1(parttype,1);
+part_type_speed(parttype,1,3,-0.02,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0,270);
+part_type_orientation(parttype,0,0,0,0,1);
+part_type_blend(parttype,0);
+part_type_life(parttype,60,60);
+ds_map_add(ds_part,PARTICLES.SLIME_PAINT, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SLIME_PAINT, 25);
+
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
@@ -538,5 +554,5 @@ enum PARTICLES {
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
 	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL,
-	EXPLOSION_DEFAULT,
+	EXPLOSION_DEFAULT, SLIME_PAINT,
 }

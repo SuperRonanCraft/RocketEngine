@@ -124,11 +124,15 @@ switch (shur) {
 		map[? SHURIKEN_MAP.NAME] = "Experimental entity";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Use at your own risk";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SLIME;
-		map[? SHURIKEN_MAP.COOLDOWN] = 28;
+		map[? SHURIKEN_MAP.COOLDOWN] = 22;
 		map[? SHURIKEN_MAP.SPEED] = 25;
 		map[? SHURIKEN_MAP.CLIP] = 3;
 		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.KBAMT] = 0;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 40;
+		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Slime_Player;
+		map[? SHURIKEN_MAP.ROTATE] = false;
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SLIME_SWORD;
 		break;
 		
 	case SHURIKEN.METAL:
