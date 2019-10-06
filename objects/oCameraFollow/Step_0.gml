@@ -7,4 +7,3 @@ with (follow) {
 	other.xTo = x;
 	other.yTo = y;
 }
-

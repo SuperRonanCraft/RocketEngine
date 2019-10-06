@@ -5,7 +5,8 @@
     "name": "d093605e-4be1-44f9-ac45-6c7eb4302f0a",
     "children": [
         "a884c73d-c22c-4659-baec-9bacf82b034a",
-        "ff5453fc-7706-4518-8922-7e18f1f2fe48"
+        "ff5453fc-7706-4518-8922-7e18f1f2fe48",
+        "183a6beb-9aff-4a3f-b044-5bbfc10150aa"
     ],
     "filterType": "GMObject",
     "folderName": "Cameras",

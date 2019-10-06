@@ -2,9 +2,9 @@
 
 //PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
 if (physics_debug) {
-	if (room != r1v1Stage1) {
+	if (room != devRoom) {
 		SlideTransition(TRANS_MODE.OFF);
-		room_goto(r1v1Stage1);
+		room_goto(devRoom);
 	} else {
 		with (pGMM) {
 			instance_destroy();

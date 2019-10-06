@@ -767,6 +767,14 @@
             }
         },
         {
+            "Key": "183a6beb-9aff-4a3f-b044-5bbfc10150aa",
+            "Value": {
+                "id": "c16c88ba-81c9-4c82-af65-391bf6b03710",
+                "resourcePath": "objects\\oCameraExpandable\\oCameraExpandable.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "184e19c9-d257-47e9-bc6a-1ada34ba66be",
             "Value": {
                 "id": "e64dfc62-68da-4eb1-aea0-5ca4f0247079",
