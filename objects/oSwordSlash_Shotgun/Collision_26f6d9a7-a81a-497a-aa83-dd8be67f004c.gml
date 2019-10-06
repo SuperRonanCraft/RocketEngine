@@ -14,10 +14,10 @@ if (!other.deactivate && other.owner != owner && timer > 0){ //Is not your rocke
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SPARKLE], 5);
 		other.trueTimer = 4;
 		
-		timer = 0;
 		
 	}
 	timer += 20 * owner.time_dialation;
+	owner.hsp_move += (-owner.facing * 20);
 	var slash = instance_create_depth(other.x,other.y,depth,oUltimateSlashEffect);
 	scPlaySound(SOUND.EFFECT_REFLECT);
 	slash.owner = id;
