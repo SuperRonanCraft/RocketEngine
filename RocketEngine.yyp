@@ -3135,14 +3135,6 @@
             }
         },
         {
-            "Key": "6cbe8108-5895-4426-97be-daa9ba3a795d",
-            "Value": {
-                "id": "866c79fd-cd83-44c2-90c9-81a86cf73f20",
-                "resourcePath": "sprites\\sShuriken_Metal_UltSword\\sShuriken_Metal_UltSword.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "6d3cac0e-6125-4a2f-a14e-c505a35a81bc",
             "Value": {
                 "id": "f1b23373-0d58-4ab0-a421-39fba930e570",
@@ -3587,6 +3579,14 @@
             "Value": {
                 "id": "915ba9f1-0412-46d3-8787-4630fe298bb4",
                 "resourcePath": "sprites\/sRocket_Glass\/sRocket_Glass.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7cfe7014-4eec-433e-b9b1-94275d809fdf",
+            "Value": {
+                "id": "aa4523e3-8aba-46ec-aa5c-e20e52c429b5",
+                "resourcePath": "sprites\\sShuriken_Metal_UltSword\\sShuriken_Metal_UltSword.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6475,6 +6475,14 @@
             "Value": {
                 "id": "3e97b057-8dd9-41cf-a6b0-ebde1e3afe13",
                 "resourcePath": "sprites\/sexplosion_Ice\/sexplosion_Ice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e552b320-b246-4454-a0ca-8a0a812992a0",
+            "Value": {
+                "id": "f895f586-9293-4980-9e51-00042437a522",
+                "resourcePath": "sprites\\sShuriken_Metal_SlashWave\\sShuriken_Metal_SlashWave.yy",
                 "resourceType": "GMSprite"
             }
         },

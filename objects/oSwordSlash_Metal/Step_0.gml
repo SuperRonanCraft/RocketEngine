@@ -7,17 +7,33 @@ if (owner != noone && sprite_index != sprite_proj){
 }
 trueTimer--;
 
-if (sprite_index == sprite_proj && image_index == image_number - 1){
+
+//Change size
+if(sprite_index == sprite_proj){
+	image_yscale -= 0.1;
+	hsp -= 0.1;
+}
+
+if(image_yscale < 0){
+	image_yscale = 0;	
+}
+
+
+if (image_yscale == 0 || (sprite_index == sprite_proj && image_index == image_number - 1) ){
 	if (ds_list_empty(confirmList)){
 		with (owner)
 			scComboMiss();		
 	}	
 	instance_destroy();	
 } else if (sprite_index != sprite_proj && image_index == image_number - 1) {
+	
+	//Slash
 	sprite_index = sprite_proj;
 	image_index = 0;
 	depth -= 2;
-	hsp += 28 * image_xscale;
+	y = owner.bbox_bottom;
+	image_yscale = 2.5;
+	hsp += 20 * image_xscale;
 }
 
 if (trueTimer == 0){

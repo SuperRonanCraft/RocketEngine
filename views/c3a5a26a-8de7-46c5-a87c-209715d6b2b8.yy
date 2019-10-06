@@ -24,11 +24,12 @@
         "83dabc9d-8e93-42e3-a48c-8dab0ad078f2",
         "34b63518-6818-44d1-b588-f8d37e6ae745",
         "007df83b-15ab-4a48-bc90-90efb9bc6703",
+        "7cfe7014-4eec-433e-b9b1-94275d809fdf",
         "c9203e63-1cb5-4db3-9c1a-86f1a69d7aeb",
         "a58b699c-e803-46ba-b6ea-10e64ce965ab",
-        "6cbe8108-5895-4426-97be-daa9ba3a795d",
         "a0da8afd-812e-47d4-ae84-442fd8e9853b",
-        "9c632427-0f3c-48a1-8137-dc285c1e43ae"
+        "9c632427-0f3c-48a1-8137-dc285c1e43ae",
+        "e552b320-b246-4454-a0ca-8a0a812992a0"
     ],
     "filterType": "GMSprite",
     "folderName": "Shuriken",
