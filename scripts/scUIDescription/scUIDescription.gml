@@ -20,7 +20,7 @@ var c = color_element
 if (!isDesc)
 	yy += 25;
 else {
-	scale = 1;
+	scale = scale_description_special;
 	xx = start_x_default;
 }
 scDrawText(xx, yy, string_val, c, scale, noone, noone, centered ? fa_middle : fa_right);

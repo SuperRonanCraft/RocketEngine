@@ -102,6 +102,7 @@ scale_main_hovering = 1.2;
 //scale_comment = 0.45;
 scale_element = 0.6;
 scale_description = 0.45;
+scale_description_special = 0.7; //Scale of a desc for character select
 scale_option = noone; //An array of scales
 scale_change = 0.05;
 

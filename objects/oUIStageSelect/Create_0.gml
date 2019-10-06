@@ -1,5 +1,8 @@
 /// @description UI for stage select
 
+//Allow Tips
+global.play = false;
+
 //Setup Camera
 cam = view_camera[0];
 view_w = camera_get_view_width(cam);

@@ -15,7 +15,7 @@ if (not_enabled) //Notifications
 		}
 	}
 
-if (global.play) exit; //Disabled, just exit
+if (global.play && alpha <= 0) exit; //Disabled, just exit
 else if (tip_delay_current > 0) { //Count down the delay, exit out
 	tip_delay_current--;
 	exit;

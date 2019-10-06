@@ -1,10 +1,12 @@
 /// @description UI for stage select
 
 xx = RES_W / 2;
-yy = RES_H / 4;
+yy = RES_H / 6;
 
 //Setup ui
 event_inherited();
+
+scale_description_special = 0.7;
 
 var ai_mode = 0;
 switch (global.gamemode) {

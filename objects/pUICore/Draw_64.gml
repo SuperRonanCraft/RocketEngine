@@ -25,7 +25,7 @@ if (workingon != page) { //New page, lets set it up
 			var offset = 0;
 			if (ds_grid[# 1, i] == menu_element_type.script_runner) //Check if this has a text option
 				if (ds_grid[# 3, index] != 0) //Text option
-					offset = string_width(ds_grid[# 3, index]) / 4;
+					offset = (string_width(ds_grid[# 3, index]) * scale_description) / 4;
 			var bffr = (x_buffer * 4) + offset
 			switch (arr[1]) {
 				case menu_centered.left: start_x[i] -= bffr; break;
@@ -79,7 +79,7 @@ for (var i = 0; i < ds_height; i++) {
 	scDrawText(centered ? ltx : ltx + xo, lty, is_array(text) ? text[0] : text, c, scale, noone, noone, centered ? fa_middle : fa_right);
 	
 	//DESCRIPTIONS
-	ltx = start_x[i];
+	ltx = start_x[i] - (!centered ? x_buffer : 0);
 	switch (ds_grid[# 1, i]) {
 		case menu_element_type.script_runner:
 		case menu_element_type.goto_room:
