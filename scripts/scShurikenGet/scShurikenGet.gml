@@ -118,6 +118,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DAMAGE] = 1;
 		map[? SHURIKEN_MAP.ROTATE] = false;
 		map[? SHURIKEN_MAP.SPAWN_SCRIPT] = scShuriken_Shotgun_Spawn;
+		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SHOTGUN_SWORD;
 		break;
 		
     case SHURIKEN.SLIME:

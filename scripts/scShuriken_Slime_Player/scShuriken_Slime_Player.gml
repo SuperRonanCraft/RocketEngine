@@ -10,8 +10,8 @@ if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this playe
 
 			if (isPlayer) {
 				//Add buff
-				image_xscale -= 0.5;
-				image_yscale -= 0.5;
+				image_xscale = 0.5;
+				image_yscale = 0.5;
 				
 				deactivate = true;
 				stuckTo = other.id;

@@ -2687,6 +2687,14 @@
             }
         },
         {
+            "Key": "5bf75473-28a8-442c-82ba-5849d0c4695b",
+            "Value": {
+                "id": "8dd2cb3a-4c0e-49fe-9d61-389e9c1483a6",
+                "resourcePath": "scripts\\scUltimateSwordShotgun\\scUltimateSwordShotgun.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5c030f2b-85fd-4585-8bfc-cc6d4c546281",
             "Value": {
                 "id": "2d9de921-b0d4-4b1e-9c4b-c2e2e8ce0d73",
@@ -3804,6 +3812,14 @@
                 "id": "0f12a402-80ec-4f00-946d-fb602890f937",
                 "resourcePath": "rooms\\rRumbleStage3\\rRumbleStage3.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "853c5561-09e1-4579-9374-333f6b175f4e",
+            "Value": {
+                "id": "49414875-6517-4feb-9e0b-25c03d1f4b5c",
+                "resourcePath": "objects\\oSwordSlash_Shotgun\\oSwordSlash_Shotgun.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5943,6 +5959,14 @@
             }
         },
         {
+            "Key": "d136a7de-bf45-4f6a-b5f0-bde5feee9bee",
+            "Value": {
+                "id": "226a0edc-eb6b-4418-8487-231fbff4a17f",
+                "resourcePath": "sprites\\sShuriken_Shotgun_Ult\\sShuriken_Shotgun_Ult.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d1862692-361d-4fe7-b160-4928cb06954e",
             "Value": {
                 "id": "aa57aa84-b251-4338-9060-b61996040762",
@@ -7337,6 +7361,7 @@
         "78ca66db-712a-4f3d-9ec4-6331bdfba89a",
         "d9d7b54e-3d7e-43bf-b541-25364381c5b0",
         "6e53f625-431f-494a-9fdd-d9a9a54cd8c6",
+        "5bf75473-28a8-442c-82ba-5849d0c4695b",
         "12847d2e-0080-461f-9300-d0c758c61916",
         "881165b1-78c6-461c-8ec6-9855ec2f873a",
         "dee82466-dbf1-4b22-8a41-1cbe44e69a7f",

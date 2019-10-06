@@ -221,6 +221,12 @@ switch (type) {
 		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordMetal;
 		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 		break;
+		
+	case ULTIMATE.SHOTGUN_SWORD:
+		ds_map[? ULTIMATE_MAP.NAME] = "A succesive strike.";
+		ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSwordShotgun;
+		ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
+		break;
 }
 
 enum ULTIMATE {
@@ -231,7 +237,7 @@ enum ULTIMATE {
 	
 	//SWORD ULTS
 	DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,PORTAL_SWORD,SAND_SWORD,
-	BRICK_SWORD, SLIME_SWORD, METAL_SWORD,
+	BRICK_SWORD, SLIME_SWORD, METAL_SWORD,SHOTGUN_SWORD,
 	
 	
 	NONE,
