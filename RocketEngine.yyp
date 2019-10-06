@@ -5127,6 +5127,14 @@
             }
         },
         {
+            "Key": "b178df12-fe3d-4686-ac82-010febe17854",
+            "Value": {
+                "id": "ef05e152-e1d5-4cd0-b3bc-79533c81f3f6",
+                "resourcePath": "objects\\oDevModeHandler\\oDevModeHandler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b1a93f08-c4b6-4dc0-806a-ae182b14c293",
             "Value": {
                 "id": "a89e1472-8c6e-406d-ac8e-20978408d192",

@@ -1,7 +1,7 @@
 /// @desc Pause game when out of focus
 
+//PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
 if (physics_debug) {
-	//PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
 	if (room != r1v1Stage1) {
 		SlideTransition(TRANS_MODE.OFF);
 		room_goto(r1v1Stage1);
@@ -14,10 +14,12 @@ if (physics_debug) {
 		}
 		physics_debug = false;
 		global.play = true;
+		instance_create_depth(0, 0, depth - 1, oDevModeHandler);
 	}
 }
 
-for (var i = 0; i < ds_list_size(controllers); i++) //Controller Pause (Select)
+//Controller Pause (Select)
+for (var i = 0; i < ds_list_size(controllers); i++)
 	if (gamepad_button_check_pressed(controllers[| i], gp_start))
 		event_user(0);
 
