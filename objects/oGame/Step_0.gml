@@ -2,9 +2,19 @@
 
 if (physics_debug) {
 	//PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
-	SlideTransition(TRANS_MODE.OFF);
-	room_goto(r1v1Stage1);
-	physics_debug = false;
+	if (room != r1v1Stage1) {
+		SlideTransition(TRANS_MODE.OFF);
+		room_goto(r1v1Stage1);
+	} else {
+		with (pGMM) {
+			instance_destroy();
+			//wait_timer = 0;
+			//wait_timer_current = 0;
+			//wait_timer_current_abs = 1;
+		}
+		physics_debug = false;
+		global.play = true;
+	}
 }
 
 for (var i = 0; i < ds_list_size(controllers); i++) //Controller Pause (Select)

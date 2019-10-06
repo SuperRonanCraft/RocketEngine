@@ -21,7 +21,7 @@ else if (vsp < 0)
 
 switch (damage_type) {
 	case DAMAGETYPE.HEALING:
-		vsp = lerp(vsp, -1, 0.1);
+		vsp = lerp(vsp, -0.25, 0.75);
 		break;
 	case DAMAGETYPE.CRITICAL:
 		vsp += grv;
