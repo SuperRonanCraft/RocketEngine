@@ -108,3 +108,6 @@ scPalleteSwapStart(shPaletteSwap);
 global.setting_controller_error = true;
 global.gamepad_error = false; //Do we have a gamepad error?
 controllers = ds_list_create();
+
+//PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
+physics_debug = true;

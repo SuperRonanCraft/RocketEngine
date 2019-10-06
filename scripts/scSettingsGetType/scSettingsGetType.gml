@@ -97,6 +97,7 @@ switch (type) {
 				break;
 			default: val = true;
 		}
+		break;
 	default: show_debug_message("UNKNOWN SETTING " + string(type)); break;
 }
 

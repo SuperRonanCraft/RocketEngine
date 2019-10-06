@@ -10,7 +10,7 @@ switch (type) {
 			case WEAPON_MODIFIER.ICE: weapon = ROCKET.ICE; break;
 			case WEAPON_MODIFIER.FIRE: weapon = ROCKET.FIRE; break;
 			case WEAPON_MODIFIER.PORTAL: weapon = ROCKET.TELEPORT; break;
-			case WEAPON_MODIFIER.MAGNET: weapon = ROCKET.MAGNET; break;
+			//case WEAPON_MODIFIER.MAGNET: weapon = ROCKET.MAGNET; break;
 			case WEAPON_MODIFIER.SHOTGUN: weapon = ROCKET.SHOTGUN; break;
 			case WEAPON_MODIFIER.SLIME: weapon = ROCKET.SLIME; break;
 			case WEAPON_MODIFIER.BRICK: weapon = ROCKET.BRICK; break;
@@ -26,7 +26,7 @@ switch (type) {
 			case WEAPON_MODIFIER.ICE: weapon = SHURIKEN.ICE; break;
 			case WEAPON_MODIFIER.FIRE: weapon = SHURIKEN.FIRE; break;
 			case WEAPON_MODIFIER.PORTAL: weapon = SHURIKEN.PORTAL; break;
-			case WEAPON_MODIFIER.MAGNET: weapon = SHURIKEN.MAGNET; break;
+			//case WEAPON_MODIFIER.MAGNET: weapon = SHURIKEN.MAGNET; break;
 			case WEAPON_MODIFIER.SLIME: weapon = SHURIKEN.SLIME; break;
 			case WEAPON_MODIFIER.BRICK: weapon = SHURIKEN.BRICK; break;
 			case WEAPON_MODIFIER.SAND: weapon = SHURIKEN.SAND; break;
@@ -42,7 +42,7 @@ switch (type) {
 return weapon;
 
 enum WEAPON_MODIFIER {
-	DEFAULT, ICE, FIRE, PORTAL, MAGNET,
+	DEFAULT, ICE, FIRE, PORTAL, //MAGNET,
 	SHOTGUN, SLIME, BRICK, SAND, METAL,
 	ELECTRIC,
 	//keep last

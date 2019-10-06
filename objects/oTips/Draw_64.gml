@@ -1,8 +1,8 @@
 /// @desc draw the tip
 
 if (not_enabled) { //Notifications
-	scDrawText(RES_W - RES_W / 4, y, not_text_title, c_yellow, scale, noone, not_alpha, noone, fa_top); //Text
-	scDrawText(RES_W - RES_W / 4, y + 25, not_text[| 0], c_gray, scale, noone, not_alpha, noone, fa_top); //Text
+	scDrawText(RES_W - RES_W / 4, y - RES_H / 10, not_text_title, c_yellow, scale, noone, not_alpha, noone, fa_top); //Text
+	scDrawText(RES_W - RES_W / 4, y + 25 - RES_H / 10, not_text[| 0], c_gray, scale, noone, not_alpha, noone, fa_top); //Text
 }
 
 if ((global.play && alpha <= 0) || tip_delay_current > 0) exit; //Disabled, just exit

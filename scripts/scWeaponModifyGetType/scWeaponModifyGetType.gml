@@ -29,11 +29,11 @@ switch (modifier) {
 		map[? WEAPON_MODIFIER_MAP.NAME] = "PORTAL"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Into another dimension";
 		break;
-	case WEAPON_MODIFIER.MAGNET: 
+	/*case WEAPON_MODIFIER.MAGNET: 
 		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_magnet;
 		map[? WEAPON_MODIFIER_MAP.NAME] = "MAGNET"
 		map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Don't bring your watch";
-		break;
+		break;*/
 	case WEAPON_MODIFIER.SHOTGUN: 
 		map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_shotgun;
 		map[? WEAPON_MODIFIER_MAP.NAME] = "SHOTGUN"

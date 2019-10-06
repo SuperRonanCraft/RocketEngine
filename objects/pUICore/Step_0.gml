@@ -71,9 +71,12 @@ for (var i = 0; i < ds_height; i++) {
 			break;
 		case menu_element_type.slider:
 			var val = -1;
-			if (hinput != 0 && menu_option[page] == i) { //Must be pressing btn to move slider
-				if (!key_up && !key_down && hinput == 0 && !key_enter && gamepad_is_connected(button_gamepad))
+			if (menu_option[page] == i && !key_up && !key_down && hinput == 0 && !key_enter) {
+				hinput = keyboard_check(button_right) - keyboard_check(button_left);
+				if (hinput == 0 && gamepad_is_connected(button_gamepad))
 					hinput = gamepad_button_check(button_gamepad, gp_padr) - gamepad_button_check(button_gamepad, gp_padl);
+			}
+			if (hinput != 0 && menu_option[page] == i) { //Must be pressing btn to move slider
 				val = ds_grid[# 4, i] + hinput * 0.01;
 			} else if (mouse_check_button(mb_left) || mouse_check_button_released(mb_left)) {
 				var xleft = start_x[i] + (x_buffer * 2);

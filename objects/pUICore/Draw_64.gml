@@ -227,6 +227,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 		case menu_element_type.set_gamepad:
 			var list = oGame.controllers;
 			var c = c_red;
+			var c_desc = color_element_special;
 			var text = "No Controller connected";
 			var gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]);
 			var scale = scale_element;
@@ -234,15 +235,36 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				if (ds_list_find_index(list, gamepad) != -1) { //Controller connected?
 					text = "Controller " + string(gamepad) + " Connected";
 					c = c_lime;
+					c_desc = c_ltgray;
 				} else if (gamepad != noone) //Controller not connected
 					text = "Controller " + string(gamepad) + " not Connected";
-				else
-					text = "Controller not Connected";
+				else {
+					var pads = [SETTINGS.PLAYER_1_GAMEPAD, SETTINGS.PLAYER_2_GAMEPAD, 
+						SETTINGS.PLAYER_3_GAMEPAD, SETTINGS.PLAYER_4_GAMEPAD];
+					var controls = oGame.controllers;
+					var available = noone;
+					for (var a = 0; a < ds_list_size(controls); a++) {
+						var found = false;
+						for (var b = 0; b < array_length_1d(pads); b++)
+							if (controls[| a] == scSettingsGetType(SETTINGS_TYPE.VALUE, pads[b])) { //Is an element in controllers on the gamepad list?
+								found = true; break; } //Break out, we dont have this key available
+						if (!found)
+							if (available == noone)
+								available[0] = controls[| a];
+					}
+					if (available == noone)
+						text = "No extra controller connected!";
+					else {
+						text = "Controller available!";
+						c_desc = c_green;
+					}
+				}
 			} else {
 				scDrawText(rtx, rty, text, color_element, scale_element, noone, noone, fa_left); //Info
 				break;
 			}
-			scDrawText(rtx, rty - (y_buffer / 2), text, color_element_special, 0.4, noone, noone, fa_left); //Info
+			//Controller Description
+			scDrawText(rtx, rty - (y_buffer / 2), text, c_desc, 0.4, noone, noone, fa_left); //Info
 			//Draw Left
 			var len = x_buffer * 4, c_left = color_element, c_right = c_left;
 			rtx += (len / 2) + x_buffer;
