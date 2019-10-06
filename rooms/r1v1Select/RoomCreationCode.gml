@@ -22,3 +22,9 @@ global.stages[3] = ds_map_create();
 ds_map_add(global.stages[val], "x", RES_W * 3);
 ds_map_add(global.stages[val], "y", 0);
 ds_map_add(global.stages[val], "stage", r1v1Stage4);
+
+val = 4;
+global.stages[4] = ds_map_create();
+ds_map_add(global.stages[val], "x", RES_W * 4);
+ds_map_add(global.stages[val], "y", 0);
+ds_map_add(global.stages[val], "stage", r1v1Stage5);

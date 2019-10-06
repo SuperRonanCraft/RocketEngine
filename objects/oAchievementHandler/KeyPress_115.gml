@@ -9,3 +9,5 @@ if (array_length_1d(types) > 0) {
 	for (var i = 0; i < array_length_1d(types); i++)
 		ds_list_add(achievement_display_list, types[i]);
 }
+
+global.debug = true;

@@ -4,7 +4,8 @@
 ///@arg y1
 ///@arg x2
 ///@arg y2
-///@arg alpha
+///@arg alpha-sides
+///@arg alpha-mid
 
 var sprite = argument[0];
 var size = sprite_get_width(sprite) / 3;
@@ -17,6 +18,7 @@ var h = y2 - y1;
 var c = w div size; //Columns
 var r = h div size; //Rows
 var alpha = argument[5];
+var alpha_mid = argument[6];
 
 draw_set_alpha(alpha);
 //CORNERS
@@ -45,6 +47,7 @@ for (var i = 1; i < c; i++) {
 }
 
 //MIDDLE
+draw_set_alpha(alpha_mid);
 for (var i = 1; i < c; i++)
 	for (var j = 1; j < r; j++)
 		draw_sprite_part(sprite, 0, size, size, size, size, x1 + (i * size), y1 + (j *size));

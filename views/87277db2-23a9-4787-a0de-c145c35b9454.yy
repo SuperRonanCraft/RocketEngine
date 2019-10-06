@@ -8,7 +8,8 @@
         "acde6c8f-bd69-4604-bc49-ebc6dd96add7",
         "5f3a1afc-29ce-4aa8-a0c1-a3b3e13d4658",
         "56d8456b-7284-437a-be82-955f6209b9dc",
-        "50f3dc73-b5bd-477f-87f9-b3e6637162f1"
+        "50f3dc73-b5bd-477f-87f9-b3e6637162f1",
+        "fa977bc1-8e5d-48a8-9690-8151ea971257"
     ],
     "filterType": "GMRoom",
     "folderName": "1v1",

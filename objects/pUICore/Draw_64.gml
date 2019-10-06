@@ -19,7 +19,7 @@ if (workingon != page) { //New page, lets set it up
 	var index = 0, skips = 1;
 	for (var i = index; i < ds_height; i++) {
 		var yoffset = -(((ds_height - 1) / 2) * y_buffer) + (index * y_buffer), yy = 0;
-		start_x[i] = centered ? start_x_default : start_x_default - x_buffer;
+		start_x[i] = start_x_default;//centered ? start_x_default : start_x_default - x_buffer;
 		if (is_array(ds_grid[# 0, i])) {
 			var arr = ds_grid[# 0, i];
 			var offset = 0;
@@ -60,6 +60,8 @@ if (workingon != page) { //New page, lets set it up
 
 scUIUnfold(); //Unfolding event
 
+//scDrawNineSplice(sUIBox, start_x[0] - RES_W / 4, start_y[0] - y_buffer, start_x[0] + RES_W / 4, start_y[ds_height - 1] + y_buffer, 0.5, 0.1);
+
 // Draw left
 if (menu_titles != noone) { //Draw Titles
 	for (var i = 0; i < array_length_1d(menu_titles); i++) {
@@ -70,7 +72,7 @@ if (menu_titles != noone) { //Draw Titles
 }
 for (var i = 0; i < ds_height; i++) {
 	//Color, Scale, Y-pos, X-offset
-	var c = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i];
+	var c = color_main, scale = scale_option[i], lty = start_y[i], xo = 0, text = ds_grid[# 0, i], ltx = start_x[i] - (!centered ? x_buffer : 0);
 	if (unfolding) lty += (RES_H / 2 * (1 - unfold[i]));
 	if (i == menu_option[page]) {ltx += scMovementWave(-4, 4, 2); c = color_main_hovering; xo = -(x_buffer / 2);}
 	else if (ds_grid[# 1, i] == menu_element_type.stats) {c = color_element_hover;}
@@ -98,7 +100,7 @@ for (var i = 0; i < ds_height; i++) {
 
 // Draw center line
 if (!centered) 
-	draw_line_width_color(start_x_default, start_y[0] - y_buffer, start_x_default, start_y[ds_height - 1] + y_buffer, 3, color_seperator, color_seperator);
+	draw_line_width_color(start_x_default, start_y[0] - y_buffer + 8, start_x_default, start_y[ds_height - 1] + y_buffer, 3, color_seperator, color_seperator);
 
 // Draw right
 var rtx, rty; //right-Xpos, right-Ypos

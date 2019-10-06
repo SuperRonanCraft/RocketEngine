@@ -1,9 +1,5 @@
 /// @desc 
 
-with (oGame) //Toggle Pause
-	event_user(0);
-global.gamepad_error = true;
-
 // Inherit the parent event
 event_inherited();
 

@@ -105,5 +105,6 @@ draw_set_font(fPixel);
 scPalleteSwapStart(shPaletteSwap);
 
 //Controller Support
+global.setting_controller_error = true;
 global.gamepad_error = false; //Do we have a gamepad error?
 controllers = ds_list_create();

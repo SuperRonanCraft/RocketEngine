@@ -30,6 +30,7 @@ switch (ai_mode) {
 
 selected = false;
 player = oPlayer;
+char_dir = 1;
 char_last = 0;
 char_palette = 0;
 char_scale_min = 1.2;
@@ -41,8 +42,10 @@ char_scale_cur_max = char_scale_cur_max_org;
 char_scale_cur = char_scale_cur_max;
 char_x_offset = 100;
 char_x = 0;
-//char_x_cur = 0;
 char_img = 0;
+//Animate/scale to player
+char_animate = false;
+char_animate_step = false; //first event of animation
 
 //Pages of the menu
 menu_pages = [ds_menu_main];

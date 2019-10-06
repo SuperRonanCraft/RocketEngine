@@ -17,8 +17,12 @@ if (all_selected || force) {
 		}
 	with (pGMM)
 		timer_enabled = true;
-	with (object_index)
-		instance_destroy();
+	if (force)
+		with (object_index)
+			instance_destroy();
+	else
+		with (object_index)
+			char_animate = true;
 	with (oPlayer)
 		image_alpha = 1;
 }

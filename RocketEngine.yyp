@@ -3799,6 +3799,14 @@
             }
         },
         {
+            "Key": "84ffb9ee-afe1-4d61-aa00-2ddd6c55acd6",
+            "Value": {
+                "id": "0f12a402-80ec-4f00-946d-fb602890f937",
+                "resourcePath": "rooms\\rRumbleStage3\\rRumbleStage3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "85ad2318-3a25-46bd-abea-4d6d525b9211",
             "Value": {
                 "id": "c61fbea3-1049-43fe-b654-61d4c7c39ff4",
@@ -7004,6 +7012,14 @@
                 "id": "d6c3af78-ac1e-449c-8746-b4fd60d6fa59",
                 "resourcePath": "sprites\/sRocket_Peace\/sRocket_Peace.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fa977bc1-8e5d-48a8-9690-8151ea971257",
+            "Value": {
+                "id": "c502568b-f7f1-4b32-b3c4-ef51a18007ae",
+                "resourcePath": "rooms\\r1v1Stage5\\r1v1Stage5.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

@@ -3,7 +3,7 @@ var amt = instance_number(oPlayer);
 for (var i = 0; i < amt; i++) {
 	with (instance_create_depth(0, 0, depth - 1, oUICharacterSelect)) {
 		switch (amt) {
-			case 2:
+			case 2: //2 Players
 				switch (i) {
 					case 0:
 						start_x_default /= 2;
@@ -18,7 +18,9 @@ for (var i = 0; i < amt; i++) {
 				button_up = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.JUMP]);
 				button_right = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.RIGHT]);
 				button_gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.GAMEPAD]);
-			default:
+				if (i mod 2 == 1)
+					char_dir *= -1;
+			default: //1 Player
 				break;
 		}
 	}
