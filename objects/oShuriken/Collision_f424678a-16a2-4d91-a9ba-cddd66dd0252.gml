@@ -6,9 +6,11 @@
 var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 
 var isPlayer = other.object_index == oPlayer;
+var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
+var _oteam = other.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
 
-if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone){
-	if (!deactivate && (isPlayer ? owner.team != other.team : true)) //Not destroy and is a player and not same team
+if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
+	if (!deactivate && _team != _oteam) //Activated and is not same team
 		if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this player before
 			ds_list_add(confirmList, other);
 			ds_list_add(hitList, other);

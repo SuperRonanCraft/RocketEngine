@@ -1,5 +1,6 @@
 /// @desc Initiation
 event_inherited();
+shootable_map[? SHOOTABLE_MAP.SHOW_DAMAGE] = false;
 owner = noone;
 timer = 300 * TIME_SPEED;
 //timer_original = timer;

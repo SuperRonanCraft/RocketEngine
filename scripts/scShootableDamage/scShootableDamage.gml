@@ -53,7 +53,13 @@ with (damaging) {
 	if (isPlayer) { //Do this thing no matter what
 		player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
 		//Damage Numbers
-		if (player_map[? PLAYER_MAP.ALIVE]) //Alive? Show damage indicators
+		if (damager != noone && combo)
+			scComboDamaged(damager);
+		scSpawnParticle(x, bbox_top, irandom_range(4 * power(dmg, 2), 6 * power(dmg, 2)), 20,  spBlood, WORLDPART_TYPE.BLOOD);
+	}
+	var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
+	if (show_dmg) {
+		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE])) //Alive? Show damage indicators
 			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 				value_damage = dmg;
 				damage_type = type;
@@ -61,9 +67,6 @@ with (damaging) {
 				if (damager != noone && combo && damager.object_index == oPlayer)
 					id.combo = damager.combo_map[? COMBO_MAP.STREAK];
 			}
-		if (damager != noone && combo)
-			scComboDamaged(damager);
-		scSpawnParticle(x, bbox_top, irandom_range(4 * power(dmg, 2), 6 * power(dmg, 2)), 20,  spBlood,WORLDPART_TYPE.BLOOD);
 	}
 }
 

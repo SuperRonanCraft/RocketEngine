@@ -4,7 +4,11 @@
 //Add the pShootable to the hitlist
 //Do damage once to the hitlist
 var isPlayer = other.object_index == oPlayer;
-if (!destroy && (isPlayer ? owner.team != other.team : true)) //Not destroy and is a player and not same team
+
+var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
+var _oteam = other.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
+
+if (!destroy && _team != _oteam) //Not destroy and is not same team
 	if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this player before
 		ds_list_add(confirmList, other);
 		ds_list_add(hitList, other);
