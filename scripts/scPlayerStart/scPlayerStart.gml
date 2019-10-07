@@ -13,7 +13,7 @@ map[? PLAYER_MAP.CAN_CONTROL] = true;
 map[? PLAYER_MAP.ALIVE] = true;
 map[? PLAYER_MAP.ENABLED_PICKUP] = true;
 map[? PLAYER_MAP.DESTROY_SCRIPT] = noone;
-map[? PLAYER_MAP.HUD_SHOW] = true;
+map[? PLAYER_MAP.HUD_SHOW] = true; //Weapon cooldowns, ammo/clip etc..
 //ANIMATION
 map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.STANDING;
 map[? PLAYER_MAP.ANIMATION_VAR] = irandom(image_number);

@@ -10,7 +10,7 @@ scPlayerStart();
 scUltimateStart();
 
 //Load Character
-scPlayerCharacterChange(character, load_character_cache);
+scPlayerCharacterChange(scPlayerCharacterGet());
 
 //Load gravity and movement variables
 scGravityStart();

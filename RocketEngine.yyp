@@ -994,7 +994,7 @@
             "Key": "20513aa7-8b82-4929-ba2f-346ad2ca271a",
             "Value": {
                 "id": "c60d4a81-7a9a-48ef-bd75-73210f16085a",
-                "resourcePath": "objects\/oPlayer\/oPlayer.yy",
+                "resourcePath": "objects\\oPlayer\\oPlayer.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3380,6 +3380,14 @@
                 "id": "786d2bd9-b04e-49d1-b3fc-02c4e14a6b7f",
                 "resourcePath": "scripts\/scGravityStart\/scGravityStart.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "73a1ae35-7345-4f83-8454-88d5374ff465",
+            "Value": {
+                "id": "5afa4d19-e9c6-45c7-9a71-70aeb752ccbd",
+                "resourcePath": "views\\73a1ae35-7345-4f83-8454-88d5374ff465.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5788,6 +5796,14 @@
                 "id": "b8882c57-c509-4ed6-b492-bc368f384a8e",
                 "resourcePath": "sprites\/s_achievement_complete\/s_achievement_complete.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c7cf5f84-1844-43c1-9c08-742705dfab24",
+            "Value": {
+                "id": "bdbf43d6-22b3-47e5-9f85-12e21f2559d0",
+                "resourcePath": "objects\\oPlayerBACKUP\\oPlayerBACKUP.yy",
+                "resourceType": "GMObject"
             }
         },
         {

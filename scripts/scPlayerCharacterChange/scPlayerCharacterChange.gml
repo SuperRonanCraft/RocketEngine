@@ -1,35 +1,40 @@
 ///@desc Change a players character
 ///@arg character
+///@arg not-load-cache*
+
+var char = argument[0];
+var load = argument_count > 1 ? (argument[1] != noone ? argument[1] : true) : true;
 
 ds_map_destroy(player_map[? PLAYER_MAP.CHARACTER_INFO]);
-var map = scPlayerCharacterGetInfo(argument0);
+var map = scPlayerCharacterGetInfo(char);
 
 //Load Sprites
 characterSprites = scPlayerCharacterGetSprites(map[? CHARACTER_MAP.TYPE]);
 
-for (var i = 0; i < instance_number(object_index); i++)
-	if (instance_find(object_index, i) == self) {
-		switch (i) {
-			case 0:
-				scSettingsCache(SETTINGS.PLAYER_1_CHARACTER, map[? CHARACTER_MAP.TYPE]);
-				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_PALETTE);
-				break;
-			case 1:
-				scSettingsCache(SETTINGS.PLAYER_2_CHARACTER, map[? CHARACTER_MAP.TYPE]);
-				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_PALETTE);
-				break;
-			case 2:
-				scSettingsCache(SETTINGS.PLAYER_3_CHARACTER, map[? CHARACTER_MAP.TYPE]);
-				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_3_PALETTE);
-				break;
-			case 3:
-				scSettingsCache(SETTINGS.PLAYER_4_CHARACTER, map[? CHARACTER_MAP.TYPE]);
-				map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_4_PALETTE);
-				break;
-			default: show_debug_message("No Player #" + string(i + 2))
+if (load)
+	for (var i = 0; i < instance_number(object_index); i++)
+		if (instance_find(object_index, i) == self) {
+			switch (i) {
+				case 0:
+					scSettingsCache(SETTINGS.PLAYER_1_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+					map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_PALETTE);
+					break;
+				case 1:
+					scSettingsCache(SETTINGS.PLAYER_2_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+					map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_2_PALETTE);
+					break;
+				case 2:
+					scSettingsCache(SETTINGS.PLAYER_3_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+					map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_3_PALETTE);
+					break;
+				case 3:
+					scSettingsCache(SETTINGS.PLAYER_4_CHARACTER, map[? CHARACTER_MAP.TYPE]);
+					map[? CHARACTER_MAP.PALETTE_INDEX] = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_4_PALETTE);
+					break;
+				default: show_debug_message("No Player #" + string(i + 2))
+			}
+			break;
 		}
-		break;
-	}
 
 scWeaponStart();
 
@@ -43,10 +48,13 @@ player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 
 enum CHARACTERS {
 	DEFAULT, SWORD, 
+	ENEMY,
 	//KEEP LAST
 	LENGTH
 }
 
 enum CHARACTER_MAP {
-	NAME, TYPE, WEAPON, HEALTH, PALETTE, PALETTE_INDEX
+	NAME, TYPE, WEAPON, HEALTH, PALETTE, PALETTE_INDEX,
+	//Can this character be selected
+	CAN_PICK
 }
