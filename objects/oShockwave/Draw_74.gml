@@ -32,8 +32,8 @@ if (wave_list_size <= 0) {
 		for (w = 0; w < wave_list_size; w++) {
 			this_wave = list_of_waves[|w];
 			draw_sprite_ext(sprite, subimage,
-							(this_wave[|waveparam.xx] - camera_get_view_x(view_camera[0])) * srf_waves_scale,
-							(this_wave[|waveparam.yy] - camera_get_view_y(view_camera[0])) * srf_waves_scale,
+							(this_wave[|waveparam.xx] - camera_get_view_x(view_camera[view_current])) * srf_waves_scale,
+							(this_wave[|waveparam.yy] - camera_get_view_y(view_camera[view_current])) * srf_waves_scale,
 							this_wave[|waveparam.scale] * srf_waves_scale,
 							this_wave[|waveparam.scale] * srf_waves_scale,
 							0, c_white, this_wave[|waveparam.alpha]);

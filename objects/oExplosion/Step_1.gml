@@ -1,4 +1,4 @@
-/// @desc collision with oWall
+/// @desc collision with oWall & Wave
 
 if (first_step) exit;
 
