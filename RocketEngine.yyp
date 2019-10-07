@@ -1687,6 +1687,14 @@
             }
         },
         {
+            "Key": "3922c59d-94e2-4b58-a5d0-b632e0b9b634",
+            "Value": {
+                "id": "e7ee60f7-2422-4a4d-825f-fa5f46cc6838",
+                "resourcePath": "scripts\\scKeybindsControlsBACKUP\\scKeybindsControlsBACKUP.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3951507e-1fcb-4c28-a9ff-ccdf6b0f09a9",
             "Value": {
                 "id": "5e2392c9-6094-4110-bc4a-423f77a54fdc",
@@ -7337,6 +7345,7 @@
     ],
     "script_order": [
         "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
+        "3922c59d-94e2-4b58-a5d0-b632e0b9b634",
         "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
         "308c532b-572e-444a-b419-fb1c6c459fc6",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",

@@ -2,7 +2,6 @@
 
 //Load up health
 event_inherited();
-shootable_map[? SHOOTABLE_MAP.TEAM] = team;
 
 //Load basic player variables
 scPlayerStart();

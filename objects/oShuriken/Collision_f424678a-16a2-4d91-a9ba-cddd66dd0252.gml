@@ -3,6 +3,8 @@
 //If the shuriken is not from the same shooter
 //Add the pShootable to the hitlist
 //Do damage once to the hitlist
+if (other.id == owner.id) exit; //Self damage, dont.. do that..
+
 var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 
 var isPlayer = other.object_index == oPlayer || (object_get_parent(other.object_index) != -100 ? object_get_parent(other.object_index) == oPlayer : false);
