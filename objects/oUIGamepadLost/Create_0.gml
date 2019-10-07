@@ -9,10 +9,10 @@ ds_menu_main = scUICreateMenuPage(
 );
 
 ds_menu_controllers = scUICreateMenuPage(
-	["PLAYER 1",		menu_element_type.set_gamepad,	menu_page.info, SETTINGS.PLAYER_1_GAMEPAD, "Setup controllers for players"],
-	["PLAYER 2",		menu_element_type.set_gamepad,	menu_page.info, SETTINGS.PLAYER_2_GAMEPAD, "Setup controllers for players"],
-	["PLAYER 3",		menu_element_type.set_gamepad,	menu_page.info, SETTINGS.PLAYER_3_GAMEPAD, "Setup controllers for players"],
-	["PLAYER 4",		menu_element_type.set_gamepad,	menu_page.info, SETTINGS.PLAYER_4_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 1",		menu_element_type.set_gamepad, SETTINGS.PLAYER_1_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 2",		menu_element_type.set_gamepad, SETTINGS.PLAYER_2_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 3",		menu_element_type.set_gamepad, SETTINGS.PLAYER_3_GAMEPAD, "Setup controllers for players"],
+	["PLAYER 4",		menu_element_type.set_gamepad, SETTINGS.PLAYER_4_GAMEPAD, "Setup controllers for players"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );
 		

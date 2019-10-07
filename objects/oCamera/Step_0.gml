@@ -1,15 +1,5 @@
 /// @desc Update Camera
 
-//Update Destination
-/*if (instance_exists(follow)){
-	xTo = follow.x;
-	yTo = follow.y;
-	if ((follow).object_index == pDead) {
-		x = xTo;
-		y = yTo;
-	}
-}*/
-
 //Update object
 x += (xTo - x) / cam_speed;
 y += (yTo - y) / cam_speed;

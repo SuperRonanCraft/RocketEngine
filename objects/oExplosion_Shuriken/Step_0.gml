@@ -15,7 +15,7 @@ if (doing_damage)
 			//if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
 			///	dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			if (isPlayer) {
-				scUltimateAddCharge(owner,DAMAGETYPE.DIRECT,1);
+				//scUltimateAddCharge(owner,DAMAGETYPE.DIRECT,1);
 				//Add buff or add knockback here
 				p.vsp_move += (y - p.y) * .5;
 				p.hsp_move += (x - p.x) * .5;
