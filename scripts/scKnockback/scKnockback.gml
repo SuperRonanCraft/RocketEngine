@@ -1,7 +1,9 @@
 //Checks every step
 
-if (knockback_time == 0) exit; //No knockback, exit
-	knockback_time--;
+var g_map = gravity_map;
+if (!g_map[? GRAVITY_MAP.KNOCKBACK_ENABLED] ||  //Diabled, exit
+	(g_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 && g_map[? GRAVITY_MAP.VSP_KNOCKBACK] == 0)) //No knockback, exit
+		exit;
 
 //Particles
 part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? PARTICLES.KBSMOKE], 1);
@@ -9,26 +11,24 @@ part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? P
 //animate correctly
 var map = player_map;
 if (map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.KNOCKBACK && map[? PLAYER_MAP.ALIVE])
-	if (sign(facing) == sign(hsp_knockback))
+	if (sign(facing) == sign(g_map[? GRAVITY_MAP.HSP_KNOCKBACK]))
 		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.KNOCKBACK2;
 	else
 		map[? PLAYER_MAP.ANIMATION_STATE] = ANIMATIONSTATE.KNOCKBACK;	
 
 //knockback time was just set to 0, do the following
-if (hsp_knockback == 0 || standing || knockback_time == 0) {
-	vsp_move += vsp_knockback; //Leave the knockback without instant momentum
-	hsp_knockback = 0;
-	vsp_knockback = 0;
-	knockback_time = 0;
+if (g_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 || g_map[? GRAVITY_MAP.STANDING]) {
+	g_map[? GRAVITY_MAP.VSP_MOVE] += g_map[? GRAVITY_MAP.VSP_KNOCKBACK]; //Leave the knockback without instant momentum
+	g_map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
+	g_map[? GRAVITY_MAP.VSP_KNOCKBACK] = 0;
 }
 
-if (hsp_knockback == 0 && vsp_knockback == 0 && map[? PLAYER_MAP.ALIVE]){
+if (g_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 && g_map[? GRAVITY_MAP.VSP_KNOCKBACK] == 0 && map[? PLAYER_MAP.ALIVE]){
 	map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
 	map[? PLAYER_MAP.CAN_CONTROL] = true;
 	map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
-	knockback_time = 0;
 }
 
 //hsp_knockback -= 0.2 * sign(hsp_knockback);
-if (abs(hsp_knockback) < 3)
-	hsp_knockback = 0;
+if (abs(g_map[? GRAVITY_MAP.HSP_KNOCKBACK]) < 3)
+	g_map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;

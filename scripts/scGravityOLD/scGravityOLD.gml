@@ -3,7 +3,7 @@
 if (!standing)
 	vsp_move = clamp(vsp_move + ((grv * time_dialation) * grv_dir), -32, 32);
 hsp_move = clamp(hsp_move, -32, 32);
-standing = scCollisionO();
+standing = scCollisionOOLD();
 x += hsp;
 y += vsp;
 hsp_carry = 0;

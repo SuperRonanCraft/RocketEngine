@@ -11,14 +11,14 @@ var clock = dsBuff[? BUFF_MAP.CLOCK];
 //When the buff firt starts, apply the slow
 if (clock == 0) {	
 	//Create a new item in the DS Map so that it isn't saved to the object
-	dsBuff[? "slow"] = owner.walksp / 2;
-	owner.move_adj -= dsBuff[? "slow"];
+	dsBuff[? "slow"] = owner.gravity_map[? GRAVITY_MAP.WALK_SPEED] / 2;
+	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "slow"];
 	//This way it does not get changed/affected in any other way
 }
 //If the internal clock reaches the time in seconds, expire
 if (scBuffFind(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Return to normal speed
-	owner.move_adj += dsBuff[? "slow"];	
+	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += dsBuff[? "slow"];	
 	//Remove Chilled
 	scBuffRemove(owner, dsBuff);
 } else {

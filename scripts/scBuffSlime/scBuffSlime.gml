@@ -8,14 +8,16 @@ var dsBuff = argument1;
 //define the internal clock
 var clock = dsBuff[? BUFF_MAP.CLOCK];
 
-if (clock = 0){	
-	dsBuff[? "jump"] = owner.jump_height * 0.25;
-	owner.jump_adj -= dsBuff[? "jump"];
+if (clock = 0) {
+	var g_map = owner.gravity_map;
+	dsBuff[? "jump"] = g_map[? GRAVITY_MAP.JUMP_HEIGHT] * 0.25;
+	g_map[? GRAVITY_MAP.JUMP_MOD] -= dsBuff[? "jump"];
 }
 
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
-	owner.jump_adj += dsBuff[? "jump"];	
+	var g_map = owner.gravity_map;
+	g_map[? GRAVITY_MAP.JUMP_MOD] += dsBuff[? "jump"];	
 	//Remove Slime
 	scBuffRemove(owner, dsBuff);
 } else {

@@ -6,6 +6,7 @@
 //	hsp_knockback = hsp;
 //} else {
 	part_particles_create(global.ParticleSystem1, x, y, oParticleHandler.ds_part[? PARTICLES.KBHIT], 1);
-	hsp_knockback *= -1.0;
-	hsp_move = hsp;
+	var _map = gravity_map;
+	_map[? GRAVITY_MAP.HSP_KNOCKBACK] *= -1.0;
+	_map[? GRAVITY_MAP.HSP_MOVE] = _map[? GRAVITY_MAP.HSP];
 //}

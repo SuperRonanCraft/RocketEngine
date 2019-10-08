@@ -21,7 +21,7 @@ if (!destroy && _team != _oteam) //Not destroy and is not same team
 			if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 				scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], other, owner);
 			//Knockback
-			scShootableKnockback(other, rocket_map[? ROCKET_MAP.KBAMT] * other.knockback_multiplier, direction);
+			scShootableKnockback(other, rocket_map[? ROCKET_MAP.KBAMT] * other.gravity_map[? GRAVITY_MAP.KNOCKBACK_MULTI], direction);
 		}
 		
 		//Damage player

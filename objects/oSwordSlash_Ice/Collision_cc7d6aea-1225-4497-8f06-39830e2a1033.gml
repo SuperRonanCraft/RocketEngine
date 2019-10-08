@@ -13,8 +13,8 @@ if(!schwing && owner != noone && isPlayer && timer > 0){
 			scBuffAdd(BUFFTYPE.FROZEN, other, owner);
 			oldOwner = other;
 			//oldOwner_time_dialation_adjust = other.time_dialation;
-			other.vsp_move += 8;
-			other.hsp_move += 20 * owner.facing;
+			other.gravity_map[? GRAVITY_MAP.VSP_MOVE] += 8;
+			other.gravity_map[? GRAVITY_MAP.HSP_MOVE] += 20 * owner.facing;
 			trueTimer = 4;
 			scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
 		}

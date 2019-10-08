@@ -60,7 +60,7 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 				if (direction > 90 && direction < 270)
 					facing = -1;	
 			
-				other.hsp_move += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
+				other.gravity_map[? GRAVITY_MAP.HSP_MOVE] += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
 			} else
 				event_user(1); //missed
 		
@@ -78,6 +78,6 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 		}
 }
 
-else if(!deactivate && (isPlayer ? owner.team != other.team : true)){
+else if(!deactivate && (isPlayer ? _team != _oteam : true)){
 	script_execute(shuriken_map[?SHURIKEN_MAP.PLAYER_SCRIPT]);
 }

@@ -1138,7 +1138,7 @@
             "Key": "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
             "Value": {
                 "id": "135be58c-0fe3-45a0-bfe4-571b23d69a25",
-                "resourcePath": "scripts\/scGravity\/scGravity.yy",
+                "resourcePath": "scripts\\scGravityStep\\scGravityStep.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2899,6 +2899,14 @@
             "Value": {
                 "id": "48109f0d-7584-4760-b936-14ba96478588",
                 "resourcePath": "scripts\/scBuffCooldown\/scBuffCooldown.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "61b0a5e9-0a7e-430b-ba3b-454623f93619",
+            "Value": {
+                "id": "45e62678-ff6e-4a2a-a720-be8ea6b207c9",
+                "resourcePath": "scripts\\scCollisionOOLD\\scCollisionOOLD.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5634,7 +5642,7 @@
             "Key": "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
             "Value": {
                 "id": "a2e89772-0ba7-4b9c-99cf-9053ab31df19",
-                "resourcePath": "scripts\/scCollisionO\/scCollisionO.yy",
+                "resourcePath": "scripts\\scGravityCollision\\scGravityCollision.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6823,6 +6831,14 @@
             }
         },
         {
+            "Key": "ec2c7989-f4be-4170-9759-057313c95b7f",
+            "Value": {
+                "id": "8b6fd550-0f89-4685-82a2-56d753165870",
+                "resourcePath": "scripts\\scGravityOLD\\scGravityOLD.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ec99208e-831b-436a-9828-becdd402917c",
             "Value": {
                 "id": "aea2d528-9feb-4df5-98b9-d1f63996f2a6",
@@ -7348,10 +7364,13 @@
         "3922c59d-94e2-4b58-a5d0-b632e0b9b634",
         "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
         "308c532b-572e-444a-b419-fb1c6c459fc6",
-        "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
-        "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "73916b9e-7998-48c3-a569-71fa392c6841",
+        "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
+        "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
+        "61b0a5e9-0a7e-430b-ba3b-454623f93619",
+        "ec2c7989-f4be-4170-9759-057313c95b7f",
+        "a62e83a3-5049-4bc1-85be-fd514e25dc62",
         "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
         "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
         "ea910044-8ba1-412f-b62c-58b8fac7fbea",
@@ -7605,7 +7624,6 @@
         "8b67ca91-d986-48e9-92e2-cc2063238cf1",
         "6e1af632-6685-40a9-b0e7-653f1b415768",
         "38944597-eaf0-4f99-8a24-11ebe9391c21",
-        "a62e83a3-5049-4bc1-85be-fd514e25dc62",
         "43d24fe2-05a9-4309-a260-70243a90caa6",
         "db841c7b-4e69-492a-b56e-28ed0787489a",
         "6a93ce55-0209-4047-baf0-4b4265f30278",

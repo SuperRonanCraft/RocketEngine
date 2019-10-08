@@ -1,5 +1,5 @@
 /// @desc gamepad stuff
-if (!global.debug) exit;
+/*if (!global.debug) exit;
 var scale = 0.3;
 for (var i = 0; i < 2; i++;) {
 	var xx = 32;

@@ -6,7 +6,7 @@ switch (causeOfDeath) {
 	
 	case DEATH_LIST.FROZEN:
 		if(!animationDebounce){
-			player_knockback = false;
+			gravity_map[? GRAVITY_MAP.KNOCKBACK_ENABLED] = false;
 			animationDebounce = true;
 			animState = ANIMATIONSTATE.DEADFROZEN;
 			friction_adj -= 0.15;
@@ -21,7 +21,7 @@ switch (causeOfDeath) {
 		if(!animationDebounce){
 			
 			animationDebounce = true;
-			player_knockback = false;
+			gravity_map[? GRAVITY_MAP.KNOCKBACK_ENABLED] = false;
 
 			animState = ANIMATIONSTATE.DEADLASER;
 		}
@@ -30,10 +30,10 @@ switch (causeOfDeath) {
 		break;	
 	case noone:
 	default:
-		if(animState != ANIMATIONSTATE.DEAD && animState != ANIMATIONSTATE.DEAD2 && standing){
-			if(sign(hsp) == facing)
+		if(animState != ANIMATIONSTATE.DEAD && animState != ANIMATIONSTATE.DEAD2 && gravity_map[? GRAVITY_MAP.STANDING]){
+			if(sign(gravity_map[? GRAVITY_MAP.HSP]) == facing)
 				animState = ANIMATIONSTATE.DEAD2;
-			else if(sign(hsp) != facing)
+			else if(sign(gravity_map[? GRAVITY_MAP.HSP]) != facing)
 				animState = ANIMATIONSTATE.DEAD;
 			else{
 				
@@ -43,7 +43,7 @@ switch (causeOfDeath) {
 					animState = ANIMATIONSTATE.DEAD;	
 			}
 		}
-		else if(!standing)
+		else if(!gravity_map[? GRAVITY_MAP.STANDING])
 			animState = ANIMATIONSTATE.FALLING;	
 		break;
 }

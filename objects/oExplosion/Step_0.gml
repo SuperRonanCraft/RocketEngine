@@ -15,7 +15,7 @@ if (doing_damage)
 			///	dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			if (isPlayer) {
 				//Knockback
-				scShootableKnockback(p, rocket_map[? ROCKET_MAP.KBAMT] * p.knockback_multiplier, point_direction(x, y, p.x, p.y));
+				scShootableKnockback(p, rocket_map[? ROCKET_MAP.KBAMT] * p.gravity_map[? GRAVITY_MAP.KNOCKBACK_MULTI], point_direction(x, y, p.x, p.y));
 				//Add buff
 				if (rocket_map[? ROCKET_MAP.BUFF] != noone)
 					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i], parent);

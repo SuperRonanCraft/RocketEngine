@@ -16,19 +16,19 @@ if (clock = 0)
 //Or if you are chilled
 if (scBuffFind(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Return to normal speed
-	owner.move_adj -= dsBuff[? "overallSpeed"];	
+	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "overallSpeed"];	
 	//Remove Burn Rush
 	scBuffRemove(owner, dsBuff);
 } else {
 	//Create a new item in the DS Map so that it isn't saved to the object
 	if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
-		dsBuff[? "speedup"] = owner.walksp * (1 - (clock / (dsBuff[? BUFF_MAP.TIME])));
-		owner.move_adj -= dsBuff[? "overallSpeed"];
-		owner.move_adj += dsBuff[? "speedup"];
+		dsBuff[? "speedup"] = owner.gravity_map[? GRAVITY_MAP.WALK_SPEED] * (1 - (clock / (dsBuff[? BUFF_MAP.TIME])));
+		owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "overallSpeed"];
+		owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += dsBuff[? "speedup"];
 		dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];
 	} else 
 		dsBuff[? BUFF_MAP.CLOCK] = dsBuff[? BUFF_MAP.TIME];
-	if (owner.standing && owner.hsp == 0) {
+	if (owner.gravity_map[? GRAVITY_MAP.STANDING] && owner.gravity_map[? GRAVITY_MAP.HSP] == 0) {
 		dsBuff[? "damage_crt"]--;
 		if (dsBuff[? "damage_crt"] < 0) {
 			if(scShootableDamage(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, true, dsBuff[? "damage"], noone, noone, false))

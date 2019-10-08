@@ -1,8 +1,8 @@
 {
-    "id": "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
+    "id": "ec2c7989-f4be-4170-9759-057313c95b7f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scCollisionO",
+    "name": "scGravityOLD",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -5,11 +5,11 @@ var slash = instance_create_depth(x, y, depth - 20, oSwordSlash_Shotgun);
 //var dir = team == TEAM.NONE ? (facing == 1 ? 0 : 180) : (team == TEAM.LEFT ? 0 : 180);
 facing = dir > -90 && dir <= 90 ? 1 : -1;
 
-if (vsp_move > 0)
-	vsp_move = 0;
-	
-//vsp_move += (-jump_height - jump_adj) * grv_dir * 0.5;
-hsp_move -= (facing*5);
+var _map = gravity_map;
+if (_map[? GRAVITY_MAP.VSP_MOVE] > 0)
+	_map[? GRAVITY_MAP.VSP_MOVE] = 0;
+
+_map[? GRAVITY_MAP.HSP_MOVE] += (facing * 25);
 
 player_map[?PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.ABILITYCHANNEL;
 

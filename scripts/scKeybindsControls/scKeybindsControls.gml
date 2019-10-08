@@ -24,7 +24,7 @@ if (!player_map[? PLAYER_MAP.ALIVE] || !player_map[? PLAYER_MAP.CAN_CONTROL])
 	
 	
 controlling = move;
-
+var _map = gravity_map;
 //Check if can control
 if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	
@@ -35,9 +35,9 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	//Friction
 
 	//Vertical
-	if (key_jump && standing) {
-		vsp_move = (-jump_height - jump_adj) * grv_dir;
-		standing = false;
+	if (key_jump && _map[? GRAVITY_MAP.STANDING]) {
+		_map[? GRAVITY_MAP.VSP_MOVE] = (-(_map[? GRAVITY_MAP.JUMP_HEIGHT] + _map[? GRAVITY_MAP.JUMP_MOD])) * grv_dir;
+		_map[? GRAVITY_MAP.STANDING] = false;
 		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
 	}
 	//Weapon
@@ -48,17 +48,30 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 }
 
 //Friction
-if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
-	hsp_move = sign(hsp_move) * (abs(hsp_move) - abs(hsp_move * (friction_base + friction_adj)));	
-	hsp_move += recoilKB;
+if (move == 0 && _map[? GRAVITY_MAP.HSP_MOVE] != 0 && _map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0) {
+	_map[? GRAVITY_MAP.HSP_MOVE] = sign(_map[? GRAVITY_MAP.HSP_MOVE]) * (abs(_map[? GRAVITY_MAP.HSP_MOVE]) - 
+		abs(_map[? GRAVITY_MAP.HSP_MOVE] * (friction_base + friction_adj)));	
+	_map[? GRAVITY_MAP.HSP_MOVE] += recoilKB;
 	//Ease into 0
-	if (abs(hsp_move) < 0.1)
-		hsp_move = 0;
+	if (abs(_map[? GRAVITY_MAP.HSP_MOVE]) < 0.1)
+		_map[? GRAVITY_MAP.HSP_MOVE] = 0;
 } 
 //Move hsp
-else if(hsp_knockback == 0 && player_map[? PLAYER_MAP.CAN_CONTROL])
-	hsp_move = (move * walksp) + (move_adj * move) + recoilKB;
+else if(_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 && player_map[? PLAYER_MAP.CAN_CONTROL]) {
+	var _hsp_move = 0;
+	if (move != 0 && (_map[? GRAVITY_MAP.HSP_MOVE] - _map[? GRAVITY_MAP.HSP_MOVE_MOD]) * move < _map[? GRAVITY_MAP.WALK_SPEED])
+		_hsp_move = max(_map[? GRAVITY_MAP.WALK_SPEED] / 30, 0.5);
+	_map[? GRAVITY_MAP.HSP_MOVE] += (move * _hsp_move) + (move * _map[? GRAVITY_MAP.HSP_MOVE_MOD]) + recoilKB;
+}
 
+// /$$$$$$$$ /$$                 /$$$$$$$                                          /$$ /$$
+//| $$_____/|__/                | $$__  $$                                        |__/| $$
+//| $$       /$$ /$$   /$$      | $$  \ $$  /$$$$$$   /$$$$$$$  /$$$$$$  /$$   /$$ /$$| $$
+//| $$$$$   | $$|  $$ /$$/      | $$$$$$$/ /$$__  $$ /$$_____/ /$$__  $$| $$  | $$| $$| $$
+//| $$__/   | $$ \  $$$$/       | $$__  $$| $$$$$$$$| $$      | $$  \ $$| $$  | $$| $$| $$
+//| $$      | $$  >$$  $$       | $$  \ $$| $$_____/| $$      | $$  | $$| $$  | $$| $$| $$
+//| $$      | $$ /$$/\  $$      | $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$/|  $$$$$$/| $$| $$
+//|__/      |__/|__/  \__/      |__/  |__/ \_______/ \_______/ \______/  \______/ |__/|__/
 
 //Reset recoil
 if (recoilKB < recoilMAX)

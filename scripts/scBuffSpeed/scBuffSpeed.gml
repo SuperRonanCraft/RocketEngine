@@ -13,14 +13,14 @@ if (clock = 0)
 //If the internal clock reaches the time in seconds, expire
 if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Return to normal speed
-	owner.move_adj -= dsBuff[? "overallSpeed"];
+	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "overallSpeed"];
 	scBuffRemove(owner, dsBuff);
 } else {
 	//Create a new item in the DS Map so that it isn't saved to the object
 	if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
-		dsBuff[? "speedup"] = owner.walksp * .5;
-		owner.move_adj -= dsBuff[? "overallSpeed"];
-		owner.move_adj += dsBuff[? "speedup"];
+		dsBuff[? "speedup"] = owner.gravity_map[? GRAVITY_MAP.WALK_SPEED] * .5;
+		owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "overallSpeed"];
+		owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += dsBuff[? "speedup"];
 		dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];
 	} else
 		dsBuff[? BUFF_MAP.CLOCK] = dsBuff[? BUFF_MAP.TIME];

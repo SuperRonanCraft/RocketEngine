@@ -6,7 +6,8 @@
 if(argument[1] == 0) exit;
 
 var owner = argument[0];
-if (!owner.player_knockback) exit;
+var _map = owner.gravity_map;
+if (!_map[? GRAVITY_MAP.KNOCKBACK_ENABLED]) exit;
 
 var maxV = argument[1];
 var maxH = argument[1];
@@ -24,13 +25,12 @@ else
 owner.player_map[? PLAYER_MAP.CAN_CONTROL] = false;
 owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.KNOCKBACK;
 var hval = lengthdir_x(maxH, dir), vval = lengthdir_y(maxV, dir);
-owner.hsp_knockback = hval;
-owner.vsp_knockback = vval;// * sign(owner.grv_dir);
-owner.vsp_move = 0; //Reset gravity
-owner.knockback_time = -1 * TIME_SPEED;
-owner.hsp_move = 0;
+_map[? GRAVITY_MAP.HSP_KNOCKBACK] = hval;
+_map[? GRAVITY_MAP.VSP_KNOCKBACK] = vval;// * sign(owner.grv_dir);
+_map[? GRAVITY_MAP.VSP_MOVE] = 0; //Reset gravity
+_map[? GRAVITY_MAP.HSP_MOVE] = 0;
 //owner.facing = side ? 1 : -1;
-if (owner.standing)
+if (_map[? GRAVITY_MAP.STANDING])
 	owner.y -= 2 * sign(owner.grv_dir);
 
-owner.standing = false;
+_map[? GRAVITY_MAP.STANDING] = false;

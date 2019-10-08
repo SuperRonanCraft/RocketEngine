@@ -36,7 +36,7 @@ scCheckTech();
 scBuffHandler(BUFF_EVENT.STEP);
 
 //Collision
-scGravity();
+scGravityOLD();
 
 //Weapon activate
 scWeaponProgress();
