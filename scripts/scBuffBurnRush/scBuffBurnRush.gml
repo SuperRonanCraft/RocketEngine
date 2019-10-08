@@ -23,7 +23,7 @@ if (scBuffFind(owner, BUFFTYPE.CHILLED) || clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Create a new item in the DS Map so that it isn't saved to the object
 	if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
 		dsBuff[? "speedup"] = owner.gravity_map[? GRAVITY_MAP.WALK_SPEED] * (1 - (clock / (dsBuff[? BUFF_MAP.TIME])));
-		owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "overallSpeed"];
+		//owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "overallSpeed"];
 		owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += dsBuff[? "speedup"];
 		dsBuff[? "overallSpeed"] = dsBuff[? "speedup"];
 	} else 

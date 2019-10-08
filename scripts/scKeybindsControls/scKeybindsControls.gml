@@ -49,9 +49,8 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 
 //Friction
 if (move == 0 && _map[? GRAVITY_MAP.HSP_MOVE] != 0 && _map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0) {
-	_map[? GRAVITY_MAP.HSP_MOVE] = sign(_map[? GRAVITY_MAP.HSP_MOVE]) * (abs(_map[? GRAVITY_MAP.HSP_MOVE]) - 
-		abs(_map[? GRAVITY_MAP.HSP_MOVE] * (friction_base + friction_adj)));	
-	_map[? GRAVITY_MAP.HSP_MOVE] += recoilKB;
+	_map[? GRAVITY_MAP.HSP_MOVE] = sign(_map[? GRAVITY_MAP.HSP_MOVE]) * (abs(_map[? GRAVITY_MAP.HSP_MOVE]) - abs(_map[? GRAVITY_MAP.HSP_MOVE] * (friction_base + friction_adj)));	
+	_map[? GRAVITY_MAP.HSP_MOVE] += _map[? GRAVITY_MAP.RECOIL];
 	//Ease into 0
 	if (abs(_map[? GRAVITY_MAP.HSP_MOVE]) < 0.1)
 		_map[? GRAVITY_MAP.HSP_MOVE] = 0;
@@ -59,9 +58,15 @@ if (move == 0 && _map[? GRAVITY_MAP.HSP_MOVE] != 0 && _map[? GRAVITY_MAP.HSP_KNO
 //Move hsp
 else if(_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 && player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	var _hsp_move = 0;
-	if (move != 0 && (_map[? GRAVITY_MAP.HSP_MOVE] - _map[? GRAVITY_MAP.HSP_MOVE_MOD]) * move < _map[? GRAVITY_MAP.WALK_SPEED])
+	if (move == 1 && _map[? GRAVITY_MAP.HSP_MOVE] - _map[? GRAVITY_MAP.HSP_MOVE_MOD] > _map[? GRAVITY_MAP.WALK_SPEED]) //Moving right
+		_hsp_move = -max(_map[? GRAVITY_MAP.WALK_SPEED] / 30, 0.5);
+	else if (move == -1 && _map[? GRAVITY_MAP.HSP_MOVE] - _map[? GRAVITY_MAP.HSP_MOVE_MOD] < -_map[? GRAVITY_MAP.WALK_SPEED]) //Moving left
+		_hsp_move = -max(_map[? GRAVITY_MAP.WALK_SPEED] / 30, 0.5);
+	else if (move != 0 && (_map[? GRAVITY_MAP.HSP_MOVE] - _map[? GRAVITY_MAP.HSP_MOVE_MOD]) * move < _map[? GRAVITY_MAP.WALK_SPEED])
 		_hsp_move = max(_map[? GRAVITY_MAP.WALK_SPEED] / 30, 0.5);
-	_map[? GRAVITY_MAP.HSP_MOVE] += (move * _hsp_move) + (move * _map[? GRAVITY_MAP.HSP_MOVE_MOD]) + recoilKB;
+	_map[? GRAVITY_MAP.HSP_MOVE] += (move * _hsp_move) + (move * _map[? GRAVITY_MAP.HSP_MOVE_MOD]) + _map[? GRAVITY_MAP.RECOIL];
+	var _max = _map[? GRAVITY_MAP.WALK_SPEED] + _map[? GRAVITY_MAP.HSP_MOVE_MOD] + _map[? GRAVITY_MAP.RECOIL];
+	_map[? GRAVITY_MAP.HSP_MOVE] = clamp(_map[? GRAVITY_MAP.HSP_MOVE], -abs(_max), abs(_max));
 }
 
 // /$$$$$$$$ /$$                 /$$$$$$$                                          /$$ /$$
@@ -74,9 +79,6 @@ else if(_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 && player_map[? PLAYER_MAP.CAN_CO
 //|__/      |__/|__/  \__/      |__/  |__/ \_______/ \_______/ \______/  \______/ |__/|__/
 
 //Reset recoil
-if (recoilKB < recoilMAX)
-	recoilKB++;
-else if (recoilKB > recoilMAX)
-	recoilKB--;
-else
-	recoilMAX = 0;
+if (_map[? GRAVITY_MAP.RECOIL] != 0)
+	_map[? GRAVITY_MAP.RECOIL] = 0;
+_map[? GRAVITY_MAP.HSP_MOVE_MOD] = 0; //reset hsp mod

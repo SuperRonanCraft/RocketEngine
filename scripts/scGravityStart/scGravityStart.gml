@@ -15,6 +15,10 @@ map[? GRAVITY_MAP.STANDING] = true;
 map[? GRAVITY_MAP.HSP_MOVE] = 0;
 map[? GRAVITY_MAP.VSP_MOVE] = 0;
 map[? GRAVITY_MAP.HSP_MOVE_MOD] = 0; //Movement added (not reset)
+//Weapon Controlled
+map[? GRAVITY_MAP.RECOIL] = 0;
+map[? GRAVITY_MAP.FRICTION] = 0;
+map[? GRAVITY_MAP.FRICTION_MULTI] = 0.15;
 //Buffs n stuff (reset per step)
 map[? GRAVITY_MAP.HSP_PUSH] = 0;
 map[? GRAVITY_MAP.VSP_PUSH] = 0;
@@ -23,6 +27,11 @@ map[? GRAVITY_MAP.VSP_KNOCKBACK] = 0;
 map[? GRAVITY_MAP.KNOCKBACK_MULTI] = 1;
 map[? GRAVITY_MAP.KNOCKBACK_ENABLED] = true; //Should kb be enabled?
 map[? GRAVITY_MAP.TECHED_ENABLED] = true; //Should teching be allowed?
+
+friction_base = 0.15;
+friction_adj = 0;
+recoilKB = 0;
+recoilMAX = 0;
 
 //Specials
 player_tech = true; //Remove the bounce and teching
@@ -34,6 +43,7 @@ enum GRAVITY_MAP {
 	WALK_SPEED, JUMP_HEIGHT, GRAVITY, JUMP_MOD,
 	HSP, VSP, STANDING,
 	HSP_MOVE, VSP_MOVE, //Player Controlled
+	RECOIL, FRICTION_MULTI, FRICTION, //WEAPON Controlled
 	HSP_MOVE_MOD, HSP_PUSH, VSP_PUSH, //Buffs
 	HSP_KNOCKBACK, VSP_KNOCKBACK, KNOCKBACK_MULTI, KNOCKBACK_ENABLED, //Knockback
 	TECHED_ENABLED

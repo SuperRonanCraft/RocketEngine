@@ -5,3 +5,4 @@
 event_inherited();
 //scStartAI();
 //despawn = true; //Despawn player if dead
+auto_aim = true;

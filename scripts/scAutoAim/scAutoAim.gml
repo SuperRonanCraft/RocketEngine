@@ -1,9 +1,11 @@
 
-var obj = instance_furthest(x, y, object_index);
+var index = object_get_parent(object_index) != -100 ? object_get_parent(object_index) : object_index;
+
+var obj = instance_furthest(x, y, index);
 var dis = distance_to_object(obj);
-for (var i = 0; i < instance_number(object_index); i++) {
-	if (instance_find(object_index, i) != id) {
-		var cur_obj = instance_furthest(x, y, object_index);
+for (var i = 0; i < instance_number(index); i++) {
+	if (instance_find(index, i) != id) {
+		var cur_obj = instance_furthest(x, y, index);
 		var cur_dis = distance_to_object(cur_obj);
 		if (cur_dis < dis) {
 			dis = cur_dis;

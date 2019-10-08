@@ -37,10 +37,6 @@ image_speed /= TIME_SPEED;
 
 //Movement vars
 controlling = 0; //If the player is controlling AND moving
-friction_base = 0.15;
-friction_adj = 0;
-recoilKB = 0;
-recoilMAX = 0;
 
 //Cause of death
 causeOfDeath = noone;

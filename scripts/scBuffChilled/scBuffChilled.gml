@@ -12,17 +12,17 @@ var clock = dsBuff[? BUFF_MAP.CLOCK];
 if (clock == 0) {	
 	//Create a new item in the DS Map so that it isn't saved to the object
 	dsBuff[? "slow"] = owner.gravity_map[? GRAVITY_MAP.WALK_SPEED] / 2;
-	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "slow"];
 	//This way it does not get changed/affected in any other way
 }
 //If the internal clock reaches the time in seconds, expire
 if (scBuffFind(owner, BUFFTYPE.BURNRUSH) || clock > dsBuff[? BUFF_MAP.TIME]) {
 	//Return to normal speed
-	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += dsBuff[? "slow"];	
+	//owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += dsBuff[? "slow"];	
 	//Remove Chilled
 	scBuffRemove(owner, dsBuff);
 } else {
 	//Otherwise, the buff is still active, and create a visual indicator
+	owner.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= dsBuff[? "slow"];
 	if (clock % 2 == 0) {
 		var part = dsBuff[? BUFF_MAP.PARTICLE];
 		var amt = dsBuff[? BUFF_MAP.PARTICLE_AMT];
