@@ -1,6 +1,6 @@
 ///@desc Change a players character
 ///@arg character
-///@arg not-load-cache*
+///@arg load-cache*
 
 var char = argument[0];
 var load = argument_count > 1 ? (argument[1] != noone ? argument[1] : true) : true;
