@@ -1,4 +1,4 @@
-/// @desc Buffs Draw
+/// @desc Weapons Draw
 
 if (ds_map_empty(tab_map)) {
 	tab_map[? "players"] = noone;
@@ -13,8 +13,7 @@ if (ds_map_empty(tab_map)) {
 				scDrawCircle(x, bbox_top - 20, 5, c_red, false, 0.5);
 		if (_map[? "apply"]) {
 			for (var i = 0; i < array_length_1d(_ps); i++)
-				with (_ps[i])
-					scBuffAdd(_map[? "type"], id, id);
+				scWeaponModify(_ps[i], _map[? "type"]);
 			_map[? "apply"] = false;
 		}
 	}

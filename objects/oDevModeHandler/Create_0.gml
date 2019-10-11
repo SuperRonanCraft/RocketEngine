@@ -9,6 +9,5 @@ tab = -1;
 tab_y = RES_H / 4;
 tab_w = 24;
 tab_buf = 8;
-
-tab_cur_yy = -1;
+alpha = 0.8;
 tab_map = ds_map_create();
