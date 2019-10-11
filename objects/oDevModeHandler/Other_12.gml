@@ -22,7 +22,7 @@ for (var i = 0; i < WEAPON_MODIFIER.LENGTH; i++) {
 		scale *= 1.2;
 		if (!ds_map_empty(tab_map) && mouse_check_button_pressed(mb_left)) {
 			tab_map[? "apply"] = true;
-			tab_map[? "type"] = i;
+			tab_map[? "weapon_type"] = i;
 		}
 	}
 	

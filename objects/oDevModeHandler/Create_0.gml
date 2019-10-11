@@ -11,3 +11,7 @@ tab_w = 24;
 tab_buf = 8;
 alpha = 0.8;
 tab_map = ds_map_create();
+
+//Defaults
+tab_map[? "players"] = noone;
+tab_map[? "apply"] = false;

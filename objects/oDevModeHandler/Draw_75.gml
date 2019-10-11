@@ -23,7 +23,6 @@ for (var i = 0; i < 4; i++) {
 				tab = i;
 			 else
 				tab = -1;
-			ds_map_clear(tab_map);
 		}
 		_alpha = 1;
 		_offset = tab_buf / 2;

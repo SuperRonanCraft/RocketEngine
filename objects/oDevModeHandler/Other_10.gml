@@ -3,7 +3,7 @@
 var _yy = tab_y - tab_buf - (tab_buf / 2);
 
 var _scale_o = 0.6; //Original Scale
-var columns = 5, offset = 0, index = 0, _buff = 4, size = (64 * _scale_o), scale, spr, rx, ry;//, name;
+var columns = 5, offset = 0, index = 0, _buff = 4, size = (64 * _scale_o), scale, map, spr, rx, ry;//, name;
 var _w = columns * ((64 * _scale_o) + _buff) + (tab_buf * 2); //Width
 var _h = (ceil(BUFFTYPE.LENGHT / columns) * (size)) + (tab_buf * 2) + (_buff * (ceil(BUFFTYPE.LENGHT / columns) - 1));
 
@@ -24,9 +24,9 @@ for (var i = 0; i < BUFFTYPE.LENGHT; i++) {
 	
 	if (scUIHoveringBox(rx, ry, rx + size, ry + size, 0, 0)) {
 		scale *= 1.2;
-		if (!ds_map_empty(tab_map) && mouse_check_button_pressed(mb_left)) {
+		if (mouse_check_button_pressed(mb_left)) {
 			tab_map[? "apply"] = true;
-			tab_map[? "type"] = map[? BUFF_MAP.TYPE];
+			tab_map[? "buffs_type"] = map[? BUFF_MAP.TYPE];
 		}
 	}
 	
