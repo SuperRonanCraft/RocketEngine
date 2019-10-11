@@ -19,6 +19,7 @@ if (_map[? "players"] != noone) {
 						scWeaponModify(_ps[i], _map[? "weapon_type"]);
 						break;
 					case 3: //MOVEMENT
+						//Handled in Event User 4
 						break;
 				}
 		}
