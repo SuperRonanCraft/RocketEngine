@@ -43,33 +43,23 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	//Weapon
 	if (key_shoot)
 		scWeaponActivate();
-} else {
-	//hsp_move = hsp;
 }
 
-//Friction
-if (move == 0 && _map[? GRAVITY_MAP.HSP_MOVE] != 0 && _map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0) {
-	_map[? GRAVITY_MAP.HSP_MOVE] = sign(_map[? GRAVITY_MAP.HSP_MOVE]) * (abs(_map[? GRAVITY_MAP.HSP_MOVE]) - abs(_map[? GRAVITY_MAP.HSP_MOVE] * (friction_base + friction_adj)));	
-	_map[? GRAVITY_MAP.HSP_MOVE] += _map[? GRAVITY_MAP.RECOIL];
-	//Ease into 0
-	if (abs(_map[? GRAVITY_MAP.HSP_MOVE]) < 0.1)
-		_map[? GRAVITY_MAP.HSP_MOVE] = 0;
-} 
-//Move hsp
-else if(_map[? GRAVITY_MAP.HSP_KNOCKBACK] == 0 && player_map[? PLAYER_MAP.CAN_CONTROL]) {
-	_map[? GRAVITY_MAP.HSP_MOVE] = (move * _map[? GRAVITY_MAP.WALK_SPEED]) + (move * _map[? GRAVITY_MAP.HSP_MOVE_MOD]) + _map[? GRAVITY_MAP.RECOIL];
-}
+//HORIZONTAL & Friction
 
-// /$$$$$$$$ /$$                 /$$$$$$$                                          /$$ /$$
-//| $$_____/|__/                | $$__  $$                                        |__/| $$
-//| $$       /$$ /$$   /$$      | $$  \ $$  /$$$$$$   /$$$$$$$  /$$$$$$  /$$   /$$ /$$| $$
-//| $$$$$   | $$|  $$ /$$/      | $$$$$$$/ /$$__  $$ /$$_____/ /$$__  $$| $$  | $$| $$| $$
-//| $$__/   | $$ \  $$$$/       | $$__  $$| $$$$$$$$| $$      | $$  \ $$| $$  | $$| $$| $$
-//| $$      | $$  >$$  $$       | $$  \ $$| $$_____/| $$      | $$  | $$| $$  | $$| $$| $$
-//| $$      | $$ /$$/\  $$      | $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$/|  $$$$$$/| $$| $$
-//|__/      |__/|__/  \__/      |__/  |__/ \_______/ \_______/ \______/  \______/ |__/|__/
+if (_map[? GRAVITY_MAP.HSP_MOVE_MOD] == 0 && move != 0)
+	_map[? GRAVITY_MAP.HSP_MOVE] = ((_map[? GRAVITY_MAP.WALK_SPEED] + _map[? GRAVITY_MAP.WALK_SPEED_MOD]) * move);
+else if (_map[? GRAVITY_MAP.HSP_MOVE_MOD] != 0 && move != 0)
+	_map[? GRAVITY_MAP.HSP_MOVE] = ((_map[? GRAVITY_MAP.WALK_SPEED] + _map[? GRAVITY_MAP.WALK_SPEED_MOD]) * move) + (_map[? GRAVITY_MAP.HSP_MOVE_MOD]);
+else if (_map[? GRAVITY_MAP.HSP_MOVE_MOD] != 0)
+	_map[? GRAVITY_MAP.HSP_MOVE] = _map[? GRAVITY_MAP.HSP_MOVE_MOD];
+else
+	_map[? GRAVITY_MAP.HSP_MOVE] *= _map[? GRAVITY_MAP.FRICTION];
 
-//Reset recoil
-if (_map[? GRAVITY_MAP.RECOIL] != 0)
-	_map[? GRAVITY_MAP.RECOIL] = 0;
-_map[? GRAVITY_MAP.HSP_MOVE_MOD] = 0; //reset hsp mod
+if (abs(_map[? GRAVITY_MAP.HSP_MOVE]) < 1)
+	_map[? GRAVITY_MAP.HSP_MOVE] = 0;
+
+if(abs(_map[? GRAVITY_MAP.HSP_MOVE_MOD]) < 1)
+	_map[? GRAVITY_MAP.HSP_MOVE_MOD] = 0;
+
+_map[? GRAVITY_MAP.HSP_MOVE_MOD] *= _map[? GRAVITY_MAP.FRICTION]; //reset hsp mod

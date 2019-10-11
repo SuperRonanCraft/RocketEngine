@@ -60,7 +60,7 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 				if (direction > 90 && direction < 270)
 					facing = -1;	
 			
-				other.gravity_map[? GRAVITY_MAP.RECOIL] += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
+				other.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
 			} else
 				event_user(1); //missed
 		
