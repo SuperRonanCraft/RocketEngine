@@ -5,6 +5,11 @@ yy = 32;
 with(oPlayer) //Aim at nearest player
 	auto_aim = true;
 
+//SETTINGS
+tab_open = true;
+tab_preview_players = true
+
+//Tabs
 tab = -1;
 tab_y = RES_H / 4;
 tab_w = 24;

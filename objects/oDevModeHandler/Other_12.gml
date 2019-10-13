@@ -1,4 +1,4 @@
-/// @desc Weapons Draw GUI
+/// @desc Weapons
 
 var _yy = tab_y - tab_buf - (tab_buf / 2);
 
