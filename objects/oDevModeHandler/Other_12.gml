@@ -9,7 +9,7 @@ var _h = (ceil(WEAPON_MODIFIER.LENGTH / columns) * (size)) + (tab_buf * 2) + (_b
 
 var desc = tab_map[? "players"] == noone ? "Select a Player!" : (tab_map[? "weapon_type"] != undefined ? "Enter to re-apply" : noone);
 var desc_h = desc != noone ? string_height(desc) * 0.4 : 0;
-scDrawRectRound(tab_w + tab_buf, _yy, tab_w + _w, _yy + _h + desc_h, c_white, false, alpha, 8, 8);
+scDrawRectRound(tab_w + tab_buf, _yy, tab_w + _w, _yy + _h + desc_h, tab_color_select, false, alpha, 8, 8);
 if (desc != noone)
 	scDrawText(tab_w + ((_w + tab_buf) / 2), _yy + _h, desc, c_fuchsia, 0.4, noone, alpha, fa_middle, fa_top);
 

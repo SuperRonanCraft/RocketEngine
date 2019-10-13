@@ -11,7 +11,7 @@ var _h = string_height("HSP") * _scale;
 var _height = ((tab_buf * 4) + (_h * 3)) * array_length_1d(_mods);
 var desc = tab_map[? "players"] == noone ? "Select a Player!" : noone;
 var desc_h = desc != noone ? string_height(desc) * 0.4 : 0;
-scDrawRectRound(_xx - tab_buf, _yy, _xx + _w + tab_buf, _yy + _height + desc_h, c_white, false, alpha, 8, 8);
+scDrawRectRound(_xx - tab_buf, _yy, _xx + _w + tab_buf, _yy + _height + desc_h, tab_color_select, false, alpha, 8, 8);
 if (desc != noone)
 	scDrawText(_xx + (_w / 2), _yy + _height, desc, c_fuchsia, 0.4, noone, alpha, fa_middle, fa_top);
 _xx += tab_buf;

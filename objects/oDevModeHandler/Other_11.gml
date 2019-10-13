@@ -8,7 +8,7 @@ var _w = columns * ((64 * _scale_o) + _buff) + (tab_buf * 2); //Width
 var _h = (ceil(BUFFTYPE.LENGHT / columns) * (size)) + (tab_buf * 2) + (_buff * (ceil(BUFFTYPE.LENGHT / columns) - 1));
 var desc = tab_map[? "players"] == noone ? "Select a Player!" : (tab_map[? "buffs_type"] != undefined ? "Enter to re-apply" : noone);
 var desc_h = desc != noone ? string_height(desc) * 0.4 : 0;
-scDrawRectRound(tab_w + tab_buf, _yy, tab_w + _w, _yy + _h + desc_h, c_white, false, alpha, 8, 8);
+scDrawRectRound(tab_w + tab_buf, _yy, tab_w + _w, _yy + _h + desc_h, tab_color_select, false, alpha, 8, 8);
 if (desc != noone)
 	scDrawText(tab_w + ((_w + tab_buf) / 2), _yy + _h, desc, c_fuchsia, 0.4, noone, alpha, fa_middle, fa_top);
 

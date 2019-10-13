@@ -24,6 +24,7 @@ var angle = argument_count >= 10 ? (argument[9] != noone ? argument[9] : 0) : 0;
 
 if (string_count("&", text) >= 1) {
 	var pos = string_pos("&", text);
+	var _change = true;
 	switch (string_copy(text, pos, pos + 1)) {
 		case "&a": c = c_lime; break;
 		case "&b": c = c_aqua; break;
@@ -41,8 +42,10 @@ if (string_count("&", text) >= 1) {
 		case "&8": c = c_gray; break;
 		case "&9": c = c_navy; break;
 		case "&0": c = c_black; break;
+		default: _change = false; break;
 	}
-	text = string_delete(text, pos, pos + 1);
+	if (_change)
+		text = string_delete(text, pos, pos + 1);
 }
 
 draw_set_halign(haligh);

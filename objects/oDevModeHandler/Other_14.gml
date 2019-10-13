@@ -6,10 +6,10 @@ var scale = 0.45;
 
 var _textT = "DEV MODE DEBUGGING";
 var _text =
-		"F3	= Hit Boxes" +
-		"\nF10 = Invincible" + 
+		"F3 = View Hit Boxes" +
+		"\nF10 = Invincible Mode" + 
 		"\nSPACE = Heal all players" +
-		"\nZ = SPAWN ENEMY" +
+		"\nZ = Spawn Enemy" +
 		"\nRMB + Hover = Change Characters" +
 		"\nLMB + Hover (Enemy) = Gain Control" + 
 		"\nControl + Hover = Move Player X/Y";
@@ -17,7 +17,7 @@ var _text =
 var len = string_width(_text) * scale;
 var hei = (string_height(_textT) * scale) + (string_height(_text) * scale)
 
-scDrawRectRound(_xx, _yy, _xx + len + tab_buf, _yy + hei + tab_buf, c_white, false, alpha, 8, 8);
+scDrawRectRound(_xx, _yy, _xx + len + tab_buf, _yy + hei + tab_buf, tab_color_select, false, alpha, 8, 8);
 
-scDrawText(_xx + tab_buf, _yy + tab_buf, _textT, c_fuchsia, scale, c_ltgray, alpha, fa_left, fa_top); //Title
+scDrawText(_xx + tab_buf, _yy + tab_buf, _textT, c_fuchsia, scale, noone, alpha, fa_left, fa_top); //Title
 scDrawText(_xx + tab_buf, _yy + tab_buf + (string_height(_textT) * scale), _text, c_black, scale, c_ltgray, alpha, fa_left, fa_top); //Text
