@@ -12,7 +12,9 @@
         "1b456b4e-cba3-4dab-8cf2-ce31c8199d20",
         "ea9196e3-a947-4e35-85ec-2e96445927e0",
         "a3918777-47db-4c20-b08a-100aa8a44bc0",
-        "1b59a4c6-91fb-42f8-9ba9-f0dc1a9ae4fd"
+        "1b59a4c6-91fb-42f8-9ba9-f0dc1a9ae4fd",
+        "991c866d-9927-4684-bc09-424f233d67b9",
+        "9d233c2f-0bf4-44fb-863b-6dece047ef80"
     ],
     "filterType": "GMSound",
     "folderName": "Gameplay",

@@ -16,13 +16,72 @@ else
 map[? GRAVITY_MAP.HSP] *= time_dialation;
 map[? GRAVITY_MAP.VSP] *= time_dialation;
 
-var touchingx = instance_place(x + map[? GRAVITY_MAP.HSP], y, oWall); //get the instance of the wall in the future in the horizontal
-if (touchingx != noone) { //If touching a wall in the horizontal 
+var _hsp = map[? GRAVITY_MAP.HSP];
+var _vsp = map[? GRAVITY_MAP.VSP];
+var hitting = false;
+
+//CURRENT LOCATION
+var touching = instance_place(x, y, oWall); //get the instance of the wall in the future in the horizontal
+if (touching != noone) {
+	hitting = true;
+}
+//MID LOCATION (> 32 VECTOR)
+
+if (!hitting) {
+	var _dis = floor(point_distance(x, y, x + _hsp, y + _vsp));
+	var inter = _dis / 32;
+
+	for (var i = 1; i < inter; i++) {
+		var x_change = point_distance(x, y, x + (_hsp / inter) * i, y);
+		var y_change = point_distance(x, y, x, y + (_vsp / inter) * i);
+		touching = instance_place(x + x_change, y + y_change, oWall); //get the instance of the wall in the future in the horizontal
+		if (touching != noone) {
+			hitting = true;
+			break;
+		}
+	}
+}
+
+if (!hitting) {
+	touching = instance_place(x + _hsp, y + _vsp, oWall); //get the instance of the wall in the future in the horizontal
+	if (touching != noone) {
+		hitting = true;
+	}
+}
+
+
+if (touching != noone) { //If touching a wall in the horizontal
+	var _vsp_c1 = touching.bbox_top - bbox_bottom - offset;
+	var _vsp_c2 = touching.bbox_bottom - bbox_top + offset;
+	var _hsp_c1 = touching.bbox_left - bbox_right - offset;
+	var _hsp_c2 = touching.bbox_right - bbox_left + offset;
+	show_debug_message("------");
+	show_debug_message("DIF VSP > 0 = " + string(_vsp_c1));
+	show_debug_message("DIF VSP < 0 = " + string(_vsp_c2));
+	show_debug_message("DIF HSP > 0 = " + string(_hsp_c1));
+	show_debug_message("DIF HSP < 0 = " + string(_hsp_c2));
+
+	if( abs(_vsp_c1) + abs(_vsp_c2) < abs(_hsp_c1) + abs(_hsp_c2) ){
+		scCollisionYCheck(map, 1, touching);
+		if(instance_place(x,y,oWall)){
+			scCollisionXCheck(map, 1, touching);
+		}
+	}
+	
+	else if( abs(_vsp_c1) + abs(_vsp_c2) > abs(_hsp_c1) + abs(_hsp_c2) ){
+		scCollisionXCheck(map, 1, touching);
+		if(instance_place(x,y,oWall)){
+			scCollisionYCheck(map, 1, touching);
+		}
+	}
+	
+}
+
 	//Normal wall collision
-	if (map[? GRAVITY_MAP.HSP] > 0) //Going Right
-		x = floor(touchingx.bbox_left + (x - bbox_right) - offset);
+	/*if (map[? GRAVITY_MAP.HSP] > 0) //Going Right
+		x = floor(touching.bbox_left + (x - bbox_right) - offset);
 	else if (map[? GRAVITY_MAP.HSP] < 0) //Going Left
-		x = ceil(touchingx.bbox_right + (x - bbox_left) + offset);
+		x = ceil(touching.bbox_right + (x - bbox_left) + offset);
 	
 	map[? GRAVITY_MAP.HSP] = 0;
 	map[? GRAVITY_MAP.HSP_MOVE] = map[? GRAVITY_MAP.HSP];
@@ -33,19 +92,15 @@ if (touchingx != noone) { //If touching a wall in the horizontal
 			scKnockbackBounce();
 		else
 			map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
-}
 
-var touchingy = instance_place(x, y + map[? GRAVITY_MAP.VSP], oWall); //get the instance of the wall in the future in the vertical
-if (touchingy != noone) { //If touching a wall in the vertical
 	if (map[? GRAVITY_MAP.VSP] > 0) //Falling
-		y = floor(touchingy.bbox_top + (y - bbox_bottom) - offset);
+		y = floor(touching.bbox_top + (y - bbox_bottom) - offset);
 	else if (map[? GRAVITY_MAP.VSP] < 0) //Going up
-		y = ceil(touchingy.bbox_bottom + (y - bbox_top) + offset);
+		y = ceil(touching.bbox_bottom + (y - bbox_top) + offset);
 	
 	map[? GRAVITY_MAP.VSP] = 0;
 	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
-	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
-}
+	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];*/
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
 map[? GRAVITY_MAP.STANDING] = instance_place(x, y + (offset * grv_dir + (map[? GRAVITY_MAP.GRAVITY] * grv_dir)), oWall) != noone;

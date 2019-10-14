@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "0f1d2915-6fc3-47e2-8d08-e9b3220c6cc1",
+            "Value": {
+                "id": "c5c3de58-3e17-4f64-b31b-d106db2b8bf6",
+                "resourcePath": "scripts\\scCollisionXCheck\\scCollisionXCheck.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0fb75587-6b56-493f-95cb-abaf215f165a",
             "Value": {
                 "id": "b605e564-b022-4ea4-8593-c814fcb7690a",
@@ -1123,6 +1131,14 @@
             "Value": {
                 "id": "ca331992-a410-4a0f-85a2-2f6761f26a11",
                 "resourcePath": "sprites\/sRocket_Teleport\/sRocket_Teleport.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "24fade51-4225-4612-87f3-a0fa0f804b99",
+            "Value": {
+                "id": "9a1ae0a3-c084-4442-a9a5-e221a35383d9",
+                "resourcePath": "sprites\\sEnemy_default_deadFrozen\\sEnemy_default_deadFrozen.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3143,6 +3159,14 @@
             }
         },
         {
+            "Key": "68faba39-1bfb-4ed2-bcb8-290aa7d0ca71",
+            "Value": {
+                "id": "7beb22de-b630-4cb5-a6f6-9d48663459ae",
+                "resourcePath": "scripts\\scCollisionYCheck\\scCollisionYCheck.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "69349522-5e88-4a9f-83e6-5962bb942a36",
             "Value": {
                 "id": "fc415fc7-11b4-4feb-a597-51efea1d63fa",
@@ -3508,6 +3532,14 @@
                 "id": "0dfcc8b0-3b81-49de-82c1-47f166b11a18",
                 "resourcePath": "objects\/oUltimateLaser\/oUltimateLaser.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "77af0928-b5db-4c11-a59e-c6e1536a0da9",
+            "Value": {
+                "id": "7f2db589-02de-46c6-9d7c-3c294d96cc82",
+                "resourcePath": "scripts\\scGravityCollisionBACKUP\\scGravityCollisionBACKUP.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4455,6 +4487,14 @@
             }
         },
         {
+            "Key": "991c866d-9927-4684-bc09-424f233d67b9",
+            "Value": {
+                "id": "6319dc36-7343-4b03-8909-1abd256fffa9",
+                "resourcePath": "sounds\\snMusicLevel1\\snMusicLevel1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9929a253-eef4-4676-a16c-26c7cb041b55",
             "Value": {
                 "id": "ef6f584f-8bcd-4b6b-b273-408d13f90844",
@@ -4580,6 +4620,14 @@
                 "id": "ee5096e8-f838-447d-91b1-72b24c0c37d0",
                 "resourcePath": "objects\/oGMMSingle\/oGMMSingle.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9d233c2f-0bf4-44fb-863b-6dece047ef80",
+            "Value": {
+                "id": "cfff5d23-1db4-48b2-8283-a22ac5d596b1",
+                "resourcePath": "sounds\\snMusicIntro1\\snMusicIntro1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -7367,11 +7415,14 @@
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
+        "77af0928-b5db-4c11-a59e-c6e1536a0da9",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
         "61b0a5e9-0a7e-430b-ba3b-454623f93619",
         "ec2c7989-f4be-4170-9759-057313c95b7f",
         "a62e83a3-5049-4bc1-85be-fd514e25dc62",
         "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
+        "68faba39-1bfb-4ed2-bcb8-290aa7d0ca71",
+        "0f1d2915-6fc3-47e2-8d08-e9b3220c6cc1",
         "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
         "ea910044-8ba1-412f-b62c-58b8fac7fbea",
         "b4cbad0d-4085-4aff-954c-ce595b63b3a8",
