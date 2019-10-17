@@ -29,8 +29,8 @@ if (touching_amt == 0) {
 	var inter = _dis / 32;
 
 	for (var i = 1; i < inter; i++) {
-		var x_change = point_distance(x, y, x + (_hsp / inter) * i, y);
-		var y_change = point_distance(x, y, x, y + (_vsp / inter) * i);
+		var x_change = point_distance(x, y, x + (_hsp / inter) * i, y) * sign(_hsp);
+		var y_change = point_distance(x, y, x, y + (_vsp / inter) * i) * sign(_vsp);
 		
 		touching_amt = instance_place_list(x + x_change, y + y_change, oWall, touching, false); //get the instance of the wall in the future in the horizontal
 		if (touching_amt != 0)
@@ -41,51 +41,39 @@ if (touching_amt == 0) {
 if (touching_amt == 0)
 	touching_amt = instance_place_list(x + _hsp, y + _vsp, oWall, touching, false); //get the instance of the wall in the future in the horizontal
 
-
 if (touching_amt != 0) { //If touching a wall in the horizontal
 	for (var i = 0; i < touching_amt; i++) {
 		var wall = touching[| i];
-		var _vsp_c1 = wall.bbox_top - bbox_bottom - offset;
-		var _vsp_c2 = wall.bbox_bottom - bbox_top + offset;
-		var _hsp_c1 = wall.bbox_left - bbox_right - offset;
-		var _hsp_c2 = wall.bbox_right - bbox_left + offset;
-		show_debug_message("------");
-		show_debug_message("DIF VSP > 0 = " + string(_vsp_c1));
-		show_debug_message("DIF VSP < 0 = " + string(_vsp_c2));
-		show_debug_message("DIF HSP > 0 = " + string(_hsp_c1));
-		show_debug_message("DIF HSP < 0 = " + string(_hsp_c2));
+		//show_debug_message("------");
+		//show_debug_message("VSP = " + string(_vsp));
+		//show_debug_message("HSP = " + string(_hsp));
+		//var _vsp_c1 = wall.bbox_top - bbox_bottom - offset;
+		//var _vsp_c2 = wall.bbox_bottom - bbox_top + offset;
+		//var _hsp_c1 = wall.bbox_left - bbox_right - offset;
+		//var _hsp_c2 = wall.bbox_right - bbox_left + offset;
+		//show_debug_message("DIF VSP > 0 = " + string(_vsp_c1));
+		//show_debug_message("DIF VSP < 0 = " + string(_vsp_c2));
+		//show_debug_message("DIF HSP > 0 = " + string(_hsp_c1));
+		//show_debug_message("DIF HSP < 0 = " + string(_hsp_c2));
 		var change_x = false;
 		var change_y = false;
-		if (_vsp > 0) { //Falling
-			if (abs(wall.bbox_top - bbox_bottom) <= 32) {
-				var y_set = floor(wall.bbox_top + (y - bbox_bottom) - offset);
-				if (y_set >= y) {
-					y = y_set;
-					change_y = true;
-				}
-			}
-		} else if (_vsp < 0) { //Going up
-			if (abs(wall.bbox_bottom - bbox_top) <= 32) {
-				var y_set = ceil(wall.bbox_bottom + (y - bbox_top) + offset);
-				if (y_set <= y) {
-					y = y_set;
-					change_y = true;
-				}
-			}
+		
+		if (wall.bbox_top > bbox_top) { //Falling
+			y = floor(wall.bbox_top + (y - bbox_bottom)) - offset;
+			change_y = true;
+		} else if (wall.bbox_bottom < bbox_bottom) { //Jumping
+			y = ceil(wall.bbox_bottom + (y - bbox_top)) + offset;
+			change_y = true;
 		}
 		
 		if (!change_y)
-		if (_hsp > 0) { //Going Right
-			if (abs(wall.bbox_left - bbox_right) <= 32) {
-				x = floor(wall.bbox_left + (x - bbox_right) - offset);
+			if (wall.bbox_left >= bbox_right) { //Going right
+				x = floor(wall.bbox_left+ (x - bbox_right)) - offset;
+				change_x = true;
+			} else if (wall.bbox_right <= bbox_left) { //Going left
+				x = ceil(wall.bbox_right + (x - bbox_left)) + offset;
 				change_x = true;
 			}
-		} else if (_hsp < 0) { //Going Left
-			if (abs(wall.bbox_right - bbox_left) <= 32) {
-				x = ceil(wall.bbox_right + (x - bbox_left) + offset);
-				change_x = true;
-			}
-		}
 		
 		if (change_x) {
 			map[? GRAVITY_MAP.HSP] = 0;

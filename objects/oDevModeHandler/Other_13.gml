@@ -3,7 +3,7 @@
 var _xx = tab_w + (tab_buf * 2);
 var _yy = tab_y - tab_buf - (tab_buf / 2);
 
-var _mods = [["HSP MOVE MOD", "move_hspmovemod", 5]];
+var _mods = [["HSP MOVE MOD", "move_hspmovemod", 5], ["VSP", "move_vsp", -5]];
 var _w = sprite_get_width(sUISliderBar) + (tab_buf * 2);
 var _scale_o = 0.4
 var _scale = _scale_o;
@@ -58,9 +58,14 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 			var _map = tab_map;
 			if (_map[? "players"] != noone) {
 				var _ps = _map[? "players"];
-				for (var i = 0; i < array_length_1d(_ps); i++)
-					with (_ps[i])
-						gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += value;
+				for (var a = 0; a < array_length_1d(_ps); a++)
+					with (_ps[a])
+						switch (i) {
+							case 0:
+								gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += value; break;
+							case 1:
+								gravity_map[? GRAVITY_MAP.VSP_MOVE] += value; break;
+						}
 			}
 		}
 		_scale *= 1.2;

@@ -26,7 +26,7 @@ event_user(2);
 
 //Show players collision box while in debug mode
 if (global.debug) {
-	//scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);
+	scDrawRect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_blue, true, 1);
 	//scDrawText(bbox_left, bbox_top - 40, "HSP - Move: " + string(gravity_map[? GRAVITY_MAP.HSP_MOVE]), noone, 0.3);
 	//scDrawText(bbox_left, bbox_top - 10, "HSP: " + string(gravity_map[? GRAVITY_MAP.HSP]), noone, 0.3);
 	//scDrawText(bbox_left, bbox_top - 25, "FACING: " + string(facing), noone, 0.3);

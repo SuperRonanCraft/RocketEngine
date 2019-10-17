@@ -15,7 +15,7 @@ switch (randDirection) {
 }
 
 //If you stand, have a 'chance' to jump
-if (player.standing) {
+if (player.gravity_map[? GRAVITY_MAP.STANDING]) {
 	if (timer % irandom_range(2, 70) == 0)
 		AIJump = true;
 } else
