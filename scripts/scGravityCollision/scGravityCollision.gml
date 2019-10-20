@@ -24,6 +24,9 @@ var touching = ds_list_create();
 var touching_amt = instance_place_list(x, y, oWall, touching, false); //get the instance of the wall in the future in the horizontal
 //MID LOCATION (> 32 VECTOR)
 
+var checkNewY = 0;
+var checkNewX = 0;
+
 if (touching_amt == 0) {
 	var _dis = floor(point_distance(x, y, x + _hsp, y + _vsp));
 	var inter = _dis / 32;
@@ -58,22 +61,66 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 		var change_x = false;
 		var change_y = false;
 		
+		var bbox_height = bbox_bottom-bbox_top;
+		var bbox_width = bbox_right - bbox_left;
+		
+		var toleranceSnap = 1;
+		
+		//Snap to new locations
+		//Define a desired y value, and set change_y to true so we can check later.
 		if (wall.bbox_top > bbox_top) { //Falling
-			y = floor(wall.bbox_top + (y - bbox_bottom)) - offset;
-			change_y = true;
+			var differenceInY = (y - bbox_bottom);
+			
+			if(abs(differenceInY) < bbox_height*toleranceSnap){ 
+				checkNewY = floor(wall.bbox_top + differenceInY) - offset;
+				
+				change_y = true;
+			}
+			
 		} else if (wall.bbox_bottom < bbox_bottom) { //Jumping
-			y = ceil(wall.bbox_bottom + (y - bbox_top)) + offset;
-			change_y = true;
+			
+			var differenceInY = y - bbox_top;
+			
+			if(abs(differenceInY) < bbox_height*toleranceSnap){
+				checkNewY = ceil(wall.bbox_bottom + differenceInY) + offset;
+			
+				change_y = true;
+			}
 		}
 		
-		if (!change_y)
+		//This is where we check if the desired y results inside a wall
+		if(change_y)
+			if(instance_place(x,checkNewY,oWall) == noone){
+				y = checkNewY;
+				//If it doesn't, clip to this new y
+			}
+			else
+				//No snapping is done
+				change_y = false;
+		
+		//If no y snap is done, check your x
+		//Define a desired x value, and set change_x to true so we can check later.
+		if (!change_y){
 			if (wall.bbox_left >= bbox_right) { //Going right
-				x = floor(wall.bbox_left+ (x - bbox_right)) - offset;
+				checkNewX = floor(wall.bbox_left+ (x - bbox_right)) - offset;
+				
 				change_x = true;
 			} else if (wall.bbox_right <= bbox_left) { //Going left
-				x = ceil(wall.bbox_right + (x - bbox_left)) + offset;
+				checkNewX = ceil(wall.bbox_right + (x - bbox_left)) + offset;
+				
 				change_x = true;
 			}
+		}
+		
+		//Now we check if there is a wall in the desired x position, just like the y from before
+		if(change_x)
+			if(instance_place(checkNewX,y,oWall) == noone){
+				x = checkNewX;
+				//If not, clip to this new x
+			}
+			else
+				//No snapping on x is done.
+				change_x = false;
 		
 		if (change_x) {
 			map[? GRAVITY_MAP.HSP] = 0;
