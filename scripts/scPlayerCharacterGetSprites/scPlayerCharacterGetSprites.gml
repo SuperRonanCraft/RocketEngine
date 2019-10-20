@@ -14,12 +14,12 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.FALLING] = sEnemy_default_fall;
 		map[? ANIMATIONSTATE.KNOCKBACK] = sEnemy_default_knockBack;
 		map[? ANIMATIONSTATE.KNOCKBACK2] = sEnemy_default_knockBack2;
-		map[? ANIMATIONSTATE.TECHED] = sPlayer_sword_tech; //MISSING sEnemy_default_tech;
+		map[? ANIMATIONSTATE.TECHED] = sEnemy_default_tech;
 		map[? ANIMATIONSTATE.DEAD] = sEnemy_default_dead1;
 		map[? ANIMATIONSTATE.DEAD2] = sEnemy_default_dead2;
 		map[? ANIMATIONSTATE.TRAPPED] = sEnemy_default_trapped;
-		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_sword_deadFrozen; //MISSING sEnemy_default_deadFrozen;
-		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser; //MISSING sEnemy_default_deadLaser;
+		map[? ANIMATIONSTATE.DEADFROZEN] = sEnemy_default_deadFrozen; 
+		map[? ANIMATIONSTATE.DEADLASER] = sEnemy_default_deadLaser; 
         break;
     case CHARACTERS.SWORD:
         map[? ANIMATIONSTATE.STANDING] = sPlayer_sword_idle;

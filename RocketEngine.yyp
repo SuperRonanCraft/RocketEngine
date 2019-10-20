@@ -2231,6 +2231,14 @@
             }
         },
         {
+            "Key": "4b249ebf-7aa7-4489-9b25-f548eb0066d5",
+            "Value": {
+                "id": "b097ae73-ad20-4893-8baa-5931e651df3a",
+                "resourcePath": "sprites\\sEnemy_default_deadLaser\\sEnemy_default_deadLaser.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4b6f8e82-b26a-4d72-9b6f-f70dc68dfa01",
             "Value": {
                 "id": "02e5a3f2-3f25-4fce-a164-37cb1589e5f9",
@@ -2739,6 +2747,14 @@
             "Value": {
                 "id": "5cb71adb-3348-4181-983a-364b01f3d095",
                 "resourcePath": "sprites\/sShuriken_Shotgun\/sShuriken_Shotgun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5b8f7118-c6c2-487f-b34a-25317a8f2063",
+            "Value": {
+                "id": "46880cfc-3e0f-4d78-830b-2a44128fb3d3",
+                "resourcePath": "sprites\\sEnemy_default_tech\\sEnemy_default_tech.yy",
                 "resourceType": "GMSprite"
             }
         },
