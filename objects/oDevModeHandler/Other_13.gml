@@ -24,7 +24,7 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 	scDrawText(_xx + (_w / 2) - tab_buf, _yy - (tab_buf + _h), mods[0], c_yellow, _scale, noone, alpha, fa_middle, fa_top);
 		//SLIDER
 	scDrawSpriteExt(_xx, _yy + 4, sUISliderBar, 0, noone, alpha);
-	var value_max = 50;
+	var value_max = 500;
 	var value = tab_map[? mods[1]] != undefined ? tab_map[? mods[1]] : 5;
 	var _width = sprite_get_width(sUISliderBar);
 	var _scale_btn = 1;

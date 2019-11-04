@@ -40,7 +40,7 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 		_map[? GRAVITY_MAP.STANDING] = false;
 		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
 	}
-	show_debug_message(_map[? GRAVITY_MAP.VSP_MOVE]);
+	//show_debug_message(_map[? GRAVITY_MAP.VSP_MOVE]);
 	//Weapon
 	if (key_shoot)
 		scWeaponActivate();

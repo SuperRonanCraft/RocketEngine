@@ -3431,6 +3431,14 @@
             }
         },
         {
+            "Key": "734efca1-08ba-450e-9d7d-ba6f79d066f3",
+            "Value": {
+                "id": "758e1b9a-7032-40e1-b001-7a047d80e641",
+                "resourcePath": "scripts\\scGravityCollisionBACKUP2\\scGravityCollisionBACKUP2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "73916b9e-7998-48c3-a569-71fa392c6841",
             "Value": {
                 "id": "786d2bd9-b04e-49d1-b3fc-02c4e14a6b7f",
@@ -5775,6 +5783,14 @@
             }
         },
         {
+            "Key": "c1cdbb69-08de-4eae-8c75-053e7acfcbf3",
+            "Value": {
+                "id": "194f58ec-f4e6-4094-ab06-9bc808574261",
+                "resourcePath": "objects\\oPlace\\oPlace.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c1f5c5d0-ce30-4762-b35e-8dd3ca8f0bdf",
             "Value": {
                 "id": "256e8426-23dd-45b4-95cc-aa172dc85efd",
@@ -7431,6 +7447,7 @@
         "73916b9e-7998-48c3-a569-71fa392c6841",
         "255381a9-d5e7-4caf-9bd4-79fee8c6ff50",
         "bf9f906a-b846-4b1d-a93e-2e9539511ed4",
+        "734efca1-08ba-450e-9d7d-ba6f79d066f3",
         "77af0928-b5db-4c11-a59e-c6e1536a0da9",
         "eea9e682-ca9f-4f5b-9693-278b65a0f3ac",
         "61b0a5e9-0a7e-430b-ba3b-454623f93619",
