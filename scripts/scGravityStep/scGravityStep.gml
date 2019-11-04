@@ -12,4 +12,11 @@ scGravityCollision();
 x += map[? GRAVITY_MAP.HSP];
 y += map[? GRAVITY_MAP.VSP];
 
+map[? GRAVITY_MAP.HSP_LAST] = map[? GRAVITY_MAP.HSP];
+if (map[? GRAVITY_MAP.VSP] != 0)
+	map[? GRAVITY_MAP.VSP_LAST] = map[? GRAVITY_MAP.VSP];
+
+map[? GRAVITY_MAP.HSP_PUSH] = 0;
+map[? GRAVITY_MAP.VSP_PUSH] = 0;
+
 time_dialation = 1;

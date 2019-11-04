@@ -19,82 +19,37 @@ map[? GRAVITY_MAP.VSP] *= time_dialation;
 var _hsp = map[? GRAVITY_MAP.HSP];
 var _vsp = map[? GRAVITY_MAP.VSP];
 
-var touching = ds_list_create();
-
-//CURRENT LOCATION
-var touching_amt = instance_place_list(x + sign(_hsp), y + sign(_vsp), oWall,touching,false); //get the instance of the wall in the future in the horizontal
-//MID LOCATION (> 32 VECTOR)
-var newWalls = noone; //Check for later
-
-
-var checkNewY = 0;
-var checkNewX = 0;
-
-var _dis = floor(point_distance(x, y, x + _hsp, y + _vsp));
-
-var x_change = map[? GRAVITY_MAP.HSP];
-var y_change = map[? GRAVITY_MAP.VSP];
-
-/*
-if (touching_amt == 0 && _dis >= 16) {
-	var inter = _dis / 16;
-
-	for (var i = 1; i < inter; i++) {
-		x_change = point_distance(x, y, x + (_hsp / inter) * i, y) * sign(_hsp);
-		y_change = point_distance(x, y, x, y + (_vsp / inter) * i) * sign(_vsp);
-		
-		touching_amt = instance_place_list(x + x_change, y + y_change, oWall,touching,false); //get the instance of the wall in the future in the horizontal
-		instance_create_depth(x + x_change, y + y_change, -300,oPlace);
+//Horizontal
+if (place_meeting(x + _hsp, y, oWall)) {
+	if (_hsp == 0)
+		_hsp = map[? GRAVITY_MAP.HSP_LAST];
+	while(!place_meeting(x + sign(_hsp), y, oWall))
+		x += sign(_hsp);
+	map[? GRAVITY_MAP.HSP] = 0;
+	map[? GRAVITY_MAP.HSP_MOVE] = map[? GRAVITY_MAP.HSP];
 	
-		
-		if (touching_amt != 0)
-			break;
-	}
+	if (map[? GRAVITY_MAP.HSP_KNOCKBACK] != 0)
+		if (player_tech)
+			scKnockbackBounce();
+		else
+			map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
 }
 
-if (touching_amt == 0)
-	touching_amt = instance_place_list(x + _hsp, y + _vsp, oWall,touching,false); //get the instance of the wall in the future
-*/
-if(touching_amt > 0){
-	
-	var change_x = x;
-	var change_y = y;
-	
-	if(y_change == 0){
-		y_change = -1;	
+//Vertical
+if (place_meeting(x, y + _vsp, oWall)) {
+	if (_vsp != 0)
+		while(!place_meeting(x, y + sign(_vsp), oWall))
+			y += sign(_vsp);
+	else {
+		_vsp = map[? GRAVITY_MAP.VSP_LAST] != 0 ? map[? GRAVITY_MAP.VSP_LAST] : 1;
+		show_debug_message("BAD COLLISION Y " + string(_vsp));
+		while(place_meeting(x, y + sign(_vsp), oWall))
+			y -= sign(_vsp);
 	}
-	
-	while(touching_amt != 0){
-		touching_amt = instance_place_list( change_x + (offset * -sign(x_change)), change_y + (offset * -sign(y_change)), oWall, touching, false );
-		change_x += offset * -sign(x_change);
-		change_y += offset * -sign(y_change);
-	}
-	
-	x = change_x;
-	y = change_y;
-	
-	if(sign(x_change != 0)){
-		map[? GRAVITY_MAP.HSP] = 0;
-		map[? GRAVITY_MAP.HSP_MOVE] = map[? GRAVITY_MAP.HSP];
-	
-		if (map[? GRAVITY_MAP.HSP_KNOCKBACK] != 0)
-			if (player_tech)
-				scKnockbackBounce();
-			else
-				map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
-	}
-	
-	if(sign(y_change) == 1 || (sign(y_change) == 0 && map[? GRAVITY_MAP.STANDING]) ){
-		map[? GRAVITY_MAP.VSP] = 0;
-		map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
-		map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
-	}
-	
-	
-	
+	map[? GRAVITY_MAP.VSP] = 0;
+	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
+	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
 }
-
-
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
 //ds_list_destroy(touching);
