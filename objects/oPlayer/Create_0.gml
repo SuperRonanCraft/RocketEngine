@@ -19,12 +19,12 @@ scGravityStart();
 scKeybindsSet(keys);
 
 //GUI
-hp_scale = 1;
-hpsprite = sHealth;
-hpheight = sprite_get_height(hpsprite);
-hpwidth = sprite_get_width(hpsprite);
-hp_color = c_white;
-hp_offset = 0;
+//hp_scale = 1;
+//hpsprite = sHealth;
+//hpheight = sprite_get_height(hpsprite);
+//hpwidth = sprite_get_width(hpsprite);
+//hp_color = c_white;
+//hp_offset = 0;
 
 //Load Combos
 scComboStart();

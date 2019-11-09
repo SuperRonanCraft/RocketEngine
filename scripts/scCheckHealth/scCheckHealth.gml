@@ -6,5 +6,5 @@ if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0) {
 	map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.DEAD;
 	scPlayerDied();
 } else
-	if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 2 && map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] == 0) //Pulse health bar
-		map[? PLAYER_MAP.FLASH_HEALTH_ALPHA] = 0.75;
+	if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 2 && health_map[? HEALTH_MAP.FLASH_ALPHA] == 0) //Pulse health bar
+		health_map[? HEALTH_MAP.FLASH_ALPHA] = 0.75;
