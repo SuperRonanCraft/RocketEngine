@@ -2447,6 +2447,14 @@
             }
         },
         {
+            "Key": "51707115-2978-49aa-b9bf-59440f6dbeeb",
+            "Value": {
+                "id": "1f601f39-5f88-4c0c-8b51-bbde56601835",
+                "resourcePath": "views\\51707115-2978-49aa-b9bf-59440f6dbeeb.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "51b83be3-f973-42ad-8357-919d468bb2cd",
             "Value": {
                 "id": "db736f65-ce57-47ce-8b6c-32ccf2fe8ceb",
@@ -2748,6 +2756,14 @@
                 "id": "1fc71b13-8baf-4647-82ba-0810f028784f",
                 "resourcePath": "sprites\/s_Shockwave\/s_Shockwave.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5ac92e1d-9b27-4b23-9db0-aab665063c2f",
+            "Value": {
+                "id": "0673bf64-f71f-42a3-9e17-eb5033e85371",
+                "resourcePath": "scripts\\scUIEnemyHealth\\scUIEnemyHealth.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3623,6 +3639,14 @@
             }
         },
         {
+            "Key": "79910c27-3c9b-4d6f-b6a4-0284ab830ca1",
+            "Value": {
+                "id": "e4473174-8e02-41bb-8fad-6c92a2992872",
+                "resourcePath": "views\\79910c27-3c9b-4d6f-b6a4-0284ab830ca1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "79a0373a-3b39-4477-8005-f971adc919cc",
             "Value": {
                 "id": "20735174-7240-4c4f-bcfd-c6b41352e699",
@@ -3740,6 +3764,14 @@
                 "id": "cea1c97b-abed-4adf-b0ff-ada14a6d2c4d",
                 "resourcePath": "views\/7d3c8d82-57db-42fd-a51a-50ebebba8d35.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7df196bd-cc21-4d29-8147-7cb780a8d6dd",
+            "Value": {
+                "id": "844f9341-0bc3-463d-839b-7a85e33f2b78",
+                "resourcePath": "scripts\\scHealthStart\\scHealthStart.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5871,6 +5903,14 @@
             }
         },
         {
+            "Key": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
+            "Value": {
+                "id": "621a565b-63fd-4d92-85c0-b724fea57be3",
+                "resourcePath": "objects\\pEntity\\pEntity.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c4a44cc8-8161-47da-95a7-9492b3f38545",
             "Value": {
                 "id": "f128ff9a-d3e8-4202-af21-890b738615e1",
@@ -7671,6 +7711,7 @@
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "8d728d6f-9105-4198-8af2-8e218a26f3ba",
+        "5ac92e1d-9b27-4b23-9db0-aab665063c2f",
         "1aace334-4b62-4771-9966-828d30264d83",
         "4dc5f02b-3d00-433c-8f1c-a15ef7615a33",
         "5238e325-fb37-4c36-b216-e884eaababf9",
@@ -7789,7 +7830,8 @@
         "b5cc65ae-c078-440a-9b5f-a6e506061b74",
         "642537f0-5347-4a8c-9cf9-7cb43338096e",
         "7a2d403c-3d62-4bc1-a37c-c7990a5ec6d2",
-        "b07921d9-8376-4807-9a92-24c903c3e303"
+        "b07921d9-8376-4807-9a92-24c903c3e303",
+        "7df196bd-cc21-4d29-8147-7cb780a8d6dd"
     ],
     "tutorial": ""
 }

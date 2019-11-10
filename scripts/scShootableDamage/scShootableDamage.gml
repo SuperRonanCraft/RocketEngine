@@ -39,16 +39,17 @@ with (damaging) {
 			}
 			player_map[? PLAYER_MAP.DAMAGE_LAST] = dmg;
 			//health_map[? HEALTH_MAP.FLASH_ALPHA] = 1;
-			if (player_map[? PLAYER_MAP.ALIVE]) {
-				health_map[? HEALTH_MAP.DAMAGE] += dmg;
-				health_map[? HEALTH_MAP.DAMAGE_MUL] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 2);
-				health_map[? HEALTH_MAP.HEAL] -= dmg;
-			}
 			scBuffHandler(BUFF_EVENT.DAMAGE_TAKEN, [damager, dmg]);
 			if (damager != noone)
 				with (damager)
 					if (object_index == oPlayer) //Is a player
 						scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damaging, dmg]);
+		}
+		if (map[? SHOOTABLE_MAP.HEALTH] > 0) {
+			health_map[? HEALTH_MAP.DAMAGE] += dmg;
+			health_map[? HEALTH_MAP.DAMAGE_MUL] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
+			health_map[? HEALTH_MAP.HEAL] -= dmg;
+			health_map[? HEALTH_MAP.DAMAGE_TIME] = 0;
 		}
 		map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
 		didDamage = true;

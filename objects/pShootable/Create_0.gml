@@ -6,6 +6,8 @@
 time_dialation = 1; //Time 1 = 100% speed
 //canHeal = true;
 
+scHealthStart();
+
 shootable_map = ds_map_create();
 var map = shootable_map;
 map[? SHOOTABLE_MAP.CAN_HEAL] = true; //Can heal
