@@ -81,34 +81,6 @@
             "value": "100",
             "varName": "x_max",
             "varType": 0
-        },
-        {
-            "id": "2ced2608-5bc3-4a5a-ac0a-cc3594d6df7d",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "vsp",
-            "varType": 0
-        },
-        {
-            "id": "4c0a014b-f4c8-476f-937e-e4f62ee20d15",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "2",
-            "varName": "hsp",
-            "varType": 0
         }
     ],
     "solid": false,

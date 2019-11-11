@@ -6,7 +6,7 @@ map[? GRAVITY_MAP.WALK_SPEED] = 6;
 map[? GRAVITY_MAP.WALK_SPEED_MOD] = 0;
 map[? GRAVITY_MAP.JUMP_HEIGHT] = 25 - (25 / (TIME_SPEED * 2));
 map[? GRAVITY_MAP.JUMP_MOD] = 0; //Amount to temporaraly add/sub from jumping
-map[? GRAVITY_MAP.GRAVITY] = 1.8 / 2;
+map[? GRAVITY_MAP.GRAVITY] = 1.8/2;
 
 //Overall (DO NOT EDIT)
 map[? GRAVITY_MAP.HSP] = 0;

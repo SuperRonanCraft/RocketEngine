@@ -23,6 +23,12 @@ var touching = ds_list_create();
 
 //CURRENT LOCATION
 var touching_amt = instance_place_list(x, y, oWall,touching,false); //get the instance of the wall in the future in the horizontal
+
+var insideWall = false;
+if(touching_amt != 0){
+	insideWall = true;	
+}
+//var touching_amt = 0;
 //MID LOCATION (> 32 VECTOR)
 var newWalls = noone; //Check for later
 
@@ -35,6 +41,8 @@ var _dis = floor(point_distance(x, y, x + _hsp, y + _vsp));
 var x_change = map[? GRAVITY_MAP.HSP];
 var y_change = map[? GRAVITY_MAP.VSP];
 
+var repeatNum = 0;
+
 
 if (touching_amt == 0 && _dis >= 16) {
 	var inter = _dis / 16;
@@ -45,7 +53,7 @@ if (touching_amt == 0 && _dis >= 16) {
 		
 		touching_amt = instance_place_list(x + x_change, y + y_change, oWall,touching,false); //get the instance of the wall in the future in the horizontal
 		instance_create_depth(x + x_change, y + y_change, -300,oPlace);
-	
+		repeatNum++;
 		
 		if (touching_amt != 0)
 			break;
@@ -62,8 +70,14 @@ var change_y = false;
 var setX = false;
 var setY = false;
 
+//sticky = noone;
+var checkNewSticky = false;
+var findNewSticky = false;
+
 if (touching_amt != 0) { //If touching a wall in the horizontal
 	for(var i = 0; i < touching_amt; i ++){
+		
+		checkNewSticky = false;
 		
 		_hsp = x_change;
 		_vsp = y_change;
@@ -88,7 +102,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			
 			var newY = floor(wall.bbox_top + differenceInY) - offset;
 			var distanceToSnap = max(y,newY)-min(y,newY);
-			var vspCheck = _vsp*1;
+			var vspCheck = _vsp*1.2;
 			
 			if(floor(abs(vspCheck)) >= 1)
 				toleranceSnapY = ( distanceToSnap/vspCheck);
@@ -97,7 +111,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			
 			if(toleranceSnapY < 1){ 
 				checkNewY = floor(wall.bbox_top + differenceInY) - offset;
-				
+				checkNewSticky = true;
 				change_y = true;
 				
 			}
@@ -116,7 +130,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 				toleranceSnapY = 0;
 			
 			if(abs(toleranceSnapY) < 1){ 
-				checkNewY = floor(wall.bbox_bottom + differenceInY) + offset;
+				checkNewY = ceil(wall.bbox_bottom + differenceInY) + offset;
 				
 				change_y = true;
 				
@@ -131,7 +145,10 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			newWalls = instance_place(x+_hsp,checkNewY,oWall);
 			if(newWalls == noone){
 				y = checkNewY;
-					
+				if(checkNewSticky){
+					sticky = wall;
+					findNewSticky = true;
+				}
 			}
 				
 				//If it doesn't, clip to this new y
@@ -145,16 +162,24 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			else{
 				//No snapping is done
 				if(newWalls.id != wall.id && ds_list_find_index(touching,newWalls) == -1){
-					ds_list_add(touching,newWalls);
-					touching_amt++;
-					setY = true;
+					
+					if(sticky != newWalls.id){
+						ds_list_add(touching,newWalls);
+						touching_amt++;
+						setY = true;
+					}
+					
+				}
+				else if(sign(_vsp) == -1){
+					setY = true;	
 				}
 				change_y = false;
 			}
 		}
 		//If no y snap is done, check your x
 		//Define a desired x value, and set change_x to true so we can check later.
-		if (!change_y){
+		//============================================================================================
+		if (!insideWall){
 			if (wall.bbox_left >= bbox_right) { //Going right
 				var differenceInX = (x - bbox_right);
 				
@@ -173,6 +198,27 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 				}
 			}
 		}
+		
+		else if (!change_y && insideWall){
+			if (wall.bbox_left < bbox_right && sign(_hsp) == 1) { //Going right
+				var differenceInX = (x - bbox_right);
+				
+				if(abs(differenceInX) < bbox_width*toleranceSnapX){ 
+					checkNewX = floor(wall.bbox_left+ differenceInX) - offset;
+				
+					change_x = true;
+				}
+			} else if (wall.bbox_right > bbox_left && sign(_hsp) == -1) { //Going left
+				var differenceInX = (x - bbox_left);
+				
+				if(abs(differenceInX) < bbox_width*toleranceSnapX){ 
+					checkNewX = ceil(wall.bbox_right + differenceInX) + offset;
+				
+					change_x = true;
+				}
+			}	
+		}
+		//================================================================================================
 		
 		//Now we check if there is a wall in the desired x position, just like the y from before
 		newWalls = noone;
@@ -193,7 +239,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			}
 		}
 		
-		
+		/*
 		if(!change_x && !change_y && touching_amt > 1){
 			setX = true;
 			setY = true;
@@ -203,7 +249,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 		else{
 			setY = false;
 			setX = false;
-		}
+		}*/
 	
 		
 		
@@ -221,7 +267,13 @@ if (change_x || setX) {
 }
 		
 if (change_y || setY) {
-	map[? GRAVITY_MAP.VSP] = 0;
+	
+	if(sticky == noone){
+		map[? GRAVITY_MAP.VSP] = 0;
+	}
+	else{
+		map[? GRAVITY_MAP.VSP] = sticky.vsp;	
+	}
 	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
 	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
 }	
@@ -229,7 +281,27 @@ if (change_y || setY) {
 	
 }
 	
+//Move entity
+
+x += map[? GRAVITY_MAP.HSP];
+y += map[? GRAVITY_MAP.VSP];
+
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
-//ds_list_destroy(touching);
-map[? GRAVITY_MAP.STANDING] = instance_place(x, y + (offset * grv_dir + (map[? GRAVITY_MAP.GRAVITY] * grv_dir)), oWall) != noone;
+ds_list_destroy(touching);
+
+if(!findNewSticky){
+	sticky = instance_place(x, y + (offset * grv_dir + (map[? GRAVITY_MAP.GRAVITY] * grv_dir)), oWall);
+}
+
+if(sticky != noone && (sign(map[? GRAVITY_MAP.VSP]) == grv_dir || sign(map[? GRAVITY_MAP.VSP]) == 0) ){
+	differenceInY = (y - bbox_bottom);
+	y = floor(sticky.bbox_top + differenceInY) - offset;
+	map[? GRAVITY_MAP.VSP] = sticky.vsp;
+	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
+	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
+}
+
+
+
+map[? GRAVITY_MAP.STANDING] = ( sticky ) != noone;

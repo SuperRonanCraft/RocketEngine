@@ -318,6 +318,20 @@
             "value": "scPlayerCharacterGet()",
             "varName": "character",
             "varType": 5
+        },
+        {
+            "id": "a47e7532-9565-45c7-b32f-7cb969ff5917",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-4",
+            "varName": "sticky",
+            "varType": 0
         }
     ],
     "solid": false,

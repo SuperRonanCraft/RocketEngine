@@ -8,3 +8,6 @@ y_original = y;
 //}
 mask_index = -1;
 event_inherited();
+
+vsp = 2;
+hsp = 2;

@@ -1,4 +1,7 @@
 /// @desc Create tiles
+hsp = 0;
+vsp = 0;
+
 
 if (!create_tiles || global.gamemode == GAMEMODE.SINGLE) exit;
 var lay_id = layer_get_id("Tiles");

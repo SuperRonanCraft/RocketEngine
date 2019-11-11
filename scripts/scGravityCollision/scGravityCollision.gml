@@ -19,36 +19,77 @@ map[? GRAVITY_MAP.VSP] *= time_dialation;
 var _hsp = map[? GRAVITY_MAP.HSP];
 var _vsp = map[? GRAVITY_MAP.VSP];
 
+var wall = instance_place(x + _hsp, y, oWall);
+
 //Horizontal
-if (place_meeting(x + _hsp, y, oWall)) {
-	if (_hsp == 0)
-		_hsp = map[? GRAVITY_MAP.HSP_LAST];
-	while(!place_meeting(x + sign(_hsp), y, oWall))
-		x += sign(_hsp);
-	map[? GRAVITY_MAP.HSP] = 0;
-	map[? GRAVITY_MAP.HSP_MOVE] = map[? GRAVITY_MAP.HSP];
+if (wall != noone) {
+	var newWall = instance_place(x + _hsp + (wall.hsp + sign(wall.hsp) ) * sign(wall.hsp), y + wall.vsp + sign(wall.vsp), oWall); 
 	
-	if (map[? GRAVITY_MAP.HSP_KNOCKBACK] != 0)
-		if (player_tech)
-			scKnockbackBounce();
-		else
-			map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
+	if (newWall != noone) {
+		x += (wall.hsp + sign(wall.hsp)) * sign(wall.hsp);
+		if (_hsp == 0)
+			_hsp = map[? GRAVITY_MAP.HSP_LAST];
+		while(!place_meeting(x + sign(_hsp), y, oWall))
+			x += sign(_hsp);
+		map[? GRAVITY_MAP.HSP] = 0;
+		map[? GRAVITY_MAP.HSP_MOVE] = map[? GRAVITY_MAP.HSP];
+	
+		if (map[? GRAVITY_MAP.HSP_KNOCKBACK] != 0)
+			if (player_tech)
+				scKnockbackBounce();
+			else
+				map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
+				
+	}
+	else{
+		x += _hsp + wall.hsp + sign(wall.hsp);
+	}
 }
 
+
+wall = instance_place(x, y + _vsp, oWall);
 //Vertical
-if (place_meeting(x, y + _vsp, oWall)) {
-	if (_vsp != 0)
-		while(!place_meeting(x, y + sign(_vsp), oWall))
-			y += sign(_vsp);
-	else {
-		_vsp = map[? GRAVITY_MAP.VSP_LAST] != 0 ? map[? GRAVITY_MAP.VSP_LAST] : 1;
-		show_debug_message("BAD COLLISION Y " + string(_vsp));
-		while(place_meeting(x, y + sign(_vsp), oWall))
-			y -= sign(_vsp);
+
+var skipYreset = false;
+
+if (wall != noone) {
+	if (_vsp != 0){
+		var newWall = instance_place(x + (wall.hsp + sign(wall.hsp)), y + _vsp + wall.vsp + sign(wall.vsp), oWall); 
+		if(newWall != noone && newWall == wall){
+			while(!place_meeting(x, y + sign(_vsp), oWall))
+				y += sign(_vsp);
+		}
+		else{
+			skipYreset = true;
+			show_debug_message("?");
+		}
 	}
-	map[? GRAVITY_MAP.VSP] = 0;
-	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
-	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
+	else{
+		
+		newWall = instance_place(x + (wall.hsp + sign(wall.hsp)) , y + _vsp + wall.vsp + sign(wall.vsp), oWall); 
+		
+		if(newWall != noone){
+		
+			_vsp = map[? GRAVITY_MAP.VSP_LAST] != 0 ? map[? GRAVITY_MAP.VSP_LAST] : 1;
+			show_debug_message("BAD COLLISION Y " + string(_vsp));
+			while(wall != noone){
+				wall = instance_place(x, y + sign(_vsp) , oWall);
+				if(wall != noone)
+					y -= sign(_vsp);
+			}
+		
+		}
+		else{
+			y += wall.vsp + sign(wall.vsp);
+		}
+	}
+	
+	if(!skipYreset){
+		
+		map[? GRAVITY_MAP.VSP] = 0;
+		map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
+		map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
+	}
 }
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
