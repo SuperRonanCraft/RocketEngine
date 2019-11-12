@@ -135,7 +135,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			else
 				toleranceSnapY = 0;
 			
-			if(abs(toleranceSnapY) < 1){ 
+			if(abs(toleranceSnapY) < 1 || abs(distanceToSnap) > 100 ){ 
 				checkNewY = ceil(wall.bbox_bottom + differenceInY) + offset;
 				
 				change_y = true;
