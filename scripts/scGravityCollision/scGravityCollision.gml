@@ -43,9 +43,11 @@ var y_change = map[? GRAVITY_MAP.VSP];
 
 var repeatNum = 0;
 
+//Number of pixels to check each collision
+var magicNum = 16;
 
-if (touching_amt == 0 && _dis >= 16) {
-	var inter = _dis / 16;
+if (touching_amt == 0 && _dis >= magicNum) {
+	var inter = _dis / magicNum;
 
 	for (var i = 1; i < inter; i++) {
 		x_change = point_distance(x, y, x + (_hsp / inter) * i, y) * sign(_hsp);
@@ -79,13 +81,17 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 		
 		checkNewSticky = false;
 		
-		_hsp = x_change;
-		_vsp = y_change;
+		
+		_vsp = min(abs(map[? GRAVITY_MAP.VSP]), magicNum);
+		_hsp = min(abs(map[? GRAVITY_MAP.HSP]), magicNum);
+		
+		_vsp *= sign(map[? GRAVITY_MAP.VSP]);
+		_hsp *=sign(map[? GRAVITY_MAP.HSP]);
 		
 		var wall = touching[|i];
 		
-		change_x = false;
-		change_y = false;
+		//change_x = false;
+		//change_y = false;
 		
 		var tempY = y;
 		
@@ -124,7 +130,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			var distanceToSnap = max(y,newY)-min(y,newY);
 			var vspCheck = _vsp*2;
 			
-			if(abs(vspCheck) != 0)
+			if(vspCheck != 0)
 				toleranceSnapY = ( distanceToSnap/vspCheck);
 			else
 				toleranceSnapY = 0;
@@ -138,12 +144,13 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 		}
 		
 		
+		
 		//This is where we check if the desired y results inside a wall
 		if(change_y){
 			
 			//if(touching_amt > 1){
 			newWalls = instance_place(x+_hsp,checkNewY,oWall);
-			if(newWalls == noone){
+			if( (newWalls == noone) ){ //|| ds_list_find_index(touching,newWalls) != -1
 				y = checkNewY;
 				if(checkNewSticky){
 					sticky = wall;
@@ -159,7 +166,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			}
 			*/
 			
-			else{
+			else if(newWalls != noone){
 				//No snapping is done
 				if(newWalls.id != wall.id && ds_list_find_index(touching,newWalls) == -1){
 					
@@ -285,7 +292,6 @@ if (change_y || setY) {
 
 x += map[? GRAVITY_MAP.HSP];
 y += map[? GRAVITY_MAP.VSP];
-
 
 //check to see if a wall is 1 pixel under (plus your vertical speed), then you are standing, and return that variable
 ds_list_destroy(touching);
