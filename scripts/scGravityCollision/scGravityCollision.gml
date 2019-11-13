@@ -117,7 +117,9 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			
 			if(toleranceSnapY < 1){ 
 				checkNewY = floor(wall.bbox_top + differenceInY) - offset;
-				checkNewSticky = true;
+				if(grv_dir == 1){
+					checkNewSticky = true;
+				}
 				change_y = true;
 				
 			}
@@ -137,7 +139,9 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 			
 			if(abs(toleranceSnapY) < 1 || abs(distanceToSnap) > 100 ){ 
 				checkNewY = ceil(wall.bbox_bottom + differenceInY) + offset;
-				
+				if(grv_dir == -1){
+					checkNewSticky = true;
+				}
 				change_y = true;
 				
 			}
@@ -177,7 +181,7 @@ if (touching_amt != 0) { //If touching a wall in the horizontal
 					}
 					
 				}
-				else if(sign(_vsp) == -1){
+				else if(sign(_vsp) == -grv_dir){
 					setY = true;	
 				}
 				change_y = false;
@@ -290,6 +294,8 @@ if (change_y || setY) {
 	
 //Move entity
 
+//map[? GRAVITY_MAP.VSP] = clamp(map[? GRAVITY_MAP.VSP], -32, 32);
+
 x += map[? GRAVITY_MAP.HSP];
 y += map[? GRAVITY_MAP.VSP];
 
@@ -301,8 +307,15 @@ if(!findNewSticky){
 }
 
 if(sticky != noone && (sign(map[? GRAVITY_MAP.VSP]) == grv_dir || sign(map[? GRAVITY_MAP.VSP]) == 0) ){
-	differenceInY = (y - bbox_bottom);
-	y = floor(sticky.bbox_top + differenceInY) - offset;
+	
+	if(grv_dir == 1){
+		differenceInY = (y - bbox_bottom);
+		y = floor(sticky.bbox_top + differenceInY) - offset;
+	}
+	else{
+		differenceInY = (y - bbox_top);
+		y = ceil(sticky.bbox_bottom + differenceInY) + offset;
+	}
 	map[? GRAVITY_MAP.VSP] = sticky.vsp;
 	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
 	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
