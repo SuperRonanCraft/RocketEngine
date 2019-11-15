@@ -17,4 +17,11 @@ if ((map[? WEAPON_MAP.ENABLED] && map[? WEAPON_MAP.RELOAD_TIME] <= 0 && map[? WE
 			map[? WEAPON_MAP.COOLDOWN_TIME] = shuriken_map[? SHURIKEN_MAP.COOLDOWN];
 			map[? WEAPON_MAP.DELAY_TIME] = shuriken_map[? SHURIKEN_MAP.STARTUP];
 			break;
+		case WEAPON.ARROW:
+			var arrow_map = map[? WEAPON_MAP.MAP];
+			map[? WEAPON_MAP.COOLDOWN_TIME] = arrow_map[? ARROW_MAP.COOLDOWN];
+			map[? WEAPON_MAP.DELAY_TIME] = arrow_map[? ARROW_MAP.STARTUP];
+			//map[? WEAPON_MAP.START_DELAY] = true;
+			
+			break;			
 	}

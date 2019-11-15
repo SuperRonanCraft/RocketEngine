@@ -18,7 +18,6 @@ if (old_shuriken_map[? SHURIKEN_MAP.TYPE] != shur) {
 	map[? WEAPON_MAP.GUI_ICON] = shuriken_map[? SHURIKEN_MAP.PROJECTILE];
 	//map[? WEAPON_MAP.GUI_BUFFS] = shuriken_map[? SHURIKEN_MAP.BUFF];
 	map[? WEAPON_MAP.CLIP] = map[? WEAPON_MAP.AMMO];
-	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;
 	map[? WEAPON_MAP.DAMAGE] = shuriken_map[? SHURIKEN_MAP.DAMAGE];
 	map[? WEAPON_MAP.SPEED] = shuriken_map[? SHURIKEN_MAP.SPEED];
 	map[? WEAPON_MAP.COOLDOWN_TIME] = 15;

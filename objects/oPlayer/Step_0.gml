@@ -62,7 +62,6 @@ switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 			scPlaySound(choose(SOUND.EFFECT_PLAYER_STEP_1), 
 				random_range(0.5, 0.6));
 			break;
-	case ANIMATIONSTATE.TECHED:
 }
 
 

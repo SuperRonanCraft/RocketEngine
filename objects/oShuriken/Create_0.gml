@@ -35,3 +35,5 @@ vsp = 0;
 
 rotate = false;
 imgdir = irandom_range(0,359);
+
+time_dialation = 1;

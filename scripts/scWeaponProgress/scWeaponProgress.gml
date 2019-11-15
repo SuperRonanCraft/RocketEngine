@@ -9,4 +9,7 @@ switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.SHURIKEN:
 		scShurikenProgress(team);
 		break;
+	case WEAPON.ARROW:
+		scArrowProgress(team);
+		break;
 }

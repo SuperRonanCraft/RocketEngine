@@ -15,6 +15,9 @@ with (player) {
 			case WEAPON.SHURIKEN:
 				scShurikenChange(weapon);
 				break;
+			case WEAPON.ARROW:
+				scArrowChange(weapon);
+				break;
 		}
 		weapon_map[? WEAPON_MAP.MODIFIER] = modifier;
 	}

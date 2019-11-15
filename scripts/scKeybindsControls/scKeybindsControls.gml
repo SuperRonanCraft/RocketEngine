@@ -5,6 +5,7 @@ var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT);
 var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
 var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
 var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
+var key_shoot_released = scKeybindsGet(KEYBIND_TYPE.SHOOT_RELEASE);
 
 //AI KEYBINDS
 if (player_aimode && aiBrain != noone) {
@@ -42,8 +43,12 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	}
 	//show_debug_message(_map[? GRAVITY_MAP.VSP_MOVE]);
 	//Weapon
-	if (key_shoot)
+	if (key_shoot){
 		scWeaponActivate();
+	}
+	if(key_shoot_released){
+		scWeaponActivate();	
+	}
 }
 
 //HORIZONTAL & Friction
