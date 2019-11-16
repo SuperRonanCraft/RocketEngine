@@ -82,7 +82,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 			/*var str = scKeyToString(key_map[? KEYBIND_MAP.ULTIMATE]);
 			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
 				0.5, noone, scMovementWave(0.8, 0.4, 1));*/
-		}
+/*		}
 	}
 	
 	//WEAPON SPRITE EQUIPPED

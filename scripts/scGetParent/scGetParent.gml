@@ -6,7 +6,8 @@ var _object = argument[0];
 var _check = argument[1];
 
 var _parent = _check;
-while(object_get_parent(_parent) != -100) {
+while(object_get_parent(_parent) != -100 && 
+		object_get_parent(_parent) != -1) {
 	_parent = object_get_parent(_parent);
 	if (_object == _parent)
 		return true;
