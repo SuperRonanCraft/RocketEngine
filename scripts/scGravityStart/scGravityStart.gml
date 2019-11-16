@@ -29,6 +29,12 @@ map[? GRAVITY_MAP.VSP_KNOCKBACK] = 0;
 map[? GRAVITY_MAP.KNOCKBACK_MULTI] = 1;
 map[? GRAVITY_MAP.KNOCKBACK_ENABLED] = true; //Should kb be enabled?
 map[? GRAVITY_MAP.TECHED_ENABLED] = true; //Should teching be allowed?
+map[? GRAVITY_MAP.JUMP_LAG] = 0; //Current lag
+map[? GRAVITY_MAP.JUMP_LAG_MAX] = 7; //Maximum lag to allow a jump
+map[? GRAVITY_MAP.JUMP_JUMPS] = 0; //Current amt of jumps
+map[? GRAVITY_MAP.JUMP_JUMPS_MAX] = 2; //Maximum amount of jumps allowed
+map[? GRAVITY_MAP.JUMP_DELAY] = 0; //Current delay since last jump
+map[? GRAVITY_MAP.JUMP_DELAY_MAX] = 7; //Minumum amount of time between jumps
 
 friction_base = 0.15;
 friction_adj = 0;
@@ -48,5 +54,6 @@ enum GRAVITY_MAP {
 	FRICTION_MULTI, FRICTION, //WEAPON Controlled
 	HSP_MOVE_MOD, HSP_PUSH, VSP_PUSH, //Buffs
 	HSP_KNOCKBACK, VSP_KNOCKBACK, KNOCKBACK_MULTI, KNOCKBACK_ENABLED, //Knockback
-	TECHED_ENABLED
+	TECHED_ENABLED, 
+	JUMP_LAG, JUMP_LAG_MAX, JUMP_JUMPS, JUMP_JUMPS_MAX, JUMP_DELAY, JUMP_DELAY_MAX
 }

@@ -36,12 +36,27 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	//Friction
 
 	//Vertical
-	if (key_jump && _map[? GRAVITY_MAP.STANDING]) {
+	if (	key_jump && //Key jump
+			_map[? GRAVITY_MAP.JUMP_LAG] <= _map[? GRAVITY_MAP.JUMP_LAG_MAX] &&  //Edge lag
+			_map[? GRAVITY_MAP.JUMP_DELAY] >= _map[? GRAVITY_MAP.JUMP_DELAY_MAX] && //Delay between jumps
+			_map[? GRAVITY_MAP.JUMP_JUMPS] < _map[? GRAVITY_MAP.JUMP_JUMPS_MAX]) { //Maximum combo of jumps
 		_map[? GRAVITY_MAP.VSP_MOVE] = (-(_map[? GRAVITY_MAP.JUMP_HEIGHT] + _map[? GRAVITY_MAP.JUMP_MOD])) * grv_dir;
 		_map[? GRAVITY_MAP.STANDING] = false;
+		_map[? GRAVITY_MAP.JUMP_LAG] = 0;
+		_map[? GRAVITY_MAP.JUMP_DELAY] = 0;
+		_map[? GRAVITY_MAP.JUMP_JUMPS]++;
 		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
+	} else if (!_map[? GRAVITY_MAP.STANDING]) { //Jumping
+		if (	_map[? GRAVITY_MAP.JUMP_JUMPS] == 0 &&
+				_map[? GRAVITY_MAP.JUMP_LAG] <= _map[? GRAVITY_MAP.JUMP_LAG_MAX]) //Delay between being able to walk off an edge and jump
+			_map[? GRAVITY_MAP.JUMP_LAG]++;
+	} else { //Reset once on ground
+		_map[? GRAVITY_MAP.JUMP_LAG] = 0;
+		_map[? GRAVITY_MAP.JUMP_JUMPS] = 0;
 	}
-	//show_debug_message(_map[? GRAVITY_MAP.VSP_MOVE]);
+	if (_map[? GRAVITY_MAP.JUMP_DELAY] <= _map[? GRAVITY_MAP.JUMP_DELAY_MAX]) //Delay between jumps
+		_map[? GRAVITY_MAP.JUMP_DELAY]++;
+	
 	//Weapon
 	if (key_shoot)
 		scWeaponActivate();
