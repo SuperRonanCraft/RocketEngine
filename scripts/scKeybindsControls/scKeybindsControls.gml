@@ -43,12 +43,10 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	}
 	//show_debug_message(_map[? GRAVITY_MAP.VSP_MOVE]);
 	//Weapon
-	if (key_shoot){
+	if (key_shoot)
 		scWeaponActivate();
-	}
-	if(key_shoot_released){
-		scWeaponActivate();	
-	}
+	if(key_shoot_released)
+		scWeaponActivate();
 }
 
 //HORIZONTAL & Friction

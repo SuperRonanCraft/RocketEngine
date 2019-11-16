@@ -1,7 +1,7 @@
 //Shoot a weapon
 
 /// @desc checks the cooldown, if so, start the next cooldown
-// @arg force the cooldown
+// @arg override-cooldown
 
 var map = weapon_map;
 
@@ -22,6 +22,5 @@ if ((map[? WEAPON_MAP.ENABLED] && map[? WEAPON_MAP.RELOAD_TIME] <= 0 && map[? WE
 			map[? WEAPON_MAP.COOLDOWN_TIME] = arrow_map[? ARROW_MAP.COOLDOWN];
 			map[? WEAPON_MAP.DELAY_TIME] = arrow_map[? ARROW_MAP.STARTUP];
 			//map[? WEAPON_MAP.START_DELAY] = true;
-			
 			break;			
 	}

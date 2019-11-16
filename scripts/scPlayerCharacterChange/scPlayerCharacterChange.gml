@@ -36,8 +36,6 @@ if (load)
 			break;
 		}
 
-scWeaponStart();
-
 if (map[? CHARACTER_MAP.PALETTE_INDEX] >= sprite_get_width(map[? CHARACTER_MAP.PALETTE])) //Shader safety
 	map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
 
@@ -45,6 +43,9 @@ if (map[? CHARACTER_MAP.PALETTE_INDEX] >= sprite_get_width(map[? CHARACTER_MAP.P
 shootable_map[? SHOOTABLE_MAP.HEALTH] = map[? CHARACTER_MAP.HEALTH];
 shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = map[? CHARACTER_MAP.HEALTH];
 player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
+
+//Load character weapon
+scWeaponStart();
 
 enum CHARACTERS {
 	DEFAULT, SWORD, 
