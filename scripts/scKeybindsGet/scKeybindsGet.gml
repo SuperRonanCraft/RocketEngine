@@ -16,6 +16,9 @@ if (keys <= KEYBIND.PLAYER2 && !controller_inuse)
 		case KEYBIND_TYPE.JUMP:
 			input = keyboard_check_pressed(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.JUMP]));
 			break;
+		case KEYBIND_TYPE.JUMP_RELEASE:
+			input = keyboard_check_released(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.JUMP]));
+			break;
 		case KEYBIND_TYPE.SHOOT:
 			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.SHOOT]));
 			break;
@@ -53,6 +56,8 @@ if (!onlyboard && !input && map[? KEYBIND_MAP.GAMEPAD] != noone) {
 				break;
 			case KEYBIND_TYPE.JUMP:
 				input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.JUMP_GP])); break;
+			case KEYBIND_TYPE.JUMP_RELEASE:
+				input = gamepad_button_check_released(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.JUMP_GP])); break;
 			case KEYBIND_TYPE.SHOOT:
 				input = gamepad_button_check(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.SHOOT_GP])); break;
 			case KEYBIND_TYPE.SHOOT_RELEASE:
@@ -73,5 +78,5 @@ if (input != keyboard) {
 return input;
 
 enum KEYBIND_TYPE {
-	LEFT, RIGHT, JUMP, SHOOT, SHOOT_RELEASE, ULT, ABILITY
+	LEFT, RIGHT, JUMP, JUMP_RELEASE, SHOOT, SHOOT_RELEASE, ULT, ABILITY
 }

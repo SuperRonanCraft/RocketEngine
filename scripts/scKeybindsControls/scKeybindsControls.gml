@@ -4,6 +4,7 @@
 var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
 var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
 var key_jump = scKeybindsGet(KEYBIND_TYPE.JUMP);
+var key_jump_released = scKeybindsGet(KEYBIND_TYPE.JUMP_RELEASE);
 var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
 var key_shoot_released = scKeybindsGet(KEYBIND_TYPE.SHOOT_RELEASE);
 
@@ -47,9 +48,20 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 		_map[? GRAVITY_MAP.JUMP_JUMPS]++;
 		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
 	} else if (!_map[? GRAVITY_MAP.STANDING]) { //Jumping
+		
+		if (key_jump_released && _map[? GRAVITY_MAP.JUMP_JUMPS] == 1) {
+			if (sign(_map[? GRAVITY_MAP.VSP]) == -sign(grv_dir)) {
+				_map[? GRAVITY_MAP.VSP_MOVE] = lerp(_map[? GRAVITY_MAP.VSP_MOVE], 0, 0.3);
+			}
+		}
+		
 		if (	_map[? GRAVITY_MAP.JUMP_JUMPS] == 0 &&
 				_map[? GRAVITY_MAP.JUMP_LAG] <= _map[? GRAVITY_MAP.JUMP_LAG_MAX]) //Delay between being able to walk off an edge and jump
 			_map[? GRAVITY_MAP.JUMP_LAG]++;
+		else if (_map[? GRAVITY_MAP.JUMP_JUMPS] == 0) {
+			_map[? GRAVITY_MAP.JUMP_JUMPS]++;
+			_map[? GRAVITY_MAP.JUMP_LAG] = 0;
+		}
 	} else { //Reset once on ground
 		_map[? GRAVITY_MAP.JUMP_LAG] = 0;
 		_map[? GRAVITY_MAP.JUMP_JUMPS] = 0;

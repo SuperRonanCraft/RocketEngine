@@ -7,6 +7,7 @@
 /// @arg force-damage* noone to ignore
 /// @arg damage-type* noone to ignore
 /// @arg combo-apply* noone to ignore
+/// @arg damage-type* noone to ignore
 
 var damager = argument[0];
 var damaging = argument[1];
@@ -15,7 +16,8 @@ var delete = argument[2];
 var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
 var type = argument_count > 6 ? (argument[6] != noone ? argument[6] : DAMAGETYPE.DIRECT) : DAMAGETYPE.DIRECT;
-var combo =  argument_count > 7 ? (argument[7] != noone ? argument[7] : true) : true;
+var combo = argument_count > 7 ? (argument[7] != noone ? argument[7] : true) : true;
+var damage_type = argument_count > 8 ? (argument[8] != noone ? argument[8] : true) : true;
 var didDamage = false;
 var lethalDamage = false;
 
@@ -28,7 +30,7 @@ with (damaging) {
 	var map = shootable_map;
 	if (map[? SHOOTABLE_MAP.CAN_DAMAGE] || force) {
 		map[? SHOOTABLE_MAP.HEALTH] -= dmg;
-		
+		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = damage_type; //Damage type we just took
 		if (map[? SHOOTABLE_MAP.HEALTH] <= 0)
 			lethalDamage = true;
 			
@@ -82,3 +84,7 @@ if (isPlayer && damaging.causeOfDeath != noone)
 	lethalDamage = false;
 	
 return lethalDamage;
+
+enum DAMAGE_TYPE {
+	COLD, FIRE, SLIME
+}
