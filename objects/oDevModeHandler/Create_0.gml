@@ -7,7 +7,7 @@ with(oPlayer) //Aim at nearest player
 
 //SETTINGS
 tab_open = true;
-tab_preview_players = true
+//tab_preview_players = true
 
 //Tabs
 tab_dragging = noone;

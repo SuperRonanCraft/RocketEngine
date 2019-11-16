@@ -1,8 +1,8 @@
 {
-    "id": "04f2dc97-e5c7-4255-825f-dc7cca8266f4",
+    "id": "50157cef-7d17-487e-816d-f7e65820e0ba",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scPlayerDrawUIWeapon",
+    "name": "scPlayerDrawUIUltimate",
     "IsCompatibility": false,
     "IsDnD": false
 }

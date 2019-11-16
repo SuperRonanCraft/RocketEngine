@@ -1,5 +1,5 @@
 //DRAW PLAYER BUFFS
-/*var offset = 0;
+var offset = 0;
 for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	//Grab the buff map
 	var ds_list = buffs_map[| i];

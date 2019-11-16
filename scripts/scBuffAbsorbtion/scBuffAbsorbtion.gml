@@ -41,7 +41,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME] || dsBuff[? "health"] <= 0) { //Remove debuf
 			var side = team == TEAM.LEFT ? 1 : -1;
 			var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + (side * (index_val * (dsBuff[? "width"] * 2)));
 			var ypos = (health_map[? HEALTH_MAP.Y] + health_map[? HEALTH_MAP.HEIGHT]) + 20;
-			var scale = i * 2 <= shootable_map[? SHOOTABLE_MAP.HEALTH] + (player_map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > shootable_map[? SHOOTABLE_MAP.HEALTH] - 2 ? hp_scale : 1;
+			var scale = i * 2 <= shootable_map[? SHOOTABLE_MAP.HEALTH] + (player_map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > shootable_map[? SHOOTABLE_MAP.HEALTH] - 2 ? 1 : 1;
 			if (hppart != 0 && i == (dsBuff[? "health"] - (hppart * 2)) / 2) {
 				//var alpha = 0.9;
 				//var amt = 1;

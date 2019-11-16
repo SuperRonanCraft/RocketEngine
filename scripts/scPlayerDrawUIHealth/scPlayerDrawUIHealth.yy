@@ -1,5 +1,5 @@
 {
-    "id": "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
+    "id": "518397c6-d548-4dd7-ba31-76f7255e3f37",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scPlayerDrawUIHealth",

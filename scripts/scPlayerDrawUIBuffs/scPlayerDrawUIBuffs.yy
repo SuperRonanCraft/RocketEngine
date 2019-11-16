@@ -1,5 +1,5 @@
 {
-    "id": "8d728d6f-9105-4198-8af2-8e218a26f3ba",
+    "id": "99aa39c2-3627-490f-8b34-a79de7a1420a",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scPlayerDrawUIBuffs",

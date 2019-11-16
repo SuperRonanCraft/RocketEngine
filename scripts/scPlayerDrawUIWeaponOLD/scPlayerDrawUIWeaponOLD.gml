@@ -1,5 +1,5 @@
 //DRAW PLAYER WEAPON/ULTIMATE
-/*var map = weapon_map;
+var map = weapon_map;
 if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	//The projectile sprite
 	//var sprite = map[? WEAPON_MAP.GUI_ICON];

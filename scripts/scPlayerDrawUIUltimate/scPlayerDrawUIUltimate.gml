@@ -1,55 +1,6 @@
 //DRAW PLAYER WEAPON/ULTIMATE
 /*var map = weapon_map;
 if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
-	//The projectile sprite
-	//var sprite = map[? WEAPON_MAP.GUI_ICON];
-	var sprite = scWeaponModifyGetType(map[? WEAPON_MAP.MODIFIER], WEAPON_MODIFIER_MAP.ICON);
-	//Dimentions of sprite
-	var w = sprite_get_width(sprite);
-	var h = sprite_get_height(sprite);
-	//determine side
-	var xpos = team == TEAM.LEFT ? RES_W / 4 - w / 3 : RES_W / 2 + RES_W / 4 + w / 3;
-	var ypos = h / 2;
-	
-	var c = c_dkgray;
-	for (var i = 0; i < ds_list_size(buffs_map); i++) {
-		//Grab the buff map
-		var ds_list = buffs_map[| i];
-		//Is the buff a cooldown?
-		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
-			c = c_green;
-	}
-	//Buff of the weapon
-	if (map[? WEAPON_MAP.GUI_BUFFS] != noone) {
-		var buffsid = map[? WEAPON_MAP.GUI_BUFFS];
-		var buffy = RES_H / 16;
-		var buffx = xpos + (team == TEAM.LEFT ? 32 : -50);
-		if (is_array(buffsid))
-			for (var i = 0; i < array_length_1d(buffsid); i++) {
-				var buff_map = ds_map_create();
-				scBuffGet(buffsid[i], buff_map);
-				if (buff_map[? BUFF_MAP.ENABLED]) {
-					draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, map[? WEAPON_MAP.ENABLED] ? 0.5 : 0.2);
-					buffx += (team == TEAM.LEFT ? 22 : -22);
-				}
-				ds_map_destroy(buff_map);
-			}
-		else {
-			var buff_map = ds_map_create();
-			scBuffGet(buffsid, buff_map);
-			draw_sprite_ext(buff_map[? BUFF_MAP.ICON], 0, buffx, buffy, 0.3, 0.3, 0, c_white, map[? WEAPON_MAP.ENABLED] ? 0.5 : 0.2);
-			ds_map_destroy(buff_map);
-		}
-	}
-	
-	//var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
-	
-	//WEAPON COOLDOWN
-	if (map[? WEAPON_MAP.ENABLED] && global.play) {
-		var cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] : map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL];
-		var curr_cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME] : map[? WEAPON_MAP.COOLDOWN_TIME];
-		scDrawPie(xpos, ypos, curr_cd, cd, c, 20, 0.8);
-	}
 	
 	//ULTIMATE CHARGE CIRCLE
 	if (ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED]) {
@@ -82,7 +33,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 			/*var str = scKeyToString(key_map[? KEYBIND_MAP.ULTIMATE]);
 			scDrawText(xposcir, ypos * 2 + (string_height(str) * 0.5), str, c_yellow, 
 				0.5, noone, scMovementWave(0.8, 0.4, 1));*/
-		}
+/*		}
 	}
 	
 	//WEAPON SPRITE EQUIPPED

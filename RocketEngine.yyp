@@ -98,7 +98,7 @@
             "Key": "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
             "Value": {
                 "id": "10f75f79-2d26-49b8-9cb7-06ed6cdbb6ce",
-                "resourcePath": "scripts\/scPlayerDrawUIHealth\/scPlayerDrawUIHealth.yy",
+                "resourcePath": "scripts\\scPlayerDrawUIHealthOLD\\scPlayerDrawUIHealthOLD.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -236,6 +236,14 @@
                 "id": "fd6be348-013b-4ef2-83fe-b8a9ff1ebf03",
                 "resourcePath": "sprites\/sexplosion_Brick\/sexplosion_Brick.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "04f2dc97-e5c7-4255-825f-dc7cca8266f4",
+            "Value": {
+                "id": "2d849a5b-82ca-40fd-874b-bb5ed02f7d7e",
+                "resourcePath": "scripts\\scPlayerDrawUIWeapon\\scPlayerDrawUIWeapon.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -847,6 +855,14 @@
             }
         },
         {
+            "Key": "198c7aea-8295-44ee-9890-dc1f97638a5c",
+            "Value": {
+                "id": "502a7989-216e-445e-acfa-cbe642050030",
+                "resourcePath": "views\\198c7aea-8295-44ee-9890-dc1f97638a5c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "19bb796d-1000-4d06-9411-9602588f1e07",
             "Value": {
                 "id": "f02383c4-1829-469c-bc62-7c72032a5dff",
@@ -975,6 +991,14 @@
             }
         },
         {
+            "Key": "1df4d02a-a7c1-41e4-bfd4-572a4d433425",
+            "Value": {
+                "id": "7f671554-88cb-4d55-be9a-598abd23d2ba",
+                "resourcePath": "scripts\\scGetParent\\scGetParent.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1e49bb93-823a-42c3-8a57-f58237a1890b",
             "Value": {
                 "id": "009a3b48-3c3b-4d85-a387-d8e16a6b9d60",
@@ -1090,7 +1114,7 @@
             "Key": "222ed6ad-f64b-4847-923c-ad598ff8aef7",
             "Value": {
                 "id": "e7d92fb6-94ee-4307-a5b7-49d6d46c520b",
-                "resourcePath": "scripts\/scPlayerDrawUIWeapon\/scPlayerDrawUIWeapon.yy",
+                "resourcePath": "scripts\\scPlayerDrawUIWeaponOLD\\scPlayerDrawUIWeaponOLD.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1203,6 +1227,14 @@
             "Value": {
                 "id": "8c2e20a4-f336-42d5-8a12-6fd12ac6c575",
                 "resourcePath": "scripts\/scSpawnParticle\/scSpawnParticle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "26b40477-dd28-4867-adb4-50b416a7c5d5",
+            "Value": {
+                "id": "ece37f19-d284-4261-9d56-306c318bfa61",
+                "resourcePath": "scripts\\scPlayerDrawUIUltimateOLD\\scPlayerDrawUIUltimateOLD.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2007,6 +2039,14 @@
             }
         },
         {
+            "Key": "430bbb1f-1379-489c-ab4e-72c723842785",
+            "Value": {
+                "id": "91f5bdca-9d34-419e-b20e-8887b88fd9f1",
+                "resourcePath": "views\\430bbb1f-1379-489c-ab4e-72c723842785.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "43582342-2ed1-4395-9e7b-210928908217",
             "Value": {
                 "id": "18ebc4c0-e181-4f39-96c7-e0ea3b69cde1",
@@ -2407,6 +2447,14 @@
             }
         },
         {
+            "Key": "4f22ec04-c4c9-47c8-aad7-617638d8d2fd",
+            "Value": {
+                "id": "a6f53429-f0e5-4cd6-9572-cdcbc45e9ec6",
+                "resourcePath": "sprites\\sUIHealthFrame\\sUIHealthFrame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f2e19d2-df27-4761-a4a0-375b01786ed7",
             "Value": {
                 "id": "dd903ebd-b738-472c-a11d-833f2fbe4792",
@@ -2451,6 +2499,14 @@
             "Value": {
                 "id": "5e4de785-9c52-49f8-9b36-2747cf448b54",
                 "resourcePath": "scripts\/scUIExitToTitle\/scUIExitToTitle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "50157cef-7d17-487e-816d-f7e65820e0ba",
+            "Value": {
+                "id": "f825ccdb-395f-4824-a42d-ffc7312c758e",
+                "resourcePath": "scripts\\scPlayerDrawUIUltimate\\scPlayerDrawUIUltimate.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2500,6 +2556,14 @@
                 "id": "1f601f39-5f88-4c0c-8b51-bbde56601835",
                 "resourcePath": "views\\51707115-2978-49aa-b9bf-59440f6dbeeb.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "518397c6-d548-4dd7-ba31-76f7255e3f37",
+            "Value": {
+                "id": "06c4bc02-c545-4ab2-ad89-9db8ae4072ae",
+                "resourcePath": "scripts\\scPlayerDrawUIHealth\\scPlayerDrawUIHealth.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4330,7 +4394,7 @@
             "Key": "8d728d6f-9105-4198-8af2-8e218a26f3ba",
             "Value": {
                 "id": "3e52f9fb-7ab8-4e84-bc7b-ac99ed130f46",
-                "resourcePath": "scripts\/scPlayerDrawUIBuffs\/scPlayerDrawUIBuffs.yy",
+                "resourcePath": "scripts\\scPlayerDrawUIBuffsOLD\\scPlayerDrawUIBuffsOLD.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4659,6 +4723,14 @@
             "Value": {
                 "id": "9797ce36-8127-427d-83bd-62238c098c89",
                 "resourcePath": "scripts\/scSpawnShuriken\/scSpawnShuriken.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "99aa39c2-3627-490f-8b34-a79de7a1420a",
+            "Value": {
+                "id": "9f44e083-b24e-4e9e-a810-33fbd698967e",
+                "resourcePath": "scripts\\scPlayerDrawUIBuffs\\scPlayerDrawUIBuffs.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7239,6 +7311,14 @@
             }
         },
         {
+            "Key": "f2ec50cb-d718-4cd6-8180-d161c0b2bda9",
+            "Value": {
+                "id": "85646dd8-4f80-4e75-baf9-093380705613",
+                "resourcePath": "sprites\\sUIHealth\\sUIHealth.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f2fb6cef-551e-48ee-82a9-9d5362748527",
             "Value": {
                 "id": "dc803959-bd65-4a95-ab2f-7e2ad49e09c9",
@@ -7372,6 +7452,14 @@
                 "id": "959d1367-dc45-42e0-a39b-cec1e4f8b376",
                 "resourcePath": "scripts\/scUltimateClone_DrawCasted\/scUltimateClone_DrawCasted.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f880a470-939f-479b-972d-7b901aa3683a",
+            "Value": {
+                "id": "bab3fc07-ced5-437c-ae98-01552ed80e36",
+                "resourcePath": "sprites\\sUIUltimate\\sUIUltimate.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7851,8 +7939,13 @@
         "d4fcf6f8-1d92-4162-b191-fc3d8ee02efe",
         "714165ea-2c95-4f22-b72d-9069d845801e",
         "f049437b-f0f6-434f-9fb2-b525903bf967",
+        "518397c6-d548-4dd7-ba31-76f7255e3f37",
+        "04f2dc97-e5c7-4255-825f-dc7cca8266f4",
+        "50157cef-7d17-487e-816d-f7e65820e0ba",
+        "99aa39c2-3627-490f-8b34-a79de7a1420a",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
+        "26b40477-dd28-4867-adb4-50b416a7c5d5",
         "8d728d6f-9105-4198-8af2-8e218a26f3ba",
         "5ac92e1d-9b27-4b23-9db0-aab665063c2f",
         "1aace334-4b62-4771-9966-828d30264d83",
@@ -7923,6 +8016,7 @@
         "01cfe7e1-8967-4426-a649-233b97758fea",
         "25b3ba2b-6d76-4fd5-9d16-79addc23b878",
         "1916b52a-4cb0-4ae0-8fd4-40b86121ff5b",
+        "1df4d02a-a7c1-41e4-bfd4-572a4d433425",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
         "034c8d0e-9a5c-4ecb-9693-9fab48783be5",
