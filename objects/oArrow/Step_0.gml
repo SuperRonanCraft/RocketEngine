@@ -26,7 +26,7 @@ if(!deactivate){
 }
 
 var bonusSPD = abs(hsp)+abs(vsp);
-if(bonusSPD >= spd){
+if(bonusSPD >= arrow_map[?ARROW_MAP.SPEED] *  ((arrow_map[? ARROW_MAP.POWER_MAX])/100)){
 	fullPower = true;	
 }
 var bonusDMG = ceil(bonusSPD/4+ dmg);
@@ -39,18 +39,15 @@ if(!deactivate){
 
 	for (var i = 0; i < ds_list_size(touching); i++) {
     
+		direction = darctan2(vsp * -grv_dir,hsp);
+		image_angle = direction;
+	
 		var obj = touching[|i];
 		
-		if(scGetParent(oWall, obj)){
-			if(obj.shootable || obj.is_wall ){
-				deactivate = true;
-				event_user(0);
-				break;
-			}
-		}
+		//Prioritize player collision
 		
 		var isPlayer = scGetParent(oPlayer, obj);
-		show_debug_message("isplayer " + string(isPlayer));
+		//show_debug_message("isplayer " + string(isPlayer));
 		
 		if(isPlayer){
 			var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
@@ -69,33 +66,109 @@ if(!deactivate){
 
 		
 					//Damage player
-		
-					if (scShootableDamage(owner, obj, false, true, bonusDMG) && isPlayer)
+					if (scShootableDamage(owner, obj, false, true, bonusDMG)){
 						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];
+						if(fullPower){
+							flyWith = obj;
+						}
+						
+					}
 		
 					if (arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_GIVE])
 						scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 					scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
 					scScreenShake(25,5);
+					
+					//Stick script
+					
+					if(flyWith == noone){
+						if(instance_place(newX,newY,obj.object_index) == obj.id){
+							hsp = 0;
+							vsp = 0;
+							stuckTo = obj.id;
+							newX = x - obj.x + irandom_range(-2,2);
+							newY = y - obj.y + irandom_range(-2,2);
+							deactivate = true;
+							newAngle = image_angle;
+						}
+						
+						else{
+							event_user(0);	
+						}
+					
+					}
 
+				}
+			}
+		}
+		
+		
+		//Wall Collision
+		if(scGetParent(oWall, obj)){
+			if(obj.shootable || obj.is_wall ){
+				deactivate = true;
+				event_user(1);
+				//Break on hit
+				if(!fullPower){
+					event_user(0);
+				}
+				
+				//Stick to surface
+				else{	
+					//Stick script
+					if(instance_place(newX,newY,obj.object_index) == obj.id){
+						hsp = 0;
+						vsp = 0;
+						stuckTo = obj.id;
+						newX = x - obj.x + irandom_range(-2,2);
+						newY = y - obj.y + irandom_range(-2,2);
+						newAngle = image_angle;
+					}
+					else{
+						event_user(0);	
+					}
 				}
 			}
 		}
 	
 	}
-	
-	direction = darctan2(vsp * -grv_dir,hsp);
-	image_angle = direction;
 
 }
 
-if(deactivate){
+if(flyWith != noone && !deactivate){
+	if(instance_exists(flyWith)){
+		flyWith.x = x;
+		flyWith.y = y;
+	}
+			
+}
+
+if(stuckTo != noone && deactivate){
+	if(instance_exists(stuckTo)){
+		if(hsp == 0 && vsp == 0){
+			x = stuckTo.x + newX;
+			y = stuckTo.y + newY;
+			image_angle = newAngle;
+			if(scGetParent(oPlayer,stuckTo)){
+				scSpawnParticle(x, y, 1, 2,  spBlood, WORLDPART_TYPE.BLOOD);	
+			}
+		}
+	}
+}
+
+else if(deactivate){
 	event_user(0);	
 }
 
 x += hsp;
 y += vsp;
 
+if(deactivate){
+	timer--
+}
+if(timer <= 0){
+	event_user(0);	
+}
 
 //Despawn if out of room.
 if (checkroom)

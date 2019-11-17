@@ -25,9 +25,11 @@ confirmList = ds_list_create();
 touching = ds_list_create();
 
 //Sticky variables
+flyWith = noone;
 stuckTo = noone;
 newX = x;
 newY = y;
+newAngle = 0;
 
 //movement variables
 debounce = false;
@@ -35,6 +37,7 @@ hsp = 0;
 vsp = 0;
 grv_dir = 1;
 
+fullPower = false;
 kb = 0;
 spd = 0;
 dmg = 0;

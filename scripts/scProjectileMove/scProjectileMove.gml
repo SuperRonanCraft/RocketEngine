@@ -34,7 +34,8 @@ for (var i = 0; i < inter+1; i++) {
 	y_change = point_distance(x, y, x, y + (_vsp / inter) * i) * sign(_vsp);
 		
 	touching_amt = instance_place_list(x + x_change, y + y_change, pPhysical,touchingList,true); //get the instance of the wall in the future in the horizontal
-		
+	newX = x + x_change;
+	newY = y + y_change;
 	for (var c = 0; c < touching_amt; c++) {
 		if(ds_list_find_index(touching,touchingList[|c]) == -1){ 
 			ds_list_add(touching,touchingList[|c]);

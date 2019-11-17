@@ -18,7 +18,7 @@ if (arrow_map[? ARROW_MAP.DESPAWN_SCRIPT] == noone) {
 		hsp = randdirx
 		vsp = randdiry;
 	}
-	vsp += arrow_map[?ARROW_MAP.WEIGHT]/room_speed;
+	vsp += 2 * arrow_map[?ARROW_MAP.WEIGHT]/room_speed;
 	image_alpha -= 0.01;
 	image_angle += hsp;
 	

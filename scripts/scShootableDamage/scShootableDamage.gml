@@ -11,7 +11,7 @@
 
 var damager = argument[0];
 var damaging = argument[1];
-var isPlayer = damaging.object_index == oPlayer; //If the damaging instance is a player
+var isPlayer = scGetParent(oPlayer, damaging); //If the damaging instance is a player
 var delete = argument[2];
 var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
@@ -62,7 +62,7 @@ with (damaging) {
 		//Damage Numbers
 		if (damager != noone && combo)
 			scComboDamaged(damager);
-		scSpawnParticle(x, bbox_top, irandom_range(4 * power(dmg, 2), 6 * power(dmg, 2)), 20,  spBlood, WORLDPART_TYPE.BLOOD);
+		scSpawnParticle(x, bbox_top, dmg*2, 20,  spBlood, WORLDPART_TYPE.BLOOD);
 	}
 	var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
 	if (show_dmg) {
