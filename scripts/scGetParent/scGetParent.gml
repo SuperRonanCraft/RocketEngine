@@ -7,6 +7,8 @@ var _object = argument[1];
 
 if (object_is_ancestor(_parent, _object.object_index))
 	return true;
+else if (object_get_parent(_object.object_index) == _parent)
+	return true;
 else
 	return _parent == _object.object_index;
 

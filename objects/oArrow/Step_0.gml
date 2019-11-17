@@ -50,6 +50,7 @@ if(!deactivate){
 		}
 		
 		var isPlayer = scGetParent(oPlayer, obj);
+		show_debug_message("isplayer " + string(isPlayer));
 		
 		if(isPlayer){
 			var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
