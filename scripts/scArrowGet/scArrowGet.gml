@@ -19,8 +19,11 @@ switch (wep) {
 		map[? ARROW_MAP.PROJECTILE] = ARROW_SPRITE.DEFAULT;
 		map[? ARROW_MAP.COOLDOWN] = 40;
 		map[? ARROW_MAP.SPEED] = 10;
-		map[? ARROW_MAP.POWER] = 50;
-		map[? ARROW_MAP.DAMAGE] = 5;
+		map[? ARROW_MAP.POWER] = 200;
+		map[? ARROW_MAP.POWER_MAX] = 300; 
+		map[? ARROW_MAP.KBAMT] = 5;
+		map[? ARROW_MAP.WEIGHT] = 10;
+		map[? ARROW_MAP.DAMAGE] = 2;
 		break;
 }
 

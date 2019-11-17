@@ -14,6 +14,7 @@ map[? ARROW_MAP.TYPE] = ARROW.NONE;//weapon type*
 map[? ARROW_MAP.COOLDOWN] = 5; //cooldown between shots
 map[? ARROW_MAP.DAMAGE] = 1; //base damage
 map[? ARROW_MAP.POWER] = 1; //base power gain
+map[? ARROW_MAP.POWER_MAX] = 200; //base power maximum
 map[? ARROW_MAP.RELOAD_TIME] = -1;
 map[? ARROW_MAP.TIMER] = 125; //uptime
 map[? ARROW_MAP.CLIP] = -1; //ammo in a clip

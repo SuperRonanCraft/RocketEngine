@@ -25,6 +25,14 @@ if(!deactivate){
 	vsp += (arrow_map[? ARROW_MAP.WEIGHT] * grv_dir)/room_speed;
 }
 
+var bonusSPD = abs(hsp)+abs(vsp);
+if(bonusSPD >= spd){
+	fullPower = true;	
+}
+var bonusDMG = ceil(bonusSPD/4+ dmg);
+var bonusKB = bonusSPD/4 + kb;
+
+
 if(!deactivate){
 	
 	scProjectileMove(arrow_map, touching);
@@ -32,11 +40,46 @@ if(!deactivate){
 	for (var i = 0; i < ds_list_size(touching); i++) {
     
 		var obj = touching[|i];
-		if(obj.object_index == oWall){
-			deactivate = true;
-			event_user(0);
+		
+		if(scGetParent(oWall, obj)){
+			if(obj.shootable || obj.is_wall ){
+				deactivate = true;
+				event_user(0);
+				break;
+			}
 		}
-	
+		
+		var isPlayer = scGetParent(oPlayer, obj);
+		
+		if(isPlayer){
+			var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
+			var _oteam = obj.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
+		
+			if(_team != _oteam){
+				if (ds_list_find_index(confirmList, obj) == -1) { //We've never hit this player before
+					ds_list_add(confirmList, obj);
+					ds_list_add(hitList, obj);
+		
+					if (!obj.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do nothing to the player, don't allow shuriken to interact
+				
+					
+					//Knockback
+					obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += facing * (spd / 2 + bonusKB);
+
+		
+					//Damage player
+		
+					if (scShootableDamage(owner, obj, false, true, bonusDMG) && isPlayer)
+						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];
+		
+					if (arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_GIVE])
+						scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+					scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
+					scScreenShake(25,5);
+
+				}
+			}
+		}
 	
 	}
 	

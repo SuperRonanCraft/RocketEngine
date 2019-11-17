@@ -35,7 +35,9 @@ hsp = 0;
 vsp = 0;
 grv_dir = 1;
 
+kb = 0;
 spd = 0;
+dmg = 0;
 rotate = false;
 imgdir = irandom_range(0,359);
 facing = 1;

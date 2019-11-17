@@ -17,7 +17,9 @@ if (!scKeybindsGet(KEYBIND_TYPE.SHOOT) || map[? WEAPON_MAP.COOLDOWN_TIME] != arr
 			if (arrow_map[? ARROW_MAP.SPAWN_SCRIPT] == noone) {
 				facing = dir > -90 && dir <= 90 ? 1 : -1;
 				var arrow = scSpawnArrow(x,y,depth+1,dir,id,map);
+				arrow.dmg = ceil(arrow.dmg *	1.5 * ((map[? WEAPON_MAP.POWER])/100));
 				arrow.spd = arrow.spd *  ((map[? WEAPON_MAP.POWER])/100);
+				arrow.kb = arrow.kb * ((map[? WEAPON_MAP.POWER])/800);
 				scPlaySound(SOUND.EFFECT_SHUR_THROW);
 				if (map[? WEAPON_MAP.AMMO] > 0)
 					map[? WEAPON_MAP.AMMO]--;
@@ -39,14 +41,13 @@ if (!scKeybindsGet(KEYBIND_TYPE.SHOOT) || map[? WEAPON_MAP.COOLDOWN_TIME] != arr
 			map[? WEAPON_MAP.RELOAD_TIME]++;
 	map[? WEAPON_MAP.CHARGING] = false;
 } else if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
-	var _min = 100, _max = 200;
+	var _min = 100, _max = arrow_map[? ARROW_MAP.POWER_MAX];
 	map[? WEAPON_MAP.POWER] += arrow_map[? ARROW_MAP.POWER] / room_speed;
 	map[? WEAPON_MAP.POWER] = clamp(map[? WEAPON_MAP.POWER], _min, _max);
 	map[? WEAPON_MAP.CHARGING] = true;
 	map[? WEAPON_MAP.CHARGE] = (map[? WEAPON_MAP.POWER] - _min) / (_max - _min);
 	if (map[? WEAPON_MAP.POWER] >= _max)
 		map[? WEAPON_MAP.COOLDOWN_TIME]--; //Cancel out, shoot arrow
-	show_debug_message(map[? WEAPON_MAP.POWER]);
 }
 
 
