@@ -83,6 +83,8 @@ if(!deactivate){
 					
 					if(flyWith == noone){
 						if(instance_place(newX,newY,obj.object_index) == obj.id){
+							x = newX;
+							y = newY;
 							hsp = 0;
 							vsp = 0;
 							stuckTo = obj.id;
@@ -117,6 +119,8 @@ if(!deactivate){
 				else{	
 					//Stick script
 					if(instance_place(newX,newY,obj.object_index) == obj.id){
+						x = newX;
+						y = newY;
 						hsp = 0;
 						vsp = 0;
 						stuckTo = obj.id;
@@ -139,6 +143,8 @@ if(flyWith != noone && !deactivate){
 	if(instance_exists(flyWith)){
 		flyWith.x = x;
 		flyWith.y = y;
+		flyWith.gravity_map[?GRAVITY_MAP.HSP_MOVE] = hsp;
+		flyWith.gravity_map[?GRAVITY_MAP.VSP_MOVE] = vsp;
 	}
 			
 }

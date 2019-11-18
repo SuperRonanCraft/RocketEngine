@@ -2,7 +2,7 @@
 {
     "name": "devRoom",
     "id": "fe445735-4e22-43b0-ab3a-310b332c5c69",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
@@ -388,7 +388,7 @@
         "PhysicsWorld": false,
         "PhysicsWorldGravityX": 0,
         "PhysicsWorldGravityY": 10,
-        "PhysicsWorldPixToMeters": 0.1,
+        "PhysicsWorldPixToMeters": 0.5,
         "mvc": "1.0"
     },
     "roomSettings":     {
