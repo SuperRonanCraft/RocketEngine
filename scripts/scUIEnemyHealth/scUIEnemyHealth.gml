@@ -28,7 +28,9 @@ for (var i = 0; i < ds_list_size(_list); i++) {
 }
 ds_list_destroy(_list);
 
-var _dmgList = _hmap[? HEALTH_MAP.DAMAGE_MAP];
+scPlayerDrawUIHealth(_x, _y, _len, _hei, false, _alpha, false);
+
+/*var _dmgList = _hmap[? HEALTH_MAP.DAMAGE_MAP];
 var _mul = shootable_map[? SHOOTABLE_MAP.HEALTH] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
 var _x2 = _x + (_len * _mul);
 scDrawRect(_x, _y, _x2, _y + _hei, c_green, false, 1); //Health
@@ -65,7 +67,7 @@ for (var i = ds_list_size(_dmgList) - 1; i >= 0; i--) {
 		_hmap[? HEALTH_MAP.DAMAGE] = lerp(_hmap[? HEALTH_MAP.DAMAGE], -0.05, _hmap[? HEALTH_MAP.DAMAGE_MUL]);
 	} else
 		_hmap[? HEALTH_MAP.DAMAGE] = 0;*/
-}
+/*}
 
 for (var i = 0; i < ds_list_size(_dmgListRemove); i++)
 	ds_list_delete(_dmgList, _dmgListRemove[| i]);

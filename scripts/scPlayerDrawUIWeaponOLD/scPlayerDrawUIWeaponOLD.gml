@@ -8,7 +8,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
 	//determine side
-	var xpos = team == TEAM.LEFT ? RES_W / 4 - w / 3 : RES_W / 2 + RES_W / 4 + w / 3;
+	var xpos = team == TEAM.LEFT ? RES_W / 4 - w : RES_W / 2 + RES_W / 4 + w;
 	var ypos = h / 2;
 	
 	var c = c_dkgray;

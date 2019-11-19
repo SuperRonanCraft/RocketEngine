@@ -10,6 +10,7 @@ var varrc = 1;
 var map = scRocketDefaults();
 var roc = argument0;
 map[? ROCKET_MAP.TYPE] = roc;
+var _dmg_mul = 4;
 
 switch (roc) {
 	case ROCKET.NONE:
@@ -25,7 +26,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SPEED] = 20 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 		map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
-		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.DAMAGE] = 2 * _dmg_mul;
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];
 		break;
 		
@@ -108,7 +109,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FIRE;
 		map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
 		map[? ROCKET_MAP.SPEED] = 22 * varspd;
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.TIMER] = 180 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.EMBER];
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.FIRE2];
@@ -126,13 +127,12 @@ switch (roc) {
 	case ROCKET.SAND:
 		map[? ROCKET_MAP.NAME] = "Sandy";
 		map[? ROCKET_MAP.DESCRIPTION] = "In question";
-		map[? ROCKET_MAP.DAMAGE] = 2;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SAND;
 		map[? ROCKET_MAP.COOLDOWN] = 12 * varcd;
 		map[? ROCKET_MAP.SPEED] = 6 * varspd;
 		map[? ROCKET_MAP.CLIP] = 5;
 		map[? ROCKET_MAP.RELOAD_TIME] = 60 * varcd;
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.TIMER] = 180 * vartime;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SAND];
 		map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SAND];
@@ -149,7 +149,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LASER;
 		map[? ROCKET_MAP.COOLDOWN] = 30 * varcd;
 		map[? ROCKET_MAP.SPEED] = 22 * varspd;
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.IGNORE_WALL] = true;
 		map[? ROCKET_MAP.ROCKET_CREATE] = scRocketSpecialLaser_Create;
 		//map[? ROCKET_MAP.BUFF] = [BUFFTYPE.COOLDOWN];
@@ -165,7 +165,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SPEED] = 18 * varspd;
 		map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SLIME];
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ANTIHEAL];
 		map[? ROCKET_MAP.COOLDOWN] = 27 * varcd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
@@ -179,7 +179,7 @@ switch (roc) {
 	case ROCKET.RANDOM:
 		map[? ROCKET_MAP.NAME] = "Random";
 		map[? ROCKET_MAP.DESCRIPTION] = "RNG isn't fun";
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		//map[? ROCKET_MAP.BUFF] = [choose(BUFFTYPE.SLIME] = BUFFTYPE.COOLDOWN] = BUFFTYPE.BURNRUSH)];
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.RANDOM;
 		map[? ROCKET_MAP.COOLDOWN] = 18 * varcd;
@@ -197,7 +197,7 @@ switch (roc) {
 	case ROCKET.BOUNCY:
 		map[? ROCKET_MAP.NAME] = "Bouncy";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ahhh Childhood parties";
-		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.DAMAGE] = 2 * _dmg_mul;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOUNCY;
 		map[? ROCKET_MAP.COOLDOWN] = varcd * 35;
 		map[? ROCKET_MAP.SPEED] = 16 * varspd;
@@ -254,7 +254,7 @@ switch (roc) {
 	case ROCKET.OBSOLETE:
 		map[? ROCKET_MAP.NAME] = "Obsolete";
 		map[? ROCKET_MAP.DESCRIPTION] = "It never works ;)";
-		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.DAMAGE] = 2 * _dmg_mul;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.OBSOLETE;
 		map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
 		map[? ROCKET_MAP.SPEED] = 24 * varspd;
@@ -273,8 +273,8 @@ switch (roc) {
 	case ROCKET.LIGHTNING:
 		map[? ROCKET_MAP.NAME] = "Lightning";
 		map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
-		map[? ROCKET_MAP.DAMAGE] = 1;
-		map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
+		map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
 		map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
 		map[? ROCKET_MAP.SPEED] = 18 * varspd;
@@ -312,7 +312,7 @@ switch (roc) {
 	case ROCKET.PEACE:
 		map[? ROCKET_MAP.NAME] = "Peace";
 		map[? ROCKET_MAP.DESCRIPTION] = "Good vibes brooo";
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PEACE;
 		map[? ROCKET_MAP.COOLDOWN] = 10 * varcd;
 		map[? ROCKET_MAP.CLIP] = 2;
@@ -390,7 +390,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Brick";
 		map[? ROCKET_MAP.DESCRIPTION] = "Drops like a Stone!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BRICK;
-		map[? ROCKET_MAP.DAMAGE] = 3;
+		map[? ROCKET_MAP.DAMAGE] = 3 * _dmg_mul;
 		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
 		map[? ROCKET_MAP.SPEED] = 12 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
@@ -412,7 +412,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Piercing";
 		map[? ROCKET_MAP.DESCRIPTION] = "Can't touch this.";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PIERCING;
-		map[? ROCKET_MAP.DAMAGE] = 1;
+		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
 		map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
 		map[? ROCKET_MAP.SPEED] = 12 * varspd;
 		map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
@@ -429,7 +429,7 @@ switch (roc) {
 		map[? ROCKET_MAP.NAME] = "Glass";
 		map[? ROCKET_MAP.DESCRIPTION] = "Extremely fragile";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.GLASS;
-		map[? ROCKET_MAP.DAMAGE] = 2;
+		map[? ROCKET_MAP.DAMAGE] = 2 * _dmg_mul;
 		map[? ROCKET_MAP.KBAMT] = 0;
 		map[? ROCKET_MAP.COOLDOWN] = 100 * varcd;
 		map[? ROCKET_MAP.SPEED] = 30 * varspd;

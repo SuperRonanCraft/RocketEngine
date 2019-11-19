@@ -21,7 +21,7 @@ map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = true; //automatically destroy instance w
 map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM] = true; //automatically destroy instance when outside room
 map[? ROCKET_MAP.HIT_PICKUP] = noone; //When hitting a pickup
 //DAMAGES
-map[? ROCKET_MAP.DAMAGE] = 1; //Base damage
+map[? ROCKET_MAP.DAMAGE] = 1 * 4; //Base damage
 map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket
 map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 0; //Damage by explosion splash
 //ROCKET EVENTS
