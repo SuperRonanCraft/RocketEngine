@@ -13,20 +13,31 @@ var _mul = shootable_map[? SHOOTABLE_MAP.HEALTH] / shootable_map[? SHOOTABLE_MAP
 var _x2 = _x + ((_len * _mul) * _side);
 scDrawRect(_x, _y, _x2, _y + _hei, c_green, false, 1); //Health
 
+//Healed
+if (_hmap[? HEALTH_MAP.HEAL] > 0) {
+	var _per = _hmap[? HEALTH_MAP.HEAL] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]; 
+	scDrawRect(_x2, _y, _x2 + (_len * _per) * -_side, _y + _hei, c_yellow, false, 1);
+	_hmap[? HEALTH_MAP.HEAL] = lerp(_hmap[? HEALTH_MAP.HEAL], -0.05, 0.05);
+} else
+	_hmap[? HEALTH_MAP.HEAL] = 0;
+
+//Damaged
 var _dmgListRemove = ds_list_create();
 var _dmgx = _x2;
 for (var i = ds_list_size(_dmgList) - 1; i >= 0; i--) {
 	var _dmgMap = _dmgList[| i];
+	if (_dmgMap[? "size"] == 1)
+		_dmgMap[? "x"] = _dmgx;
 	var _dmg = _dmgMap[? "dmg"] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];;
 	var _alpha = _dmgMap[? "alpha"];
 	var _size = _dmgMap[? "size"];
-	var _dmgxOld = _dmgx;
-	_dmgx += ((_len * _dmg) * _side);
-	scDrawRect(_dmgxOld, _y - _size / 2, _dmgx, _y + _hei + _size / 2, c_red, false, _alpha);
+	var _dis = ((_len * _dmg) * _side)
+	scDrawRect(_dmgMap[? "x"], _y - _size / 2, _dmgMap[? "x"] + _dis, _y + _hei + _size / 2, c_red, false, _alpha);
 	_dmgMap[? "size"] += 2;
 	_dmgMap[? "alpha"] -= 0.05;
 	if (_dmgMap[? "alpha"] <= 0)
 		ds_list_add(_dmgListRemove, i);
+	_dmgx += _dis;
 	/*if (_hmap[? HEALTH_MAP.DAMAGE] > 0) { //Damaged
 		var _per = _hmap[? HEALTH_MAP.DAMAGE] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
 		scDrawRect(_x2, _y, _x2 + (_len * _per) * _side, _y + _hei, c_red, false, 1);
@@ -38,13 +49,6 @@ for (var i = ds_list_size(_dmgList) - 1; i >= 0; i--) {
 for (var i = 0; i < ds_list_size(_dmgListRemove); i++)
 	ds_list_delete(_dmgList, _dmgListRemove[| i]);
 ds_list_destroy(_dmgListRemove);
-
-if (_hmap[? HEALTH_MAP.HEAL] > 0) { //Healed
-	var _per = _hmap[? HEALTH_MAP.HEAL] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]; 
-	scDrawRect(_x2, _y, _x2 + (_len * _per) * -_side, _y + _hei, c_yellow, false, 1);
-	_hmap[? HEALTH_MAP.HEAL] = lerp(_hmap[? HEALTH_MAP.HEAL], -0.05, 0.05);
-} else
-	_hmap[? HEALTH_MAP.HEAL] = 0;
 
 //FRAME
 scDrawRect(_x, _hmap[? HEALTH_MAP.Y], _x + _len * _side, _hmap[? HEALTH_MAP.Y] + _hei, c_black, true, 1);
