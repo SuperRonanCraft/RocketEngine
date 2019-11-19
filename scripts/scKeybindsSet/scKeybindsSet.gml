@@ -55,6 +55,8 @@ if (argument0 == KEYBIND.PLAYER1) {
 keydirection = 1;
 controller_inuse = false;
 controller_lastused = false;
+//Movement vars
+controlling = 0; //If the player is controlling AND moving
 
 //Keybinds
 enum KEYBIND {

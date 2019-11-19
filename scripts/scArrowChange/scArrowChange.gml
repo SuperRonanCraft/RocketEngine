@@ -25,7 +25,8 @@ if (old_weapon_map[? ARROW_MAP.TYPE] != wep) {
 	map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL] = arrow_map[? ARROW_MAP.COOLDOWN];
 	map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] = arrow_map[? ARROW_MAP.RELOAD_TIME];
 	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
-	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
+	if (system_ultimate)
+		ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
 	map[? WEAPON_MAP.RELOAD_TIME] = 0;
 	map[? WEAPON_MAP.ULTIMATE] = arrow_map[? ARROW_MAP.ULTIMATE];
 }

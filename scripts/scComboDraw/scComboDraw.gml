@@ -1,4 +1,5 @@
 //DRAW PLAYER COMBO
+if (!system_combo) exit;
 var map = combo_map;
 if (map[? COMBO_MAP.STREAK_LAST] > 1 && map[? COMBO_MAP.ALPHA] > 0) {
 	var text = "x" + string(map[? COMBO_MAP.STREAK_LAST]) + " " + map[? COMBO_MAP.TEXT];

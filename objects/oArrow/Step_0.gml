@@ -46,7 +46,7 @@ if(!deactivate){
 		
 		//Prioritize player collision
 		
-		var isPlayer = scGetParent(oPlayer, obj);
+		var isPlayer = scGetParent(pEntity, obj);
 		//show_debug_message("isplayer " + string(isPlayer));
 		
 		if(isPlayer){

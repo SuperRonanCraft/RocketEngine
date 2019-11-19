@@ -1,3 +1,4 @@
+if (!system_ultimate) exit;
 var map = ultimate_map;
 
 if (map[? ULTIMATE_CASTING_MAP.CHARGE] >= ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {

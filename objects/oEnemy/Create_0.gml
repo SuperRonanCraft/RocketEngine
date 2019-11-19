@@ -5,4 +5,17 @@
 event_inherited();
 //scStartAI();
 //despawn = true; //Despawn player if dead
+
+//Load basic player variables
+scPlayerStart();
+
+//Load Character
+scPlayerCharacterChange(character, load_character_cache);
+
+//Load keybinds
+scKeybindsSet(keys);
+
 auto_aim = true;
+
+//ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = true; //Disable Ults
+player_map[? PLAYER_MAP.HUD_SHOW] = false; //Dont show ammo

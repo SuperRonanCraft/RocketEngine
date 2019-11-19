@@ -1,4 +1,5 @@
 /// @desc check if we've missed, remove the combo modifier
+if (!system_combo) exit;
 var type = weapon_map[? WEAPON_MAP.COMBO_TYPE];
 var count_down = false;
 switch (type) {

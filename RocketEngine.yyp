@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "08864292-70df-4d7e-a830-9fb1789597cf",
+            "Value": {
+                "id": "482666e7-a44f-47b7-9646-51860271c40a",
+                "resourcePath": "views\\08864292-70df-4d7e-a830-9fb1789597cf.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "08a58d8e-a0fa-48e1-adba-9c639b45aef2",
             "Value": {
                 "id": "3ecad24c-4fc4-4c43-909f-eb9e0e517a00",
@@ -2807,6 +2815,14 @@
             }
         },
         {
+            "Key": "59799a8d-7f32-4019-bbb3-a565049b1265",
+            "Value": {
+                "id": "95419b83-c1d6-4d69-ac9f-a66783a1c04c",
+                "resourcePath": "views\\59799a8d-7f32-4019-bbb3-a565049b1265.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "59bf2b31-05d8-43d2-b0a0-3329c1bf2f3a",
             "Value": {
                 "id": "9d350514-5e86-4909-ba4b-2d3c7e71db6d",
@@ -3807,6 +3823,14 @@
             }
         },
         {
+            "Key": "7a7329b8-46d5-4d30-acf1-63c3f181f315",
+            "Value": {
+                "id": "3efa349e-0986-417a-9ee0-1927c30c3a26",
+                "resourcePath": "objects\\oPlayerOLD\\oPlayerOLD.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7ba7f4a4-2968-4299-a5ba-1fa51cbcfe5f",
             "Value": {
                 "id": "53f4c4b0-8262-4afc-b9b7-36f7708a5cb5",
@@ -4036,6 +4060,14 @@
                 "id": "d17bbf27-2bc8-458e-bf7b-75ad93b566a2",
                 "resourcePath": "objects\/oPickupWeapon\/oPickupWeapon.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "82677ae2-f84a-4d45-bbf6-f745418313ba",
+            "Value": {
+                "id": "b831349d-b133-4576-870a-6f4addc514b3",
+                "resourcePath": "views\\82677ae2-f84a-4d45-bbf6-f745418313ba.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -7036,6 +7068,14 @@
                 "id": "a3ab0ace-f508-416c-9c22-eecff71689d3",
                 "resourcePath": "scripts\/scUIDescription\/scUIDescription.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e73c21ac-a144-4813-89d3-36b44e71b392",
+            "Value": {
+                "id": "aee13159-ea6f-4491-83ae-536ddf58b18a",
+                "resourcePath": "views\\e73c21ac-a144-4813-89d3-36b44e71b392.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

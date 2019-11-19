@@ -47,17 +47,6 @@ with (damaging) {
 					if (object_index == oPlayer) //Is a player
 						scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damaging, dmg]);
 		}
-		if (map[? SHOOTABLE_MAP.HEALTH] > 0) {
-			var _dmgmap = ds_map_create();
-			_dmgmap[? "dmg"] = dmg;
-			_dmgmap[? "size"] = 1;
-			_dmgmap[? "alpha"] = 1;
-			ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
-			//health_map[? HEALTH_MAP.DAMAGE_MAP] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
-			health_map[? HEALTH_MAP.HEAL] -= dmg;
-			health_map[? HEALTH_MAP.DAMAGE_TIME] = 0;
-		}
-		map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
 		didDamage = true;
 		scPlaySound(SOUND.EFFECT_HIT);
 	}
@@ -66,8 +55,21 @@ with (damaging) {
 		//Damage Numbers
 		if (damager != noone && combo)
 			scComboDamaged(damager);
-		scSpawnParticle(x, bbox_top, dmg*2, 20,  spBlood, WORLDPART_TYPE.BLOOD);
+		scSpawnParticle(x, bbox_top, abs(dmg * 1.3), 20, spBlood, WORLDPART_TYPE.BLOOD);
 	}
+	
+	//Damage Animation
+	if (map[? SHOOTABLE_MAP.HEALTH] + dmg > 0) {
+		var _dmgmap = ds_map_create();
+		_dmgmap[? "dmg"] = dmg;
+		_dmgmap[? "size"] = 1;
+		_dmgmap[? "alpha"] = 1;
+		ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
+		//health_map[? HEALTH_MAP.DAMAGE_MAP] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
+		health_map[? HEALTH_MAP.HEAL] -= dmg;
+		health_map[? HEALTH_MAP.DAMAGE_TIME] = 0;
+	}
+	map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
 	var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
 	if (show_dmg) {
 		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE])) //Alive? Show damage indicators

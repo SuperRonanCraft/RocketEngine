@@ -39,7 +39,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	//var xposcir = xpos + (team == TEAM.LEFT ? -(w / 8) : (w / 8));
 	
 	//ULTIMATE CHARGE CIRCLE
-	if (ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED]) {
+	if (system_ultimate && ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED]) {
 		var charge = round(ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] * (100 / ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]));
 		if (charge >= 100) {
 			var ang = irandom_range(0, 360);

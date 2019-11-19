@@ -24,7 +24,8 @@ if (old_shuriken_map[? SHURIKEN_MAP.TYPE] != shur) {
 	map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL] = shuriken_map[? SHURIKEN_MAP.COOLDOWN];
 	map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] = shuriken_map[? SHURIKEN_MAP.RELOAD_TIME];
 	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
-	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
+	if (system_ultimate)
+		ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
 	map[? WEAPON_MAP.RELOAD_TIME] = 0;
 	map[? WEAPON_MAP.ULTIMATE] = shuriken_map[? SHURIKEN_MAP.ULTIMATE];
 }

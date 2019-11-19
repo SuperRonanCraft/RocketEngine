@@ -4,4 +4,3 @@
 event_inherited();
 
 scUIEnemyHealth();
-

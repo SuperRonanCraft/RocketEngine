@@ -30,21 +30,25 @@ map[? WEAPON_MAP.CHARGE] = 0;
 switch (map[? WEAPON_MAP.TYPE]) {
 	case WEAPON.ROCKET:
 		scRocketStart(ROCKET.DEFAULT);
-		ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 1;
-		ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME] = 1;
+		if (system_ultimate) {
+			ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 1;
+			ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME] = 1;
+		}
 		map[? WEAPON_MAP.COMBO_TYPE] = COMBO_TYPE.KNOCKBACK;
 		map[? WEAPON_MAP.COMBO_COOLDOWN] = 45;
 		break;
 	case WEAPON.SHURIKEN:
 		scShurikenStart(SHURIKEN.DEFAULT);
-		ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 5;
+		if (system_ultimate)
+			ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 5;
 		map[? WEAPON_MAP.COMBO_TYPE] = COMBO_TYPE.NO_MISS;
 		map[? WEAPON_MAP.COMBO_COOLDOWN] = 120;
 		break;
 		
 	case WEAPON.ARROW:
 		scArrowStart(ARROW.DEFAULT);
-		ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 1;
+		if (system_ultimate)
+			ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MULTI] = 1;
 		map[? WEAPON_MAP.COMBO_TYPE] = COMBO_TYPE.NO_MISS;
 		map[? WEAPON_MAP.COMBO_COOLDOWN] = 180;
 		break;

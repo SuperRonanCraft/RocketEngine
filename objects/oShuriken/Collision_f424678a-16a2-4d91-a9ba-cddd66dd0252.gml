@@ -7,7 +7,7 @@ if (other.id == owner.id) exit; //Self damage, dont.. do that..
 
 var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 
-var isPlayer = other.object_index == oPlayer || (object_get_parent(other.object_index) != -100 ? object_get_parent(other.object_index) == oPlayer : false);
+var isPlayer = scGetParent(pEntity, other);
 var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
 var _oteam = other.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
 

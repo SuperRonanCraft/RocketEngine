@@ -1,6 +1,7 @@
 /// @desc check if we're in a knockback state, add to the combo modifier
 /// @arg combo-instance
 var p = argument0;
+if (!p.system_combo) exit;
 if (p.object_index != oPlayer) exit;
 var type = p.weapon_map[? WEAPON_MAP.COMBO_TYPE];
 var count_up = false;

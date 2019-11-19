@@ -4,6 +4,7 @@
 /// @arg multiplier* direct multiplier for each instance
 
 var inst = argument[0];
+if (!inst.system_ultimate) exit;
 var type = argument_count > 1 ? (argument[1] != noone ? argument[1] : DAMAGETYPE.DIRECT) : DAMAGETYPE.DIRECT; //Damage type
 var multi = argument_count > 2 ? argument[2] : 1; //Multiplier
 var charge = 0;

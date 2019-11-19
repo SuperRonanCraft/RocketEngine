@@ -1,3 +1,4 @@
+if (!system_ultimate) exit;
 var map = ultimate_map;
 
 if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || weapon_map[? WEAPON_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?

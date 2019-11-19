@@ -1,3 +1,4 @@
+if (!system_combo) exit;
 var map = combo_map;
 var count_down = false;
 var type = weapon_map[? WEAPON_MAP.COMBO_TYPE];
