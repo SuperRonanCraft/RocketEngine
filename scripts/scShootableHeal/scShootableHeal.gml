@@ -22,7 +22,7 @@ with (healable) {
 	//if (sound) {
 		//scPlaySound(SOUND.EFFECT_HIT);
 	//}
-	health_map[? HEALTH_MAP.DAMAGE] -= healed;
+	//health_map[? HEALTH_MAP.DAMAGE] -= healed;
 	health_map[? HEALTH_MAP.HEAL] += healed;
 	if (show && healed > 0) {
 		with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {

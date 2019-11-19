@@ -1,5 +1,5 @@
 //Draw Player UI
 
-scPlayerDrawUIHealthOLD();
+scPlayerDrawUIHealth();
 scPlayerDrawUIBuffsOLD();
 scPlayerDrawUIWeaponOLD();

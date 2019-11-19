@@ -1,6 +1,5 @@
 /// @desc Damage Player
 
 with (oPlayer) {
-	repeat(10)
-		scShootableDamage(id, id, false, false, 1, true);
+		scShootableDamage(id, id, false, false, 10, true);
 }

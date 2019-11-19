@@ -1,4 +1,4 @@
-var _hmap = health_map;
+/*var _hmap = health_map;
 if (_hmap[? HEALTH_MAP.DAMAGE_TIME] <= room_speed * 8) {
 	_hmap[? HEALTH_MAP.ALPHA] = min(_hmap[? HEALTH_MAP.ALPHA] + 4 / room_speed, 1);
 } else

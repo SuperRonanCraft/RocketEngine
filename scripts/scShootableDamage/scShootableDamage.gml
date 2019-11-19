@@ -48,8 +48,12 @@ with (damaging) {
 						scBuffHandler(BUFF_EVENT.DAMAGE_APPLIED, [damaging, dmg]);
 		}
 		if (map[? SHOOTABLE_MAP.HEALTH] > 0) {
-			health_map[? HEALTH_MAP.DAMAGE] += dmg;
-			health_map[? HEALTH_MAP.DAMAGE_MUL] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
+			var _dmgmap = ds_map_create();
+			_dmgmap[? "dmg"] = dmg;
+			_dmgmap[? "size"] = 1;
+			_dmgmap[? "alpha"] = 1;
+			ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
+			//health_map[? HEALTH_MAP.DAMAGE_MAP] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
 			health_map[? HEALTH_MAP.HEAL] -= dmg;
 			health_map[? HEALTH_MAP.DAMAGE_TIME] = 0;
 		}

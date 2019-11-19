@@ -1,5 +1,5 @@
 //DRAW PLAYER HEALTH
-var _hmap = health_map;
+/*var _hmap = health_map;
 var _len = _hmap[? HEALTH_MAP.LENGTH]; //Length of bar
 var _hei = _hmap[? HEALTH_MAP.HEIGHT]; //Height of bar
 var _offset = 0;

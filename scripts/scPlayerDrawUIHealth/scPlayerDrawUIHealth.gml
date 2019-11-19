@@ -1,7 +1,8 @@
 //DRAW PLAYER HEALTH
-/*var _hmap = health_map;
+var _hmap = health_map;
 var _len = _hmap[? HEALTH_MAP.LENGTH]; //Length of bar
 var _hei = _hmap[? HEALTH_MAP.HEIGHT]; //Height of bar
+var _dmgList = _hmap[? HEALTH_MAP.DAMAGE_MAP];
 var _offset = 0;
 if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 2)
 	_offset = scMovementWave(-3, 3, 1);
@@ -10,16 +11,33 @@ var _x = _side == 1 ? _hmap[? HEALTH_MAP.X] : RES_W - _hmap[? HEALTH_MAP.X];
 var _y = _hmap[? HEALTH_MAP.Y];
 var _mul = shootable_map[? SHOOTABLE_MAP.HEALTH] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
 var _x2 = _x + ((_len * _mul) * _side);
-scDrawSpriteExt(_x, _y, sUIHealthFrame, 0); //FRAME
-draw_sprite_part(sUIHealth, 0, 0, 0, ); //HEALTH
-	//scDrawRect(_x, _y, _x2, _y + _hei, c_green, false, 1); //Health
-if (_hmap[? HEALTH_MAP.DAMAGE] > 0) { //Damaged
-	var _per = _hmap[? HEALTH_MAP.DAMAGE] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
-	draw_sprite_part(sUIHealth)
-	scDrawRect(_x2, _y, _x2 + (_len * _per) * _side, _y + _hei, c_red, false, 1);
-	_hmap[? HEALTH_MAP.DAMAGE] = lerp(_hmap[? HEALTH_MAP.DAMAGE], -0.05, _hmap[? HEALTH_MAP.DAMAGE_MUL]);
-} else
-	_hmap[? HEALTH_MAP.DAMAGE] = 0;
+scDrawRect(_x, _y, _x2, _y + _hei, c_green, false, 1); //Health
+
+var _dmgListRemove = ds_list_create();
+var _dmgx = _x2;
+for (var i = ds_list_size(_dmgList) - 1; i >= 0; i--) {
+	var _dmgMap = _dmgList[| i];
+	var _dmg = _dmgMap[? "dmg"] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];;
+	var _alpha = _dmgMap[? "alpha"];
+	var _size = _dmgMap[? "size"];
+	var _dmgxOld = _dmgx;
+	_dmgx += ((_len * _dmg) * _side);
+	scDrawRect(_dmgxOld, _y - _size / 2, _dmgx, _y + _hei + _size / 2, c_red, false, _alpha);
+	_dmgMap[? "size"] += 2;
+	_dmgMap[? "alpha"] -= 0.05;
+	if (_dmgMap[? "alpha"] <= 0)
+		ds_list_add(_dmgListRemove, i);
+	/*if (_hmap[? HEALTH_MAP.DAMAGE] > 0) { //Damaged
+		var _per = _hmap[? HEALTH_MAP.DAMAGE] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
+		scDrawRect(_x2, _y, _x2 + (_len * _per) * _side, _y + _hei, c_red, false, 1);
+		_hmap[? HEALTH_MAP.DAMAGE] = lerp(_hmap[? HEALTH_MAP.DAMAGE], -0.05, _hmap[? HEALTH_MAP.DAMAGE_MUL]);
+	} else
+		_hmap[? HEALTH_MAP.DAMAGE] = 0;*/
+}
+
+for (var i = 0; i < ds_list_size(_dmgListRemove); i++)
+	ds_list_delete(_dmgList, _dmgListRemove[| i]);
+ds_list_destroy(_dmgListRemove);
 
 if (_hmap[? HEALTH_MAP.HEAL] > 0) { //Healed
 	var _per = _hmap[? HEALTH_MAP.HEAL] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]; 
