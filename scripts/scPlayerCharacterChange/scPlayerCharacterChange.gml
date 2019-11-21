@@ -48,7 +48,7 @@ player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 scWeaponStart();
 
 enum CHARACTERS {
-	DEFAULT, SWORD, 
+	DEFAULT, SWORD, ARROW,
 	ENEMY,
 	//KEEP LAST
 	LENGTH

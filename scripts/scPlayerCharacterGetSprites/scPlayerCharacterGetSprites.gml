@@ -36,6 +36,21 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_sword_deadFrozen;
 		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser;
         break;
+    case CHARACTERS.ARROW:
+        map[? ANIMATIONSTATE.STANDING] = sPlayer_arrow_idle;
+		map[? ANIMATIONSTATE.SLIDING] = sPlayer_arrow_walkend;
+		map[? ANIMATIONSTATE.WALKING] = sPlayer_arrow_walk;
+		map[? ANIMATIONSTATE.RISING] = sPlayer_arrow_rise;
+		map[? ANIMATIONSTATE.FALLING] = sPlayer_arrow_fall;
+		map[? ANIMATIONSTATE.KNOCKBACK] = sPlayer_sword_knockBack;
+		map[? ANIMATIONSTATE.KNOCKBACK2] = sPlayer_sword_knockBack2;
+		map[? ANIMATIONSTATE.TECHED] = sPlayer_sword_tech;
+		map[? ANIMATIONSTATE.DEAD] = sPlayer_arrow_dead1;
+		map[? ANIMATIONSTATE.DEAD2] = sPlayer_arrow_dead2;
+		map[? ANIMATIONSTATE.TRAPPED] = sPlayer_sword_trapped;
+		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_sword_deadFrozen;
+		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser;
+        break;
     default:
         map[? ANIMATIONSTATE.STANDING] = sPlayer_default_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_default_walkend;
