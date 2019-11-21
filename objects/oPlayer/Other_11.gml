@@ -17,7 +17,7 @@ if (map[? WEAPON_MAP.ENABLED] && shootable_map[? SHOOTABLE_MAP.HEALTH] > 0 && gl
 	if (map[? WEAPON_MAP.CHARGING]) {
 		_show_bar = true;
 		_percent = map[? WEAPON_MAP.CHARGE];
-		_color = c_orange;
+		_color = c_purple;
 	} else if (map[? WEAPON_MAP.RELOAD_TIME] > 0) {
 		_show_bar = true;
 		_percent = map[? WEAPON_MAP.RELOAD_TIME] / map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL];

@@ -9,7 +9,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	var h = sprite_get_height(sprite);
 	//determine side
 	var xpos = team == TEAM.LEFT ? RES_W / 4 - w : RES_W / 2 + RES_W / 4 + w;
-	var ypos = h / 2;
+	var ypos = h / 1.8;
 	
 	var c = c_dkgray;
 	
@@ -40,7 +40,7 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	
 	//ULTIMATE CHARGE CIRCLE
 	if (system_ultimate && ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED]) {
-		var charge = round(ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] * (100 / ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]));
+		var charge = ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] * (100 / ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]);
 		if (charge >= 100) {
 			var ang = irandom_range(0, 360);
 			scDrawLightning(xpos, ypos, xpos + lengthdir_x(32, ang), ypos + lengthdir_y(32, ang), irandom(5), c_blue);
@@ -48,14 +48,15 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 		//ypos = 0;
 		var _rad = 30, _rad_width = 30, _rad_frame = 3;
 		scDrawPiePart(xpos, ypos, 1, 1, c_gray, _rad + _rad_frame, 0.8, _rad_width + _rad_frame, 90);
-		var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
+		//var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
+		var c = charge >= 100 ? c_green : c_yellow; 
 		scDrawPiePart(xpos, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE], ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX], c, _rad, 0.8, _rad_width, 90);
 	
 		//ULTIMATE CASTTIME CIRCLE
 		scDrawPiePart(xpos, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL] - ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME], ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL], c_yellow, 32, 0.9, 4);
 	
 		//ULTIMATE CHARGE TEXT
-		scDrawText(xpos, ypos + _rad + _rad_frame, string(charge) + "%", charge < 100 ?  c_ltgray : c_yellow,
+		scDrawText(xpos, ypos + _rad + _rad_frame, string(charge < 100 ? floor(charge) : round(charge)) + "%", charge < 100 ?  c_ltgray : c_yellow,
 			0.5, noone, charge < 100 ? 0.8 : scMovementWave(0.8, 0.4, 1));
 		if (charge >= 100) {
 			var gamepad = !controller_lastused ? GAMEPAD_TYPE.KEYBOARD : GAMEPAD_TYPE.PS4;//scSettingsGetType(SETTINGS_TYPE.VALUE, key_map[? KEYBIND_MAP.GAMEPAD]); //Get the gamepad index
@@ -76,17 +77,24 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	}
 	
 	//WEAPON COOLDOWN
-	var c = c_dkgray;
-	for (var i = 0; i < ds_list_size(buffs_map); i++) {
-		//Grab the buff map
-		var ds_list = buffs_map[| i];
-		//Is the buff a cooldown?
-		if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
-			c = c_blue;
-	}
 	if (map[? WEAPON_MAP.ENABLED] && global.play) {
 		var cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] : map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL];
 		var curr_cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME] : map[? WEAPON_MAP.COOLDOWN_TIME];
+		var c = c_dkgray;
+		if (!map[? WEAPON_MAP.CHARGING])
+			for (var i = 0; i < ds_list_size(buffs_map); i++) {
+				//Grab the buff map
+				var ds_list = buffs_map[| i];
+				//Is the buff a cooldown?
+				if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
+					c = c_blue;
+			}
+		else {
+			c = c_purple;
+			cd = 1;
+			curr_cd = map[? WEAPON_MAP.CHARGE];
+		}
+		
 		scDrawPieRect(xpos, ypos, curr_cd, cd, c, 20, 0.8);
 	}
 	

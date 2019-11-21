@@ -4,8 +4,8 @@ toggled_audio = false;
 //global.players = 0;
 
 //The resolution the game will run at
-#macro RES_W 1600 //Cam 1024
-#macro RES_H 900 //Cam 576
+#macro RES_W 1600 //Before 1024
+#macro RES_H 900 //Before 768
 #macro TIME_SPEED (room_speed / 30)
 
 changeres = true;
