@@ -5,16 +5,14 @@ var arrow_map = map[? WEAPON_MAP.MAP];
 
 if(arrow_map[? ARROW_MAP.TYPE] == ARROW.NONE) exit;
 
-//Set the direction of the arrow
-var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
-
-if (auto_aim)
-	dir = scAutoAim();
-
 if (!scKeybindsGet(KEYBIND_TYPE.SHOOT) || map[? WEAPON_MAP.COOLDOWN_TIME] != arrow_map[? ARROW_MAP.COOLDOWN]){
 	if (map[? WEAPON_MAP.DELAY_TIME] == 0)
 		if (map[?WEAPON_MAP.AMMO] != 0) {
 			if (arrow_map[? ARROW_MAP.SPAWN_SCRIPT] == noone) {
+				//Set the direction of the arrow
+				var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
+				if (auto_aim)
+					dir = scAutoAim();
 				facing = dir > -90 && dir <= 90 ? 1 : -1;
 				var arrow = scSpawnArrow(x,y,depth+1,dir,id,map);
 				arrow.dmg = ceil(arrow.dmg *	1.5 * ((map[? WEAPON_MAP.POWER])/100));

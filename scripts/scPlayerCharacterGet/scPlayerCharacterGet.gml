@@ -1,4 +1,4 @@
-var val = CHARACTERS.DEFAULT;
+var val = CHARACTER.DEFAULT;
 
 for (var i = 0; i < instance_number(object_index); i++)
 	if (instance_find(object_index, i) == self)

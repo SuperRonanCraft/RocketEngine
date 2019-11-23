@@ -65,7 +65,7 @@
             "mvc": "1.0",
             "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
             "propertyId": "982681a8-84f6-4319-a147-e460f5e49935",
-            "value": "CHARACTERS.ENEMY"
+            "value": "CHARACTER_ENEMY.ENEMY"
         },
         {
             "id": "bb892fd6-35dd-4765-96c8-3caf68094cfe",

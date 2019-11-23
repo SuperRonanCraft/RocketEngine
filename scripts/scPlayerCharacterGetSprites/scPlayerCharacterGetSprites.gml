@@ -3,25 +3,9 @@
 ///@arg character
 
 var map = ds_map_create();
-//var map = player_map[? PLAYER_MAP.CHARACTER_INFO];
 
 switch (argument0) {
-	case CHARACTERS.ENEMY:
-        map[? ANIMATIONSTATE.STANDING] = sEnemy_default_idle;
-		map[? ANIMATIONSTATE.SLIDING] = sEnemy_default_walkend;
-		map[? ANIMATIONSTATE.WALKING] = sEnemy_default_walk;
-		map[? ANIMATIONSTATE.RISING] = sEnemy_default_rise;
-		map[? ANIMATIONSTATE.FALLING] = sEnemy_default_fall;
-		map[? ANIMATIONSTATE.KNOCKBACK] = sEnemy_default_knockBack;
-		map[? ANIMATIONSTATE.KNOCKBACK2] = sEnemy_default_knockBack2;
-		map[? ANIMATIONSTATE.TECHED] = sEnemy_default_tech;
-		map[? ANIMATIONSTATE.DEAD] = sEnemy_default_dead1;
-		map[? ANIMATIONSTATE.DEAD2] = sEnemy_default_dead2;
-		map[? ANIMATIONSTATE.TRAPPED] = sEnemy_default_trapped;
-		map[? ANIMATIONSTATE.DEADFROZEN] = sEnemy_default_deadFrozen; 
-		map[? ANIMATIONSTATE.DEADLASER] = sEnemy_default_deadLaser; 
-        break;
-    case CHARACTERS.SWORD:
+    case CHARACTER.SWORD:
         map[? ANIMATIONSTATE.STANDING] = sPlayer_sword_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_sword_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_sword_walk;
@@ -36,7 +20,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_sword_deadFrozen;
 		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser;
         break;
-    case CHARACTERS.ARROW:
+    case CHARACTER.ARROW:
         map[? ANIMATIONSTATE.STANDING] = sPlayer_arrow_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_arrow_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_arrow_walk;
@@ -52,6 +36,8 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser;
         break;
     default:
+		if (argument0 != CHARACTER.DEFAULT)
+			show_debug_message("Character " + string(argument0) + " does not exist!");
         map[? ANIMATIONSTATE.STANDING] = sPlayer_default_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_default_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_default_walk;

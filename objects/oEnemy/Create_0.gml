@@ -10,7 +10,7 @@ event_inherited();
 scPlayerStart();
 
 //Load Character
-scPlayerCharacterChange(character, load_character_cache);
+scEnemyCharacterChange(character, load_character_cache);
 
 //Load keybinds
 scKeybindsSet(keys);

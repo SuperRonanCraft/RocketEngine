@@ -69,7 +69,7 @@ else if (char_last != noone) {
 
 	//Character front of current
 	char_draw = char_last + 1;
-	if (char_draw >= CHARACTERS.LENGTH)
+	if (char_draw >= CHARACTER.LENGTH)
 		char_draw = noone;
 	if (char_draw != noone) {
 		var char_anim_map = scPlayerCharacterGetSprites(char_draw);

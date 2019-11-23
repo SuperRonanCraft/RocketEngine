@@ -11,7 +11,7 @@ with (object_index)
 if (all_selected || force) {
 	if (force)
 		with (oPlayer) { //random character
-			var val = irandom_range(0, CHARACTERS.LENGTH - 1);
+			var val = irandom_range(0, CHARACTER.LENGTH - 1);
 			scPlayerCharacterChange(val);
 			scPlayerLoadModifiers(id);
 		}

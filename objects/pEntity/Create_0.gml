@@ -30,4 +30,4 @@ smoke_act = 10;
 smoke_lastvsp = 0;
 
 //Aim type
-auto_aim = false;
+//auto_aim = false;

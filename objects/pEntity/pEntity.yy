@@ -346,6 +346,20 @@
             "value": "True",
             "varName": "system_ultimate",
             "varType": 3
+        },
+        {
+            "id": "c2a36caa-a45f-4690-9e11-bd3ab8f966b7",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "auto_aim",
+            "varType": 3
         }
     ],
     "solid": false,

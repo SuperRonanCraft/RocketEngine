@@ -1,6 +1,6 @@
 
-var index = object_get_parent(object_index) != -100 ? object_get_parent(object_index) : object_index;
-
+//var index = object_get_parent(object_index) != -100 ? object_get_parent(object_index) : object_index;
+var index = pEntity;
 var obj = instance_furthest(x, y, index);
 var dis = distance_to_object(obj);
 for (var i = 0; i < instance_number(index); i++) {
@@ -14,4 +14,7 @@ for (var i = 0; i < instance_number(index); i++) {
 	}
 }
 
-return obj.x - x > 0 ? 0 : 180;
+if (obj != noone && obj != id)
+	return obj.x - x > 0 ? 0 : 180;
+else
+	return facing == 1 ? 0 : 180;

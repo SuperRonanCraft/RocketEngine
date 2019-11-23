@@ -2,6 +2,7 @@
 
 ds_map_destroy(weapon_map);
 weapon_map = ds_map_create();
+
 var map = weapon_map;
 var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
 map[? WEAPON_MAP.TYPE] = char[? CHARACTER_MAP.WEAPON];

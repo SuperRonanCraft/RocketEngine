@@ -1,6 +1,6 @@
-///@desc Change a players character
+///@desc Change an entities character
 ///@arg character
-///@arg load-cache*
+///@arg load
 
 var char = argument[0];
 var load = argument_count > 1 ? (argument[1] != noone ? argument[1] : true) : true;
@@ -36,6 +36,7 @@ if (load)
 			break;
 		}
 
+
 if (map[? CHARACTER_MAP.PALETTE_INDEX] >= sprite_get_width(map[? CHARACTER_MAP.PALETTE])) //Shader safety
 	map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
 
@@ -47,15 +48,14 @@ player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 //Load character weapon
 scWeaponStart();
 
-enum CHARACTERS {
+enum CHARACTER {
 	DEFAULT, SWORD, ARROW,
-	ENEMY,
 	//KEEP LAST
 	LENGTH
 }
 
 enum CHARACTER_MAP {
-	NAME, TYPE, WEAPON, HEALTH, PALETTE, PALETTE_INDEX,
+	NAME, CHARACTER, TYPE, WEAPON, HEALTH, PALETTE, PALETTE_INDEX,
 	//Can this character be selected
 	CAN_PICK
 }

@@ -11,21 +11,10 @@ map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
 map[? CHARACTER_MAP.CAN_PICK] = true;
 
 switch (map[? CHARACTER_MAP.TYPE]) {
-	case CHARACTER.DEFAULT:
-		map[? CHARACTER_MAP.NAME] = "Steve";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET;
-		map[? CHARACTER_MAP.HEALTH] = 70;
-		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
-		break;
-	case CHARACTER.SWORD:
-		map[? CHARACTER_MAP.NAME] = "Sword Guy";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.SHURIKEN;
-		map[? CHARACTER_MAP.HEALTH] = 50;
-		map[? CHARACTER_MAP.PALETTE] = sPallete_sword;
-		break;
-	case CHARACTER.ARROW:
-		map[? CHARACTER_MAP.NAME] = "Hush";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ARROW;
+	case CHARACTER_ENEMY.ENEMY:
+		map[? CHARACTER_MAP.NAME] = "Enemy";
+		map[? CHARACTER_MAP.CAN_PICK] = false;
+		map[? CHARACTER_MAP.WEAPON] = WEAPON.ARROW; 
 		map[? CHARACTER_MAP.HEALTH] = 30;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
 		break;
