@@ -21,7 +21,7 @@ player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 scWeaponStart();
 
 enum CHARACTER_ENEMY {
-	ENEMY,
+	ENEMY, NADES,
 	//KEEP LAST
 	LENGTH
 }
