@@ -11,7 +11,7 @@ map[? ARROW_MAP.TYPE] = wep;
 switch (wep) {
     case ARROW.NONE:
         map[? ARROW_MAP.DAMAGE] = 0;
-		map[? ARROW_MAP.ULTIMATE] = ULTIMATE.NONE;
+		//map[? ARROW_MAP.ULTIMATE] = ULTIMATE.NONE;
         break;
     case ARROW.DEFAULT:
 		map[? ARROW_MAP.NAME] = "Normal Arrow";

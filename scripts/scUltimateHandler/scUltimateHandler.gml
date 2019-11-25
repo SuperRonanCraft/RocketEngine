@@ -1,7 +1,8 @@
 if (!system_ultimate) exit;
 var map = ultimate_map;
+var char_map = player_map[? PLAYER_MAP.CHARACTER_INFO];
 
-if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || weapon_map[? WEAPON_MAP.ULTIMATE] == ULTIMATE.NONE) exit; //Is the system even enabled?
+if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || char_map[? CHARACTER_MAP.ULTIMATE] == ULTIMATE_TYPE.NONE) exit; //Is the system even enabled?
 
 if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGETYPE.TIME); exit;} //Give charge by time, exit
 
@@ -24,7 +25,7 @@ if (key_shoot) { //Shoot key being held down
 		//	script_execute(casting_map[? ULTIMATE_MAP.SCRIPT_CASTING_STEP]); //Casting an ult but not calling one (pre-animation?)
 	} else {
 		//if (!keyboard_check_pressed(keyleft) && !keyboard_check_pressed(keyright)) exit; //Did we JUST press the shoot key?
-		var ult = weapon_map[? WEAPON_MAP.ULTIMATE];
+		var ult = char_map[? CHARACTER_MAP.ULTIMATE];
 		if (ult != map[? ULTIMATE_CASTING_MAP.CASTING_LAST]) { //New ultimate being casted?
 			var ult_map = ds_map_create(); //Create an ult map
 			scUltimateGet(ult, ult_map); //Grab the ult map

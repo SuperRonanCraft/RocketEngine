@@ -11,7 +11,7 @@ map[? SHURIKEN_MAP.TYPE] = shur;
 switch (shur) {
     case SHURIKEN.NONE:
         map[? SHURIKEN_MAP.DAMAGE] = 0;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.NONE;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.NONE;
         break;
     case SHURIKEN.DEFAULT:
 		map[? SHURIKEN_MAP.NAME] = "Silver Star";
@@ -30,7 +30,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.SPEED] = 23;
 		map[? SHURIKEN_MAP.DAMAGE] = 1;
 		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.FROZEN];
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.ICE_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.ICE_SWORD;
 		map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Ice_Despawn;
 		map[? SHURIKEN_MAP.WALL_SCRIPT] = scShuriken_Ice_Despawn;
 		map[? SHURIKEN_MAP.DEATHCAUSE] = DEATH_LIST.FROZEN;
@@ -44,11 +44,10 @@ switch (shur) {
 		map[? SHURIKEN_MAP.COOLDOWN] = 42;
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.FIRE_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.FIRE_SWORD;
 		map[? SHURIKEN_MAP.DEATHCAUSE] = DEATH_LIST.LASER;
 		map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Fire_Despawn;
 		map[? SHURIKEN_MAP.WALL_SCRIPT] = scShuriken_Fire_Despawn;
-		
 		break;
 		
 	case SHURIKEN.PORTAL:
@@ -59,7 +58,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.COOLDOWN] = 20;
 		map[? SHURIKEN_MAP.SPEED] = 22;
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;
 		map[? SHURIKEN_MAP.CLIP] = 2;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 80;
 		map[? SHURIKEN_MAP.TIMER] = 45;
@@ -68,8 +67,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Portal_Despawn;
 		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Portal_Despawn;
 		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Portal_Weapon;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.PORTAL_SWORD;
-		
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.PORTAL_SWORD;
 		break;
     case SHURIKEN.BRICK:
 		map[? SHURIKEN_MAP.NAME] = "A Brick";
@@ -83,7 +81,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.KBAMT] = 7;
 		map[? SHURIKEN_MAP.ROTATE] = false;
 		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Brick_Weapon;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.BRICK_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.BRICK_SWORD;
 		break;
 		
     case SHURIKEN.MAGNET:
@@ -106,7 +104,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.CLIP] = 5;
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SAND_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SAND_SWORD;
 		break;
 	
     case SHURIKEN.SHOTGUN:
@@ -118,7 +116,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DAMAGE] = 1;
 		map[? SHURIKEN_MAP.ROTATE] = false;
 		map[? SHURIKEN_MAP.SPAWN_SCRIPT] = scShuriken_Shotgun_Spawn;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SHOTGUN_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SHOTGUN_SWORD;
 		break;
 		
     case SHURIKEN.SLIME:
@@ -133,7 +131,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 40;
 		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Slime_Player;
 		map[? SHURIKEN_MAP.ROTATE] = false;
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SLIME_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SLIME_SWORD;
 		break;
 		
 	case SHURIKEN.METAL:
@@ -144,7 +142,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.KBAMT] = 0;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
 		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.METAL_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.METAL_SWORD;
 		break;
 		
 	case SHURIKEN.ELECTRIC:
@@ -157,7 +155,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 45;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
 		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SCRAPING];
-		map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_SWORD;
+		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_SWORD;
 		break;
 }
 

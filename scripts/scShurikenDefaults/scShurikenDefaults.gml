@@ -35,7 +35,7 @@ map[? SHURIKEN_MAP.SPRITE_STICK] = noone; //Change sprite on stick
 map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
 map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 
-map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability
+//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability
 map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE] = true; //if weapon gives ult charge
 map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //multiplier of charge rate
 

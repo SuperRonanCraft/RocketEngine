@@ -38,7 +38,7 @@ map[? ARROW_MAP.WEIGHT] = 20; //weight of projectile
 map[? ARROW_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
 map[? ARROW_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 
-map[? ARROW_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability
+//map[? ARROW_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability
 map[? ARROW_MAP.ULTIMATE_CHARGE_GIVE] = true; //if weapon gives ult charge
 map[? ARROW_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //multiplier of charge rate
 
