@@ -26,14 +26,14 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_arrow_walk;
 		map[? ANIMATIONSTATE.RISING] = sPlayer_arrow_rise;
 		map[? ANIMATIONSTATE.FALLING] = sPlayer_arrow_fall;
-		map[? ANIMATIONSTATE.KNOCKBACK] = sPlayer_sword_knockBack;
-		map[? ANIMATIONSTATE.KNOCKBACK2] = sPlayer_sword_knockBack2;
-		map[? ANIMATIONSTATE.TECHED] = sPlayer_sword_tech;
+		map[? ANIMATIONSTATE.KNOCKBACK] = sPlayer_arrow_knockBack;
+		map[? ANIMATIONSTATE.KNOCKBACK2] = sPlayer_arrow_knockBack2;
+		map[? ANIMATIONSTATE.TECHED] = sPlayer_arrow_tech;
 		map[? ANIMATIONSTATE.DEAD] = sPlayer_arrow_dead1;
 		map[? ANIMATIONSTATE.DEAD2] = sPlayer_arrow_dead2;
-		map[? ANIMATIONSTATE.TRAPPED] = sPlayer_sword_trapped;
-		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_sword_deadFrozen;
-		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser;
+		map[? ANIMATIONSTATE.TRAPPED] = sPlayer_arrow_trapped;
+		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_arrow_deadFrozen;
+		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_arrow_deadLaser;
         break;
     default:
 		if (argument0 != CHARACTER.DEFAULT)

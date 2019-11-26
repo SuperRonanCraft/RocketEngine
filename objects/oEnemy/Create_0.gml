@@ -16,6 +16,7 @@ scEnemyCharacterChange(character, load_character_cache);
 scKeybindsSet(keys);
 
 auto_aim = true;
+despawn = true;
 
 //ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = true; //Disable Ults
 player_map[? PLAYER_MAP.HUD_SHOW] = false; //Dont show ammo

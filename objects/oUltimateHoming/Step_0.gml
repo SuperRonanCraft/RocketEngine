@@ -3,7 +3,7 @@
 x = owner.x;
 y = owner.y;
 
-if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
+if (timer % 5 == 0 && timer < room_speed)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
 			irandom_range(45, 135), owner, owner.weapon_map, [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;
@@ -11,7 +11,7 @@ if (timer % (10 * (room_speed / 30)) == 0 && timer < room_speed)
 		rocket_map = ds_map_create(); 
 		ds_map_copy(rocket_map, other.owner.rocket_map);*/
 		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
-		weapon_map[? WEAPON_MAP.DAMAGE] = 1;
+		weapon_map[? WEAPON_MAP.DAMAGE] = 2;
 		//Give it the map of the current rocket
 		sprite_index = sRocket_Homing_Ult;
 		//Sizes

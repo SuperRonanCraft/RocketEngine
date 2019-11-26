@@ -49,7 +49,7 @@ if(!deactivate){
 		var isPlayer = scGetParent(pEntity, obj);
 		//show_debug_message("isplayer " + string(isPlayer));
 		
-		if(isPlayer){
+		if(isPlayer && !deactivate){
 			var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
 			var _oteam = obj.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
 		
@@ -139,8 +139,11 @@ if(!deactivate){
 
 }
 
+
+//TODO: Fix 'ragdoll' physics
+/*
 if(flyWith != noone && !deactivate){
-	if(instance_exists(flyWith)){
+	if(false && instance_exists(flyWith)){
 		flyWith.x = x;
 		flyWith.y = y;
 		flyWith.gravity_map[?GRAVITY_MAP.HSP_MOVE] = hsp;
@@ -148,6 +151,7 @@ if(flyWith != noone && !deactivate){
 	}
 			
 }
+*/
 
 if(stuckTo != noone && deactivate){
 	if(instance_exists(stuckTo)){

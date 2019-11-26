@@ -706,7 +706,7 @@
             "Key": "13cd84dc-f95f-4714-aeea-694e0159c419",
             "Value": {
                 "id": "1507ba0f-f427-422e-8c36-de75c32399c4",
-                "resourcePath": "sprites\\sPlayer_sword_knockBack21\\sPlayer_sword_knockBack21.yy",
+                "resourcePath": "sprites\\sPlayer_arrow_knockBack2\\sPlayer_arrow_knockBack2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -906,7 +906,7 @@
             "Key": "1a2f6a89-4008-41df-bf23-daf6c9a40b2a",
             "Value": {
                 "id": "4e9c1514-b6b8-4a6c-bd5f-74155ed25070",
-                "resourcePath": "sprites\\sPlayer_sword_trapped1\\sPlayer_sword_trapped1.yy",
+                "resourcePath": "sprites\\sPlayer_arrow_trapped\\sPlayer_arrow_trapped.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5690,7 +5690,7 @@
             "Key": "b3609b39-dc01-4854-bd6f-b7ef61261d47",
             "Value": {
                 "id": "64137e62-4108-4a5f-b9f5-eb5586e3b636",
-                "resourcePath": "sprites\\sPlayer_sword_knockBack1\\sPlayer_sword_knockBack1.yy",
+                "resourcePath": "sprites\\sPlayer_arrow_knockBack\\sPlayer_arrow_knockBack.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5826,7 +5826,7 @@
             "Key": "b6e2fc12-23b3-4b2c-80da-26d031952715",
             "Value": {
                 "id": "237d3447-3658-4719-8bf6-26e7627db4c5",
-                "resourcePath": "sprites\\sPlayer_sword_deadLaser1\\sPlayer_sword_deadLaser1.yy",
+                "resourcePath": "sprites\\sPlayer_arrow_deadLaser\\sPlayer_arrow_deadLaser.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6146,7 +6146,7 @@
             "Key": "c1f4f3da-432d-4aa6-80e5-1d335a4f1dc8",
             "Value": {
                 "id": "cd341f67-bb49-4d47-bd1b-e16e923a5663",
-                "resourcePath": "sprites\\sPlayer_sword_tech1\\sPlayer_sword_tech1.yy",
+                "resourcePath": "sprites\\sPlayer_arrow_tech\\sPlayer_arrow_tech.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6266,7 +6266,7 @@
             "Key": "c73e2ef6-77b8-499a-93bb-e8c906cc2418",
             "Value": {
                 "id": "28c9ddd1-aa19-42a1-bba3-a008da9c612a",
-                "resourcePath": "sprites\\sPlayer_sword_deadFrozen1\\sPlayer_sword_deadFrozen1.yy",
+                "resourcePath": "sprites\\sPlayer_arrow_deadFrozen\\sPlayer_arrow_deadFrozen.yy",
                 "resourceType": "GMSprite"
             }
         },
