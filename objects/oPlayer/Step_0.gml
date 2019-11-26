@@ -1,4 +1,5 @@
-/// @desc Stuff
+event_inherited();
+/*/// @desc Stuff
 if (!global.play) exit;
 
 //scPlayerHandler(PLAYER_EVENT.STEP);
@@ -70,4 +71,4 @@ if (despawn && ((shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && player_map[? PLAY
 	image_alpha -= 0.025;
 	if (image_alpha <= 0)
 		instance_destroy();
-}
+}*/

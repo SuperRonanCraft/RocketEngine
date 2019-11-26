@@ -2,13 +2,21 @@
 
 var inst = instance_create_depth(x, y, depth, oPlayer);
 with (inst) {
+	var _cmap = other.player_map[? PLAYER_MAP.CHARACTER_INFO];
+	scPlayerCharacterChange(_cmap[? CHARACTER_MAP.TYPE], false);
 	if (other.player_aimode)
 		aiBrain = other.aiBrain;
 	ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = false;
 	weapon_map[? WEAPON_MAP.ENABLED] = false;
-	keyleft = other.keyright;
-	keyright = other.keyleft;
-	keyjump = other.keyjump;
+	ability_map[? ABILITY_MAP.ENABLED] = false;
+	keys = other.keys;
+	scKeybindsSet(keys);
+	var _keyLeft = key_map[? KEYBIND_MAP.LEFT];
+	key_map[? KEYBIND_MAP.LEFT] = key_map[? KEYBIND_MAP.RIGHT];
+	key_map[? KEYBIND_MAP.RIGHT] = _keyLeft;
+	_keyLeft = key_map[? KEYBIND_MAP.LEFT_GP];
+	key_map[? KEYBIND_MAP.LEFT_GP] = key_map[? KEYBIND_MAP.RIGHT_GP];
+	key_map[? KEYBIND_MAP.RIGHT_GP] = _keyLeft;
 	//keyshoot = noone; //Cannot shoot
 	team = other.team; //Same team as caster
 	display = false; //No ui

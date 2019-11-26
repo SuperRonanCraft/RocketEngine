@@ -1,14 +1,24 @@
 //DRAW PLAYER WEAPON/ULTIMATE
+///@arg x
+///@arg y
+///@arg radius
+///@arg frame-width
+
 var map = weapon_map;
+var _x = argument0;
+var _y = argument1;
+var _rad = argument2;
+var _rad_frame = argument3;
+_x += _rad;
 if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 	//The projectile sprite
 	//var sprite = map[? WEAPON_MAP.GUI_ICON];
 	var sprite = scWeaponModifyGetType(map[? WEAPON_MAP.MODIFIER], WEAPON_MODIFIER_MAP.ICON);
 	//Dimentions of sprite
-	var w = sprite_get_width(sprite);
+	//var w = sprite_get_width(sprite);
 	var h = sprite_get_height(sprite);
 	//determine side
-	var xpos = team == TEAM.LEFT ? RES_W / 4 - w : RES_W / 2 + RES_W / 4 + w;
+	var xpos = team == TEAM.LEFT ? _x : RES_W - _x;
 	var ypos = h / 1.8;
 	
 	var c = c_dkgray;
@@ -46,11 +56,11 @@ if (map[? WEAPON_MAP.TYPE] != WEAPON.NONE) {
 			scDrawLightning(xpos, ypos, xpos + lengthdir_x(32, ang), ypos + lengthdir_y(32, ang), irandom(5), c_blue);
 		}
 		//ypos = 0;
-		var _rad = 30, _rad_width = 30, _rad_frame = 3;
-		scDrawPiePart(xpos, ypos, 1, 1, c_gray, _rad + _rad_frame, 0.8, _rad_width + _rad_frame, 90);
+		//var _rad = 30, _rad_width = 30, _rad_frame = 3;
+		scDrawPiePart(xpos, ypos, 1, 1, c_gray, _rad + _rad_frame, 0.8, _rad + _rad_frame, 90);
 		//var c = make_color_rgb(255 * clamp(min(((75 - charge) / 25), 1), 0, 1), 255 * clamp(max((charge - 25) / 100, 0), 0, 1), 0);
 		var c = charge >= 100 ? c_green : c_yellow; 
-		scDrawPiePart(xpos, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE], ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX], c, _rad, 0.8, _rad_width, 90);
+		scDrawPiePart(xpos, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE], ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX], c, _rad, 0.8, _rad, 90);
 	
 		//ULTIMATE CASTTIME CIRCLE
 		scDrawPiePart(xpos, ypos, ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL] - ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME], ultimate_map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORIGINAL], c_yellow, 32, 0.9, 4);

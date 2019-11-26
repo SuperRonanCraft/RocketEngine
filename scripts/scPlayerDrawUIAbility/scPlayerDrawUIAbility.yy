@@ -1,8 +1,8 @@
 {
-    "id": "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
+    "id": "766c86ac-c5c5-485f-a8f8-6894b6a7bcae",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scAbilityGet",
+    "name": "scPlayerDrawUIAbility",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -6,7 +6,7 @@ if (_map[? "players"] != noone) {
 	var _ps = _map[? "players"];
 	for (var i = 0; i < array_length_1d(_ps); i++) //Preview who to affect (red dot above head)
 		with (_ps[i])
-			scDrawCircle(x, bbox_top, 5, c_red, false, 0.5);
+			scDrawCircle(bbox_left - 10, bbox_top, 5, c_red, false, 0.5);
 	if (_map[? "apply"]) { //Apply Option
 		if (tab != -1) {
 			for (var i = 0; i < array_length_1d(_ps); i++)

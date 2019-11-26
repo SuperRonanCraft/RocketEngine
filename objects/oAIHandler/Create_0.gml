@@ -9,6 +9,7 @@ AILeft = false;
 AIJump = false;
 AIShoot = false;
 AIUlt = false;
+AIAbility = false;
 
 enum ACTIONS {
 	RIGHT, LEFT, JUMP, SHOOT, ULT

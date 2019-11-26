@@ -3775,6 +3775,14 @@
             }
         },
         {
+            "Key": "766c86ac-c5c5-485f-a8f8-6894b6a7bcae",
+            "Value": {
+                "id": "d1c65f1f-5669-4dce-9d7a-8eb279a73112",
+                "resourcePath": "scripts\\scPlayerDrawUIAbility\\scPlayerDrawUIAbility.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "76a74d79-104c-4428-8b8c-40da2d13ef2b",
             "Value": {
                 "id": "ef89c135-11fa-4880-bcf1-d0d8d66aa493",
@@ -4210,7 +4218,7 @@
             "Key": "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
             "Value": {
                 "id": "1017ce58-6af0-4aa8-85b5-b4ce99a4979a",
-                "resourcePath": "scripts\\scAbilityGet\\scAbilityGet.yy",
+                "resourcePath": "scripts\\scAbilityLoad\\scAbilityLoad.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6383,6 +6391,14 @@
             }
         },
         {
+            "Key": "ca4c6979-64b7-4335-ae5c-db306726e26a",
+            "Value": {
+                "id": "8a38b777-a474-4076-ace7-c3130a3b56a8",
+                "resourcePath": "scripts\\scAbilityHandler\\scAbilityHandler.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ca4ca391-4762-4920-b448-577d3377474e",
             "Value": {
                 "id": "7cb1c388-1bb4-4d52-8c55-ba403602c54f",
@@ -8114,6 +8130,7 @@
         "e8153eb1-8892-4151-8b81-c9fa69d71ecc",
         "b05995aa-6145-4034-bcf2-9573202d3535",
         "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
+        "ca4c6979-64b7-4335-ae5c-db306726e26a",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",
@@ -8153,6 +8170,7 @@
         "518397c6-d548-4dd7-ba31-76f7255e3f37",
         "04f2dc97-e5c7-4255-825f-dc7cca8266f4",
         "50157cef-7d17-487e-816d-f7e65820e0ba",
+        "766c86ac-c5c5-485f-a8f8-6894b6a7bcae",
         "99aa39c2-3627-490f-8b34-a79de7a1420a",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",

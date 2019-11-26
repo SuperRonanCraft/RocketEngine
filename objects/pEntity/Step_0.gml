@@ -44,6 +44,9 @@ scWeaponProgress();
 //Combo handling (alters ultimate charge)
 scComboHandler();
 
+//Ability step handler
+scAbilityHandler();
+
 //Ultimate step handler
 scUltimateHandler();
 
