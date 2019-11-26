@@ -7,6 +7,10 @@ var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 var time = shuriken_map[? SHURIKEN_MAP.TIMER];
 var checkroom = shuriken_map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY_ROOM];
 
+if (!instance_exists(owner)) {
+	instance_destroy();
+	exit;
+}
 
 //If there is a special script to run, nullify all else and run it instead
 if (shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP] != noone)

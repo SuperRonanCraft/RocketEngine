@@ -1,5 +1,10 @@
 /// @desc Move Rocket
 
+if (!instance_exists(owner)) {
+	instance_destroy();
+	exit;
+}
+
 var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 //Run special step script and override movement
 var autodestroy = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY];

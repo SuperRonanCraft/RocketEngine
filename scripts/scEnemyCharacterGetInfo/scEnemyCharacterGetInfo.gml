@@ -15,7 +15,7 @@ map[? CHARACTER_MAP.ABILITY] = noone;
 switch (map[? CHARACTER_MAP.TYPE]) {
 	case CHARACTER_ENEMY.ENEMY:
 		map[? CHARACTER_MAP.NAME] = "Enemy";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ARROW; 
+		map[? CHARACTER_MAP.WEAPON] = WEAPON.SHURIKEN; 
 		map[? CHARACTER_MAP.HEALTH] = 30;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
 		break;

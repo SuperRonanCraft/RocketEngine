@@ -28,12 +28,11 @@ else
 	AIShoot = false;
 
 //If ult is ready, fire IMMEDIATELY
-if (player.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] >= player.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {
-	ultReady = true;
-	AIRight = true;
-	AILeft = true;
-} else
-	ultReady = false;
+if (player.system_ultimate)
+	if (player.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE] >= player.ultimate_map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {
+		ultReady = true;
+	} else
+		ultReady = false;
 	
 AIUlt = ultReady;
 
