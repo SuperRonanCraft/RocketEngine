@@ -9,6 +9,9 @@ scPlayerStart();
 //Load Ultimates
 scUltimateStart();
 
+//Load Abilities
+scAbilityStart();
+
 //Load Character
 scPlayerCharacterChange(character, load_character_cache);
 

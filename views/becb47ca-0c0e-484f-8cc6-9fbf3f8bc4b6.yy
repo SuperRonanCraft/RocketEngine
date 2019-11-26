@@ -11,7 +11,7 @@
         "afd3feae-b33d-4cee-93c1-180416ea1747"
     ],
     "filterType": "GMScript",
-    "folderName": "Enteties",
+    "folderName": "Entities",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

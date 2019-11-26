@@ -3551,6 +3551,14 @@
             }
         },
         {
+            "Key": "6f8861f2-3c9b-43b8-ae33-cdd9efb45345",
+            "Value": {
+                "id": "0f9a68f5-6b5e-4551-904b-7eec3dd9013a",
+                "resourcePath": "views\\6f8861f2-3c9b-43b8-ae33-cdd9efb45345.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6faef6f4-1600-4237-a30c-a46a36d582e0",
             "Value": {
                 "id": "1c039e1f-b62a-4913-a54b-75081b91caee",
@@ -4195,6 +4203,14 @@
             "Value": {
                 "id": "02abf157-36ac-48f6-b70f-f43898fd58ca",
                 "resourcePath": "scripts\/scDrawLine\/scDrawLine.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
+            "Value": {
+                "id": "1017ce58-6af0-4aa8-85b5-b4ce99a4979a",
+                "resourcePath": "scripts\\scAbilityGet\\scAbilityGet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5559,6 +5575,14 @@
             }
         },
         {
+            "Key": "b05995aa-6145-4034-bcf2-9573202d3535",
+            "Value": {
+                "id": "b691986f-ad50-4a46-b86f-476ea4ceb521",
+                "resourcePath": "scripts\\scAbilityStart\\scAbilityStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b06581ab-c385-498f-9940-64f5a039dcab",
             "Value": {
                 "id": "0c4d2e0c-1610-4721-ba7c-b935279f5948",
@@ -6628,6 +6652,14 @@
                 "id": "5e74aff0-8f09-4d61-a629-117c87f50880",
                 "resourcePath": "sprites\/sRocket_Obsolete\/sRocket_Obsolete.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d47fe380-4a99-41fc-94c3-a137605d71e7",
+            "Value": {
+                "id": "d97383a0-3a46-4605-9122-9cec4440edfe",
+                "resourcePath": "views\\d47fe380-4a99-41fc-94c3-a137605d71e7.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -7928,13 +7960,6 @@
         "238aa5dc-eb3f-4b05-8aa0-05a4a8b3ba00",
         "52e8355b-310e-4b7b-82e5-fd720d385a73",
         "9ec574d6-8069-4dfa-aa1d-de09a5581657",
-        "b06581ab-c385-498f-9940-64f5a039dcab",
-        "819c3721-6078-47b0-91cb-c171738ea97b",
-        "49bfee05-af25-4fd2-9718-94f2cf1ccc2f",
-        "0057775c-c45c-43a4-9949-ab4d3b9998dc",
-        "a0180b61-f5da-4c63-91f0-ced21ec54f66",
-        "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
-        "b386a635-6456-466a-9dc6-6f2d438ff1e3",
         "8d677245-483e-47c4-a366-a6bb03bcb76b",
         "e9299095-87f4-4b5e-a689-8746fbc3f450",
         "4bcc1777-4dde-4b97-802b-1d1daddeb6a6",
@@ -8006,6 +8031,27 @@
         "4e45b309-8276-49b5-a0bc-21aa629f5f6f",
         "5c320603-4784-4110-97d0-f25729940237",
         "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
+        "483e1c54-e32e-4837-b4ec-da3ac733df64",
+        "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
+        "5e646fca-ca67-4330-a6ca-62aa240db456",
+        "09a3f638-e6de-4ac5-8650-6519e3abfb67",
+        "50f9d5cf-bfd3-432b-b025-b5ef366cf21c",
+        "9965ca03-d1ab-4539-a6d5-df93b1739740",
+        "860f6c71-1aec-4b22-9c63-324f81cf49fd",
+        "e60794b0-9b4b-4438-8153-eff68128b944",
+        "fe7bfc59-eae7-4325-9ad8-be469bde3b00",
+        "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
+        "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
+        "015fe8bc-9f59-4c57-8ad3-b1dc8c8f81b8",
+        "79a0373a-3b39-4477-8005-f971adc919cc",
+        "6669a961-db33-4c1a-9547-1587408b79be",
+        "07927c46-8cc5-468c-9943-e27c3c48ab80",
+        "4b5a2e34-9fc9-495e-aa91-9955532df18c",
+        "d9607834-34f0-4efc-ada1-4de939137bd4",
+        "d9271e61-5cb2-46cd-afe7-8202bf89fbe0",
+        "8a4768fa-b493-47fa-b02f-e248adc78d47",
+        "e9984936-9f4a-48f1-be9d-76f53849129e",
+        "c9b8b920-a3f3-423a-9850-6aac1712082a",
         "0b2326de-465c-4c64-839a-e40115a8c88c",
         "489c52db-5e84-41a1-8f6d-53a96903511b",
         "af87de2e-e23d-4887-875f-53947f1d38e3",
@@ -8066,27 +8112,8 @@
         "e9b756e7-36df-4095-bde1-955dd35338b9",
         "3c4015ab-95c8-473d-937c-a0cae539f1f6",
         "e8153eb1-8892-4151-8b81-c9fa69d71ecc",
-        "483e1c54-e32e-4837-b4ec-da3ac733df64",
-        "d069bea5-c620-4ab2-9c6b-cd4085b06a6c",
-        "5e646fca-ca67-4330-a6ca-62aa240db456",
-        "09a3f638-e6de-4ac5-8650-6519e3abfb67",
-        "50f9d5cf-bfd3-432b-b025-b5ef366cf21c",
-        "9965ca03-d1ab-4539-a6d5-df93b1739740",
-        "860f6c71-1aec-4b22-9c63-324f81cf49fd",
-        "e60794b0-9b4b-4438-8153-eff68128b944",
-        "fe7bfc59-eae7-4325-9ad8-be469bde3b00",
-        "d87c5b87-dcbf-4eb8-842c-0ce85ce8ca0d",
-        "8f0cdcf4-1cc8-4f4f-8707-f713f881b297",
-        "015fe8bc-9f59-4c57-8ad3-b1dc8c8f81b8",
-        "79a0373a-3b39-4477-8005-f971adc919cc",
-        "6669a961-db33-4c1a-9547-1587408b79be",
-        "07927c46-8cc5-468c-9943-e27c3c48ab80",
-        "4b5a2e34-9fc9-495e-aa91-9955532df18c",
-        "d9607834-34f0-4efc-ada1-4de939137bd4",
-        "d9271e61-5cb2-46cd-afe7-8202bf89fbe0",
-        "8a4768fa-b493-47fa-b02f-e248adc78d47",
-        "e9984936-9f4a-48f1-be9d-76f53849129e",
-        "c9b8b920-a3f3-423a-9850-6aac1712082a",
+        "b05995aa-6145-4034-bcf2-9573202d3535",
+        "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",
@@ -8230,6 +8257,13 @@
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",
         "be330bc3-bd8d-4f5d-8f6d-f43b1def1a9c",
+        "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
+        "b386a635-6456-466a-9dc6-6f2d438ff1e3",
+        "b06581ab-c385-498f-9940-64f5a039dcab",
+        "819c3721-6078-47b0-91cb-c171738ea97b",
+        "49bfee05-af25-4fd2-9718-94f2cf1ccc2f",
+        "0057775c-c45c-43a4-9949-ab4d3b9998dc",
+        "a0180b61-f5da-4c63-91f0-ced21ec54f66",
         "108e3dd8-7dce-438c-98e7-99f8fe27a8f1",
         "c251b514-5413-4eb8-bda4-3e9c880f56e9",
         "8b67ca91-d986-48e9-92e2-cc2063238cf1",
