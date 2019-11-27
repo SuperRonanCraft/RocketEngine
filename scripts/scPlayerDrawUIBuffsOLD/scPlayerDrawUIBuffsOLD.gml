@@ -2,7 +2,7 @@
 var offset = 0; //If we should loop back to the beggining (y wise)
 var _dis = 10; //Seperation between each buff
 var _hei = health_map[? HEALTH_MAP.Y] + health_map[? HEALTH_MAP.HEIGHT] + 24;
-var _len = health_map[? HEALTH_MAP.X];
+var _x = health_map[? HEALTH_MAP.X];
 for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	//Grab the buff map
 	var ds_list = buffs_map[| i];
@@ -21,7 +21,7 @@ for (var i = 0; i < ds_list_size(buffs_map); i++) {
 		: (RES_W / 2) + (w / 2) + (((w / 2) + 8) * (i - ((offset - 1) * 10)));
 	var ypos = offset * (h / 2 + 2) + (RES_H / 32);
 	*/
-	var _xoff = _len + (w + _dis) * (i - ((offset - 1) * _dis));
+	var _xoff = _x + (w + _dis) * (i - ((offset - 1) * _dis));
 	var xpos = team == TEAM.LEFT ? _xoff : RES_W - _xoff - w;
 	var ypos = _hei + (h / 2) + (offset - 1) * (h + _dis);
 	

@@ -21,7 +21,7 @@ for (var i = newi; index < columns * rows && i < amt; i++) {
 				scWeaponModify(id, i);
 	}
 	scDrawText(rx, ry, name, c, scale_element); //NAME
-	draw_sprite(spr, 0, rx, ry + 42 + yoffset); //ICON
+	draw_sprite(spr, 0, rx - 32, ry + 10 + yoffset); //ICON
 	scDrawText(rx, ry + 84, desc, color_element_input, scale_description); //DESC
 	scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1);
 	index++;

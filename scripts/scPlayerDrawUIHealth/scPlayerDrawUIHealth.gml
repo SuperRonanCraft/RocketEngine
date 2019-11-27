@@ -1,11 +1,11 @@
 //@desc Draw a Players health
-//@arg X
-//@arg Y
-//@arg length
-//@arg height
-//@arg side_respect*
-//@arg alpha*
-//@arg draw_health*
+///@arg x
+///@arg y
+///@arg length
+///@arg height
+///@arg side_respect*
+///@arg alpha*
+///@arg draw_health*
 
 var _x = argument[0];
 var _y = argument[1];
@@ -28,16 +28,21 @@ if (_side_respect) {
 }
 var _mul = shootable_map[? SHOOTABLE_MAP.HEALTH] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
 var _x2 = _x + ((_len * _mul) * _side);
-scDrawRect(_x, _y, _x2, _y + _hei, c_green, false, _alpha); //Health
+scDrawSpriteExt(_x, _y, sUIHealthNew, 0, noone, _alpha, _len * _mul * _side); //Health
 scDrawRect(_x2, _y, _x + (_len * _side), _y + _hei, c_dkgray, false, _alpha); //Background
 
 //Healed
 if (_hmap[? HEALTH_MAP.HEAL] > 0) {
-	var _per = _hmap[? HEALTH_MAP.HEAL] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]; 
-	scDrawRect(_x2, _y, _x2 + (_len * _per) * -_side, _y + _hei, c_yellow, false, _alpha);
+	var _per = _hmap[? HEALTH_MAP.HEAL] / shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL];
+	scDrawSpriteExt(_x2, _y, sUIHealthNew, 1, noone, _alpha, -(_len * _per) * _side);
+	//scDrawRect(_x2, _y, _x2 + (_len * _per) * -_side, _y + _hei, c_yellow, false, _alpha);
 	_hmap[? HEALTH_MAP.HEAL] = lerp(_hmap[? HEALTH_MAP.HEAL], -0.1, 0.05);
 } else
 	_hmap[? HEALTH_MAP.HEAL] = 0;
+
+//Frame
+//scDrawRect(_x, _y, _x + _len * _side, _y + _hei, c_black, true, _alpha);
+scDrawSpriteExt(_x, _y, sUIHealthFrame, 0, noone, _alpha, _side);
 
 //Damaged
 var _dmg_listRemove = ds_list_create();
@@ -49,12 +54,13 @@ for (var i = ds_list_size(_dmgList) - 1; i >= 0; i--) {
 		_dmgMap[? "x"] = _dmg_xStart - _x;
 		_dmgMap[? "alpha"] = _alpha;
 		_dmgMap[? "change_size"] = 2 - (_dmg_per * 1.3);
-		_dmgMap[? "change_alpha"] = 0.05 - min(_dmg_per * 0.10, 0.04);
+		_dmgMap[? "change_alpha"] = 0.06 - min(_dmg_per * 0.10, 0.04);
 	}
 	var _dmg_alpha = _dmgMap[? "alpha"];
 	var _dmg_size = _dmgMap[? "size"];
 	var _dmg_dis = ((_len * _dmg_per) * _side);
 	var _dmg_x = _dmgMap[? "x"] + _x;
+	//scDrawSpriteExt(_dmg_x, _y - _dmg_size / 2, sUIHealthNew, 2, noone, _dmg_alpha, (_len * _dmg_per), _dmg_size);
 	scDrawRect(_dmg_x, _y - _dmg_size / 2, _dmg_x + _dmg_dis, _y + _hei + _dmg_size / 2, c_red, false, _dmg_alpha);
 	_dmgMap[? "size"] += _dmgMap[? "change_size"];
 	_dmgMap[? "alpha"] -= _dmgMap[? "change_alpha"];
@@ -67,10 +73,8 @@ for (var i = 0; i < ds_list_size(_dmg_listRemove); i++)
 	ds_list_delete(_dmgList, _dmg_listRemove[| i]);
 ds_list_destroy(_dmg_listRemove);
 
-//FRAME
-scDrawRect(_x, _y, _x + _len * _side, _y + _hei, c_black, true, _alpha);
 //TEXT
 if (_draw_health)
-	scDrawText(_x + (_len / 2) * _side, _y + _hei / 2, string(shootable_map[? SHOOTABLE_MAP.HEALTH]) + "/" + string(shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]), noone, 0.3, noone, _alpha)
+	scDrawText(_x + (_len / 2) * _side, _y + _hei / 2, string(shootable_map[? SHOOTABLE_MAP.HEALTH]) + "/" + string(shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL]), noone, 0.5, noone, _alpha);
 
 //_hmap[? HEALTH_MAP.FLASH_ALPHA] = max(_hmap[? HEALTH_MAP.FLASH_ALPHA] - _hmap[? HEALTH_MAP.FLASH_ALPHA_REDUCE], 0);

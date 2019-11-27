@@ -8,6 +8,7 @@ var _hei = _hmap[? HEALTH_MAP.HEIGHT]; //Height of bar
 var _buffer = 20;
 
 scPlayerDrawUIHealth(_x, _y, _len, _hei, true, 1, true);
-scPlayerDrawUIBuffsOLD();
-scPlayerDrawUIWeaponOLD(_x + _len + _buffer, _y, 30, 3);
-scPlayerDrawUIAbility(_x + _len + (_buffer * 2) + (30 * 2), _y, 50, 1);
+scPlayerDrawUIWeapon(_x + _len + _buffer, _y);
+scPlayerDrawUIUltimate(_x, _y + _hei + _buffer, _len, _hei, 1);
+scPlayerDrawUIBuffs(_x, _y + _hei * 2 + _buffer * 2, 10, 10, 32);
+scPlayerDrawUIAbility(_x + _len + (_buffer * 2) + (30 * 2), _y, 32, 2, 1);

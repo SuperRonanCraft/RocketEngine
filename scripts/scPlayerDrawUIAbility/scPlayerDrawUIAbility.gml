@@ -2,6 +2,7 @@
 ///@arg x
 ///@arg y
 ///@arg size-in-pixels
+///@arg buffer
 ///@arg alpha
 
 if (!system_ability) exit;
@@ -10,16 +11,33 @@ if (map[? ABILITY_MAP.TYPE] == ABILITY_TYPE.NONE) exit;
 
 var _x = argument0;
 var _y = argument1;
-var _size = argument2;
-var _alpha = argument3;
+var _width = argument2;
+var _buffer = argument3;
+var _alpha = argument4;
 var _time_max = map[? ABILITY_MAP.COOLDOWN] * room_speed;
 var _time = map[? ABILITY_MAP.CURRENT_TIME];
 
-//scDrawRect(_x - _size, _y + _size * 2, _x + _size, _y, c_gray, false, _alpha);
+_x = team == TEAM.LEFT ? _x : RES_W - _x - _width;
 
-scDrawRect(_x, _y, _x + _size, _y + _size, c_gray, false, _alpha);
+var _size = _width + (_buffer * 2);
+
+scDrawRect(_x, _y, _x + _size, _y + _size, c_gray, false, _alpha); //background
+if (map[? ABILITY_MAP.SPRITE] != noone)
+	scDrawSpriteExt(_x + _buffer, _y + _buffer, map[? ABILITY_MAP.SPRITE], 0, noone, _alpha, 0.5, 0.5);
 if (ceil(_time / room_speed) > 0) {
 	var _per = _time / _time_max;
-	scDrawRect(_x, _y + (_size - (_size * _per)), _x + _size, _y + _size, c_dkgray, false, _alpha);
+	scDrawRect(_x, _y + (_size - (_size * _per)), _x + _size, _y + _size, c_dkgray, false, _alpha / 2);
 	scDrawText(_x + _size, _y + _size, ceil(_time / room_speed), c_white, 0.5, noone, _alpha, fa_middle, fa_middle);
+} else if (_time <= 0) { //ready to throw ability
+	var gamepad = !controller_lastused ? GAMEPAD_TYPE.KEYBOARD : GAMEPAD_TYPE.PS4;
+	var scale = 1;
+	var c = c_white;
+	_y += _size;
+	_x += _size / 2;
+	if (gamepad == GAMEPAD_TYPE.KEYBOARD) { //No Gamepad
+		scale = 0.5;
+		_y += string_height(scKeyToString(key_map[? KEYBIND_MAP.ABILITY])) * scale;
+		c = c_yellow;
+	}
+	scUIGamepadDraw(gamepad, !controller_lastused ? key_map[? KEYBIND_MAP.ABILITY] : key_map[? KEYBIND_MAP.ABILITY_GP], _x, _y, c, scale, 1);		
 }

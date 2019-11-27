@@ -16,7 +16,8 @@ switch (type) {
 	case ABILITY_TYPE.PORTAL: //Dodge the lasers!
 		ds_map[? ABILITY_MAP.NAME] = "Termination";
 		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityPortal;
-		ds_map[? ABILITY_MAP.COOLDOWN] = 10;
+		ds_map[? ABILITY_MAP.COOLDOWN] = 20;
+		ds_map[? ABILITY_MAP.SPRITE] = s_ability_portal;
 		break;
 	case ABILITY_TYPE.SPRAY: //Triple threat!
 		ds_map[? ABILITY_MAP.NAME] = "Angry Bird!";
