@@ -4,8 +4,8 @@ var index = pEntity;
 var obj = instance_furthest(x, y, index);
 var dis = distance_to_object(obj);
 for (var i = 0; i < instance_number(index); i++) {
-	if (instance_find(index, i) != id) {
-		var cur_obj = instance_furthest(x, y, index);
+	var cur_obj = instance_find(index, i);
+	if (cur_obj != id && cur_obj.shootable_map[? SHOOTABLE_MAP.HEALTH] >= 0) {
 		var cur_dis = distance_to_object(cur_obj);
 		if (cur_dis < dis) {
 			dis = cur_dis;

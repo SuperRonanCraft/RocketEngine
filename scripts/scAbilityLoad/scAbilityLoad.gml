@@ -8,14 +8,14 @@ switch (type) {
 	case ABILITY_TYPE.NONE: //nuthing
 		ds_map[? ABILITY_MAP.CAST_SCRIPT] = noone;
 		break;
-	case ABILITY_TYPE.DEFAULT: //Huge af cloned rocket
+	case ABILITY_TYPE.CLONE: //Huge af cloned rocket
 		ds_map[? ABILITY_MAP.NAME] = "Mr.Huge!";
 		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateClone;
 		ds_map[? ABILITY_MAP.COOLDOWN] = 6;
 		break;
-	case ABILITY_TYPE.BARRAGE: //Dodge the lasers!
+	case ABILITY_TYPE.PORTAL: //Dodge the lasers!
 		ds_map[? ABILITY_MAP.NAME] = "Termination";
-		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateClone;
+		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityPortal;
 		ds_map[? ABILITY_MAP.COOLDOWN] = 10;
 		break;
 	case ABILITY_TYPE.SPRAY: //Triple threat!
@@ -27,6 +27,6 @@ switch (type) {
 }
 
 enum ABILITY_TYPE {
-	DEFAULT, BARRAGE, SPRAY,
+	CLONE, PORTAL, SPRAY,
 	NONE
 }

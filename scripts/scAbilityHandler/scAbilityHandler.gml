@@ -25,5 +25,8 @@ if (map[? ABILITY_MAP.CAST_SCRIPT] != noone) {
 		dir = scAutoAim();
 	script_execute(map[? ABILITY_MAP.CAST_SCRIPT], dir, map);
 }
+if (map[? ABILITY_MAP.CAST_OBJECT] != noone)
+	with (instance_create_depth(x, y, depth + 1, map[? ABILITY_MAP.CAST_OBJECT]))
+		owner = other;
 
 map[? ABILITY_MAP.CURRENT_TIME] = map[? ABILITY_MAP.COOLDOWN] * room_speed;

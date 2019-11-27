@@ -48,6 +48,9 @@ player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 //Load character weapon
 scWeaponStart();
 
+//Load Character Abilities
+scAbilityStart(map[? CHARACTER_MAP.ABILITY]);
+
 enum CHARACTER {
 	DEFAULT, SWORD, ARROW,
 	//KEEP LAST
