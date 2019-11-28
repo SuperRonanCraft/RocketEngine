@@ -7,7 +7,7 @@
 //@arg alpha*
 //@arg draw_health*
 
-var _x = argument[0];
+/*var _x = argument[0];
 var _y = argument[1];
 var _len = argument[2]; //Length of bar
 var _hei = argument[3]; //Height of bar

@@ -25,13 +25,21 @@ scDrawSpriteExt(_x, _y, sUIUltimate, 0, noone, _alpha, _len * _charge * _side); 
 var _x2 = _x + ((_len * _charge) * _side);
 scDrawRect(_x2, _y, _x + (_len * _side), _y + _hei, c_dkgray, false, _alpha); //Background
 
+if (_charge < 1) {
+	scDrawLightning(_x2, _y, _x2, _y + _hei, 2, c_purple);
+	scDrawLightning(_x2, _y + _hei, _x2, _y, 2, c_purple);
+} else {
+	scDrawLightning(_x, _y, _x2, _y + _hei, 2, c_purple);
+	scDrawLightning(_x, _y + _hei, _x2, _y, 2, c_purple);
+}
+
 var c = _charge >= 1 ? c_green : c_yellow;
 //Frame
 scDrawSpriteExt(_x, _y, sUIHealthFrame, 0, noone, _alpha, _side);
 
 //ULTIMATE CHARGE TEXT
 scDrawText(_x + (_len / 2) * _side, _y + _hei / 2, string(_charge < 1 ? floor(_charge * 100) : round(_charge * 100)) + "%", _charge < 1 ?  c_white : c_yellow,
-	0.5, noone, _charge < 1 ? 0.8 : scMovementWave(0.8, 0.4, 1), fa_middle, fa_middle);
+	0.5, noone, _charge < 1 ? _alpha : scMovementWave(0.8, 0.4, 1), fa_middle, fa_middle);
 
 if (_charge >= 1) {
 	var gamepad = !controller_lastused ? GAMEPAD_TYPE.KEYBOARD : GAMEPAD_TYPE.PS4;//scSettingsGetType(SETTINGS_TYPE.VALUE, key_map[? KEYBIND_MAP.GAMEPAD]); //Get the gamepad index

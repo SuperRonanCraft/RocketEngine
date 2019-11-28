@@ -34,7 +34,7 @@ if (showultbar && global.weapon_info) {
 
 //Ultimate ready indicator
 if (map[? ULTIMATE_CASTING_MAP.CHARGE] == map[? ULTIMATE_CASTING_MAP.CHARGE_MAX] 
-	&& shootable_map[? SHOOTABLE_MAP.HEALTH] > 0
+	&& shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] > 0
 	&& map[? ULTIMATE_CASTING_MAP.CHARGE_SHOW]) {
 	//scDrawCircle(x + 25, bbox_top, 5, c_green, false, scMovementWave(0.3, 0.8, 1));
 	var dir = irandom(360);

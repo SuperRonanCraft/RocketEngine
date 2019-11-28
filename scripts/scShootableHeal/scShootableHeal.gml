@@ -13,11 +13,18 @@ var sound = argument_count > 3 ? (argument[3] != noone ? argument[3] : true ) : 
 with (healable) {
 	var map = shootable_map;
 	for (var i = 0; i < heal; i++) {
-		if (map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH]) {
-			map[? SHOOTABLE_MAP.HEALTH]++;
+		if (map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_BASE]) {
+			map[? SHOOTABLE_MAP.HEALTH_BASE]++;
+			healed++;
+		} else if (map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_ARMOR]) {
+			map[? SHOOTABLE_MAP.HEALTH_ARMOR]++;
+			healed++;
+		} else if (map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_SHIELD]) {
+			map[? SHOOTABLE_MAP.HEALTH_SHIELD]++;
 			healed++;
 		}
 	}
+	
 	//hp_scale += 2; //GUI hp scale
 	//if (sound) {
 		//scPlaySound(SOUND.EFFECT_HIT);

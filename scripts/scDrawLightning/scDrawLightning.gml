@@ -83,7 +83,7 @@ do //loop through and draw all the segments
 until i2 = points
 
 //draw a glowing circle
-if argument4
+/*if argument4
     {
     var size = random_range(1,2)
     draw_set_alpha(.1)

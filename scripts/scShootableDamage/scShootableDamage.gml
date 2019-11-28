@@ -21,7 +21,7 @@ var damage_type = argument_count > 8 ? (argument[8] != noone ? argument[8] : tru
 var didDamage = false;
 var lethalDamage = false;
 
-if (damager != noone && damager.object_index == oPlayer)
+if (damager != noone && scGetParent(oPlayer, damager))
 	with (damager)
 		if (scBuffFind(id, BUFFTYPE.DAMAGE, false))
 			dmg = scBuffHandler(BUFF_EVENT.DAMAGE_PREAPPLY, dmg);
@@ -29,10 +29,35 @@ if (damager != noone && damager.object_index == oPlayer)
 with (damaging) {
 	var map = shootable_map;
 	if (map[? SHOOTABLE_MAP.CAN_DAMAGE] || force) {
-		map[? SHOOTABLE_MAP.HEALTH] -= dmg;
+		for (var i = 0; i < dmg ; i++) {
+			if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
+				map[? SHOOTABLE_MAP.HEALTH_SHIELD]--;
+			} else if (map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0) {
+				var _dmg_to_take = dmg - i;
+				_dmg_to_take = _dmg_to_take - (_dmg_to_take * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);
+				var _armor_left = floor(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
+				if (_armor_left > 0) { //Still has armor
+					map[? SHOOTABLE_MAP.HEALTH_ARMOR] = _armor_left;
+					dmg = floor(_dmg_to_take) + i;
+				} else { //Used up all armor, take the rest of dmg in health
+					map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
+					map[? SHOOTABLE_MAP.HEALTH_BASE] += _armor_left;
+					dmg = floor(_dmg_to_take) - _armor_left;
+				}
+				break;
+			} else if (map[? SHOOTABLE_MAP.HEALTH_BASE] > 0) {
+				map[? SHOOTABLE_MAP.HEALTH_BASE] -= dmg - i;
+				break;
+			}
+		}
 		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = damage_type; //Damage type we just took
-		if (map[? SHOOTABLE_MAP.HEALTH] <= 0)
+		map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
+		if (map[? SHOOTABLE_MAP.HEALTH] <= 0) {
 			lethalDamage = true;
+			map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
+			map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
+			map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
+		}
 			
 		if (isPlayer) {
 			if (gamepad_is_connected(keys)) {
@@ -55,7 +80,7 @@ with (damaging) {
 		//Damage Numbers
 		if (damager != noone && combo)
 			scComboDamaged(damager);
-		scSpawnParticle(x, bbox_top, abs(dmg * 1.3), 20, spBlood, WORLDPART_TYPE.BLOOD);
+		scSpawnParticle(x, bbox_top, ceil(dmg * 1.3), 20, spBlood, WORLDPART_TYPE.BLOOD);
 	}
 	
 	//Damage Animation
@@ -74,13 +99,14 @@ with (damaging) {
 	if (show_dmg) {
 		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE])) //Alive? Show damage indicators
 			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
-				value_damage = dmg;
+				value_damage = abs(floor(dmg));
 				damage_type = type;
 				damage_killed = lethalDamage;
 				if (damager != noone && combo && damager.object_index == oPlayer)
 					id.combo = damager.combo_map[? COMBO_MAP.STREAK];
 			}
 	}
+	map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] = 0; //We just got damaged
 }
 
 if (didDamage && delete)

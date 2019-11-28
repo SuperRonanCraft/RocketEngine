@@ -32,6 +32,6 @@ for (var i = 0; i < WEAPON_MODIFIER.LENGTH; i++) {
 	}
 	
 	//scDrawText(rx, ry, name, c_black, 0.3); //Buff name
-	scDrawSpriteExt(rx + (size / 2), ry + (size / 2), spr, 0, noone, alpha, scale, scale); //Buff icon
+	scDrawSpriteExt(rx - 16 + (size / 2), ry - 16 + (size / 2), spr, 0, noone, alpha, scale, scale); //Weapon icon
 	index ++;
 }

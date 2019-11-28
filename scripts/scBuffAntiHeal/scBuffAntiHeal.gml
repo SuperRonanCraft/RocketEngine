@@ -25,7 +25,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	
 	if (owner.display)
 		with (owner)
-			for (var i = 0; i < shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] / 2 && i < 10; i++) {
+			//for (var i = 0; i < shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] / 2 && i < 10; i++) {
 				/*var len = hpwidth * i;
 				var side = team == TEAM.LEFT ? 1 : -1;
 				var xpos = (side == 1 ? 20 + len : RES_W - 20 - len) + hp_offset;
@@ -33,7 +33,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 				var scale = i * 2 <= shootable_map[? SHOOTABLE_MAP.HEALTH] + (player_map[? PLAYER_MAP.DAMAGE_LAST] - 1) && i * 2 > shootable_map[? SHOOTABLE_MAP.HEALTH] - 2 ? hp_scale : 1;
 				scFlash(dsBuff[? "alpha"], dsBuff[? "color"], scale + dsBuff[? "scale"], scale + dsBuff[? "scale"], hpsprite, shootable_map[? SHOOTABLE_MAP.HEALTH] > i ? 0 : 1, xpos, ypos);
 			*/
-			}
+			//}
 		
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }

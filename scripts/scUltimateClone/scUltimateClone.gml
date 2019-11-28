@@ -9,6 +9,9 @@ with (inst) {
 	ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = false;
 	weapon_map[? WEAPON_MAP.ENABLED] = false;
 	ability_map[? ABILITY_MAP.ENABLED] = false;
+	system_ability = false;
+	system_combo = false;
+	system_ultimate = false;
 	keys = other.keys;
 	scKeybindsSet(keys);
 	var _keyLeft = key_map[? KEYBIND_MAP.LEFT];
@@ -21,8 +24,12 @@ with (inst) {
 	team = other.team; //Same team as caster
 	display = false; //No ui
 	//player_map[? PLAYER_MAP.HEALTH] = 1; //One hit kill
-	shootable_map[? SHOOTABLE_MAP.HEALTH] = 1; //One hit kill
-	shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] = 1;
+	shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] = 1; //One hit kill
+	shootable_map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] = 1;
+	shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0; //One hit kill
+	shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] = 0;
+	shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0; //One hit kill
+	shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL] = 0;
 	despawn = true; //Despawn player if dead
 	walksp += random_range(-2, 2);
 	owner = other; //Owner of this clone

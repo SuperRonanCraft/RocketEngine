@@ -1,6 +1,6 @@
 /// @desc despawn
 
-if (timer > 0 && shootable_map[? SHOOTABLE_MAP.HEALTH] > 0) {
+if (timer > 0 && shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] > 0) {
 	timer--;
 	image_alpha = min(image_alpha + alpha_reduction, 1);
 } else {

@@ -1,7 +1,7 @@
 /// @desc Draw Keys
 var _yy = tab_y;
 
-var _types = [["Settings", 0], ["Buffs", 1], ["Weapons", 2], ["Movement", 3], ["Info", 4]];
+var _types = [["Settings", 0], ["Buffs", 1], ["Weapons", 2], ["Misc", 3], ["Info", 4]];
 
 if (tab_open) { //Maximized
 	for (var i = 0; i < array_length_1d(_types); i++) {

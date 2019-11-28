@@ -1,9 +1,9 @@
-/// @desc Movement
+/// @desc Miscellaneous
 
 var _xx = tab_w + (tab_buf * 2);
 var _yy = tab_y - tab_buf - (tab_buf / 2);
 
-var _mods = [["HSP MOVE MOD", "move_hspmovemod", 5], ["VSP", "move_vsp", -5]];
+var _mods = [["HSP MOVE MOD", "misc_hspmovemod", 5, 250], ["VSP", "misc_vsp", -5, 250], ["DAMAGE", "misc_damage", 10, 50]];
 var _w = sprite_get_width(sUISliderBar) + (tab_buf * 2);
 var _scale_o = 0.4
 var _scale = _scale_o;
@@ -24,7 +24,7 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 	scDrawText(_xx + (_w / 2) - tab_buf, _yy - (tab_buf + _h), mods[0], c_yellow, _scale, noone, alpha, fa_middle, fa_top);
 		//SLIDER
 	scDrawSpriteExt(_xx, _yy + 4, sUISliderBar, 0, noone, alpha);
-	var value_max = 500;
+	var value_max = mods[3];
 	var value = tab_map[? mods[1]] != undefined ? tab_map[? mods[1]] : 5;
 	var _width = sprite_get_width(sUISliderBar);
 	var _scale_btn = 1;
@@ -65,6 +65,9 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 								gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += value; break;
 							case 1:
 								gravity_map[? GRAVITY_MAP.VSP_MOVE] += value; break;
+							case 2:
+								scShootableDamage(id, id, false, false, value, false);
+								break;
 						}
 			}
 		}
