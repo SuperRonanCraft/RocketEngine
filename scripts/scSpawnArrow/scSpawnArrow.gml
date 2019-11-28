@@ -31,11 +31,13 @@ if (argument_count >= 8) { //Must have both keys and values
 with (inst) {
 	owner = own;
 	weapon_map = w_map;
+	if (dir > 90 && dir < 270) {
+		dir -= 5;
+		facing = -1;
+	} else
+		dir += 5;
 	direction = dir;
 	image_angle = direction;
-	if (direction > 90 && direction < 270){
-		facing = -1;
-	}
 	var arrow_map = weapon_map[? WEAPON_MAP.MAP];
 	sprite_index = arrow_map[? ARROW_MAP.PROJECTILE];
 	//timer = rocket_map[? ROCKET_MAP.TIMER];

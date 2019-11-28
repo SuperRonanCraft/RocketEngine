@@ -36,7 +36,7 @@ if (ceil(_time / room_speed) > 0) {
 	_x += _size / 2;
 	if (gamepad == GAMEPAD_TYPE.KEYBOARD) { //No Gamepad
 		scale = 0.5;
-		_y += string_height(scKeyToString(key_map[? KEYBIND_MAP.ABILITY])) * scale;
+		//_y += string_height(scKeyToString(key_map[? KEYBIND_MAP.ABILITY])) * scale;
 		c = c_yellow;
 	}
 	scUIGamepadDraw(gamepad, !controller_lastused ? key_map[? KEYBIND_MAP.ABILITY] : key_map[? KEYBIND_MAP.ABILITY_GP], _x, _y, c, scale, 1);		

@@ -18,7 +18,7 @@ var sprite = scWeaponModifyGetType(map[? WEAPON_MAP.MODIFIER], WEAPON_MODIFIER_M
 //var w = sprite_get_width(sprite);
 //var h = sprite_get_height(sprite);
 //determine side
-var xpos = team == TEAM.LEFT ? _x : RES_W - _x - 16 - _buffer;
+var xpos = team == TEAM.LEFT ? _x : RES_W - _x - 32 - _buffer;
 var ypos = _y;
 var c = c_dkgray;
 

@@ -19,16 +19,16 @@ switch (shur) {
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.DEFAULT;
 		map[? SHURIKEN_MAP.COOLDOWN] = 40;
 		map[? SHURIKEN_MAP.SPEED] = 20;
-		map[? SHURIKEN_MAP.DAMAGE] = 2;
+		map[? SHURIKEN_MAP.DAMAGE] = 4;
 		break;
 	case SHURIKEN.ICE:
 		map[? SHURIKEN_MAP.NAME] = "Frost Star";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Cold to the touch";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.ICE;
 		map[? SHURIKEN_MAP.COOLDOWN] = 45;
-		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.FROST];
+		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.FROST];
 		map[? SHURIKEN_MAP.SPEED] = 23;
-		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.FROZEN];
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.ICE_SWORD;
 		map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Ice_Despawn;
@@ -40,7 +40,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.NAME] = "Flame's Ember";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A stinging flame";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.FIRE;
-		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.EMBER];
+		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.EMBER];
 		map[? SHURIKEN_MAP.COOLDOWN] = 42;
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
@@ -60,7 +60,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;
 		map[? SHURIKEN_MAP.CLIP] = 2;
-		map[? SHURIKEN_MAP.RELOAD_TIME] = 80;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
 		map[? SHURIKEN_MAP.TIMER] = 45;
 		map[? SHURIKEN_MAP.STICK] = false;
 		map[? SHURIKEN_MAP.WALL_SCRIPT] = scShuriken_Portal_Wall;
@@ -75,7 +75,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.BRICK;
 		map[? SHURIKEN_MAP.COOLDOWN] = 50;
 		map[? SHURIKEN_MAP.SPEED] = 12;
-		map[? SHURIKEN_MAP.DAMAGE] = 3;
+		map[? SHURIKEN_MAP.DAMAGE] = 5;
 		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Brick_Player;
 		map[? SHURIKEN_MAP.STICK] = false;
 		map[? SHURIKEN_MAP.KBAMT] = 7;
@@ -91,8 +91,8 @@ switch (shur) {
 		map[? SHURIKEN_MAP.COOLDOWN] = 30;
 		map[? SHURIKEN_MAP.SPEED] = 30;
 		map[? SHURIKEN_MAP.CLIP] = 3;
-		map[? SHURIKEN_MAP.DAMAGE] = 1;
-		map[? SHURIKEN_MAP.RELOAD_TIME] = 80;
+		map[? SHURIKEN_MAP.DAMAGE] = 2;
+		map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
 		break;
 		
     case SHURIKEN.SAND:
@@ -101,8 +101,8 @@ switch (shur) {
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SAND;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
 		map[? SHURIKEN_MAP.SPEED] = 10;
-		map[? SHURIKEN_MAP.CLIP] = 5;
-		map[? SHURIKEN_MAP.DAMAGE] = 2;
+		map[? SHURIKEN_MAP.CLIP] = 3;
+		map[? SHURIKEN_MAP.DAMAGE] = 4;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SAND_SWORD;
 		break;
@@ -113,7 +113,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SHOTGUN;
 		map[? SHURIKEN_MAP.COOLDOWN] = 50;
 		map[? SHURIKEN_MAP.SPEED] = 20;
-		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		map[? SHURIKEN_MAP.ROTATE] = false;
 		map[? SHURIKEN_MAP.SPAWN_SCRIPT] = scShuriken_Shotgun_Spawn;
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SHOTGUN_SWORD;
@@ -126,7 +126,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.COOLDOWN] = 22;
 		map[? SHURIKEN_MAP.SPEED] = 25;
 		map[? SHURIKEN_MAP.CLIP] = 3;
-		map[? SHURIKEN_MAP.DAMAGE] = 1;
+		map[? SHURIKEN_MAP.DAMAGE] = 3;
 		map[? SHURIKEN_MAP.KBAMT] = 0;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 40;
 		map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Slime_Player;
@@ -141,6 +141,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.SPEED] = 25;
 		map[? SHURIKEN_MAP.KBAMT] = 0;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
+		map[? SHURIKEN_MAP.DAMAGE] = 1;
 		map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.METAL_SWORD;
 		break;
@@ -152,6 +153,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.SPEED] = 30;
 		map[? SHURIKEN_MAP.KBAMT] = 0;
 		map[? SHURIKEN_MAP.CLIP] = 2;
+		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 45;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
 		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SCRAPING];
