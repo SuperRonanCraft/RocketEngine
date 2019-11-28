@@ -22,8 +22,10 @@ var xpos = team == TEAM.LEFT ? _x : RES_W - _x - 32 - _buffer;
 var ypos = _y;
 var c = c_dkgray;
 
-scDrawRect(xpos, ypos, xpos + 32 + _buffer * 2, ypos + 32 + _buffer * 2, c_gray, false, _alpha);
-	
+//Background
+//scDrawRect(xpos, ypos, xpos + 32 + _buffer * 2, ypos + 32 + _buffer * 2, c_gray, false, _alpha);
+scDrawNineSplice(sUIBox, xpos - 8, ypos - 8, xpos + 32 + _buffer * 2, ypos + 32 + _buffer * 2, _alpha, _alpha);
+
 //Buff of the weapon
 if (map[? WEAPON_MAP.GUI_BUFFS] != noone) {
 	var buffsid = map[? WEAPON_MAP.GUI_BUFFS];
@@ -53,8 +55,8 @@ if (map[? WEAPON_MAP.GUI_BUFFS] != noone) {
 if (map[? WEAPON_MAP.ENABLED] && global.play) {
 	var cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] : map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL];
 	var curr_cd = map[? WEAPON_MAP.AMMO] == 0 ? map[? WEAPON_MAP.RELOAD_TIME] : map[? WEAPON_MAP.COOLDOWN_TIME];
-	var c = c_dkgray;
-	if (!map[? WEAPON_MAP.CHARGING])
+	var c = c_yellow;
+	if (!map[? WEAPON_MAP.CHARGING]) {
 		for (var i = 0; i < ds_list_size(buffs_map); i++) {
 			//Grab the buff map
 			var ds_list = buffs_map[| i];
@@ -62,8 +64,8 @@ if (map[? WEAPON_MAP.ENABLED] && global.play) {
 			if (ds_list[? BUFF_MAP.TYPE] == BUFFTYPE.COOLDOWN)
 				c = c_blue;
 		}
-	else {
-		c = c_purple;
+	} else {
+		c = c_fuchsia;
 		cd = 1;
 		curr_cd = map[? WEAPON_MAP.CHARGE];
 	}

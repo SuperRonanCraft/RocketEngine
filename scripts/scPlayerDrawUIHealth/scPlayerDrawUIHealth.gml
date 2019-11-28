@@ -17,6 +17,7 @@ var _alpha = argument_count > 5 ? (argument[5] != noone ? argument[5] : 1) : 1;
 var _draw_health = argument_count > 6 ? (argument[6] != noone ? argument[6] : true) : true;
 var _side = 1;
 var _draw_frame = argument_count > 7 ? (argument[7] != noone ? argument[7] : true) : true;
+var _h = 16; //Height of sprite
 
 //DRAW PLAYER HEALTH
 var _map = shootable_map;
@@ -30,27 +31,27 @@ if (_side_respect) {
 	_x = _side == 1 ? _hmap[? HEALTH_MAP.X] : RES_W - _hmap[? HEALTH_MAP.X];
 }
 var _mul = _map[? SHOOTABLE_MAP.HEALTH_BASE] / _health_max;
-scDrawSpriteExt(_x, _y, sUIHealthNew, 0, noone, _alpha, _len * _mul * _side, _hei / 12); //Health
+scDrawSpriteExt(_x, _y, sUIHealthNew, 0, noone, _alpha, _len * _mul * _side, _hei / _h); //Health
 var _x2 = _x + ((_len * _mul) * _side); //Calculate next objects position
 
 if (_map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0) {
 	_mul = _map[? SHOOTABLE_MAP.HEALTH_ARMOR] / _health_max;
-	scDrawSpriteExt(_x2, _y, sUIHealthNew, 2, noone, _alpha, _len * _mul * _side, _hei / 12); //Armor
+	scDrawSpriteExt(_x2, _y, sUIHealthNew, 2, noone, _alpha, _len * _mul * _side, _hei / _h); //Armor
 	_x2 += ((_len * _mul) * _side);
 }
 
 if (_map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
 	var _mul = _map[? SHOOTABLE_MAP.HEALTH_SHIELD] / _health_max;
-	scDrawSpriteExt(_x2, _y, sUIHealthNew, 3, noone, _alpha, _len * _mul * _side, _hei / 12); //Shield
+	scDrawSpriteExt(_x2, _y, sUIHealthNew, 3, noone, _alpha, _len * _mul * _side, _hei / _h); //Shield
 	_x2 += ((_len * _mul) * _side);
 }
 
-scDrawRect(_x2, _y, _x + (_len * _side), _y + _hei, c_dkgray, false, _alpha); //Background
+scDrawRect(_x2, _y, _x + (_len * _side), _y + ((_hei / _h) * _h), c_dkgray, false, _alpha); //Background
 
 //Healed BASE
 if (_hmap[? HEALTH_MAP.HEAL] > 0) {
 	var _per = _hmap[? HEALTH_MAP.HEAL] / _health_max;
-	scDrawSpriteExt(_x2, _y, sUIHealthNew, 1, noone, _alpha, -(_len * _per) * _side, _hei / 12);
+	scDrawSpriteExt(_x2, _y, sUIHealthNew, 1, noone, _alpha, -(_len * _per) * _side, _hei / _h);
 	//scDrawRect(_x2, _y, _x2 + (_len * _per) * -_side, _y + _hei, c_yellow, false, _alpha);
 	_hmap[? HEALTH_MAP.HEAL] = lerp(_hmap[? HEALTH_MAP.HEAL], -0.1, 0.05);
 } else
@@ -59,7 +60,7 @@ if (_hmap[? HEALTH_MAP.HEAL] > 0) {
 //Frame
 //scDrawRect(_x, _y, _x + _len * _side, _y + _hei, c_black, true, _alpha);
 if (_draw_frame)
-	scDrawSpriteExt(_x, _y, sUIHealthFrame, 0, noone, _alpha, _side, _hei / 12);
+	scDrawSpriteExt(_x, _y, sUIHealthFrame, 0, noone, _alpha, _side, _hei / _h);
 
 //Damaged
 var _dmgList = _hmap[? HEALTH_MAP.DAMAGE_MAP];
@@ -95,6 +96,6 @@ ds_list_destroy(_dmg_listRemove);
 if (_draw_health) {
 	var _health = abs(floor(_map[? SHOOTABLE_MAP.HEALTH_BASE] + _map[? SHOOTABLE_MAP.HEALTH_SHIELD] + 
 		_map[? SHOOTABLE_MAP.HEALTH_ARMOR]));
-	scDrawText(_x + (_len / 2) * _side, _y + (_hei / 2) + ((_hei / 12) * 2), string(_health) + "/" + string(_health_max), noone, 0.5, noone, _alpha, fa_middle, fa_middle);
+	scDrawText(_x + (_len / 2) * _side, _y + (((_hei / _h) * _h) / 2), string(_health) + "/" + string(_health_max), noone, 0.5, noone, _alpha, fa_middle, fa_middle);
 }
 //_hmap[? HEALTH_MAP.FLASH_ALPHA] = max(_hmap[? HEALTH_MAP.FLASH_ALPHA] - _hmap[? HEALTH_MAP.FLASH_ALPHA_REDUCE], 0);
