@@ -75,7 +75,7 @@ if(!deactivate){
 					}
 		
 					if (arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_GIVE])
-						scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+						scUltimateAddCharge(owner, DAMAGE_TYPE.DIRECT, arrow_map[? ARROW_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 					scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
 					scScreenShake(25,5);
 					

@@ -10,6 +10,10 @@ var healed = 0; //Amount we actually healed
 var show = argument[2];
 var sound = argument_count > 3 ? (argument[3] != noone ? argument[3] : true ) : true;
 
+if (heal < 0) { //Negative health
+	scShootableDamage(healable, noone, false, sound, abs(heal));
+}
+
 with (healable) {
 	var map = shootable_map;
 	for (var i = 0; i < heal; i++) {
@@ -25,6 +29,9 @@ with (healable) {
 		}
 	}
 	
+	if (map[? SHOOTABLE_MAP.HEALTH] > map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL])
+		map[? SHOOTABLE_MAP.HEALTH_SHIELD] = map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL];
+	
 	//hp_scale += 2; //GUI hp scale
 	//if (sound) {
 		//scPlaySound(SOUND.EFFECT_HIT);
@@ -34,7 +41,7 @@ with (healable) {
 	if (show && healed > 0) {
 		with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 			value_damage = healed;
-			damage_type = DAMAGETYPE.HEALING;
+			damage_type = DAMAGE_TYPE.HEALING;
 		}
 	}
 }

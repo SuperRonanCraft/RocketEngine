@@ -1,18 +1,23 @@
 /// @desc draw sprites
 
-up_time += (5 * min(combo, 5));
+var _c = c_red;
 switch (damage_type) {
-	case DAMAGETYPE.CRITICAL:
-		c_rainbow = c_orange; break;
-	case DAMAGETYPE.HEALING:
-		c_rainbow = c_green; break;
+	case DAMAGE_TYPE.CRITICAL:
+		_c = c_purple; break;
+	case DAMAGE_TYPE.HEALING:
+		_c = c_green; break;
 	default:
-		c_rainbow = make_color_hsv(up_time mod 255, 255, 255); break;
+		switch (damage_took) {
+			case DAMAGE_TOOK.ARMOR:
+				_c = c_orange; break;
+			case DAMAGE_TOOK.SHIELD:
+				_c = c_aqua; break;
+		}
 }
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
 for (var i = 0; i < array_length_1d(value_cached); i++)
-	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], c_rainbow, alpha, scale, scale, angle);
+	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], _c, alpha, scale, scale, angle);
 
 if (damage_killed)
 	scale = lerp(scale, scale_max, 0.04);
@@ -20,10 +25,10 @@ else if (vsp < 0)
 	scale = lerp(scale, scale_goal, 0.1);
 
 switch (damage_type) {
-	case DAMAGETYPE.HEALING:
+	case DAMAGE_TYPE.HEALING:
 		vsp = lerp(vsp, -0.25, 0.75);
 		break;
-	case DAMAGETYPE.CRITICAL:
+	case DAMAGE_TYPE.CRITICAL:
 		vsp += grv;
 		hsp = lerp(hsp, 0, 0.05);
 		angle += angle_change * angle_side;
@@ -45,7 +50,7 @@ x += hsp;
 
 var reduce = false;
 switch (damage_type) {
-	case DAMAGETYPE.HEALING:
+	case DAMAGE_TYPE.HEALING:
 		reduce = vsp >= -2; break;
 	default:
 		if (damage_killed)

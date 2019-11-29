@@ -80,7 +80,7 @@ for (var i = ds_list_size(_dmgList) - 1; i >= 0; i--) {
 	var _dmg_dis = ((_len * _dmg_per) * _side);
 	var _dmg_x = _dmgMap[? "x"] + _x;
 	//scDrawSpriteExt(_dmg_x, _y - _dmg_size / 2, sUIHealthNew, 2, noone, _dmg_alpha, (_len * _dmg_per), _dmg_size);
-	scDrawRect(_dmg_x, _y - _dmg_size / 2, _dmg_x + _dmg_dis, _y + _hei + _dmg_size / 2, c_red, false, _dmg_alpha);
+	scDrawRect(_dmg_x, _y - _dmg_size / 2, _dmg_x + _dmg_dis, _y + _hei + _dmg_size / 2, _dmgMap[? "color"], false, _dmg_alpha);
 	_dmgMap[? "size"] += _dmgMap[? "change_size"];
 	_dmgMap[? "alpha"] -= _dmgMap[? "change_alpha"];
 	if (_dmgMap[? "alpha"] <= 0)

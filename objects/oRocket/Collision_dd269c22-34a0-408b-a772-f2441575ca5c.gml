@@ -35,7 +35,7 @@ if (!destroy && _team != _oteam) //Not destroy and is not same team
 			other.causeOfDeath = rocket_map[? ROCKET_MAP.DEATHCAUSE];
 		
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])
-			scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+			scUltimateAddCharge(owner, DAMAGE_TYPE.DIRECT, rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 		scPlaySound(SOUND.EFFECT_EXP);
 		//Custom Explosion with a pShootable script
 		if (rocket_map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] != noone)

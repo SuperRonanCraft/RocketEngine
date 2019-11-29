@@ -3,7 +3,8 @@
 first_draw = false;
 offset = sprite_width - 4;
 value_damage = 0;
-damage_type = DAMAGETYPE.DIRECT;
+damage_type = DAMAGE_TYPE.NONE;
+damage_took = DAMAGE_TOOK.HEALTH;
 damage_killed = false;
 combo = 0;
 color = c_red;
@@ -21,4 +22,4 @@ scale = 0;
 scale_goal = 0.8;
 scale_min = 0.3;
 scale_max = 1.3;
-up_time = 0;
+//up_time = 0;

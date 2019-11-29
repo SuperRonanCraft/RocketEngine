@@ -7,7 +7,7 @@ for (var i = 0; i < string_length(value_damage); i++) {
 	value_cached[i] = val;
 }
 
-if (damage_killed || damage_type == DAMAGETYPE.HEALING) {
+if (damage_killed || damage_type == DAMAGE_TYPE.HEALING) {
 	hsp = 0;
 	alpha_reduce = 0.02 / TIME_SPEED;
 }

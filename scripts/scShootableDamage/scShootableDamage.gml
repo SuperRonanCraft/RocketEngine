@@ -15,11 +15,16 @@ var isPlayer = scGetParent(oPlayer, damaging); //If the damaging instance is a p
 var delete = argument[2];
 var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
-var type = argument_count > 6 ? (argument[6] != noone ? argument[6] : DAMAGETYPE.DIRECT) : DAMAGETYPE.DIRECT;
+var _damage_type = argument_count > 6 ? (argument[6] != noone ? argument[6] : DAMAGE_TYPE.DIRECT) : DAMAGE_TYPE.DIRECT;
 var combo = argument_count > 7 ? (argument[7] != noone ? argument[7] : true) : true;
-var damage_type = argument_count > 8 ? (argument[8] != noone ? argument[8] : true) : true;
+var _damage_type_inf = argument_count > 8 ? (argument[8] != noone ? argument[8] : DAMAGE_TYPE_INFLICTED.NONE) : DAMAGE_TYPE_INFLICTED.NONE;
 var didDamage = false;
 var lethalDamage = false;
+
+if (dmg < 0) { //Negative damage
+	scShootableHeal(damaging, abs(dmg), true);
+	exit;
+}
 
 if (damager != noone && scGetParent(oPlayer, damager))
 	with (damager)
@@ -27,9 +32,15 @@ if (damager != noone && scGetParent(oPlayer, damager))
 			dmg = scBuffHandler(BUFF_EVENT.DAMAGE_PREAPPLY, dmg);
 
 with (damaging) {
+	var _dmg_took = DAMAGE_TOOK.HEALTH;
 	var map = shootable_map;
 	if (map[? SHOOTABLE_MAP.CAN_DAMAGE] || force) {
-		//for (var i = 0; i < dmg ; i++) {
+		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = _damage_type; //Damage type we just took
+		map[? SHOOTABLE_MAP.DAMAGE_TYPE_INFLICTED] = _damage_type_inf; //Damage type we just took
+		
+		//---------------
+		//Health Type modifiers
+		//---------------
 		var _dmg_left = dmg;
 		var _dmg_inflicted = 0;
 		if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
@@ -43,6 +54,8 @@ with (damaging) {
 				_dmg_left = 0;
 				scPlaySound(SOUND.ULT_TELEPORT_USE);
 			}
+			if (_dmg_inflicted > _dmg_left) //Took mostly shield damage
+				_dmg_took = DAMAGE_TOOK.SHIELD;
 		}
 		
 		if (map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0 && _dmg_left > 0) {
@@ -53,30 +66,41 @@ with (damaging) {
 			} else {
 				_dmg_to_take = floor(_dmg_left * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);	
 			}
-				
+			
 			var _armor_left = floor(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
+			var _armor_taken = map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _armor_left;
 			if (_armor_left > 0) { //Still has armor
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = _armor_left;
 				scPlaySound(SOUND.EFFECT_REFLECT);
-				//dmg = _dmg_left + dmg;
+				//Took mostly armor damage
+				if (_armor_taken > _dmg_to_take || _armor_taken > _dmg_inflicted || _dmg_to_take > _dmg_inflicted)
+					_dmg_took = DAMAGE_TOOK.ARMOR;
 				_dmg_left = 0;
 			} else { //Used up all armor, take the rest of dmg in health
 				scPlaySound(SOUND.ULT_SHIELD_BREAK);
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
-				//dmg = dmg - (dmg - _dmg_left);
+				//Took mostly armor damage
+				if (_armor_taken > _dmg_left && _armor_taken > _dmg_inflicted)
+					_dmg_took = DAMAGE_TOOK.ARMOR;
 				_dmg_left = abs(_armor_left);
 			}
+				
+			//Damage inflicted
 			_dmg_inflicted += _dmg_to_take - _dmg_left;
 		}
 		
 		if (map[? SHOOTABLE_MAP.HEALTH_BASE] > 0 && _dmg_left > 0) {
 			map[? SHOOTABLE_MAP.HEALTH_BASE] -= _dmg_left;
+			if (_dmg_inflicted > _dmg_left) //Took mostly health damage
+				_dmg_took = DAMAGE_TOOK.HEALTH;
 			_dmg_inflicted += _dmg_left;
 		}
 		
-		dmg = _dmg_inflicted;
-		//}
-		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = damage_type; //Damage type we just took
+		dmg = _dmg_inflicted; //Total damage we just took
+		
+		//--------------
+		//Damage side effects
+		//--------------
 		map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
 		if (map[? SHOOTABLE_MAP.HEALTH] <= 0) {
 			lethalDamage = true;
@@ -101,9 +125,10 @@ with (damaging) {
 		didDamage = true;
 		scPlaySound(SOUND.EFFECT_HIT);
 	}
-	if (isPlayer) { //Do this thing no matter what
+	//Do this no matter if damage is being inflicted on us or not
+	if (isPlayer) {
 		player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
-		//Damage Numbers
+		//Blood
 		if (damager != noone && combo)
 			scComboDamaged(damager);
 		scSpawnParticle(x, bbox_top, ceil(dmg * 1.3), 20, spBlood, WORLDPART_TYPE.BLOOD);
@@ -115,7 +140,14 @@ with (damaging) {
 		_dmgmap[? "dmg"] = dmg;
 		_dmgmap[? "size"] = 1;
 		_dmgmap[? "alpha"] = 1;
-		_dmgmap[? "color"] = c_red;
+		
+		var _c = c_red;
+		if (_dmg_took == DAMAGE_TOOK.ARMOR)
+			_c = c_orange;
+		else if (_dmg_took == DAMAGE_TOOK.SHIELD)
+			_c = c_aqua;
+		
+		_dmgmap[? "color"] = _c;
 		ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
 		//health_map[? HEALTH_MAP.DAMAGE_MAP] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
 		health_map[? HEALTH_MAP.HEAL] -= dmg;
@@ -127,7 +159,8 @@ with (damaging) {
 		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE])) //Alive? Show damage indicators
 			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 				value_damage = abs(floor(dmg));
-				damage_type = type;
+				damage_type = _damage_type;
+				damage_took = _dmg_took;
 				damage_killed = lethalDamage;
 				//if (damager != noone && combo && damager.object_index == oPlayer)
 				//	id.combo = damager.combo_map[? COMBO_MAP.STREAK];
@@ -144,6 +177,14 @@ if (isPlayer && damaging.causeOfDeath != noone)
 	
 return lethalDamage;
 
+enum DAMAGE_TYPE_INFLICTED {
+	NONE, COLD, FIRE, SLIME
+}
+
 enum DAMAGE_TYPE {
-	COLD, FIRE, SLIME
+	DIRECT, SPLASH, INDIRECT, TIME, CRITICAL, HEALING, NONE
+}
+
+enum DAMAGE_TOOK {
+	HEALTH, ARMOR, SHIELD
 }

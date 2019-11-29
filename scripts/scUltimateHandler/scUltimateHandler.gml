@@ -4,7 +4,7 @@ var char_map = player_map[? PLAYER_MAP.CHARACTER_INFO];
 
 if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || char_map[? CHARACTER_MAP.ULTIMATE] == ULTIMATE_TYPE.NONE) exit; //Is the system even enabled?
 
-if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGETYPE.TIME); exit;} //Give charge by time, exit
+if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGE_TYPE.TIME); exit;} //Give charge by time, exit
 
 var key_shoot = scKeybindsGet(KEYBIND_TYPE.ULT); //Holding both left and right keys to cast ult
 
