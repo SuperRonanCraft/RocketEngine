@@ -17,10 +17,10 @@ if (map[? COMBO_MAP.STREAK_LAST] > 1 && map[? COMBO_MAP.ALPHA] > 0) {
 }
 map[? COMBO_MAP.SCALE] = max(map[? COMBO_MAP.SCALE] * 0.95, 1); //Lower combo scale
 
-if (map[? COMBO_MAP.STREAK] > 1) {
+/*if (map[? COMBO_MAP.STREAK] > 1) {
 	if (map[? COMBO_MAP.DIALATED] < map[? COMBO_MAP.DIALATED_MAX]) {
 		map[? COMBO_MAP.DIALATED]++;
-		with (oPlayer)
-			time_dialation = 0;
+		//with (oPlayer)
+		//	time_dialation = 0;
 	}
 }

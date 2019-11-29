@@ -29,27 +29,53 @@ if (damager != noone && scGetParent(oPlayer, damager))
 with (damaging) {
 	var map = shootable_map;
 	if (map[? SHOOTABLE_MAP.CAN_DAMAGE] || force) {
-		for (var i = 0; i < dmg ; i++) {
-			if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
-				map[? SHOOTABLE_MAP.HEALTH_SHIELD]--;
-			} else if (map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0) {
-				var _dmg_to_take = dmg - i;
-				_dmg_to_take = _dmg_to_take - (_dmg_to_take * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);
-				var _armor_left = floor(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
-				if (_armor_left > 0) { //Still has armor
-					map[? SHOOTABLE_MAP.HEALTH_ARMOR] = _armor_left;
-					dmg = floor(_dmg_to_take) + i;
-				} else { //Used up all armor, take the rest of dmg in health
-					map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
-					map[? SHOOTABLE_MAP.HEALTH_BASE] += _armor_left;
-					dmg = floor(_dmg_to_take) - _armor_left;
-				}
-				break;
-			} else if (map[? SHOOTABLE_MAP.HEALTH_BASE] > 0) {
-				map[? SHOOTABLE_MAP.HEALTH_BASE] -= dmg - i;
-				break;
+		//for (var i = 0; i < dmg ; i++) {
+		var _dmg_left = dmg;
+		var _dmg_inflicted = 0;
+		if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
+			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_SHIELD]) {
+				_dmg_left -= map[? SHOOTABLE_MAP.HEALTH_SHIELD];
+				_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_SHIELD];
+				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
+			} else {
+				map[? SHOOTABLE_MAP.HEALTH_SHIELD] -= _dmg_left;
+				_dmg_inflicted += _dmg_left;
+				_dmg_left = 0;
+				scPlaySound(SOUND.ULT_TELEPORT_USE);
 			}
 		}
+		
+		if (map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0 && _dmg_left > 0) {
+			var _dmg_to_take = 0;
+			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_ARMOR]) {
+				_dmg_to_take = floor(_dmg_left - (map[? SHOOTABLE_MAP.HEALTH_ARMOR] * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]));	
+				//_dmg_remaining = _dmg_remaining - (_dmg_remaining * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);
+			} else {
+				_dmg_to_take = floor(_dmg_left * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);	
+			}
+				
+			var _armor_left = floor(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
+			if (_armor_left > 0) { //Still has armor
+				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = _armor_left;
+				scPlaySound(SOUND.EFFECT_REFLECT);
+				//dmg = _dmg_left + dmg;
+				_dmg_left = 0;
+			} else { //Used up all armor, take the rest of dmg in health
+				scPlaySound(SOUND.ULT_SHIELD_BREAK);
+				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
+				//dmg = dmg - (dmg - _dmg_left);
+				_dmg_left = abs(_armor_left);
+			}
+			_dmg_inflicted += _dmg_to_take - _dmg_left;
+		}
+		
+		if (map[? SHOOTABLE_MAP.HEALTH_BASE] > 0 && _dmg_left > 0) {
+			map[? SHOOTABLE_MAP.HEALTH_BASE] -= _dmg_left;
+			_dmg_inflicted += _dmg_left;
+		}
+		
+		dmg = _dmg_inflicted;
+		//}
 		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = damage_type; //Damage type we just took
 		map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
 		if (map[? SHOOTABLE_MAP.HEALTH] <= 0) {
@@ -89,6 +115,7 @@ with (damaging) {
 		_dmgmap[? "dmg"] = dmg;
 		_dmgmap[? "size"] = 1;
 		_dmgmap[? "alpha"] = 1;
+		_dmgmap[? "color"] = c_red;
 		ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
 		//health_map[? HEALTH_MAP.DAMAGE_MAP] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
 		health_map[? HEALTH_MAP.HEAL] -= dmg;
@@ -102,8 +129,8 @@ with (damaging) {
 				value_damage = abs(floor(dmg));
 				damage_type = type;
 				damage_killed = lethalDamage;
-				if (damager != noone && combo && damager.object_index == oPlayer)
-					id.combo = damager.combo_map[? COMBO_MAP.STREAK];
+				//if (damager != noone && combo && damager.object_index == oPlayer)
+				//	id.combo = damager.combo_map[? COMBO_MAP.STREAK];
 			}
 	}
 	map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] = 0; //We just got damaged

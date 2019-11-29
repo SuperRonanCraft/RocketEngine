@@ -4,12 +4,14 @@
 ///@arg buffer
 ///@arg offset-every
 ///@arg size
+///@arg alpha
 
 var _x = argument0;
 var _y = argument1;
 var _buffer = argument2; //offset between each buff
 var _offsetEvery = argument3;
 var _size = argument4;
+var _alpha = argument5;
 var offset = 0; //Times we've offset
 for (var i = 0; i < ds_list_size(buffs_map); i++) {
 	//Grab the buff map
@@ -38,9 +40,9 @@ for (var i = 0; i < ds_list_size(buffs_map); i++) {
 		display_combo = true;
 	}
 	
-	scDrawPieRect(xpos + (_size / 2), ypos + (_size / 2), time, maxtime, c, (_size / 2) + 4, 0.65); //BUFF TIME ROUND-OUT
+	scDrawPieRect(xpos + (_size / 2), ypos + (_size / 2), time, maxtime, c, (_size / 2) + 4, 0.65 * _alpha); //BUFF TIME ROUND-OUT
 	draw_sprite_ext(sprite, 0, xpos, ypos, 0.5, 0.5, 0, c_white, 1); //BUFF SPRITE
 	if (display_combo)
-		scDrawText(xpos, ypos, "x" + string(stack_info[2]) + "/" + string(stack_info[1]), c_white, 0.45); //BUFF COMBO
-	scDrawText(xpos + _size, ypos + _size, string(ceil(time / room_speed)), c_gray, 0.45); //BUFF TIME
+		scDrawText(xpos, ypos, "x" + string(stack_info[2]) + "/" + string(stack_info[1]), c_white, 0.45, noone, _alpha); //BUFF COMBO
+	scDrawText(xpos + _size, ypos + _size, string(ceil(time / room_speed)), c_gray, 0.45, noone, _alpha); //BUFF TIME
 }

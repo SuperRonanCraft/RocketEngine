@@ -3,7 +3,7 @@
 var _xx = tab_w + (tab_buf * 2);
 var _yy = tab_y - tab_buf - (tab_buf / 2);
 
-var _mods = [["HSP MOVE MOD", "misc_hspmovemod", 5, 250], ["VSP", "misc_vsp", -5, 250], ["DAMAGE", "misc_damage", 10, 50]];
+var _mods = [["HSP MOVE MOD", "misc_hspmovemod", 5, 250], ["VSP", "misc_vsp", -5, 250], ["DAMAGE", "misc_damage", 10, 200]];
 var _w = sprite_get_width(sUISliderBar) + (tab_buf * 2);
 var _scale_o = 0.4
 var _scale = _scale_o;

@@ -24,7 +24,7 @@ var c = c_dkgray;
 
 //Background
 //scDrawRect(xpos, ypos, xpos + 32 + _buffer * 2, ypos + 32 + _buffer * 2, c_gray, false, _alpha);
-scDrawNineSplice(sUIBox, xpos - 8, ypos - 8, xpos + 32 + _buffer * 2, ypos + 32 + _buffer * 2, _alpha, _alpha);
+scDrawNineSplice(sUIBox, xpos - 8, ypos - 8, xpos + 32 + _buffer * 2, ypos + 32 + _buffer * 2, _alpha, 0.8 * _alpha);
 
 //Buff of the weapon
 if (map[? WEAPON_MAP.GUI_BUFFS] != noone) {
@@ -70,7 +70,7 @@ if (map[? WEAPON_MAP.ENABLED] && global.play) {
 		curr_cd = map[? WEAPON_MAP.CHARGE];
 	}
 		
-	scDrawPieRect(xpos + 16 + _buffer, ypos + 16 + _buffer, curr_cd, cd, c, 16 + _buffer, _alpha);
+	scDrawPieRect(xpos + 16 + _buffer, ypos + 16 + _buffer, curr_cd, cd, c, 16 + _buffer, 0.8 * _alpha);
 }
 
 //WEAPON SPRITE EQUIPPED

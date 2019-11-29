@@ -2,7 +2,6 @@
 ///@arg x
 ///@arg y
 ///@arg length
-///@arg hei
 ///@arg alpha
 
 if (!system_ultimate) exit;
@@ -10,8 +9,8 @@ if (!system_ultimate) exit;
 var _x = argument0;
 var _y = argument1;
 var _len = argument2;
-var _hei = argument3;
-var _alpha = argument4;
+var _hei = 16;
+var _alpha = argument3;
 var _side = team == TEAM.LEFT ? 1 : -1;
 _x = team == TEAM.LEFT ? _x : RES_W - _x;
 var map = ultimate_map;
