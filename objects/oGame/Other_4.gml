@@ -1,7 +1,7 @@
 /// @desc Reset gamemode
 if (room == rMenu) {
 	if (global.gamemode != noone)
-	scStatsResetStage(true);
+		scStatsResetStage(true);
 	global.gamemode = noone;
 	global.play = true;
 }

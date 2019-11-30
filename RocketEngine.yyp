@@ -879,6 +879,14 @@
             }
         },
         {
+            "Key": "1909df54-f523-4bfa-b4ff-2113226e56b2",
+            "Value": {
+                "id": "e45178b3-dc8e-4349-b20a-557a815cb737",
+                "resourcePath": "rooms\\rServer\\rServer.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1916b52a-4cb0-4ae0-8fd4-40b86121ff5b",
             "Value": {
                 "id": "2f2a515f-8c0c-4943-bdc2-a567f1529d88",
@@ -6415,6 +6423,14 @@
             }
         },
         {
+            "Key": "c9daab0b-040e-4717-b2bc-8b8508499fd5",
+            "Value": {
+                "id": "21d35cd5-f114-415f-8b10-540de2b7f6f6",
+                "resourcePath": "objects\\oServer\\oServer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ca111122-d9db-414b-89c3-81720f0f72d7",
             "Value": {
                 "id": "1cc51362-fe25-4039-8881-74348779314b",
@@ -6708,6 +6724,14 @@
                 "id": "d97383a0-3a46-4605-9122-9cec4440edfe",
                 "resourcePath": "views\\d47fe380-4a99-41fc-94c3-a137605d71e7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d49129ac-14c7-4244-ae26-9adbeb65d12b",
+            "Value": {
+                "id": "9374c26b-5446-4c99-a6b6-6097f2e81585",
+                "resourcePath": "objects\\oClient\\oClient.yy",
+                "resourceType": "GMObject"
             }
         },
         {

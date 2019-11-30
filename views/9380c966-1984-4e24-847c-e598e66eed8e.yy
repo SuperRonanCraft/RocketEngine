@@ -12,7 +12,9 @@
         "2f5c9d8e-f4e9-4949-9337-f1d473576556",
         "97c654c9-dda0-4c9f-862a-39f5aa1191fc",
         "b178df12-fe3d-4686-ac82-010febe17854",
-        "c1cdbb69-08de-4eae-8c75-053e7acfcbf3"
+        "c1cdbb69-08de-4eae-8c75-053e7acfcbf3",
+        "c9daab0b-040e-4717-b2bc-8b8508499fd5",
+        "d49129ac-14c7-4244-ae26-9adbeb65d12b"
     ],
     "filterType": "GMObject",
     "folderName": "Handlers",
