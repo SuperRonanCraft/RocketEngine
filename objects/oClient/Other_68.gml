@@ -47,6 +47,11 @@ switch (cmd) {
 				break;
 			case NETWORK_ENTITY.REMOTE_PLAYER:
 				p.local_player = buffer_read(buff, buffer_bool);
+				if (p.local_player) {
+					my_player = p;
+					my_player_x = p.x;
+					my_player_y = p.y;
+				}
 				break;
 			case NETWORK_ENTITY.KEY:
 				var k = buffer_read(buff, buffer_u8);

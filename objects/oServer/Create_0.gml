@@ -5,7 +5,7 @@
 
 //Packets
 enum NETWORK_PACKET {
-	KEY, ENTITY, NAME, CHARACTER, COMMAND
+	KEY, ENTITY, NAME, CHARACTER, COMMAND, POSITION
 }
 
 server = network_create_server(network_socket_tcp, NETWORK_PORT, NETWORK_MAX_CLIENTS);

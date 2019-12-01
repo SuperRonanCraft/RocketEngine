@@ -64,6 +64,8 @@ key_jump = false;
 key_jump_released = false;
 key_shoot = false;
 key_shoot_released = false;
+key_ult = false;
+key_ability = false;
 
 //Keybinds
 enum KEYBIND {

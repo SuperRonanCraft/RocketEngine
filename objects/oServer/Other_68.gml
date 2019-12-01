@@ -15,6 +15,8 @@ if (server == event_id) {
 		}
 		if (socket != ds_list_find_value(sockets, 0))
 			p.local_player = false;
+		else
+			oClient.my_player = p;
 		ds_map_add(clients, socket, p);
 		//Data about socket
 		//ready[socket] = false;
@@ -61,6 +63,7 @@ if (server == event_id) {
 			p.name = buffer_read(buff, buffer_string);
 			for (var s = 0; s < ds_list_size(sockets); s++) {
 				var so = ds_list_find_value(sockets, s);
+				//if (so != socket)
 				scNetworkSendRemoteEntity(so, NETWORK_PACKET.NAME, p.id, p.name);
 			}
 			break;
@@ -71,7 +74,21 @@ if (server == event_id) {
 			var _map = p.player_map[? PLAYER_MAP.CHARACTER_INFO];
 			for (var s = 0; s < ds_list_size(sockets); s++) {
 				var so = ds_list_find_value(sockets, s);
-				scNetworkSendRemoteEntity(so, NETWORK_PACKET.CHARACTER, p.id, _map[? CHARACTER_MAP.TYPE]);
+				if (so != socket)
+					scNetworkSendRemoteEntity(so, NETWORK_PACKET.CHARACTER, p.id, _map[? CHARACTER_MAP.TYPE]);
+			}
+			break;
+		case NETWORK_PACKET.POSITION:
+			var _x = buffer_read(buff, buffer_u16);
+			var _y = buffer_read(buff, buffer_u16);
+			p.x = _x;
+			p.y = _y;
+			for (var s = 0; s < ds_list_size(sockets); s++) {
+				var so = ds_list_find_value(sockets, s);
+				if (so != socket) {
+					scNetworkSendRemoteEntity(so, NETWORK_ENTITY.X, p.id, _x);
+					scNetworkSendRemoteEntity(so, NETWORK_ENTITY.Y, p.id, _y);
+				}
 			}
 			break;
 	}

@@ -6,14 +6,19 @@ if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL
 
 if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGE_TYPE.TIME); exit;} //Give charge by time, exit
 
-var key_shoot = scKeybindsGet(KEYBIND_TYPE.ULT); //Holding both left and right keys to cast ult
+if (local_player) {
+	var _old_key_ult = key_ult;
+	key_ult = scKeybindsGet(KEYBIND_TYPE.ULT);
+	if (_old_key_ult != key_ult)
+		scNetworkSendKey(KEYBIND_TYPE.ULT, key_ult);
+}
 
 if (player_aimode == 1 && aiBrain != noone)
-	key_shoot = aiBrain.AIUlt;
+	key_ult = aiBrain.AIUlt;
 
 var shoot = false;
 
-if (key_shoot) { //Shoot key being held down
+if (key_ult) { //Shoot key being held down
 	if (map[? ULTIMATE_CASTING_MAP.CASTING]) {
 		//if (map[? ULTIMATE_CASTING_MAP.CAST_TIME] <= 0)
 			shoot = true;

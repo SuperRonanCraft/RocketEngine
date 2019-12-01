@@ -1,5 +1,5 @@
 ///@arg client-socket
-///@arg network_command
+///@arg network_entity
 ///@arg entity-id
 ///@arg value-1
 ///@arg value-2

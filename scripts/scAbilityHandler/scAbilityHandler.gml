@@ -10,12 +10,17 @@ if (map[? ABILITY_MAP.CURRENT_TIME] > 0) { //Decrease cooldown, exit
 	exit;
 }
 
-var key_shoot = scKeybindsGet(KEYBIND_TYPE.ABILITY); //Holding both left and right keys to cast ult
+if (local_player) {
+	var _old_key_ability = key_ult;
+	key_ability = scKeybindsGet(KEYBIND_TYPE.ABILITY);
+	if (_old_key_ability != key_ult)
+		scNetworkSendKey(KEYBIND_TYPE.ABILITY, key_ability);
+}
 
 if (player_aimode == 1 && aiBrain != noone)
-	key_shoot = aiBrain.AIAbility;
+	key_ability = aiBrain.AIAbility;
 
-if (!key_shoot) exit; //Not engaging ability, exit
+if (!key_ability) exit; //Not engaging ability, exit
 
 show_debug_message("Ability!");
 

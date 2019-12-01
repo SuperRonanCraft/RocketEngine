@@ -1,4 +1,8 @@
 /// @desc 
+my_player = noone; //Player I control
+my_player_x = 0;
+my_player_y = 0;
+
 socket = network_create_socket(network_socket_tcp);
 global.socket = socket;
 //Memory

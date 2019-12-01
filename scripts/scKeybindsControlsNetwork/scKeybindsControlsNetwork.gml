@@ -20,6 +20,10 @@ if (_update) {
 			key_shoot = argument[2]; break;
 		case KEYBIND_TYPE.SHOOT_RELEASE:
 			key_shoot_released = argument[2]; break;
+		case KEYBIND_TYPE.ULT:
+			key_ult = argument[2]; break;
+		case KEYBIND_TYPE.ABILITY:
+			key_ability = argument[2]; break;
 	}
 } else
 	scKeybindsMove();
