@@ -17,3 +17,5 @@ scKeybindsSet(keys);
 
 //Load Combos
 scComboStart();
+
+name = "Player"

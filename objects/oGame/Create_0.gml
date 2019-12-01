@@ -21,7 +21,7 @@ global.gamemode_select = false; //Set to false every main menu load (sets to loa
 //Gamemodes
 //Preset
 enum GAMEMODE {
-	ONEVONE, TARGETS, KNOCKOUT, SINGLE, RUMBLE, TUTORIAL, LENGTH
+	ONEVONE, TARGETS, KNOCKOUT, SINGLE, RUMBLE, TUTORIAL, /*ONLINE,*/ LENGTH
 }
 global.gamemodes[GAMEMODE.ONEVONE] = "One v One";
 global.gamemodes[GAMEMODE.TARGETS] = "Targets";
@@ -29,6 +29,7 @@ global.gamemodes[GAMEMODE.KNOCKOUT] = "Knockout";
 global.gamemodes[GAMEMODE.SINGLE] = "Single Player";
 global.gamemodes[GAMEMODE.TUTORIAL] = "Tutorial";
 global.gamemodes[GAMEMODE.RUMBLE] = "Rumble";
+//global.gamemodes[GAMEMODE.ONLINE] = "Online";
 //Set when a select room is activated
 global.gamemode = noone;
 //Gamemode rooms
@@ -38,6 +39,7 @@ global.gamemodeSRoom[GAMEMODE.KNOCKOUT] = rKnockOutSelect;
 global.gamemodeSRoom[GAMEMODE.SINGLE] = rSingleSelect;
 global.gamemodeSRoom[GAMEMODE.TUTORIAL] = rTutorial;
 global.gamemodeSRoom[GAMEMODE.RUMBLE] = rRumbleSelect;
+//global.gamemodeSRoom[GAMEMODE.ONLINE] = rServer;
 //Stages
 //Set on every StageSelect room
 global.stages = -1;
@@ -110,4 +112,4 @@ global.gamepad_error = false; //Do we have a gamepad error?
 controllers = ds_list_create();
 
 //PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
-physics_debug = true;
+physics_debug = false;

@@ -35,7 +35,7 @@ if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this playe
 				other.causeOfDeath = shuriken_map[? SHURIKEN_MAP.DEATHCAUSE];
 		
 			if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])
-				scUltimateAddCharge(owner, DAMAGETYPE.DIRECT, shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
+				scUltimateAddCharge(owner, DAMAGE_TYPE.DIRECT, shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 			scPlaySound(SOUND.EFFECT_HIT);
 		
 		}

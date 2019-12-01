@@ -5,7 +5,7 @@ if (other.parent != owner) {
 			exit;
 	with (other) {
 		scScreenShake(10, 30);
-		var dmg = rocket_map[? ROCKET_MAP.DAMAGE]
+		//var dmg = rocket_map[? ROCKET_MAP.DAMAGE]
 		other.turret_hp -= dmg;
 		other.turret_hp_damaged = dmg;
 		if (other.turret_hp <= 0)

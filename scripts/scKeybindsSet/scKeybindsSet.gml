@@ -58,6 +58,13 @@ controller_lastused = false;
 //Movement vars
 controlling = 0; //If the player is controlling AND moving
 
+key_left = false;
+key_right = false;
+key_jump = false;
+key_jump_released = false;
+key_shoot = false;
+key_shoot_released = false;
+
 //Keybinds
 enum KEYBIND {
 	PLAYER1, PLAYER2, PLAYER3, PLAYER4, NONE

@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "0746bc5c-652b-4041-ae52-8807a8dbf8f1",
+            "Value": {
+                "id": "6fda1714-155d-4f66-b1b7-c0a9066aa9ed",
+                "resourcePath": "scripts\\scNetworkSendRemoteEntity\\scNetworkSendRemoteEntity.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "07927c46-8cc5-468c-9943-e27c3c48ab80",
             "Value": {
                 "id": "42461d55-4f28-4e57-95ab-2b078a96f7f0",
@@ -2839,6 +2847,14 @@
             }
         },
         {
+            "Key": "5610d47f-c1f0-442b-94eb-f0374e0325d7",
+            "Value": {
+                "id": "50617ea8-5589-454e-9b49-edc47bc6cc6f",
+                "resourcePath": "objects\\oRemoteEntity\\oRemoteEntity.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "564ffcc6-d238-4547-b765-40c44496bd6c",
             "Value": {
                 "id": "72f2bb29-dfbd-4a7c-a9d3-90846099832b",
@@ -3335,6 +3351,14 @@
             }
         },
         {
+            "Key": "65c0b83c-146e-4d35-9793-eefbd67ca73e",
+            "Value": {
+                "id": "04d57635-1d9a-4cb3-bed9-59af7b828ef8",
+                "resourcePath": "scripts\\scUINetworkCreate\\scUINetworkCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "65edf910-1ac7-4395-943d-912424d1854b",
             "Value": {
                 "id": "562332a0-9582-4642-8269-af10740b154b",
@@ -3620,6 +3644,14 @@
                 "id": "230f4a8c-bd73-4fa2-8968-7364ac1aab5d",
                 "resourcePath": "objects\/oUICharacterSelect\/oUICharacterSelect.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "704412eb-5939-4f8c-b31a-acaccd8dafd1",
+            "Value": {
+                "id": "8a01bd3f-0d4f-4a20-b975-83d79a8a2805",
+                "resourcePath": "views\\704412eb-5939-4f8c-b31a-acaccd8dafd1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3956,6 +3988,14 @@
                 "id": "3efa349e-0986-417a-9ee0-1927c30c3a26",
                 "resourcePath": "objects\\oPlayerOLD\\oPlayerOLD.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7b6da994-39d6-496d-a7e4-df69cc57d5fd",
+            "Value": {
+                "id": "8a297225-6a5c-4e76-bf7a-422f1063f908",
+                "resourcePath": "views\\7b6da994-39d6-496d-a7e4-df69cc57d5fd.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4476,6 +4516,14 @@
                 "id": "ac82a84c-8177-45c4-b2c6-3d47ee578b3f",
                 "resourcePath": "sprites\\sEnemy_default_walkend\\sEnemy_default_walkend.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8ac6ec64-0ed8-4e6f-a830-97a2665d0d2a",
+            "Value": {
+                "id": "140449ef-1a14-4db7-b067-fca3fae60415",
+                "resourcePath": "scripts\\scKeybindsControlsNetwork\\scKeybindsControlsNetwork.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5319,6 +5367,14 @@
             }
         },
         {
+            "Key": "a61acaaa-a06f-42ad-91c1-95cce41bba48",
+            "Value": {
+                "id": "52d508f3-78d8-4d33-a289-af5b3f9c59cb",
+                "resourcePath": "scripts\\scNetworkSendKey\\scNetworkSendKey.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a62224e9-3086-4752-8803-ac9e07f57b35",
             "Value": {
                 "id": "d0585570-333d-4252-a034-3779e657d905",
@@ -5900,6 +5956,14 @@
                 "id": "237d3447-3658-4719-8bf6-26e7627db4c5",
                 "resourcePath": "sprites\\sPlayer_arrow_deadLaser\\sPlayer_arrow_deadLaser.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b7453558-1899-459a-a0ac-38df626cf412",
+            "Value": {
+                "id": "63b508da-c85f-482f-9cbc-fa1990eca2cf",
+                "resourcePath": "scripts\\scKeybindsMove\\scKeybindsMove.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6839,6 +6903,14 @@
             }
         },
         {
+            "Key": "d7ce2f2d-6db4-4fd5-a609-6b18a7590833",
+            "Value": {
+                "id": "cb0debe5-2346-49f4-8ffc-07aefa99f902",
+                "resourcePath": "views\\d7ce2f2d-6db4-4fd5-a609-6b18a7590833.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d801e0f1-0215-4de8-94a8-c6504d240272",
             "Value": {
                 "id": "99da7c37-6ed8-49aa-816b-190e90a1f6e5",
@@ -7367,6 +7439,14 @@
             }
         },
         {
+            "Key": "e83cf741-863a-4135-a481-5347e74b8f53",
+            "Value": {
+                "id": "816c4a71-57f2-4c22-82ae-54da759e1308",
+                "resourcePath": "views\\e83cf741-863a-4135-a481-5347e74b8f53.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e8958ecd-db37-4420-8365-d502b8a7a409",
             "Value": {
                 "id": "4ffca2c2-5857-4ea5-ba5e-dbedff972ab0",
@@ -7671,6 +7751,14 @@
             }
         },
         {
+            "Key": "f4120e42-0bbd-41f1-9bec-a74a62f29be6",
+            "Value": {
+                "id": "82cca727-8926-44c4-a4a6-d55affb0afb7",
+                "resourcePath": "objects\\oUINetworking\\oUINetworking.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "b5e92e48-3975-4d1a-8ff6-306fe8529bf6",
@@ -7935,6 +8023,14 @@
             }
         },
         {
+            "Key": "fdeb19e0-f653-46e8-878c-d3d973e52a17",
+            "Value": {
+                "id": "bd3feae0-ba7a-481c-ad82-0bd74e15e3e1",
+                "resourcePath": "scripts\\scUINetworkJoin\\scUINetworkJoin.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fe1033fc-a994-419a-8fb7-cda81cf69839",
             "Value": {
                 "id": "010b635e-ad17-49b6-9407-7c8c4f6f1c5b",
@@ -8017,6 +8113,8 @@
     ],
     "script_order": [
         "365c1ea7-2ad0-4094-a864-d5fd6f7f72a1",
+        "8ac6ec64-0ed8-4e6f-a830-97a2665d0d2a",
+        "b7453558-1899-459a-a0ac-38df626cf412",
         "3922c59d-94e2-4b58-a5d0-b632e0b9b634",
         "f1bd3e41-16cc-451a-8b3e-6eeb417fa6bb",
         "308c532b-572e-444a-b419-fb1c6c459fc6",
@@ -8231,6 +8329,10 @@
         "5a44ba40-3360-4a8c-87d7-b24273b2b27a",
         "d4fcf6f8-1d92-4162-b191-fc3d8ee02efe",
         "714165ea-2c95-4f22-b72d-9069d845801e",
+        "65c0b83c-146e-4d35-9793-eefbd67ca73e",
+        "fdeb19e0-f653-46e8-878c-d3d973e52a17",
+        "0746bc5c-652b-4041-ae52-8807a8dbf8f1",
+        "a61acaaa-a06f-42ad-91c1-95cce41bba48",
         "f049437b-f0f6-434f-9fb2-b525903bf967",
         "518397c6-d548-4dd7-ba31-76f7255e3f37",
         "04f2dc97-e5c7-4255-825f-dc7cca8266f4",

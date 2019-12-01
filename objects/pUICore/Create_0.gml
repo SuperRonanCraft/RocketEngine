@@ -1,12 +1,12 @@
 ///Page types
 enum menu_page {
-	main, gamemodes, more_gamemodes, settings, audio, graphics, 
+	main, more_gamemodes, settings, audio, graphics, 
 	//main keys
 	keybinds, keybinds_1, keybinds_2, keybinds_controller,
 	//keybinds2_1, keybinds2_2, 
 	controls, info, confirm, modes, stats,
 	//custom
-	list_weapons, list_buffs, list_achievements,
+	list_weapons, list_buffs, list_achievements, game_type, local, online,
 	//Keep last
 	height
 }

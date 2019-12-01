@@ -374,6 +374,20 @@
             "value": "0",
             "varName": "auto_aim",
             "varType": 3
+        },
+        {
+            "id": "8111f8a3-04ba-4fb6-8d6f-643cf9116a8f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "local_player",
+            "varType": 3
         }
     ],
     "solid": false,

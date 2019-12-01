@@ -1,4 +1,4 @@
-var map = rocket_map;
+/*var map = rocket_map;
 if (map[? "amp_parts_crt"] <= 0) {
 	var offset = rocket_map[? ROCKET_MAP.OFFSET];
 	var xx = x - lengthdir_x(offset, direction), yy = y - lengthdir_y(offset, direction);

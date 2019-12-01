@@ -36,7 +36,7 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 
 	//Vertical
 	if (key_jump && standing) {
-		vsp_move = (-jump_height - jump_adj) * grv_dir;
+		//vsp_move = (-jump_height - jump_adj) * grv_dir;
 		standing = false;
 		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
 	}
@@ -57,7 +57,7 @@ if (move == 0 && hsp_move != 0 && hsp_knockback == 0) {
 } 
 //Move hsp
 else if(hsp_knockback == 0 && player_map[? PLAYER_MAP.CAN_CONTROL])
-	hsp_move += (move * walksp) + (move_adj * move) + recoilKB;
+	//hsp_move += (move * walksp) + (move_adj * move) + recoilKB;
 
 
 //Reset recoil
