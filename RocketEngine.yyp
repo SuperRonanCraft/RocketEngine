@@ -2687,6 +2687,14 @@
             }
         },
         {
+            "Key": "51ced869-95f2-4616-8445-3ae494fe84b7",
+            "Value": {
+                "id": "8b644560-d5f1-4db1-aca0-f16a9b7d65a0",
+                "resourcePath": "scripts\\scNetworkSendCommand\\scNetworkSendCommand.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5219a979-caa3-4639-9b4a-8a1007225652",
             "Value": {
                 "id": "68acbded-3b23-451b-9717-c53a7c9568b6",
@@ -8348,6 +8356,7 @@
         "65c0b83c-146e-4d35-9793-eefbd67ca73e",
         "fdeb19e0-f653-46e8-878c-d3d973e52a17",
         "0746bc5c-652b-4041-ae52-8807a8dbf8f1",
+        "51ced869-95f2-4616-8445-3ae494fe84b7",
         "a61acaaa-a06f-42ad-91c1-95cce41bba48",
         "1faef60b-0751-40de-801c-ea177008cca1",
         "5bcb5fda-4dc0-4bbc-b5da-4affcc9934c4",

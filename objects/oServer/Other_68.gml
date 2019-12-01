@@ -16,15 +16,18 @@ if (server == event_id) {
 		if (socket != ds_list_find_value(sockets, 0))
 			p.local_player = false;
 		ds_map_add(clients, socket, p);
+		//Data about socket
+		//ready[socket] = false;
+		
 		//Send data about all players to new socket
 		for (var i = 0; i < instance_number(oPlayer); i++) {
 			var _pl = instance_find(oPlayer, i);
-			scNetworkSendRemoteEntity(socket, NETWORK_COMMAND.X, _pl.id, _pl.x);
-			scNetworkSendRemoteEntity(socket, NETWORK_COMMAND.Y, _pl.id, _pl.y);
-			scNetworkSendRemoteEntity(socket, NETWORK_COMMAND.NAME, _pl.id, _pl.name);
+			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.X, _pl.id, _pl.x);
+			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.Y, _pl.id, _pl.y);
+			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.NAME, _pl.id, _pl.name);
 			var _map = _pl.player_map[? PLAYER_MAP.CHARACTER_INFO];
-			scNetworkSendRemoteEntity(socket, NETWORK_COMMAND.CHARACTER, _pl.id, _map[? CHARACTER_MAP.TYPE]);
-			scNetworkSendRemoteEntity(socket, NETWORK_COMMAND.REMOTE_PLAYER, _pl.id, false);
+			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.CHARACTER, _pl.id, _map[? CHARACTER_MAP.TYPE]);
+			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.REMOTE_PLAYER, _pl.id, _pl == p);
 		}
 		show_debug_message("New player connected, Syncing....");
 	} else if (type == network_type_disconnect) {  //Disconnect
@@ -45,9 +48,14 @@ if (server == event_id) {
 	switch (cmd) {
 		case NETWORK_PACKET.KEY:
 			var k = buffer_read(buff, buffer_u8);
-			var s = buffer_read(buff, buffer_u8);
+			var v = buffer_read(buff, buffer_u8);
 			with (p)
-				scKeybindsControlsNetwork(true, k, s);
+				scKeybindsControlsNetwork(true, k, v);
+			for (var s = 0; s < ds_list_size(sockets); s++) {
+				var so = ds_list_find_value(sockets, s);
+				if (so != socket) //Do not send the data from socket back to it's self
+					scNetworkSendRemoteEntity(so, NETWORK_ENTITY.KEY, p.id, k, v);
+			}
 			break;
 		case NETWORK_PACKET.NAME:
 			p.name = buffer_read(buff, buffer_string);

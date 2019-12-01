@@ -1,5 +1,7 @@
 /// @desc player movement
 
+//var send = argument_count > 0 ? (argument[0] != noone ? argument[0] : false) : false;
+
 //KEYBINDS
 /*var key_left = scKeybindsGet(KEYBIND_TYPE.LEFT); 
 var key_right = scKeybindsGet(KEYBIND_TYPE.RIGHT);
@@ -95,15 +97,17 @@ if(abs(_map[? GRAVITY_MAP.HSP_MOVE_MOD]) < 1)
 
 _map[? GRAVITY_MAP.HSP_MOVE_MOD] *= _map[? GRAVITY_MAP.FRICTION]; //reset hsp mod
 
-if (key_left)
+/*if (send) {
+//if (key_left)
 	scNetworkSendKey(KEYBIND_TYPE.LEFT, key_left);
-if (key_right)
+//if (key_right)
 	scNetworkSendKey(KEYBIND_TYPE.RIGHT, key_right);
-if (key_jump)
+//if (key_jump)
 	scNetworkSendKey(KEYBIND_TYPE.JUMP, key_jump);
-if (key_jump_released)
+//if (key_jump_released)
 	scNetworkSendKey(KEYBIND_TYPE.JUMP_RELEASE, key_jump_released);
-if (key_shoot)
+//if (key_shoot)
 	scNetworkSendKey(KEYBIND_TYPE.SHOOT, key_shoot);
-if (key_shoot_released)
+//if (key_shoot_released)
 	scNetworkSendKey(KEYBIND_TYPE.SHOOT_RELEASE, key_shoot_released);
+}

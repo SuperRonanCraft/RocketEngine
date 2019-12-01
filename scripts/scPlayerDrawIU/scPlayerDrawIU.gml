@@ -1,4 +1,5 @@
 //Draw Player UI
+if (!local_player) exit;
 
 var _hmap = health_map;
 var _x = _hmap[? HEALTH_MAP.X];
