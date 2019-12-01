@@ -1095,6 +1095,14 @@
             }
         },
         {
+            "Key": "1faef60b-0751-40de-801c-ea177008cca1",
+            "Value": {
+                "id": "8eef580f-f535-412e-94ef-689a672154c8",
+                "resourcePath": "scripts\\scNetworkSendName\\scNetworkSendName.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1fb09528-73a5-41bd-b7f4-5e1e9b8d9359",
             "Value": {
                 "id": "35d3c821-411b-4fac-a9a2-90bb8f4a28ac",
@@ -3019,6 +3027,14 @@
             "Value": {
                 "id": "26b8c7a1-09e5-4114-a961-55ce119c81c4",
                 "resourcePath": "scripts\/scStatsGetType\/scStatsGetType.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5bcb5fda-4dc0-4bbc-b5da-4affcc9934c4",
+            "Value": {
+                "id": "f2289b8f-52bd-487b-81f0-00255dfa9f28",
+                "resourcePath": "scripts\\scNetworkSendCharacter\\scNetworkSendCharacter.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8333,6 +8349,8 @@
         "fdeb19e0-f653-46e8-878c-d3d973e52a17",
         "0746bc5c-652b-4041-ae52-8807a8dbf8f1",
         "a61acaaa-a06f-42ad-91c1-95cce41bba48",
+        "1faef60b-0751-40de-801c-ea177008cca1",
+        "5bcb5fda-4dc0-4bbc-b5da-4affcc9934c4",
         "f049437b-f0f6-434f-9fb2-b525903bf967",
         "518397c6-d548-4dd7-ba31-76f7255e3f37",
         "04f2dc97-e5c7-4255-825f-dc7cca8266f4",

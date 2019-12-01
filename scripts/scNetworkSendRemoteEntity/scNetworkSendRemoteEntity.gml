@@ -1,10 +1,10 @@
 ///@arg client-socket
-///@arg command
+///@arg network_command
 ///@arg entity-id
 ///@arg value
 
 enum NETWORK_COMMAND {
-	X, Y, NAME, SPRITE, DESTROY, REMOTE_PLAYER
+	X, Y, NAME, CHARACTER, DESTROY, REMOTE_PLAYER
 }
 
 buffer_seek(buffer, buffer_seek_start, 0);
@@ -22,8 +22,8 @@ switch (argument1) {
 	case NETWORK_COMMAND.NAME:
 		buffer_write(buffer, buffer_string, argument3);
 		break;
-	case NETWORK_COMMAND.SPRITE:
-		buffer_write(buffer, buffer_u16, argument3);
+	case NETWORK_COMMAND.CHARACTER:
+		buffer_write(buffer, buffer_u8, argument3);
 		break;
 	case NETWORK_COMMAND.DESTROY:
 		buffer_write(buffer, buffer_u8, argument3);

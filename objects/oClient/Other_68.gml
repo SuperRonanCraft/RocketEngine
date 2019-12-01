@@ -8,12 +8,19 @@ if (socket == event_id) { //Our socket
 	
 	switch (cmd) {
 		case NETWORK_PACKET.ENTITY:
+			if (instance_exists(oServer)) break;
 			var cmd = buffer_read(buff, buffer_u8);
 			var e_id = buffer_read(buff, buffer_u32);
 			
 			if (!ds_map_exists(entities, e_id)) {
 				var p = instance_create_layer(0, 0, "Instances", oPlayer);
+				with (p) {
+					scPlayerCharacterChange(CHARACTER.DEFAULT, false, false);
+					var _map = player_map[? PLAYER_MAP.CHARACTER_INFO];
+					_map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
+				}
 				ds_map_set(entities, e_id, p);
+				show_debug_message("Player Created! " + string(e_id));
 			}
 			
 			var p = entities[? e_id];
@@ -27,8 +34,9 @@ if (socket == event_id) { //Our socket
 				case NETWORK_COMMAND.NAME:
 					p.name = buffer_read(buff, buffer_string);
 					break;
-				case NETWORK_COMMAND.SPRITE:
-					p.sprite_index = buffer_read(buff, buffer_u16);
+				case NETWORK_COMMAND.CHARACTER:
+					with (p)
+						scPlayerCharacterChange(buffer_read(buff, buffer_u8), false, false);
 					break;
 				case NETWORK_COMMAND.DESTROY:
 					buffer_read(buff, buffer_u8);

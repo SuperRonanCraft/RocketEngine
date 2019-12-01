@@ -10,7 +10,7 @@ scPlayerStart();
 scUltimateStart();
 
 //Load Character
-scPlayerCharacterChange(character, load_character_cache);
+scPlayerCharacterChange(character, load_character_cache, false);
 
 //Load keybinds
 scKeybindsSet(keys);

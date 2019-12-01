@@ -1,9 +1,11 @@
 ///@desc Change an entities character
 ///@arg character
 ///@arg load
+///@arg send-to-server
 
 var char = argument[0];
 var load = argument_count > 1 ? (argument[1] != noone ? argument[1] : true) : true;
+var send = argument_count > 2 ? (argument[2] != noone ? argument[2] : true) : true;
 
 ds_map_destroy(player_map[? PLAYER_MAP.CHARACTER_INFO]);
 var map = scPlayerCharacterGetInfo(char);
@@ -56,6 +58,9 @@ scWeaponStart();
 
 //Load Character Abilities
 scAbilityStart(map[? CHARACTER_MAP.ABILITY]);
+
+if (send && instance_exists(oClient))
+	scNetworkSendCharacter(map[? CHARACTER_MAP.TYPE]);
 
 enum CHARACTER {
 	DEFAULT, SWORD, ARROW,
