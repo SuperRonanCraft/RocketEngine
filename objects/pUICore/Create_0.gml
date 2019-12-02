@@ -48,7 +48,9 @@ enum menu_element_type {
 	//Stats type
 	stats,
 	//Gamepad Setting
-	set_gamepad
+	set_gamepad,
+	//String
+	input_string
 }
 
 enum menu_centered {

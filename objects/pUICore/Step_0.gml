@@ -3,6 +3,7 @@ else scUIReloadGlobal(); //Reload global vars
 
 var key_up = false, key_down = false;
 var hinput = 0;
+var confirm_input = true;
 if (button_up != noone && button_down != noone && button_left != noone && button_right != noone) { //Keyboard disabled
 	key_up = keyboard_check_pressed(button_up);
 	key_down = keyboard_check_pressed(button_down);
@@ -117,14 +118,30 @@ for (var i = 0; i < ds_height; i++) {
 			break;
 		case menu_element_type.keybind:
 		case menu_element_type.input:
+		case menu_element_type.input_string:
 			//HOVERING
+			var option = ds_grid[# 1, i];
+			var _bypass = false; //Bypass key valid check
 			if (key_enter_mouse || key_enter) //Pressed enter
 				if (i == menu_option[page])
 					input = [page, i, false]; //Got here from selection
 				else {
+					var len = 0;
+					switch (option) {
+						case menu_element_type.input_string:
+							len = string_width(ds_grid[# 2, i]) * scale_element;
+							if (!ds_grid[# 4, i]) {
+								ds_grid[# 4, i] = true;
+								keyboard_string = ds_grid[# 2, i];
+							} else if (input == noone)
+								ds_grid[# 4, i] = false;
+							break;
+						default:
+							len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale_element;
+							break;
+					}
 					var rty = start_y[i];
 					var rtx = start_x[i] + x_buffer * 2 + x_buffer;
-					var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale_element;
 					if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0))
 						input = [page, i, true]; //Got here from hovering
 				}
@@ -132,13 +149,44 @@ for (var i = 0; i < ds_height; i++) {
 				//Selection
 				switch (input[2]) {
 					case false:
-						if (i != menu_option[page]) input = noone; break;
+						if (i != menu_option[page]) input = noone;
+						switch (option) {
+							case menu_element_type.input_string:
+								if (!ds_grid[# 4, i]) {
+									ds_grid[# 4, i] = true;
+									keyboard_string = ds_grid[# 2, i];
+								}
+								_bypass = true; break;
+							default:
+								break;
+						}
+						break;
 					case true:
+						var len = 0;
+						switch (option) {
+							case menu_element_type.input_string:
+								len = string_width(ds_grid[# 2, i]) * scale_element;
+								_bypass = true;
+								break;
+							default:
+								len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale_element;
+								break;
+						}
 						var rty = start_y[i];
 						var rtx = start_x[i] + x_buffer * 2 + x_buffer;
-						var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale_element;
 						if (!scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0))
 							input = noone; //Got here from hovering
+						switch (option) {
+							case menu_element_type.input_string:
+								if (!ds_grid[# 4, i]) {
+									ds_grid[# 4, i] = true;
+									keyboard_string = ds_grid[# 2, i];
+								} else if (input == noone)
+									ds_grid[# 4, i] = false;
+								break;
+							default:
+								break;
+						}
 						break;
 				}
 			} else
@@ -146,9 +194,8 @@ for (var i = 0; i < ds_height; i++) {
 			var key = noone;
 			if (keyboard_check_pressed(vk_anykey))
 				key = keyboard_lastkey;
-			if (key == noone /*No key*/ || key == 13 /*Enter key*/ || key == button_down && key == button_up) break; //Invalid key, break out
-			var option = ds_grid[# 1, i];
-			if (option == menu_element_type.input) {
+			if (key == noone /*No key*/ || key == vk_enter /*Enter key*/ || key == button_down && key == button_up && !_bypass) break; //Invalid key, break out
+			if (option == menu_element_type.input && !_bypass) {
 				if (key != variable_global_get(ds_grid[# 2, i])) {
 					//AUDIO
 					variable_global_set(ds_grid[# 2, i], key);
@@ -156,7 +203,7 @@ for (var i = 0; i < ds_height; i++) {
 					ds_list_add(confirm_list, i);
 					enter_change = true;
 				}
-			} else if (option == menu_element_type.keybind) { //CACHING
+			} else if (option == menu_element_type.keybind && !_bypass) { //CACHING
 				if (key != scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i])) {
 					//AUDIO
 					scSettingsCache(ds_grid[# 2, i], key);
@@ -164,6 +211,14 @@ for (var i = 0; i < ds_height; i++) {
 					ds_list_add(confirm_list, i);
 					enter_change = true;
 				}
+			} else if (option == menu_element_type.input_string) { //Setting
+				//var _word = ds_grid[# 2, i];ds_grid[# 2, i] += key;
+				if (string_length(keyboard_string) > 32)
+					keyboard_string = string_copy(keyboard_string, 1, 32);
+				ds_grid[# 2, i] = keyboard_string;
+				ds_list_add(confirm_list, i);
+				enter_change = true;
+				confirm_input = false; //Dont confirm our input
 			}
 			break;
 		case menu_element_type.set_gamepad: //Rebind a controller to a player
@@ -308,20 +363,20 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 					page = i; checked = false; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
 				break;
 			case menu_element_type.mass_toggle: //If mass toggling
-					var op = page_opt;
-					var selection = ds_grid[# 6, op] - 1;
-					if (selection != -1) {
-						var array = ds_grid[# 2, op];
-						var values = ds_grid[# 4, op];
-						var values_array = values[selection];
-						for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
-							var menuSel = array[i];
-							var val = values_array[i];
-							ds_grid[# 4, menuSel] = val;
-							variable_global_set(ds_grid[# 3, menuSel], val);
-						}
+				var op = page_opt;
+				var selection = ds_grid[# 6, op] - 1;
+				if (selection != -1) {
+					var array = ds_grid[# 2, op];
+					var values = ds_grid[# 4, op];
+					var values_array = values[selection];
+					for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
+						var menuSel = array[i];
+						var val = values_array[i];
+						ds_grid[# 4, menuSel] = val;
+						variable_global_set(ds_grid[# 3, menuSel], val);
 					}
-					variable_global_set(ds_grid[# 5, op], ds_grid[# 6, op]);
+				}
+				variable_global_set(ds_grid[# 5, op], ds_grid[# 6, op]);
 				break;
 			case menu_element_type.toggle_live: //Toggle with a script
 				var val = ds_grid[# 4, page_opt];
@@ -345,23 +400,27 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 					script_execute(ds_grid[# 5, page_opt], ds_grid[# 4, page_opt]);
 				}
 			case menu_element_type.toggle: //If we were toggling
-					if (option == menu_element_type.toggle) {
-						if (ds_grid[# 2, page_opt] != noone)
-							script_execute(ds_grid[# 2, page_opt], ds_grid[# 4, page_opt]);
-						if (ds_grid[# 3, page_opt] != noone)
-							variable_global_set(ds_grid[# 3, page_opt], ds_grid[# 4, page_opt]);
+				if (option == menu_element_type.toggle) {
+					if (ds_grid[# 2, page_opt] != noone)
+						script_execute(ds_grid[# 2, page_opt], ds_grid[# 4, page_opt]);
+					if (ds_grid[# 3, page_opt] != noone)
+						variable_global_set(ds_grid[# 3, page_opt], ds_grid[# 4, page_opt]);
+				}
+				for (var i = 0; i < ds_height; i++)
+					if (ds_grid[# 1, i] == menu_element_type.mass_toggle) {
+						ds_grid[# 6, i] = 0;
+						variable_global_set(ds_grid[# 5, i], ds_grid[# 6, i]);
 					}
-					for (var i = 0; i < ds_height; i++)
-						if (ds_grid[# 1, i] == menu_element_type.mass_toggle) {
-							ds_grid[# 6, i] = 0;
-							variable_global_set(ds_grid[# 5, i], ds_grid[# 6, i]);
-						}
 			case menu_element_type.keybind:
 			case menu_element_type.input:
+				break;
+			case menu_element_type.input_string:
+				variable_global_set(ds_grid[# 3, page_opt], ds_grid[# 2, page_opt]);
 		}
-		if (play_sound)
+		if (play_sound && confirm_input)
 			audio_play_sound(SOUND.UI_SELECT, 5, false); //Confirm sound
-		input = noone;
+		if (confirm_input)
+			input = noone;
 	}
 
 ds_list_destroy(confirm_list);

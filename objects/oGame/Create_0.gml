@@ -113,3 +113,7 @@ controllers = ds_list_create();
 
 //PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
 physics_debug = false;
+
+//NETWORKING
+global.network_name = sNameGet();
+global.network_ip = "127.0.0.1";

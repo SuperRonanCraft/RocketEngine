@@ -203,10 +203,24 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			if (i == menu_option[page]) { c = color_element_hover; string_val = string(string_val) + " | Press any key!"}
 			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
 			break;
+		/*case menu_element_type.input_string:
+			var string_val = ds_grid[# 2, i], c = color_element;
+			if (i == menu_option[page]) { c = color_element_hover; string_val = string(string_val) + " | Type your name!"}
+			scDrawText(rtx, rty, string_val, c, scale_element, noone, noone, fa_left);
+			break;*/
+		case menu_element_type.input_string:
 		case menu_element_type.keybind:
-			var scale = 1.2, c = color_element, scale = scale_element;
+			var c = color_element, scale = scale_element;
 			rtx += x_buffer;
-			var len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale;
+			var len = 0;
+			switch (ds_grid[# 1, i]) {
+				case menu_element_type.input_string:
+					len = string_width(ds_grid[# 2, i]) * scale;
+					break;
+				default:
+					len = string_width(scUIGamepadGet(GAMEPAD_TYPE.KEYBOARD, scSettingsGetType(SETTINGS_TYPE.VALUE, ds_grid[# 2, i]))) * scale;
+					break;
+			}
 			if (i == menu_option[page])
 				c = color_element_hover;
 			else if (scUIHoveringBox(rtx - x_buffer, rty - y_buffer / 2, rtx + x_buffer + len, rty + y_buffer / 2, 0, 0)) {
@@ -222,7 +236,14 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				}
 			} else if (c == color_element_hover) //Hovering
 				scDrawText(start_x[i] + x_buffer * 2, rty - (y_buffer / 2), "Click to edit!", color_element_special, 0.4, noone, 0.8, fa_left);
-			scUIGamepadDraw(GAMEPAD_TYPE.KEYBOARD, ds_grid[# 2, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
+			switch (ds_grid[# 1, i]) {
+				case menu_element_type.input_string:
+					scDrawText(rtx, rty, ds_grid[# 2, i], noone, scale, noone, noone, fa_left, fa_middle);
+					break;
+				default:
+					scUIGamepadDraw(GAMEPAD_TYPE.KEYBOARD, ds_grid[# 2, i], rtx, rty, c, scale, 1, fa_left, fa_middle);
+					break;
+			}
 			break;
 		case menu_element_type.set_gamepad:
 			var list = oGame.controllers;
