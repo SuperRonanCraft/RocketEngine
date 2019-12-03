@@ -19,21 +19,27 @@ ds_menu_main = scUICreateMenuPage(
 
 ds_menu_type = scUICreateMenuPage(
 	["Create Server",	menu_element_type.page_transfer,	menu_page.online],
-	["Join Game",		menu_element_type.script_runner,	scUINetworkJoin],
+	["Join Game",		menu_element_type.page_transfer,	menu_page.local],
 	["Back",			menu_element_type.page_transfer,	menu_page.main]
 	//["Back",		menu_element_type.script_runner,	scUIExitToGamemodeSelect]
 );
 
-ds_menu_server = scUICreateMenuPage(
+ds_menu_create = scUICreateMenuPage(
 	["Server IP",	menu_element_type.input_string,		global.network_ip,	"network_ip", false],
-	["Continue",	menu_element_type.script_runner,	scUINetworkCreate],
+	["Create",	menu_element_type.script_runner,	scUINetworkCreate],
+	["Back",		menu_element_type.page_transfer,	menu_page.modes]
+);
+
+ds_menu_join = scUICreateMenuPage(
+	["Server IP",	menu_element_type.input_string,		global.network_ip,	"network_ip", false],
+	["Join",	menu_element_type.script_runner,	scUINetworkJoin],
 	["Back",		menu_element_type.page_transfer,	menu_page.modes]
 );
 
 //Pages of the menu
-menu_pages = [ds_menu_main, ds_menu_type, ds_menu_server, ds_menu_server];
+menu_pages = [ds_menu_main, ds_menu_type, ds_menu_create, ds_menu_join];
 //The page index values (must be in order)
-menu_pages_index = [menu_page.main, menu_page.modes, menu_page.online];
+menu_pages_index = [menu_page.main, menu_page.modes, menu_page.online, menu_page.local];
 
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_type];

@@ -1,7 +1,8 @@
 /// @desc player movement
 
 if (!local_player) { //Recieving inputs
-	scKeybindsControlsNetwork(false);
+	if (global.network_connected)
+		scKeybindsControlsNetwork(false);
 	exit;
 }
 
@@ -26,7 +27,7 @@ if (_old_key_left != key_left)
 	scNetworkSendKey(KEYBIND_TYPE.LEFT, key_left);
 if (_old_key_right != key_right)
 	scNetworkSendKey(KEYBIND_TYPE.RIGHT, key_right);
-if (_old_key_jump != key_jump)
+if (_old_key_jump || _old_key_jump != key_jump)
 	scNetworkSendKey(KEYBIND_TYPE.JUMP, key_jump);
 if (_old_key_jump_released != key_jump_released)
 	scNetworkSendKey(KEYBIND_TYPE.JUMP_RELEASE, key_jump_released);

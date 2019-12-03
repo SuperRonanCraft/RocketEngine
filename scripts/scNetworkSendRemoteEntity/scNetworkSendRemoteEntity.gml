@@ -5,7 +5,7 @@
 ///@arg value-2
 
 enum NETWORK_ENTITY {
-	X, Y, NAME, CHARACTER, DESTROY, REMOTE_PLAYER, KEY
+	X, Y, NAME, CHARACTER, DESTROY, REMOTE_PLAYER, KEY, TEAM, HEALTH
 }
 
 buffer_seek(buffer, buffer_seek_start, 0);
@@ -35,6 +35,14 @@ switch (argument[1]) {
 	case NETWORK_ENTITY.KEY:
 		buffer_write(buffer, buffer_u8, argument[3]);
 		buffer_write(buffer, buffer_u8, argument[4]);
+		break;
+	case NETWORK_ENTITY.TEAM:
+		buffer_write(buffer, buffer_u8, argument[3]);
+		break;
+	case NETWORK_ENTITY.HEALTH:
+		buffer_write(buffer, buffer_u8, argument[3]);
+		buffer_write(buffer, buffer_u8, argument[4]);
+		buffer_write(buffer, buffer_u8, argument[5]);
 		break;
 }
 

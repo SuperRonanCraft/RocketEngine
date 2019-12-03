@@ -7647,6 +7647,14 @@
             }
         },
         {
+            "Key": "ecb0e03f-c93a-4ba8-bc62-7c8ea23268dd",
+            "Value": {
+                "id": "6020bb70-85e6-4623-9a4d-114b204eb12b",
+                "resourcePath": "objects\\oSpawn\\oSpawn.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ecd1627b-b76e-425d-b0c4-656b9be00ca6",
             "Value": {
                 "id": "387d77b4-f00f-407b-822b-0d993ec6585e",
@@ -7772,6 +7780,14 @@
                 "id": "85646dd8-4f80-4e75-baf9-093380705613",
                 "resourcePath": "sprites\\sUIHealth\\sUIHealth.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f2f1c72a-a18f-4e01-b488-3e15dd375398",
+            "Value": {
+                "id": "3963e13f-3fd6-4d63-8046-2054b18aa69b",
+                "resourcePath": "scripts\\scNetworkSendHealth\\scNetworkSendHealth.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8135,6 +8151,14 @@
             }
         },
         {
+            "Key": "fe25140f-5d67-4c0a-b550-a170afe9d0a1",
+            "Value": {
+                "id": "a921ca9c-5c6c-40a2-91b7-fbd1730ef1a5",
+                "resourcePath": "scripts\\scNetworkClientStart\\scNetworkClientStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fe445735-4e22-43b0-ab3a-310b332c5c69",
             "Value": {
                 "id": "8736ad5f-d363-4ed3-9dd9-90242d44e941",
@@ -8427,10 +8451,12 @@
         "714165ea-2c95-4f22-b72d-9069d845801e",
         "0746bc5c-652b-4041-ae52-8807a8dbf8f1",
         "51ced869-95f2-4616-8445-3ae494fe84b7",
+        "fe25140f-5d67-4c0a-b550-a170afe9d0a1",
         "a61acaaa-a06f-42ad-91c1-95cce41bba48",
         "1faef60b-0751-40de-801c-ea177008cca1",
         "5bcb5fda-4dc0-4bbc-b5da-4affcc9934c4",
         "f82898d8-c6e4-437d-ae2f-20d5ab4a24ef",
+        "f2f1c72a-a18f-4e01-b488-3e15dd375398",
         "9cacb6a4-b267-4872-9c4b-3d3130bb03b3",
         "65c0b83c-146e-4d35-9793-eefbd67ca73e",
         "fdeb19e0-f653-46e8-878c-d3d973e52a17",

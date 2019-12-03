@@ -14,7 +14,8 @@ if (connect < 0) {
 	show_message("Cannot reach server");
 	game_restart();
 	exit;
-}
+} else
+	global.network_connected = true;
 
 
 entities = ds_map_create();

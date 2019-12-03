@@ -10,6 +10,9 @@ if (keyboard_check_pressed(vk_space)) {
 	}
 }
 
-if (my_player != noone && !instance_exists(oServer))
-	if (my_player_x != my_player.x || my_player_y != my_player.y)
+if (my_player != noone)
+	if (my_player_x != my_player.x || my_player_y != my_player.y) {
+		my_player_x = my_player.x;
+		my_player_y = my_player.y;
 		scNetworkSendPosition(my_player.x, my_player.y);
+	}

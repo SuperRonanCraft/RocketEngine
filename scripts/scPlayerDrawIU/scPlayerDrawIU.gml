@@ -1,12 +1,11 @@
 //Draw Player UI
-if (!local_player) exit;
 
 var _hmap = health_map;
 var _x = _hmap[? HEALTH_MAP.X];
 var _y = _hmap[? HEALTH_MAP.Y];
 var _len = _hmap[? HEALTH_MAP.LENGTH]; //Length of bar
 var _hei = _hmap[? HEALTH_MAP.HEIGHT]; //Height of health bar
-var _alpha = _hmap[? HEALTH_MAP.ALPHA];
+var _alpha = local_player ? _hmap[? HEALTH_MAP.ALPHA] : _hmap[? HEALTH_MAP.ALPHA] / 2;
 var _buffer_y = 20;
 var _buffer_x = 28;
 var _buffer_ab = 4;

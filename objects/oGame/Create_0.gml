@@ -115,5 +115,6 @@ controllers = ds_list_create();
 physics_debug = false;
 
 //NETWORKING
+global.network_connected = false;
 global.network_name = sNameGet();
 global.network_ip = "127.0.0.1";

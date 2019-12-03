@@ -1,5 +1,7 @@
 /// @arg key-type
 /// @arg keyboard-only?*
+
+if (global.pause) exit;
 var input = false;
 var onlyboard = argument_count > 1 ? argument[1] : false;
 var map = key_map;

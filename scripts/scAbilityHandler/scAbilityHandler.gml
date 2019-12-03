@@ -3,18 +3,18 @@
 if (!system_ability) exit;
 var map = ability_map;
 
+if (local_player) {
+	var _old_key_ability = key_ability;
+	key_ability = scKeybindsGet(KEYBIND_TYPE.ABILITY);
+	if (_old_key_ability != key_ability)
+		scNetworkSendKey(KEYBIND_TYPE.ABILITY, key_ability);
+}
+
 if (!map[? ABILITY_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || map[? ABILITY_MAP.TYPE] == ABILITY_TYPE.NONE) exit; //Is the system even enabled?
 
 if (map[? ABILITY_MAP.CURRENT_TIME] > 0) { //Decrease cooldown, exit
 	map[? ABILITY_MAP.CURRENT_TIME]--;
 	exit;
-}
-
-if (local_player) {
-	var _old_key_ability = key_ult;
-	key_ability = scKeybindsGet(KEYBIND_TYPE.ABILITY);
-	if (_old_key_ability != key_ult)
-		scNetworkSendKey(KEYBIND_TYPE.ABILITY, key_ability);
 }
 
 if (player_aimode == 1 && aiBrain != noone)
@@ -35,3 +35,5 @@ if (map[? ABILITY_MAP.CAST_OBJECT] != noone)
 		owner = other;
 
 map[? ABILITY_MAP.CURRENT_TIME] = map[? ABILITY_MAP.COOLDOWN] * room_speed;
+
+key_ability = false;

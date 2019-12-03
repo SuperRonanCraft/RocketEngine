@@ -2,5 +2,6 @@
 SlideTransition(TRANS_MODE.UNPAUSE);
 sprite_delete(background);
 background = noone;
-instance_activate_all();
+if (!global.network_connected)
+	instance_activate_all();
 global.pause = false;

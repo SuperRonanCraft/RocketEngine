@@ -174,6 +174,14 @@ if (didDamage && delete)
 	
 if (isPlayer && damaging.causeOfDeath != noone)
 	lethalDamage = false;
+
+if (!local_player) {
+	scNetworkSendHealth(
+		map[? SHOOTABLE_MAP.HEALTH_BASE],
+		map[? SHOOTABLE_MAP.HEALTH_ARMOR],
+		map[? SHOOTABLE_MAP.HEALTH_SHIELD]);
+}
+	
 	
 return lethalDamage;
 

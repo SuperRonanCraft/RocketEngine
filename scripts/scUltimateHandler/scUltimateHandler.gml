@@ -1,10 +1,5 @@
 if (!system_ultimate) exit;
 var map = ultimate_map;
-var char_map = player_map[? PLAYER_MAP.CHARACTER_INFO];
-
-if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || char_map[? CHARACTER_MAP.ULTIMATE] == ULTIMATE_TYPE.NONE) exit; //Is the system even enabled?
-
-if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGE_TYPE.TIME); exit;} //Give charge by time, exit
 
 if (local_player) {
 	var _old_key_ult = key_ult;
@@ -12,6 +7,12 @@ if (local_player) {
 	if (_old_key_ult != key_ult)
 		scNetworkSendKey(KEYBIND_TYPE.ULT, key_ult);
 }
+
+var char_map = player_map[? PLAYER_MAP.CHARACTER_INFO];
+
+if (!map[? ULTIMATE_CASTING_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || char_map[? CHARACTER_MAP.ULTIMATE] == ULTIMATE_TYPE.NONE) exit; //Is the system even enabled?
+
+if (map[? ULTIMATE_CASTING_MAP.CHARGE] < map[? ULTIMATE_CASTING_MAP.CHARGE_MAX]) {scUltimateAddCharge(id, DAMAGE_TYPE.TIME); exit;} //Give charge by time, exit
 
 if (player_aimode == 1 && aiBrain != noone)
 	key_ult = aiBrain.AIUlt;
@@ -79,3 +80,5 @@ map[? ULTIMATE_CASTING_MAP.CAST_TIME] = map[? ULTIMATE_CASTING_MAP.CAST_TIME_ORI
 
 if (track_stats)
 	scStatsCacheAddGeneral(STATISTICS_GENERAL.ULTIMATES_CASTED, 1);
+
+key_ult = false;

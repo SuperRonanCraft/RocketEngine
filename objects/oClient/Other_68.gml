@@ -28,10 +28,14 @@ switch (cmd) {
 		var p = entities[? e_id];
 		switch (cmd) {
 			case NETWORK_ENTITY.X:
-				p.x = buffer_read(buff, buffer_s16);
+				var _x = buffer_read(buff, buffer_s16);
+				if (abs(_x - p.x) > 32)
+					p.x = _x;
 				break;
 			case NETWORK_ENTITY.Y:
-				p.y = buffer_read(buff, buffer_s16);
+				var _y = buffer_read(buff, buffer_s16);
+				if (abs(_y - p.y) > 32)
+					p.y = _y;
 				break;
 			case NETWORK_ENTITY.NAME:
 				p.name = buffer_read(buff, buffer_string);
@@ -58,6 +62,19 @@ switch (cmd) {
 				var v = buffer_read(buff, buffer_u8);
 				with (p)
 					scKeybindsControlsNetwork(true, k, v);
+				break;
+			case NETWORK_ENTITY.TEAM:
+				with (p) {
+					team = buffer_read(buff, buffer_u8);
+					shootable_map[? SHOOTABLE_MAP.TEAM] = team;
+				}
+				break;
+			case NETWORK_ENTITY.HEALTH:
+				with (p) {
+					shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] = buffer_read(buff, buffer_u8);
+					shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] = buffer_read(buff, buffer_u8);
+					shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] = buffer_read(buff, buffer_u8);
+				}
 				break;
 			default:
 				break;

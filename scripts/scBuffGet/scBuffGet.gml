@@ -12,6 +12,7 @@ ds_map[? BUFF_MAP.TIME] = 5 * room_speed; //5 seconds uptime by default (noone f
 ds_map[? BUFF_MAP.CLOCK] = 0;
 ds_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.NONE];
 ds_map[? BUFF_MAP.ENABLED] = true;
+ds_map[? BUFF_MAP.GOOD] = true;
 ds_map[? BUFF_MAP.GIVEN_BY] = noone;
 //OPTIONAL
 ds_map[? BUFF_MAP.PARTICLE] = noone;
