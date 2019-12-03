@@ -167,6 +167,13 @@ with (damaging) {
 			}
 	}
 	map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] = 0; //We just got damaged
+	
+	if (isPlayer && !local_player) {
+	scNetworkSendHealth(
+		map[? SHOOTABLE_MAP.HEALTH_BASE],
+		map[? SHOOTABLE_MAP.HEALTH_ARMOR],
+		map[? SHOOTABLE_MAP.HEALTH_SHIELD]);
+	}
 }
 
 if (didDamage && delete)
@@ -174,13 +181,6 @@ if (didDamage && delete)
 	
 if (isPlayer && damaging.causeOfDeath != noone)
 	lethalDamage = false;
-
-if (!local_player) {
-	scNetworkSendHealth(
-		map[? SHOOTABLE_MAP.HEALTH_BASE],
-		map[? SHOOTABLE_MAP.HEALTH_ARMOR],
-		map[? SHOOTABLE_MAP.HEALTH_SHIELD]);
-}
 	
 	
 return lethalDamage;
