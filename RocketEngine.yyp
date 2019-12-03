@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "139082ca-33b0-49dd-8f60-484ff4673d78",
+            "Value": {
+                "id": "6f608eae-4a07-4fe0-a13c-2aba4503e46e",
+                "resourcePath": "sprites\\s_pArmorDamage\\s_pArmorDamage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13cd84dc-f95f-4714-aeea-694e0159c419",
             "Value": {
                 "id": "1507ba0f-f427-422e-8c36-de75c32399c4",
@@ -1364,6 +1372,14 @@
                 "id": "00470ccb-8ef2-45c7-afa6-8eea8d29612f",
                 "resourcePath": "scripts\/scRocketGlass_Create\/scRocketGlass_Create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "27d30f2f-4780-4647-a278-5b3e3f94006a",
+            "Value": {
+                "id": "a4be948f-7948-4c82-a9c5-4a0454185f18",
+                "resourcePath": "sprites\\spShield\\spShield.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6567,6 +6583,14 @@
             }
         },
         {
+            "Key": "ca06b7bb-1dc0-45a1-969b-c2adcd5eb747",
+            "Value": {
+                "id": "60356ceb-cbdb-4b38-ab22-c8d30609e755",
+                "resourcePath": "sprites\\s_pHealthDamage\\s_pHealthDamage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ca111122-d9db-414b-89c3-81720f0f72d7",
             "Value": {
                 "id": "1cc51362-fe25-4039-8881-74348779314b",
@@ -6660,6 +6684,14 @@
                 "id": "b12d62bf-cde9-4894-82ff-c5bc9c0d6aa7",
                 "resourcePath": "scripts\/scStatsSavePoints\/scStatsSavePoints.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cc1b0a8d-32cc-4f07-9bfa-8c7565ca129b",
+            "Value": {
+                "id": "ad6fb392-e5c9-47d3-b06b-c8894fbe6cee",
+                "resourcePath": "sprites\\spArmor\\spArmor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8228,6 +8260,14 @@
                 "id": "3c48eff4-6da1-4cbe-a3ba-b29f9bf91da5",
                 "resourcePath": "views\/ffdeba03-db60-410a-99d7-c321e58398ff.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ffed8971-48d7-479d-a94b-1b78248ebe76",
+            "Value": {
+                "id": "060eec29-3724-4bae-aa0c-46f6f46dfa63",
+                "resourcePath": "sprites\\s_pShieldDamage\\s_pShieldDamage.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],

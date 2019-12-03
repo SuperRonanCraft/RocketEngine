@@ -28,8 +28,8 @@ repeat(amt){
 				timer += irandom_range(-25, 25);
 				sticky = true;
 				image_alpha = 0.8;
-				image_xscale = .5;
-				image_yscale = .5;
+				image_xscale = 0.8;
+				image_yscale = 0.8;
 			}
 			
 	        break;
@@ -66,10 +66,46 @@ repeat(amt){
 			}
 			
 	        break;
+			
+	    case WORLDPART_TYPE.SHIELD:
+		
+			with (worldPart) {
+				weight = random_range(0.05, 0.1);
+				friction_base = random_range(0.2, 0.5);
+				hsp_real = random_range(-spd, spd);
+				vsp_real = random_range(-spd*2,-spd);
+				timer += irandom_range(-25, 25);
+				sticky = false;
+				rotate = true;
+				bounce_coeff = 1;
+				image_alpha = random_range(0.5,0.9);
+				image_xscale = 1;
+				image_yscale = 1;
+			}
+			
+	        break;
+			
+	    case WORLDPART_TYPE.ARMOR:
+			
+			with (worldPart) {
+				weight = random_range(0.7, 0.95);
+				friction_base = random_range(0.8, 1);
+				hsp_real = random_range(-spd/2, spd/2);
+				vsp_real = random_range(-spd/2, spd/4);
+				timer += irandom_range(-25, 25);
+				rotate = true;
+				sticky = false;
+				bounce_coeff = 0.3;
+				image_xscale = 1;
+				image_yscale = 1;
+				image_index = irandom_range(0,image_number-1);
+			}			
+			
+	        break;
 	}
 	
 }
 	
 enum WORLDPART_TYPE{
-		BLOOD, DEBRIS, SLIME,
+		BLOOD, DEBRIS, SLIME, SHIELD,ARMOR,
 }

@@ -547,6 +547,47 @@ part_type_life(parttype,60,60);
 ds_map_add(ds_part,PARTICLES.SLIME_PAINT, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SLIME_PAINT, 25);
 
+//Shield Damage
+parttype = part_type_create();
+part_type_sprite(parttype,s_pShieldDamage,1,1,0);
+part_type_size(parttype,1,2.5,-0.01,0.02);
+part_type_speed(parttype,1,3,-0.01,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0.01,90);
+part_type_blend(parttype,0);
+part_type_life(parttype,30,60);
+ds_map_add(ds_part,PARTICLES.SHIELD_DAMAGE, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SHIELD_DAMAGE, 5);
+
+//ARMOR DAMAGE
+parttype = part_type_create();
+part_type_sprite(parttype,s_pArmorDamage,1,1,0);
+part_type_size(parttype,1.5,2,-0.01,0);
+part_type_scale(parttype,1,1);
+part_type_alpha1(parttype,1);
+part_type_speed(parttype,1,2,0,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0.03,270);
+part_type_blend(parttype,0);
+part_type_life(parttype,30,60);
+ds_map_add(ds_part,PARTICLES.ARMOR_DAMAGE, parttype);
+ds_map_add(ds_part_amt, PARTICLES.ARMOR_DAMAGE, 5);
+
+
+//HEALTH DAMAGE
+parttype = part_type_create();
+part_type_sprite(parttype,s_pHealthDamage,1,1,0);
+part_type_size(parttype,0.80,1,0,0);
+part_type_scale(parttype,1.5,2);
+part_type_color1(parttype,255);
+part_type_alpha1(parttype,1);
+part_type_speed(parttype,2,3,-0.10,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_orientation(parttype,0,0,0,0,1);
+part_type_blend(parttype,0);
+part_type_life(parttype,30,40);
+ds_map_add(ds_part,PARTICLES.HEALTH_DAMAGE, parttype);
+ds_map_add(ds_part_amt, PARTICLES.HEALTH_DAMAGE, 5);
 
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
@@ -554,5 +595,5 @@ enum PARTICLES {
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
 	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL,
-	EXPLOSION_DEFAULT, SLIME_PAINT,
+	EXPLOSION_DEFAULT, SLIME_PAINT,SHIELD_DAMAGE,ARMOR_DAMAGE,HEALTH_DAMAGE,
 }

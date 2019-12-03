@@ -1,6 +1,6 @@
 /// @description  
 
-var isPlayer = other.object_index == oPlayer;
+var isPlayer = scGetParent(pEntity,other);
 //collision_rectangle_list(bbox_left,bbox_top,bbox_right,bbox_bottom,pShootable,false,true,hitList,true);
 ds_list_add(hitList, other);
 if(!schwing && owner != noone && isPlayer && timer > 0){

@@ -24,7 +24,7 @@ if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this playe
 				if (direction > 90 && direction < 270)
 					facing = -1;	
 			
-				other.hsp_move += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
+				//other.hsp_move += facing * (weapon_map[? WEAPON_MAP.SPEED] / 2 + shuriken_map[? SHURIKEN_MAP.KBAMT]);
 			} else
 				event_user(1); //missed
 		

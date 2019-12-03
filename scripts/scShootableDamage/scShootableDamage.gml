@@ -44,16 +44,24 @@ with (damaging) {
 		var _dmg_left = dmg;
 		var _dmg_inflicted = 0;
 		if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
+			
+			part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SHIELD_DAMAGE], _dmg_left);
+			
 			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_SHIELD]) {
 				_dmg_left -= map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 				_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
+				scPlaySound(SOUND.UI_SELECT);
+				scSpawnParticle(x, bbox_top, ceil(_dmg_inflicted * 1.3 + 10), 10, spShield, WORLDPART_TYPE.SHIELD);
 			} else {
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] -= _dmg_left;
 				_dmg_inflicted += _dmg_left;
-				_dmg_left = 0;
+				
 				scPlaySound(SOUND.ULT_TELEPORT_USE);
+				_dmg_left = 0;
 			}
+			
 			if (_dmg_inflicted > _dmg_left) //Took mostly shield damage
 				_dmg_took = DAMAGE_TOOK.SHIELD;
 		}
@@ -69,6 +77,10 @@ with (damaging) {
 			
 			var _armor_left = floor(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
 			var _armor_taken = map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _armor_left;
+			
+			part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.ARMOR_DAMAGE], _dmg_left);
+			
 			if (_armor_left > 0) { //Still has armor
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = _armor_left;
 				scPlaySound(SOUND.EFFECT_REFLECT);
@@ -76,7 +88,9 @@ with (damaging) {
 				if (_armor_taken > _dmg_to_take || _armor_taken > _dmg_inflicted || _dmg_to_take > _dmg_inflicted)
 					_dmg_took = DAMAGE_TOOK.ARMOR;
 				_dmg_left = 0;
+				
 			} else { //Used up all armor, take the rest of dmg in health
+				scSpawnParticle(x, bbox_top, ceil(_dmg_left * 1.3 + 10), 20, spArmor, WORLDPART_TYPE.ARMOR);
 				scPlaySound(SOUND.ULT_SHIELD_BREAK);
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
 				//Took mostly armor damage
@@ -94,6 +108,9 @@ with (damaging) {
 			if (_dmg_inflicted > _dmg_left) //Took mostly health damage
 				_dmg_took = DAMAGE_TOOK.HEALTH;
 			_dmg_inflicted += _dmg_left;
+			
+			part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.HEALTH_DAMAGE], _dmg_left*1.5);
 		}
 		
 		dmg = _dmg_inflicted; //Total damage we just took
@@ -104,6 +121,7 @@ with (damaging) {
 		map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
 		if (map[? SHOOTABLE_MAP.HEALTH] <= 0) {
 			lethalDamage = true;
+			scSpawnParticle(x, bbox_top, ceil(_dmg_inflicted * 1.3+20), 20, spBlood, WORLDPART_TYPE.BLOOD);
 			map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
@@ -131,7 +149,6 @@ with (damaging) {
 		//Blood
 		if (damager != noone && combo)
 			scComboDamaged(damager);
-		scSpawnParticle(x, bbox_top, ceil(dmg * 1.3), 20, spBlood, WORLDPART_TYPE.BLOOD);
 	}
 	
 	//Damage Animation

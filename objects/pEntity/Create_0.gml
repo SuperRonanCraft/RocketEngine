@@ -29,5 +29,6 @@ smoke_cur = 0;
 smoke_act = 10;
 smoke_lastvsp = 0;
 
+destroy = false;
 //Aim type
 //auto_aim = false;
