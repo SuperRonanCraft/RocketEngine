@@ -9,16 +9,18 @@ if (server == event_id) {
 		ds_list_add(sockets, socket);
 		var p = instance_create_layer(100 + 32 * socket, 100, "Instances", oPlayer);
 		with (p) {
+			var _sockets = other.sockets;
 			scPlayerCharacterChange(CHARACTER.DEFAULT, false, false);
 			var _map = player_map[? PLAYER_MAP.CHARACTER_INFO];
 			_map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
-			if (instance_number(oPlayer) mod 2 == 1)
+			//Alternate team sides
+			if (ds_list_size(_sockets) mod 2 == 1)
 				p.team = TEAM.LEFT;
 			else
 				p.team = TEAM.RIGHT;
 			with (oSpawn)
 				if (team == p.team) {
-					p.x = x;
+					p.x = x + 32 * (socket - ds_list_size(_sockets));
 					p.y = y;
 				}
 			p.shootable_map[? SHOOTABLE_MAP.TEAM] = p.team;
@@ -32,23 +34,24 @@ if (server == event_id) {
 		//ready[socket] = false;
 		
 		//Send data about all players to new socket
-		for (var i = 0; i < ds_map_size(clients_map); i++) {
-			var _client_map = clients_map[? ds_list_find_value(sockets, i)];
-			show_debug_message("-----------");
-			show_debug_message("Socket: " + string(_client_map[? CLIENT_MAP.SOCKET]));
-			//if (_client_map[? CLIENT_MAP.SOCKET] == socket) continue;
-			var _pl = _client_map[? CLIENT_MAP.PLAYER_ID];
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.X, _pl.id, _pl.x);
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.Y, _pl.id, _pl.y);
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.NAME, _pl.id, _pl.name);
-			var _map = _pl.player_map[? PLAYER_MAP.CHARACTER_INFO];
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.CHARACTER, _pl.id, _map[? CHARACTER_MAP.TYPE]);
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.REMOTE_PLAYER, _pl.id, _pl == p);
-			scNetworkSendCommand(socket, NETWORK_COMMAND.PLAY, global.play);
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.TEAM, _pl.id, _pl.team);
-			scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.HEALTH, _pl.id, _client_map[? CLIENT_MAP.HEALTH_BASE], 
-				_client_map[? CLIENT_MAP.HEALTH_ARMOR], _client_map[? CLIENT_MAP.HEALTH_BASE]);
-		}
+		if (socket != ds_list_find_value(sockets, 0))
+			for (var i = 0; i < ds_map_size(clients_map); i++) {
+				var _client_map = clients_map[? ds_list_find_value(sockets, i)];
+				show_debug_message("-----------");
+				show_debug_message("Socket: " + string(_client_map[? CLIENT_MAP.SOCKET]));
+				//if (_client_map[? CLIENT_MAP.SOCKET] == ds_list_find_value(sockets, 0)) continue;
+				var _pl = _client_map[? CLIENT_MAP.PLAYER_ID];
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.X, _pl.id, _pl.x);
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.Y, _pl.id, _pl.y);
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.NAME, _pl.id, _pl.name);
+				var _map = _pl.player_map[? PLAYER_MAP.CHARACTER_INFO];
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.CHARACTER, _pl.id, _map[? CHARACTER_MAP.TYPE]);
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.REMOTE_PLAYER, _pl.id, _pl == p);
+				scNetworkSendCommand(socket, NETWORK_COMMAND.PLAY, global.play);
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.TEAM, _pl.id, _pl.team);
+				scNetworkSendRemoteEntity(socket, NETWORK_ENTITY.HEALTH, _pl.id, _client_map[? CLIENT_MAP.HEALTH_BASE], 
+					_client_map[? CLIENT_MAP.HEALTH_ARMOR], _client_map[? CLIENT_MAP.HEALTH_SHIELD]);
+			}
 		show_debug_message("New player connected, synced data to new player on socket: " + string(socket));
 	} else if (type == network_type_disconnect) {  //Disconnect
 		//Remove player
@@ -100,9 +103,8 @@ if (server == event_id) {
 			//Update character to socket
 			for (var s = 0; s < ds_list_size(sockets); s++) {
 				var so = ds_list_find_value(sockets, s);
-				if (so != socket) {
+				if (so != socket)
 					scNetworkSendRemoteEntity(so, NETWORK_PACKET.CHARACTER, p.id, _map[? CHARACTER_MAP.TYPE]);
-				}
 			}
 			break;
 		case NETWORK_PACKET.POSITION:
