@@ -2,12 +2,12 @@
 /// @arg damager
 /// @arg damaging
 /// @arg delete-the-hitting-object
-/// @arg play-sound-hit
-/// @arg damage
-/// @arg force-damage* noone to ignore
-/// @arg damage-type* noone to ignore
+/// @arg play-sound
+/// @arg damage (Amount to damage)
+/// @arg force-damage* noone to ignore (Force even if we can't take damage)
+/// @arg damage_from* noone to ignore (Source of damage)
 /// @arg combo-apply* noone to ignore
-/// @arg damage-type* noone to ignore
+/// @arg damage_element* noone to ignore (Damage infliction type)
 
 var damager = argument[0];
 var damaging = argument[1];
@@ -17,7 +17,7 @@ var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
 var _damage_type = argument_count > 6 ? (argument[6] != noone ? argument[6] : DAMAGE_TYPE.DIRECT) : DAMAGE_TYPE.DIRECT;
 var combo = argument_count > 7 ? (argument[7] != noone ? argument[7] : true) : true;
-var _damage_type_inf = argument_count > 8 ? (argument[8] != noone ? argument[8] : DAMAGE_TYPE_INFLICTED.NONE) : DAMAGE_TYPE_INFLICTED.NONE;
+var _damage_element = argument_count > 8 ? (argument[8] != noone ? argument[8] : DAMAGE_ELEMENT.NONE) : DAMAGE_ELEMENT.NONE;
 var didDamage = false;
 var lethalDamage = false;
 
@@ -36,7 +36,7 @@ with (damaging) {
 	var map = shootable_map;
 	if (map[? SHOOTABLE_MAP.CAN_DAMAGE] || force) {
 		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = _damage_type; //Damage type we just took
-		map[? SHOOTABLE_MAP.DAMAGE_TYPE_INFLICTED] = _damage_type_inf; //Damage type we just took
+		map[? SHOOTABLE_MAP.DAMAGE_ELEMENT] = _damage_element; //Damage type we just took
 		
 		//---------------
 		//Health Type modifiers
@@ -202,7 +202,7 @@ if (isPlayer && damaging.causeOfDeath != noone)
 	
 return lethalDamage;
 
-enum DAMAGE_TYPE_INFLICTED {
+enum DAMAGE_ELEMENT { //Damage offset we are taking
 	NONE, COLD, FIRE, SLIME
 }
 
