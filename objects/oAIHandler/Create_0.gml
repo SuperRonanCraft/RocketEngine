@@ -12,7 +12,7 @@ AIUlt = false;
 AIAbility = false;
 
 enum ACTIONS {
-	RIGHT, LEFT, JUMP, SHOOT, ULT
+	RIGHT, LEFT, JUMP, SHOOT, ULT, ABILITY
 }
 
 //Random action

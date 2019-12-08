@@ -1591,14 +1591,6 @@
             }
         },
         {
-            "Key": "2f5c9d8e-f4e9-4949-9337-f1d473576556",
-            "Value": {
-                "id": "3d85c37b-325e-4f64-ab4f-9d847c1cf144",
-                "resourcePath": "objects\/oAIHandler\/oAIHandler.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "2f71d680-a22e-4051-bb86-74d44dd433c0",
             "Value": {
                 "id": "4e746e02-042d-47e9-a15c-38e9ebd0453a",
@@ -2951,6 +2943,14 @@
             }
         },
         {
+            "Key": "585a8340-4bf0-4733-ae05-a70d131e8692",
+            "Value": {
+                "id": "e274c716-0509-4e7f-8242-886bd7f67e69",
+                "resourcePath": "scripts\\scAIRocket\\scAIRocket.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "58c39b97-9e5a-4e79-990f-4b5185cf8ec6",
             "Value": {
                 "id": "63273cc3-777c-45a9-bd91-2ce08c8786ed",
@@ -3244,6 +3244,14 @@
                 "id": "fa669ade-1334-45cf-bb9f-4cdc87415bc7",
                 "resourcePath": "sounds\/snJump2\/snJump2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "619d7988-9140-4e76-b77a-a969233614f6",
+            "Value": {
+                "id": "e6dbbbe7-bddd-4bb4-9a6d-49b0f28c27af",
+                "resourcePath": "objects\\oAIHandler\\oAIHandler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5839,6 +5847,14 @@
             }
         },
         {
+            "Key": "b1ea5b00-84bc-421f-915d-ac540165c5d1",
+            "Value": {
+                "id": "29a3ec0f-2140-4d9d-bb53-782ba0691028",
+                "resourcePath": "scripts\\scAIArrow\\scAIArrow.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b207e289-366c-4794-9fc6-7166e3f11f20",
             "Value": {
                 "id": "3dfd9f24-be6f-40b3-93f8-7b624ea1103a",
@@ -5948,6 +5964,14 @@
                 "id": "308818b7-3cd0-45fc-be95-a777c33b5f60",
                 "resourcePath": "sprites\/sUltDamageAmp\/sUltDamageAmp.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b4cb3e86-e031-4bf7-8dd4-5e608efeb524",
+            "Value": {
+                "id": "6e922b1d-92a8-490a-a6a4-8b2b7c54e9f5",
+                "resourcePath": "views\\b4cb3e86-e031-4bf7-8dd4-5e608efeb524.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -8633,6 +8657,8 @@
         "8b3f6bba-da8b-4db7-9049-70ff5341c04b",
         "4f2e19d2-df27-4761-a4a0-375b01786ed7",
         "1f17ce40-ccde-4977-86b8-8da3b5ad9a63",
+        "585a8340-4bf0-4733-ae05-a70d131e8692",
+        "b1ea5b00-84bc-421f-915d-ac540165c5d1",
         "5cfa03f2-375c-45f2-aeb8-e5d55b8caf84",
         "499ea0c8-db9d-44e4-878d-d07c88c07289",
         "b9ff66f3-fb2e-476a-a998-6204e5b3561a",

@@ -76,7 +76,7 @@
             "value": "GAMEMODE.TARGETS"
         }
     ],
-    "parentObjectId": "2f5c9d8e-f4e9-4949-9337-f1d473576556",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
