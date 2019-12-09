@@ -22,16 +22,28 @@ if (mouse_check_button_pressed(mb_right)) {
 			}
 }
 
-if (mouse_check_button_pressed(mb_left)) //Gain Enemy Control
-	with (oEnemy)
+//LEFT CLICK = Toggle AI mode
+//LEFT CLICK + CONTROL = Gain enemy control
+
+/*if (mouse_check_button_pressed(mb_left)) //Gain Enemy Control
+	with (pEntity)
 		if (mouse_x > bbox_left - _b && mouse_x < bbox_right + _b)
 			if (mouse_y > bbox_top - _b && mouse_y < bbox_bottom + _b) {
-				if (keys == KEYBIND.NONE)
-					keys = KEYBIND.PLAYER2;
-				else
-					keys = KEYBIND.NONE;
-				scKeybindsSet(keys);
-			}
+				if (scGetParent(oEnemy, id)) {
+					if (keyboard_check(vk_control)) {
+						if (keys == KEYBIND.NONE)
+							keys = KEYBIND.PLAYER2;
+						else
+							keys = KEYBIND.NONE;
+						scKeybindsSet(keys);
+					} else
+						system_ai = !system_ai;
+				} else {
+					if (aiBrain != noone)
+						system_ai = !system_ai;
+				}
+			}*/
+		
 
 if (keyboard_check(vk_control)) {
 	with (oPlayer) //Move Player

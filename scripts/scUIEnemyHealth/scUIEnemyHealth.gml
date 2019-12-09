@@ -1,12 +1,14 @@
 var _hmap = health_map;
-if (_hmap[? HEALTH_MAP.DAMAGE_TIME] <= room_speed * 4) {
+if (_hmap[? HEALTH_MAP.DAMAGE_TIME] > 0 || _hmap[? HEALTH_MAP.HEAL_TIME] > 0) {
 	_hmap[? HEALTH_MAP.ALPHA] = min(_hmap[? HEALTH_MAP.ALPHA] + 4 / room_speed, 1);
 } else
 	_hmap[? HEALTH_MAP.ALPHA] = max(_hmap[? HEALTH_MAP.ALPHA] - 2 / room_speed, 0);
 if (_hmap[? HEALTH_MAP.ALPHA] <= 0)
 	exit;
-else
-	_hmap[? HEALTH_MAP.DAMAGE_TIME]++;
+else {
+	_hmap[? HEALTH_MAP.DAMAGE_TIME]--;
+	_hmap[? HEALTH_MAP.HEAL_TIME]--;
+}
 var _alpha = _hmap[? HEALTH_MAP.ALPHA];
 var _len = _hmap[? HEALTH_MAP.LENGTH] / 2; //Length of bar
 var _hei = _hmap[? HEALTH_MAP.HEIGHT] / 4; //Height of bar

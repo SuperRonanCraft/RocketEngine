@@ -13,8 +13,11 @@ if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0) {
 		health_map[? HEALTH_MAP.FLASH_ALPHA] = 0.75;
 	if (shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] < shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL]) {
 		if (shootable_map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] > room_speed * 2) {
-			shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] += 0.02;
+			shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] += 0.035;
+			health_map[? HEALTH_MAP.HEAL_TIME] = health_map[? HEALTH_MAP.SHOW_TIME];
 		} else
 			shootable_map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE]++;
+		if (shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] > shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL])
+			shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] = shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL];
 	}
 }

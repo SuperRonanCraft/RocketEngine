@@ -1,3 +1,9 @@
+///@desc Quick dev mode shotcut
+
+if (!global.debug || room == devRoom) exit;
+
+physics_debug = true;
+
 //DISABLED SINGLEPLAYER SHORTCUT
 /*if (!global.debug) exit;
 global.vol_master = 0;

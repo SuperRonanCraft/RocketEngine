@@ -5,7 +5,7 @@ var arrow_map = map[? WEAPON_MAP.MAP];
 
 if(arrow_map[? ARROW_MAP.TYPE] == ARROW.NONE) exit;
 
-if (!scKeybindsGet(KEYBIND_TYPE.SHOOT) || map[? WEAPON_MAP.COOLDOWN_TIME] != arrow_map[? ARROW_MAP.COOLDOWN]){
+if (!key_shoot || map[? WEAPON_MAP.COOLDOWN_TIME] != arrow_map[? ARROW_MAP.COOLDOWN]){
 	if (map[? WEAPON_MAP.DELAY_TIME] == 0)
 		if (map[?WEAPON_MAP.AMMO] != 0) {
 			if (arrow_map[? ARROW_MAP.SPAWN_SCRIPT] == noone) {

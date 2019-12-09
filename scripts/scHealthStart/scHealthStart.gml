@@ -8,7 +8,9 @@ map[? HEALTH_MAP.Y] = 20;
 map[? HEALTH_MAP.HEIGHT] = 20;
 map[? HEALTH_MAP.LENGTH] = 192;
 map[? HEALTH_MAP.DAMAGE_TIME] = 0;
+map[? HEALTH_MAP.HEAL_TIME] = 0;
 map[? HEALTH_MAP.ALPHA] = 0.8;
+map[? HEALTH_MAP.SHOW_TIME] = room_speed * 4;
 //map[? HEALTH_MAP.DAMAGE_PERCENT_MAX] = 0;
 //FLASH HEALTH
 map[? HEALTH_MAP.FLASH_ALPHA] = 0;
@@ -19,5 +21,8 @@ enum HEALTH_MAP {
 	DAMAGE_MAP, X, Y, HEIGHT, LENGTH,
 	HEAL,
 	FLASH_ALPHA, FLASH_ALPHA_REDUCE, FLASH_COLOR,
-	DAMAGE_TIME, ALPHA //Time since last damage
+	DAMAGE_TIME, //Time since last damage
+	HEAL_TIME, //Time since last healing
+	SHOW_TIME, //Time to show health when updated
+	ALPHA 
 }

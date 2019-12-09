@@ -20,6 +20,7 @@ shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] = map[? CHARACTER_MAP.HEALT
 shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] = map[? CHARACTER_MAP.HEALTH_SHIELD];
 shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL] = map[? CHARACTER_MAP.HEALTH_SHIELD];
 player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
+health_map[? HEALTH_MAP.ALPHA] = 0; //Hide health when spawning
 
 //Load character weapon
 scWeaponStart();

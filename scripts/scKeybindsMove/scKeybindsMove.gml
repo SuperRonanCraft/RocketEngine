@@ -11,7 +11,7 @@ var key_shoot = scKeybindsGet(KEYBIND_TYPE.SHOOT);
 var key_shoot_released = scKeybindsGet(KEYBIND_TYPE.SHOOT_RELEASE);*/
 
 //AI KEYBINDS
-if (player_aimode && aiBrain != noone) {
+if (player_aimode && aiBrain != noone && system_ai) {
 	key_left = aiBrain.AILeft;
 	key_right = aiBrain.AIRight;
 	key_jump = aiBrain.AIJump;

@@ -38,6 +38,7 @@ with (healable) {
 	//}
 	//health_map[? HEALTH_MAP.DAMAGE] -= healed;
 	health_map[? HEALTH_MAP.HEAL] += healed;
+	health_map[? HEALTH_MAP.HEAL_TIME] = health_map[? HEALTH_MAP.SHOW_TIME];
 	if (show && healed > 0) {
 		with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 			value_damage = healed;

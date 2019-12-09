@@ -2642,7 +2642,7 @@
             "Key": "5031bddf-467b-439f-b129-a1e09a131fec",
             "Value": {
                 "id": "76c2fc6c-0655-47b7-a393-ba18b05ef75d",
-                "resourcePath": "objects\/oEnemy\/oEnemy.yy",
+                "resourcePath": "objects\\oEnemy\\oEnemy.yy",
                 "resourceType": "GMObject"
             }
         },

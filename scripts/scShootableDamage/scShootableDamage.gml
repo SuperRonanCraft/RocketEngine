@@ -168,12 +168,12 @@ with (damaging) {
 		ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
 		//health_map[? HEALTH_MAP.DAMAGE_MAP] = 1 / (health_map[? HEALTH_MAP.DAMAGE] * 6);
 		health_map[? HEALTH_MAP.HEAL] -= dmg;
-		health_map[? HEALTH_MAP.DAMAGE_TIME] = 0;
+		health_map[? HEALTH_MAP.DAMAGE_TIME] = health_map[? HEALTH_MAP.SHOW_TIME];
 	}
 	map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
 	var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
 	if (show_dmg) {
-		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE])) //Alive? Show damage indicators
+		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE]) && dmg > 0) //Alive? Show damage indicators
 			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 				value_damage = abs(floor(dmg));
 				damage_type = _damage_type;

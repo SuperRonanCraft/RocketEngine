@@ -388,6 +388,20 @@
             "value": "True",
             "varName": "local_player",
             "varType": 3
+        },
+        {
+            "id": "aa89b960-bb3a-4085-a535-535ed9b88465",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "system_ai",
+            "varType": 3
         }
     ],
     "solid": false,
