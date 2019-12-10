@@ -12,8 +12,8 @@ var _text =
 		"\nZ = Spawn Enemy (No AI)" +
 		"\nZ + Control = Spawn Player" +
 		"\nRMB + Hover = Change Characters" +
-		//"\nLMB + Hover = Toggle AI" + 
-		//"\nLMB + Hover + Control = Gain Control" + 
+		"\nLMB + Hover = Toggle AI" + 
+		"\nLMB + Hover + Control = Gain Control" + 
 		"\nControl + Hover = Move Player X/Y";
 
 var len = string_width(_text) * scale;

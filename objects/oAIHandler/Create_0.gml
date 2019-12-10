@@ -23,3 +23,9 @@ ultReady = false;
 
 //Timer to react
 timer = irandom_range(120, 300);
+
+aiType = AI_TIME.ONEVONE;
+
+enum AI_TIME {
+	ONEVONE, ZOMBIE
+}
