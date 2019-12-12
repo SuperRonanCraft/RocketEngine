@@ -1,5 +1,5 @@
-//@desc ROCKET Weapon ai
-//@arg shoot_ai?
+///@desc ROCKET Weapon ai
+///@arg shoot_ai?
 
 var _shoot = argument0;
 

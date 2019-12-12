@@ -10,4 +10,4 @@ if (	(!ultReady && player.player_map[? PLAYER_MAP.ALIVE] && irandom_range(0, 10)
 } else
 	AIShoot = false;
 
-scAIRocket(false);
+scAI1v1Default(false);
