@@ -3,7 +3,7 @@
 if (!player.system_ai) exit;
 
 switch (aiType) {
-	case AI_TIME.ONEVONE:
+	case AI_TYPE.ONEVONE:
 		switch (player.weapon_map[? WEAPON_MAP.TYPE]) {
 			case WEAPON.ARROW:
 				scAI1v1Arrow();
@@ -13,6 +13,7 @@ switch (aiType) {
 				break;
 		}
 		break;
-	case AI_TIME.ZOMBIE:
+	case AI_TYPE.ZOMBIE:
+		scAICZombie();
 		break;
 }

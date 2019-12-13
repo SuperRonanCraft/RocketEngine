@@ -8,7 +8,3 @@ player_aimode = true;
 AICore.player = id;
 aiBrain = AICore;
 track_stats = false;
-
-enum AI_TYPE {
-	DEFAULT, FLY, EDGE
-}

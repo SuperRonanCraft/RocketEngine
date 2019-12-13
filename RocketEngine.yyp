@@ -1247,6 +1247,14 @@
             }
         },
         {
+            "Key": "23e7d68d-2647-4b25-99df-2d7bae1e3c55",
+            "Value": {
+                "id": "32eb770b-fa1d-4c34-8a47-cc892a87d741",
+                "resourcePath": "scripts\\scAICZombie\\scAICZombie.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2494cdf8-01d2-471f-80bb-bdf6724bd5d0",
             "Value": {
                 "id": "358dada6-3113-41e6-9757-8f21b22ec145",
@@ -7951,6 +7959,14 @@
             }
         },
         {
+            "Key": "f65c6dc9-15a3-4003-8413-3b3c1f15a9d6",
+            "Value": {
+                "id": "5e751984-eedc-4a8e-95e2-93211e49077c",
+                "resourcePath": "views\\f65c6dc9-15a3-4003-8413-3b3c1f15a9d6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f67d3fd1-6a4e-47fd-80a6-d58f6b113d88",
             "Value": {
                 "id": "0605a9cc-bb32-4c13-99ca-9763ce6dba71",
@@ -8667,6 +8683,7 @@
         "1f17ce40-ccde-4977-86b8-8da3b5ad9a63",
         "585a8340-4bf0-4733-ae05-a70d131e8692",
         "b1ea5b00-84bc-421f-915d-ac540165c5d1",
+        "23e7d68d-2647-4b25-99df-2d7bae1e3c55",
         "5cfa03f2-375c-45f2-aeb8-e5d55b8caf84",
         "499ea0c8-db9d-44e4-878d-d07c88c07289",
         "b9ff66f3-fb2e-476a-a998-6204e5b3561a",
