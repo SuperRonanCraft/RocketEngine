@@ -1,5 +1,5 @@
 /// @desc Update Camera
-
+if (full) exit;
 //Update object
 x += (xTo - x) / cam_speed;
 y += (yTo - y) / cam_speed;

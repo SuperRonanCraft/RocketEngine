@@ -110,4 +110,4 @@ _map[? GRAVITY_MAP.HSP_MOVE_MOD] *= _map[? GRAVITY_MAP.FRICTION]; //reset hsp mo
 	scNetworkSendKey(KEYBIND_TYPE.SHOOT, key_shoot);
 //if (key_shoot_released)
 	scNetworkSendKey(KEYBIND_TYPE.SHOOT_RELEASE, key_shoot_released);
-}
+}*/

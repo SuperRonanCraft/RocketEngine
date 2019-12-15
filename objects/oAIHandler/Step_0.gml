@@ -14,6 +14,6 @@ switch (aiType) {
 		}
 		break;
 	case AI_TYPE.ZOMBIE:
-		scAICZombie();
+		scAICZombie(true);
 		break;
 }

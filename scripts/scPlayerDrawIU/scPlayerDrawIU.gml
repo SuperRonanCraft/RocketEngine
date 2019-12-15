@@ -14,4 +14,6 @@ scPlayerDrawUIHealth(_x, _y, _len, _hei, true, _alpha, true);
 scPlayerDrawUIWeapon(_x + _len + _buffer_x, _y, _buffer_ab, _alpha);
 scPlayerDrawUIAbility(_x + _len + (_buffer_x * 3) + (_buffer_ab * 4), _y, 32, _buffer_ab, _alpha);
 scPlayerDrawUIUltimate(_x, _y + _hei + _buffer_y, _len, _alpha);
+if (scPlayerDrawUIInventory(_x + _buffer_x, _y + _hei * 2 + _buffer_y * 2, _alpha))
+	_x += 210 + _buffer_x;
 scPlayerDrawUIBuffs(_x, _y + _hei * 2 + _buffer_y * 2, 10, 10, 32, _alpha);

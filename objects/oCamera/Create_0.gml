@@ -4,6 +4,7 @@ view_w_half = camera_get_view_width(cam) / 2;
 view_h_half = camera_get_view_height(cam) / 2;
 xTo = 0;
 yTo = 0;
+full = false;
 
 shake_lenght = 0;
 shake_magnitude = 0;

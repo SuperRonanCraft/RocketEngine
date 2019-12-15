@@ -18,4 +18,6 @@ scKeybindsSet(keys);
 //Load Combos
 scComboStart();
 
-name = "Player"
+name = "Player";
+
+first_step = false;

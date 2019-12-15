@@ -33,6 +33,9 @@ if (keys <= KEYBIND.PLAYER2 && !controller_inuse)
 		case KEYBIND_TYPE.ABILITY:
 			input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY]));
 			break;
+		case KEYBIND_TYPE.INVENTORY:
+			input = keyboard_check_pressed(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.INVENTORY]));
+			break;
 	}
 
 var keyboard = input;
@@ -68,6 +71,8 @@ if (!onlyboard && !input && map[? KEYBIND_MAP.GAMEPAD] != noone) {
 				input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ULTIMATE_GP])); break;
 			case KEYBIND_TYPE.ABILITY:
 				input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY_GP])); break;
+			case KEYBIND_TYPE.INVENTORY:
+				input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.INVENTORY_GP])); break;
 		}
 }
 
@@ -80,5 +85,6 @@ if (input != keyboard) {
 return input;
 
 enum KEYBIND_TYPE {
-	LEFT, RIGHT, JUMP, JUMP_RELEASE, SHOOT, SHOOT_RELEASE, ULT, ABILITY
+	LEFT, RIGHT, JUMP, JUMP_RELEASE, SHOOT, 
+	SHOOT_RELEASE, ULT, ABILITY, INVENTORY
 }

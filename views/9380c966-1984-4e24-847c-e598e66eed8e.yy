@@ -13,7 +13,8 @@
         "b178df12-fe3d-4686-ac82-010febe17854",
         "c1cdbb69-08de-4eae-8c75-053e7acfcbf3",
         "e83cf741-863a-4135-a481-5347e74b8f53",
-        "b4cb3e86-e031-4bf7-8dd4-5e608efeb524"
+        "b4cb3e86-e031-4bf7-8dd4-5e608efeb524",
+        "19a171a8-56b8-4220-80a1-42f64e8d404b"
     ],
     "filterType": "GMObject",
     "folderName": "Handlers",

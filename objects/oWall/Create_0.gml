@@ -1,6 +1,8 @@
 /// @desc Create tiles
 hsp = 0;
 vsp = 0;
+color = c_white;
+alpha = 1;
 
 
 if (!create_tiles || global.gamemode == GAMEMODE.SINGLE) exit;

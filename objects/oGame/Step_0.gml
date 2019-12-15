@@ -3,9 +3,9 @@
 //PHYSICS TESTING! DISABLE TO RE-ENABLE NORMAL GAME
 if (physics_debug) {
 	//if (room != rServer) {
-	if (room != devRoom) {
+	if (room != survivalRoom) {
 		SlideTransition(TRANS_MODE.OFF);
-		room_goto(devRoom);
+		room_goto(survivalRoom);
 		//room_goto(rServer);
 	} else {
 		with (pGMM) {
