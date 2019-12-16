@@ -16,6 +16,8 @@ for (var xx = 0; xx < room_width div CHUNK_SIZE; xx++) {
 	var _chunk_map = ds_map_create();
 	_chunk_map[? CHUNK_MAP.ID] = xx;
 	_chunk_map[? CHUNK_MAP.OBJECT] = _chunk;
+	_chunk_map[? CHUNK_MAP.GRID] = noone;
+	_chunk_map[? CHUNK_MAP.LOADED] = true;
 	_chunk.chunk_id = xx;
 	ds_map_add(chunks_map, xx, _chunk_map);
 	show_debug_message("Chunk created ID: " + string(xx));
@@ -24,5 +26,5 @@ for (var xx = 0; xx < room_width div CHUNK_SIZE; xx++) {
 alarm[0] = room_speed; //Auto load chunks
 
 enum CHUNK_MAP {
-	ID, OBJECT
+	ID, OBJECT, GRID, LOADED
 }
