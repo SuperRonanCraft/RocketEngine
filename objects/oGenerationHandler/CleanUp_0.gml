@@ -1,2 +1,2 @@
 /// @desc
-ds_grid_destroy(chunks_grid);
+ds_map_destroy(chunks_map);
