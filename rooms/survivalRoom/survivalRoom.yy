@@ -122,7 +122,7 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "00000000-0000-0000-0000-000000000000",
+            "spriteId": "25665d27-f8f2-4575-b509-fe4baaeeeb1a",
             "stretch": true,
             "userdefined_animFPS": false,
             "userdefined_depth": false,
@@ -130,7 +130,7 @@
             "vspeed": 0,
             "vtiled": true,
             "x": 0,
-            "y": 500
+            "y": 0
         }
     ],
     "modelName": "GMRoom",

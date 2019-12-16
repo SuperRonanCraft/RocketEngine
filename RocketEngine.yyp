@@ -4255,6 +4255,14 @@
             }
         },
         {
+            "Key": "7e78075c-2f6d-40d0-a7b6-4912faa1f6e8",
+            "Value": {
+                "id": "ee2381b8-2362-4660-8c38-5bfa90b7e921",
+                "resourcePath": "scripts\\scMergeWall\\scMergeWall.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7eec10ae-de29-493a-afc4-60ffa416df7d",
             "Value": {
                 "id": "c19bb927-f725-49ce-94ee-233bc9ebde71",
@@ -5452,6 +5460,14 @@
                 "id": "a2a9ee7c-dd5f-4e45-87b0-d6df9181ea91",
                 "resourcePath": "views\/a4012950-c510-497e-8028-40c9f7870aa7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a40e747a-7a28-4443-bb79-168541278e76",
+            "Value": {
+                "id": "d2f9c76d-744c-4625-81ab-1dcd10244ccd",
+                "resourcePath": "scripts\\scAbilityBlock\\scAbilityBlock.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8630,6 +8646,7 @@
         "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
         "ca4c6979-64b7-4335-ae5c-db306726e26a",
         "a078b4f1-89a7-48e8-be10-1b07aa78b2f2",
+        "a40e747a-7a28-4443-bb79-168541278e76",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
         "19bb796d-1000-4d06-9411-9602588f1e07",
@@ -8763,6 +8780,7 @@
         "25b3ba2b-6d76-4fd5-9d16-79addc23b878",
         "1916b52a-4cb0-4ae0-8fd4-40b86121ff5b",
         "1df4d02a-a7c1-41e4-bfd4-572a4d433425",
+        "7e78075c-2f6d-40d0-a7b6-4912faa1f6e8",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
         "034c8d0e-9a5c-4ecb-9693-9fab48783be5",

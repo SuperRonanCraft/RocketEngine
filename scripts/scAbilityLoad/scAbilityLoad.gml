@@ -19,6 +19,12 @@ switch (type) {
 		ds_map[? ABILITY_MAP.COOLDOWN] = 20;
 		ds_map[? ABILITY_MAP.SPRITE] = s_ability_portal;
 		break;
+	case ABILITY_TYPE.BLOCK: //Just a block.
+		ds_map[? ABILITY_MAP.NAME] = "Blocked";
+		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityBlock;
+		ds_map[? ABILITY_MAP.COOLDOWN] = 0.5;
+		ds_map[? ABILITY_MAP.SPRITE] = sWall;
+		break;
 	case ABILITY_TYPE.SPRAY: //Triple threat!
 		ds_map[? ABILITY_MAP.NAME] = "Angry Bird!";
 		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateClone;
@@ -28,6 +34,6 @@ switch (type) {
 }
 
 enum ABILITY_TYPE {
-	CLONE, PORTAL, SPRAY,
+	CLONE, PORTAL, SPRAY,BLOCK,
 	NONE
 }
