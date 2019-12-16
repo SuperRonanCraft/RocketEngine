@@ -1,6 +1,6 @@
 /// @desc load chunks
 with (oPlayer) {
-	for (var i = -1; i <= 1; i++) {
+	for (var i = -2; i <= 2; i++) {
 		var _chunk_id = (x div CHUNK_SIZE) + i;
 		with (other) {
 			if (!ds_map_exists(chunks_map, _chunk_id)) {

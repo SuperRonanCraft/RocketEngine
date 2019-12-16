@@ -1,7 +1,6 @@
 /// @desc Check to despawn
 with (oPlayer) {
-	//if ((x + CHUNK_SIZE / 2, y + CHUNK_SIZE / 2))
-	if (abs((other.x + CHUNK_SIZE / 2) - x) > CHUNK_SIZE * 2)
+	if (abs((other.chunk_id) - (x div CHUNK_SIZE)) > 2) //Farther than 2 chunks away
 		with (other)
 			event_user(1); //Unload
 	else

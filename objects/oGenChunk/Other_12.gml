@@ -1,6 +1,7 @@
 /// @desc Flatten Level
 var o_chunk_map = oGenerationHandler.chunks_map;
 var _w = (CHUNK_SIZE / BLOCK_SIZE);
+repeat (chunk_flatness)
 for (var xx = 0; xx < _w; xx += 1) {
 	var _before, _after;
 	if (xx == 0 && ds_map_exists(o_chunk_map, chunk_id - 1)) {
@@ -22,4 +23,3 @@ for (var xx = 0; xx < _w; xx += 1) {
 	chunk_grid[# xx, 0] = (_before + _after) / 2;
 	//grid[# xx, 0]++;
 }
-event_user(0);	//Generate Blocks

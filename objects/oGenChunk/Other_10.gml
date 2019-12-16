@@ -1,4 +1,5 @@
 /// @desc Generate Blocks
+event_user(2); //Flatten terrain
 for (var i = 0; i < ds_list_size(chunk_walls); i++)
 	with(chunk_walls[| i])
 		instance_destroy();
