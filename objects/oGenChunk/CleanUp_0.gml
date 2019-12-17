@@ -5,4 +5,3 @@ for (var i = 0; i < ds_list_size(chunk_walls); i++)
 		instance_destroy();
 surface_free(chunk_surface);
 ds_list_destroy(chunk_walls);
-ds_grid_destroy(chunk_grid);

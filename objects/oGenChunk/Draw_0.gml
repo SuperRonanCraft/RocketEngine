@@ -1,11 +1,11 @@
 /// @desc Draw stone
+if (chunk_grid != noone )
 if (!surface_exists(chunk_surface)) {
 	chunk_surface = surface_create(CHUNK_SIZE, room_height);
 	surface_set_target(chunk_surface);
 	draw_clear_alpha(c_black, 0);
 	
-	var _chunk_blocks = CHUNK_SIZE / BLOCK_SIZE;
-	for (var xx = 0; xx < _chunk_blocks; xx++) {
+	for (var xx = 0; xx < chunk_width; xx++) {
 		var _h = round(chunk_grid[# xx, 0]);
 		var dif = (room_height / BLOCK_SIZE) - _h;
 		for (var i = 0; i < dif; i++) {

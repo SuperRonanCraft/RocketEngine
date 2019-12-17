@@ -17,7 +17,7 @@ for (var xx = 0; xx < room_width div CHUNK_SIZE; xx++) {
 	_chunk_map[? CHUNK_MAP.ID] = xx;
 	_chunk_map[? CHUNK_MAP.OBJECT] = _chunk;
 	_chunk_map[? CHUNK_MAP.GRID] = noone;
-	_chunk_map[? CHUNK_MAP.LOADED] = true;
+	_chunk_map[? CHUNK_MAP.LOADED] = false;
 	_chunk.chunk_id = xx;
 	ds_map_add(chunks_map, xx, _chunk_map);
 	show_debug_message("Chunk created ID: " + string(xx));

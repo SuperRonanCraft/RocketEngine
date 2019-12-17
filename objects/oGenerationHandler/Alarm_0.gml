@@ -15,7 +15,10 @@ with (oPlayer) {
 				var _chunk_map = !cached ? ds_map_create() : chunks_map[? _chunk_id];
 				_chunk_map[? CHUNK_MAP.ID] = _chunk_id;
 				_chunk_map[? CHUNK_MAP.OBJECT] = _chunk;
-				_chunk_map[? CHUNK_MAP.GRID] = noone;
+				if (!cached)
+					_chunk_map[? CHUNK_MAP.GRID] = noone;
+				else
+					_chunk.chunk_grid = _chunk_map[? CHUNK_MAP.GRID];
 				_chunk_map[? CHUNK_MAP.LOADED] = true;
 				_chunk.chunk_id = _chunk_id;
 				ds_map_add(chunks_map, _chunk_id, _chunk_map);

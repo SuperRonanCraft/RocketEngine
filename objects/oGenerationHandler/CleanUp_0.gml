@@ -11,7 +11,10 @@ repeat(ds_map_size(chunks_map)) {
 }
 
 for (var i = first; i < last; i++) {
-	if (ds_grid_)
+	var _map = chunks_map[? i];
+	if (_map != undefined)
+		if (_map[? CHUNK_MAP.GRID] != noone)
+			ds_grid_destroy(_map[? CHUNK_MAP.GRID])
 }
 
 ds_map_destroy(chunks_map);
