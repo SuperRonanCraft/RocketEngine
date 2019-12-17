@@ -52,3 +52,5 @@ for (var i = 1; i < c; i++)
 	for (var j = 1; j < r; j++)
 		draw_sprite_part(sprite, 0, size, size, size, size, x1 + (i * size), y1 + (j *size));
 draw_set_alpha(1);
+
+return [c * size + size, r * size + size]; //Return how wide and how tall we are
