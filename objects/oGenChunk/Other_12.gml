@@ -1,5 +1,6 @@
 /// @desc Flatten Level
 if (!chunk_flatten) exit;
+show_debug_message("Flattening Chunk ID: " + string(chunk_id));
 var o_chunk_map = oGenerationHandler.chunks_map;
 var _w = (CHUNK_SIZE / BLOCK_SIZE);
 repeat (chunk_flatness)
@@ -28,7 +29,7 @@ repeat (chunk_flatness)
 		if (_after == undefined)
 			_after = chunk_grid[# xx + 1, 0];
 		if (_after != undefined && _before != undefined) {
-			show_debug_message("Flattening Chunk ID: " + string(chunk_id) + " " + string(xx));
+			//show_debug_message("Flattening Chunk ID: " + string(chunk_id) + " " + string(xx));
 			chunk_grid[# xx, 0] = (_before + _after) / 2;
 		}
 		//grid[# xx, 0]++;

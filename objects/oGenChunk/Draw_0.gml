@@ -1,4 +1,4 @@
-/// @desc Draw stone
+/// @desc Draw stone & place blocks
 if (chunk_grid != noone )
 if (!surface_exists(chunk_surface)) {
 	chunk_surface = surface_create(CHUNK_SIZE, room_height);

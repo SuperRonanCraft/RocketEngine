@@ -15,4 +15,4 @@ for (var xx = 0; xx < _w; xx++) {
 		wall.color = scGenerateColor(grid[# xx, 0] + irandom(50), i);
 		wall.alpha = grid[# xx, 0] / 100;
 	}
-}
+}*/
