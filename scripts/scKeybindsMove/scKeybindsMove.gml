@@ -40,9 +40,10 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 
 	//Vertical
 	if (	key_jump && //Key jump
-			_map[? GRAVITY_MAP.JUMP_LAG] <= _map[? GRAVITY_MAP.JUMP_LAG_MAX] &&  //Edge lag
+			(_map[? GRAVITY_MAP.JUMP_LAG] <= _map[? GRAVITY_MAP.JUMP_LAG_MAX] &&  //Edge lag
 			_map[? GRAVITY_MAP.JUMP_DELAY] >= _map[? GRAVITY_MAP.JUMP_DELAY_MAX] && //Delay between jumps
-			_map[? GRAVITY_MAP.JUMP_JUMPS] < _map[? GRAVITY_MAP.JUMP_JUMPS_MAX]) { //Maximum combo of jumps
+			_map[? GRAVITY_MAP.JUMP_JUMPS] < _map[? GRAVITY_MAP.JUMP_JUMPS_MAX] || //Maximum combo of jumps
+			!_map[? GRAVITY_MAP.GRAVITY_ENABLED])) {
 		_map[? GRAVITY_MAP.VSP_MOVE] = (-(_map[? GRAVITY_MAP.JUMP_HEIGHT] + _map[? GRAVITY_MAP.JUMP_MOD])) * grv_dir;
 		_map[? GRAVITY_MAP.STANDING] = false;
 		_map[? GRAVITY_MAP.JUMP_LAG] = 0;

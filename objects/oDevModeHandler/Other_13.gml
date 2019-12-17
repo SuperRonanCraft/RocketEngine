@@ -7,7 +7,8 @@ var _mods = [["HSP MOVE MOD", "misc_hspmovemod", 5, 250, 5, "SLIDER"],
 			["VSP", "misc_vsp", -5, 250, 5, "SLIDER"], 
 			["DAMAGE", "misc_damage", 10, 200, 5, "SLIDER"],
 			["KEYBIND", "misc_keybind", KEYBIND.PLAYER1, KEYBIND.NONE, KEYBIND.NONE, "SLIDER"],
-			["AI", "misc_ai", noone, noone, noone, "TOGGLE"]];
+			["AI", "misc_ai", noone, noone, noone, "TOGGLE"],
+			["GRAVITY", "misc_grv", noone, noone, noone, "TOGGLE"]];
 var _w = sprite_get_width(sUISliderBar) + (tab_buf * 2);
 var _scale_o = 0.4
 var _scale = _scale_o;
@@ -115,6 +116,9 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 											system_ai = true;
 										} else
 											system_ai = !system_ai;
+										break;
+									case "misc_grv":
+										gravity_map[? GRAVITY_MAP.GRAVITY_ENABLED] = !gravity_map[? GRAVITY_MAP.GRAVITY_ENABLED];
 										break;
 								}
 					}
