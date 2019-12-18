@@ -3,9 +3,21 @@
 x += (xTo - x) / cam_speed;
 y += (yTo - y) / cam_speed;
 
-//Center inside room
-x = clamp(x, view_w_half + buff, room_width - view_w_half - buff);
-y = clamp(y, view_h_half + buff, room_height - view_h_half - buff);
+//Respect x
+if (respect_room_left && respect_room_right)
+	x = clamp(x, view_w_half + buff, room_width - view_w_half - buff);
+else if (respect_room_right)
+	x = min(x, room_width - view_w_half - buff);
+else if (respect_room_left)
+	x = max(x, view_w_half + buff);
+//Respect y
+if (respect_room_bottom && respect_room_top)
+	y = clamp(y, view_h_half + buff, room_height - view_h_half - buff);
+else if (respect_room_bottom)
+	y = min(y, room_height - view_h_half - buff);
+else if (respect_room_top)
+	y = max(y, view_h_half + buff);
+	
 
 if (full) exit;
 //x += random_range(-shake_remain, shake_remain);

@@ -1,20 +1,10 @@
 /// @desc
-var first = ds_map_find_first(chunks_map), last = ds_map_find_last(chunks_map);
+for (var xx = 0; xx < ds_grid_width(chunks_grid); xx++)
+	for (var yy = 0; yy < ds_grid_width(chunks_grid); yy++) {
+		var _map = chunks_grid[# xx, yy];
+		if (_map != 0)
+			if (_map[? CHUNK_MAP.NOISE] != noone)
+				ds_map_destroy(_map[? CHUNK_MAP.NOISE])
+	}
 
-var current = first;
-repeat(ds_map_size(chunks_map)) {
-	current = ds_map_find_next(chunks_map, first);
-	if (current < first)
-		first = current;
-	else if (current > last)
-		last = current;
-}
-
-for (var i = first; i < last; i++) {
-	var _map = chunks_map[? i];
-	if (_map != undefined)
-		if (_map[? CHUNK_MAP.GRID] != noone)
-			ds_grid_destroy(_map[? CHUNK_MAP.GRID])
-}
-
-ds_map_destroy(chunks_map);
+ds_grid_destroy(chunks_grid);

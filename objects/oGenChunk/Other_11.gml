@@ -1,10 +1,10 @@
 /// @desc Unload Chunk
 with (oGenerationHandler) {
-	var _map = chunks_map[? other.chunk_id];
+	var _map = chunks_grid[# other.chunk_id[0], other.chunk_id[1]];
 	_map[? CHUNK_MAP.LOADED] = false;
-	_map[? CHUNK_MAP.GRID] = ds_grid_create(ds_grid_width(other.chunk_grid), ds_grid_height(other.chunk_grid));
-	ds_grid_copy(_map[? CHUNK_MAP.GRID], other.chunk_grid);
-	ds_grid_destroy(other.chunk_grid);
+	_map[? CHUNK_MAP.NOISE] = ds_map_create();
+	ds_map_copy(_map[? CHUNK_MAP.NOISE], other.chunk_noise);
+	ds_map_destroy(other.chunk_noise);
 	//ds_map_destroy(_map);
 	//ds_map_delete(chunks_map, other.chunk_id);
 }

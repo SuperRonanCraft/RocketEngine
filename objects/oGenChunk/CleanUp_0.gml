@@ -1,7 +1,17 @@
 /// @desc clean chunk
 
-for (var i = 0; i < ds_list_size(chunk_walls); i++)
-	with(chunk_walls[| i])
-		instance_destroy();
+for (var xx = 0; xx < chunk_size; xx++)
+	for (var yy = 0; yy < chunk_size; yy++) {
+		var _block_id = chunk_grid[# xx, yy];
+		switch (_block_id) {
+			case 0: //Wall block
+				if (chunk_blocks[# xx, yy] != 0)
+					with(chunk_blocks[# xx, yy])
+						instance_destroy();
+				break;
+			default:
+				break;
+		}
+	}
 surface_free(chunk_surface);
-ds_list_destroy(chunk_walls);
+ds_grid_destroy(chunk_blocks);
