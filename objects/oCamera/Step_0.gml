@@ -1,5 +1,4 @@
 /// @desc Update Camera
-if (full) exit;
 //Update object
 x += (xTo - x) / cam_speed;
 y += (yTo - y) / cam_speed;
@@ -8,6 +7,7 @@ y += (yTo - y) / cam_speed;
 x = clamp(x, view_w_half + buff, room_width - view_w_half - buff);
 y = clamp(y, view_h_half + buff, room_height - view_h_half - buff);
 
+if (full) exit;
 //x += random_range(-shake_remain, shake_remain);
 //y += random_range(-shake_remain, shake_remain);
 shake_remain = max(0, shake_remain - ((1 / shake_lenght) * shake_magnitude));

@@ -10,10 +10,11 @@ if (surface_exists(chunk_surface))
 for (var xx = 0; xx < chunk_width; xx++) {
 	var _h = round(chunk_grid[# xx, 0]);
 	var dif = (room_height / BLOCK_SIZE) - _h;
-	if (dif > 1) {
-		var wall = instance_create_depth(x + xx * BLOCK_SIZE, _h * BLOCK_SIZE, depth - 1, oWall);
-		wall.color = scGenerateColor(chunk_grid[# xx, 0], i);
-		wall.chunk_id = chunk_id;
+	for (var i = 0; i < dif; i++) {
+		var wall = instance_create_depth(x + xx * BLOCK_SIZE, (i + _h) * BLOCK_SIZE, depth - 1, oWall);
+		//wall.color = scGenerateColor(chunk_grid[# xx, 0], i);
+		//wall.chunk_id = chunk_id;
+		//wall.visible = false;
 		ds_list_add(chunk_walls, wall);
 	}
 	/*for (var i = 0; i < 3 && i < dif; i++) { //CREATE WALLS ONLY ON TOP LAYER
@@ -23,7 +24,7 @@ for (var xx = 0; xx < chunk_width; xx++) {
 	}*/
 }
 
-for (var i = 0; i < ds_list_size(chunk_walls); i++)
+/*for (var i = 0; i < ds_list_size(chunk_walls); i++)
 	if (instance_exists(chunk_walls[| i]))
 		with(chunk_walls[| i])
 			scMergeWall(id);
@@ -37,6 +38,9 @@ for (var i = 0; i < ds_list_size(walls_remove); i++)
 	ds_list_delete(chunk_walls, ds_list_find_index(chunk_walls, walls_remove[| i]));
 
 ds_list_destroy(walls_remove);
+
+
+
 /*var _w = CHUNK_SIZE / BLOCK_SIZE;
 
 for (var xx = 0; xx < _w; xx++) {

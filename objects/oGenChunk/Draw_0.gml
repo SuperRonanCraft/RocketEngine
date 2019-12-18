@@ -8,7 +8,7 @@ if (!surface_exists(chunk_surface)) {
 	for (var xx = 0; xx < chunk_width; xx++) {
 		var _h = round(chunk_grid[# xx, 0]);
 		var dif = (room_height / BLOCK_SIZE) - _h;
-		for (var i = 1; i < dif; i++) { //Draw fake walls after 3
+		for (var i = 0; i < dif; i++) { //Draw fake walls after 3
 			var color = scGenerateColor(chunk_grid[# xx, 0], i);
 			scDrawRect(
 				xx * BLOCK_SIZE, 

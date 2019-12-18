@@ -1,5 +1,5 @@
 /// @desc load chunks
-with (oPlayer) {
+with (pEntity) {
 	for (var i = -2; i <= 2; i++) {
 		var _chunk_id = (x div CHUNK_SIZE) + i;
 		with (other) {
