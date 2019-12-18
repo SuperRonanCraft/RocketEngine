@@ -4,7 +4,7 @@ vsp = 0;
 color = c_white;
 alpha = 1;
 
-scMergeWall(id);	
+//scMergeWall(id);	
 
 if (!create_tiles || global.gamemode == GAMEMODE.SINGLE) exit;
 var lay_id = layer_get_id("Tiles");

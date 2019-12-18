@@ -1,5 +1,6 @@
 ///scMergeWall(wall)
 ///@arg wall
+///@arg chunk_id
 
 var wall = argument[0];
 

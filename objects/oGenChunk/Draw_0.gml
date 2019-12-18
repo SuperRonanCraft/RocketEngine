@@ -8,23 +8,16 @@ if (!surface_exists(chunk_surface)) {
 	for (var xx = 0; xx < chunk_width; xx++) {
 		var _h = round(chunk_grid[# xx, 0]);
 		var dif = (room_height / BLOCK_SIZE) - _h;
-		for (var i = 0; i < dif; i++) {
-			if (i < 3) { //CREATE WALLS ONLY ON TOP LAYER
-				var wall = instance_create_depth(x + xx * BLOCK_SIZE, (_h + i) * BLOCK_SIZE, depth - 1, oWall);
-				wall.color = scGenerateColor(chunk_grid[# xx, 0] + irandom_range(-50, 50), i);
-				ds_list_add(chunk_walls, wall);
-				//wall.alpha = chunk_grid[# xx, 0] / 100;
-			} else {
-				var color = scGenerateColor(chunk_grid[# xx, 0], i);
-				scDrawRect(
-					xx * BLOCK_SIZE, 
-					(_h + i) * BLOCK_SIZE, 
-					(xx + 1) * BLOCK_SIZE, 
-					(_h + i + 1) * BLOCK_SIZE, 
-					color, 
-					false, 
-					1);
-			}
+		for (var i = 1; i < dif; i++) { //Draw fake walls after 3
+			var color = scGenerateColor(chunk_grid[# xx, 0], i);
+			scDrawRect(
+				xx * BLOCK_SIZE, 
+				(_h + i) * BLOCK_SIZE, 
+				(xx + 1) * BLOCK_SIZE, 
+				(_h + i + 1) * BLOCK_SIZE, 
+				color, 
+				false, 
+				1);
 		}
 	}
 
