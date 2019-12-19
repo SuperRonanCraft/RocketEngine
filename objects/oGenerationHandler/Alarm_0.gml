@@ -3,7 +3,7 @@ with (pEntity) {
 	for (var xx = -2; xx <= 2; xx++) {
 		for (var yy = -1; yy <= 1; yy++) {
 			var _chunk_id = [x div CHUNK_SIZE + xx, y div CHUNK_SIZE + yy];
-			if (_chunk_id[0] >= 0 && _chunk_id[1] >= 0) {
+			if (_chunk_id[0] >= 0 && _chunk_id[1] >= 0 && _chunk_id[0] < other.chunks_max && _chunk_id[1] < other.chunks_max) {
 				with (other) {
 					var cached = chunks_grid[# _chunk_id[0], _chunk_id[1]] != 0;
 					var load = !cached;

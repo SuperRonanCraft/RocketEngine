@@ -32,5 +32,18 @@ if (!surface_exists(chunk_surface)) {
 } else
 	draw_surface(chunk_surface, x, y);
 
-if (global.debug)
+if (global.debug) {
 	scDrawRect(x, y, x + CHUNK_SIZE, y + CHUNK_SIZE, c_red, true, 1);
+	
+	if (oCamera.full)
+		for (var xx = 0; xx < chunk_size; xx++)
+			for (var yy = 0; yy < chunk_size; yy++) {
+				var _block_id = chunk_blocks[# xx, yy];
+				if (_block_id != 0) {
+					scDrawRect(
+						x + xx * BLOCK_SIZE, y + yy * BLOCK_SIZE, 
+						x + (xx + 1) * BLOCK_SIZE, y + (yy + 1) * BLOCK_SIZE, 
+						c_green, false, 1);
+				}
+			}
+}

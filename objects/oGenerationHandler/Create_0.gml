@@ -1,8 +1,9 @@
 /// @desc 
 randomize();
 //chunks_grid = ds_grid_create(128, 128);
-chunks_grid = ds_grid_create(128, 128); //Grid of maps
-chunk_size = irandom_range(400, 3000) * BLOCK_SIZE; //Not the CHUNK_SIZE, but a noise size
+chunks_max = 128; //Max chunk limit
+chunks_grid = ds_grid_create(chunks_max, chunks_max); //Grid of maps
+chunk_size = irandom_range(1, 20) * BLOCK_SIZE; //Not the CHUNK_SIZE, but a noise size
 seed = round(random_range(1000000, 10000000));
 
 #macro BLOCK_SIZE 32
@@ -16,7 +17,7 @@ var _x_start = oPlayer.x div CHUNK_SIZE;
 var _y_start = oPlayer.y div CHUNK_SIZE;
 for (var xx = _x_start - 1; xx <= _x_start + 1; xx++) {
 	for (var yy = _y_start - 1; yy <= _y_start + 1; yy++) {
-		if (xx >= 0 && yy >= 0) {
+		if (xx >= 0 && yy >= 0 && xx < chunks_max && yy < chunks_max) {
 			var _chunk = instance_create_depth(xx * CHUNK_SIZE, yy * CHUNK_SIZE, depth, oGenChunk);
 			var _chunk_map = ds_map_create();
 			//_chunk_map[? CHUNK_MAP.ID] = [xx, yy];

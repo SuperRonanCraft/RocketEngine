@@ -11,9 +11,10 @@ for (var xx = 0; xx < _w; xx++) {
 	var zz = scGeneratePerlinNoise(
 		(x / BLOCK_SIZE) + xx, 
 		0,
-		20,
+		70,
 		1,
 		_seed,
-		_chunk_size);
+		_chunk_size,
+		true);
 	_map[? xx] = zz;
 }

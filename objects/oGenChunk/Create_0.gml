@@ -1,6 +1,7 @@
 chunk_size = CHUNK_SIZE / BLOCK_SIZE;
 chunk_grid = noone; //Chunk blocks info
 chunk_noise = noone; //Terrain info
+chunk_noise_2d = noone; //Terrain info
 
 chunk_force_load = false; //Force spawn walls
 chunk_generated = false; //Have we generated our chunks?

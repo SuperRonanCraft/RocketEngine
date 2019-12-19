@@ -16,6 +16,7 @@ for (var xx = 0; xx < chunk_size; xx++)
 		var _h = round(chunk_noise[? xx]);
 		if (_h <= yy + (chunk_id[1] * chunk_size))
 			chunk_grid[# xx, yy] = 0; //Make this a wall
+		//chunk_grid[# xx, yy] = chunk_noise_2d[# xx, yy] - 1;
 	}
 //Generate walls
 if (chunk_force_load) {
@@ -36,7 +37,8 @@ if (chunk_force_load) {
 		}
 	chunk_force_load = false;
 	//event_user(3);
-}
+} else
+	event_user(3);
 
 /*for (var i = 0; i < ds_list_size(chunk_walls); i++)
 	if (instance_exists(chunk_walls[| i]))
