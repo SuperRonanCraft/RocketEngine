@@ -21,7 +21,6 @@ if(grv_dir == -1){
 
 
 if(!deactivate){
-	hsp = spd * facing;
 	vsp += (arrow_map[? ARROW_MAP.WEIGHT] * grv_dir)/room_speed;
 }
 
@@ -30,17 +29,18 @@ if(bonusSPD >= arrow_map[?ARROW_MAP.SPEED] *  ((arrow_map[? ARROW_MAP.POWER_MAX]
 	fullPower = true;	
 }
 var bonusDMG = ceil(bonusSPD/4+ dmg);
-var bonusKB = bonusSPD/4 + kb;
+var bonusKB = sign(hsp) * bonusSPD/4 + kb;
 
 
 if(!deactivate){
 	
 	scProjectileMove(arrow_map, touching);
 
+	direction = darctan2(vsp * -grv_dir,hsp);
+	image_angle = direction;
+
 	for (var i = 0; i < ds_list_size(touching); i++) {
     
-		direction = darctan2(vsp * -grv_dir,hsp);
-		image_angle = direction;
 	
 		var obj = touching[|i];
 		
@@ -58,12 +58,12 @@ if(!deactivate){
 					ds_list_add(confirmList, obj);
 					ds_list_add(hitList, obj);
 		
-					if (!obj.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do nothing to the player, don't allow shuriken to interact
+					if (!obj.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do nothing to the player, don't allow weapon to interact
 				
 					
 					//Knockback
-					obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += facing * (spd / 2 + bonusKB);
-
+					obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp / 2 + bonusKB);
+					obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
 		
 					//Damage player
 					if (scShootableDamage(owner, obj, false, true, bonusDMG)){
@@ -141,17 +141,15 @@ if(!deactivate){
 
 
 //TODO: Fix 'ragdoll' physics
-/*
+
 if(flyWith != noone && !deactivate){
 	if(false && instance_exists(flyWith)){
-		flyWith.x = x;
-		flyWith.y = y;
 		flyWith.gravity_map[?GRAVITY_MAP.HSP_MOVE] = hsp;
 		flyWith.gravity_map[?GRAVITY_MAP.VSP_MOVE] = vsp;
 	}
 			
 }
-*/
+
 
 if(stuckTo != noone && deactivate){
 	if(instance_exists(stuckTo)){

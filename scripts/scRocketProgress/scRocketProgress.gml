@@ -6,10 +6,10 @@ var rocket_map = map[? WEAPON_MAP.MAP];
 
 if (rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
 //Set the direction of the rocket
-var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
+var dir = point_direction(x,y,aim_target_x,aim_target_y);
 
-if (auto_aim)
-	dir = scAutoAim();
+//if (auto_aim)
+//	dir = scAutoAim();
 
 //Rocket
 if (map[? WEAPON_MAP.DELAY_TIME] == 0) {

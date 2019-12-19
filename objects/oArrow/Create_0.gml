@@ -2,7 +2,7 @@
 
 //shuriken_map = 0;
 
-//owner of rocket
+//owner of weapon
 
 owner = noone;
 

@@ -5,6 +5,8 @@ if (!global.play) exit;
 
 scStateCheck();
 
+scUpdateTargetReticle();
+
 //--------
 //DEVMODE 
 //JUMP + KEYSHOOT = CHANGE ROCKET

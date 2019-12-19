@@ -10,13 +10,15 @@ if (!key_shoot || map[? WEAPON_MAP.COOLDOWN_TIME] != arrow_map[? ARROW_MAP.COOLD
 		if (map[?WEAPON_MAP.AMMO] != 0) {
 			if (arrow_map[? ARROW_MAP.SPAWN_SCRIPT] == noone) {
 				//Set the direction of the arrow
-				var dir = argument0 == TEAM.NONE ? (facing == 1 ? 0 : 180) : (argument0 == TEAM.LEFT ? 0 : 180);
-				if (auto_aim)
-					dir = scAutoAim();
+				var dir = point_direction(x,y,aim_target_x,aim_target_y);
+				//if (auto_aim)
+				//	dir = scAutoAim();
 				facing = dir > -90 && dir <= 90 ? 1 : -1;
 				var arrow = scSpawnArrow(x,y,depth+1,dir,id,map);
 				arrow.dmg = ceil(arrow.dmg *	1.5 * ((map[? WEAPON_MAP.POWER])/100));
 				arrow.spd = arrow.spd *  ((map[? WEAPON_MAP.POWER])/100);
+				arrow.hsp = dcos(arrow.direction) * arrow.spd;
+				arrow.vsp = -dsin(arrow.direction) * arrow.spd;
 				arrow.kb = arrow.kb * ((map[? WEAPON_MAP.POWER])/800);
 				scPlaySound(SOUND.EFFECT_SHUR_THROW);
 				if (map[? WEAPON_MAP.AMMO] > 0)
