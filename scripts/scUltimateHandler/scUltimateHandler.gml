@@ -3,9 +3,9 @@ var map = ultimate_map;
 
 if (local_player) {
 	var _old_key_ult = key_ult;
-	key_ult = scKeybindsGet(KEYBIND_TYPE.ULT);
+	key_ult = scKeybindsGet(KEYBIND.ULT);
 	if (_old_key_ult != key_ult)
-		scNetworkSendKey(KEYBIND_TYPE.ULT, key_ult);
+		scNetworkSendKey(KEYBIND.ULT, key_ult);
 }
 
 var char_map = player_map[? PLAYER_MAP.CHARACTER_INFO];

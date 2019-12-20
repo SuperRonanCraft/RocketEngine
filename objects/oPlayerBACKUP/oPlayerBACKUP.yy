@@ -203,7 +203,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "KEYBIND.PLAYER1",
+            "value": "KEYBIND_PLAYER.PLAYER1",
             "varName": "keys",
             "varType": 4
         },

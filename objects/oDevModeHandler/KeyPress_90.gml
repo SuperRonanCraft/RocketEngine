@@ -7,7 +7,7 @@ if (!keyboard_check(vk_control)) {
 	if (keyboard_check(ord("A")))
 		with (_p) {
 			scStartAI();
-			scKeybindsSet(KEYBIND.PLAYER2);
+			scKeybindsSet(KEYBIND_PLAYER.PLAYER2);
 			//system_ai = true;
 		}
 }

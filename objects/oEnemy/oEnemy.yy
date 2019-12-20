@@ -57,7 +57,7 @@
             "mvc": "1.0",
             "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
             "propertyId": "af6fe672-bc9c-4bd6-8b48-eb5c3babf710",
-            "value": "KEYBIND.NONE"
+            "value": "KEYBIND_PLAYER.NONE"
         },
         {
             "id": "37b65274-08de-4915-a338-35847daf0b18",

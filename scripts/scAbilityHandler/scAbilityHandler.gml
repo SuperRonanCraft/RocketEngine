@@ -5,9 +5,9 @@ var map = ability_map;
 
 if (local_player) {
 	var _old_key_ability = key_ability;
-	key_ability = scKeybindsGet(KEYBIND_TYPE.ABILITY);
+	key_ability = scKeybindsGet(KEYBIND.ABILITY);
 	if (_old_key_ability != key_ability)
-		scNetworkSendKey(KEYBIND_TYPE.ABILITY, key_ability);
+		scNetworkSendKey(KEYBIND.ABILITY, key_ability);
 }
 
 if (!map[? ABILITY_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || map[? ABILITY_MAP.TYPE] == ABILITY_TYPE.NONE) exit; //Is the system even enabled?

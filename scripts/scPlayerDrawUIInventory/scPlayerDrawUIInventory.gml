@@ -5,7 +5,7 @@ if (!inventory_system) return false;
 
 var _map = inventory_map;
 
-if (scKeybindsGet(KEYBIND_TYPE.INVENTORY)) {
+if (scKeybindsGet(KEYBIND.INVENTORY)) {
 	_map[? INVENTORY_MAP.OPEN] = !_map[? INVENTORY_MAP.OPEN];
 	player_map[? PLAYER_MAP.CAN_CONTROL] = !_map[? INVENTORY_MAP.OPEN];
 	//Safety

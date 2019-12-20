@@ -30,10 +30,10 @@ if (mouse_check_button_pressed(mb_left)) //Gain Enemy Control
 		if (mouse_x > bbox_left - _b && mouse_x < bbox_right + _b)
 			if (mouse_y > bbox_top - _b && mouse_y < bbox_bottom + _b) {
 				if (keyboard_check(vk_control)) {
-					if (keys == KEYBIND.NONE)
-						keys = KEYBIND.PLAYER2;
+					if (keys == KEYBIND_PLAYER.NONE)
+						keys = KEYBIND_PLAYER.PLAYER2;
 					else
-						keys = KEYBIND.NONE;
+						keys = KEYBIND_PLAYER.NONE;
 					scKeybindsSet(keys);
 				} else
 					system_ai = !system_ai;

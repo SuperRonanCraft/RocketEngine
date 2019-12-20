@@ -8,21 +8,21 @@ var _update = argument[0];
 //KEYBINDS
 if (_update) {
 	switch (argument[1]) {
-		case KEYBIND_TYPE.LEFT:
+		case KEYBIND.LEFT:
 			key_left = argument[2]; break;
-		case KEYBIND_TYPE.RIGHT:
+		case KEYBIND.RIGHT:
 			key_right = argument[2]; break;
-		case KEYBIND_TYPE.JUMP:
+		case KEYBIND.JUMP:
 			key_jump = argument[2]; break;
-		case KEYBIND_TYPE.JUMP_RELEASE:
+		case KEYBIND.JUMP_RELEASE:
 			key_jump_released = argument[2]; break;
-		case KEYBIND_TYPE.SHOOT:
+		case KEYBIND.SHOOT:
 			key_shoot = argument[2]; break;
-		case KEYBIND_TYPE.SHOOT_RELEASE:
+		case KEYBIND.SHOOT_RELEASE:
 			key_shoot_released = argument[2]; break;
-		case KEYBIND_TYPE.ULT:
+		case KEYBIND.ULT:
 			key_ult = argument[2]; break;
-		case KEYBIND_TYPE.ABILITY:
+		case KEYBIND.ABILITY:
 			key_ability = argument[2]; break;
 	}
 } else
