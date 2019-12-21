@@ -19,11 +19,21 @@ ds_grid_set(_grid, 1, _map[? INVENTORY_MAP.SIZE_ROWS] - 1, INVENTORY_SLOT_TYPE.A
 ds_grid_set(_grid, 2, _map[? INVENTORY_MAP.SIZE_ROWS] - 1, INVENTORY_SLOT_TYPE.ABILITY);
 //Preset some test items
 var _grid = _map[? INVENTORY_MAP.GRID];
+ds_grid_set_region(_grid, 0, 0, _map[? INVENTORY_MAP.SIZE_ROWS], _map[? INVENTORY_MAP.SIZE_COLUMNS], noone);
 
 for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
 	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
-		var _slot_map = scInventoryGetItem(irandom_range(ITEM.WEAPON_ROCKET, ITEM.NONE - 1));
-		_grid[# xx, yy] = _slot_map;
+		var _item_map = scInventoryGetItem(irandom_range(ITEM.WEAPON_ROCKET, ITEM.NONE));
+		if (_item_map == noone) continue;
+		var _item_type = _item_map[? ITEM_MAP.ITEM_TYPE];
+		var _slot_type = ds_grid_get(_map[? INVENTORY_MAP.GRID_TYPE], xx, yy);
+		if (	_slot_type == INVENTORY_SLOT_TYPE.GENERAL ||
+				(_slot_type == INVENTORY_SLOT_TYPE.WEAPON && _item_type == ITEM_TYPE.WEAPON) ||
+				(_slot_type == INVENTORY_SLOT_TYPE.ABILITY && _item_type == ITEM_TYPE.ABILITY) ||
+				(_slot_type == INVENTORY_SLOT_TYPE.ARMOR && _item_type == ITEM_TYPE.ARMOR))
+			_grid[# xx, yy] = _item_map;
+		//else
+		//	_grid[# xx, yy] = scInventoryGetItem(ITEM.NONE);
 	}
 
 enum INVENTORY_MAP {
