@@ -1,0 +1,3 @@
+/// @desc 
+if (display)
+	scPlayerDrawIU();

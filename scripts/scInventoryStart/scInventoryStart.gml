@@ -14,7 +14,7 @@ _map[? INVENTORY_MAP.SLOT_MOVING] = [-1, -1]; //Grid id we are moving
 var _grid = _map[? INVENTORY_MAP.GRID];
 for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
 	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
-		var _slot_map = scInventoryGetItem(choose(ITEM.AXE, ITEM.PICK, ITEM.NONE));
+		var _slot_map = scInventoryGetItem(irandom_range(ITEM.WEAPON_ROCKET, ITEM.NONE - 1));
 		_grid[# xx, yy] = _slot_map;
 	}
 
