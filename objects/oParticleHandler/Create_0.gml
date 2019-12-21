@@ -559,6 +559,18 @@ part_type_life(parttype,30,60);
 ds_map_add(ds_part,PARTICLES.SHIELD_DAMAGE, parttype);
 ds_map_add(ds_part_amt, PARTICLES.SHIELD_DAMAGE, 5);
 
+//Shield Recharge
+parttype = part_type_create();
+part_type_sprite(parttype,s_pShieldRecharge,1,1,0);
+part_type_size(parttype,0.5,1,-0.01,0.02);
+part_type_speed(parttype,1,1.5,-0.02,0);
+part_type_direction(parttype,90,90,0,0);
+part_type_gravity(parttype,0.01,90);
+part_type_blend(parttype,0);
+part_type_life(parttype,30,60);
+ds_map_add(ds_part,PARTICLES.SHIELD_RECHARGE, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SHIELD_RECHARGE, 3);
+
 //ARMOR DAMAGE
 parttype = part_type_create();
 part_type_sprite(parttype,s_pArmorDamage,1,1,0);
@@ -595,5 +607,5 @@ enum PARTICLES {
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
 	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL,
-	EXPLOSION_DEFAULT, SLIME_PAINT,SHIELD_DAMAGE,ARMOR_DAMAGE,HEALTH_DAMAGE,
+	EXPLOSION_DEFAULT, SLIME_PAINT,SHIELD_DAMAGE,SHIELD_RECHARGE, ARMOR_DAMAGE,HEALTH_DAMAGE,
 }

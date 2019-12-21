@@ -14,6 +14,9 @@ if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0) {
 	if (shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] < shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL]) {
 		if (shootable_map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] > room_speed * 2) {
 			shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] += 0.035;
+			part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left -15, bbox_right+15, bbox_top-15, bbox_bottom+15, ps_shape_ellipse, ps_distr_invgaussian);
+			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SHIELD_RECHARGE], 1);
+
 			health_map[? HEALTH_MAP.HEAL_TIME] = health_map[? HEALTH_MAP.SHOW_TIME];
 		} else
 			shootable_map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE]++;

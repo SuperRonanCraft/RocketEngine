@@ -8335,6 +8335,14 @@
             }
         },
         {
+            "Key": "fd92a2a1-ad6c-4984-96b0-8df67f821e2b",
+            "Value": {
+                "id": "e8ab2c57-75a0-40c1-9ffe-1f2e3ff09ad0",
+                "resourcePath": "sprites\\s_pShieldRecharge\\s_pShieldRecharge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fdd1144e-9e18-4265-b011-9ac83d555409",
             "Value": {
                 "id": "24049837-4818-4674-8ebb-b0b05084a3de",
