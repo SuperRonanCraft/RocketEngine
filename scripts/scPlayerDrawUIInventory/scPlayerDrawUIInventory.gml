@@ -41,28 +41,47 @@ _alpha = _map[? INVENTORY_MAP.OPEN] ? _alpha : _map[? INVENTORY_MAP.ALPHA];
 //	_x = RES_W - _x - sprite_get_width(sUIInventory);
 
 //Inventory frame
-scDrawSpriteExt(_x, _y, sUIInventory, 0, noone, _alpha);
+scDrawSpriteExt(_x, _y, sUIInventoryBgd, 0, noone, _alpha);
+
 var _buffer_x = 3; //Distance between inventory slots (x)
 var _buffer_y = 3; //Distance between inventory slots (y)
-var _inv_slot_size = 64;
+var _inv_slot_size = 70;
 var _inv_hovering = noone;
 var _inv_moving = false;
 var _inv_swap = [noone, noone];
 
-//Draw Hovering
+_x = (RES_W / 2) - (((_map[? INVENTORY_MAP.SIZE_ROWS] / 2)) * _inv_slot_size) - (_buffer_x * (_map[? INVENTORY_MAP.SIZE_ROWS] / 2));
+_y = (RES_H / 2) - (((_map[? INVENTORY_MAP.SIZE_COLUMNS] / 2)) * _inv_slot_size) - (_buffer_y * (_map[? INVENTORY_MAP.SIZE_COLUMNS] / 2));
+
+//Draw Hovering/Slot
 var _inv_grid = _map[? INVENTORY_MAP.GRID];
 for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
-		var _slot_map = _inv_grid[# xx, yy];
 		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
+		//Draw Inventory Slot
+		var _slot_alpha = _alpha;
+		if (scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, 0, 0)) {
+			_slot_alpha = ((1 - _alpha) / 2) + _alpha;
+			_inv_hovering = [xx, yy];
+		}
+		var _sprite = sUIInventory, _sprite_index = 0;
+		var _inv_slot_type = ds_grid_get(_map[? INVENTORY_MAP.GRID_TYPE], xx, yy);
+		switch (_inv_slot_type) {
+			case INVENTORY_SLOT_TYPE.WEAPON: _sprite = sUIInventoryUtil; _sprite_index = 0; break;
+			case INVENTORY_SLOT_TYPE.ARMOR: _sprite = sUIInventoryUtil; _sprite_index = 1; break;
+			case INVENTORY_SLOT_TYPE.ABILITY: _sprite = sUIInventoryUtil; _sprite_index = 2; break;
+			case INVENTORY_SLOT_TYPE.GENERAL:
+			default:
+		}
 		
-		var _slot_hovering = scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, 0, 0);
+		draw_sprite_part_ext(_sprite, _sprite_index, 0, 0, _inv_slot_size, _inv_slot_size, _xx, _yy, 1, 1, c_white, _slot_alpha);
+		/*var _slot_hovering = scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, 0, 0);
 		//Hoving indicator
 		if (_slot_hovering) {
 			scDrawRect(_xx + 1, _yy + 1, _xx + 63, _yy + 63, c_white, false, _alpha / 2);
 			_inv_hovering = [xx, yy];
-		}
+		}*/
 	}
 }
 

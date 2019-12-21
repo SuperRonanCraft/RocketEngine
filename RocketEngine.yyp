@@ -1703,6 +1703,14 @@
             }
         },
         {
+            "Key": "31163d37-1fc1-44f2-a810-604f21947de0",
+            "Value": {
+                "id": "8c06b079-ef03-449a-a23d-be9e4eba4c09",
+                "resourcePath": "sprites\\sUIInventoryBgd\\sUIInventoryBgd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3138ee67-2646-4089-be09-2d2a4088f495",
             "Value": {
                 "id": "c0f0699b-2e98-4673-8640-f90be84ec56e",
@@ -4236,6 +4244,14 @@
                 "id": "ee2381b8-2362-4660-8c38-5bfa90b7e921",
                 "resourcePath": "scripts\\scMergeWall\\scMergeWall.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7ec2e2da-a91c-4415-82ca-f3dc85c0be95",
+            "Value": {
+                "id": "2d8861ea-ed77-4fc6-9544-a0272b9a7a64",
+                "resourcePath": "sprites\\sUIInventoryOLD\\sUIInventoryOLD.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6867,6 +6883,14 @@
             "Value": {
                 "id": "dd62cd18-5ccc-4d72-8f5e-2e08d22fde4f",
                 "resourcePath": "sprites\/sPickupWallOld\/sPickupWallOld.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cfd4185c-098b-4bf6-8342-27039542e978",
+            "Value": {
+                "id": "94386a1d-9bd8-4d3c-ac5e-651d6bbf5417",
+                "resourcePath": "sprites\\sUIInventoryUtil\\sUIInventoryUtil.yy",
                 "resourceType": "GMSprite"
             }
         },

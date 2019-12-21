@@ -5,7 +5,10 @@
     "name": "6ebad15a-daba-473b-a8f3-cff7251e5330",
     "children": [
         "49cdaa5d-a528-4981-99f4-efbfe7cec2c0",
-        "df7996e2-f4cf-475c-bd0d-cef5aefebec1"
+        "cfd4185c-098b-4bf6-8342-27039542e978",
+        "31163d37-1fc1-44f2-a810-604f21947de0",
+        "df7996e2-f4cf-475c-bd0d-cef5aefebec1",
+        "7ec2e2da-a91c-4415-82ca-f3dc85c0be95"
     ],
     "filterType": "GMSprite",
     "folderName": "Inventory",
