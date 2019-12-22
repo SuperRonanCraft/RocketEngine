@@ -102,7 +102,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 						else if (scInventoryStackable(xx, yy, xx2, yy2))
 							_color = c_orange;
 						//else
-						//	_color = c_orange;
+						//	_color = c_purple;
 				}
 		}
 		
@@ -204,9 +204,6 @@ if (_inv_hovering != noone && _inv_moving == noone) { //Are hovering over an ite
 		var _offset_y = (_inv_slot_size / 2) - ((_item_h * _scale) / 2);
 		draw_sprite_part_ext(_sprite, 0, 0, 0, _item_w, _item_h, _xx + _offset_x + 3, _yy + _offset_y + 3, _scale, _scale, c_black, _alpha);
 		draw_sprite_part_ext(_sprite, 0, 0, 0, _item_w, _item_h, _xx + _offset_x, _yy + _offset_y, _scale, _scale, c_white, _alpha);
-			
-		//scDrawSpriteExt(_xx + 3, _yy + 3, _sprite, 0, c_black, _alpha / 2);
-		//scDrawSpriteExt(_xx, _yy, _sprite, 0, noone, _alpha);
 		if (_slot_map[? ITEM_MAP.AMOUNT] > 1) //Amount if above 1
 			scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), c_white, 0.5, noone, _alpha, fa_right, fa_bottom);
 		if (_slot_map[? ITEM_MAP.DURABILITY] != noone) { //Durability Bar
@@ -218,41 +215,7 @@ if (_inv_hovering != noone && _inv_moving == noone) { //Are hovering over an ite
 if (_inv_swap_from != noone && _inv_swap_to != noone) { //Swap items
 	var _map_from = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
 	var _map_to = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
-	/*var _allow_swap_to = true;
-	var _allow_swap_from = true;
-	//Restrict items from being placed if bad slots
-	var _slot_from_type = ds_grid_get(_map[? INVENTORY_MAP.GRID_TYPE], _inv_swap_from[0], _inv_swap_from[1]);
-	var _slot_to_type = ds_grid_get(_map[? INVENTORY_MAP.GRID_TYPE], _inv_swap_to[0], _inv_swap_to[1]);
-	if (_slot_to_type != _slot_from_type) {
-		if (_map_from != noone)
-			switch (_slot_to_type) {
-				case INVENTORY_SLOT_TYPE.WEAPON:
-					_allow_swap_to = _map_from[? ITEM_MAP.ITEM_TYPE] == ITEM_TYPE.WEAPON; break;
-				case INVENTORY_SLOT_TYPE.ARMOR:
-					_allow_swap_to = _map_from[? ITEM_MAP.ITEM_TYPE] == ITEM_TYPE.ARMOR; break;
-				case INVENTORY_SLOT_TYPE.ABILITY:
-					_allow_swap_to = _map_from[? ITEM_MAP.ITEM_TYPE] == ITEM_TYPE.ABILITY; break;
-				case INVENTORY_SLOT_TYPE.GENERAL:
-				default: break;
-			}
-		if (_map_to != noone)
-			switch (_slot_from_type) {
-				case INVENTORY_SLOT_TYPE.WEAPON:
-					_allow_swap_from = _map_to[? ITEM_MAP.ITEM_TYPE] == ITEM_TYPE.WEAPON; break;
-				case INVENTORY_SLOT_TYPE.ARMOR:
-					_allow_swap_from = _map_to[? ITEM_MAP.ITEM_TYPE] == ITEM_TYPE.ARMOR; break;
-				case INVENTORY_SLOT_TYPE.ABILITY:
-					_allow_swap_from = _map_to[? ITEM_MAP.ITEM_TYPE] == ITEM_TYPE.ABILITY; break;
-				default: break;
-			}
-	}
-	show_debug_message("----------");
-	if (_map_to != noone)
-		show_debug_message(string(_slot_to_type) + " " + string(_map_to[? ITEM_MAP.ITEM_TYPE]));
-	if (_map_from != noone)
-		show_debug_message(string(_slot_from_type) + " " + string(_map_from[? ITEM_MAP.ITEM_TYPE]));*/
-	//if (_allow_swap_to && _allow_swap_from) {
-	if (scInventoryStackable(_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
+	if (scInventoryStackable(_inv_swap_to[0], _inv_swap_to[1], _inv_swap_from[0], _inv_swap_from[1])) {
 		var _map_1 = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
 		var _map_2 = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
 		var _curAmount_1 = _map_1[? ITEM_MAP.AMOUNT];
@@ -264,14 +227,13 @@ if (_inv_swap_from != noone && _inv_swap_to != noone) { //Swap items
 			_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_2;
 			ds_map_destroy(_map_1);
 		} else { //Too many items to fit in one stack
-			show_debug_message("Too Many Items!")
 			var _dif = _maxStack - _curAmount_2;
 			if (_dif == 0) {
 				_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = _map_2;
 				_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_1;
 			} else {
-				_map_2[? ITEM_MAP.AMOUNT] += -_dif;
-				_map_1[? ITEM_MAP.AMOUNT] -= -_dif;
+				_map_2[? ITEM_MAP.AMOUNT] -= -_dif;
+				_map_1[? ITEM_MAP.AMOUNT] += -_dif;
 			}
 		}
 	} else if (scInventorySwapable(_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
