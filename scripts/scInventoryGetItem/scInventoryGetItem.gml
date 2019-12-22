@@ -11,6 +11,8 @@ _map[? ITEM_MAP.STACK_MAX] = noone;
 _map[? ITEM_MAP.SPRITE] = noone;
 _map[? ITEM_MAP.DURABILITY] = noone;
 _map[? ITEM_MAP.SCALE] = 1;
+_map[? ITEM_MAP.XX] = 0;
+_map[? ITEM_MAP.YY] = 0;
 
 switch (_map[? ITEM_MAP.ITEM]) {
 	case ITEM.AXE:
@@ -54,7 +56,7 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		_map[? ITEM_MAP.SPRITE] = sUltPortal;
 		_map[? ITEM_MAP.NAME] = "Portal";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.ABILITY;
-		_map[? ITEM_MAP.SCALE] = 0.7;
+		_map[? ITEM_MAP.SCALE] = 0.6;
 		break;
 	case ITEM.NONE: return noone;
 	default: break;
@@ -67,7 +69,7 @@ return _map;
 enum ITEM_MAP {
 	ITEM, AMOUNT, NAME, ITEM_TYPE,
 	STACK_MAX, SPRITE, DURABILITY, DURABILITY_ORIGINAL, MOVING,
-	SCALE
+	SCALE, XX, YY
 	//EVENT_SHOOT, EVENT_USE
 }
 

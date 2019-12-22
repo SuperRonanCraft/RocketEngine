@@ -19,8 +19,12 @@ if (scKeybindsGet(KEYBIND.INVENTORY)) {
 		for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
 			for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
 				var _slot_map = _inv_grid[# xx, yy];
-				if (_slot_map[? ITEM_MAP.MOVING])
-					_slot_map[? ITEM_MAP.MOVING] = false;
+				if (_slot_map != noone) {
+					if (_slot_map[? ITEM_MAP.MOVING])
+						_slot_map[? ITEM_MAP.MOVING] = false;
+					_slot_map[? ITEM_MAP.XX] = 0;
+					_slot_map[? ITEM_MAP.YY] = 0;
+				}
 			}
 	}
 }
@@ -60,7 +64,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
 		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
-		var _slot_hovering = scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, 0, 0);
+		var _slot_hovering = scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, _buffer_x, _buffer_y);
 		if (_slot_hovering)
 			_inv_hovering = [xx, yy];
 	}
@@ -112,10 +116,14 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
 		var _slot_map = _inv_grid[# xx, yy];
-		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
-		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
 		//Display item in inventory slot
 		if (_slot_map != noone && !_slot_map[? ITEM_MAP.MOVING] && _slot_map[? ITEM_MAP.ITEM] != ITEM.NONE) { //Display if there is an item in a slot, //Draw this item later if moving
+			var _xx_goal = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
+			var _yy_goal = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
+			var _xx = _slot_map[? ITEM_MAP.XX] != 0 ? lerp(_slot_map[? ITEM_MAP.XX], _xx_goal, 0.1) : _xx_goal;
+			var _yy = _slot_map[? ITEM_MAP.YY] != 0 ? lerp(_slot_map[? ITEM_MAP.YY], _yy_goal, 0.1) : _yy_goal;
+			_slot_map[? ITEM_MAP.XX] = _xx;
+			_slot_map[? ITEM_MAP.YY] = _yy;
 			var _sprite = _slot_map[? ITEM_MAP.SPRITE];
 			var _scale = _slot_map[? ITEM_MAP.SCALE];
 			var _item_w = sprite_get_width(_sprite);
@@ -182,6 +190,8 @@ if (_inv_hovering != noone && _inv_moving == noone) { //Are hovering over an ite
 	var _slot_map = _inv_grid[# _inv_moving[0], _inv_moving[1]];
 	var _item = _slot_map[? ITEM_MAP.ITEM];
 	if (_item != ITEM.NONE) { //Display if there is an item in a slot
+		_slot_map[? ITEM_MAP.XX] = _xx;
+		_slot_map[? ITEM_MAP.YY] = _yy;
 		var _sprite = _slot_map[? ITEM_MAP.SPRITE];
 		var _scale = _slot_map[? ITEM_MAP.SCALE];
 		var _item_w = sprite_get_width(_sprite);
