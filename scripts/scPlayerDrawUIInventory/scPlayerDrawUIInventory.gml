@@ -98,7 +98,11 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 					var _slot_map_2 = _inv_grid[# xx2, yy2];
 					if (_slot_map_2 != noone && _slot_map_2[? ITEM_MAP.MOVING])
 						if (!scInventorySwapable(xx, yy, xx2, yy2))
-							_color = c_red
+							_color = c_red;
+						else if (scInventoryStackable(xx, yy, xx2, yy2))
+							_color = c_orange;
+						//else
+						//	_color = c_orange;
 				}
 		}
 		
@@ -248,7 +252,29 @@ if (_inv_swap_from != noone && _inv_swap_to != noone) { //Swap items
 	if (_map_from != noone)
 		show_debug_message(string(_slot_from_type) + " " + string(_map_from[? ITEM_MAP.ITEM_TYPE]));*/
 	//if (_allow_swap_to && _allow_swap_from) {
-	if (scInventorySwapable(_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
+	if (scInventoryStackable(_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
+		var _map_1 = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
+		var _map_2 = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
+		var _curAmount_1 = _map_1[? ITEM_MAP.AMOUNT];
+		var _curAmount_2 = _map_2[? ITEM_MAP.AMOUNT];
+		var _maxStack = _map_1[? ITEM_MAP.STACK_MAX];
+		if (_curAmount_1 + _curAmount_2 <= _maxStack) { //One stack can fit into another
+			_map_2[? ITEM_MAP.AMOUNT] += _map_1[? ITEM_MAP.AMOUNT];
+			_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = noone;
+			_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_2;
+			ds_map_destroy(_map_1);
+		} else { //Too many items to fit in one stack
+			show_debug_message("Too Many Items!")
+			var _dif = _maxStack - _curAmount_2;
+			if (_dif == 0) {
+				_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = _map_2;
+				_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_1;
+			} else {
+				_map_2[? ITEM_MAP.AMOUNT] += -_dif;
+				_map_1[? ITEM_MAP.AMOUNT] -= -_dif;
+			}
+		}
+	} else if (scInventorySwapable(_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
 		_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = _map_to;
 		_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_from;
 	}

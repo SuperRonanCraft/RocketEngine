@@ -7223,6 +7223,14 @@
             }
         },
         {
+            "Key": "d92ac81e-32b4-4880-9bd9-874b75262bab",
+            "Value": {
+                "id": "92f711e7-31b2-407b-85ed-951ddc919ba2",
+                "resourcePath": "scripts\\scInventoryStackable\\scInventoryStackable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d9607834-34f0-4efc-ada1-4de939137bd4",
             "Value": {
                 "id": "fd9f5624-e82b-411d-92a9-fbe3a061594e",
@@ -8710,6 +8718,7 @@
         "bc3902ed-d915-4a61-8d46-dc075432b382",
         "3e0b720d-14b4-4ef9-a008-4b69007ae34e",
         "358436e0-e664-42de-b465-9fb659d6f166",
+        "d92ac81e-32b4-4880-9bd9-874b75262bab",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "26b40477-dd28-4867-adb4-50b416a7c5d5",

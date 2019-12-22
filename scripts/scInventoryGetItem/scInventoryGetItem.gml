@@ -31,14 +31,14 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		break;
 	case ITEM.WEAPON_ROCKET:
 		_map[? ITEM_MAP.AMOUNT] = 1;
-		_map[? ITEM_MAP.STACK_MAX] = 1;
+		_map[? ITEM_MAP.STACK_MAX] = 10;
 		_map[? ITEM_MAP.SPRITE] = sRocket_Default;
 		_map[? ITEM_MAP.NAME] = "Rocket Launcher";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.WEAPON;
 		break;
 	case ITEM.WEAPON_SHURIKEN:
 		_map[? ITEM_MAP.AMOUNT] = 1;
-		_map[? ITEM_MAP.STACK_MAX] = 1;
+		_map[? ITEM_MAP.STACK_MAX] = 6;
 		_map[? ITEM_MAP.SPRITE] = sShuriken_Default;
 		_map[? ITEM_MAP.NAME] = "Shuriken";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.WEAPON;
