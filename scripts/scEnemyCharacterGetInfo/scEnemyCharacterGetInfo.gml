@@ -22,6 +22,7 @@ switch (map[? CHARACTER_MAP.TYPE]) {
 		map[? CHARACTER_MAP.HEALTH_ARMOR] = 10;
 		map[? CHARACTER_MAP.HEALTH_SHIELD] = 20;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
+		map[? CHARACTER_MAP.SPEED] = 1;
 		break;
 	case CHARACTER_ENEMY.NADES:
 		map[? CHARACTER_MAP.NAME] = "Grenade";

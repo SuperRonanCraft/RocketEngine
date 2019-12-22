@@ -3,6 +3,8 @@ if (!global.play) exit;
 
 //scPlayerHandler(PLAYER_EVENT.STEP);
 
+scAddToTeam(id,team);
+
 scStateCheck();
 
 scUpdateTargetReticle();

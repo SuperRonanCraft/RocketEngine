@@ -791,6 +791,14 @@
             }
         },
         {
+            "Key": "160123fc-436e-4672-bb02-590a8d1d0ae0",
+            "Value": {
+                "id": "cee572a7-b37a-4e70-86ad-b5c9bb6a7a58",
+                "resourcePath": "scripts\\scFindAITarget\\scFindAITarget.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "16375fc1-1035-479d-a0d5-2e9be8fde0d3",
             "Value": {
                 "id": "d8a9717b-4c0f-43d3-912f-2649a6e75f5a",
@@ -7255,6 +7263,14 @@
             }
         },
         {
+            "Key": "da44b260-b021-4a2d-ab66-bab963c5bcaa",
+            "Value": {
+                "id": "6f4c65d3-6d99-489f-98a7-d11395c810f0",
+                "resourcePath": "scripts\\scAddToTeam\\scAddToTeam.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dac5356f-b79c-49a0-9a94-36e0af06b8e3",
             "Value": {
                 "id": "94e401f5-9c48-4998-9526-0b27410245e8",
@@ -8847,6 +8863,7 @@
         "b1ea5b00-84bc-421f-915d-ac540165c5d1",
         "23e7d68d-2647-4b25-99df-2d7bae1e3c55",
         "4d1b5431-1e9f-4b18-82e8-e5489a23141a",
+        "160123fc-436e-4672-bb02-590a8d1d0ae0",
         "5cfa03f2-375c-45f2-aeb8-e5d55b8caf84",
         "499ea0c8-db9d-44e4-878d-d07c88c07289",
         "b9ff66f3-fb2e-476a-a998-6204e5b3561a",
@@ -8860,6 +8877,7 @@
         "0ac59313-0faa-4348-beac-7b8d9834d7d2",
         "320bc476-28cc-4fa5-93d9-7e9e09a177b4",
         "7df196bd-cc21-4d29-8147-7cb780a8d6dd",
+        "da44b260-b021-4a2d-ab66-bab963c5bcaa",
         "daf0f886-aec6-438a-8c41-45ae14a4c551",
         "a117180e-9a76-4474-981e-8322f2d6435a",
         "1da95976-59fc-461c-93bb-59b3aeec5787",

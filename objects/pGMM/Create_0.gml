@@ -75,5 +75,6 @@ for (var i = 0; i < array_length_1d(menu_pages); i++)
 
 start_y_default = RES_H - RES_H / 4;
 
+
 //Disabled unfolding
 unfolding = false;

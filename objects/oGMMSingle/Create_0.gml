@@ -10,7 +10,7 @@ global.play = true;
 player_checkpoint = 0; //Index of checkpoint
 player_hp = 0;
 player_rocket = noone;
-
+/*
 if (!scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_NEWGAME, gamemode))
 	with (oPlayer) {
 		shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] = scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_LIVES, other.gamemode);
@@ -25,7 +25,7 @@ if (!scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGL
 	}
 
 scStatsSet(gamemode, [STATISTICS_GAMEMODE.GM_SINGLE_NEWGAME], [false]);
-	
+*/	
 	
 //--------------
 //User Interface
@@ -50,6 +50,11 @@ start_y_default = RES_H - RES_H / 4;
 
 //Disabled unfolding
 unfolding = false;
+
+//Team Declaration
+global.teamEnemy = ds_list_create();
+global.teamPlayer = ds_list_create();
+global.teamNone = ds_list_create();
 
 //Apply Modifiers
 event_user(10);

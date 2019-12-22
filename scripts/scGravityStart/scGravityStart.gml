@@ -3,7 +3,7 @@ var map = gravity_map;
 
 //EDITTABLE
 map[? GRAVITY_MAP.GRAVITY_ENABLED] = true; //Should we even fall?
-map[? GRAVITY_MAP.WALK_SPEED] = 6;
+map[? GRAVITY_MAP.WALK_SPEED] = 8;
 map[? GRAVITY_MAP.WALK_SPEED_MOD] = 0;
 map[? GRAVITY_MAP.JUMP_HEIGHT] = 25 - (25 / (TIME_SPEED * 2));
 map[? GRAVITY_MAP.JUMP_MOD] = 0; //Amount to temporaraly add/sub from jumping

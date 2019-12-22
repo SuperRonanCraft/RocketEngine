@@ -2,6 +2,8 @@
 
 if (!player.system_ai) exit;
 
+aiTarget = scFindAITarget();
+
 switch (aiType) {
 	case AI_TYPE.ONEVONE:
 		switch (player.weapon_map[? WEAPON_MAP.TYPE]) {

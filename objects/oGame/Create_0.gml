@@ -60,6 +60,8 @@ enum TEAM {
 	NONE, LEFT, RIGHT
 }
 
+
+
 //Randomize gameplay
 randomize();
 
