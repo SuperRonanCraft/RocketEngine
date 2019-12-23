@@ -15,10 +15,7 @@ if (scKeybindsGet(KEYBIND.INVENTORY)) {
 	//player_map[? PLAYER_MAP.CAN_CONTROL] = !_map[? INVENTORY_MAP.OPEN];
 	//Safety
 	if (!_map[? INVENTORY_MAP.OPEN]) { //Put item back if moving
-		var _moving_map = _map[? INVENTORY_MAP.MOVING_MAP]
-		if (_moving_map[? INVENTORY_ITEMMOVING_MAP.MAP] != noone)
-			show_debug_message("uh oh!");
-		/*var _inv_grid = _map[? INVENTORY_MAP.GRID];
+		var _inv_grid = _map[? INVENTORY_MAP.GRID];
 		for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
 			for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
 				var _slot_map = _inv_grid[# xx, yy];
@@ -28,7 +25,7 @@ if (scKeybindsGet(KEYBIND.INVENTORY)) {
 					_slot_map[? ITEM_MAP.XX] = 0;
 					_slot_map[? ITEM_MAP.YY] = 0;
 				}
-			}*/
+			}
 	}
 }
 
@@ -54,8 +51,8 @@ var _buffer_x = 16; //Distance between inventory slots (x)
 var _buffer_y = 16; //Distance between inventory slots (y)
 var _inv_slot_size = 70;
 var _inv_hovering = noone;
-var _inv_moving = _map[? INVENTORY_MAP.MOVING_MAP];
-//var _inv_swap_from = noone;
+var _inv_moving = noone;
+var _inv_swap_from = noone;
 var _inv_swap_to = noone;
 
 _x = (RES_W / 2) - (((_map[? INVENTORY_MAP.SIZE_ROWS] / 2)) * _inv_slot_size) - (_buffer_x * (_map[? INVENTORY_MAP.SIZE_ROWS] / 2));
@@ -93,7 +90,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 			default: break;
 		}
 		var _slot_map = _inv_grid[# xx, yy];
-		/*if (_slot_map != noone && _slot_map[? ITEM_MAP.MOVING])
+		if (_slot_map != noone && _slot_map[? ITEM_MAP.MOVING])
 			_color = c_gray;
 		else {
 			for (var xx2 = 0; xx2 < _map[? INVENTORY_MAP.SIZE_ROWS]; xx2++)
@@ -107,7 +104,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 						//else
 						//	_color = c_purple;
 				}
-		}*/
+		}
 		
 		draw_sprite_part_ext(_sprite, _sprite_index, 0, 0, _inv_slot_size, _inv_slot_size, _xx, _yy, 1, 1, _color, _slot_alpha);
 		/*var _slot_hovering = scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, 0, 0);
@@ -124,7 +121,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
 		var _slot_map = _inv_grid[# xx, yy];
 		//Display item in inventory slot
-		if (_slot_map != noone /*&& !_slot_map[? ITEM_MAP.MOVING]*/ && _slot_map[? ITEM_MAP.ITEM] != ITEM.NONE) { //Display if there is an item in a slot, //Draw this item later if moving
+		if (_slot_map != noone && !_slot_map[? ITEM_MAP.MOVING] && _slot_map[? ITEM_MAP.ITEM] != ITEM.NONE) { //Display if there is an item in a slot, //Draw this item later if moving
 			var _xx_goal = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 			var _yy_goal = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
 			var _xx = _slot_map[? ITEM_MAP.XX] != 0 ? lerp(_slot_map[? ITEM_MAP.XX], _xx_goal, 0.1) : _xx_goal;
@@ -148,21 +145,17 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 		
 		//Item is moving?
 		var _slot_hovering = _inv_hovering != noone && _inv_hovering[0] == xx && _inv_hovering[1] == yy;
-		if (_slot_map != noone && _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] == noone /*&& !_slot_map[? ITEM_MAP.MOVING]*/) {
-			if (_slot_map[? ITEM_MAP.ITEM] != ITEM.NONE && _slot_hovering && mouse_check_button_pressed(mb_left)) {
-				_inv_moving[? INVENTORY_ITEMMOVING_MAP.GRID_ID] = [xx, yy];
-				_inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] = _slot_map;
-				_slot_map = noone;
-				//_slot_map[? ITEM_MAP.MOVING] = true;
-			}
+		if (_slot_map != noone && !_slot_map[? ITEM_MAP.MOVING])
+			if (_slot_map[? ITEM_MAP.ITEM] != ITEM.NONE && _slot_hovering && mouse_check_button_pressed(mb_left))
+				_slot_map[? ITEM_MAP.MOVING] = true;
 		//Item Swapping
-		/*if (_slot_map != noone && _slot_map[? ITEM_MAP.MOVING]) {
+		if (_slot_map != noone && _slot_map[? ITEM_MAP.MOVING]) {
 			//_inv_hovering = [xx, yy];
 			_inv_moving = [xx, yy]; //Do not show description while moving item
 			if (mouse_check_button_released(mb_left)) {
 				_inv_swap_from = [xx, yy]; //I am dropping, add my self to swap invs with another slot
 				_slot_map[? ITEM_MAP.MOVING] = false;
-			}*/
+			}
 		} else if (_slot_hovering && mouse_check_button_released(mb_left))
 			_inv_swap_to = [xx, yy]; //I was released on, add my self to swap invs with a dropped item
 	}
@@ -170,7 +163,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 
 //Draw item tool tip
 
-if (_inv_hovering != noone && _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] == noone) { //Are hovering over an item and not moving another item
+if (_inv_hovering != noone && _inv_moving == noone) { //Are hovering over an item and not moving another item
 	var _slot_map = _inv_grid[# _inv_hovering[0], _inv_hovering[1]];
 	if (_slot_map != noone && _slot_map[? ITEM_MAP.ITEM] != ITEM.NONE || global.debug) {
 		var _xx = device_mouse_x_to_gui(0);
@@ -195,10 +188,10 @@ if (_inv_hovering != noone && _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] == noo
 		var _y_offset = (_frame_hei - _hei) / 2;
 		scDrawText(_xx + _buffer * 2 + _x_offset, _yy + _buffer * 2 + _y_offset, _text, c_white, _scale, noone, noone, fa_left, fa_top);
 	}
-} else if (/*_inv_hovering != noone &&*/ _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] != noone) { //Draw item we are moving
+} else if (/*_inv_hovering != noone &&*/ _inv_moving != noone) { //Draw item we are moving
 	var _xx = device_mouse_x_to_gui(0) - _inv_slot_size / 2;
 	var _yy = device_mouse_y_to_gui(0) - _inv_slot_size / 2;
-	var _slot_map = _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP];
+	var _slot_map = _inv_grid[# _inv_moving[0], _inv_moving[1]];
 	var _item = _slot_map[? ITEM_MAP.ITEM];
 	if (_item != ITEM.NONE) { //Display if there is an item in a slot
 		_slot_map[? ITEM_MAP.XX] = _xx;
@@ -219,39 +212,33 @@ if (_inv_hovering != noone && _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] == noo
 	}
 }
 
-if (_map[? INVENTORY_MAP.MOVING_MAP] != noone && _inv_swap_to != noone) { //Swap items
-	//var _map_from = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
-	var _map_hover = _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP];
+if (_inv_swap_from != noone && _inv_swap_to != noone) { //Swap items
+	var _map_from = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
 	var _map_to = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
-	if (scInventoryStackable(_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]], _inv_moving)) {
-		//var _map_1 = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
-		var _map_to = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
-		var _curAmount_1 = _inv_moving[? ITEM_MAP.AMOUNT];
-		var _curAmount_2 = _map_to[? ITEM_MAP.AMOUNT];
-		var _maxStack = _map_to[? ITEM_MAP.STACK_MAX];
+	if (scInventoryStackable(_inv_swap_to[0], _inv_swap_to[1], _inv_swap_from[0], _inv_swap_from[1])) {
+		var _map_1 = _inv_grid[# _inv_swap_from[0], _inv_swap_from[1]];
+		var _map_2 = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
+		var _curAmount_1 = _map_1[? ITEM_MAP.AMOUNT];
+		var _curAmount_2 = _map_2[? ITEM_MAP.AMOUNT];
+		var _maxStack = _map_1[? ITEM_MAP.STACK_MAX];
 		if (_curAmount_1 + _curAmount_2 <= _maxStack) { //One stack can fit into another
-			_map_to[? ITEM_MAP.AMOUNT] += _map_to[? ITEM_MAP.AMOUNT];
-			//_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = noone;
-			_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_to;
-			_inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] = noone;
-			//ds_map_destroy(_map_1);
+			_map_2[? ITEM_MAP.AMOUNT] += _map_1[? ITEM_MAP.AMOUNT];
+			_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = noone;
+			_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_2;
+			ds_map_destroy(_map_1);
 		} else { //Too many items to fit in one stack
 			var _dif = _maxStack - _curAmount_2;
 			if (_dif == 0) {
-				var _moving_grid_id = _inv_moving[? INVENTORY_ITEMMOVING_MAP.GRID_ID];
-				_inv_grid[# _moving_grid_id[0], _moving_grid_id[1]] = _map_to;
-				_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP];
-				_inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] = noone;
-				_inv_moving[? INVENTORY_ITEMMOVING_MAP.GRID_ID] = noone;
+				_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = _map_2;
+				_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_1;
 			} else {
-				_map_to[? ITEM_MAP.AMOUNT] -= -_dif;
-				//_map_1[? ITEM_MAP.AMOUNT] += -_dif;
+				_map_2[? ITEM_MAP.AMOUNT] -= -_dif;
+				_map_1[? ITEM_MAP.AMOUNT] += -_dif;
 			}
 		}
-	} else if (scInventorySwapable(_inv_moving , ds_grid_get(_map[? INVENTORY_MAP.GRID_TYPE], _inv_swap_to[0], _inv_swap_to[1]))) {//_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
-		//_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = _map_to;
-		_inv_moving[? INVENTORY_ITEMMOVING_MAP.MAP] = _inv_grid[# _inv_swap_to[0], _inv_swap_to[1]];
-		_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_hover;
+	} else if (scInventorySwapable(_inv_swap_from[0], _inv_swap_from[1], _inv_swap_to[0], _inv_swap_to[1])) {
+		_inv_grid[# _inv_swap_from[0], _inv_swap_from[1]] = _map_to;
+		_inv_grid[# _inv_swap_to[0], _inv_swap_to[1]] = _map_from;
 	}
 }
 

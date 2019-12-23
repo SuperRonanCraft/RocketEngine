@@ -9,14 +9,7 @@ _map[? INVENTORY_MAP.GRID_TYPE] = ds_grid_create(_map[? INVENTORY_MAP.SIZE_ROWS]
 _map[? INVENTORY_MAP.OPEN] = false;
 _map[? INVENTORY_MAP.ALPHA] = 0; //Curent inventory alpha
 _map[? INVENTORY_MAP.ALPHA_CHANGE] = 0.05; //How much to disappear by
-//_map[? INVENTORY_MAP.SLOT_MOVING] = [-1, -1]; //Grid id we are moving
-_map[? INVENTORY_MAP.MOVING_MAP] = ds_map_create();
-//Moving map
-var _moving_map = _map[? INVENTORY_MAP.MOVING_MAP];
-_moving_map[? INVENTORY_ITEMMOVING_MAP.MAP] = noone;
-_moving_map[? INVENTORY_ITEMMOVING_MAP.GRID_ID] = noone;
-_moving_map[? INVENTORY_ITEMMOVING_MAP.XX] = 0;
-_moving_map[? INVENTORY_ITEMMOVING_MAP.YY] = 0;
+_map[? INVENTORY_MAP.SLOT_MOVING] = [-1, -1]; //Grid id we are moving
 
 //Setup inv slot types
 var _grid = _map[? INVENTORY_MAP.GRID_TYPE];
@@ -44,12 +37,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
 	}
 
 enum INVENTORY_MAP {
-	SIZE_ROWS, SIZE_COLUMNS, GRID, GRID_TYPE, OPEN, ALPHA, ALPHA_CHANGE, SLOT_TYPE,
-	MOVING_MAP
-}
-
-enum INVENTORY_ITEMMOVING_MAP {
-	XX, YY, GRID_ID, MAP
+	SIZE_ROWS, SIZE_COLUMNS, GRID, GRID_TYPE, OPEN, ALPHA, ALPHA_CHANGE, SLOT_MOVING, SLOT_TYPE
 }
 
 enum INVENTORY_SLOT_TYPE {
