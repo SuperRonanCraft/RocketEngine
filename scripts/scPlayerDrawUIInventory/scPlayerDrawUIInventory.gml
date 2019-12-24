@@ -16,8 +16,8 @@ if (scKeybindsGet(KEYBIND.INVENTORY)) {
 	//Safety
 	if (!_map[? INVENTORY_MAP.OPEN]) { //Put item back if moving
 		var _inv_grid = _map[? INVENTORY_MAP.GRID];
-		for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
-			for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
+		for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx++)
+			for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMN_SIZE]; yy++) {
 				var _slot_map = _inv_grid[# xx, yy];
 				if (_slot_map != noone) {
 					if (_slot_map[? ITEM_MAP.MOVING])
@@ -43,5 +43,5 @@ if (_map[? INVENTORY_MAP.OPEN]) {
 if (_map[? INVENTORY_MAP.ALPHA] <= 0) return false;
 _alpha = _map[? INVENTORY_MAP.OPEN] ? _alpha : _map[? INVENTORY_MAP.ALPHA];
 
-//scPlayerDrawUIInventoryScreen(_x, _y, _alpha);
+scPlayerDrawUIInventoryScreen(_x, _y, _alpha);
 return true;
