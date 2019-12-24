@@ -1,9 +1,9 @@
 {
-    "id": "2e3faef0-8b3b-4e91-bc28-29f582badc65",
+    "id": "de855d3b-cc9f-4ba4-9e19-4154a85147f9",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "snRocketShoot",
-    "audioGroupGuid": "0de742f3-9b87-4db3-a7ae-4203f676dce3",
+    "name": "snBite_Hit",
+    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

@@ -31,6 +31,9 @@ enum SOUND {
 		//Selected a button
 	UI_SELECT = snSelect,
 	//EFFECTS
+		//Bite
+	EFFECT_BITE = snBite,
+	EFFECT_BITE_HIT = snBite_Hit,
 		//Shoot rocket
 	EFFECT_SHOOT = snRocketShoot,
 		//Gotten hit by rocket

@@ -6,7 +6,8 @@
     "children": [
         "412a4dd0-e302-438a-8d21-2ba5597fa8b4",
         "8f62e0c2-4fc9-4e53-ab8e-0cd44a955b70",
-        "2dafeaac-dcfc-4533-b268-e020fc82992f"
+        "2dafeaac-dcfc-4533-b268-e020fc82992f",
+        "69d21aac-d4fc-4488-9b23-cdab25b36b77"
     ],
     "filterType": "GMSound",
     "folderName": "Weapons",

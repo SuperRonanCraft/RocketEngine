@@ -1,4 +1,4 @@
-/// @description  Move Arrow
+/// @description  Move Arrow/Find Collisions
 
 
 //Run special step script and override movement

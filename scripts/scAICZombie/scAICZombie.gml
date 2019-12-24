@@ -3,7 +3,14 @@
 
 var _shoot = argument0;
 
-var meleeRange = 30;
+if(variable_instance_exists(id,"meleeCooldown")){
+	meleeCooldown--;
+}
+else{
+	meleeCooldown = 40;	
+}
+
+var meleeRange = 10;
 
 if(aiTarget != noone){
 	
@@ -29,10 +36,13 @@ if(aiTarget != noone){
 	}
 	
 	if(point_distance(player.x,player.y,aiTarget.x,aiTarget.y) < meleeRange){
-		AIShoot = true;
-	}
-	else{
-		AIShoot = false;	
+		if(meleeCooldown <= 0){
+			AIRight = false;
+			AILeft = false;
+			var obj = instance_create_depth(player.x,player.y,depth-5,oMelee_Bite);
+			obj.owner = player.id;
+			meleeCooldown = 40;
+		}
 	}
 
 }
