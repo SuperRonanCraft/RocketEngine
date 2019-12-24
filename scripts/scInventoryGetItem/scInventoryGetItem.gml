@@ -11,6 +11,7 @@ _map[? ITEM_MAP.STACK_MAX] = noone;
 _map[? ITEM_MAP.SPRITE] = noone;
 _map[? ITEM_MAP.DURABILITY] = noone;
 _map[? ITEM_MAP.SCALE] = 1;
+_map[? ITEM_MAP.MAP] = noone; //Customizable map for this item
 _map[? ITEM_MAP.XX] = 0;
 _map[? ITEM_MAP.YY] = 0;
 
@@ -35,6 +36,8 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		_map[? ITEM_MAP.SPRITE] = sRocket_Default;
 		_map[? ITEM_MAP.NAME] = "Rocket Launcher";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.WEAPON;
+		_map[? ITEM_MAP.MAP] = scRocketGet(ROCKET.DEFAULT);
+		//_map[? ITEM_MAP.SCRIPT_USE] = scWeaponActivate;
 		break;
 	case ITEM.WEAPON_SHURIKEN:
 		_map[? ITEM_MAP.AMOUNT] = 1;
@@ -69,7 +72,8 @@ return _map;
 enum ITEM_MAP {
 	ITEM, AMOUNT, NAME, ITEM_TYPE,
 	STACK_MAX, SPRITE, DURABILITY, DURABILITY_ORIGINAL, MOVING,
-	SCALE, XX, YY
+	SCALE, XX, YY,
+	MAP
 	//EVENT_SHOOT, EVENT_USE
 }
 

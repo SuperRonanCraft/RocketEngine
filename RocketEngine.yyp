@@ -2095,6 +2095,14 @@
             }
         },
         {
+            "Key": "4025149d-1566-4cc2-aab7-88573a556916",
+            "Value": {
+                "id": "56f646dd-83a9-4d4f-a5d3-066af8f05159",
+                "resourcePath": "scripts\\scPlayerDrawUIInventoryHotbar\\scPlayerDrawUIInventoryHotbar.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "40621780-329a-4956-8c2b-a53f0f147d23",
             "Value": {
                 "id": "aecc2ba4-3f94-48fa-8711-bcf5d6c1147f",
@@ -3227,6 +3235,14 @@
             "Value": {
                 "id": "36d4fd11-74e4-4361-8c29-00848af54731",
                 "resourcePath": "scripts\\scEnemyCharacterChange\\scEnemyCharacterChange.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5cfbf016-f2ce-4c40-9b6f-6feae632e9d0",
+            "Value": {
+                "id": "e72d3b91-c722-425e-883a-826d2093e156",
+                "resourcePath": "scripts\\scPlayerDrawUIInventoryScreen\\scPlayerDrawUIInventoryScreen.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8733,6 +8749,8 @@
         "2142faa1-524b-4dfc-8767-627135963ee7",
         "bc3902ed-d915-4a61-8d46-dc075432b382",
         "3e0b720d-14b4-4ef9-a008-4b69007ae34e",
+        "4025149d-1566-4cc2-aab7-88573a556916",
+        "5cfbf016-f2ce-4c40-9b6f-6feae632e9d0",
         "358436e0-e664-42de-b465-9fb659d6f166",
         "d92ac81e-32b4-4880-9bd9-874b75262bab",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
