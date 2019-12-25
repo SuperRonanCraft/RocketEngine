@@ -1,45 +1,13 @@
+//MAIN SCREEN
 ///@arg x
 ///@arg y
 ///@arg alpha
-/*if (!inventory_system) return false;
 
 var _map = inventory_map;
 
-if (scKeybindsGet(KEYBIND.INVENTORY)) {
-	_map[? INVENTORY_MAP.OPEN] = !_map[? INVENTORY_MAP.OPEN];
-	global.play = !_map[? INVENTORY_MAP.OPEN];
-	if (_map[? INVENTORY_MAP.OPEN])
-		SlideTransition(TRANS_MODE.PAUSE);
-	else
-		SlideTransition(TRANS_MODE.UNPAUSE);
-	//player_map[? PLAYER_MAP.CAN_CONTROL] = !_map[? INVENTORY_MAP.OPEN];
-	//Safety
-	if (!_map[? INVENTORY_MAP.OPEN]) { //Put item back if moving
-		var _inv_grid = _map[? INVENTORY_MAP.GRID];
-		for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++)
-			for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
-				var _slot_map = _inv_grid[# xx, yy];
-				if (_slot_map != noone) {
-					if (_slot_map[? ITEM_MAP.MOVING])
-						_slot_map[? ITEM_MAP.MOVING] = false;
-					_slot_map[? ITEM_MAP.XX] = 0;
-					_slot_map[? ITEM_MAP.YY] = 0;
-				}
-			}
-	}
-}
-
-var _alpha = argument2;
-
-if (_map[? INVENTORY_MAP.OPEN]) {
-	_map[? INVENTORY_MAP.ALPHA] = min(_map[? INVENTORY_MAP.ALPHA] + _map[? INVENTORY_MAP.ALPHA_CHANGE], _alpha);
-} else
-	_map[? INVENTORY_MAP.ALPHA] = max(_map[? INVENTORY_MAP.ALPHA] - _map[? INVENTORY_MAP.ALPHA_CHANGE], 0);
-
-if (_map[? INVENTORY_MAP.ALPHA] <= 0) return false;
 var _x = argument0;
 var _y = argument1;
-_alpha = _map[? INVENTORY_MAP.OPEN] ? _alpha : _map[? INVENTORY_MAP.ALPHA];
+var _alpha = argument2;
 
 //if (team == TEAM.RIGHT)
 //	_x = RES_W - _x - sprite_get_width(sUIInventory);
@@ -55,13 +23,13 @@ var _inv_moving = noone;
 var _inv_swap_from = noone;
 var _inv_swap_to = noone;
 
-_x = (RES_W / 2) - (((_map[? INVENTORY_MAP.SIZE_ROWS] / 2)) * _inv_slot_size) - (_buffer_x * (_map[? INVENTORY_MAP.SIZE_ROWS] / 2));
-_y = (RES_H / 2) - (((_map[? INVENTORY_MAP.SIZE_COLUMNS] / 2)) * _inv_slot_size) - (_buffer_y * (_map[? INVENTORY_MAP.SIZE_COLUMNS] / 2));
+_x = (RES_W / 2) - (((_map[? INVENTORY_MAP.SIZE_ROW_SIZE] / 2)) * _inv_slot_size) - (_buffer_x * (_map[? INVENTORY_MAP.SIZE_ROW_SIZE] / 2));
+_y = (RES_H / 2) - (((_map[? INVENTORY_MAP.SIZE_COLUMN_SIZE] / 2)) * _inv_slot_size) - (_buffer_y * (_map[? INVENTORY_MAP.SIZE_COLUMN_SIZE] / 2));
 
 //Hovering?
 var _inv_grid = _map[? INVENTORY_MAP.GRID];
-for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
-	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
+for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx++) {
+	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMN_SIZE]; yy++) {
 		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
 		var _slot_hovering = scUIHoveringBox(_xx, _yy, _xx + _inv_slot_size, _yy + _inv_slot_size, _buffer_x, _buffer_y);
@@ -71,8 +39,8 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 }
 
 //Draw slot, highlight if hovering
-for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
-	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
+for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx++) {
+	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMN_SIZE]; yy++) {
 		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
 		//Draw Inventory Slot
@@ -93,8 +61,8 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 		if (_slot_map != noone && _slot_map[? ITEM_MAP.MOVING])
 			_color = c_gray;
 		else {
-			for (var xx2 = 0; xx2 < _map[? INVENTORY_MAP.SIZE_ROWS]; xx2++)
-				for (var yy2 = 0; yy2 < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy2++) {
+			for (var xx2 = 0; xx2 < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx2++)
+				for (var yy2 = 0; yy2 < _map[? INVENTORY_MAP.SIZE_COLUMN_SIZE]; yy2++) {
 					var _slot_map_2 = _inv_grid[# xx2, yy2];
 					if (_slot_map_2 != noone && _slot_map_2[? ITEM_MAP.MOVING])
 						if (!scInventorySwapable(xx, yy, xx2, yy2))
@@ -112,13 +80,13 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
 		if (_slot_hovering) {
 			scDrawRect(_xx + 1, _yy + 1, _xx + 63, _yy + 63, c_white, false, _alpha / 2);
 			_inv_hovering = [xx, yy];
-		}
+		}*/
 	}
 }
 
 //Draw Sprite
-for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROWS]; xx++) {
-	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMNS]; yy++) {
+for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx++) {
+	for (var yy = 0; yy < _map[? INVENTORY_MAP.SIZE_COLUMN_SIZE]; yy++) {
 		var _slot_map = _inv_grid[# xx, yy];
 		//Display item in inventory slot
 		if (_slot_map != noone && !_slot_map[? ITEM_MAP.MOVING] && _slot_map[? ITEM_MAP.ITEM] != ITEM.NONE) { //Display if there is an item in a slot, //Draw this item later if moving
@@ -188,7 +156,7 @@ if (_inv_hovering != noone && _inv_moving == noone) { //Are hovering over an ite
 		var _y_offset = (_frame_hei - _hei) / 2;
 		scDrawText(_xx + _buffer * 2 + _x_offset, _yy + _buffer * 2 + _y_offset, _text, c_white, _scale, noone, noone, fa_left, fa_top);
 	}
-} else if (/*_inv_hovering != noone && _inv_moving != noone) { //Draw item we are moving
+} else if (/*_inv_hovering != noone &&*/ _inv_moving != noone) { //Draw item we are moving
 	var _xx = device_mouse_x_to_gui(0) - _inv_slot_size / 2;
 	var _yy = device_mouse_y_to_gui(0) - _inv_slot_size / 2;
 	var _slot_map = _inv_grid[# _inv_moving[0], _inv_moving[1]];
