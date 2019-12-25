@@ -50,8 +50,8 @@ if(!deactivate){
 		//show_debug_message("isplayer " + string(isPlayer));
 		
 		if(isPlayer && !deactivate){
-			var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
-			var _oteam = obj.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
+			var _team = owner.team; //Owner Team
+			var _oteam = obj.team; //Entity Team
 		
 			if(_team != _oteam){
 				if (ds_list_find_index(confirmList, obj) == -1) { //We've never hit this player before

@@ -3511,6 +3511,14 @@
             }
         },
         {
+            "Key": "64d608d7-717c-4502-a3c1-904c534fc661",
+            "Value": {
+                "id": "afc103f4-6b0e-4f9c-8d47-184fb37427a1",
+                "resourcePath": "sprites\\sUIDamageIcons\\sUIDamageIcons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "65057742-56a6-47d5-a353-431e803d34d4",
             "Value": {
                 "id": "1633d0df-cd5b-49bc-8a4a-57f6001ce0b6",
@@ -5351,6 +5359,14 @@
             }
         },
         {
+            "Key": "9fce132c-d1de-45c9-894a-c257cbb902be",
+            "Value": {
+                "id": "34fb7e8d-b7b0-4f74-943f-a3f427e765b5",
+                "resourcePath": "sprites\\sUIElementIcons\\sUIElementIcons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a0180b61-f5da-4c63-91f0-ced21ec54f66",
             "Value": {
                 "id": "4a3861a6-8ab2-48db-a094-03970e3e91cb",
@@ -5812,6 +5828,14 @@
                 "id": "304887ad-bb0e-4d01-bcd1-8e7b165d9b2f",
                 "resourcePath": "rooms\/r1v1Stage1\/r1v1Stage1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "ad4aa2ca-15a1-4eb1-95e3-11fcc20366b2",
+            "Value": {
+                "id": "2d7badad-ab3b-418b-9db2-960c1c3fa3fb",
+                "resourcePath": "sprites\\sUIDamageTypeIcons\\sUIDamageTypeIcons.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6908,6 +6932,14 @@
                 "id": "ad6fb392-e5c9-47d3-b06b-c8894fbe6cee",
                 "resourcePath": "sprites\\spArmor\\spArmor.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cc800836-596c-48ec-882d-bd4063f75862",
+            "Value": {
+                "id": "fc5e7c55-5ef0-4dc9-99a7-71ae9f1b1dff",
+                "resourcePath": "scripts\\scRemoveFromTeam\\scRemoveFromTeam.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8952,6 +8984,7 @@
         "320bc476-28cc-4fa5-93d9-7e9e09a177b4",
         "7df196bd-cc21-4d29-8147-7cb780a8d6dd",
         "da44b260-b021-4a2d-ab66-bab963c5bcaa",
+        "cc800836-596c-48ec-882d-bd4063f75862",
         "daf0f886-aec6-438a-8c41-45ae14a4c551",
         "a117180e-9a76-4474-981e-8322f2d6435a",
         "1da95976-59fc-461c-93bb-59b3aeec5787",

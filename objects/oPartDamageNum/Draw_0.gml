@@ -18,6 +18,39 @@ switch (damage_type) {
 
 for (var i = 0; i < array_length_1d(value_cached); i++)
 	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], _c, alpha, scale, scale, angle);
+	
+//Base Type
+if(damage_type != DAMAGE_TYPE.NONE){
+	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sUIDamageTypeIcons, damage_type, _c, alpha, scale, scale, angle);
+	//Amped damage
+	if(base_damage_amped != 0){
+		if(sign(base_damage_amped) == 1){
+			scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y - offset, sUIDamageIcons, 4, _c, alpha, scale, scale, angle);
+		}
+		else{
+			scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y - offset, sUIDamageIcons, 3, _c, alpha, scale, scale, angle);
+		}
+	}
+	i++;
+
+}
+
+//Element Type
+if(damage_element != DAMAGE_ELEMENT.NONE){
+	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sUIElementIcons, damage_element, _c, alpha, scale, scale, angle);
+
+	//Amped damage
+	if(element_damage_amped != 0){
+		if(sign(element_damage_amped) == 1){
+			scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y - offset, sUIDamageIcons, 4, _c, alpha, scale, scale, angle);
+		}
+		else{
+			scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y - offset, sUIDamageIcons, 3, _c, alpha, scale, scale, angle);
+		}
+	}
+
+}
+
 
 if (damage_killed)
 	scale = lerp(scale, scale_max, 0.04);

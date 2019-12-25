@@ -37,10 +37,10 @@ if(!ds_list_empty(hitList)){
 	for (var i = 0; i < ds_list_size(hitList); i++) {
 	    var entity = hitList[|i];
 		
-		if(entity.player_map[? PLAYER_MAP.ALIVE] && entity.shootable_map[? SHOOTABLE_MAP.TEAM] != owner.shootable_map[? SHOOTABLE_MAP.TEAM] && entity.id != id){
+		if(entity.player_map[? PLAYER_MAP.ALIVE] && entity.team != owner.team && entity.id != id){
 			if(ds_list_find_index(confirmList,entity) == -1){
 				ds_list_add(confirmList,entity);
-				scShootableDamage(owner.id,entity.id,false,SOUND.EFFECT_BITE_HIT,5);
+				scShootableDamage(owner.id,entity.id,false,false,5, noone, DAMAGE_TYPE.STAB,false,DAMAGE_ELEMENT.INFECTED);
 			}
 		}
 		

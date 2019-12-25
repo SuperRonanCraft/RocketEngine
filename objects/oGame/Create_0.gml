@@ -60,6 +60,11 @@ enum TEAM {
 	NONE, LEFT, RIGHT
 }
 
+//Team Declaration
+global.teamEnemy = ds_list_create();
+global.teamPlayer = ds_list_create();
+global.teamNone = ds_list_create();
+
 
 
 //Randomize gameplay

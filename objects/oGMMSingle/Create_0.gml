@@ -51,10 +51,5 @@ start_y_default = RES_H - RES_H / 4;
 //Disabled unfolding
 unfolding = false;
 
-//Team Declaration
-global.teamEnemy = ds_list_create();
-global.teamPlayer = ds_list_create();
-global.teamNone = ds_list_create();
-
 //Apply Modifiers
 event_user(10);

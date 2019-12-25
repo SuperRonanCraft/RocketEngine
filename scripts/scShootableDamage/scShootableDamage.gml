@@ -21,6 +21,9 @@ var _damage_element = argument_count > 8 ? (argument[8] != noone ? argument[8] :
 var didDamage = false;
 var lethalDamage = false;
 
+var _base_ampedDamage = 0;
+var _element_ampedDamage = 0;
+
 if (dmg < 0) { //Negative damage
 	scShootableHeal(damaging, abs(dmg), true);
 	exit;
@@ -48,13 +51,20 @@ with (damaging) {
 			part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
 			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SHIELD_DAMAGE], _dmg_left);
 			
+			//Calculate Resistances
+			
+			
+			//All shield damage
 			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_SHIELD]) {
 				_dmg_left -= map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 				_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 				scPlaySound(SOUND.UI_SELECT);
 				scSpawnParticle(x, bbox_top, ceil(_dmg_inflicted * 1.3 + 10), 10, spShield, WORLDPART_TYPE.SHIELD);
-			} else {
+			} 
+			
+			//Partial Shield Damage
+			else {
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] -= _dmg_left;
 				_dmg_inflicted += _dmg_left;
 				
@@ -68,14 +78,31 @@ with (damaging) {
 		
 		if (map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0 && _dmg_left > 0) {
 			var _dmg_to_take = 0;
-			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_ARMOR]) {
-				_dmg_to_take = floor(_dmg_left - (map[? SHOOTABLE_MAP.HEALTH_ARMOR] * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]));	
-				//_dmg_remaining = _dmg_remaining - (_dmg_remaining * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);
-			} else {
-				_dmg_to_take = floor(_dmg_left * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);	
+			
+			//Calculate Resistances
+			
+			//Base Damage
+			if(_damage_type == DAMAGE_TYPE.STAB){
+					var multiplier = 0.5;
+					_dmg_left = ceil( _dmg_left *multiplier);
+					_base_ampedDamage -= multiplier;
 			}
 			
-			var _armor_left = floor(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
+			//Element Damage
+			if(_damage_element == DAMAGE_ELEMENT.INFECTED){
+					var multiplier = 0.3;
+					_dmg_left = ceil( _dmg_left *multiplier);
+					_element_ampedDamage -= multiplier;
+			}
+			//---------------------
+			
+			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_ARMOR]) {
+				_dmg_to_take = ceil(_dmg_left - (map[? SHOOTABLE_MAP.HEALTH_ARMOR] * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]));	
+			} else {
+				_dmg_to_take = ceil(_dmg_left * map[? SHOOTABLE_MAP.ARMOR_DAMAGEREDUCTION]);	
+			}
+			
+			var _armor_left = ceil(map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _dmg_to_take);
 			var _armor_taken = map[? SHOOTABLE_MAP.HEALTH_ARMOR] - _armor_left;
 			
 			part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
@@ -104,6 +131,24 @@ with (damaging) {
 		}
 		
 		if (map[? SHOOTABLE_MAP.HEALTH_BASE] > 0 && _dmg_left > 0) {
+			
+			//Calculate Resistances
+			
+			//Base Type
+			if(_damage_type == DAMAGE_TYPE.STAB){
+					var multiplier = 1.5;
+					_dmg_left = ceil( _dmg_left *multiplier);
+					_base_ampedDamage += multiplier;
+			}
+			
+			//Element Type
+			
+			if(_damage_element == DAMAGE_ELEMENT.INFECTED){
+					var multiplier = 2;
+					_dmg_left = ceil( _dmg_left *multiplier);
+					_element_ampedDamage += multiplier;
+			}			
+			//=====================
 			map[? SHOOTABLE_MAP.HEALTH_BASE] -= _dmg_left;
 			if (_dmg_inflicted > _dmg_left) //Took mostly health damage
 				_dmg_took = DAMAGE_TOOK.HEALTH;
@@ -177,8 +222,11 @@ with (damaging) {
 			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 				value_damage = abs(floor(dmg));
 				damage_type = _damage_type;
+				damage_element = _damage_element;
 				damage_took = _dmg_took;
 				damage_killed = lethalDamage;
+				base_damage_amped = _base_ampedDamage;
+				element_damage_amped = _element_ampedDamage;
 				//if (damager != noone && combo && damager.object_index == oPlayer)
 				//	id.combo = damager.combo_map[? COMBO_MAP.STREAK];
 			}
@@ -202,12 +250,16 @@ if (isPlayer && damaging.causeOfDeath != noone)
 	
 return lethalDamage;
 
-enum DAMAGE_ELEMENT { //Damage offset we are taking
-	NONE, COLD, FIRE, SLIME
+enum DAMAGE_ELEMENT {
+	INFECTED, FIRE, COLD, SHOCK, MAGNET, SAND,
+	
+	//Last
+	NONE
 }
 
 enum DAMAGE_TYPE {
-	DIRECT, SPLASH, INDIRECT, TIME, CRITICAL, HEALING, NONE
+	SPLASH,SLICE,POUND,STAB,
+	DIRECT, INDIRECT, TIME, CRITICAL, HEALING, NONE
 }
 
 enum DAMAGE_TOOK {

@@ -4,6 +4,7 @@ var teamToOppose = noone;
 
 if(player.team == TEAM.RIGHT){
 	teamToOppose = global.teamPlayer;
+	show_debug_message("Looking for team player");
 }
 else if(player.team == TEAM.LEFT){
 	teamToOppose = global.teamEnemy;	
@@ -23,17 +24,21 @@ else{
 }
 
 if(aiTarget == noone){
-
+	show_debug_message("Looking for target");
 	for (var i = 0; i < ds_list_size(teamToOppose); i++) {
-    
-		if(teamToOppose[i].player_map[?PLAYER_MAP.ALIVE]){
-			aiTarget = teamToOppose[i];	
+		var entity = teamToOppose[|i];
+		if(instance_exists(entity)){
+			if(entity.player_map[?PLAYER_MAP.ALIVE]){
+				aiTarget = teamToOppose[|i];	
+				show_debug_message("Has target");
+			}
 		}
 	
 	}
 
 }
 
-else if(aiTarget.player_map[?PLAYER_MAP.ALIVE]){
-	aiTarget = noone;	
+else if(!aiTarget.player_map[?PLAYER_MAP.ALIVE]){
+	aiTarget = noone;
+	show_debug_message("player dead");
 }

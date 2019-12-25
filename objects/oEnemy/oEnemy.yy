@@ -33,7 +33,7 @@
             "mvc": "1.0",
             "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
             "propertyId": "ef38e31b-4397-4e92-90de-abcfe75f0315",
-            "value": "TEAM.NONE"
+            "value": "TEAM.RIGHT"
         },
         {
             "id": "e204127d-3371-469b-9d8b-647cd30e1ea9",

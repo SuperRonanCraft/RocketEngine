@@ -2,7 +2,7 @@
 
 if (!player.system_ai) exit;
 
-aiTarget = scFindAITarget();
+scFindAITarget();
 
 switch (aiType) {
 	case AI_TYPE.ONEVONE:
