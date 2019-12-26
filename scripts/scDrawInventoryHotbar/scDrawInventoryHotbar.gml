@@ -15,21 +15,21 @@ else if (mouse_wheel_up())
 	_map[? INVENTORY_MAP.HOTBAR_SELECTED]--;
 
 if (_map[? INVENTORY_MAP.HOTBAR_SELECTED] < 0)
-	_map[? INVENTORY_MAP.HOTBAR_SELECTED] = _map[? INVENTORY_MAP.SIZE_ROW_SIZE] - 1;
-else if (_map[? INVENTORY_MAP.HOTBAR_SELECTED] >= _map[? INVENTORY_MAP.SIZE_ROW_SIZE])
+	_map[? INVENTORY_MAP.HOTBAR_SELECTED] = _map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH] - 1;
+else if (_map[? INVENTORY_MAP.HOTBAR_SELECTED] >= _map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH])
 	_map[? INVENTORY_MAP.HOTBAR_SELECTED] = 0;
 
 var _buffer_x = 16; //Distance between inventory slots (x)
 //var _buffer_y = 16; //Distance between inventory slots (y)
 var _inv_slot_size = 70;
-var _inv_grid = _map[? INVENTORY_MAP.GRID];
+var _inv_grid = _map[? INVENTORY_MAP.GRID_GENERAL];
 var _selected = _map[? INVENTORY_MAP.HOTBAR_SELECTED];
 
-_x = (RES_W / 2) - ((_map[? INVENTORY_MAP.SIZE_ROW_SIZE] / 2) * _inv_slot_size) - ((_map[? INVENTORY_MAP.SIZE_ROW_SIZE] / 2) * _buffer_x);
+_x = (RES_W / 2) - ((_map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH] / 2) * _inv_slot_size) - ((_map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH] / 2) * _buffer_x);
 _y = RES_H - _inv_slot_size;
 //Draw slot, highlight if hovering
-for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx++) {
-	var yy = _map[? INVENTORY_MAP.SIZE_COLUMN_SIZE] - 1;
+for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH]; xx++) {
+	var yy = _map[? INVENTORY_MAP.SIZE_GENERAL_HEIGHT] - 1;
 	var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 	var _yy = _y;
 	//Draw Inventory Slot
@@ -39,7 +39,7 @@ for (var xx = 0; xx < _map[? INVENTORY_MAP.SIZE_ROW_SIZE]; xx++) {
 		
 	draw_sprite_part_ext(_sprite, _sprite_index, 0, 0, _inv_slot_size, _inv_slot_size, _xx, _yy, 1, 1, c_white, _slot_alpha);
 	var _slot_map = _inv_grid[# xx, yy];
-	if (_slot_map == noone) continue;
+	if (_slot_map == noone || _slot_map[? ITEM_MAP.ITEM] == ITEM.NONE) continue;
 	var _sprite = _slot_map[? ITEM_MAP.SPRITE];
 	var _scale = _slot_map[? ITEM_MAP.SCALE];
 	var _item_w = sprite_get_width(_sprite);

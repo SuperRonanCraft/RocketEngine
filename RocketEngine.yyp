@@ -847,6 +847,14 @@
             }
         },
         {
+            "Key": "173c8288-e0c5-47fb-928d-aef09c662567",
+            "Value": {
+                "id": "d200cb08-25ea-4e5a-8cf1-4c3a75e5b69c",
+                "resourcePath": "scripts\\scInventoryLogic\\scInventoryLogic.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1788b220-d89c-43c3-a790-a80d546c4330",
             "Value": {
                 "id": "8c284d98-ffac-4bdf-b3e7-057c4df600d4",
@@ -2122,7 +2130,7 @@
             "Key": "4025149d-1566-4cc2-aab7-88573a556916",
             "Value": {
                 "id": "56f646dd-83a9-4d4f-a5d3-066af8f05159",
-                "resourcePath": "scripts\\scPlayerDrawUIInventoryHotbar\\scPlayerDrawUIInventoryHotbar.yy",
+                "resourcePath": "scripts\\scDrawInventoryHotbar\\scDrawInventoryHotbar.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3543,6 +3551,14 @@
             }
         },
         {
+            "Key": "65a89d5f-671c-4e04-b1e8-0f8f8598db7f",
+            "Value": {
+                "id": "67bff610-13d0-4594-9f73-647e773ebd23",
+                "resourcePath": "scripts\\scDrawInventoryTipOrMoving\\scDrawInventoryTipOrMoving.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "65c0b83c-146e-4d35-9793-eefbd67ca73e",
             "Value": {
                 "id": "04d57635-1d9a-4cb3-bed9-59af7b828ef8",
@@ -4108,6 +4124,14 @@
                 "id": "cc0b0dfd-2de8-4317-b549-9c34ce90cc65",
                 "resourcePath": "scripts\/scUltimateSwordDefault\/scUltimateSwordDefault.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "78dc1e2e-0cb7-452c-8d99-d7d56afab67d",
+            "Value": {
+                "id": "b07d9967-fa2b-4c9a-b4ef-ee0a1bb34eb7",
+                "resourcePath": "views\\78dc1e2e-0cb7-452c-8d99-d7d56afab67d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6348,6 +6372,14 @@
                 "id": "d0c38b4e-77e8-4e27-a150-47d66116596d",
                 "resourcePath": "sprites\\sShuriken_Default_Ult1\\sShuriken_Default_Ult1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bad3a38c-6008-4bd2-83b3-86628a40ea07",
+            "Value": {
+                "id": "983ffa74-5a6a-429f-858b-6eea9701c305",
+                "resourcePath": "scripts\\scDrawInventorySlots\\scDrawInventorySlots.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8837,10 +8869,13 @@
         "2142faa1-524b-4dfc-8767-627135963ee7",
         "bc3902ed-d915-4a61-8d46-dc075432b382",
         "3e0b720d-14b4-4ef9-a008-4b69007ae34e",
-        "4025149d-1566-4cc2-aab7-88573a556916",
         "5cfbf016-f2ce-4c40-9b6f-6feae632e9d0",
         "358436e0-e664-42de-b465-9fb659d6f166",
         "d92ac81e-32b4-4880-9bd9-874b75262bab",
+        "173c8288-e0c5-47fb-928d-aef09c662567",
+        "4025149d-1566-4cc2-aab7-88573a556916",
+        "bad3a38c-6008-4bd2-83b3-86628a40ea07",
+        "65a89d5f-671c-4e04-b1e8-0f8f8598db7f",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "26b40477-dd28-4867-adb4-50b416a7c5d5",
