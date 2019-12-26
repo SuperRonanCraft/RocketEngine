@@ -2,6 +2,8 @@
 
 if (!player.system_ai) exit;
 
+
+
 scFindAITarget();
 
 switch (aiType) {

@@ -1999,6 +1999,14 @@
             }
         },
         {
+            "Key": "3b8b1350-3f02-4a12-82b7-61bb5dd030e1",
+            "Value": {
+                "id": "cd000d95-de33-441b-9b75-d64a1d4969cf",
+                "resourcePath": "scripts\\scElementDamageResistances\\scElementDamageResistances.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3bee1d08-634e-492b-88e1-614dff39e398",
             "Value": {
                 "id": "3a27aa31-e555-419f-8cf9-c61ad419761c",
@@ -3675,6 +3683,14 @@
             "Value": {
                 "id": "7aeed61a-0248-446a-8537-904e513d19aa",
                 "resourcePath": "scripts\/scUIPalettePrev\/scUIPalettePrev.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "69790556-54fc-47de-b721-2b310c0211ed",
+            "Value": {
+                "id": "5d8ffbf7-fb30-4620-8bcb-a091c7187a12",
+                "resourcePath": "scripts\\scBaseDamageResistances\\scBaseDamageResistances.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8982,6 +8998,8 @@
         "be330bc3-bd8d-4f5d-8f6d-f43b1def1a9c",
         "af407beb-06d4-48fe-9d49-ca0d4f359e5d",
         "b386a635-6456-466a-9dc6-6f2d438ff1e3",
+        "69790556-54fc-47de-b721-2b310c0211ed",
+        "3b8b1350-3f02-4a12-82b7-61bb5dd030e1",
         "b06581ab-c385-498f-9940-64f5a039dcab",
         "819c3721-6078-47b0-91cb-c171738ea97b",
         "49bfee05-af25-4fd2-9718-94f2cf1ccc2f",

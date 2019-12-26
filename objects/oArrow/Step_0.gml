@@ -66,7 +66,7 @@ if(!deactivate){
 					obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
 		
 					//Damage player
-					if (scShootableDamage(owner, obj, false, true, bonusDMG)){
+					if (scShootableDamage(owner, obj, false, true, bonusDMG,noone,DAMAGE_TYPE.STAB,noone)){
 						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];
 						if(fullPower){
 							flyWith = obj;

@@ -27,7 +27,7 @@ health_map[? HEALTH_MAP.ALPHA] = 0; //Hide health when spawning
 scWeaponStart();
 
 enum CHARACTER_ENEMY {
-	ENEMY, NADES,
+	ENEMY, ZOMBIE,
 	//KEEP LAST
 	LENGTH
 }

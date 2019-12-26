@@ -5,13 +5,13 @@
 /// @arg play-sound
 /// @arg damage (Amount to damage)
 /// @arg force-damage* noone to ignore (Force even if we can't take damage)
-/// @arg damage_from* noone to ignore (Source of damage)
+/// @arg damage_type* noone to ignore (Source of damage)
 /// @arg combo-apply* noone to ignore
 /// @arg damage_element* noone to ignore (Damage infliction type)
 
 var damager = argument[0];
 var damaging = argument[1];
-var isPlayer = scGetParent(oPlayer, damaging); //If the damaging instance is a player
+var isPlayer = scGetParent(pEntity, damaging); //If the damaging instance is a player
 var delete = argument[2];
 var dmg = argument[4];
 var force = argument_count > 5 ? (argument[5] != noone ? argument[5] : false) : false;
@@ -35,7 +35,7 @@ if (damager != noone && scGetParent(oPlayer, damager))
 			dmg = scBuffHandler(BUFF_EVENT.DAMAGE_PREAPPLY, dmg);
 
 with (damaging) {
-	var _dmg_took = DAMAGE_TOOK.HEALTH;
+	var _dmg_took = noone;;
 	var map = shootable_map;
 	if (map[? SHOOTABLE_MAP.CAN_DAMAGE] || force) {
 		map[? SHOOTABLE_MAP.DAMAGE_TYPE] = _damage_type; //Damage type we just took
@@ -52,6 +52,11 @@ with (damaging) {
 			part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SHIELD_DAMAGE], _dmg_left);
 			
 			//Calculate Resistances
+			var multiplier = scBaseDamageResistances(SHOOTABLE_MAP.HEALTH_SHIELD, _damage_type);
+			multiplier *= scElementDamageResistances(SHOOTABLE_MAP.HEALTH_SHIELD, _damage_element);
+			
+			_dmg_left = ceil(_dmg_left * multiplier);
+			//---------------------
 			
 			
 			//All shield damage
@@ -72,7 +77,7 @@ with (damaging) {
 				_dmg_left = 0;
 			}
 			
-			if (_dmg_inflicted > _dmg_left) //Took mostly shield damage
+			if (_dmg_took == noone) //Took mostly shield damage
 				_dmg_took = DAMAGE_TOOK.SHIELD;
 		}
 		
@@ -80,20 +85,10 @@ with (damaging) {
 			var _dmg_to_take = 0;
 			
 			//Calculate Resistances
+			var multiplier = scBaseDamageResistances(SHOOTABLE_MAP.HEALTH_ARMOR, _damage_type);
+			multiplier *= scElementDamageResistances(SHOOTABLE_MAP.HEALTH_ARMOR, _damage_element);
 			
-			//Base Damage
-			if(_damage_type == DAMAGE_TYPE.STAB){
-					var multiplier = 0.5;
-					_dmg_left = ceil( _dmg_left *multiplier);
-					_base_ampedDamage -= multiplier;
-			}
-			
-			//Element Damage
-			if(_damage_element == DAMAGE_ELEMENT.INFECTED){
-					var multiplier = 0.3;
-					_dmg_left = ceil( _dmg_left *multiplier);
-					_element_ampedDamage -= multiplier;
-			}
+			_dmg_left = ceil(_dmg_left * multiplier);
 			//---------------------
 			
 			if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_ARMOR]) {
@@ -121,7 +116,7 @@ with (damaging) {
 				scPlaySound(SOUND.ULT_SHIELD_BREAK);
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
 				//Took mostly armor damage
-				if (_armor_taken > _dmg_left && _armor_taken > _dmg_inflicted)
+				if (_dmg_took == noone)
 					_dmg_took = DAMAGE_TOOK.ARMOR;
 				_dmg_left = abs(_armor_left);
 			}
@@ -133,24 +128,15 @@ with (damaging) {
 		if (map[? SHOOTABLE_MAP.HEALTH_BASE] > 0 && _dmg_left > 0) {
 			
 			//Calculate Resistances
+			var multiplier = scBaseDamageResistances(SHOOTABLE_MAP.HEALTH_BASE, _damage_type);
+			multiplier *= scElementDamageResistances(SHOOTABLE_MAP.HEALTH_BASE, _damage_element);
 			
-			//Base Type
-			if(_damage_type == DAMAGE_TYPE.STAB){
-					var multiplier = 1.5;
-					_dmg_left = ceil( _dmg_left *multiplier);
-					_base_ampedDamage += multiplier;
-			}
+			_dmg_left = ceil(_dmg_left * multiplier);
 			
-			//Element Type
 			
-			if(_damage_element == DAMAGE_ELEMENT.INFECTED){
-					var multiplier = 2;
-					_dmg_left = ceil( _dmg_left *multiplier);
-					_element_ampedDamage += multiplier;
-			}			
 			//=====================
 			map[? SHOOTABLE_MAP.HEALTH_BASE] -= _dmg_left;
-			if (_dmg_inflicted > _dmg_left) //Took mostly health damage
+			if (_dmg_took == noone) //Took mostly health damage
 				_dmg_took = DAMAGE_TOOK.HEALTH;
 			_dmg_inflicted += _dmg_left;
 			
@@ -164,7 +150,7 @@ with (damaging) {
 		//Damage side effects
 		//--------------
 		map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
-		if (map[? SHOOTABLE_MAP.HEALTH] <= 0) {
+		if (map[? SHOOTABLE_MAP.HEALTH] <= 0 && player_map[?PLAYER_MAP.ALIVE]) {
 			lethalDamage = true;
 			scSpawnParticle(x, bbox_top, ceil(_dmg_inflicted * 1.3+20), 20, spBlood, WORLDPART_TYPE.BLOOD);
 			map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
@@ -218,7 +204,7 @@ with (damaging) {
 	map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
 	var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
 	if (show_dmg) {
-		if (!isPlayer || (isPlayer && player_map[? PLAYER_MAP.ALIVE]) && dmg > 0) //Alive? Show damage indicators
+		if ((isPlayer && player_map[? PLAYER_MAP.ALIVE]) && dmg > 0) //Alive? Show damage indicators
 			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
 				value_damage = abs(floor(dmg));
 				damage_type = _damage_type;

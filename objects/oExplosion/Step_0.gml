@@ -21,7 +21,7 @@ if (doing_damage)
 					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i], parent);
 			}
 			//Damage shootable
-			if(scShootableDamage(other.parent, p, false, true, dmg) && isPlayer)
+			if(scShootableDamage(other.parent, p, false, true, dmg,noone,DAMAGE_TYPE.SPLASH,noone) && isPlayer)
 				p.causeOfDeath = deathCause;
 	
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?
