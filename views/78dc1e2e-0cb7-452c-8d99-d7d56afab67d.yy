@@ -6,7 +6,8 @@
     "children": [
         "4025149d-1566-4cc2-aab7-88573a556916",
         "bad3a38c-6008-4bd2-83b3-86628a40ea07",
-        "65a89d5f-671c-4e04-b1e8-0f8f8598db7f"
+        "65a89d5f-671c-4e04-b1e8-0f8f8598db7f",
+        "4632ccd6-2035-483c-bf82-82f6cccc9d57"
     ],
     "filterType": "GMScript",
     "folderName": "UI",

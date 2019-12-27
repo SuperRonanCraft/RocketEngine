@@ -18,7 +18,7 @@ var _x = argument3;
 var _y = argument4;
 var _alpha = argument5
 var _inv_slot_size = argument6;
-var _scale = argument7;
+var _scale = argument7; //FUTURE
 var _buffer_x = argument8; //Distance between inventory slots (x)
 var _buffer_y = argument9; //Distance between inventory slots (y)
 var _inv_type = argument10;
@@ -47,15 +47,22 @@ for (var xx = 0; xx < _width; xx++)
 		var _slot_alpha = _alpha;
 		var _color = c_white;
 		var _slot_map = _grid[# xx, yy];
-		var _sprite = sUIInventory, _sprite_index = 0;
-		
-		if (_inv_hovering != noone && _inv_hovering[0] == xx && _inv_hovering[1] == yy)
+		var _sprite = sUIInventory, _sprite_index = 0, _hovering = false;
+		if (_inv_hovering != noone && _inv_hovering[0] == xx && _inv_hovering[1] == yy) {
 			_slot_alpha = 1;
+			_hovering = true;
+		}
 		if (_inv_moving_item != noone)
 			if (scInventoryStackable(_slot_map, _inv_moving_item))
 				_color = c_orange;
 			else if (!scInventorySwapable(_inv_moving_item, _slot_map, inventory_map[? INVENTORY_MAP.MOVING_INV], _inv_type))
 				_color = c_red;
+			
+		if (_hovering) {
+			draw_sprite_part_ext(_sprite, _sprite_index, 0, 0, _inv_slot_size, _inv_slot_size, _xx, _yy, 1, 1, c_black, _slot_alpha);
+			_xx -= 3;
+			_yy -= 3;
+		}
 		draw_sprite_part_ext(_sprite, _sprite_index, 0, 0, _inv_slot_size, _inv_slot_size, _xx, _yy, 1, 1, _color, _slot_alpha);
 	}
 
@@ -64,26 +71,14 @@ for (var xx = 0; xx < _width; xx++)
 	for (var yy = 0; yy < _height; yy++) {
 		var _slot_map = _grid[# xx, yy];
 		//Display item in inventory slot
-		if (_slot_map != noone && _slot_map[? ITEM_MAP.ITEM] != ITEM.NONE) { //Display if there is an item in a slot
-			var _xx_goal = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
-			var _yy_goal = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
-			var _xx = _slot_map[? ITEM_MAP.XX] != 0 ? lerp(_slot_map[? ITEM_MAP.XX], _xx_goal, 0.1) : _xx_goal;
-			var _yy = _slot_map[? ITEM_MAP.YY] != 0 ? lerp(_slot_map[? ITEM_MAP.YY], _yy_goal, 0.1) : _yy_goal;
-			_slot_map[? ITEM_MAP.XX] = _xx;
-			_slot_map[? ITEM_MAP.YY] = _yy;
-			var _sprite = _slot_map[? ITEM_MAP.SPRITE];
-			var _scale = _slot_map[? ITEM_MAP.SCALE];
-			var _item_w = sprite_get_width(_sprite);
-			var _item_h = sprite_get_height(_sprite);
-			draw_sprite_part_ext(
-				_sprite, 0, 0, 0, _item_w, _item_h, _xx + (_inv_slot_size / 2) - ((_item_w * _scale) / 2),
-				_yy + (_inv_slot_size / 2) - ((_item_h * _scale) / 2), _scale, _scale, c_white, _alpha);
-			//scDrawSpriteExt(_xx, _yy, _sprite, 0, noone, _alpha);
-			if (_slot_map[? ITEM_MAP.AMOUNT] > 1) { //Amount if above 1
-				var _c = _slot_map[? ITEM_MAP.AMOUNT] >= _slot_map[? ITEM_MAP.STACK_MAX] ? c_yellow : c_white;
-				scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), _c, 0.5, noone, _alpha, fa_right, fa_bottom);
-			}
-			if (_slot_map[? ITEM_MAP.DURABILITY] != noone) //Durability Bar
-				scDrawRect(xx + 3, yy + 60, xx + 61, yy + 63, c_green, false, _alpha / 2);
+		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
+		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
+		var _hovering = _inv_hovering != noone && _inv_hovering[0] == xx && _inv_hovering[1] == yy;
+		var _off_x = 0;
+		var _off_y = 0;
+		if (_hovering) {
+			_off_x -= 3;
+			_off_y -= 3;
 		}
+		scDrawInventoryItem(_slot_map, _xx, _yy, _inv_slot_size, _alpha, true, true, _off_x, _off_y);
 	}

@@ -9,4 +9,6 @@ var _y = argument2;
 
 with (instance_create_depth(_x, _y, depth - 1, oPickupItem)) {
 	item_map = _item;
+	sprite_index = item_map[? ITEM_MAP.SPRITE];
+	item_particle.sprite_index = sprite_index;
 }

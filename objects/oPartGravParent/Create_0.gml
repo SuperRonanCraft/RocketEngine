@@ -19,4 +19,5 @@ bounce_coeff = 1;
 scaled = false; //Should we scale up to normal?
 animate = false;
 animate_dur = 1;
+moving = true;
 image_speed = 0;

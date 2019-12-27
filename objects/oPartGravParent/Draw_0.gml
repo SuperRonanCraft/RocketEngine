@@ -6,7 +6,7 @@ else if (timer > -1)
 	image_alpha = max(image_alpha - alpha_reduce, 0);
 
 var _y = y;
-if (animate && (abs(hsp) <= 0.1 && abs(vsp) <= 0.1))
+if (animate && !moving)
 	_y = _y + scMovementWave(-3, 3, animate_dur);
 	
 draw_sprite_ext(sprite_index,image_index,x,_y,image_xscale,image_yscale,image_angle,c_white,1);

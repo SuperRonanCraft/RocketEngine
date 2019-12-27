@@ -2223,6 +2223,14 @@
             }
         },
         {
+            "Key": "4241d78f-c4fd-45e5-b4b0-7547ebf1cd6c",
+            "Value": {
+                "id": "a66fd9ab-fff7-49dc-b141-d928f177ac66",
+                "resourcePath": "scripts\\scItemFindSlot\\scItemFindSlot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4257086f-6069-43f2-b30e-7a798c614abf",
             "Value": {
                 "id": "458d7b0d-7f83-4178-a4ba-446d0639f2af",
@@ -2404,6 +2412,14 @@
                 "id": "eac0966d-a994-441c-826a-6fc71a461336",
                 "resourcePath": "sprites\/s_modifier_slime\/s_modifier_slime.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4632ccd6-2035-483c-bf82-82f6cccc9d57",
+            "Value": {
+                "id": "ffb8783d-881c-424f-9561-f626a60dd6e4",
+                "resourcePath": "scripts\\scDrawInventoryItem\\scDrawInventoryItem.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7639,6 +7655,14 @@
             }
         },
         {
+            "Key": "df94e9f9-cdfd-4ec2-a379-9c2cf6fc78f5",
+            "Value": {
+                "id": "f5796f87-70e6-4a7d-b891-29a0535acd92",
+                "resourcePath": "sprites\\sprArmorCommon\\sprArmorCommon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e02a2303-a556-4d20-ab08-e9a2978b49cf",
             "Value": {
                 "id": "61ade6b8-ccc5-4320-a6e4-91424de1503e",
@@ -8940,6 +8964,7 @@
         "4025149d-1566-4cc2-aab7-88573a556916",
         "bad3a38c-6008-4bd2-83b3-86628a40ea07",
         "65a89d5f-671c-4e04-b1e8-0f8f8598db7f",
+        "4632ccd6-2035-483c-bf82-82f6cccc9d57",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "26b40477-dd28-4867-adb4-50b416a7c5d5",
@@ -9087,6 +9112,7 @@
         "7ad07bba-28f7-46c9-83b7-1549357e413c",
         "d5ef0037-e64b-471c-9324-f59df7ab9fb9",
         "84904968-e821-4c94-9efd-df7464e5ad7c",
+        "4241d78f-c4fd-45e5-b4b0-7547ebf1cd6c",
         "7df196bd-cc21-4d29-8147-7cb780a8d6dd",
         "da44b260-b021-4a2d-ab66-bab963c5bcaa",
         "cc800836-596c-48ec-882d-bd4063f75862",

@@ -1,6 +1,6 @@
 /// @desc 
 
-if (stuck || (abs(hsp) <= 0.1 && abs(vsp) <= 0.1)) exit; //stuck to a wall?
+if (stuck || !moving) exit; //stuck to a wall?
 
 var offset = 1;
 if (instance_place(x, y + (offset + grv), oWall) == noone)
@@ -49,3 +49,6 @@ y += vsp;
 
 if (touchingy != noone && abs(vsp) < 3)
 	vsp_real = 0;
+
+if (abs(hsp) <= 0.1 && abs(vsp) <= 0.1)
+	moving = false;

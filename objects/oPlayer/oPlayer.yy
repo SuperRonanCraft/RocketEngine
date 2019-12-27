@@ -154,6 +154,14 @@
             "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
             "propertyId": "ef38e31b-4397-4e92-90de-abcfe75f0315",
             "value": "TEAM.LEFT"
+        },
+        {
+            "id": "c5066df2-00db-44f6-a5b4-4a359bd402ed",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
+            "propertyId": "1e60b85f-0314-4c5f-9b15-2fe6065dc191",
+            "value": "True"
         }
     ],
     "parentObjectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
@@ -184,20 +192,6 @@
             "value": "-4",
             "varName": "sticky",
             "varType": 0
-        },
-        {
-            "id": "3f468297-91fa-4c1a-b280-8312f9676159",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "True",
-            "varName": "inventory_system",
-            "varType": 3
         }
     ],
     "solid": false,

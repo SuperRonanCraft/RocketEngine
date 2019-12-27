@@ -11,6 +11,7 @@ _map[? ITEM_MAP.STACK_MAX] = noone;
 _map[? ITEM_MAP.SPRITE] = noone;
 _map[? ITEM_MAP.DURABILITY] = noone;
 _map[? ITEM_MAP.SCALE] = 1;
+_map[? ITEM_MAP.SCALE_ANIM] = 0; //Extra animation scale
 _map[? ITEM_MAP.MAP] = noone; //Customizable map for this item
 _map[? ITEM_MAP.XX] = 0;
 _map[? ITEM_MAP.YY] = 0;
@@ -74,6 +75,14 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		_map[? ITEM_MAP.NAME] = "Arrow AMMO";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.AMMO;
 		break;
+	case ITEM.ARMOR_COMMON:
+		_map[? ITEM_MAP.AMOUNT] = 1;
+		_map[? ITEM_MAP.STACK_MAX] = 1;
+		_map[? ITEM_MAP.SPRITE] = sprArmorCommon;
+		_map[? ITEM_MAP.NAME] = "Common Armor";
+		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.ARMOR;
+		_map[? ITEM_MAP.DURABILITY] = 24;
+		break;
 	/*case ITEM.ABILITY_PORTAL:
 		_map[? ITEM_MAP.AMOUNT] = 10;
 		_map[? ITEM_MAP.STACK_MAX] = 16;
@@ -93,7 +102,7 @@ return _map;
 enum ITEM_MAP {
 	ITEM, AMOUNT, NAME, ITEM_TYPE,
 	STACK_MAX, SPRITE, DURABILITY, DURABILITY_ORIGINAL, //MOVING,
-	SCALE, XX, YY,
+	SCALE, SCALE_ANIM, XX, YY,
 	MAP
 	//EVENT_SHOOT, EVENT_USE
 }
@@ -111,7 +120,7 @@ enum ITEM {
 	AMMO_ROCKET,
 	AMMO_SHURIKEN,
 	AMMO_ARROW,
-	ABILITY_PORTAL,
+	ARMOR_COMMON,
 	AXE,
 	PICK,
 	//LEAVE LAST

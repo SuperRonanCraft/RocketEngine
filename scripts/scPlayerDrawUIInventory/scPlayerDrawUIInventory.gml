@@ -2,7 +2,7 @@
 ///@arg x
 ///@arg y
 ///@arg alpha
-if (!inventory_system) return false;
+if (!system_inventory) return false;
 
 var _map = inventory_map;
 
@@ -60,7 +60,8 @@ var _x = argument0;
 var _y = argument1;
 var _alpha = argument2;
 
-scDrawInventoryHotbar(_x, _y, _alpha);
+if (_alpha - _map[? INVENTORY_MAP.ALPHA] > 0)
+	scDrawInventoryHotbar(_x, _y, _alpha - _map[? INVENTORY_MAP.ALPHA]);
 
 if (_map[? INVENTORY_MAP.OPEN]) {
 	_map[? INVENTORY_MAP.ALPHA] = min(_map[? INVENTORY_MAP.ALPHA] + _map[? INVENTORY_MAP.ALPHA_CHANGE], _alpha);

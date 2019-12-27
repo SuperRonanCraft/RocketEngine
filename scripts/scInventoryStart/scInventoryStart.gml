@@ -1,4 +1,4 @@
-if (!inventory_system) exit;
+if (!system_inventory) exit;
 inventory_map = ds_map_create();
 
 var _map = inventory_map;
