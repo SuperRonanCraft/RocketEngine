@@ -7,13 +7,10 @@
         "c915ac71-632a-47f2-9bf4-9205e326e63b",
         "1aace334-4b62-4771-9966-828d30264d83",
         "4dc5f02b-3d00-433c-8f1c-a15ef7615a33",
-        "5238e325-fb37-4c36-b216-e884eaababf9",
-        "a42fdb80-18d2-46e1-a3f3-80f9635f5aef",
-        "b4976653-506c-48da-a5a6-798c696a4d78",
-        "c963180c-6a2f-4298-8334-1001007702e6",
         "bfa1a57e-e2a7-437b-96c1-32a39495e76d",
         "cf24d61a-7e62-4e1a-a0be-171825ab4f9b",
-        "68bb57a2-eddd-4387-a96d-3eaee593d51b"
+        "68bb57a2-eddd-4387-a96d-3eaee593d51b",
+        "ee19aec9-81ed-4912-9492-30ca6fbfbc87"
     ],
     "filterType": "GMScript",
     "folderName": "User Interface",

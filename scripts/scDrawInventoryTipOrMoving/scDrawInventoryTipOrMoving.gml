@@ -62,9 +62,10 @@ if (_hovering_slot != noone && _moving_item == noone) { //Are hovering over an i
 		var _offset_y = (_inv_slot_size / 2) - ((_item_h * _scale) / 2);
 		draw_sprite_part_ext(_sprite, 0, 0, 0, _item_w, _item_h, _xx + _offset_x + 3, _yy + _offset_y + 3, _scale, _scale, c_black, _alpha);
 		draw_sprite_part_ext(_sprite, 0, 0, 0, _item_w, _item_h, _xx + _offset_x, _yy + _offset_y, _scale, _scale, c_white, _alpha);
-		if (_slot_map[? ITEM_MAP.AMOUNT] > 1) //Amount if above 1
-			scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), c_white, 0.5, noone, _alpha, fa_right, fa_bottom);
-		if (_slot_map[? ITEM_MAP.DURABILITY] != noone) { //Durability Bar
+		if (_slot_map[? ITEM_MAP.AMOUNT] > 1) { //Amount if above 1
+			var _c = _slot_map[? ITEM_MAP.AMOUNT] >= _slot_map[? ITEM_MAP.STACK_MAX] ? c_yellow : c_white;
+			scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), _c, 0.5, noone, _alpha, fa_right, fa_bottom);
+		} if (_slot_map[? ITEM_MAP.DURABILITY] != noone) { //Durability Bar
 			scDrawRect(_xx + 3, _yy + 60, _xx + 61, _yy + 63, c_green, false, _alpha / 2);
 		}
 	}

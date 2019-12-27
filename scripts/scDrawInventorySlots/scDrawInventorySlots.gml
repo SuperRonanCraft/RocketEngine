@@ -52,10 +52,10 @@ for (var xx = 0; xx < _width; xx++)
 		if (_inv_hovering != noone && _inv_hovering[0] == xx && _inv_hovering[1] == yy)
 			_slot_alpha = 1;
 		if (_inv_moving_item != noone)
-			if (!scInventorySwapable(_inv_moving_item, _slot_map, inventory_map[? INVENTORY_MAP.MOVING_INV], _inv_type))
-				_color = c_red;
-			else if (scInventoryStackable(_inv_moving_item, _slot_map))
+			if (scInventoryStackable(_slot_map, _inv_moving_item))
 				_color = c_orange;
+			else if (!scInventorySwapable(_inv_moving_item, _slot_map, inventory_map[? INVENTORY_MAP.MOVING_INV], _inv_type))
+				_color = c_red;
 		draw_sprite_part_ext(_sprite, _sprite_index, 0, 0, _inv_slot_size, _inv_slot_size, _xx, _yy, 1, 1, _color, _slot_alpha);
 	}
 
@@ -79,8 +79,10 @@ for (var xx = 0; xx < _width; xx++)
 				_sprite, 0, 0, 0, _item_w, _item_h, _xx + (_inv_slot_size / 2) - ((_item_w * _scale) / 2),
 				_yy + (_inv_slot_size / 2) - ((_item_h * _scale) / 2), _scale, _scale, c_white, _alpha);
 			//scDrawSpriteExt(_xx, _yy, _sprite, 0, noone, _alpha);
-			if (_slot_map[? ITEM_MAP.AMOUNT] > 1) //Amount if above 1
-				scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), c_white, 0.5, noone, _alpha, fa_right, fa_bottom);
+			if (_slot_map[? ITEM_MAP.AMOUNT] > 1) { //Amount if above 1
+				var _c = _slot_map[? ITEM_MAP.AMOUNT] >= _slot_map[? ITEM_MAP.STACK_MAX] ? c_yellow : c_white;
+				scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), _c, 0.5, noone, _alpha, fa_right, fa_bottom);
+			}
 			if (_slot_map[? ITEM_MAP.DURABILITY] != noone) //Durability Bar
 				scDrawRect(xx + 3, yy + 60, xx + 61, yy + 63, c_green, false, _alpha / 2);
 		}

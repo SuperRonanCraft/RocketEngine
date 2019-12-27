@@ -75,12 +75,19 @@ var _slot_size = 70;
 var _buffer_x = 16; //Distance between inventory slots (x)
 var _buffer_y = 16; //Distance between inventory slots (y)
 
-//scPlayerDrawUIInventoryScreen(_x, _y, _alpha);
 var _centerx = (RES_W / 2);
 var _centery = (RES_H / 2);
+
 var _x = _centerx - ((_map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH]) * _slot_size) - (_buffer_x * (_map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH] + 1));
 var _y = _centery - (((_map[? INVENTORY_MAP.SIZE_GENERAL_HEIGHT] / 2)) * _slot_size) - (_buffer_y * ((_map[? INVENTORY_MAP.SIZE_GENERAL_HEIGHT] + 1) / 2));
-			
+
+//DRAW BACKGROUND
+//
+//USE _x and _y to center on top left of general inventory, or centerx and centery to center on screen
+//scDrawSpriteExt(_centerx, _centery, /*YOUR SPRITE JOHN*/, 0);
+//
+//DRAW BACKGROUND
+
 for (var i = 0; i < INVENTORY_TYPE.LENGTH; i++) {
 	switch (i) {
 		case INVENTORY_TYPE.GENERAL:
