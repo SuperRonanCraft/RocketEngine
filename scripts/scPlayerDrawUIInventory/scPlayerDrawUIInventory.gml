@@ -47,9 +47,8 @@ if (scKeybindsGet(KEYBIND.INVENTORY)) {
 								break;
 							}
 					} else break;
-			} else { //Seems like we are full! We should drop this item in the FUTURE!
-				
-			}	
+			} else //Seems like we are full! We should drop this item!
+				scItemDrop(_slot_map, x, y);
 			_map[? INVENTORY_MAP.MOVING_ITEM] = noone;
 			_map[? INVENTORY_MAP.MOVING_SLOT] = noone;
 			_map[? INVENTORY_MAP.MOVING_INV] = noone;

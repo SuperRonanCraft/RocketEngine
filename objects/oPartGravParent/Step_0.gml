@@ -1,6 +1,6 @@
 /// @desc 
 
-if (stuck) exit; //stuck to a wall?
+if (stuck || (abs(hsp) <= 0.1 && abs(vsp) <= 0.1)) exit; //stuck to a wall?
 
 var offset = 1;
 if (instance_place(x, y + (offset + grv), oWall) == noone)
@@ -38,7 +38,7 @@ if (touchingx != noone || touchingy != noone && sticky) //Hit a wall? Get stuck 
 	stuck = random(1) < stuck_chance;
 
 //Rotate if moving
-if(rotate && hsp != 0)
+if (rotate && hsp != 0)
 	image_angle += hsp;
 
 

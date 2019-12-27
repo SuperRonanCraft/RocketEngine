@@ -51,6 +51,11 @@ if (_hovering_slot != noone) { //We are hovering over an item
 			}
 		}
 	}
+} else if (_moving_item != noone && mouse_check_button_pressed(mb_left)) { //Drop item?
+	scItemDrop(_moving_item, x, y);
+	_map[? INVENTORY_MAP.MOVING_ITEM] = noone;
+	_map[? INVENTORY_MAP.MOVING_SLOT] = noone;
+	_map[? INVENTORY_MAP.MOVING_INV] = noone;
 }
 
 _map[? INVENTORY_MAP.HOVERING_SLOT] = noone;
