@@ -10,7 +10,7 @@ scGravityStart();
 scBuffStart();
 
 //Image speed related to forced FPS
-image_speed /= TIME_SPEED;
+image_speed = 0.8/TIME_SPEED;
 
 //Cause of death
 causeOfDeath = noone;

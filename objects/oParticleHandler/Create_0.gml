@@ -402,6 +402,16 @@ part_type_direction(parttype, 60, 120, 0, 0);
 ds_map_add(ds_part, PARTICLES.LIFESTEAL, parttype);
 ds_map_add(ds_part_amt, PARTICLES.LIFESTEAL, 2);
 
+//FFA
+parttype = part_type_create();
+part_type_sprite(parttype, s_pFFA, true, true, false);
+part_type_size(parttype, 0.5, 0.8, -0.005 * spd, 0);
+part_type_speed(parttype, 5, 7, -0.02 * spd, 0);
+part_type_life(parttype, 10 * life, 15 * life);
+part_type_direction(parttype, 45, 135, 0, 0);
+ds_map_add(ds_part, PARTICLES.FFA, parttype);
+ds_map_add(ds_part_amt, PARTICLES.FFA, 3);
+
 //CLEANSE
 parttype = part_type_create();
 part_type_sprite(parttype, s_pcleanse, false, false, true);
@@ -608,4 +618,5 @@ enum PARTICLES {
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
 	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL,
 	EXPLOSION_DEFAULT, SLIME_PAINT,SHIELD_DAMAGE,SHIELD_RECHARGE, ARMOR_DAMAGE,HEALTH_DAMAGE,
+	FFA, 
 }

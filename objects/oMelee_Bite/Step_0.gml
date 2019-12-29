@@ -1,55 +1,45 @@
 /// @description  
 
-if(instance_exists(owner)){
-	if(!owner.player_map[?PLAYER_MAP.ALIVE])	{
+if(instance_exists(owner)) {
+	if(!owner.player_map[?PLAYER_MAP.ALIVE]) {
 		instance_destroy();	
 		exit;
 	}
-}
-
-else{
+} else {
 	instance_destroy();	
 	exit;
 }
 
 
-if(floor(image_index) == 4){
+if(floor(image_index) == 4)
 	bite = true;
-}
-else{
+else
 	bite = false;	
-}
 
-if(image_index >= image_number-1){
+if(image_index >= image_number-1) {
 	instance_destroy();	
 	exit;
 }
 
-if(bite){
+if(bite)
+	collision_rectangle_list(bbox_left,bbox_top,bbox_right,bbox_bottom,pEntity,false,true,hitList,false);	
 
-	collision_rectangle_list(bbox_left,bbox_top,bbox_right,bbox_bottom,pEntity,false,true,hitList,false);
-	
-	
-}
-
-if(!ds_list_empty(hitList)){
-	
+if(!ds_list_empty(hitList)) {
 	for (var i = 0; i < ds_list_size(hitList); i++) {
-	    var entity = hitList[|i];
-		
-		if(entity.player_map[? PLAYER_MAP.ALIVE] && entity.team != owner.team && entity.id != id){
+	    var entity = hitList[|i];	
+		if(entity.player_map[? PLAYER_MAP.ALIVE] && (entity.team != owner.team || owner.team == TEAM.NONE) && entity.id != id){
 			if(ds_list_find_index(confirmList,entity) == -1){
 				ds_list_add(confirmList,entity);
 				scShootableDamage(owner.id,entity.id,false,false,5, noone, DAMAGE_TYPE.STAB,false,DAMAGE_ELEMENT.INFECTED);
+				scBuffApply(BUFFTYPE.FFA_DEBUFF, entity, owner);
 			}
 		}
 		
 	}
 	ds_list_clear(hitList);
-	
 }
 
-if(!ds_list_empty(confirmList)){
+if(!ds_list_empty(confirmList)) {
 	/*
 	for (var c = 0; c < ds_list_size(confirmList); c++) {
 	    var confirmHit = confirmList[|c];
@@ -57,5 +47,4 @@ if(!ds_list_empty(confirmList)){
 	}
 	*/
 	//ds_list_clear(confirmList);
-	
 }

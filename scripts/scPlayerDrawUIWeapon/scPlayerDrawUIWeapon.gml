@@ -3,12 +3,14 @@
 ///@arg y
 ///@arg buffer
 ///@arg alpha
+///@arg team-respect
 
 var map = weapon_map;
 var _x = argument0;
 var _y = argument1;
 var _buffer = argument2;
 var _alpha = argument3;
+var _team_respect = argument4;
 if (map[? WEAPON_MAP.TYPE] == WEAPON.NONE) exit;
 
 //The projectile sprite
@@ -18,7 +20,7 @@ var sprite = scWeaponModifyGetType(map[? WEAPON_MAP.MODIFIER], WEAPON_MODIFIER_M
 //var w = sprite_get_width(sprite);
 //var h = sprite_get_height(sprite);
 //determine side
-var xpos = team == TEAM.LEFT ? _x : RES_W - _x - 32 - _buffer;
+var xpos = _team_respect ? (team == TEAM.LEFT ? _x : RES_W - _x - 32 - _buffer) : _x;
 var ypos = _y;
 var c = c_dkgray;
 

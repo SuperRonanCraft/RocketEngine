@@ -24,7 +24,8 @@
         "cd14c2a9-5fc0-4990-b4f1-ad25fb92f6a4",
         "83fdb6e8-b5e3-47d6-b780-461ed4c8a96c",
         "27b0bc27-5ba5-4ffa-9c7c-b305354ffc76",
-        "3d0eeb88-744d-4c8b-89f9-ccc1ac1ac841"
+        "3d0eeb88-744d-4c8b-89f9-ccc1ac1ac841",
+        "06e78dd5-071a-4f92-bc21-9ad8f8e43c19"
     ],
     "filterType": "GMSprite",
     "folderName": "Buff Icons",

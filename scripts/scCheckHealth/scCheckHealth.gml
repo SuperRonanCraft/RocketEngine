@@ -3,7 +3,15 @@ var map = player_map;
 
 shootable_map[? SHOOTABLE_MAP.HEALTH] = shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] + shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] + shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 
-if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0) {
+if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && map[? PLAYER_MAP.ALIVE]) {
+	
+	var charMap = map[?PLAYER_MAP.CHARACTER_INFO];
+	
+	if(!is_undefined(charMap[?CHARACTER_MAP.SOUND_DIE])){
+		scPlaySound(charMap[?CHARACTER_MAP.SOUND_DIE], random_range(0.5,2.5));
+	}
+	
+	
 	map[? PLAYER_MAP.ALIVE] = false;
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = 0;
 	map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.DEAD;

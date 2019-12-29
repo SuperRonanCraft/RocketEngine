@@ -29,6 +29,7 @@ switch (map[? CHARACTER_MAP.TYPE]) {
 		map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
 		map[? CHARACTER_MAP.HEALTH_BASE] = 30;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
+		map[? CHARACTER_MAP.SOUND_DIE] = snZombie_Die;
 		break;
 }
 

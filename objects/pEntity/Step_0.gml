@@ -74,7 +74,7 @@ switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 
 
 //Mostly meant for clones
-if (despawn && ((shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && player_map[? PLAYER_MAP.PLAYER_STATE] == PLAYERSTATE.DEAD && gravity_map[? GRAVITY_MAP.VSP] == 0) || image_alpha != 1)) { //Despawn player object
+if (despawn && (!player_map[? PLAYER_MAP.ALIVE] || image_alpha != 1)) { //Despawn player object
 	image_alpha -= 0.025;
 	destroy = true;
 	if (image_alpha <= 0)

@@ -3,6 +3,7 @@
 ///@arg y
 ///@arg length
 ///@arg alpha
+///@arg team-respect
 
 if (!system_ultimate) exit;
 
@@ -11,8 +12,9 @@ var _y = argument1;
 var _len = argument2;
 var _hei = 16;
 var _alpha = argument3;
-var _side = team == TEAM.LEFT ? 1 : -1;
-_x = team == TEAM.LEFT ? _x : RES_W - _x;
+var _team_respect = argument4;
+var _side = _team_respect ? (team == TEAM.LEFT ? 1 : -1) : 1;
+_x = _team_respect ? (team == TEAM.LEFT ? _x : RES_W - _x) : _x;
 var map = ultimate_map;
 	
 //ULTIMATE CHARGE CIRCLE

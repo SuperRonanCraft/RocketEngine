@@ -1,5 +1,4 @@
 /// @desc Generate Blocks
-event_user(2); //Flatten terrain
 
 //Clear up any walls/surface we have hangin around
 /*for (var i = 0; i < ds_list_size(chunk_walls); i++)
@@ -15,9 +14,16 @@ for (var xx = 0; xx < chunk_size; xx++)
 	for (var yy = 0; yy < chunk_size; yy++) {
 		var _h = round(chunk_noise[? xx]);
 		if (_h <= yy + (chunk_id[1] * chunk_size))
-			chunk_grid[# xx, yy] = 0; //Make this a wall
+			if (_h == yy + (chunk_id[1] * chunk_size))
+				chunk_grid[# xx, yy] = 0; //Make this a wall?
+			else{
+				chunk_grid[# xx, yy] = scGeneratePerlinNoise(x+xx,y+yy,0,1,oGenerationHandler.seed,oGenerationHandler.chunk_size,false) <= 3 ? 0 : 1; //Make this a wall?
+				show_debug_message(string(chunk_grid[# xx, yy]));
+			}
 		//chunk_grid[# xx, yy] = chunk_noise_2d[# xx, yy] - 1;
 	}
+
+event_user(2); //Flatten terrain
 //Generate walls
 if (chunk_force_load) {
 	for (var xx = 0; xx < chunk_size; xx++)

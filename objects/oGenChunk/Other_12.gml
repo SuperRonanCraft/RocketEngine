@@ -3,6 +3,7 @@ if (!chunk_flatten) exit;
 show_debug_message("Flattening Chunk ID: " + string(chunk_id[0]) + " " + string(chunk_id[1]));
 var o_chunk_grid = oGenerationHandler.chunks_grid;
 repeat (chunk_flatness)
+for (var yy = 0; yy < chunk_size; yy++)
 	for (var xx = 0; xx < chunk_size; xx++) {
 		var _before = undefined, _after = undefined;
 		if (xx == 0 && chunk_id[0] - 1 >= 0 && o_chunk_grid[# chunk_id[0] - 1, chunk_id[1]] != 0) { //Grab the before block from last chunk
@@ -10,7 +11,7 @@ repeat (chunk_flatness)
 			//var _chunk_map = o_chunk_map[? chunk_id - 1];
 			if (_chunk_map[? CHUNK_MAP.LOADED]) {
 				var _chunk = _chunk_map[? CHUNK_MAP.OBJECT];
-				_before = _chunk.chunk_noise[? chunk_size - 1];
+				//_before = _chunk.chunk_grid[? chunk_size - 1, yy];
 			} else
 				continue;
 		} else if (xx == 0 && chunk_id[0] - 1 >= 0 && o_chunk_grid[# chunk_id[0] - 1, chunk_id[1]] == 0)

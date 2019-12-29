@@ -65,7 +65,7 @@ with (damaging) {
 				_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 				scPlaySound(SOUND.UI_SELECT);
-				scSpawnParticle(x, bbox_top, ceil(_dmg_inflicted * 1.3 + 10), 10, spShield, WORLDPART_TYPE.SHIELD);
+				scSpawnParticle(x, bbox_top, 5, 10, spShield, WORLDPART_TYPE.SHIELD);
 			} 
 			
 			//Partial Shield Damage
@@ -112,7 +112,7 @@ with (damaging) {
 				_dmg_left = 0;
 				
 			} else { //Used up all armor, take the rest of dmg in health
-				scSpawnParticle(x, bbox_top, ceil(_dmg_left * 1.3 + 10), 20, spArmor, WORLDPART_TYPE.ARMOR);
+				scSpawnParticle(x, bbox_top, 5, 20, spArmor, WORLDPART_TYPE.ARMOR);
 				scPlaySound(SOUND.ULT_SHIELD_BREAK);
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
 				//Took mostly armor damage
@@ -152,10 +152,35 @@ with (damaging) {
 		map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
 		if (map[? SHOOTABLE_MAP.HEALTH] <= 0 && player_map[?PLAYER_MAP.ALIVE]) {
 			lethalDamage = true;
-			scSpawnParticle(x, bbox_top, ceil(_dmg_inflicted * 1.3+20), 20, spBlood, WORLDPART_TYPE.BLOOD);
+			
+			
+			scSpawnParticle(x, bbox_top, 5, 20, spBlood, WORLDPART_TYPE.BLOOD);
 			map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
+			scCheckDeathEffect(_damage_type,damaging,damager, true);
+			scCheckDeathEffect(_damage_element,damaging,damager, false);
+			
+			with(damaging){
+				scCheckHealth()
+			}
+			
+		}
+		
+		var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
+		if (show_dmg) {
+			if (isPlayer && dmg > 0) //Alive? Show damage indicators
+				with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
+					value_damage = abs(floor(dmg));
+					damage_type = _damage_type;
+					damage_element = _damage_element;
+					damage_took = _dmg_took;
+					damage_killed = lethalDamage;
+					base_damage_amped = _base_ampedDamage;
+					element_damage_amped = _element_ampedDamage;
+					//if (damager != noone && combo && damager.object_index == oPlayer)
+					//	id.combo = damager.combo_map[? COMBO_MAP.STREAK];
+				}
 		}
 			
 		if (isPlayer) {
@@ -202,21 +227,7 @@ with (damaging) {
 		health_map[? HEALTH_MAP.DAMAGE_TIME] = health_map[? HEALTH_MAP.SHOW_TIME];
 	}
 	map[? SHOOTABLE_MAP.SHOOTER] = damager; //The person who shot them
-	var show_dmg = map[? SHOOTABLE_MAP.SHOW_DAMAGE];
-	if (show_dmg) {
-		if ((isPlayer && player_map[? PLAYER_MAP.ALIVE]) && dmg > 0) //Alive? Show damage indicators
-			with (instance_create_depth(x, y, depth - 1, oPartDamageNum)) {
-				value_damage = abs(floor(dmg));
-				damage_type = _damage_type;
-				damage_element = _damage_element;
-				damage_took = _dmg_took;
-				damage_killed = lethalDamage;
-				base_damage_amped = _base_ampedDamage;
-				element_damage_amped = _element_ampedDamage;
-				//if (damager != noone && combo && damager.object_index == oPlayer)
-				//	id.combo = damager.combo_map[? COMBO_MAP.STREAK];
-			}
-	}
+	
 	map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] = 0; //We just got damaged
 	
 	if (isPlayer && !local_player) {

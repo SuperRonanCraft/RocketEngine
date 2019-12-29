@@ -12,6 +12,9 @@ var spd = argument3;
 var sprite = argument4;
 var type = argument5;
 
+if(instance_number(oPartGravParent) > 100){
+	exit	
+}
 
 repeat(amt){
 	var worldPart = instance_create_depth(xx, yy, depth + 1, oPartGravParent);

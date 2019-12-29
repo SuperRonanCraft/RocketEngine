@@ -4,6 +4,7 @@
 ///@arg size-in-pixels
 ///@arg buffer
 ///@arg alpha
+///@arg team-respect
 
 if (!system_ability) exit;
 var map = ability_map;
@@ -16,8 +17,9 @@ var _buffer = argument3;
 var _alpha = argument4;
 var _time_max = map[? ABILITY_MAP.COOLDOWN] * room_speed;
 var _time = map[? ABILITY_MAP.CURRENT_TIME];
+var _team_respect = argument5;
 
-_x = team == TEAM.LEFT ? _x : RES_W - _x - _width;
+_x = _team_respect ? (team == TEAM.LEFT ? _x : RES_W - _x - _width) : _x;
 
 var _size = _width + (_buffer * 2);
 

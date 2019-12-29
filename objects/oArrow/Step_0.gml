@@ -53,7 +53,7 @@ if(!deactivate){
 			var _team = owner.team; //Owner Team
 			var _oteam = obj.team; //Entity Team
 		
-			if(_team != _oteam){
+			if((_team != _oteam || _team == TEAM.NONE) && obj.id != owner.id){
 				if (ds_list_find_index(confirmList, obj) == -1) { //We've never hit this player before
 					ds_list_add(confirmList, obj);
 					ds_list_add(hitList, obj);
@@ -66,7 +66,7 @@ if(!deactivate){
 					obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
 		
 					//Damage player
-					if (scShootableDamage(owner, obj, false, true, bonusDMG,noone,DAMAGE_TYPE.STAB,noone)){
+					if (scShootableDamage(owner, obj, false, true, bonusDMG,noone,DAMAGE_TYPE.STAB,noone,DAMAGE_ELEMENT.INFECTED)){
 						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];
 						if(fullPower){
 							flyWith = obj;
