@@ -51,24 +51,6 @@ if (_hovering_slot != noone && _moving_item == noone) { //Are hovering over an i
 	var _yy = device_mouse_y_to_gui(0) - _inv_slot_size / 2;
 	var _slot_map = _moving_item;
 	scDrawInventoryItem(_slot_map, _xx, _yy, _inv_slot_size, _alpha, false, true);
-	/*if (_item != ITEM.NONE) { //Display if there is an item in a slot
-		_slot_map[? ITEM_MAP.XX] = _xx;
-		_slot_map[? ITEM_MAP.YY] = _yy;
-		var _sprite = _slot_map[? ITEM_MAP.SPRITE];
-		var _scale = _slot_map[? ITEM_MAP.SCALE];
-		var _item_w = sprite_get_width(_sprite);
-		var _item_h = sprite_get_height(_sprite);
-		var _offset_x = (_inv_slot_size / 2) - ((_item_w * _scale) / 2);
-		var _offset_y = (_inv_slot_size / 2) - ((_item_h * _scale) / 2);
-		draw_sprite_part_ext(_sprite, 0, 0, 0, _item_w, _item_h, _xx + _offset_x + 3, _yy + _offset_y + 3, _scale, _scale, c_black, _alpha);
-		draw_sprite_part_ext(_sprite, 0, 0, 0, _item_w, _item_h, _xx + _offset_x, _yy + _offset_y, _scale, _scale, c_white, _alpha);
-		if (_slot_map[? ITEM_MAP.AMOUNT] > 1) { //Amount if above 1
-			var _c = _slot_map[? ITEM_MAP.AMOUNT] >= _slot_map[? ITEM_MAP.STACK_MAX] ? c_yellow : c_white;
-			scDrawText(_xx + _inv_slot_size, _yy + _inv_slot_size, string(_slot_map[? ITEM_MAP.AMOUNT]), _c, 0.5, noone, _alpha, fa_right, fa_bottom);
-		} if (_slot_map[? ITEM_MAP.DURABILITY] != noone) { //Durability Bar
-			scDrawRect(_xx + 3, _yy + 60, _xx + 61, _yy + 63, c_green, false, _alpha);
-		}
-	}*/
 }
 if (_hovering_slot != noone && _moving_item == noone) { //Just hovering over an item
 	if (keyboard_check_pressed(ord("Q"))) {

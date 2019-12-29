@@ -5471,6 +5471,14 @@
             }
         },
         {
+            "Key": "9e290828-e3f4-4bfa-a8f2-58870e933b4b",
+            "Value": {
+                "id": "c062bdd3-0bea-4502-b86c-b32403f6dc45",
+                "resourcePath": "scripts\\scInventoryUse\\scInventoryUse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9e74666a-3cfa-4dd4-93dd-1a80cc48bf2a",
             "Value": {
                 "id": "56dba5b2-7de1-4030-a5d8-0a4dcb5389d9",
@@ -9086,6 +9094,7 @@
         "bad3a38c-6008-4bd2-83b3-86628a40ea07",
         "65a89d5f-671c-4e04-b1e8-0f8f8598db7f",
         "4632ccd6-2035-483c-bf82-82f6cccc9d57",
+        "9e290828-e3f4-4bfa-a8f2-58870e933b4b",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "26b40477-dd28-4867-adb4-50b416a7c5d5",

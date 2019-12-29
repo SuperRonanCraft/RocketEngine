@@ -57,7 +57,7 @@ shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] = map[? CHARACTER_MAP.HEALT
 player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 
 //Load character weapon
-scWeaponStart();
+//scWeaponStart();
 
 //Load Character Abilities
 scAbilityStart(map[? CHARACTER_MAP.ABILITY]);

@@ -13,7 +13,7 @@ var _buffer_ab = 4;
 var _team_respect = false;
 
 scPlayerDrawUIHealth(_x, _y, _len, _hei, _team_respect, _alpha, true);
-scPlayerDrawUIWeapon(_x + _len + _buffer_x, _y, _buffer_ab, _alpha, _team_respect);
+//scPlayerDrawUIWeapon(_x + _len + _buffer_x, _y, _buffer_ab, _alpha, _team_respect);
 scPlayerDrawUIAbility(_x + _len + (_buffer_x * 3) + (_buffer_ab * 4), _y, 32, _buffer_ab, _alpha, _team_respect);
 scPlayerDrawUIUltimate(_x, _y + _hei + _buffer_y, _len, _alpha, _team_respect);
 scPlayerDrawUIInventory(RES_W / 2 - (sprite_get_width(sUIInventoryBgd) / 2), RES_H / 2 - (sprite_get_height(sUIInventoryBgd) / 2), _alpha)

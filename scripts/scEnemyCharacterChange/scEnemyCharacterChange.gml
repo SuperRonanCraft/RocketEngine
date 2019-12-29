@@ -24,7 +24,7 @@ player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 health_map[? HEALTH_MAP.ALPHA] = 0; //Hide health when spawning
 
 //Load character weapon
-scWeaponStart();
+//scWeaponStart();
 
 enum CHARACTER_ENEMY {
 	ENEMY, ZOMBIE,

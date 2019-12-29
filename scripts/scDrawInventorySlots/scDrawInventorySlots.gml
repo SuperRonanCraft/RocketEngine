@@ -40,8 +40,8 @@ var _inv_hovering = inventory_map[? INVENTORY_MAP.HOVERING_INV] == _inv_type ? i
 var _inv_moving_item = inventory_map[? INVENTORY_MAP.MOVING_ITEM];
 
 //Draw slot, highlight if hovering
-for (var xx = 0; xx < _width; xx++)
-	for (var yy = 0; yy < _height; yy++) {
+for (var yy = 0; yy < _height; yy++)
+	for (var xx = 0; xx < _width; xx++) {
 		var _xx = (_x + _buffer_x) + (xx * _inv_slot_size + (xx * _buffer_x));
 		var _yy = (_y + _buffer_y) + (yy * _inv_slot_size + (yy * _buffer_y));
 		var _slot_alpha = _alpha;
