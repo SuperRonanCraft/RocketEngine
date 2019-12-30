@@ -4591,6 +4591,14 @@
             }
         },
         {
+            "Key": "8372842f-9e36-44b6-abca-cf9b3fc97764",
+            "Value": {
+                "id": "b8c37803-114a-4d38-b9ef-97979bbd5690",
+                "resourcePath": "scripts\\scInventoryStep\\scInventoryStep.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "838e934f-e2b7-41e1-8e8e-86149dc4b438",
             "Value": {
                 "id": "e35e1a2a-2f51-4300-b7c5-39d66d7d5174",
@@ -8711,6 +8719,14 @@
             }
         },
         {
+            "Key": "fd2f4503-3ac7-45ea-8ea6-6021a6ab190e",
+            "Value": {
+                "id": "1d8a9a12-385b-447f-ac68-e3d666bd1464",
+                "resourcePath": "scripts\\scPlayerDrawUIWeaponOLDNEW\\scPlayerDrawUIWeaponOLDNEW.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd9125ea-14d1-4910-bba8-57b7aa71de84",
             "Value": {
                 "id": "e1cba944-3dae-4205-8f60-ded81f41464c",
@@ -9095,7 +9111,9 @@
         "65a89d5f-671c-4e04-b1e8-0f8f8598db7f",
         "4632ccd6-2035-483c-bf82-82f6cccc9d57",
         "9e290828-e3f4-4bfa-a8f2-58870e933b4b",
+        "8372842f-9e36-44b6-abca-cf9b3fc97764",
         "023ac2a5-ee7a-4e79-b82b-c5dfec2a96d7",
+        "fd2f4503-3ac7-45ea-8ea6-6021a6ab190e",
         "222ed6ad-f64b-4847-923c-ad598ff8aef7",
         "26b40477-dd28-4867-adb4-50b416a7c5d5",
         "8d728d6f-9105-4198-8af2-8e218a26f3ba",

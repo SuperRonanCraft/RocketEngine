@@ -42,8 +42,8 @@ scBuffHandler(BUFF_EVENT.STEP);
 //Collision
 scGravityStep();
 
-//Weapon activate
-//scWeaponProgress();
+//Inventory Weapons/Tools event
+scInventoryStep();
 
 //Combo handling (alters ultimate charge)
 scComboHandler();

@@ -5,18 +5,13 @@
 ///@arg alpha
 ///@arg team-respect
 
-if (!system_inventory) exit;
-
-var _inv_grid = inventory_map[? INVENTORY_MAP.GRID_WEAPON];
-var item_map = _inv_grid[# inventory_map[? INVENTORY_MAP.WEAPON_SELECTED], 0];
-if (item_map == noone) exit;
-var map = item_map[? ITEM_MAP.MAP];
-if (map == noone || map[? WEAPON_MAP.TYPE] == WEAPON_TYPE.NONE) exit;
+var map = weapon_map;
 var _x = argument0;
 var _y = argument1;
 var _buffer = argument2;
 var _alpha = argument3;
 var _team_respect = argument4;
+if (map[? WEAPON_MAP.TYPE] == WEAPON.NONE) exit;
 
 //The projectile sprite
 //var sprite = map[? WEAPON_MAP.GUI_ICON];

@@ -1,11 +1,11 @@
 ///Use an item from inventory
 ///@arg inventory-type
-///@arg pressing
+//@arg pressing
 
 if (!system_inventory) exit;
 
 var _inv_type = argument0;
-var _pressing = argument1;
+//var _pressing = argument1;
 
 switch (_inv_type) {
 	case INVENTORY_TYPE.WEAPON: //WEAPON

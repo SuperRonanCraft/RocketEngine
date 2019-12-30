@@ -74,9 +74,9 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 	
 	//Weapon
 	if (key_shoot)
-		scInventoryUse(INVENTORY_TYPE.WEAPON, true);//scWeaponActivate();
+		scInventoryUse(INVENTORY_TYPE.WEAPON);//scWeaponActivate();
 	if (key_shoot_released)
-		scInventoryUse(INVENTORY_TYPE.WEAPON, false);//scWeaponActivate();
+		scInventoryUse(INVENTORY_TYPE.WEAPON);//scWeaponActivate();
 }
 
 //HORIZONTAL & Friction

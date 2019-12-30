@@ -25,5 +25,3 @@ if ((_map[? WEAPON_MAP.ENABLED] && _map[? WEAPON_MAP.RELOAD_TIME] <= 0 && _map[?
 			//_map[? WEAPON_MAP.START_DELAY] = true;
 			break;			
 	}
-
-scWeaponProgress(_map);
