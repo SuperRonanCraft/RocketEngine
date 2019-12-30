@@ -1,11 +1,12 @@
-///@arg weapon
+///@arg type
+///@arg weapon-map
 
 var wep = argument0;
-var map = weapon_map;
-var old_weapon_map = map[? WEAPON_MAP.MAP];
+var map = argument1;
+//var old_weapon_map = map[? WEAPON_MAP.MAP];
 
 //Makes sure shuriken is not the same as the one already equipped
-if (old_weapon_map[? ARROW_MAP.TYPE] != wep) {
+//if (old_weapon_map[? ARROW_MAP.TYPE] != wep) {
 	//Clear the map
 	//ds_map_destroy(rocket_map);
 	//All default values
@@ -14,6 +15,8 @@ if (old_weapon_map[? ARROW_MAP.TYPE] != wep) {
 	//scRocketGet(weapons[weapon], rocket_map);
 	var arrow_map = scArrowGet(wep);
 	map[? WEAPON_MAP.MAP] = arrow_map;
+	map[? WEAPON_MAP.NAME] = arrow_map[? ARROW_MAP.NAME];
+	map[? WEAPON_MAP.DESCRIPTION] = arrow_map[? ARROW_MAP.DESCRIPTION];
 	map[? WEAPON_MAP.AMMO] = arrow_map[? ARROW_MAP.CLIP];
 	map[? WEAPON_MAP.GUI_ICON] = arrow_map[? ARROW_MAP.PROJECTILE];
 	//map[? WEAPON_MAP.GUI_BUFFS] = shuriken_map[? ARROW_MAP.BUFF];
@@ -25,8 +28,8 @@ if (old_weapon_map[? ARROW_MAP.TYPE] != wep) {
 	map[? WEAPON_MAP.COOLDOWN_TIME_ORIGINAL] = arrow_map[? ARROW_MAP.COOLDOWN];
 	map[? WEAPON_MAP.RELOAD_TIME_ORIGINAL] = arrow_map[? ARROW_MAP.RELOAD_TIME];
 	map[? WEAPON_MAP.GUI_WEAPON_SCALE] = 2;
-	if (system_ultimate)
-		ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
+	//if (system_ultimate)
+	//	ultimate_map[? ULTIMATE_CASTING_MAP.CASTING] = false; //Reset the ult timer
 	map[? WEAPON_MAP.RELOAD_TIME] = 0;
 	//map[? WEAPON_MAP.ULTIMATE] = arrow_map[? ARROW_MAP.ULTIMATE];
-}
+//}

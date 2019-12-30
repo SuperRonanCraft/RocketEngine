@@ -1,7 +1,10 @@
+///Shuriken fill weapon mpa
+///@arg shuriken
+///@arg weapon-map
 
-scShurikenChange(argument0);
+scShurikenChange(argument0, argument1);
 
-enum SHURIKEN {
+enum WEAPON_SHURIKEN_TYPE {
 	NONE, DEFAULT, ICE, FIRE, PORTAL, BRICK, MAGNET ,SLIME, SAND, SHOTGUN, METAL, ELECTRIC
 }
 

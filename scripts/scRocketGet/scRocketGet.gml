@@ -13,12 +13,12 @@ map[? ROCKET_MAP.TYPE] = roc;
 var _dmg_mul = 4;
 
 switch (roc) {
-	case ROCKET.NONE:
+	case WEAPON_ROCKET_TYPE.NONE:
 		map[? ROCKET_MAP.DAMAGE] = 0;
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.NONE;
 		break;
 		
-	case ROCKET.DEFAULT:
+	case WEAPON_ROCKET_TYPE.DEFAULT:
 		map[? ROCKET_MAP.NAME] = "Classic";
 		map[? ROCKET_MAP.DESCRIPTION] = "Explosive device";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.DEFAULT;
@@ -30,7 +30,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];
 		break;
 		
-	case ROCKET.FAST:
+	case WEAPON_ROCKET_TYPE.FAST:
 		map[? ROCKET_MAP.NAME] = "Fast";
 		map[? ROCKET_MAP.DESCRIPTION] = "Super sonic!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FAST;
@@ -44,7 +44,7 @@ switch (roc) {
 		map[? ROCKET_MAP.KBAMT] = 24 / varkb;
 		break;
 		
-	case ROCKET.HOMING:
+	case WEAPON_ROCKET_TYPE.HOMING:
 		map[? ROCKET_MAP.NAME] = "Homing";
 		map[? ROCKET_MAP.DESCRIPTION] = "I will find you!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.HOMING;
@@ -61,7 +61,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HOMING;
 		break;
 		
-	case ROCKET.REVERSE:
+	case WEAPON_ROCKET_TYPE.REVERSE:
 		map[? ROCKET_MAP.NAME] = "Reverse";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ima go this way";
 		map[? ROCKET_MAP.RECOIL] = -2 * varrc;
@@ -81,7 +81,7 @@ switch (roc) {
 		map[? ROCKET_MAP.KBAMT] = 20 / varkb;
 		break;
 		
-	case ROCKET.ICE:
+	case WEAPON_ROCKET_TYPE.ICE:
 		map[? ROCKET_MAP.NAME] = "Ice";
 		map[? ROCKET_MAP.DESCRIPTION] = "It's cold outside";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.ICE;
@@ -103,7 +103,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.FROSTY; //FROSTY
 		break;
 		
-	case ROCKET.FIRE:
+	case WEAPON_ROCKET_TYPE.FIRE:
 		map[? ROCKET_MAP.NAME] = "Fire";
 		map[? ROCKET_MAP.DESCRIPTION] = "Hot like lava";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FIRE;
@@ -124,7 +124,7 @@ switch (roc) {
 		map[? ROCKET_MAP.KBAMT] = 40 / varkb;
 		break;
 		
-	case ROCKET.SAND:
+	case WEAPON_ROCKET_TYPE.SAND:
 		map[? ROCKET_MAP.NAME] = "Sandy";
 		map[? ROCKET_MAP.DESCRIPTION] = "In question";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SAND;
@@ -143,7 +143,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.HUGEEXPLOSION;
 		break;
 
-	case ROCKET.LASER:
+	case WEAPON_ROCKET_TYPE.LASER:
 		map[? ROCKET_MAP.NAME] = "Laser";
 		map[? ROCKET_MAP.DESCRIPTION] = "Dont stand still!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LASER;
@@ -158,7 +158,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.BARRAGE;
 		break;
 
-	case ROCKET.SLIME:
+	case WEAPON_ROCKET_TYPE.SLIME:
 		map[? ROCKET_MAP.NAME] = "Slime";
 		map[? ROCKET_MAP.DESCRIPTION] = "A sticky situation";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SLIME;
@@ -176,7 +176,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SLUDGE;
 		break;
 
-	case ROCKET.RANDOM:
+	case WEAPON_ROCKET_TYPE.RANDOM:
 		map[? ROCKET_MAP.NAME] = "Random";
 		map[? ROCKET_MAP.DESCRIPTION] = "RNG isn't fun";
 		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
@@ -194,7 +194,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ENABLED] = false; //DISABLED
 		break;
 		
-	case ROCKET.BOUNCY:
+	case WEAPON_ROCKET_TYPE.BOUNCY:
 		map[? ROCKET_MAP.NAME] = "Bouncy";
 		map[? ROCKET_MAP.DESCRIPTION] = "Ahhh Childhood parties";
 		map[? ROCKET_MAP.DAMAGE] = 2 * _dmg_mul;
@@ -213,7 +213,7 @@ switch (roc) {
 		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		
-	case ROCKET.SPIKED:
+	case WEAPON_ROCKET_TYPE.SPIKED:
 		map[? ROCKET_MAP.NAME] = "Spiked";
 		map[? ROCKET_MAP.DESCRIPTION] = "Plushy but deadly!";
 		map[? ROCKET_MAP.DAMAGE] = 0;
@@ -231,7 +231,7 @@ switch (roc) {
 		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		
-	case ROCKET.MAGNET:
+	case WEAPON_ROCKET_TYPE.MAGNET:
 		map[? ROCKET_MAP.NAME] = "Magnet";
 		map[? ROCKET_MAP.DESCRIPTION] = "Positively attractive!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.MAGNET;
@@ -251,7 +251,7 @@ switch (roc) {
 		map[? ROCKET_MAP.SCALE] = 1;
 		break;
 		
-	case ROCKET.OBSOLETE:
+	case WEAPON_ROCKET_TYPE.OBSOLETE:
 		map[? ROCKET_MAP.NAME] = "Obsolete";
 		map[? ROCKET_MAP.DESCRIPTION] = "It never works ;)";
 		map[? ROCKET_MAP.DAMAGE] = 2 * _dmg_mul;
@@ -270,7 +270,7 @@ switch (roc) {
 		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 	
-	case ROCKET.LIGHTNING:
+	case WEAPON_ROCKET_TYPE.LIGHTNING:
 		map[? ROCKET_MAP.NAME] = "Lightning";
 		map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
 		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
@@ -293,7 +293,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_ORB;
 		break;
 	
-	case ROCKET.SHOTGUN:
+	case WEAPON_ROCKET_TYPE.SHOTGUN:
 		map[? ROCKET_MAP.NAME] = "Shotgun";
 		map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
@@ -309,7 +309,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.SPRAY;
 		break;
 	
-	case ROCKET.PEACE:
+	case WEAPON_ROCKET_TYPE.PEACE:
 		map[? ROCKET_MAP.NAME] = "Peace";
 		map[? ROCKET_MAP.DESCRIPTION] = "Good vibes brooo";
 		map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
@@ -328,7 +328,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION] = false;
 		break;
 	
-	case ROCKET.TELEPORT:
+	case WEAPON_ROCKET_TYPE.TELEPORT:
 		map[? ROCKET_MAP.NAME] = "Portal";
 		map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
@@ -347,7 +347,7 @@ switch (roc) {
 		map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.PORTAL];
 		break;
 	
-	case ROCKET.ARCHING:
+	case WEAPON_ROCKET_TYPE.ARCHING:
 		map[? ROCKET_MAP.NAME] = "Bowing";
 		map[? ROCKET_MAP.DESCRIPTION] = "The ark!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.ARCHING;
@@ -370,7 +370,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ENABLED] = false; //DISABLED
 		break;
 		
-	case ROCKET.BOOMERANG:
+	case WEAPON_ROCKET_TYPE.BOOMERANG:
 		map[? ROCKET_MAP.NAME] = "Boomerang";
 		map[? ROCKET_MAP.DESCRIPTION] = "The skill!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BOOMERANG;
@@ -386,7 +386,7 @@ switch (roc) {
 		//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.ORBIT;
 		break;
 		
-	case ROCKET.BRICK:
+	case WEAPON_ROCKET_TYPE.BRICK:
 		map[? ROCKET_MAP.NAME] = "Brick";
 		map[? ROCKET_MAP.DESCRIPTION] = "Drops like a Stone!";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BRICK;
@@ -408,7 +408,7 @@ switch (roc) {
 		map[? ROCKET_MAP.UNIQUE_CANBOUNCE] = true;
 		break;
 		
-	case ROCKET.PIERCING:
+	case WEAPON_ROCKET_TYPE.PIERCING:
 		map[? ROCKET_MAP.NAME] = "Piercing";
 		map[? ROCKET_MAP.DESCRIPTION] = "Can't touch this.";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.PIERCING;
@@ -425,7 +425,7 @@ switch (roc) {
 		map[? ROCKET_MAP.ENABLED] = false;
 		break;
 		
-	case ROCKET.GLASS:
+	case WEAPON_ROCKET_TYPE.GLASS:
 		map[? ROCKET_MAP.NAME] = "Glass";
 		map[? ROCKET_MAP.DESCRIPTION] = "Extremely fragile";
 		map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.GLASS;

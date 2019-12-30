@@ -39,7 +39,7 @@ scBuffHandler(BUFF_EVENT.STEP);
 scGravityOLD();
 
 //Weapon activate
-scWeaponProgress();
+//scWeaponProgress();
 
 //Combo handling (alters ultimate charge)
 scComboHandler();

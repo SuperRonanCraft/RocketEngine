@@ -3,7 +3,7 @@
 
 var map = ds_map_create();
 map[? CHARACTER_MAP.TYPE] = argument0;
-map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
+//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
 map[? CHARACTER_MAP.HEALTH_BASE] = 20; //Default health
 map[? CHARACTER_MAP.HEALTH_ARMOR] = 0; //Default armor
 map[? CHARACTER_MAP.HEALTH_SHIELD] = 0; //Default shield
@@ -17,7 +17,7 @@ map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.NONE;
 switch (map[? CHARACTER_MAP.TYPE]) {
 	case CHARACTER.DEFAULT:
 		map[? CHARACTER_MAP.NAME] = "Steve";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET;
+		//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET;
 		map[? CHARACTER_MAP.HEALTH_BASE] = 50;
 		map[? CHARACTER_MAP.HEALTH_ARMOR] = 20;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
@@ -26,7 +26,7 @@ switch (map[? CHARACTER_MAP.TYPE]) {
 		break;
 	case CHARACTER.SWORD:
 		map[? CHARACTER_MAP.NAME] = "Sword Guy";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.SHURIKEN;
+		//map[? CHARACTER_MAP.WEAPON] = WEAPON.SHURIKEN;
 		map[? CHARACTER_MAP.HEALTH_BASE] = 30;
 		map[? CHARACTER_MAP.HEALTH_SHIELD] = 20;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_sword;
@@ -35,7 +35,7 @@ switch (map[? CHARACTER_MAP.TYPE]) {
 		break;
 	case CHARACTER.ARROW:
 		map[? CHARACTER_MAP.NAME] = "Hush";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ARROW;
+		//map[? CHARACTER_MAP.WEAPON] = WEAPON.ARROW;
 		map[? CHARACTER_MAP.HEALTH_BASE] = 100;
 		map[? CHARACTER_MAP.HEALTH_ARMOR] = 50;
 		map[? CHARACTER_MAP.HEALTH_SHIELD] = 50;

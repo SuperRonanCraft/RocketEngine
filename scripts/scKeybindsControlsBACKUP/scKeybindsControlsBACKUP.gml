@@ -41,8 +41,8 @@ if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
 		//scPlaySound(SOUND.EFFECT_PLAYER_JUMP);
 	}
 	//Weapon
-	if (key_shoot)
-		scWeaponActivate();
+	//if (key_shoot)
+	//	scWeaponActivate();
 } else {
 	//hsp_move = hsp;
 }

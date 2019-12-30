@@ -1,9 +1,9 @@
-///@arg team
+///@arg weapon-map
 
-var map = weapon_map;
+var map = argument0;
 var arrow_map = map[? WEAPON_MAP.MAP];
 
-if(arrow_map[? ARROW_MAP.TYPE] == ARROW.NONE) exit;
+if(arrow_map[? ARROW_MAP.TYPE] == WEAPON_ARROW_TYPE.NONE) exit;
 
 if (!key_shoot || map[? WEAPON_MAP.COOLDOWN_TIME] != arrow_map[? ARROW_MAP.COOLDOWN]){
 	if (map[? WEAPON_MAP.DELAY_TIME] == 0)

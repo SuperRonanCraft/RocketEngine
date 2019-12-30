@@ -1,52 +1,54 @@
-///@arg weapon-modifier
+///@arg modifier
+///@arg weapon-map
 var modifier = argument0;
+var _map = argument1;
 
-var type = weapon_map[? WEAPON_MAP.TYPE];
+var type = _map[? WEAPON_MAP.TYPE];
 var weapon = noone;
 switch (type) {
-	case WEAPON.ROCKET:
+	case WEAPON_TYPE.ROCKET:
 		switch (modifier) {
-			case WEAPON_MODIFIER.DEFAULT: weapon = ROCKET.DEFAULT; break;
-			case WEAPON_MODIFIER.ICE: weapon = ROCKET.ICE; break;
-			case WEAPON_MODIFIER.FIRE: weapon = ROCKET.FIRE; break;
-			case WEAPON_MODIFIER.PORTAL: weapon = ROCKET.TELEPORT; break;
-			case WEAPON_MODIFIER.SHOTGUN: weapon = ROCKET.SHOTGUN; break;
-			case WEAPON_MODIFIER.SLIME: weapon = ROCKET.SLIME; break;
-			case WEAPON_MODIFIER.BRICK: weapon = ROCKET.BRICK; break;
-			case WEAPON_MODIFIER.SAND: weapon = ROCKET.SAND; break;
-			case WEAPON_MODIFIER.METAL: weapon = ROCKET.SPIKED; break;
-			case WEAPON_MODIFIER.ELECTRIC: weapon = ROCKET.LIGHTNING; break;
+			case WEAPON_MODIFIER.DEFAULT: weapon = WEAPON_ROCKET_TYPE.DEFAULT; break;
+			case WEAPON_MODIFIER.ICE: weapon = WEAPON_ROCKET_TYPE.ICE; break;
+			case WEAPON_MODIFIER.FIRE: weapon = WEAPON_ROCKET_TYPE.FIRE; break;
+			case WEAPON_MODIFIER.PORTAL: weapon = WEAPON_ROCKET_TYPE.TELEPORT; break;
+			case WEAPON_MODIFIER.SHOTGUN: weapon = WEAPON_ROCKET_TYPE.SHOTGUN; break;
+			case WEAPON_MODIFIER.SLIME: weapon = WEAPON_ROCKET_TYPE.SLIME; break;
+			case WEAPON_MODIFIER.BRICK: weapon = WEAPON_ROCKET_TYPE.BRICK; break;
+			case WEAPON_MODIFIER.SAND: weapon = WEAPON_ROCKET_TYPE.SAND; break;
+			case WEAPON_MODIFIER.METAL: weapon = WEAPON_ROCKET_TYPE.SPIKED; break;
+			case WEAPON_MODIFIER.ELECTRIC: weapon = WEAPON_ROCKET_TYPE.LIGHTNING; break;
 			default: weapon = noone; break;
 		}
 		break;
-	case WEAPON.SHURIKEN:
+	case WEAPON_TYPE.SHURIKEN:
 		switch (modifier) {
-			case WEAPON_MODIFIER.DEFAULT: weapon = SHURIKEN.DEFAULT; break;
-			case WEAPON_MODIFIER.ICE: weapon = SHURIKEN.ICE; break;
-			case WEAPON_MODIFIER.FIRE: weapon = SHURIKEN.FIRE; break;
-			case WEAPON_MODIFIER.PORTAL: weapon = SHURIKEN.PORTAL; break;
-			case WEAPON_MODIFIER.SLIME: weapon = SHURIKEN.SLIME; break;
-			case WEAPON_MODIFIER.BRICK: weapon = SHURIKEN.BRICK; break;
-			case WEAPON_MODIFIER.SAND: weapon = SHURIKEN.SAND; break;
-			case WEAPON_MODIFIER.SHOTGUN: weapon = SHURIKEN.SHOTGUN; break;
-			case WEAPON_MODIFIER.METAL: weapon = SHURIKEN.METAL; break;
-			case WEAPON_MODIFIER.ELECTRIC: weapon = SHURIKEN.ELECTRIC; break;
+			case WEAPON_MODIFIER.DEFAULT: weapon = WEAPON_SHURIKEN_TYPE.DEFAULT; break;
+			case WEAPON_MODIFIER.ICE: weapon = WEAPON_SHURIKEN_TYPE.ICE; break;
+			case WEAPON_MODIFIER.FIRE: weapon = WEAPON_SHURIKEN_TYPE.FIRE; break;
+			case WEAPON_MODIFIER.PORTAL: weapon = WEAPON_SHURIKEN_TYPE.PORTAL; break;
+			case WEAPON_MODIFIER.SLIME: weapon = WEAPON_SHURIKEN_TYPE.SLIME; break;
+			case WEAPON_MODIFIER.BRICK: weapon = WEAPON_SHURIKEN_TYPE.BRICK; break;
+			case WEAPON_MODIFIER.SAND: weapon = WEAPON_SHURIKEN_TYPE.SAND; break;
+			case WEAPON_MODIFIER.SHOTGUN: weapon = WEAPON_SHURIKEN_TYPE.SHOTGUN; break;
+			case WEAPON_MODIFIER.METAL: weapon = WEAPON_SHURIKEN_TYPE.METAL; break;
+			case WEAPON_MODIFIER.ELECTRIC: weapon = WEAPON_SHURIKEN_TYPE.ELECTRIC; break;
 			default: weapon = noone; break;
 		}
 		break;
 		
-	case WEAPON.ARROW:
+	case WEAPON_TYPE.ARROW:
 		switch (modifier) {
-			case WEAPON_MODIFIER.DEFAULT: weapon = ARROW.DEFAULT; break;
-			case WEAPON_MODIFIER.ICE: weapon = ARROW.ICE; break;
-			case WEAPON_MODIFIER.FIRE: weapon = ARROW.FIRE; break;
-			case WEAPON_MODIFIER.PORTAL: weapon = ARROW.PORTAL; break;
-			case WEAPON_MODIFIER.SLIME: weapon = ARROW.SLIME; break;
-			case WEAPON_MODIFIER.BRICK: weapon = ARROW.BRICK; break;
-			case WEAPON_MODIFIER.SAND: weapon = ARROW.SAND; break;
-			case WEAPON_MODIFIER.SHOTGUN: weapon = ARROW.SHOTGUN; break;
-			case WEAPON_MODIFIER.METAL: weapon = ARROW.METAL; break;
-			case WEAPON_MODIFIER.ELECTRIC: weapon = ARROW.ELECTRIC; break;
+			case WEAPON_MODIFIER.DEFAULT: weapon = WEAPON_ARROW_TYPE.DEFAULT; break;
+			case WEAPON_MODIFIER.ICE: weapon = WEAPON_ARROW_TYPE.ICE; break;
+			case WEAPON_MODIFIER.FIRE: weapon = WEAPON_ARROW_TYPE.FIRE; break;
+			case WEAPON_MODIFIER.PORTAL: weapon = WEAPON_ARROW_TYPE.PORTAL; break;
+			case WEAPON_MODIFIER.SLIME: weapon = WEAPON_ARROW_TYPE.SLIME; break;
+			case WEAPON_MODIFIER.BRICK: weapon = WEAPON_ARROW_TYPE.BRICK; break;
+			case WEAPON_MODIFIER.SAND: weapon = WEAPON_ARROW_TYPE.SAND; break;
+			case WEAPON_MODIFIER.SHOTGUN: weapon = WEAPON_ARROW_TYPE.SHOTGUN; break;
+			case WEAPON_MODIFIER.METAL: weapon = WEAPON_ARROW_TYPE.METAL; break;
+			case WEAPON_MODIFIER.ELECTRIC: weapon = WEAPON_ARROW_TYPE.ELECTRIC; break;
 			default: weapon = noone; break;
 		}
 		break;

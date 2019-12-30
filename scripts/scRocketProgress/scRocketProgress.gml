@@ -1,10 +1,10 @@
 /// @desc Check when to shoot a rocket
-/// @arg team
+/// @arg weapon-map
 
-var map = weapon_map;
+var map = argument0;
 var rocket_map = map[? WEAPON_MAP.MAP];
 
-if (rocket_map[? ROCKET_MAP.TYPE] == ROCKET.NONE) exit;
+if (rocket_map[? ROCKET_MAP.TYPE] == WEAPON_ROCKET_TYPE.NONE) exit;
 //Set the direction of the rocket
 var dir = point_direction(x,y,aim_target_x,aim_target_y);
 

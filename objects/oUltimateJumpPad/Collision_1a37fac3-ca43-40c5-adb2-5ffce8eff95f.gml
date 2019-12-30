@@ -9,7 +9,7 @@ if (jump_ani != 0) exit;
 var type = rocket_map[? ROCKET_MAP.TYPE];
 
 switch (type) {
-	case ROCKET.BOUNCY:
+	case WEAPON_ROCKET_TYPE.BOUNCY:
 		with (other) {
 			var map = bounceMap;
 			map[? "vsp"] = abs(map[? "vsp"]) * -2.5;	
@@ -17,7 +17,7 @@ switch (type) {
 		}
 		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE, 1.4);
 		break;
-	case ROCKET.BRICK:
+	case WEAPON_ROCKET_TYPE.BRICK:
 		with (other) {
 			var map = brickMap;
 			map[? "vsp"] += -15;
@@ -25,14 +25,14 @@ switch (type) {
 		}
 		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE, 0.3);
 		break;
-	case ROCKET.OBSOLETE:
+	case WEAPON_ROCKET_TYPE.OBSOLETE:
 		with (other) {
 			var map = obsoleteMap;
 			map[? "vsp"] = abs(map[? "vsp"]) * -2.5;
 		}
 		scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE, 0.7);
 		break;
-	case ROCKET.SPIKED:
+	case WEAPON_ROCKET_TYPE.SPIKED:
 		with (other) {
 			if (direction < 90 && direction > -80)
 				direction += 40;

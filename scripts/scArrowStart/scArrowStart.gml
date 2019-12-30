@@ -1,7 +1,10 @@
+///Arrow weapon map
+///@arg arrow
+///@arg weapon-map
 
-scArrowChange(argument0);
+scArrowChange(argument0, argument1);
 
-enum ARROW {
+enum WEAPON_ARROW_TYPE {
 	NONE, DEFAULT, ICE, FIRE, PORTAL, BRICK, 
 	MAGNET, SLIME, SAND, SHOTGUN, METAL, ELECTRIC
 }

@@ -1,5 +1,5 @@
-/// @desc Load all shurikens and set the default one
-///	@arg shuriken
+/// @desc Load all arrow and set the default one
+///	@arg arrow
 
 //var varcd = TIME_SPEED;
 
@@ -9,11 +9,11 @@ var wep = argument0;
 map[? ARROW_MAP.TYPE] = wep;
 
 switch (wep) {
-    case ARROW.NONE:
+    case WEAPON_ARROW_TYPE.NONE:
         map[? ARROW_MAP.DAMAGE] = 0;
 		//map[? ARROW_MAP.ULTIMATE] = ULTIMATE.NONE;
         break;
-    case ARROW.DEFAULT:
+    case WEAPON_ARROW_TYPE.DEFAULT:
 		map[? ARROW_MAP.NAME] = "Normal Arrow";
 		map[? ARROW_MAP.DESCRIPTION] = "As basic as they come.";
 		map[? ARROW_MAP.PROJECTILE] = ARROW_SPRITE.DEFAULT;

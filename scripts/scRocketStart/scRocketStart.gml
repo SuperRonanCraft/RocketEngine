@@ -1,18 +1,9 @@
-/// @arg default-rocket
+/// @arg rocket
+/// @arg weapon-map
 
-//current_cd = 0; //Cooldown time between shots
-//current_delay = -1; //Delay from shooting to deploying rocket
-//current_recoil = 0;
-//current_reload = 0; //Reload time
-//rockets = 0; //Amount of rockets a player has in the room
-//ammo = 0;
-//rocket_scale = 1;
-//rocket_map = ds_map_create();
-//rockets_enabled = true; //Ability to shoot weapon
-//pickups_enabled = true; //Ability to use pickups
-scRocketChange(argument0);
+scRocketChange(argument0, argument1);
 
-enum ROCKET {
+enum WEAPON_ROCKET_TYPE {
 	NONE, DEFAULT, FAST, HOMING, REVERSE, ICE, FIRE, SAND, LASER, SLIME,
 	RANDOM, BOUNCY, SPIKED, MAGNET, OBSOLETE, LIGHTNING, SHOTGUN, PEACE,
 	TELEPORT, ARCHING, BOOMERANG, BRICK, PIERCING, GLASS, 

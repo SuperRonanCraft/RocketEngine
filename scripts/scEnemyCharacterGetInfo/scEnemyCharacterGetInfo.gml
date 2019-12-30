@@ -3,7 +3,7 @@
 
 var map = ds_map_create();
 map[? CHARACTER_MAP.TYPE] = argument0;
-map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
+//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
 map[? CHARACTER_MAP.HEALTH_BASE] = 20; //Default health
 map[? CHARACTER_MAP.HEALTH_ARMOR] = 0; //Default health
 map[? CHARACTER_MAP.HEALTH_SHIELD] = 0; //Default health
@@ -17,7 +17,7 @@ map[? CHARACTER_MAP.ABILITY] = noone;
 switch (map[? CHARACTER_MAP.TYPE]) {
 	case CHARACTER_ENEMY.ENEMY:
 		map[? CHARACTER_MAP.NAME] = "Enemy";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
+		//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
 		map[? CHARACTER_MAP.HEALTH_BASE] = 10;
 		map[? CHARACTER_MAP.HEALTH_ARMOR] = 10;
 		map[? CHARACTER_MAP.HEALTH_SHIELD] = 20;
@@ -26,7 +26,7 @@ switch (map[? CHARACTER_MAP.TYPE]) {
 		break;
 	case CHARACTER_ENEMY.ZOMBIE:
 		map[? CHARACTER_MAP.NAME] = "Zombie";
-		map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
+		//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
 		map[? CHARACTER_MAP.HEALTH_BASE] = 30;
 		map[? CHARACTER_MAP.PALETTE] = sPallete_default;
 		map[? CHARACTER_MAP.SOUND_DIE] = snZombie_Die;

@@ -37,7 +37,7 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		_map[? ITEM_MAP.SPRITE] = sRocket_Default;
 		_map[? ITEM_MAP.NAME] = "Rocket Launcher";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.WEAPON;
-		_map[? ITEM_MAP.MAP] = scRocketGet(ROCKET.DEFAULT);
+		_map[? ITEM_MAP.MAP] = scWeaponGet(WEAPON_TYPE.ROCKET, WEAPON_ROCKET_TYPE.DEFAULT);
 		//_map[? ITEM_MAP.SCRIPT_USE] = scWeaponActivate;
 		break;
 	case ITEM.WEAPON_SHURIKEN:
@@ -46,6 +46,7 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		_map[? ITEM_MAP.SPRITE] = sShuriken_Default;
 		_map[? ITEM_MAP.NAME] = "Shuriken";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.WEAPON;
+		_map[? ITEM_MAP.MAP] = scWeaponGet(WEAPON_TYPE.SHURIKEN, WEAPON_ARROW_TYPE.DEFAULT);
 		break;
 	case ITEM.WEAPON_ARROW:
 		_map[? ITEM_MAP.AMOUNT] = 1;
@@ -53,6 +54,7 @@ switch (_map[? ITEM_MAP.ITEM]) {
 		_map[? ITEM_MAP.SPRITE] = sArrow_default;
 		_map[? ITEM_MAP.NAME] = "Bow n' Arrow";
 		_map[? ITEM_MAP.ITEM_TYPE] = ITEM_TYPE.WEAPON;
+		_map[? ITEM_MAP.MAP] = scWeaponGet(WEAPON_TYPE.ARROW, WEAPON_ARROW_TYPE.DEFAULT);
 		break;
 	case ITEM.AMMO_ROCKET:
 		_map[? ITEM_MAP.AMOUNT] = 9;

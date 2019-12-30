@@ -9,11 +9,11 @@ var shur = argument0;
 map[? SHURIKEN_MAP.TYPE] = shur;
 
 switch (shur) {
-    case SHURIKEN.NONE:
+    case WEAPON_SHURIKEN_TYPE.NONE:
         map[? SHURIKEN_MAP.DAMAGE] = 0;
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.NONE;
         break;
-    case SHURIKEN.DEFAULT:
+    case WEAPON_SHURIKEN_TYPE.DEFAULT:
 		map[? SHURIKEN_MAP.NAME] = "Silver Star";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A familiar weapon";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.DEFAULT;
@@ -21,7 +21,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 4;
 		break;
-	case SHURIKEN.ICE:
+	case WEAPON_SHURIKEN_TYPE.ICE:
 		map[? SHURIKEN_MAP.NAME] = "Frost Star";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Cold to the touch";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.ICE;
@@ -36,7 +36,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DEATHCAUSE] = DEATH_LIST.FROZEN;
 		break;
 		
-	case SHURIKEN.FIRE:
+	case WEAPON_SHURIKEN_TYPE.FIRE:
 		map[? SHURIKEN_MAP.NAME] = "Flame's Ember";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A stinging flame";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.FIRE;
@@ -50,7 +50,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.WALL_SCRIPT] = scShuriken_Fire_Despawn;
 		break;
 		
-	case SHURIKEN.PORTAL:
+	case WEAPON_SHURIKEN_TYPE.PORTAL:
 		map[? SHURIKEN_MAP.NAME] = "Gravity's Core";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A perplexing puzzle";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.PORTAL;
@@ -69,7 +69,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.WEAPON_SCRIPT] = scShuriken_Portal_Weapon;
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.PORTAL_SWORD;
 		break;
-    case SHURIKEN.BRICK:
+    case WEAPON_SHURIKEN_TYPE.BRICK:
 		map[? SHURIKEN_MAP.NAME] = "A Brick";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "It's a brick";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.BRICK;
@@ -84,7 +84,7 @@ switch (shur) {
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.BRICK_SWORD;
 		break;
 		
-    case SHURIKEN.MAGNET:
+    case WEAPON_SHURIKEN_TYPE.MAGNET:
 		map[? SHURIKEN_MAP.NAME] = "Magnetic Mark";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "With polarized points";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.MAGNET;
@@ -95,7 +95,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
 		break;
 		
-    case SHURIKEN.SAND:
+    case WEAPON_SHURIKEN_TYPE.SAND:
 		map[? SHURIKEN_MAP.NAME] = "Scarab Scythe";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "In shrouded clouds";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SAND;
@@ -107,7 +107,7 @@ switch (shur) {
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SAND_SWORD;
 		break;
 	
-    case SHURIKEN.SHOTGUN:
+    case WEAPON_SHURIKEN_TYPE.SHOTGUN:
 		map[? SHURIKEN_MAP.NAME] = "Tri Kunai";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Three strikes";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SHOTGUN;
@@ -119,7 +119,7 @@ switch (shur) {
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SHOTGUN_SWORD;
 		break;
 		
-    case SHURIKEN.SLIME:
+    case WEAPON_SHURIKEN_TYPE.SLIME:
 		map[? SHURIKEN_MAP.NAME] = "Experimental entity";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Use at your own risk";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SLIME;
@@ -134,7 +134,7 @@ switch (shur) {
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SLIME_SWORD;
 		break;
 		
-	case SHURIKEN.METAL:
+	case WEAPON_SHURIKEN_TYPE.METAL:
 		map[? SHURIKEN_MAP.NAME] = "The Razor";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "Crude and effective";		
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.METAL;
@@ -146,7 +146,7 @@ switch (shur) {
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.METAL_SWORD;
 		break;
 		
-	case SHURIKEN.ELECTRIC:
+	case WEAPON_SHURIKEN_TYPE.ELECTRIC:
 		map[? SHURIKEN_MAP.NAME] = "Sparkling Star";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A mild buzz";		
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.ELECTRIC;
