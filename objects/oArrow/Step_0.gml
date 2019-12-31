@@ -157,9 +157,11 @@ if(stuckTo != noone && deactivate){
 			x = stuckTo.x + newX;
 			y = stuckTo.y + newY;
 			image_angle = newAngle;
+			/*
 			if(scGetParent(oPlayer,stuckTo)){
 				scSpawnParticle(x, y, 1, 2,  spBlood, WORLDPART_TYPE.BLOOD);	
 			}
+			*/
 		}
 	}
 }

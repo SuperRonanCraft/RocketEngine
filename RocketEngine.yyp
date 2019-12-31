@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "04858b75-1ad1-4ecb-b675-c853de5cbbda",
+            "Value": {
+                "id": "d6ae14af-f6ff-4d01-91de-070811f2863d",
+                "resourcePath": "sprites\\sPlayer_arrow_gibs\\sPlayer_arrow_gibs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "04ba6bb7-3b41-41d0-9988-cdd122a80c2d",
             "Value": {
                 "id": "7406627c-a5f2-4859-8816-1693a55f78c4",
@@ -1099,6 +1107,14 @@
             "Value": {
                 "id": "df12c3ca-0957-463e-bcca-4c673e929bab",
                 "resourcePath": "sprites\/sUIGamepadLR\/sUIGamepadLR.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1d799e0f-90e2-4579-b3e8-d18422c3dc86",
+            "Value": {
+                "id": "17be3d1b-43f7-4610-92b5-12ad13b3c23e",
+                "resourcePath": "sprites\\sPlayer_default_gibs\\sPlayer_default_gibs.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4727,6 +4743,14 @@
             }
         },
         {
+            "Key": "861f5d45-e813-4c18-b4c1-a347fa810684",
+            "Value": {
+                "id": "5a5655c1-f41d-4001-aa29-e25fe18b3680",
+                "resourcePath": "sprites\\sEnemy_Zombie_gibs\\sEnemy_Zombie_gibs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "865c2c03-6d3c-4750-8b0c-1284db59b9e5",
             "Value": {
                 "id": "231228d3-e9bb-4f15-bc38-e37e9f7b48a1",
@@ -5399,6 +5423,14 @@
             }
         },
         {
+            "Key": "9bf1cac4-4527-4bd3-8bae-fb028e4dcfb8",
+            "Value": {
+                "id": "6f939183-13a2-4262-8e11-baeaff30a9d8",
+                "resourcePath": "sprites\\sEnemy_Zombie_hurt\\sEnemy_Zombie_hurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9bf5e0b3-1881-4f20-a5a7-8812e3c59864",
             "Value": {
                 "id": "d2343b4b-8af1-469d-83b9-6f7f51b26de1",
@@ -6039,6 +6071,14 @@
             }
         },
         {
+            "Key": "ae6d84a5-76d5-4744-9eb4-20cead77bfc4",
+            "Value": {
+                "id": "fcf6f724-861a-4f39-aa21-8396f9eb871f",
+                "resourcePath": "sprites\\sEnemy_default_gibs\\sEnemy_default_gibs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ae720a96-de55-4357-82a9-5297fc14ffc4",
             "Value": {
                 "id": "c750595e-f7c3-4fa6-89fe-cc44b855aee1",
@@ -6132,6 +6172,14 @@
                 "id": "a64af5f5-4c3d-4539-b26b-662ec3750c0e",
                 "resourcePath": "sprites\/sPlayer_sword_idle\/sPlayer_sword_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "afe2a8f5-3a01-458f-a31f-5d520c0f9d52",
+            "Value": {
+                "id": "d33b58f7-ea15-44dc-983a-a5b7d3076493",
+                "resourcePath": "objects\\oCorpse\\oCorpse.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8484,6 +8532,14 @@
                 "id": "5e751984-eedc-4a8e-95e2-93211e49077c",
                 "resourcePath": "views\\f65c6dc9-15a3-4003-8413-3b3c1f15a9d6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f6755d81-5039-45c7-b053-6cc81dc4304a",
+            "Value": {
+                "id": "26a16f4b-a89e-45a3-b7ce-7b8284a60e3c",
+                "resourcePath": "sprites\\sPlayer_sword_gibs\\sPlayer_sword_gibs.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

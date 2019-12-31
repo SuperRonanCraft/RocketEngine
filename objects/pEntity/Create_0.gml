@@ -30,5 +30,6 @@ smoke_act = 10;
 smoke_lastvsp = 0;
 
 destroy = false;
+createCorpse = false;
 //Aim type
 //auto_aim = false;

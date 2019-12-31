@@ -8,7 +8,6 @@
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
         "2522c74b-73ae-4446-ad1b-d80ba0c9a6df",
-        "4495f6b7-1ab8-4b72-8df2-d317345166bf",
         "1f5d910b-bc4b-40f4-a411-8e9877cfdc55",
         "43d194df-5499-443b-bbfc-019f4072d612",
         "29efbcfd-d2a5-46f3-a585-e13deab6a59a",
@@ -37,7 +36,8 @@
         "6c20147b-6c1f-455d-9d1c-c781ee7de847",
         "f6de0a29-44a7-450d-a4a3-63eb48cc3372",
         "d40ba97f-b5e6-4d7c-bd92-b7a2f5f54dbb",
-        "437f6eaa-910b-42c1-b952-ee95c01e5a4e"
+        "437f6eaa-910b-42c1-b952-ee95c01e5a4e",
+        "0484b477-6948-4078-a05a-8d0f905489b4"
     ],
     "IsDnD": false,
     "layers": [
@@ -82,7 +82,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_6F193D8A","id": "4495f6b7-1ab8-4b72-8df2-d317345166bf","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_6F193D8A.gml","creationCodeType": ".gml","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_6F193D8A","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": [{"id": "158e9fc1-9c47-43ce-b6b0-f4ce0aeba9b2","modelName": "GMOverriddenProperty","objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf","propertyId": "ef38e31b-4397-4e92-90de-abcfe75f0315","mvc": "1.0","value": "TEAM.LEFT"}],"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 1824,"y": 576}
+{"name": "inst_52CD3E3C","id": "0484b477-6948-4078-a05a-8d0f905489b4","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_52CD3E3C","objId": "20513aa7-8b82-4929-ba2f-346ad2ca271a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 1888,"y": 928}
             ],
             "layers": [
 

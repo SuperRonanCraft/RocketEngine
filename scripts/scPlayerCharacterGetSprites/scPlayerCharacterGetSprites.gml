@@ -19,6 +19,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.TRAPPED] = sPlayer_sword_trapped;
 		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_sword_deadFrozen;
 		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_sword_deadLaser;
+		map[? ANIMATIONSTATE.GIBS] = sPlayer_sword_gibs;
         break;
     case CHARACTER.ARROW:
         map[? ANIMATIONSTATE.STANDING] = sPlayer_arrow_idle;
@@ -34,6 +35,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.TRAPPED] = sPlayer_arrow_trapped;
 		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_arrow_deadFrozen;
 		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_arrow_deadLaser;
+		map[? ANIMATIONSTATE.GIBS] = sPlayer_arrow_gibs;
         break;
     default:
 		if (argument0 != CHARACTER.DEFAULT)
@@ -51,6 +53,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.TRAPPED] = sPlayer_default_trapped;
 		map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_default_deadFrozen;
 		map[? ANIMATIONSTATE.DEADLASER] = sPlayer_default_deadLaser;
+		map[? ANIMATIONSTATE.GIBS] = sPlayer_default_gibs;
         break;
 }
 

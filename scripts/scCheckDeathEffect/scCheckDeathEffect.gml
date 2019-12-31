@@ -2,6 +2,7 @@
 ///@arg status_effect
 ///@arg killed_id
 ///@arg killer_id
+///@arg is_base_type
 ///@desc Script runs within a pEntity (pShootable child)
 
 var status = argument[0];
@@ -39,6 +40,29 @@ if(!baseType){
 			break;
 	}
 
+}
+
+else{
+	switch (status) {
+	    case DAMAGE_TYPE.SPLASH:
+			var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.GIBS];
+			for (var g = 0; g < sprite_get_number(spNum); g++) {
+			    var giblets = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+500,oCorpse);
+				giblets.sprite_index = spNum;
+				giblets.image_index = g;
+				giblets.gib = true;
+				giblets.owner = deadGuy;
+				giblets.rotate = true;
+				giblets.bleed = WORLDPART_TYPE.BLOOD;
+				giblets.sticky = false;
+				giblets.hsp_real = irandom_range(-20,20);
+				giblets.vsp_real = irandom_range(-20,5);
+			}
+	        break;
+	    default:
+	        // code here
+	        break;
+	}	
 }
 
 

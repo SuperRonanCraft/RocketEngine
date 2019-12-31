@@ -12,7 +12,7 @@ var spd = argument3;
 var sprite = argument4;
 var type = argument5;
 
-if(instance_number(oPartGravParent) > 100){
+if(instance_number(oPartGravParent) > 300){
 	exit	
 }
 
@@ -28,7 +28,7 @@ repeat(amt){
 				friction_base = random_range(0.2, 1);
 				hsp_real = random_range(-spd, spd);
 				vsp_real = random_range(-spd, spd/5);
-				timer += irandom_range(-25, 25);
+				timer += irandom_range(-50, 50);
 				sticky = true;
 				image_alpha = 0.8;
 				image_xscale = 0.8;

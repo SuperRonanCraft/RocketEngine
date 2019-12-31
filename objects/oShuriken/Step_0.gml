@@ -75,22 +75,27 @@ if(deactivate && stuckTo != noone){
 }
 
 //Stick to a (usually moving) object
-if (deactivate && stuckTo != noone && stuckTo.object_index != oWall && instance_exists(stuckTo)){
-	x = stuckTo.x + newX;
-	y = stuckTo.y + newY;
+if(instance_exists(stuckTo)){
 	
-	//Stuck, not moving
-	hsp = 0;
-	vsp = 0;
+	if (deactivate && stuckTo != noone && stuckTo.object_index != oWall){
+		x = stuckTo.x + newX;
+		y = stuckTo.y + newY;
 	
-	//If its a player and they died, do not stick.
-	if (stuckTo.object_index == oPlayer)
-		if(!stuckTo.player_map[? PLAYER_MAP.ALIVE])
-			event_user(0);
+		//Stuck, not moving
+		hsp = 0;
+		vsp = 0;
+	
+		//If its a player and they died, do not stick.
+		if (stuckTo.object_index == oPlayer)
+			if(!stuckTo.player_map[? PLAYER_MAP.ALIVE])
+				event_user(0);
 			
 			
-} else if (deactivate && (stuckTo == noone || !instance_exists(stuckTo)))
-	event_user(0); //Failsafe check.
+	} 
+	else
+		event_user(0); //Failsafe check.
+}
+
 
 
 

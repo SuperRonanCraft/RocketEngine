@@ -19,6 +19,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.TRAPPED] = sEnemy_default_trapped;
 		map[? ANIMATIONSTATE.DEADFROZEN] = sEnemy_default_deadFrozen; 
 		map[? ANIMATIONSTATE.DEADLASER] = sEnemy_default_deadLaser; 
+		map[? ANIMATIONSTATE.GIBS] = sEnemy_Zombie_gibs; 
         break;	
 	
 	case CHARACTER_ENEMY.ENEMY:
@@ -36,6 +37,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.TRAPPED] = sEnemy_default_trapped;
 		map[? ANIMATIONSTATE.DEADFROZEN] = sEnemy_default_deadFrozen; 
 		map[? ANIMATIONSTATE.DEADLASER] = sEnemy_default_deadLaser; 
+		map[? ANIMATIONSTATE.GIBS] = sEnemy_default_gibs;
         break;
 }
 

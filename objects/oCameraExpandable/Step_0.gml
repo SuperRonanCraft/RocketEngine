@@ -2,8 +2,13 @@
 
 // Inherit the parent event
 event_inherited();
+
+
 var _p1 = instance_nearest(0, 0, oPlayer);
 var _p2 = instance_furthest(0, 0, oPlayer);
+
+if(_p1 == noone || _p2 == noone)
+	exit;
 
 var _xdif = (_p2.x - _p1.x);
 var _ydif = (_p2.y - _p1.y);

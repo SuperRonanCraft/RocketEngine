@@ -34,6 +34,11 @@ switch (state) {
 		overwrite = true;
 		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.DEADFROZEN],0);
 		break;
+		
+	case ANIMATIONSTATE.HURT:
+		overwrite = true;
+		scSpecialAnimation(characterSprites[? ANIMATIONSTATE.HURT],0,true);
+		break;
 }
 
 //draw sprite normally
