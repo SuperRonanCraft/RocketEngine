@@ -7,6 +7,10 @@
 
 if (!system_inventory) exit;
 
+//----------TEST SPRITE
+scDrawSpriteExt(RES_W - 4, RES_H - 4, sUIInventoryWeapon, 0);
+//----------TEST SPRITE
+
 var _inv_grid = inventory_map[? INVENTORY_MAP.GRID_WEAPON];
 var item_map = _inv_grid[# inventory_map[? INVENTORY_MAP.WEAPON_SELECTED], 0];
 if (item_map == noone) exit;
@@ -18,12 +22,12 @@ var _buffer = argument2;
 var _alpha = argument3;
 var _team_respect = argument4;
 
+exit;
+
 //The projectile sprite
-//var sprite = map[? WEAPON_MAP.GUI_ICON];
+
 var sprite = scWeaponModifyGetType(map[? WEAPON_MAP.MODIFIER], WEAPON_MODIFIER_MAP.ICON);
-//Dimentions of sprite
-//var w = sprite_get_width(sprite);
-//var h = sprite_get_height(sprite);
+
 //determine side
 var xpos = _team_respect ? (team == TEAM.LEFT ? _x : RES_W - _x - 32 - _buffer) : _x;
 var ypos = _y;

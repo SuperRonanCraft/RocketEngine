@@ -13,7 +13,6 @@ if (scKeybindsGet(KEYBIND.INVENTORY)) {
 		SlideTransition(TRANS_MODE.PAUSE);
 	else
 		SlideTransition(TRANS_MODE.UNPAUSE);
-	//player_map[? PLAYER_MAP.CAN_CONTROL] = !_map[? INVENTORY_MAP.OPEN];
 	//Safety
 	if (!_map[? INVENTORY_MAP.OPEN]) { //Put item back if moving
 		var _moving_item = _map[? INVENTORY_MAP.MOVING_ITEM];
@@ -60,8 +59,12 @@ var _x = argument0;
 var _y = argument1;
 var _alpha = argument2;
 
+//HOTBAR
 if (_alpha - _map[? INVENTORY_MAP.ALPHA] > 0)
 	scDrawInventoryHotbar(_x, _y, _alpha - _map[? INVENTORY_MAP.ALPHA]);
+//INVENTORY BACKGROUND
+if (_map[? INVENTORY_MAP.ALPHA] > 0)
+	scDrawSpriteExt(_x, _y, sUIInventoryBgd, 0, noone, _map[? INVENTORY_MAP.ALPHA]);
 
 if (_map[? INVENTORY_MAP.OPEN]) {
 	_map[? INVENTORY_MAP.ALPHA] = min(_map[? INVENTORY_MAP.ALPHA] + _map[? INVENTORY_MAP.ALPHA_CHANGE], _alpha);
@@ -71,23 +74,16 @@ if (_map[? INVENTORY_MAP.OPEN]) {
 if (_map[? INVENTORY_MAP.ALPHA] <= 0) return false;
 _alpha = _map[? INVENTORY_MAP.OPEN] ? _alpha : _map[? INVENTORY_MAP.ALPHA];
 
+//Declare defaults
 var _slot_size = 70;
 var _buffer_x = 16; //Distance between inventory slots (x)
 var _buffer_y = 16; //Distance between inventory slots (y)
-
 var _centerx = (RES_W / 2);
 var _centery = (RES_H / 2);
-
 var _x = _centerx - ((_map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH]) * _slot_size) - (_buffer_x * (_map[? INVENTORY_MAP.SIZE_GENERAL_WIDTH] + 1));
 var _y = _centery - (((_map[? INVENTORY_MAP.SIZE_GENERAL_HEIGHT] / 2)) * _slot_size) - (_buffer_y * ((_map[? INVENTORY_MAP.SIZE_GENERAL_HEIGHT] + 1) / 2));
 
-//DRAW BACKGROUND
-//
-//USE _x and _y to center on top left of general inventory, or centerx and centery to center on screen
-//scDrawSpriteExt(_centerx, _centery, /*YOUR SPRITE JOHN*/, 0);
-//
-//DRAW BACKGROUND
-
+//Draw each Inventory type
 for (var i = 0; i < INVENTORY_TYPE.LENGTH; i++) {
 	switch (i) {
 		case INVENTORY_TYPE.GENERAL:
@@ -120,7 +116,7 @@ var _y = _centery;
 var _img = floor(player_map[? PLAYER_MAP.ANIMATION_VAR]);
 scDrawSpriteExt(_x, _y, player_map[? PLAYER_MAP.CURRENT_SPRITE], _img, noone, _alpha, 2, 2);
 
+//Hovering tip or item moving
 scDrawInventoryTipOrMoving(_slot_size, _alpha);
-scInventoryLogic(); //Inventory swapping stuff
-
-return true;
+//Inventory swapping stuff
+scInventoryLogic();

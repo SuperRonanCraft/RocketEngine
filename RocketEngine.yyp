@@ -2999,6 +2999,14 @@
             }
         },
         {
+            "Key": "536f83b0-dcd9-4b7c-af87-d06d99637924",
+            "Value": {
+                "id": "88ce6a09-013e-4087-a826-02525fa1f058",
+                "resourcePath": "sprites\\sUIInventoryWeapon\\sUIInventoryWeapon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "53c66fce-fc2e-43f7-830f-51e7fda9f36d",
             "Value": {
                 "id": "a4eee808-717f-499f-8f5d-cd8ea4f6e62e",
