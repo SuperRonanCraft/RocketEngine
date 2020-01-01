@@ -4,8 +4,15 @@ owner = noone;
 
 gib = false;
 
-timer = irandom_range(10,60);
+timer = irandom_range(10,120);
 
+corpseMap = ds_map_create();
+
+currentSprite = sprite_index;
+animationVar = 0;
+
+
+facing = 1;
 angle = 0;
 hsp = -10;
 vsp = -10;
@@ -28,4 +35,5 @@ scaled = false; //Should we scale up to normal?
 animate = false;
 animate_dur = 1;
 moving = true;
+standing = noone;
 image_speed = 0;

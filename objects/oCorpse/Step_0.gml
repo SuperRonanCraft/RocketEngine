@@ -1,11 +1,36 @@
 /// @description  
 
+standing = instance_place(x,bbox_bottom+5,oWall);
 
 if(bleed != noone){
-	if(timer % 5 == 0 && timer != 0){
+	if(timer % 30 == 0){
 		scSpawnParticle(x, y, 1, 2,  spBlood, bleed);	
 	}
 }
+
+
+
+if(!ds_map_empty(corpseMap) && !gib){
+
+	if(instance_exists(owner)){
+		hsp_real = owner.gravity_map[?GRAVITY_MAP.HSP];
+		vsp_real = owner.gravity_map[?GRAVITY_MAP.VSP];
+	}
+
+	if(sign(facing) == sign(hsp_real) || sign(hsp_real) == 0){
+		currentSprite = corpseMap[? ANIMATIONSTATE.DEAD];
+	}
+	else{
+		currentSprite = corpseMap[? ANIMATIONSTATE.DEAD2];	
+	}
+	if(standing != noone)
+		animationVar+= image_speed;
+	
+	if(animationVar > sprite_get_number(currentSprite)-1){
+		animationVar = sprite_get_number(currentSprite)-1;	
+	}
+}
+
 
 
 if (stuck || !moving) exit; //stuck to a wall?
@@ -42,8 +67,16 @@ if (touchingy != noone) { //If touching a wall in the vertical
 	vsp_real = vsp;
 }
 
-if (touchingx != noone || touchingy != noone && sticky) //Hit a wall? Get stuck maybe?
-	stuck = random(1) < stuck_chance;
+if ((touchingx != noone || touchingy != noone) && sticky){ //Hit a wall? Get stuck maybe?
+	if(abs(hsp_real) + abs(vsp_real) > 30){
+		stuck = true;
+	}
+	else{
+		stuck = random(1) < stuck_chance;
+	}
+}
+
+
 
 //Rotate if moving
 if (rotate && hsp != 0)
@@ -58,5 +91,5 @@ y += vsp;
 if (touchingy != noone && abs(vsp) < 3)
 	vsp_real = 0;
 
-if (abs(hsp) <= 0.1 && abs(vsp) <= 0.1)
+if (abs(hsp) <= 0.1 && abs(vsp) <= 0.1 && standing != noone)
 	moving = false;

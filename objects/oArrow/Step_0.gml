@@ -28,7 +28,7 @@ var bonusSPD = abs(hsp)+abs(vsp);
 if(bonusSPD >= arrow_map[?ARROW_MAP.SPEED] *  ((arrow_map[? ARROW_MAP.POWER_MAX])/100)){
 	fullPower = true;	
 }
-var bonusDMG = ceil(bonusSPD/4+ dmg);
+var bonusDMG = dmg;
 var bonusKB = sign(hsp) * bonusSPD/4 + kb;
 
 
@@ -66,11 +66,8 @@ if(!deactivate){
 					obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
 		
 					//Damage player
-					if (scShootableDamage(owner, obj, false, true, bonusDMG,noone,DAMAGE_TYPE.STAB,noone,DAMAGE_ELEMENT.INFECTED)){
+					if (scShootableDamage(owner, obj, false, true, dmg,noone,DAMAGE_TYPE.STAB,noone,noone)){
 						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];
-						if(fullPower){
-							flyWith = obj;
-						}
 						
 					}
 		
@@ -163,6 +160,9 @@ if(stuckTo != noone && deactivate){
 			}
 			*/
 		}
+	}
+	else{
+		event_user(0);	
 	}
 }
 

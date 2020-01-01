@@ -1,5 +1,6 @@
 /// @desc Animation/Sprite
 
+
 //Buff draw handler
 scBuffHandler(BUFF_EVENT.DRAW);
 
@@ -12,7 +13,11 @@ scComboDraw();
 //Animate the player in their current state
 var char_info = player_map[? PLAYER_MAP.CHARACTER_INFO];
 scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
+
+
 scAnimationState();
+
+
 scPalleteSwapReset();
 
 //Moving dust
@@ -23,6 +28,7 @@ event_user(1);
 
 //GAMEPAD DEBUGGING
 event_user(2);
+
 
 //Show players collision box while in debug mode
 if (global.debug) {

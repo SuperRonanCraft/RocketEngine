@@ -306,21 +306,27 @@ if(!findNewSticky){
 	sticky = instance_place(x, y + (offset * grv_dir + (map[? GRAVITY_MAP.GRAVITY] * grv_dir)), oWall);
 }
 
-if(sticky != noone && (sign(map[? GRAVITY_MAP.VSP]) == grv_dir || sign(map[? GRAVITY_MAP.VSP]) == 0) ){
+if(instance_exists(sticky)){
 	
-	if(grv_dir == 1){
-		differenceInY = (y - bbox_bottom);
-		y = floor(sticky.bbox_top + differenceInY) - offset;
+	if(sticky != noone && (sign(map[? GRAVITY_MAP.VSP]) == grv_dir || sign(map[? GRAVITY_MAP.VSP]) == 0) ){
+	
+		if(grv_dir == 1){
+			differenceInY = (y - bbox_bottom);
+			y = floor(sticky.bbox_top + differenceInY) - offset;
+		}
+		else{
+			differenceInY = (y - bbox_top);
+			y = ceil(sticky.bbox_bottom + differenceInY) + offset;
+		}
+		map[? GRAVITY_MAP.VSP] = sticky.vsp;
+		map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
+		map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
 	}
-	else{
-		differenceInY = (y - bbox_top);
-		y = ceil(sticky.bbox_bottom + differenceInY) + offset;
-	}
-	map[? GRAVITY_MAP.VSP] = sticky.vsp;
-	map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
-	map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
-}
 
+}
+else{
+	sticky = noone;
+}
 
 
 map[? GRAVITY_MAP.STANDING] = ( sticky ) != noone;

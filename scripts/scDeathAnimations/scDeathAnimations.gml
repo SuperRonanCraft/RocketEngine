@@ -53,9 +53,6 @@ switch (causeOfDeath) {
 					animState = ANIMATIONSTATE.DEAD;	
 			}
 		}
-		else if(!gravity_map[? GRAVITY_MAP.STANDING])
-			animState = ANIMATIONSTATE.FALLING;	
-		break;
 }
 	
 return animState;

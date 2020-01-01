@@ -65,7 +65,7 @@ with (damaging) {
 				_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 				scPlaySound(SOUND.UI_SELECT);
-				scSpawnParticle(x, bbox_top, 10, 10, spShield, WORLDPART_TYPE.SHIELD);
+				scSpawnParticle(damaging.x, damaging.bbox_top, 10, 10, spShield, WORLDPART_TYPE.SHIELD);
 			} 
 			
 			//Partial Shield Damage
@@ -112,7 +112,7 @@ with (damaging) {
 				_dmg_left = 0;
 				
 			} else { //Used up all armor, take the rest of dmg in health
-				scSpawnParticle(x, bbox_top, 10, 20, spArmor, WORLDPART_TYPE.ARMOR);
+				scSpawnParticle(damaging.x, damaging.bbox_top, 10, 20, spArmor, WORLDPART_TYPE.ARMOR);
 				scPlaySound(SOUND.ULT_SHIELD_BREAK);
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
 				//Took mostly armor damage
@@ -154,7 +154,7 @@ with (damaging) {
 			lethalDamage = true;
 			
 			
-			scSpawnParticle(x, bbox_top, 10, 20, spBlood, WORLDPART_TYPE.BLOOD);
+			scSpawnParticle(damaging.x, damaging.y, 10, 20, spBlood, WORLDPART_TYPE.BLOOD);
 			map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;

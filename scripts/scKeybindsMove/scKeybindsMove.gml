@@ -98,6 +98,7 @@ if(abs(_map[? GRAVITY_MAP.HSP_MOVE_MOD]) < 1)
 
 _map[? GRAVITY_MAP.HSP_MOVE_MOD] *= _map[? GRAVITY_MAP.FRICTION]; //reset hsp mod
 
+
 /*if (send) {
 //if (key_left)
 	scNetworkSendKey(KEYBIND_TYPE.LEFT, key_left);

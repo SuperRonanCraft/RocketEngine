@@ -42,6 +42,7 @@ scBuffHandler(BUFF_EVENT.STEP);
 //Collision
 scGravityStep();
 
+
 //Inventory Weapons/Tools event
 scInventoryStep();
 
@@ -60,6 +61,8 @@ scCheckHealth();
 //Knockback handling
 scKnockback();
 
+
+
 //Step Sound
 switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 	case ANIMATIONSTATE.WALKING:
@@ -74,9 +77,11 @@ switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 
 
 //Mostly meant for clones
-if (despawn && (!player_map[? PLAYER_MAP.ALIVE] || image_alpha != 1)) { //Despawn player object
-	image_alpha -= 0.025;
+if (despawn && (!player_map[? PLAYER_MAP.ALIVE])) { //Despawn player object
+	if(destroy){
+		instance_destroy();	
+	}
+	image_alpha = 0;
 	destroy = true;
-	if (image_alpha <= 0)
-		instance_destroy();
+	
 }
