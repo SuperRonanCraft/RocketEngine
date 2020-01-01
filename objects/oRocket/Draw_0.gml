@@ -12,7 +12,7 @@ if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER] != noone)
 	
 if (rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] != noone && !destroy) {
 	//Particle emitter first gets placed around the back of the rocket
-	var offset = rocket_map[? ROCKET_MAP.OFFSET];
+	var offset = rocket_map[? ROCKET_MAP.OFFSET] / 2;
 	var xx = x - lengthdir_x(offset, direction), yy = y - lengthdir_y(offset, direction);
 	var ptrail = rocket_map[? ROCKET_MAP.PARTICLE_TRAIL];
 	if (rocket_map[? ROCKET_MAP.PARTICLE_CHANGE_ORIENTATION])

@@ -11,10 +11,10 @@ var hit = argument0;
 collideRocket = 1;
 var hit_rocket_map = hit.weapon_map[? WEAPON_MAP.MAP];
 //If you hit an ice rocket, explode 3x as much
-if (hit_rocket_map[? ROCKET_MAP.TYPE] == ROCKET.ICE)
+if (hit_rocket_map[? ROCKET_MAP.TYPE] == WEAPON_ROCKET_TYPE.ICE)
 	scRocketSpecialIce_Explode(3);
 //But if you hit a fire rocket, minimize your explosion.
-else if (hit_rocket_map[? ROCKET_MAP.TYPE] == ROCKET.FIRE)
+else if (hit_rocket_map[? ROCKET_MAP.TYPE] == WEAPON_ROCKET_TYPE.FIRE)
 	scRocketSpecialIce_Explode(0.1);	
 //Otherwise, a smaller explosion mostly to show what happened
 //This can still hurt/affect the opposing player if they are close enough

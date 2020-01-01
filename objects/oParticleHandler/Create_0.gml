@@ -3,7 +3,7 @@
 
 //Particles
 global.ParticleSystem1 = part_system_create();
-part_system_depth(global.ParticleSystem1, 99);
+part_system_depth(global.ParticleSystem1, 102);
 
 global.Emitter1 = part_emitter_create(global.ParticleSystem1);
 
