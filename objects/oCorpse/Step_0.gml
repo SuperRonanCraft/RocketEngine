@@ -3,7 +3,7 @@
 standing = instance_place(x,bbox_bottom+5,oWall);
 
 if(bleed != noone){
-	if(timer % 30 == 0){
+	if(timer % 30 == 0 && timer > 60){
 		scSpawnParticle(x, y, 1, 2,  spBlood, bleed);	
 	}
 }
@@ -67,7 +67,7 @@ if (touchingy != noone) { //If touching a wall in the vertical
 	vsp_real = vsp;
 }
 
-if ((touchingx != noone || touchingy != noone) && sticky){ //Hit a wall? Get stuck maybe?
+if ((touchingx != noone && touchingy == noone) && sticky){ //Hit a wall? Get stuck maybe?
 	if(abs(hsp_real) + abs(vsp_real) > 30){
 		stuck = true;
 	}

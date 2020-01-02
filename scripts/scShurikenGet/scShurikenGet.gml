@@ -17,7 +17,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.NAME] = "Silver Star";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A familiar weapon";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.DEFAULT;
-		map[? SHURIKEN_MAP.COOLDOWN] = 40;
+		map[? SHURIKEN_MAP.COOLDOWN] = 20;
 		map[? SHURIKEN_MAP.SPEED] = 20;
 		map[? SHURIKEN_MAP.DAMAGE] = 4;
 		break;

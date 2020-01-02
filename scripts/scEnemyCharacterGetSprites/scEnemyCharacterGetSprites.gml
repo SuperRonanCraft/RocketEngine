@@ -6,6 +6,7 @@ var map = ds_map_create();
 switch (argument0) {
 	case CHARACTER_ENEMY.ZOMBIE:
 	
+		map[? ANIMATIONSTATE.SLICE] = sEnemy_Zombie_slice;
         map[? ANIMATIONSTATE.STANDING] = sEnemy_Zombie_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sEnemy_Zombie_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sEnemy_Zombie_walk;
@@ -24,6 +25,7 @@ switch (argument0) {
 	
 	case CHARACTER_ENEMY.ENEMY:
 	default:
+		map[? ANIMATIONSTATE.SLICE] = sEnemy_default_idle;
         map[? ANIMATIONSTATE.STANDING] = sEnemy_default_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sEnemy_default_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sEnemy_default_walk;

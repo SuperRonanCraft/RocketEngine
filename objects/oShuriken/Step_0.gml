@@ -57,8 +57,13 @@ if (timer < time)
 	timer += owner.time_dialation;
 	
 else if (timer == time && stuckTo != noone)
-	if(stuckTo.object_index != oWall)
-		event_user(0);
+	
+	if(instance_exists(stuckTo)){
+		if(stuckTo.object_index != oWall)
+			event_user(0);
+		else
+			instance_destroy();
+	}
 	else
 		instance_destroy();
 else
@@ -86,12 +91,17 @@ if(instance_exists(stuckTo)){
 		vsp = 0;
 	
 		//If its a player and they died, do not stick.
-		if (stuckTo.object_index == oPlayer)
+		if (scGetParent(pShootable,stuckTo))
 			if(!stuckTo.player_map[? PLAYER_MAP.ALIVE])
 				event_user(0);
 			
 			
 	} 
+	else if(stuckTo.object_index == oWall){
+		hsp = 0;
+		vsp = 0;
+		
+	}
 	else
 		event_user(0); //Failsafe check.
 }

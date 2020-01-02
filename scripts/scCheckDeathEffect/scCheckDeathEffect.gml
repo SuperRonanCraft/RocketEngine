@@ -44,6 +44,29 @@ if(!baseType){
 
 else{
 	switch (status) {
+		
+		case DAMAGE_TYPE.SLICE:
+			var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.SLICE];
+			var halfSpNum = (sprite_get_number(spNum)-1)/2;
+			var randInd = irandom_range(1, halfSpNum);
+			for (var s = 0; s < 2; s++) {
+				scSpawnParticle(deadGuy.x, deadGuy.y, 5, 5,  spBlood, WORLDPART_TYPE.BLOOD);	
+				var giblets = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth+200,oCorpse);
+				giblets.currentSprite = spNum;
+				giblets.animationVar = randInd+(s*halfSpNum);
+				giblets.gib = true;
+				giblets.slice = true;
+				giblets.owner = deadGuy;
+				giblets.rotate = true;
+				giblets.sticky = true;
+				giblets.bleed = WORLDPART_TYPE.BLOOD;
+				giblets.hsp_real = irandom_range(-10,10);
+				giblets.vsp_real = irandom_range(-10,5);
+				giblets.friction_base = 1;
+			}
+	        break;
+		
+		
 	    case DAMAGE_TYPE.SPLASH:
 			var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.GIBS];
 			for (var g = 0; g < sprite_get_number(spNum); g++) {
@@ -72,7 +95,25 @@ else{
 			corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
 			corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
 			
-			show_debug_message(corpse.hsp_real);
+			
+			
+			corpse.owner = deadGuy;
+			corpse.image_speed = deadGuy.image_speed;
+	        break;
+			
+	    case DAMAGE_TYPE.POUND:
+	        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+200,oCorpse);
+			
+			
+			ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+			corpse.facing = deadGuy.facing;
+			corpse.friction_base = 0.8;
+			corpse.sticky = false;
+			corpse.owner = deadGuy;
+			corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
+			corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
+			
+	
 			
 			corpse.owner = deadGuy;
 			corpse.image_speed = deadGuy.image_speed;

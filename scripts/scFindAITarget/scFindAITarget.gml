@@ -1,5 +1,12 @@
 ///scFindAITarget
 
+var range = argument[0];
+
+var seeInvis = false;
+
+if(argument_count>1)
+	seeInvis = argument[1];
+
 var teamToOppose = noone;
 
 if(player.team == TEAM.RIGHT){
@@ -39,8 +46,12 @@ if(aiTarget == noone){
 		var entity = teamToOppose[|i];
 		if(instance_exists(entity)){
 			if(entity.id != player.id && entity.player_map[?PLAYER_MAP.ALIVE]
+				&& point_distance(player.x,player.y,entity.x,entity.y) < range
 				&& (player.team == TEAM.NONE || entity.team != player.team)){
-				aiTarget = entity;	
+					
+					if(!seeInvis && !scBuffFind(entity,BUFFTYPE.INVISIBLE)){
+						aiTarget = entity;	
+					}
 			}
 		}
 	
@@ -59,9 +70,6 @@ else{
 		else if(aiTarget.team == player.team && player.team != TEAM.NONE){
 			aiTarget = noone;	
 			show_debug_message("On my team");
-		}
-		else if(point_distance(player.x,player.y,aiTarget.x,aiTarget.y) > 500){
-			aiTarget = noone;	
 		}
 	}
 }

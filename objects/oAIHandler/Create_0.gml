@@ -21,11 +21,18 @@ randDirection = choose(ACTIONS.RIGHT, ACTIONS.LEFT);
 //Check Ultimate status
 ultReady = false;
 
+//movespeed
+movesp = 0;
+
 //Timer to react
 timer = irandom_range(120, 300);
 
 aiType = AI_TYPE.ZOMBIE;
 aiTarget = noone;
+
+enable_last_known_coords = false;
+last_known_x = 0;
+last_known_y = 0;
 
 enum AI_TYPE {
 	ONEVONE, ZOMBIE

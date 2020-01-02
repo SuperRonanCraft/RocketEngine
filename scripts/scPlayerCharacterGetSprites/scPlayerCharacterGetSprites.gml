@@ -7,6 +7,7 @@ var map = ds_map_create();
 switch (argument0) {
     case CHARACTER.SWORD:
         map[? ANIMATIONSTATE.STANDING] = sPlayer_sword_idle;
+		map[? ANIMATIONSTATE.SLICE] = sPlayer_sword_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_sword_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_sword_walk;
 		map[? ANIMATIONSTATE.RISING] = sPlayer_sword_rise;
@@ -22,6 +23,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.GIBS] = sPlayer_sword_gibs;
         break;
     case CHARACTER.ARROW:
+		map[? ANIMATIONSTATE.SLICE] = sPlayer_arrow_idle;
         map[? ANIMATIONSTATE.STANDING] = sPlayer_arrow_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_arrow_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_arrow_walk;
@@ -40,7 +42,8 @@ switch (argument0) {
     default:
 		if (argument0 != CHARACTER.DEFAULT)
 			show_debug_message("Character " + string(argument0) + " does not exist!");
-        map[? ANIMATIONSTATE.STANDING] = sPlayer_default_idle;
+        map[? ANIMATIONSTATE.SLICE] = sPlayer_default_idle;
+		map[? ANIMATIONSTATE.STANDING] = sPlayer_default_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sPlayer_default_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sPlayer_default_walk;
 		map[? ANIMATIONSTATE.RISING] = sPlayer_default_rise;

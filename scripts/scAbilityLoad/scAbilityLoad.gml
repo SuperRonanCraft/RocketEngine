@@ -19,6 +19,12 @@ switch (type) {
 		ds_map[? ABILITY_MAP.COOLDOWN] = 20;
 		ds_map[? ABILITY_MAP.SPRITE] = s_ability_portal;
 		break;
+	case ABILITY_TYPE.SMOKE_CLOUD: //Hidden in plain sight
+		ds_map[? ABILITY_MAP.NAME] = "Smoke Cloud";
+		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilitySmokeCloud;
+		ds_map[? ABILITY_MAP.COOLDOWN] = 30;
+		ds_map[? ABILITY_MAP.SPRITE] = s_abilityIcon_Invisible;
+		break;
 	case ABILITY_TYPE.BLOCK: //Just a block.
 		ds_map[? ABILITY_MAP.NAME] = "Blocked";
 		ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityBlock;
@@ -34,6 +40,6 @@ switch (type) {
 }
 
 enum ABILITY_TYPE {
-	CLONE, PORTAL, SPRAY,BLOCK,
+	CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,
 	NONE
 }

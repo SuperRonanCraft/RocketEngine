@@ -3,8 +3,9 @@
 owner = noone;
 
 gib = false;
+slice = false;
 
-timer = irandom_range(10,120);
+timer = irandom_range(120,240);
 
 corpseMap = ds_map_create();
 
@@ -29,7 +30,7 @@ stuck = false;
 sticky = false;
 type = noone;
 rotate = false;
-bounce_coeff = 0.5;
+bounce_coeff = 0.8;
 bleed = noone;
 scaled = false; //Should we scale up to normal?
 animate = false;

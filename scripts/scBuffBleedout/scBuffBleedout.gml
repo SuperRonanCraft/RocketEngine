@@ -6,7 +6,7 @@ var owner = argument0;
 var dsBuff = argument1;
 
 var clock = dsBuff[? BUFF_MAP.CLOCK];
-var dmg = 2;
+var dmg = 150;
 
 if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
 	part_emitter_region(global.ParticleSystem1, global.Emitter1, owner.x - 5, owner.x + 5, owner.y + 5, owner.y - 5, 
@@ -14,7 +14,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEEDEXPLOSION], 10);
 	if (dsBuff[? BUFF_MAP.GIVEN_BY] != noone && scBuffFind(dsBuff[? BUFF_MAP.GIVEN_BY], BUFFTYPE.DAMAGE))
 		dmg *= 2;
-	scShootableDamage(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, false, dmg, noone, noone, false);
+	scShootableDamage(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, false, dmg, noone, DAMAGE_TYPE.POUND, false);
 	if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] <= 0)
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.BLEEDEXPLOSION], 25);	
 	scBuffRemove(owner, dsBuff);

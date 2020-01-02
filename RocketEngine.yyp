@@ -1087,6 +1087,14 @@
             }
         },
         {
+            "Key": "1c50b9ef-b345-47b0-bb2e-c7e26683b7ce",
+            "Value": {
+                "id": "3f453d4d-f1ea-4982-b2f0-4db4241901c8",
+                "resourcePath": "scripts\\scAbilitySmokeCloud\\scAbilitySmokeCloud.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1c695b77-1904-4395-92cd-540f04f7be18",
             "Value": {
                 "id": "a375760e-030a-4cda-a03b-aa3df177a38b",
@@ -3703,6 +3711,14 @@
             }
         },
         {
+            "Key": "66cd5342-eb63-4eea-a380-50f0cdca2a9e",
+            "Value": {
+                "id": "634062bf-4be3-4c9c-82d6-fdd876899873",
+                "resourcePath": "scripts\\scAIPlatformPathFindTo\\scAIPlatformPathFindTo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6751a009-9e34-4abb-84c2-f3003c527488",
             "Value": {
                 "id": "1b409804-e99a-47e3-abb3-6d243dca6086",
@@ -4164,6 +4180,14 @@
                 "id": "d1c65f1f-5669-4dce-9d7a-8eb279a73112",
                 "resourcePath": "scripts\\scPlayerDrawUIAbility\\scPlayerDrawUIAbility.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "769deb2e-bd92-47a1-a86f-6450ca1b63ae",
+            "Value": {
+                "id": "123f34c7-d146-4610-9c29-78ed2a005ba7",
+                "resourcePath": "sprites\\sEnemy_Zombie_slice\\sEnemy_Zombie_slice.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6807,6 +6831,14 @@
             }
         },
         {
+            "Key": "c15754c5-124c-4f04-b743-a9b29de23ffa",
+            "Value": {
+                "id": "869948a0-c983-480f-b869-af55bc2126ad",
+                "resourcePath": "shaders\\shSlice\\shSlice.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "c16d16e6-2b0d-4bde-9cd4-ee85bf232ef0",
             "Value": {
                 "id": "79596480-11ba-4481-a368-6bdc604567b4",
@@ -9105,6 +9137,7 @@
         "848a0bb9-04ab-4d5b-a89b-2ec02ff30981",
         "ca4c6979-64b7-4335-ae5c-db306726e26a",
         "a078b4f1-89a7-48e8-be10-1b07aa78b2f2",
+        "1c50b9ef-b345-47b0-bb2e-c7e26683b7ce",
         "a40e747a-7a28-4443-bb79-168541278e76",
         "4192b0a8-8d7d-49fd-ab8b-239648cdc18a",
         "508da282-5360-414c-896e-c0369ddbf32e",
@@ -9309,6 +9342,7 @@
         "23e7d68d-2647-4b25-99df-2d7bae1e3c55",
         "4d1b5431-1e9f-4b18-82e8-e5489a23141a",
         "160123fc-436e-4672-bb02-590a8d1d0ae0",
+        "66cd5342-eb63-4eea-a380-50f0cdca2a9e",
         "5cfa03f2-375c-45f2-aeb8-e5d55b8caf84",
         "499ea0c8-db9d-44e4-878d-d07c88c07289",
         "b9ff66f3-fb2e-476a-a998-6204e5b3561a",

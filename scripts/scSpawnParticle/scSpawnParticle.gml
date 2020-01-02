@@ -12,7 +12,7 @@ var spd = argument3;
 var sprite = argument4;
 var type = argument5;
 
-if(instance_number(oPartGravParent) > 300){
+if(instance_number(oPartGravParent) > 500){
 	exit	
 }
 
