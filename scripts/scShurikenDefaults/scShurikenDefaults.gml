@@ -32,7 +32,7 @@ map[? SHURIKEN_MAP.WEAPON_SCRIPT] = noone; //Special script to apply when hittin
 map[? SHURIKEN_MAP.SPAWN_SCRIPT] = noone; //Special script to apply when spawning a shuriken. Overrides shoot and aim action.
 map[? SHURIKEN_MAP.SPRITE_STICK] = noone; //Change sprite on stick
 
-map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
+map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPEED];; // Particle to emit
 map[? SHURIKEN_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 
 //map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability

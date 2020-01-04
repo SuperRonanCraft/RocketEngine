@@ -11,7 +11,7 @@ var isPlayer = scGetParent(pEntity, other);
 var _team = owner.shootable_map[? SHOOTABLE_MAP.TEAM]; //Owner Team
 var _oteam = other.shootable_map[? SHOOTABLE_MAP.TEAM]; //Entity Team
 
-if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
+if (shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 	if (!deactivate && _team != _oteam) //Activated and is not same team
 		if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this player before
 			ds_list_add(confirmList, other);
@@ -23,19 +23,15 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 				//Add buff
 				if (shuriken_map[? SHURIKEN_MAP.BUFF] != noone)
 					scBuffAdd(shuriken_map[? SHURIKEN_MAP.BUFF], other, owner);
-						
 				//Stick to player
-				if(shuriken_map[? SHURIKEN_MAP.STICK]){
+				if (shuriken_map[? SHURIKEN_MAP.STICK]){
 					deactivate = true;
 					stuckTo = other.id;
-					
 					/*
 					show_debug_message(string(other.bbox_left) + ", " + string(other.bbox_right));
 					show_debug_message(string(other.bbox_top) + ", " + string(other.bbox_bottom));
 					show_debug_message(string(other.x) + ", " + string(other.y));
 					*/
-					
-					
 					newX = irandom_range(other.bbox_left,other.bbox_right);
 					newY = irandom_range(other.bbox_top,other.bbox_bottom);
 					
@@ -74,10 +70,7 @@ if(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 				scUltimateAddCharge(owner, DAMAGE_TYPE.DIRECT, shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 			scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
 			scScreenShake(25,5);
-		
 		}
-}
-
-else if(!deactivate && (isPlayer ? _team != _oteam : true)){
-	script_execute(shuriken_map[?SHURIKEN_MAP.PLAYER_SCRIPT]);
+} else if (!deactivate && (isPlayer ? _team != _oteam : true)){
+	script_execute(shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT]);
 }

@@ -9,7 +9,6 @@ owner = noone;
 //Loop animation
 loop = true;
 
-
 //uptime
 timer = 0;
 

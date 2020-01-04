@@ -17,8 +17,6 @@ if (shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP] != noone)
 	script_execute(shuriken_map[? SHURIKEN_MAP.SHURIKEN_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 
-
-
 //Otherwise, if it is not deactivated:
 else if (!deactivate) {
 	
@@ -34,14 +32,14 @@ else if (!deactivate) {
 	
 		
 	//Check speed to never go negative or reach 0.
-	if(weapon_map[? WEAPON_MAP.SPEED] <= 1){
+	if (weapon_map[? WEAPON_MAP.SPEED] <= 1){
 		weapon_map[? WEAPON_MAP.SPEED] = 1;	
 	}
 }
 
 //Rotate with hsp
 
-if(shuriken_map[? SHURIKEN_MAP.ROTATE] || rotate){
+if (shuriken_map[? SHURIKEN_MAP.ROTATE] || rotate){
 	imgdir -= hsp;
 	image_angle = imgdir;
 }
@@ -54,34 +52,28 @@ if (!deactivate && shuriken_map[? SHURIKEN_MAP.PARTICLE] != noone) {
 
 //Increase timer to expire
 if (timer < time)
-	timer += owner.time_dialation;
-	
+	timer += owner.time_dialation;	
 else if (timer == time && stuckTo != noone)
-	
-	if(instance_exists(stuckTo)){
+	if (instance_exists(stuckTo)){
 		if(stuckTo.object_index != oWall)
 			event_user(0);
 		else
 			instance_destroy();
-	}
-	else
+	} else
 		instance_destroy();
 else
 	event_user(0);
 
 
-if(deactivate && stuckTo != noone){
-	if(variable_instance_exists(stuckTo,"destroy")){
-		if(stuckTo.destroy){
+if (deactivate && stuckTo != noone)
+	if (variable_instance_exists(stuckTo, "destroy"))
+		if (stuckTo.destroy) {
 			event_user(0);
 			exit;
 		}
-	}
-}
 
 //Stick to a (usually moving) object
-if(instance_exists(stuckTo)){
-	
+if (instance_exists(stuckTo)){
 	if (deactivate && stuckTo != noone && stuckTo.object_index != oWall){
 		x = stuckTo.x + newX;
 		y = stuckTo.y + newY;
@@ -94,30 +86,22 @@ if(instance_exists(stuckTo)){
 		if (scGetParent(pShootable,stuckTo))
 			if(!stuckTo.player_map[? PLAYER_MAP.ALIVE])
 				event_user(0);
-			
-			
-	} 
-	else if(stuckTo.object_index == oWall){
+	} else if (stuckTo.object_index == oWall){
 		hsp = 0;
 		vsp = 0;
 		
-	}
-	else
+	} else
 		event_user(0); //Failsafe check.
 }
-
-
-
 
 //Move shuriken by hsp and vsp ALWAYS
 x += hsp * owner.time_dialation;
 y += vsp * owner.time_dialation;
 
 //Dont loop sprite stick animation
-if(!loop){
+if (!loop)
 	if(image_index > image_number -1)
 		image_index = image_number - 1;
-}
 
 //Despawn if out of room.
 if (checkroom)

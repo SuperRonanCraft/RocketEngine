@@ -13,9 +13,24 @@ var yy = argument[1];
 var dep = argument[2];
 var dir = argument[3]
 var own = argument[4];
+var map = argument[5];
 var w_map = ds_map_create();
-ds_map_copy(w_map, argument[5]);
+//ds_map_copy(w_map, argument[5]);
 var inst = instance_create_depth(xx, yy, dep, oArrow);
+
+//show_debug_message("SIZE " + string(ds_map_size(map)));
+//show_debug_message("VALUE " + string(WEAPON_MAP.MAP));
+
+for (var i = 0; i < ds_map_size(map); i++) {
+	if (i != WEAPON_MAP.MAP)
+		ds_map_set(w_map, i, map[? i]);
+	else {
+		show_debug_message("WEapon map here!");
+		var new_map = ds_map_create();
+		ds_map_copy(new_map, map[? i]);
+		ds_map_set(w_map, i, new_map);
+	}
+}
 
 //SHURIKEN_MAP
 //Set all the values for the two arrays given to the map, reducing programming repetition

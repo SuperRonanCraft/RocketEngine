@@ -54,7 +54,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.NAME] = "Gravity's Core";
 		map[? SHURIKEN_MAP.DESCRIPTION] = "A perplexing puzzle";
 		map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.PORTAL;
-		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.MAGNET];
+		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.MAGNET];
 		map[? SHURIKEN_MAP.COOLDOWN] = 20;
 		map[? SHURIKEN_MAP.SPEED] = 22;
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
@@ -156,7 +156,7 @@ switch (shur) {
 		map[? SHURIKEN_MAP.DAMAGE] = 2;
 		map[? SHURIKEN_MAP.RELOAD_TIME] = 45;
 		map[? SHURIKEN_MAP.COOLDOWN] = 25;
-		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SCRAPING];
+		map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SCRAPING];
 		//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.LIGHTNING_SWORD;
 		break;
 }

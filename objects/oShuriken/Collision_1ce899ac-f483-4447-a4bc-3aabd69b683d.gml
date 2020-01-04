@@ -1,12 +1,10 @@
 /// @description  hit a wall
 
 var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
-
-
 var spd = shuriken_map[? SHURIKEN_MAP.SPEED];
 
-if(shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
-	if(!deactivate && shuriken_map[?SHURIKEN_MAP.STICK] && other.shootable || other.is_wall){
+if (shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
+	if (!deactivate && shuriken_map[? SHURIKEN_MAP.STICK] && other.shootable || other.is_wall){
 		deactivate = true;
 		image_speed = 0;
 		depth = other.depth;
@@ -26,21 +24,15 @@ if(shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
 		}
 		*/
 	
-	}
-	
-	else if(!deactivate && !shuriken_map[?SHURIKEN_MAP.STICK] && other.shootable || other.is_wall){
+	} else if (!deactivate && !shuriken_map[?SHURIKEN_MAP.STICK] && other.shootable || other.is_wall){
 		scSpawnParticle(x-hsp, y-vsp, spd*.6, abs(vsp) + abs(hsp), spDebris,WORLDPART_TYPE.DEBRIS);
 		event_user(0);
-		
 	}
-	
-	
-	if(!deactivate && other.shootable || other.is_wall){
+	if (!deactivate && other.shootable || other.is_wall){
 		deactivate = true;
 		event_user(1);
 	}
 	
-}
-else if(other.shootable || other.is_wall){
+} else if (other.shootable || other.is_wall){
 	script_execute(shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT]);
 }
