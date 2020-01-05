@@ -6,7 +6,8 @@
     "children": [
         "56981a18-7170-4181-a805-5b2371b89004",
         "46aafe53-1ce3-4942-90cd-ff9e07d1e9b2",
-        "3fb12ee3-5578-48b1-aaed-8a33e222628a"
+        "3fb12ee3-5578-48b1-aaed-8a33e222628a",
+        "ddacbd33-567d-471f-bf39-3a875111f89e"
     ],
     "filterType": "GMObject",
     "folderName": "Particles",

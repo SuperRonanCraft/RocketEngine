@@ -1,5 +1,11 @@
 /// @desc 
 
+if(owner != noone){
+	if(!instance_exists(owner)){
+		instance_destroy();
+	}
+}
+
 if (!standing) { //Collision
 	trap_vsp += trap_grv;
 	var offset = 1;

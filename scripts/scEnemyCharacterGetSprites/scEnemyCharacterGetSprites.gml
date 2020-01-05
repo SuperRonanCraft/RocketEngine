@@ -7,6 +7,7 @@ switch (argument0) {
 	case CHARACTER_ENEMY.ZOMBIE:
 	
 		map[? ANIMATIONSTATE.SLICE] = sEnemy_Zombie_slice;
+		map[? ANIMATIONSTATE.HURT] = sEnemy_Zombie_hurt;
         map[? ANIMATIONSTATE.STANDING] = sEnemy_Zombie_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sEnemy_Zombie_walkend;
 		map[? ANIMATIONSTATE.WALKING] = sEnemy_Zombie_walk;

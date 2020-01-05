@@ -105,10 +105,28 @@ repeat(amt){
 			}			
 			
 	        break;
+			
+	    case WORLDPART_TYPE.ICE:
+			
+			with (worldPart) {
+				weight = random_range(0.3, 0.5);
+				friction_base = random_range(0.1, 0.6);
+				hsp_real = random_range(-spd/2, spd/2);
+				vsp_real = random_range(-spd/2, spd/4);
+				timer += irandom_range(-25, 25);
+				rotate = true;
+				sticky = false;
+				bounce_coeff = 0.3;
+				image_xscale = 1;
+				image_yscale = 1;
+				image_index = irandom_range(0,image_number-1);
+			}			
+			
+	        break;
 	}
 	
 }
 	
 enum WORLDPART_TYPE{
-		BLOOD, DEBRIS, SLIME, SHIELD,ARMOR,
+		BLOOD, DEBRIS, SLIME, SHIELD,ARMOR,ICE,
 }

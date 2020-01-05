@@ -39,7 +39,7 @@ if (touchingx != noone || touchingy != noone && sticky) //Hit a wall? Get stuck 
 
 //Rotate if moving
 if (rotate && hsp != 0)
-	image_angle += hsp;
+	angle += hsp;
 
 
 if (stuck) exit;

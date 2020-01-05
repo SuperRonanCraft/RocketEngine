@@ -3,14 +3,14 @@
 standing = instance_place(x,bbox_bottom+5,oWall);
 
 if(bleed != noone){
-	if(timer % 30 == 0 && timer > 60){
-		scSpawnParticle(x, y, 1, 2,  spBlood, bleed);	
+	if(floor(timer) % 30 == 0 && timer > 60){
+		scSpawnParticle(x, y, 1, 2,  bleedSprite, bleed);	
 	}
 }
 
 
 
-if(!ds_map_empty(corpseMap) && !gib){
+if(!ds_map_empty(corpseMap) && !gib && !statue){
 
 	if(instance_exists(owner)){
 		hsp_real = owner.gravity_map[?GRAVITY_MAP.HSP];
@@ -31,6 +31,31 @@ if(!ds_map_empty(corpseMap) && !gib){
 	}
 }
 
+
+//Ice statue crystals
+if(statue){
+	if(floor(timer) %5 == 0 && timer != 0){
+		//Because screw conventional randomness
+		if(irandom_range(0,10) == 5){
+			var crystal = instance_create_depth(x + irandom_range(-20,20),y + irandom_range(-20,20),depth-1,oCrystal);
+			crystal.owner = id;
+			crystal.startX = x - crystal.x;
+			crystal.startY = y - crystal.y;
+		}
+	}
+	
+	//Lock to grid and make blocks
+	if(!moving){
+		x = BLOCK_SIZE * ( x div BLOCK_SIZE);
+		y = BLOCK_SIZE * ( y div BLOCK_SIZE);
+		if(Wall1 == noone && collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,pEntity,false,true) == noone){
+			Wall1 = instance_create_depth(x-BLOCK_SIZE,y-BLOCK_SIZE,depth,oWall);	
+			Wall1.visible = false;
+			Wall1.image_yscale = 2;
+			Wall1.image_xscale = 2;
+		}
+	}
+}
 
 
 if (stuck || !moving) exit; //stuck to a wall?
@@ -58,8 +83,14 @@ if (touchingx != noone) { //If touching a wall in the horizontal
 
 var touchingy = instance_place(x, y + vsp, oWall); //get the instance of the wall in the future in the vertical
 if (touchingy != noone) { //If touching a wall in the vertical
-	if (vsp > 0) //Falling
+	if (vsp > 0){ //Falling
 		y = floor(touchingy.bbox_top + (y - bbox_bottom) - offset);
+		
+		if(abs(vsp) > 20 && statue){
+			instance_destroy(id,true);
+		}
+		
+	}
 	else if (vsp < 0) //Going up
 		y = ceil(touchingy.bbox_bottom + (y - bbox_top) + offset);
 	

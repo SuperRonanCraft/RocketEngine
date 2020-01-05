@@ -3383,6 +3383,14 @@
             }
         },
         {
+            "Key": "5dbac192-4bbb-4c51-9d8e-a3589ab2baac",
+            "Value": {
+                "id": "55eb00f7-ba1d-47d8-ba94-f02916faf273",
+                "resourcePath": "sprites\\s_pcrystal3\\s_pcrystal3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5df77b12-dd4a-4b87-a762-5e42e7f22d55",
             "Value": {
                 "id": "9254bd5d-d31f-4edd-b4f8-2bd8a25564b0",
@@ -4055,6 +4063,14 @@
             }
         },
         {
+            "Key": "728be51c-1da6-433c-ace3-9cb89944ed34",
+            "Value": {
+                "id": "9242fa14-f391-44e1-85da-92ff4d1431be",
+                "resourcePath": "sprites\\spIce\\spIce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "72ac3948-6fc8-469f-8d16-843aa1bf49f5",
             "Value": {
                 "id": "24c04a18-35a4-4930-a0f5-b29238278dc4",
@@ -4164,6 +4180,14 @@
                 "id": "506ab164-10e2-4388-b83e-d4de49a57778",
                 "resourcePath": "rooms\/rRumbleStage1\/rRumbleStage1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "7618ab89-f8b5-40f1-98b6-53d994663cd7",
+            "Value": {
+                "id": "cca1b0d0-8c59-4abd-8e10-640f911260d0",
+                "resourcePath": "sprites\\s_pcrystal2\\s_pcrystal2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4684,6 +4708,14 @@
                 "id": "02abf157-36ac-48f6-b70f-f43898fd58ca",
                 "resourcePath": "scripts\/scDrawLine\/scDrawLine.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8445bf93-d124-48ec-b6d6-786e0a57e7d5",
+            "Value": {
+                "id": "628286af-f559-403c-bf8f-40aa4731d15a",
+                "resourcePath": "sprites\\sIceStatue\\sIceStatue.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7239,6 +7271,14 @@
             }
         },
         {
+            "Key": "cc2537d4-3f56-49a0-be3e-9efbeac24e57",
+            "Value": {
+                "id": "618c87b2-9f6d-4613-bf30-c651eec96e7a",
+                "resourcePath": "sprites\\sPallete_zombie\\sPallete_zombie.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc7e0820-8a39-49d1-9db5-8f3a4d78effc",
             "Value": {
                 "id": "7a7cddb7-2517-4d7c-a6f4-1a161284d2a0",
@@ -7767,6 +7807,14 @@
             }
         },
         {
+            "Key": "dca4bfc4-68f3-4033-9900-df9ebe7e20f1",
+            "Value": {
+                "id": "bf5ea5cc-d037-45d0-9825-9cb5dd716740",
+                "resourcePath": "sprites\\s_pcrystal1\\s_pcrystal1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dccc55ef-73ed-4537-a1a9-664395a02436",
             "Value": {
                 "id": "9ae0ed1f-e326-436d-8d31-993db3ae8ad8",
@@ -7803,6 +7851,14 @@
             "Value": {
                 "id": "7c87d6a0-290a-486b-83b6-10e4ea545c8c",
                 "resourcePath": "objects\\oSwordSlash_Brick\\oSwordSlash_Brick.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ddacbd33-567d-471f-bf39-3a875111f89e",
+            "Value": {
+                "id": "de3d8f38-c357-4de2-b4d9-3f1ddb49a0e1",
+                "resourcePath": "objects\\oCrystal\\oCrystal.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -52,7 +52,10 @@
         "fd92a2a1-ad6c-4984-96b0-8df67f821e2b",
         "139082ca-33b0-49dd-8f60-484ff4673d78",
         "ca06b7bb-1dc0-45a1-969b-c2adcd5eb747",
-        "d1074e70-725e-4b04-b24e-6a3f4599f126"
+        "d1074e70-725e-4b04-b24e-6a3f4599f126",
+        "dca4bfc4-68f3-4033-9900-df9ebe7e20f1",
+        "7618ab89-f8b5-40f1-98b6-53d994663cd7",
+        "5dbac192-4bbb-4c51-9d8e-a3589ab2baac"
     ],
     "filterType": "GMSprite",
     "folderName": "Trails",

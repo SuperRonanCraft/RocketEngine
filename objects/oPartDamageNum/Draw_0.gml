@@ -20,7 +20,7 @@ for (var i = 0; i < array_length_1d(value_cached); i++)
 	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], _c, alpha, scale, scale, angle);
 	
 //Base Type
-if(damage_type != DAMAGE_TYPE.NONE){
+if(damage_type != DAMAGE_TYPE.NONE && damage_type != noone){
 	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sUIDamageTypeIcons, damage_type, _c, alpha, scale, scale, angle);
 	//Amped damage
 	if(base_damage_amped != 0){
@@ -36,7 +36,7 @@ if(damage_type != DAMAGE_TYPE.NONE){
 }
 
 //Element Type
-if(damage_element != DAMAGE_ELEMENT.NONE){
+if(damage_element != DAMAGE_ELEMENT.NONE && damage_element != noone){
 	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sUIElementIcons, damage_element, _c, alpha, scale, scale, angle);
 
 	//Amped damage

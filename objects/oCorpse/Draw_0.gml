@@ -4,8 +4,11 @@
 if ( (standing != noone || stuck) && timer > 0)
 	timer--;
 	
+else
+	timer -= 0.2;
+	
 
-else if(standing != noone || stuck)
+if(timer <= 0 && !statue)
 	image_alpha = max(image_alpha - alpha_reduce, 0);
 
 
@@ -18,15 +21,17 @@ if(slice){
 	shader_set(shSlice);	
 }
 
-draw_sprite_ext(currentSprite,floor(animationVar),x,_y,facing,image_yscale,angle,c_white,image_alpha);
+draw_sprite_ext(currentSprite,floor(animationVar),x,_y,facing,image_yscale,angle,color,image_alpha);
 
 if(slice){
 	shader_reset();	
 }
 
 
-if (image_alpha <= 0)
-	instance_destroy();
+
+
+if (image_alpha <= 0 || (statue && timer <= 0))
+	instance_destroy(id,true);
 	
 
 if (global.debug) {

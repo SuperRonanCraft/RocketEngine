@@ -12,7 +12,11 @@ corpseMap = ds_map_create();
 currentSprite = sprite_index;
 animationVar = 0;
 
+statue = false;
+Wall1 = noone;
 
+
+color = c_white;
 facing = 1;
 angle = 0;
 hsp = -10;
@@ -32,6 +36,7 @@ type = noone;
 rotate = false;
 bounce_coeff = 0.8;
 bleed = noone;
+bleedSprite = spBlood;
 scaled = false; //Should we scale up to normal?
 animate = false;
 animate_dur = 1;

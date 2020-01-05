@@ -158,8 +158,14 @@ with (damaging) {
 			map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 			map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
-			scCheckDeathEffect(_damage_type,damaging,damager, true);
-			scCheckDeathEffect(_damage_element,damaging,damager, false);
+			
+			if(_damage_type != DAMAGE_TYPE.NONE && _damage_element == DAMAGE_ELEMENT.NONE){
+				scCheckDeathEffect(_damage_type,damaging,damager, true);
+			}
+			
+			else if(_damage_element != DAMAGE_ELEMENT.NONE && _damage_type == DAMAGE_TYPE.NONE){
+				scCheckDeathEffect(_damage_element,damaging,damager, false);
+			}
 			
 			with(damaging){
 				scCheckHealth()

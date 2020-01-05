@@ -21,3 +21,4 @@ animate = false;
 animate_dur = 1;
 moving = true;
 image_speed = 0;
+angle = 0;
