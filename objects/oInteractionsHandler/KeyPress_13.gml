@@ -1,0 +1,1 @@
+/// @desc random interaction
