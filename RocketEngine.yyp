@@ -4135,6 +4135,14 @@
             }
         },
         {
+            "Key": "7490c40f-8d55-41a5-8b52-a862a13de5c7",
+            "Value": {
+                "id": "9dfe96d4-0a0e-4785-812f-8eba395977fc",
+                "resourcePath": "datafiles_yy\\interactions.json.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "74999e60-f66b-4ad3-a200-57ea6fcbbe8d",
             "Value": {
                 "id": "44dc9335-9e13-40bc-ba6e-f3416f9ffba4",
@@ -4236,6 +4244,14 @@
                 "id": "2fb93de3-e449-4b8e-b503-473f0a167922",
                 "resourcePath": "sprites\/s_ach_shoot_10000\/s_ach_shoot_10000.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "77563a09-4473-4f22-9262-6e6271be5885",
+            "Value": {
+                "id": "bf825eae-5acd-4286-b41a-8bf46a035253",
+                "resourcePath": "scripts\\scLoadJsonFile\\scLoadJsonFile.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -6055,6 +6071,14 @@
             }
         },
         {
+            "Key": "a9702eae-ebfa-46ae-ae18-5637d00c4013",
+            "Value": {
+                "id": "1306eccc-1cf2-4c9e-b784-970d3eaeffb8",
+                "resourcePath": "objects\\oInteractionsHandler\\oInteractionsHandler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "aa24f50b-bf31-4dd4-9bae-d8b5077148bf",
             "Value": {
                 "id": "bc65c084-a605-4ca7-9cc3-4205b38365a4",
@@ -6735,6 +6759,14 @@
             }
         },
         {
+            "Key": "bc4bd54b-8992-4187-a93e-8324a33d1a20",
+            "Value": {
+                "id": "c12dbe60-0c7d-498d-91db-9e940d4032d3",
+                "resourcePath": "views\\bc4bd54b-8992-4187-a93e-8324a33d1a20.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bc52f200-8726-4ff9-ad86-55bb3c461b15",
             "Value": {
                 "id": "2c2b78c9-d020-4c89-9c35-cbf539daa78f",
@@ -7099,6 +7131,14 @@
             "Value": {
                 "id": "26a8978d-a1cd-406f-b752-cba26a344958",
                 "resourcePath": "scripts\/scRocketSpecialFire_Shootable\/scRocketSpecialFire_Shootable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c8e34421-7e58-4349-a4e0-760f6e8cd89f",
+            "Value": {
+                "id": "87a2295f-536b-4aaa-bf98-10363cef4f43",
+                "resourcePath": "scripts\\scInteractionsLoad\\scInteractionsLoad.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -9366,6 +9406,8 @@
         "642537f0-5347-4a8c-9cf9-7cb43338096e",
         "7a2d403c-3d62-4bc1-a37c-c7990a5ec6d2",
         "b07921d9-8376-4807-9a92-24c903c3e303",
+        "c8e34421-7e58-4349-a4e0-760f6e8cd89f",
+        "77563a09-4473-4f22-9262-6e6271be5885",
         "27b0d615-2fba-4f17-abd9-48c282d140de",
         "30927b15-6586-479c-b2ee-1fbced56dcc6",
         "52796ba1-ab1f-43dd-a4fa-24fe0af92e0b",

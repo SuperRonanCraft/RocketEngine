@@ -1,0 +1,40 @@
+//VALIDATOR https://jsonlint.com/
+//Placeholders 
+/*
+%name%, person interacting with
+%name_self%, persons name
+*/
+{
+	"CHARACTERS": [{
+			//an oEntity's name value to equal
+			"name": "Guard",
+			"interact": [
+				"Steve"
+			],
+			"messages": {
+				"RUDE": [
+					"Hey, you there!",
+					"What are you doing here!"
+				],
+				"PASS": [
+					"Go right ahead %name%"
+				]
+			}
+		},
+		{
+			"name": "Steve",
+			"interact": [
+				"Guard"
+			],
+			"messages": {
+				"RUDE": [
+					"Get out of the way!",
+					"No thanks!"
+				],
+				"NICE": [
+					"Awesome, thanks!"
+				]
+			}
+		}
+	]
+}
