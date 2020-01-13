@@ -4,36 +4,28 @@
 		{
 			"name": "Guard",
 			"interact": ["Steve"],
-			"messages": [
-				{ "type": "RUDE", 
-					"msg": [
+			"msg": {
+				"RUDE": [
 						"Hey, you there!",
 						"What are you doing here!"
 					],
-				},
-				{ "type": "PASS",
-					"msg": [
+				 "PASS": [
 						"Go right ahead %name%"
 					]
 				}
-			]
 		},
 		{
 			"name": "Steve",
 			"interact": ["Guard"],
-			"messages": [
-				{ "type": "RUDE", 
-					"msg": [
+			"msg": {
+				"RUDE": [
 						"Hey, you there!",
 						"What are you doing here!"
 					],
-				},
-				{ "type": "PASS",
-					"msg": [
+				 "PASS": [
 						"Go right ahead %name%"
 					]
 				}
-			]
 		}
 	]
 }
