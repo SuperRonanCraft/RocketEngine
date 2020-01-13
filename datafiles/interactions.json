@@ -2,30 +2,31 @@
 {
 	"CHARACTERS": [
 		{
+			"priority": 1,
 			"name": "Guard",
 			"interact": ["Steve"],
 			"msg": {
 				"RUDE": [
-						"Hey, you there!",
-						"What are you doing here!"
-					],
-				 "PASS": [
-						"Go right ahead %name%"
-					]
-				}
+					"Hey, you there!",
+					"What are you doing here!"
+				],
+				"PASS": [
+					"Go right ahead %name%"
+				]
+			}
 		},
 		{
 			"name": "Steve",
 			"interact": ["Guard"],
 			"msg": {
 				"RUDE": [
-						"Hey, you there!",
-						"What are you doing here!"
-					],
-				 "PASS": [
-						"Go right ahead %name%"
-					]
-				}
+					"Hey, you there! 2",
+					"What are you doing here! 2"
+				],
+				"PASS": [
+					"Go right ahead %name%"
+				]
+			}
 		}
 	]
 }
