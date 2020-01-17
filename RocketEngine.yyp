@@ -6895,6 +6895,14 @@
             }
         },
         {
+            "Key": "c1053b7d-5c9a-4e9c-9ae6-d8055fbbd08b",
+            "Value": {
+                "id": "6a9256ac-8f99-4181-8c57-d3d1a8e2e593",
+                "resourcePath": "rooms\\rDeathmatch\\rDeathmatch.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "c15754c5-124c-4f04-b743-a9b29de23ffa",
             "Value": {
                 "id": "869948a0-c983-480f-b869-af55bc2126ad",
@@ -8119,6 +8127,14 @@
             }
         },
         {
+            "Key": "e44a3d37-6b39-4444-90d1-a344ef74fdca",
+            "Value": {
+                "id": "b67cd647-58df-4178-9833-f4563fbede01",
+                "resourcePath": "scripts\\scSpawnPlayer\\scSpawnPlayer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e4bda642-d355-44ef-8d86-3e95133cbd4d",
             "Value": {
                 "id": "e786d71c-53b6-47c7-97d4-b08be4335fd6",
@@ -8331,6 +8347,14 @@
             "Value": {
                 "id": "182d1ca1-dbf2-4e29-b74a-cd21829c79d6",
                 "resourcePath": "objects\/oGMMRumble\/oGMMRumble.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e9a27ca0-5349-41cc-a51d-ebc864516517",
+            "Value": {
+                "id": "7c63d848-bc92-40a4-b8d3-ae12ba3ccd90",
+                "resourcePath": "objects\\oGMMDeathmatch\\oGMMDeathmatch.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -9381,6 +9405,7 @@
         "1916b52a-4cb0-4ae0-8fd4-40b86121ff5b",
         "1df4d02a-a7c1-41e4-bfd4-572a4d433425",
         "7e78075c-2f6d-40d0-a7b6-4912faa1f6e8",
+        "e44a3d37-6b39-4444-90d1-a344ef74fdca",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
         "034c8d0e-9a5c-4ecb-9693-9fab48783be5",

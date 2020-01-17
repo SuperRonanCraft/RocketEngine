@@ -14,7 +14,8 @@
         "fa5855a1-186b-4e43-aefc-704bba09dcbb",
         "44d7dfdb-ada9-491c-8be5-e02117d2a76e",
         "1df4d02a-a7c1-41e4-bfd4-572a4d433425",
-        "7e78075c-2f6d-40d0-a7b6-4912faa1f6e8"
+        "7e78075c-2f6d-40d0-a7b6-4912faa1f6e8",
+        "e44a3d37-6b39-4444-90d1-a344ef74fdca"
     ],
     "filterType": "GMScript",
     "folderName": "Utilities",
