@@ -1647,6 +1647,14 @@
             }
         },
         {
+            "Key": "2cd7b268-fce6-4b53-aae7-42cefbaf1738",
+            "Value": {
+                "id": "fef28979-0aae-4070-97df-1c44400d7fb5",
+                "resourcePath": "scripts\\scControllersFix\\scControllersFix.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2cec2225-33e4-47a9-849a-d1b1cc79c245",
             "Value": {
                 "id": "c8b9a4c3-1e6c-4b2b-886a-adcbfe472c24",
@@ -7783,6 +7791,14 @@
             }
         },
         {
+            "Key": "da8bbdc9-f850-4419-8d9b-ccaeb800080f",
+            "Value": {
+                "id": "568877de-5f69-4cb3-89c5-19f6b51950d6",
+                "resourcePath": "scripts\\scControllersAdd\\scControllersAdd.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dac5356f-b79c-49a0-9a94-36e0af06b8e3",
             "Value": {
                 "id": "94e401f5-9c48-4998-9526-0b27410245e8",
@@ -9406,6 +9422,8 @@
         "1df4d02a-a7c1-41e4-bfd4-572a4d433425",
         "7e78075c-2f6d-40d0-a7b6-4912faa1f6e8",
         "e44a3d37-6b39-4444-90d1-a344ef74fdca",
+        "da8bbdc9-f850-4419-8d9b-ccaeb800080f",
+        "2cd7b268-fce6-4b53-aae7-42cefbaf1738",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
         "034c8d0e-9a5c-4ecb-9693-9fab48783be5",

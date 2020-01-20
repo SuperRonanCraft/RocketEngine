@@ -21,7 +21,7 @@ global.gamemode_select = false; //Set to false every main menu load (sets to loa
 //Gamemodes
 //Preset
 enum GAMEMODE {
-	ONEVONE, TARGETS, KNOCKOUT, SINGLE, RUMBLE, TUTORIAL, /*ONLINE,*/ LENGTH
+	ONEVONE, TARGETS, KNOCKOUT, SINGLE, RUMBLE, TUTORIAL, /*ONLINE,*/ DEATHMATCH, LENGTH
 }
 global.gamemodes[GAMEMODE.ONEVONE] = "One v One";
 global.gamemodes[GAMEMODE.TARGETS] = "Targets";
@@ -29,6 +29,7 @@ global.gamemodes[GAMEMODE.KNOCKOUT] = "Knockout";
 global.gamemodes[GAMEMODE.SINGLE] = "Single Player";
 global.gamemodes[GAMEMODE.TUTORIAL] = "Tutorial";
 global.gamemodes[GAMEMODE.RUMBLE] = "Rumble";
+global.gamemodes[GAMEMODE.DEATHMATCH] = "Deathmatch";
 //global.gamemodes[GAMEMODE.ONLINE] = "Online";
 //Set when a select room is activated
 global.gamemode = noone;
@@ -39,6 +40,7 @@ global.gamemodeSRoom[GAMEMODE.KNOCKOUT] = rKnockOutSelect;
 global.gamemodeSRoom[GAMEMODE.SINGLE] = rSingleSelect;
 global.gamemodeSRoom[GAMEMODE.TUTORIAL] = rTutorial;
 global.gamemodeSRoom[GAMEMODE.RUMBLE] = rRumbleSelect;
+global.gamemodeSRoom[GAMEMODE.DEATHMATCH] = rDeathmatch;
 //global.gamemodeSRoom[GAMEMODE.ONLINE] = rServer;
 //Stages
 //Set on every StageSelect room
@@ -64,8 +66,6 @@ enum TEAM {
 global.teamEnemy = ds_list_create();
 global.teamPlayer = ds_list_create();
 global.teamNone = ds_list_create();
-
-
 
 //Randomize gameplay
 randomize();

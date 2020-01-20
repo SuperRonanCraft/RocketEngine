@@ -131,6 +131,7 @@ button_right = vk_right;
 button_up = vk_up;
 button_down = vk_down;
 button_gamepad = scSettingsGetType(SETTINGS_TYPE.VALUE, SETTINGS.PLAYER_1_GAMEPAD);
+button_gamepad_only = false;
 
 ///Default things
 depth -= 1;

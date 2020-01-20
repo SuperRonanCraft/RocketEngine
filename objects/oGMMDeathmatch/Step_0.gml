@@ -5,4 +5,3 @@ with (oPlayer) //Dont allow players to bug out :D
 		y = ystart;
 	}
 event_inherited();
-

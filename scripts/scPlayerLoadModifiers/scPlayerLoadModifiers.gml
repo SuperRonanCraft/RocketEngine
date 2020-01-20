@@ -78,6 +78,8 @@ switch (global.gamemode) {
 			auto_aim = true;
 		}
 		break;
+	case GAMEMODE.DEATHMATCH:
+		break;
 	default: //SINGLEPLAYER, TUTORIAL
 		break;
 }

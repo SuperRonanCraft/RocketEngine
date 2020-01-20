@@ -4,7 +4,7 @@ else scUIReloadGlobal(); //Reload global vars
 var key_up = false, key_down = false;
 var hinput = 0;
 var confirm_input = true;
-if (button_up != noone && button_down != noone && button_left != noone && button_right != noone) { //Keyboard disabled
+if (!button_gamepad_only && button_up != noone && button_down != noone && button_left != noone && button_right != noone) { //Keyboard disabled
 	key_up = keyboard_check_pressed(button_up);
 	key_down = keyboard_check_pressed(button_down);
 	hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);

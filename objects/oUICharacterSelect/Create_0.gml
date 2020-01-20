@@ -48,6 +48,8 @@ char_img = 0;
 //Animate/scale to player
 char_animate = false;
 char_animate_step = false; //first event of animation
+view_under = true;
+view_side = 1;
 
 //Pages of the menu
 menu_pages = [ds_menu_main];

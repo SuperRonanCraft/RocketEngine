@@ -1,5 +1,6 @@
 /// @desc a stage has begun
 
+global.play = false;
 global.gamemode = gamemode;
 
 scStatsResetStage(false);

@@ -33,7 +33,7 @@
             "mvc": "1.0",
             "objectId": "908b93c2-a679-4239-a92c-162de84ac11e",
             "propertyId": "78b3389c-ec6a-456a-bc80-ddd7076a3c44",
-            "value": "GAMEMODE.RUMBLE"
+            "value": "GAMEMODE.DEATHMATCH"
         }
     ],
     "parentObjectId": "908b93c2-a679-4239-a92c-162de84ac11e",

@@ -4,8 +4,8 @@
 if (char_animate) {
 	//Current Character
 	if (char_animate_step == false) {
-		char_y = start_y_default + RES_H / 6;
-		char_x = start_x_default - char_x;
+		char_y = start_y_default + (view_under ? RES_H / 6 : 0);
+		char_x = start_x_default - char_x + (!view_under ? 0 : RES_H / 4 * view_side);
 		char_animate_step = true;
 		alpha = 1;
 	}
@@ -55,30 +55,38 @@ if (selected)
 else if (char_last != noone) {
 	
 	//Character behind of current
-	var char_draw = char_last - 1;
-	if (char_draw < 0)
-		char_draw = noone;
-	if (char_draw != noone) {
-		var char_anim_map = scPlayerCharacterGetSprites(char_draw);
-		var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
-		draw_sprite_ext(sprite, 0, start_x_default - (char_x_offset + char_x), start_y_default + RES_H / 6, 
-			char_scale_b * char_dir, char_scale_b, 0, c_white, 0.6);
-		//Destroy the draw char map
-		ds_map_destroy(char_anim_map);
+	if (view_under) {
+		var char_draw = char_last - 1;
+		if (char_draw < 0)
+			char_draw = noone;
+		if (char_draw != noone) {
+			var char_anim_map = scPlayerCharacterGetSprites(char_draw);
+			var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
+			var _xx = start_x_default - (char_x_offset + char_x) + (view_under ? 0 : (RES_H / 4) * view_side);
+			var _yy = start_y_default + (view_under ? RES_H / 6 : 0);
+			draw_sprite_ext(sprite, 0, _xx, _yy, 
+				char_scale_b * char_dir, char_scale_b, 0, c_white, 0.6);
+			//Destroy the draw char map
+			ds_map_destroy(char_anim_map);
+		}
 	}
 
 	//Character front of current
-	char_draw = char_last + 1;
-	if (char_draw >= CHARACTER.LENGTH)
-		char_draw = noone;
-	if (char_draw != noone) {
-		var char_anim_map = scPlayerCharacterGetSprites(char_draw);
-		var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
-		var char_map = scPlayerCharacterGetInfo(char_draw);
-		draw_sprite_ext(sprite, 0, start_x_default + (char_x_offset - char_x), start_y_default + RES_H / 6, 
-			char_scale_a * char_dir, char_scale_a, 0, c_white, 0.6);
-		//Destroy the draw char map
-		ds_map_destroy(char_anim_map);
+	if (view_under) {
+		char_draw = char_last + 1;
+		if (char_draw >= CHARACTER.LENGTH)
+			char_draw = noone;
+		if (char_draw != noone) {
+			var char_anim_map = scPlayerCharacterGetSprites(char_draw);
+			var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
+			var char_map = scPlayerCharacterGetInfo(char_draw);
+			var _xx = start_x_default + (char_x_offset - char_x) + (view_under ? 0 : (RES_H / 4) * view_side);
+			var _yy = start_y_default + (view_under ? RES_H / 6 : 0);
+			draw_sprite_ext(sprite, 0, _xx, _yy, 
+				char_scale_a * char_dir, char_scale_a, 0, c_white, 0.6);
+			//Destroy the draw char map
+			ds_map_destroy(char_anim_map);
+		}
 	}
 }
 
@@ -89,7 +97,9 @@ if (char_draw != noone) {
 	var sprite = char_anim_map[? ANIMATIONSTATE.STANDING];
 	var char_map = scPlayerCharacterGetInfo(char_draw);
 	scPalleteSwapSet(char_map[? CHARACTER_MAP.PALETTE], char_palette);
-	draw_sprite_ext(sprite, floor(char_img), start_x_default - char_x, start_y_default + RES_H / 6, 
+	var _xx = start_x_default - char_x + (view_under ? 0 : (RES_H / 3.5) * view_side)
+	var _yy = start_y_default + (view_under ? RES_H / 6 : 0)
+	draw_sprite_ext(sprite, floor(char_img), _xx, _yy, 
 		char_scale_cur * char_dir, char_scale_cur, 0, c_white, 1);
 	scPalleteSwapReset();
 	ds_map_destroy(char_map);
@@ -106,7 +116,7 @@ if (instance_exists(player))
 			other.char_img = 0;
 		if (!other.selected) {
 			var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
-			scDrawText(other.start_x_default, other.start_y_default + RES_H / 4, char[? CHARACTER_MAP.NAME], c_yellow, 0.5);
+			scDrawText(other.start_x_default, other.start_y_default - 38, char[? CHARACTER_MAP.NAME], c_yellow, 0.5);
 			if (char[? CHARACTER_MAP.TYPE] != undefined) {
 				other.char_last = char[? CHARACTER_MAP.TYPE];
 				other.char_palette = char[? CHARACTER_MAP.PALETTE_INDEX];
@@ -120,7 +130,7 @@ char_scale_a = lerp(char_scale_a, char_scale_min, 0.1);
 char_scale_b = lerp(char_scale_b, char_scale_min, 0.1);
 char_scale_cur = lerp(char_scale_cur, char_scale_cur_max, 0.1);
 
-if (char_cur != char_last) {
+if (char_cur != char_last && view_under) {
 	var scale_cur = char_scale_cur;
 	char_scale_cur = char_cur > char_last ? char_scale_b : char_scale_a;
 	char_x = char_x_offset * (char_cur - char_last);
