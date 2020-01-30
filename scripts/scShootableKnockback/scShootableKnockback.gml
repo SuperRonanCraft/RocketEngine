@@ -33,4 +33,4 @@ _map[? GRAVITY_MAP.HSP_MOVE] = 0;
 if (_map[? GRAVITY_MAP.STANDING])
 	owner.y -= 2 * sign(owner.grv_dir);
 
-_map[? GRAVITY_MAP.STANDING] = false;
+//_map[? GRAVITY_MAP.STANDING] = false;

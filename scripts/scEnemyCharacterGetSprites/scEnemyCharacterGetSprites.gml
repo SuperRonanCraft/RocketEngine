@@ -7,6 +7,12 @@ switch (argument0) {
 	case CHARACTER_ENEMY.ZOMBIE:
 	
 		map[? ANIMATIONSTATE.SLICE] = sEnemy_Zombie_slice;
+		map[? ANIMATIONSTATE.SLICEANIMB1] = sEnemy_Zombie_sliceAnimB1;
+		map[? ANIMATIONSTATE.SLICEANIML1] = sEnemy_Zombie_sliceAnimL1;
+		map[? ANIMATIONSTATE.SLICEANIMR1] = sEnemy_Zombie_sliceAnimR1;
+		map[? ANIMATIONSTATE.SLICEANIMT1] = sEnemy_Zombie_sliceAnimT1;
+		map[? ANIMATIONSTATE.SLICEANIMT2] = sEnemy_Zombie_sliceAnimT2;
+		
 		map[? ANIMATIONSTATE.HURT] = sEnemy_Zombie_hurt;
         map[? ANIMATIONSTATE.STANDING] = sEnemy_Zombie_idle;
 		map[? ANIMATIONSTATE.SLIDING] = sEnemy_Zombie_walkend;
@@ -21,6 +27,7 @@ switch (argument0) {
 		map[? ANIMATIONSTATE.TRAPPED] = sEnemy_default_trapped;
 		map[? ANIMATIONSTATE.DEADFROZEN] = sEnemy_default_deadFrozen; 
 		map[? ANIMATIONSTATE.DEADLASER] = sEnemy_default_deadLaser; 
+		
 		map[? ANIMATIONSTATE.GIBS] = sEnemy_Zombie_gibs; 
         break;	
 	

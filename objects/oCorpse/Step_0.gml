@@ -9,8 +9,8 @@ if(bleed != noone){
 }
 
 
-
-if(!ds_map_empty(corpseMap) && !gib && !statue){
+//Normal Corpse "Ragdoll"
+if(!ds_map_empty(corpseMap) && !gib && !statue && !specialAnimation){
 
 	if(instance_exists(owner)){
 		hsp_real = owner.gravity_map[?GRAVITY_MAP.HSP];
@@ -55,6 +55,39 @@ if(statue){
 			Wall1.image_xscale = 2;
 		}
 	}
+}
+
+if(slice && specialAnimation){
+	//Left & Right
+	if(gibID == 6 || gibID == 1 || gibID == 4){
+		//show_debug_message("animate");
+		image_speed = 0.1 + (0.006 * power(min(animationVar-4),2));
+		//hsp_real = 0;
+		if(standing != noone){
+			animationVar+= image_speed;
+		}
+		if(animationVar > sprite_get_number(currentSprite)-1){
+			animationVar = sprite_get_number(currentSprite)-1;	
+		}
+	}
+	else if(gibID == 2){
+		image_speed = 0.1 + (0.006 * power(min(animationVar-4),2));
+		animationVar+= image_speed;
+		
+		if(standing == noone && animationVar > sprite_get_number(currentSprite)-1){
+			animationVar = sprite_get_number(currentSprite)-1;	
+		}
+		else if(standing != noone){
+			currentSprite = corpseMap[? ANIMATIONSTATE.SLICEANIMT2];	
+			
+			if(animationVar >= sprite_get_number(currentSprite)-1){
+				animationVar = 0;
+				hsp_real += 5*facing;
+				moving = true;
+			}
+		}
+	}
+	
 }
 
 

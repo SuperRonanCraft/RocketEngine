@@ -3127,6 +3127,14 @@
             }
         },
         {
+            "Key": "564ee5c6-f88e-4cb1-bf70-6a1c62ed79c8",
+            "Value": {
+                "id": "b1a7139f-3bd6-4bfb-abb7-aabcc6a76f07",
+                "resourcePath": "sprites\\sEnemy_Zombie_sliceAnimT2\\sEnemy_Zombie_sliceAnimT2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "564ffcc6-d238-4547-b765-40c44496bd6c",
             "Value": {
                 "id": "72f2bb29-dfbd-4a7c-a9d3-90846099832b",
@@ -5348,6 +5356,14 @@
                 "id": "0ba0e9b8-74ea-41b1-b13e-791160244974",
                 "resourcePath": "notes\/How to create a Gamemode.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "961356d9-edba-4b66-b24f-477508da5ec6",
+            "Value": {
+                "id": "708ad165-eaa7-4f4d-90e3-1e3dfe98823a",
+                "resourcePath": "sprites\\sEnemy_Zombie_sliceAnimB1\\sEnemy_Zombie_sliceAnimB1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7871,6 +7887,14 @@
             }
         },
         {
+            "Key": "dc39edea-8ca1-4dd4-babc-f9fa70d2cc97",
+            "Value": {
+                "id": "0a17de55-71c2-4764-b818-fc68cb12bcfa",
+                "resourcePath": "sprites\\sEnemy_Zombie_sliceAnimT1\\sEnemy_Zombie_sliceAnimT1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dca4bfc4-68f3-4033-9900-df9ebe7e20f1",
             "Value": {
                 "id": "bf5ea5cc-d037-45d0-9825-9cb5dd716740",
@@ -8099,6 +8123,14 @@
             "Value": {
                 "id": "e2bdd3e8-20ab-4d70-982e-6bf196db0dec",
                 "resourcePath": "sprites\/s_modifier_shotgun\/s_modifier_shotgun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e39d0c3a-037d-416d-9881-26bec550678e",
+            "Value": {
+                "id": "147af40d-1c76-4f0e-a6a3-bff0d4356206",
+                "resourcePath": "sprites\\sEnemy_Zombie_sliceAnimR1\\sEnemy_Zombie_sliceAnimR1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9060,6 +9092,14 @@
                 "id": "9a47749f-5acb-40b4-908f-f95a1bd2b8a2",
                 "resourcePath": "views\/fedb5019-57a5-4a30-ae5a-b41dc25e535b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fedd17a8-373d-453b-862c-7f27eedb4753",
+            "Value": {
+                "id": "aaa30385-3cf3-4283-9208-0686e3bfd81c",
+                "resourcePath": "sprites\\sEnemy_Zombie_sliceAnimL1\\sEnemy_Zombie_sliceAnimL1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

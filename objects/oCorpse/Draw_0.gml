@@ -16,16 +16,17 @@ var _y = y;
 if (animate && !moving)
 	_y = _y + scMovementWave(-3, 3, animate_dur);
 	
-	
+/*	
 if(slice){
 	shader_set(shSlice);	
-}
+}*/
 
 draw_sprite_ext(currentSprite,floor(animationVar),x,_y,facing,image_yscale,angle,color,image_alpha);
 
+/*
 if(slice){
 	shader_reset();	
-}
+}*/
 
 
 

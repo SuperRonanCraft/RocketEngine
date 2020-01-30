@@ -4,6 +4,7 @@ owner = noone;
 
 gib = false;
 slice = false;
+gibID = 0;
 
 timer = irandom_range(120,240);
 
@@ -11,6 +12,7 @@ corpseMap = ds_map_create();
 
 currentSprite = sprite_index;
 animationVar = 0;
+specialAnimation = false;
 
 statue = false;
 Wall1 = noone;

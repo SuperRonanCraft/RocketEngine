@@ -75,43 +75,99 @@ else{
 	switch (status) {
 		
 		case DAMAGE_TYPE.SLICE:
-			var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.SLICE];
-			var halfSpNum = (sprite_get_number(spNum)-1)/2;
-			var randInd = irandom_range(1, halfSpNum);
-			for (var s = 0; s < 2; s++) {
-				scSpawnParticle(deadGuy.x, deadGuy.y, 5, 5,  spBlood, WORLDPART_TYPE.BLOOD);	
-				var giblets = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth+200,oCorpse);
-				giblets.currentSprite = spNum;
-				giblets.animationVar = randInd+(s*halfSpNum);
-				giblets.gib = true;
-				giblets.slice = true;
-				giblets.owner = deadGuy;
-				giblets.rotate = true;
-				giblets.sticky = false;
-				giblets.bleed = WORLDPART_TYPE.BLOOD;
-				giblets.hsp_real = irandom_range(-10,10);
-				giblets.vsp_real = irandom_range(-10,5);
-				giblets.friction_base = 1;
+		case DAMAGE_TYPE.SPLASH:
+			
+			if(DAMAGE_TYPE.SPLASH == status && irandom_range(0,3) < 3){
+				var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.GIBS];
+				for (var g = 0; g < sprite_get_number(spNum); g++) {
+				    var giblets = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(0,10), deadGuy.depth+200,oCorpse);
+					giblets.currentSprite = spNum;
+					giblets.animationVar = g;
+					giblets.gib = true;
+					giblets.owner = deadGuy;
+					giblets.rotate = true;
+					giblets.sticky = true;
+					giblets.bleed = WORLDPART_TYPE.BLOOD;
+					giblets.hsp_real = irandom_range(-20,20);
+					giblets.vsp_real = irandom_range(-20,5);
+					giblets.friction_base = 1;
+				}
+			
+			}
+			
+			else{
+				var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.SLICE];
+			
+				var halfSpNum = (sprite_get_number(spNum)-1)/2;
+				var randInd = irandom_range(1, halfSpNum);
+				var confirmSlice = false;
+			
+				for (var s = 0; s < 2; s++) {
+					scSpawnParticle(deadGuy.x, deadGuy.y, 5, 5,  spBlood, WORLDPART_TYPE.BLOOD);	
+					var giblets = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth+200,oCorpse);
+					ds_map_copy(giblets.corpseMap, deadGuy.characterSprites);
+					confirmSlice = false;
+					if(irandom_range(0,3) == 1 && randInd+(s*halfSpNum) != 0 && randInd+(s*halfSpNum) != 3 && randInd+(s*halfSpNum) != 5){
+						confirmSlice = true;
+						giblets.specialAnimation = true;
+						giblets.gibID = randInd+(s*halfSpNum);
+						giblets.rotate = false;
+						giblets.hsp_real = 0;
+						giblets.vsp_real = 0;
+						giblets.image_speed = deadGuy.image_speed;
+						switch (randInd+(s*halfSpNum)) {
+						    case 1:
+								if(deadGuy.gravity_map[?GRAVITY_MAP.STANDING]){
+									giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIML1];
+								}
+								else{
+									confirmSlice = false;	
+									giblets.specialAnimation = false;
+								}
+								break;
+						    case 2:
+						        giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIMT1];
+								giblets.hsp_real = irandom_range(-10,10);
+								giblets.vsp_real = irandom_range(-15,-10);
+						        break;
+							case 4:
+								if(deadGuy.gravity_map[?GRAVITY_MAP.STANDING]){
+									giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIMR1];
+								}
+								else{
+									confirmSlice = false;	
+									giblets.specialAnimation = false;
+								}
+					        
+								break;
+							case 6:
+								if(deadGuy.gravity_map[?GRAVITY_MAP.STANDING]){
+									giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIMB1];
+								}
+								else{
+									confirmSlice = false;	
+									giblets.specialAnimation = false;
+								}
+						        break;
+						}
+					}
+					if(!confirmSlice){
+						giblets.currentSprite = spNum;
+						giblets.animationVar = randInd+(s*halfSpNum);
+						giblets.gib = true;
+						giblets.rotate = true;
+						giblets.hsp_real = irandom_range(-10,10);
+						giblets.vsp_real = irandom_range(-10,5);
+					}
+					giblets.slice = true;
+					giblets.owner = deadGuy;
+					giblets.sticky = false;
+					giblets.bleed = WORLDPART_TYPE.BLOOD;
+					giblets.friction_base = 1;
+				}
 			}
 	        break;
 		
-		
-	    case DAMAGE_TYPE.SPLASH:
-			var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.GIBS];
-			for (var g = 0; g < sprite_get_number(spNum); g++) {
-			    var giblets = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(0,10), deadGuy.depth+200,oCorpse);
-				giblets.currentSprite = spNum;
-				giblets.animationVar = g;
-				giblets.gib = true;
-				giblets.owner = deadGuy;
-				giblets.rotate = true;
-				giblets.sticky = true;
-				giblets.bleed = WORLDPART_TYPE.BLOOD;
-				giblets.hsp_real = irandom_range(-20,20);
-				giblets.vsp_real = irandom_range(-20,5);
-				giblets.friction_base = 1;
-			}
-	        break;
 	    case DAMAGE_TYPE.STAB:
 	        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+200,oCorpse);
 			

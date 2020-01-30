@@ -13,5 +13,5 @@ var sound = sounds[0];
 //	sound = sounds[abs(random_range(0, 0))];
 audio_stop_all();
 //Play the song
-audio_play_sound(sound, 1000, true);
+//audio_play_sound(sound, 1000, true);
 current_sound = sound;
