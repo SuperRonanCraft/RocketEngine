@@ -23,8 +23,8 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff
 	if (dsBuff[? "scale"] >= dsBuff[? "scale_org"] + dsBuff[? "scale_lmt"] || dsBuff[? "scale"] <= dsBuff[? "scale_org"] + (dsBuff[? "scale_lmt"] * -1))
 		dsBuff[? "scale_dir"] *= -1;
 	
-	if (owner.display)
-		with (owner)
+	//if (owner.display)
+	//	with (owner)
 			//for (var i = 0; i < shootable_map[? SHOOTABLE_MAP.HEALTH_ORIGINAL] / 2 && i < 10; i++) {
 				/*var len = hpwidth * i;
 				var side = team == TEAM.LEFT ? 1 : -1;

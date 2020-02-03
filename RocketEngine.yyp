@@ -2359,6 +2359,14 @@
             }
         },
         {
+            "Key": "438c0599-45f8-42eb-a3a9-d0c30fc2629c",
+            "Value": {
+                "id": "3a625b4a-2c2b-40ef-87f5-71cc7a5dc866",
+                "resourcePath": "scripts\\scParticleDistribute\\scParticleDistribute.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "43962847-d03f-4fe4-be08-d1e2d655ed0f",
             "Value": {
                 "id": "cef4dc6b-d8d6-49e7-bc1f-b3d4b891e0fa",
@@ -4844,6 +4852,14 @@
                 "id": "5a5655c1-f41d-4001-aa29-e25fe18b3680",
                 "resourcePath": "sprites\\sEnemy_Zombie_gibs\\sEnemy_Zombie_gibs.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "86441487-7b88-4bd9-a462-3529e1db02f7",
+            "Value": {
+                "id": "d04a49be-f43f-4894-b9ea-7a11b5ffe104",
+                "resourcePath": "scripts\\scParticleCreate\\scParticleCreate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -9464,6 +9480,8 @@
         "e44a3d37-6b39-4444-90d1-a344ef74fdca",
         "da8bbdc9-f850-4419-8d9b-ccaeb800080f",
         "2cd7b268-fce6-4b53-aae7-42cefbaf1738",
+        "438c0599-45f8-42eb-a3a9-d0c30fc2629c",
+        "86441487-7b88-4bd9-a462-3529e1db02f7",
         "2869aac5-8803-4652-90fa-42a2b0dafde3",
         "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
         "034c8d0e-9a5c-4ecb-9693-9fab48783be5",

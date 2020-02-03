@@ -25,7 +25,7 @@ if (clock > dsBuff[? BUFF_MAP.TIME]) {
 	} else
 		dsBuff[? BUFF_MAP.CLOCK] = dsBuff[? BUFF_MAP.TIME];
 	//Otherwise, the buff is still active, and create a visual indicator
-	part_particles_create(global.ParticleSystem1, x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
-	dsBuff[? BUFF_MAP.PARTICLE], abs((dsBuff[? BUFF_MAP.TIME] - clock) / (dsBuff[? BUFF_MAP.TIME] / 2)) * dsBuff[? BUFF_MAP.PARTICLE_AMT]);
+	scParticleCreate(x + irandom_range(-10, 10), y + irandom_range(-15, 15), 
+		dsBuff[? BUFF_MAP.PARTICLE], abs((dsBuff[? BUFF_MAP.TIME] - clock) / (dsBuff[? BUFF_MAP.TIME] / 2)) * dsBuff[? BUFF_MAP.PARTICLE_AMT]);
 	dsBuff[? BUFF_MAP.CLOCK]++;
 }
