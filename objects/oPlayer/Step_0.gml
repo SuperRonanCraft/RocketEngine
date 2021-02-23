@@ -1,4 +1,16 @@
 event_inherited();
+
+if (!global.play) exit;
+//Weapon activate
+scWeaponProgress(weapon_map);
+
+
+
+
+
+
+
+
 /*/// @desc Stuff
 if (!global.play) exit;
 

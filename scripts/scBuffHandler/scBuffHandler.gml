@@ -47,11 +47,12 @@ function scBuffHandler() {
 			}
 			continue;
 		}
-		if (buff[? event] != noone)
+		if (buff[? event] != noone) {
 			if (event == BUFF_MAP.DAMAGE_PREAPPLY)
 				return script_execute(buff[? event], id, buff, extras);
 			else
-			script_execute(buff[? event], id, buff, extras);
+				script_execute(buff[? event], id, buff, extras);
+		}
 	}
 
 	enum BUFF_EVENT {

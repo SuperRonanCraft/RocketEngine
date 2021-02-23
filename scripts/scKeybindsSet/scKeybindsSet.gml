@@ -73,7 +73,7 @@ function scKeybindsSet(argument0) {
 	key_shoot_released = false;
 	key_ult = false;
 	key_ability = false;
-	key_inventory = false;
+	//key_inventory = false;
 
 	//Keybinds
 	enum KEYBIND_PLAYER {

@@ -58,7 +58,7 @@ function scPlayerCharacterChange() {
 	player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 
 	//Load character weapon
-	//scWeaponStart();
+	scWeaponGet(map[? CHARACTER_MAP.WEAPON]);
 
 	//Load Character Abilities
 	scAbilityStart(map[? CHARACTER_MAP.ABILITY]);
@@ -73,7 +73,7 @@ function scPlayerCharacterChange() {
 	}
 
 	enum CHARACTER_MAP {
-		NAME, TYPE, /*WEAPON,*/ SPEED, HEALTH_BASE, HEALTH_SHIELD, HEALTH_ARMOR, PALETTE, PALETTE_INDEX,
+		NAME, TYPE, WEAPON, SPEED, HEALTH_BASE, HEALTH_SHIELD, HEALTH_ARMOR, PALETTE, PALETTE_INDEX,
 		ULTIMATE, ABILITY,
 	
 		//SOUND

@@ -14,11 +14,12 @@ function scPlayerCharacterGetInfo(argument0) {
 	map[? CHARACTER_MAP.CAN_PICK] = true;
 	map[? CHARACTER_MAP.ULTIMATE] = noone;
 	map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.NONE;
+	map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.NONE;
 
 	switch (map[? CHARACTER_MAP.TYPE]) {
 		case CHARACTER.DEFAULT:
 			map[? CHARACTER_MAP.NAME] = "Steve";
-			//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET;
+			map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.ROCKET;
 			map[? CHARACTER_MAP.HEALTH_BASE] = 50;
 			map[? CHARACTER_MAP.HEALTH_ARMOR] = 20;
 			map[? CHARACTER_MAP.PALETTE] = sPallete_default;
@@ -27,7 +28,7 @@ function scPlayerCharacterGetInfo(argument0) {
 			break;
 		case CHARACTER.SWORD:
 			map[? CHARACTER_MAP.NAME] = "Sword Guy";
-			//map[? CHARACTER_MAP.WEAPON] = WEAPON.SHURIKEN;
+			map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.SHURIKEN;
 			map[? CHARACTER_MAP.HEALTH_BASE] = 30;
 			map[? CHARACTER_MAP.HEALTH_SHIELD] = 20;
 			map[? CHARACTER_MAP.PALETTE] = sPallete_sword;
@@ -36,7 +37,7 @@ function scPlayerCharacterGetInfo(argument0) {
 			break;
 		case CHARACTER.ARROW:
 			map[? CHARACTER_MAP.NAME] = "Hush";
-			//map[? CHARACTER_MAP.WEAPON] = WEAPON.ARROW;
+			map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.ARROW;
 			map[? CHARACTER_MAP.HEALTH_BASE] = 100;
 			map[? CHARACTER_MAP.HEALTH_ARMOR] = 50;
 			map[? CHARACTER_MAP.HEALTH_SHIELD] = 50;
