@@ -1,1 +1,5 @@
-game_end();
+function scUIQuitGame() {
+	game_end();
+
+
+}

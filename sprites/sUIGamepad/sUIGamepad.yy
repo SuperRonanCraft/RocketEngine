@@ -1,180 +1,98 @@
 {
-    "id": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "sUIGamepad",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 79,
-    "bbox_left": 6,
-    "bbox_right": 191,
-    "bbox_top": 5,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "c641a75b-8da1-4ae9-bb76-11aa26ad4f9d",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "compositeImage": {
-                "id": "367897da-3db4-406e-ba1d-2a1e2920ee5f",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "c641a75b-8da1-4ae9-bb76-11aa26ad4f9d",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "d218e8fe-766f-4e27-8bfe-a4ea7d636b30",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "c641a75b-8da1-4ae9-bb76-11aa26ad4f9d",
-                    "LayerId": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e"
-                }
-            ]
-        },
-        {
-            "id": "517559c4-751a-4c2c-8768-48f040a1cda5",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "compositeImage": {
-                "id": "a54b80de-f7af-4ce4-b80e-901ea18e63ad",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "517559c4-751a-4c2c-8768-48f040a1cda5",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "88233edf-1d80-4c9f-88ad-18f89ecca346",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "517559c4-751a-4c2c-8768-48f040a1cda5",
-                    "LayerId": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e"
-                }
-            ]
-        },
-        {
-            "id": "4d06f75a-d8fe-418a-8a9b-54303324c251",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "compositeImage": {
-                "id": "654a8362-0aaf-41e2-a198-23b94be456ca",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "4d06f75a-d8fe-418a-8a9b-54303324c251",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "31ca6c9a-7154-4b35-b9a9-10fea2eea44d",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "4d06f75a-d8fe-418a-8a9b-54303324c251",
-                    "LayerId": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e"
-                }
-            ]
-        },
-        {
-            "id": "bce8435a-57a5-424d-be4b-06d5b47fcf85",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "compositeImage": {
-                "id": "5e08be2b-4759-423d-82cc-ef95806cebb4",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "bce8435a-57a5-424d-be4b-06d5b47fcf85",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "5e63ff18-f177-42fa-b79b-407b35ce2441",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "bce8435a-57a5-424d-be4b-06d5b47fcf85",
-                    "LayerId": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e"
-                }
-            ]
-        },
-        {
-            "id": "55cdd264-e420-4537-85fb-e296572cebfe",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "compositeImage": {
-                "id": "be11f1a8-e884-4a40-bdcb-a71ac2aeca5a",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "55cdd264-e420-4537-85fb-e296572cebfe",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "87ba2ba9-0995-43e3-b978-ca72e6177c75",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "55cdd264-e420-4537-85fb-e296572cebfe",
-                    "LayerId": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e"
-                }
-            ]
-        },
-        {
-            "id": "4f8df3e2-a178-4890-8d4f-a10bd48bddcd",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "compositeImage": {
-                "id": "105170dc-442f-4034-9073-5097408c2bfd",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "4f8df3e2-a178-4890-8d4f-a10bd48bddcd",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "4f9ddab4-9938-428a-a795-8218d7c48cf8",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "4f8df3e2-a178-4890-8d4f-a10bd48bddcd",
-                    "LayerId": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 80,
-    "layers": [
-        {
-            "id": "e5ebe25d-801d-40a9-a6c2-e1fabe1f330e",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "b4436f60-d90b-4ccd-b36c-609c8ae791b0",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 4,
-    "originLocked": false,
-    "playbackSpeed": 1,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 6,
+  "bbox_right": 191,
+  "bbox_top": 5,
+  "bbox_bottom": 79,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 200,
+  "height": 80,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"c641a75b-8da1-4ae9-bb76-11aa26ad4f9d","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c641a75b-8da1-4ae9-bb76-11aa26ad4f9d","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":{"name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"c641a75b-8da1-4ae9-bb76-11aa26ad4f9d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"517559c4-751a-4c2c-8768-48f040a1cda5","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"517559c4-751a-4c2c-8768-48f040a1cda5","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":{"name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"517559c4-751a-4c2c-8768-48f040a1cda5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4d06f75a-d8fe-418a-8a9b-54303324c251","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4d06f75a-d8fe-418a-8a9b-54303324c251","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":{"name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"4d06f75a-d8fe-418a-8a9b-54303324c251","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bce8435a-57a5-424d-be4b-06d5b47fcf85","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bce8435a-57a5-424d-be4b-06d5b47fcf85","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":{"name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"bce8435a-57a5-424d-be4b-06d5b47fcf85","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"55cdd264-e420-4537-85fb-e296572cebfe","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"55cdd264-e420-4537-85fb-e296572cebfe","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":{"name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"55cdd264-e420-4537-85fb-e296572cebfe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4f8df3e2-a178-4890-8d4f-a10bd48bddcd","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4f8df3e2-a178-4890-8d4f-a10bd48bddcd","path":"sprites/sUIGamepad/sUIGamepad.yy",},"LayerId":{"name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","name":"4f8df3e2-a178-4890-8d4f-a10bd48bddcd","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 1.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
-    "type": 0,
-    "width": 200,
-    "xorig": 100,
-    "yorig": 40
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 6.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"7777f8ec-1e12-4469-b97c-947e91804cc1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c641a75b-8da1-4ae9-bb76-11aa26ad4f9d","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9ae47de0-244a-423c-bed7-c3f04f262063","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"517559c4-751a-4c2c-8768-48f040a1cda5","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d74f9e79-9371-439f-9d02-fa64a41edfde","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d06f75a-d8fe-418a-8a9b-54303324c251","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7ee2738a-eecd-4e91-b036-16dd8369d535","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bce8435a-57a5-424d-be4b-06d5b47fcf85","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0d7d66e1-0c01-48ed-99d4-d37cc01e7d27","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"55cdd264-e420-4537-85fb-e296572cebfe","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e8d6015-0c7f-4463-befe-612ba00bef97","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f8df3e2-a178-4890-8d4f-a10bd48bddcd","path":"sprites/sUIGamepad/sUIGamepad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 100,
+    "yorigin": 40,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"sUIGamepad","path":"sprites/sUIGamepad/sUIGamepad.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e5ebe25d-801d-40a9-a6c2-e1fabe1f330e","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "Interface",
+    "path": "folders/Sprites/Interface.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sUIGamepad",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

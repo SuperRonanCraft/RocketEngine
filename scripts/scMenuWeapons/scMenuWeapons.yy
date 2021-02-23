@@ -1,8 +1,12 @@
 {
-    "id": "4cc2cdeb-97c7-48e4-98aa-8ab5a64bd164",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scMenuWeapons",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "MenuElements",
+    "path": "folders/Scripts/User Interface/MenuElements.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scMenuWeapons",
+  "tags": [],
+  "resourceType": "GMScript",
 }

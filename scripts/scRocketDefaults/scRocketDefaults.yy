@@ -1,8 +1,12 @@
 {
-    "id": "e9299095-87f4-4b5e-a689-8746fbc3f450",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketDefaults",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Rockets",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketDefaults",
+  "tags": [],
+  "resourceType": "GMScript",
 }

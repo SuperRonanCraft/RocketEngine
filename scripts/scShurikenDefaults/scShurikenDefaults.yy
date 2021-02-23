@@ -1,8 +1,12 @@
 {
-    "id": "09a3f638-e6de-4ac5-8650-6519e3abfb67",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scShurikenDefaults",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Shuriken",
+    "path": "folders/Scripts/Tacticals/Weapons/Shuriken.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scShurikenDefaults",
+  "tags": [],
+  "resourceType": "GMScript",
 }

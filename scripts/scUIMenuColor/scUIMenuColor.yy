@@ -1,8 +1,12 @@
 {
-    "id": "15569e88-3fdc-4af7-ad85-e6d86b803416",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIMenuColor",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Menus",
+    "path": "folders/Scripts/User Interface/Menus.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIMenuColor",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "b2582659-683e-43ca-851a-f0ff2b91eea2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketPiercing_Create",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Piercing",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/DISABLED/Piercing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketPiercing_Create",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "10f58b08-0894-4fc8-a43a-b06dc142944a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scDrawRect",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Utilities/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scDrawRect",
+  "tags": [],
+  "resourceType": "GMScript",
 }

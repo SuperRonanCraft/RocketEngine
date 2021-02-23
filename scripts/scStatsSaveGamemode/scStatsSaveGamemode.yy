@@ -1,8 +1,12 @@
 {
-    "id": "7eec10ae-de29-493a-afc4-60ffa416df7d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStatsSaveGamemode",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stats",
+    "path": "folders/Scripts/Data Collection/Stats.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStatsSaveGamemode",
+  "tags": [],
+  "resourceType": "GMScript",
 }

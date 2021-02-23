@@ -1,8 +1,12 @@
 {
-    "id": "86fc6873-f622-4a82-8614-0ee8be27cb34",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStageNext",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stages",
+    "path": "folders/Scripts/User Interface/Stages.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStageNext",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "fdeb19e0-f653-46e8-878c-d3d973e52a17",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUINetworkJoin",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "User Interface",
+    "path": "folders/Scripts/Networking/User Interface.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUINetworkJoin",
+  "tags": [],
+  "resourceType": "GMScript",
 }

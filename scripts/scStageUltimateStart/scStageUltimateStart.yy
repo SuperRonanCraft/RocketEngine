@@ -1,8 +1,12 @@
 {
-    "id": "efc2a0e4-e6ba-404f-bbff-42c3749f526a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStageUltimateStart",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Modifiers",
+    "path": "folders/Scripts/User Interface/Stages/Modifiers.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStageUltimateStart",
+  "tags": [],
+  "resourceType": "GMScript",
 }

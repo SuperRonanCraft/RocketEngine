@@ -1,8 +1,12 @@
 {
-    "id": "ebf3cc05-43e2-430b-b897-16b4cc657735",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateLaser_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Laser",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Laser.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateLaser_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

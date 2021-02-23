@@ -1,8 +1,12 @@
 {
-    "id": "6e53f625-431f-494a-9fdd-d9a9a54cd8c6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateSwordBrick",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Types",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateSwordBrick",
+  "tags": [],
+  "resourceType": "GMScript",
 }

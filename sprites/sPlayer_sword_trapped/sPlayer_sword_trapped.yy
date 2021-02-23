@@ -1,158 +1,94 @@
 {
-    "id": "a461638b-ec08-482a-a82c-8a29af71653e",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "sPlayer_sword_trapped",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 75,
-    "bbox_left": 33,
-    "bbox_right": 61,
-    "bbox_top": 27,
-    "bboxmode": 2,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "f4312aa5-7284-433b-8127-5b5f218d55ec",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a461638b-ec08-482a-a82c-8a29af71653e",
-            "compositeImage": {
-                "id": "fd955658-b83d-475b-965a-497eb50f9282",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "f4312aa5-7284-433b-8127-5b5f218d55ec",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "6e5433b1-3a58-45bc-a236-7ba3bb31ca88",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "f4312aa5-7284-433b-8127-5b5f218d55ec",
-                    "LayerId": "2ae3818c-b516-4a11-b171-29e16d19a11f"
-                }
-            ]
-        },
-        {
-            "id": "f0600f65-523a-46b0-b780-c25e73b33d34",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a461638b-ec08-482a-a82c-8a29af71653e",
-            "compositeImage": {
-                "id": "133a0ad1-61e9-4dc5-867a-6e60bd7102aa",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "f0600f65-523a-46b0-b780-c25e73b33d34",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "ec685c50-d735-433e-9d52-065fbb8f6e1c",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "f0600f65-523a-46b0-b780-c25e73b33d34",
-                    "LayerId": "2ae3818c-b516-4a11-b171-29e16d19a11f"
-                }
-            ]
-        },
-        {
-            "id": "8ef36f38-79b3-4d3a-bad7-747c753b3b91",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a461638b-ec08-482a-a82c-8a29af71653e",
-            "compositeImage": {
-                "id": "5a7c5d63-1c04-47d1-8bd2-b2b0520a97dc",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "8ef36f38-79b3-4d3a-bad7-747c753b3b91",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "ca239816-e1f1-4c10-8430-7f6eea9f2800",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "8ef36f38-79b3-4d3a-bad7-747c753b3b91",
-                    "LayerId": "2ae3818c-b516-4a11-b171-29e16d19a11f"
-                }
-            ]
-        },
-        {
-            "id": "5c54c09b-1b01-4792-a1c9-30e0be897860",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a461638b-ec08-482a-a82c-8a29af71653e",
-            "compositeImage": {
-                "id": "b49a20a3-09bd-4af8-8913-cc4e356e5f25",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "5c54c09b-1b01-4792-a1c9-30e0be897860",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "596c5af8-78aa-4591-91d3-fb7950b510ca",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "5c54c09b-1b01-4792-a1c9-30e0be897860",
-                    "LayerId": "2ae3818c-b516-4a11-b171-29e16d19a11f"
-                }
-            ]
-        },
-        {
-            "id": "dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "a461638b-ec08-482a-a82c-8a29af71653e",
-            "compositeImage": {
-                "id": "339d40c3-def7-44b1-8d4f-c618a79b9039",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "d8e43809-6dda-4a3e-b5d6-aa1aacbba62a",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6",
-                    "LayerId": "2ae3818c-b516-4a11-b171-29e16d19a11f"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 96,
-    "layers": [
-        {
-            "id": "2ae3818c-b516-4a11-b171-29e16d19a11f",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "a461638b-ec08-482a-a82c-8a29af71653e",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 9,
-    "originLocked": false,
-    "playbackSpeed": 15,
+  "bboxMode": 2,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 9,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 33,
+  "bbox_right": 61,
+  "bbox_top": 27,
+  "bbox_bottom": 75,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 96,
+  "height": 96,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"f4312aa5-7284-433b-8127-5b5f218d55ec","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f4312aa5-7284-433b-8127-5b5f218d55ec","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":{"name":"2ae3818c-b516-4a11-b171-29e16d19a11f","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"f4312aa5-7284-433b-8127-5b5f218d55ec","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f0600f65-523a-46b0-b780-c25e73b33d34","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f0600f65-523a-46b0-b780-c25e73b33d34","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":{"name":"2ae3818c-b516-4a11-b171-29e16d19a11f","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"f0600f65-523a-46b0-b780-c25e73b33d34","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8ef36f38-79b3-4d3a-bad7-747c753b3b91","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8ef36f38-79b3-4d3a-bad7-747c753b3b91","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":{"name":"2ae3818c-b516-4a11-b171-29e16d19a11f","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"8ef36f38-79b3-4d3a-bad7-747c753b3b91","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5c54c09b-1b01-4792-a1c9-30e0be897860","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5c54c09b-1b01-4792-a1c9-30e0be897860","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":{"name":"2ae3818c-b516-4a11-b171-29e16d19a11f","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"5c54c09b-1b01-4792-a1c9-30e0be897860","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"LayerId":{"name":"2ae3818c-b516-4a11-b171-29e16d19a11f","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","name":"dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
-    "type": 0,
-    "width": 96,
-    "xorig": 47,
-    "yorig": 51
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 5.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"eec2a8db-fdf2-477c-be75-4a6024fb3923","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4312aa5-7284-433b-8127-5b5f218d55ec","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"99aac18a-f713-4846-965b-1f91ebcea81c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f0600f65-523a-46b0-b780-c25e73b33d34","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"77185a15-68f6-4ac7-978c-528a0cc997b2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8ef36f38-79b3-4d3a-bad7-747c753b3b91","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"404f1a29-bf6b-4b75-ba66-cdce7d49666d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c54c09b-1b01-4792-a1c9-30e0be897860","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a230c13c-c890-47cb-8e0e-5427c0a82f23","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc25acd7-7a4f-4ea9-8fdc-6ba0471bfdc6","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 47,
+    "yorigin": 51,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2ae3818c-b516-4a11-b171-29e16d19a11f","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "PlayerAnimation_SM",
+    "path": "folders/Sprites/Entities/PlayerAnimation_SM.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sPlayer_sword_trapped",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

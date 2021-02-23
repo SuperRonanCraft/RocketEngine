@@ -1,8 +1,12 @@
 {
-    "id": "2715509d-76e9-4563-aa9c-2d2f6df5ca41",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketBrick_Step",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Brick",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Brick.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketBrick_Step",
+  "tags": [],
+  "resourceType": "GMScript",
 }

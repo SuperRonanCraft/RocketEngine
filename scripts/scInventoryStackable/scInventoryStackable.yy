@@ -1,8 +1,12 @@
 {
-    "id": "d92ac81e-32b4-4880-9bd9-874b75262bab",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scInventoryStackable",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory",
+    "path": "folders/Scripts/User Interface/Entities/Inventory.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scInventoryStackable",
+  "tags": [],
+  "resourceType": "GMScript",
 }

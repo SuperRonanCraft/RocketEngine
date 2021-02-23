@@ -1,8 +1,12 @@
 {
-    "id": "d5df6012-6295-4374-8c61-eb6eed033a2f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateMirror_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Mirror",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Mirror.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateMirror_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

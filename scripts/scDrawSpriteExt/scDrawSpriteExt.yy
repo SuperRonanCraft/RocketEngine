@@ -1,8 +1,12 @@
 {
-    "id": "19455d7d-472c-41ce-a375-87e79c0b8fc9",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scDrawSpriteExt",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Draw",
+    "path": "folders/Scripts/Utilities/Draw.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scDrawSpriteExt",
+  "tags": [],
+  "resourceType": "GMScript",
 }

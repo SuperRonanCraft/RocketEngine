@@ -1,8 +1,12 @@
 {
-    "id": "9a57686d-0d9e-4de7-a87a-035e4eccf56b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketShotgun_Create",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Shotgun",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Shotgun.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketShotgun_Create",
+  "tags": [],
+  "resourceType": "GMScript",
 }

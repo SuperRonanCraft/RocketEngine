@@ -1,49 +1,53 @@
 /// @desc Reverse rocket step script
+function scRocketSpecialReverse_Step() {
 
-var teleported = rev_map[? "teleported"];
-var teleporting = rev_map[? "teleporting"];
-var org_xscale = rev_map[? "org_xscale"];
-var offset = rev_map[? "offset"];
+	var teleported = rev_map[? "teleported"];
+	var teleporting = rev_map[? "teleporting"];
+	var org_xscale = rev_map[? "org_xscale"];
+	var offset = rev_map[? "offset"];
 
-if (!teleporting)
-	if (x < offset && (direction > 90 && direction < 270)) {
-		rev_map[? "side"] = true;
-		teleporting = true;
-	} else if (x > RES_W - offset && (direction >= 270 || direction <= 90)) {
-		teleporting = true;
-		rev_map[? "side"] = false;
-	}
+	if (!teleporting)
+		if (x < offset && (direction > 90 && direction < 270)) {
+			rev_map[? "side"] = true;
+			teleporting = true;
+		} else if (x > RES_W - offset && (direction >= 270 || direction <= 90)) {
+			teleporting = true;
+			rev_map[? "side"] = false;
+		}
 
-var side = rev_map[? "side"];
+	var side = rev_map[? "side"];
 
-//Animate
-if (!teleported) {
-	if (teleporting) {
-		if (original_xscale != 0)
-			original_xscale = max(original_xscale - ((0.1 * owner.time_dialation) * org_xscale), 0);
-		else {
-			if (side)
-				x = RES_W - offset;
-			else
-				x = offset;
-			teleported = true;
+	//Animate
+	if (!teleported) {
+		if (teleporting) {
+			if (original_xscale != 0)
+				original_xscale = max(original_xscale - ((0.1 * owner.time_dialation) * org_xscale), 0);
+			else {
+				if (side)
+					x = RES_W - offset;
+				else
+					x = offset;
+				teleported = true;
+			}
+		} else {
+			var spd = weapon_map[? WEAPON_MAP.SPEED];
+			scMovementLine(spd, direction);
+			//x += lengthdir_x(spd, direction);
+			//y += lengthdir_y(spd, direction);
+			var mid = RES_W / 2;
+			if (x > mid - spd && x < mid + spd) event_user(0); //Destroy when in middle of screen
 		}
 	} else {
-		var spd = weapon_map[? WEAPON_MAP.SPEED];
-		scMovementLine(spd, direction);
-		//x += lengthdir_x(spd, direction);
-		//y += lengthdir_y(spd, direction);
-		var mid = RES_W / 2;
-		if (x > mid - spd && x < mid + spd) event_user(0); //Destroy when in middle of screen
+		if (original_xscale != org_xscale)
+			original_xscale = min(original_xscale + ((0.1 * owner.time_dialation) * org_xscale), org_xscale);
+		else {
+			teleported = false;
+			teleporting = false;
+		}
 	}
-} else {
-	if (original_xscale != org_xscale)
-		original_xscale = min(original_xscale + ((0.1 * owner.time_dialation) * org_xscale), org_xscale);
-	else {
-		teleported = false;
-		teleporting = false;
-	}
-}
 
-rev_map[? "teleported"] = teleported;
-rev_map[? "teleporting"] = teleporting;
+	rev_map[? "teleported"] = teleported;
+	rev_map[? "teleporting"] = teleporting;
+
+
+}

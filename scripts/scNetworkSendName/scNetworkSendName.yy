@@ -1,8 +1,12 @@
 {
-    "id": "1faef60b-0751-40de-801c-ea177008cca1",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scNetworkSendName",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "ClientToServer",
+    "path": "folders/Scripts/Networking/ClientToServer.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scNetworkSendName",
+  "tags": [],
+  "resourceType": "GMScript",
 }

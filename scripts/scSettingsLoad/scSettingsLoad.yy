@@ -1,8 +1,12 @@
 {
-    "id": "a0ea4666-a03e-4f02-a18d-f7cd34e17b39",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scSettingsLoad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Settings",
+    "path": "folders/Scripts/Data Collection/Settings.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scSettingsLoad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,1 +1,5 @@
-ds_map_destroy(obsoleteMap);
+function scRocketObsolete_Destroy() {
+	ds_map_destroy(obsoleteMap);
+
+
+}

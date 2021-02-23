@@ -1,8 +1,12 @@
 {
-    "id": "5c320603-4784-4110-97d0-f25729940237",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialRandom_Create",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Random",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/DISABLED/Random.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialRandom_Create",
+  "tags": [],
+  "resourceType": "GMScript",
 }

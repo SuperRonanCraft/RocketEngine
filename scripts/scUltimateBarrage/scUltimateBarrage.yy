@@ -1,8 +1,12 @@
 {
-    "id": "1f21fc11-d952-4e84-9139-b99c6adc2365",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateBarrage",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Types",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateBarrage",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,2 +1,6 @@
-scUIResumeGame();
-SlideTransition(TRANS_MODE.RESTART);
+function scUIExitToTitle() {
+	scUIResumeGame();
+	SlideTransition(TRANS_MODE.RESTART);
+
+
+}

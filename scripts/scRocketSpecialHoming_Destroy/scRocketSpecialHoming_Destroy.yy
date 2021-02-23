@@ -1,8 +1,12 @@
 {
-    "id": "1788b220-d89c-43c3-a790-a80d546c4330",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialHoming_Destroy",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Homing",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Homing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialHoming_Destroy",
+  "tags": [],
+  "resourceType": "GMScript",
 }

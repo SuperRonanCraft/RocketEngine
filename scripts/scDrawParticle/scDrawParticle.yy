@@ -1,8 +1,12 @@
 {
-    "id": "01cfe7e1-8967-4426-a649-233b97758fea",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scDrawParticle",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Particles",
+    "path": "folders/Scripts/Utilities/Particles.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scDrawParticle",
+  "tags": [],
+  "resourceType": "GMScript",
 }

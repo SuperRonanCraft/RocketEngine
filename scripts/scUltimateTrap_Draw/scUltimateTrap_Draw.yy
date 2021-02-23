@@ -1,8 +1,12 @@
 {
-    "id": "058a9042-0edf-4c4e-bcca-d4493cc3ae85",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateTrap_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Trap",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Trap.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateTrap_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

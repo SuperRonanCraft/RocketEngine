@@ -1,8 +1,12 @@
 {
-    "id": "38944597-eaf0-4f99-8a24-11ebe9391c21",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scCheckHealth",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "States",
+    "path": "folders/Scripts/Entities/Entities/States.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scCheckHealth",
+  "tags": [],
+  "resourceType": "GMScript",
 }

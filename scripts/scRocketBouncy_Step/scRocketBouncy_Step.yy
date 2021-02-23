@@ -1,8 +1,12 @@
 {
-    "id": "a5cefa0a-f9fd-4fe3-bfdb-378eabdd6b31",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketBouncy_Step",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Bouncy",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Bouncy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketBouncy_Step",
+  "tags": [],
+  "resourceType": "GMScript",
 }

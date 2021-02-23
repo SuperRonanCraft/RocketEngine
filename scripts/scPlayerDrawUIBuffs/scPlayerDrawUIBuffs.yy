@@ -1,8 +1,12 @@
 {
-    "id": "99aa39c2-3627-490f-8b34-a79de7a1420a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerDrawUIBuffs",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Entities",
+    "path": "folders/Scripts/User Interface/Entities.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerDrawUIBuffs",
+  "tags": [],
+  "resourceType": "GMScript",
 }

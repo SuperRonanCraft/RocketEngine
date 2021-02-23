@@ -1,1 +1,5 @@
-slimeClock = 0;
+function scRocketSlime_Create() {
+	slimeClock = 0;
+
+
+}

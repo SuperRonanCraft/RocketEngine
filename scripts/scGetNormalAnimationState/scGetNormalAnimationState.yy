@@ -1,8 +1,12 @@
 {
-    "id": "db841c7b-4e69-492a-b56e-28ed0787489a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scGetNormalAnimationState",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Animations",
+    "path": "folders/Scripts/Entities/Entities/Animations.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scGetNormalAnimationState",
+  "tags": [],
+  "resourceType": "GMScript",
 }

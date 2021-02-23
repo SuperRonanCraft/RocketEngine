@@ -1,8 +1,12 @@
 {
-    "id": "8b62636a-ad25-4fde-a9ab-9868838ebd68",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerCharacterGetSprites",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player",
+    "path": "folders/Scripts/Entities/Entities/Characters/Player.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerCharacterGetSprites",
+  "tags": [],
+  "resourceType": "GMScript",
 }

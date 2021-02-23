@@ -1,82 +1,56 @@
 {
-    "id": "7ff6352f-9859-456d-b82b-539d7ee73f36",
-    "modelName": "GMObject",
-    "mvc": "1.0",
-    "name": "oBarrier",
-    "eventList": [
-        {
-            "id": "98a486f1-102c-47b5-99b6-ba22dc821d9e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "7ff6352f-9859-456d-b82b-539d7ee73f36"
-        },
-        {
-            "id": "184c416f-e9ef-4574-b5f0-4aeb386e6447",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "7ff6352f-9859-456d-b82b-539d7ee73f36"
-        },
-        {
-            "id": "1df842da-a34b-4bc1-a88a-dd7a29c3e6f0",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "7ff6352f-9859-456d-b82b-539d7ee73f36"
-        }
-    ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        {
-            "id": "ef18b24b-fa3d-4fd3-9be2-254df01d64c7",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
-            "propertyId": "82b63db5-713a-4fa2-be20-b2a80117eac1",
-            "value": "True"
-        }
-    ],
-    "parentObjectId": "4fca9eee-4c85-49f5-93ac-df838edbdc8d",
-    "persistent": false,
-    "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
-    "physicsFriction": 0.2,
-    "physicsGroup": 0,
-    "physicsKinematic": false,
-    "physicsLinearDamping": 0.1,
-    "physicsObject": false,
-    "physicsRestitution": 0.1,
-    "physicsSensor": false,
-    "physicsShape": 1,
-    "physicsShapePoints": null,
-    "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "46d555e5-f65a-4098-892c-1f4598b292fd",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "2",
-            "varName": "spd",
-            "varType": 0
-        }
-    ],
-    "solid": false,
-    "spriteId": "f2fb6cef-551e-48ee-82a9-9d5362748527",
-    "visible": true
+  "spriteId": {
+    "name": "sBarrier",
+    "path": "sprites/sBarrier/sBarrier.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "oWall",
+    "path": "objects/oWall/oWall.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oBarrier","path":"objects/oBarrier/oBarrier.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oBarrier","path":"objects/oBarrier/oBarrier.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oBarrier","path":"objects/oBarrier/oBarrier.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [
+    {"varType":0,"value":"2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":null,"multiselect":false,"filters":[
+        "GMTileSet",
+        "GMSprite",
+        "GMSound",
+        "GMPath",
+        "GMScript",
+        "GMShader",
+        "GMFont",
+        "GMTimeLine",
+        "GMObject",
+        "GMRoom",
+      ],"resourceVersion":"1.0","name":"spd","tags":[],"resourceType":"GMObjectProperty",},
+  ],
+  "overriddenProperties": [
+    {"propertyId":{"name":"is_wall","path":"objects/oWall/oWall.yy",},"objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Legacy",
+    "path": "folders/Objects/Entities/Pickups/Legacy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "oBarrier",
+  "tags": [],
+  "resourceType": "GMObject",
 }

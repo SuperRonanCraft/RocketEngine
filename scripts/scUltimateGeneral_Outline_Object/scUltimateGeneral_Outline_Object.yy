@@ -1,8 +1,12 @@
 {
-    "id": "a266992a-de67-4219-881c-83d5e7e77ecb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateGeneral_Outline_Object",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "General",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/General.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateGeneral_Outline_Object",
+  "tags": [],
+  "resourceType": "GMScript",
 }

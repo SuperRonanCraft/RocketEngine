@@ -1,8 +1,12 @@
 {
-    "id": "1aace334-4b62-4771-9966-828d30264d83",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIGamepadGet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "User Interface",
+    "path": "folders/Scripts/User Interface.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIGamepadGet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

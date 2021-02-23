@@ -1,8 +1,12 @@
 {
-    "id": "4feff080-c2ca-471c-a07b-d3e79032357b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIExitToTitle",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Menus",
+    "path": "folders/Scripts/User Interface/Menus.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIExitToTitle",
+  "tags": [],
+  "resourceType": "GMScript",
 }

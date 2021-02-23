@@ -1,8 +1,12 @@
 {
-    "id": "694ac4c3-b94e-486c-959f-54b71990b9f5",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIPalettePrev",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "CharacterSelect",
+    "path": "folders/Scripts/User Interface/Menus/CharacterSelect.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIPalettePrev",
+  "tags": [],
+  "resourceType": "GMScript",
 }

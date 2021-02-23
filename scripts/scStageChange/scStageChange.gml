@@ -1,8 +1,12 @@
 /// @desc Changes to the next stage selection
 /// @arg index direction to switch to
+function scStageChange(argument0) {
 
-stage_on += argument0;
-if (stage_on >= stages)
-	stage_on = 0;
-else if (stage_on < 0)
-	stage_on = stages - 1;
+	stage_on += argument0;
+	if (stage_on >= stages)
+		stage_on = 0;
+	else if (stage_on < 0)
+		stage_on = stages - 1;
+
+
+}

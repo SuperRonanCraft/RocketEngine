@@ -1,8 +1,12 @@
 {
-    "id": "40173db7-a5f6-4502-ab7f-232777f15452",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffLifeSteal",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "LifeSteal",
+    "path": "folders/Scripts/Buffs_Debuffs/Buffs/LifeSteal.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffLifeSteal",
+  "tags": [],
+  "resourceType": "GMScript",
 }

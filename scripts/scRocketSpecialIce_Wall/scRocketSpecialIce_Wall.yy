@@ -1,8 +1,12 @@
 {
-    "id": "0378c52b-0d41-40b1-8b55-41b306c931ba",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialIce_Wall",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Ice",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Ice.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialIce_Wall",
+  "tags": [],
+  "resourceType": "GMScript",
 }

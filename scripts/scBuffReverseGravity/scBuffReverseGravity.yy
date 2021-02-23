@@ -1,8 +1,12 @@
 {
-    "id": "e787a68b-3070-49de-b812-e18b6a3a030e",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffReverseGravity",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Buffs",
+    "path": "folders/Scripts/Buffs_Debuffs/Buffs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffReverseGravity",
+  "tags": [],
+  "resourceType": "GMScript",
 }

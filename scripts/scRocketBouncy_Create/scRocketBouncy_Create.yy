@@ -1,8 +1,12 @@
 {
-    "id": "6ff4e3d1-ee08-4373-b857-d110da0e25cf",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketBouncy_Create",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Bouncy",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Bouncy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketBouncy_Create",
+  "tags": [],
+  "resourceType": "GMScript",
 }

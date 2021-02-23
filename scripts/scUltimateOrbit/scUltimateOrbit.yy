@@ -1,8 +1,12 @@
 {
-    "id": "cc158fc8-aff0-4188-9706-b82b8ee3b715",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateOrbit",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Orbit",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Orbit.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateOrbit",
+  "tags": [],
+  "resourceType": "GMScript",
 }

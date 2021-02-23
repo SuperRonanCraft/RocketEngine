@@ -1,8 +1,12 @@
 {
-    "id": "4b5a2e34-9fc9-495e-aa91-9955532df18c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scArrowStart",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Arrows",
+    "path": "folders/Scripts/Tacticals/Weapons/Arrows.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scArrowStart",
+  "tags": [],
+  "resourceType": "GMScript",
 }

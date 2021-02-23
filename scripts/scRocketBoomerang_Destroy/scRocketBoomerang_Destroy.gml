@@ -1,1 +1,5 @@
-ds_map_destroy(boomMap);
+function scRocketBoomerang_Destroy() {
+	ds_map_destroy(boomMap);
+
+
+}

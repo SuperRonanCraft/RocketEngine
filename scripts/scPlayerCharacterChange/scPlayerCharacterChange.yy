@@ -1,8 +1,12 @@
 {
-    "id": "0cbe3861-56c8-4ae9-8ef2-6750091ad6ef",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerCharacterChange",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player",
+    "path": "folders/Scripts/Entities/Entities/Characters/Player.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerCharacterChange",
+  "tags": [],
+  "resourceType": "GMScript",
 }

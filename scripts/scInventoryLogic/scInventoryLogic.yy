@@ -1,8 +1,12 @@
 {
-    "id": "173c8288-e0c5-47fb-928d-aef09c662567",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scInventoryLogic",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory",
+    "path": "folders/Scripts/User Interface/Entities/Inventory.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scInventoryLogic",
+  "tags": [],
+  "resourceType": "GMScript",
 }

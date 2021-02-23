@@ -1,1 +1,5 @@
-part_particles_clear(global.ParticleSystem1);
+function scParticlesClear() {
+	part_particles_clear(global.ParticleSystem1);
+
+
+}

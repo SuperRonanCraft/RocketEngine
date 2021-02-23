@@ -1,8 +1,12 @@
 {
-    "id": "d6ba92e2-a45a-49aa-bdbf-5ab91afc2838",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffSlime",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Buffs",
+    "path": "folders/Scripts/Buffs_Debuffs/Buffs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffSlime",
+  "tags": [],
+  "resourceType": "GMScript",
 }

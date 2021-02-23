@@ -1,8 +1,12 @@
 {
-    "id": "358436e0-e664-42de-b465-9fb659d6f166",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scInventorySwapable",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory",
+    "path": "folders/Scripts/User Interface/Entities/Inventory.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scInventorySwapable",
+  "tags": [],
+  "resourceType": "GMScript",
 }

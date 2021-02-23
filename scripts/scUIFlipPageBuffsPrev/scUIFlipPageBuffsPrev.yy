@@ -1,8 +1,12 @@
 {
-    "id": "6ebc6ea9-db60-4c99-8392-afd18fb048bf",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIFlipPageBuffsPrev",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Menus",
+    "path": "folders/Scripts/User Interface/Menus.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIFlipPageBuffsPrev",
+  "tags": [],
+  "resourceType": "GMScript",
 }

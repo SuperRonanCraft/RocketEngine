@@ -1,8 +1,12 @@
 {
-    "id": "af655ced-6f3f-4d40-bbd3-94dbbaa0a427",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateSludge",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Types",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateSludge",
+  "tags": [],
+  "resourceType": "GMScript",
 }

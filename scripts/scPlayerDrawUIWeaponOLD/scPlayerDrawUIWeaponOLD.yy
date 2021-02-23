@@ -1,8 +1,12 @@
 {
-    "id": "222ed6ad-f64b-4847-923c-ad598ff8aef7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerDrawUIWeaponOLD",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Old",
+    "path": "folders/Scripts/User Interface/Entities/Old.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerDrawUIWeaponOLD",
+  "tags": [],
+  "resourceType": "GMScript",
 }

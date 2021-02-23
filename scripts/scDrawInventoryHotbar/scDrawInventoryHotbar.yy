@@ -1,8 +1,12 @@
 {
-    "id": "4025149d-1566-4cc2-aab7-88573a556916",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scDrawInventoryHotbar",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "UI",
+    "path": "folders/Scripts/User Interface/Entities/Inventory/UI.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scDrawInventoryHotbar",
+  "tags": [],
+  "resourceType": "GMScript",
 }

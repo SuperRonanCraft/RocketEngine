@@ -1,8 +1,12 @@
 {
-    "id": "db033e89-0201-4574-98f3-ac4741dcbdf6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateAmpWall_Amping_DISABLED",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Amp Wall",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Amp Wall.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateAmpWall_Amping_DISABLED",
+  "tags": [],
+  "resourceType": "GMScript",
 }

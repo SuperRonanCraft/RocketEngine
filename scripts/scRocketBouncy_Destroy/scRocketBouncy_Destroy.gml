@@ -1,1 +1,5 @@
-ds_map_destroy(bounceMap);
+function scRocketBouncy_Destroy() {
+	ds_map_destroy(bounceMap);
+
+
+}

@@ -1,8 +1,12 @@
 {
-    "id": "27b0d615-2fba-4f17-abd9-48c282d140de",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scShootableDamage",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Damage",
+    "path": "folders/Scripts/Entities/Interactions/Damage.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scShootableDamage",
+  "tags": [],
+  "resourceType": "GMScript",
 }

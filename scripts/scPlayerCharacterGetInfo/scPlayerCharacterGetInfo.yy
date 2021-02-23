@@ -1,8 +1,12 @@
 {
-    "id": "0fb75587-6b56-493f-95cb-abaf215f165a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerCharacterGetInfo",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Player",
+    "path": "folders/Scripts/Entities/Entities/Characters/Player.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerCharacterGetInfo",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,11 +1,15 @@
-var val = -1;
-for (var i = 0; i < 10; i++) {
-	var inst = instance_create_depth(x, y - 50, depth + 1, oUltimateSludge);
-	inst.sludge_buff = BUFFTYPE.BURNRUSH;
-	inst.sludge_sprite_fly = sUltNapalmFlame_Fly;
-	inst.sludge_sprite_floor = sUltNapalmFlame;
-	inst.owner = parent;
-	inst.sludge_hsp *= val;
-	inst.sludge_hsp += val * 2;
-	val += 1/5;
+function scUltimateNapalm_Explosion() {
+	var val = -1;
+	for (var i = 0; i < 10; i++) {
+		var inst = instance_create_depth(x, y - 50, depth + 1, oUltimateSludge);
+		inst.sludge_buff = BUFFTYPE.BURNRUSH;
+		inst.sludge_sprite_fly = sUltNapalmFlame_Fly;
+		inst.sludge_sprite_floor = sUltNapalmFlame;
+		inst.owner = parent;
+		inst.sludge_hsp *= val;
+		inst.sludge_hsp += val * 2;
+		val += 1/5;
+	}
+
+
 }

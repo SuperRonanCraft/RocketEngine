@@ -1,8 +1,12 @@
 {
-    "id": "898c45bb-63ad-41da-ac4b-dcf580d6d15f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateLightning_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lightning",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Lightning.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateLightning_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

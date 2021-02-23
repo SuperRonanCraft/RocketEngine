@@ -1,8 +1,12 @@
 {
-    "id": "499ea0c8-db9d-44e4-878d-d07c88c07289",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scEnemyCharacterGetSprites",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Enemy",
+    "path": "folders/Scripts/Entities/Entities/Characters/Enemy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scEnemyCharacterGetSprites",
+  "tags": [],
+  "resourceType": "GMScript",
 }

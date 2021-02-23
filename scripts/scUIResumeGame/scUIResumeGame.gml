@@ -1,2 +1,6 @@
-with (oGame)
-	event_user(1);
+function scUIResumeGame() {
+	with (oGame)
+		event_user(1);
+
+
+}

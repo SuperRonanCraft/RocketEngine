@@ -1,8 +1,12 @@
 {
-    "id": "4dd4d129-5280-42bb-a6e7-786d76f8739a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffSlowmo",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Slowmo",
+    "path": "folders/Scripts/Buffs_Debuffs/Buffs/Slowmo.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffSlowmo",
+  "tags": [],
+  "resourceType": "GMScript",
 }

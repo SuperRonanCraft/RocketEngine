@@ -1,8 +1,12 @@
 {
-    "id": "297a0b73-fb7d-4140-80ac-53fbab032405",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateHackLoot",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "HackLoot",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/HackLoot.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateHackLoot",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -2,15 +2,19 @@
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
 ///@arg extras [DAMAGING, DMG]
+function scBuffAbsorbtion_Damage() {
 
-var owner = argument[0];
-var dsBuff = argument[1];
-var extra = argument[2];
+	var owner = argument[0];
+	var dsBuff = argument[1];
+	var extra = argument[2];
 
-//Add Health
-scShootableHeal(owner, extra[1], false, false);
-dsBuff[? "health"] -= extra[1];
-/*while (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] != dsBuff[? "health_start"] && dsBuff[? "health"] > 0) {
-	owner.shootable_map[? SHOOTABLE_MAP.HEALTH]++;
-	dsBuff[? "health"]--;
+	//Add Health
+	scShootableHeal(owner, extra[1], false, false);
+	dsBuff[? "health"] -= extra[1];
+	/*while (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] != dsBuff[? "health_start"] && dsBuff[? "health"] > 0) {
+		owner.shootable_map[? SHOOTABLE_MAP.HEALTH]++;
+		dsBuff[? "health"]--;
+	}
+
+/* end scBuffAbsorbtion_Damage */
 }

@@ -1,8 +1,12 @@
 {
-    "id": "fbb871e0-36f0-4abe-a3cc-2811d6b1e729",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scWeaponGet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Weapons",
+    "path": "folders/Scripts/Tacticals/Weapons.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scWeaponGet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

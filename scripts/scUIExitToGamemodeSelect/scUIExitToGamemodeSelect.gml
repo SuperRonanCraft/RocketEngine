@@ -1,2 +1,6 @@
-global.gamemode_select = true;
-scUIExitToTitle();
+function scUIExitToGamemodeSelect() {
+	global.gamemode_select = true;
+	scUIExitToTitle();
+
+
+}

@@ -1,8 +1,12 @@
 {
-    "id": "99e0e6ca-66fd-4dbb-9d9d-9d80535b1ee1",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialReverse_Step",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Reverse",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Reverse.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialReverse_Step",
+  "tags": [],
+  "resourceType": "GMScript",
 }

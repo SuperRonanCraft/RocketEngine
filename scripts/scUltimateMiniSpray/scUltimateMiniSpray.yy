@@ -1,8 +1,12 @@
 {
-    "id": "0e2b7004-944e-4bb9-801e-1c092dd875ae",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateMiniSpray",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Types",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateMiniSpray",
+  "tags": [],
+  "resourceType": "GMScript",
 }

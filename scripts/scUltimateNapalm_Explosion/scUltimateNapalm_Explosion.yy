@@ -1,8 +1,12 @@
 {
-    "id": "b98f217d-6e7d-4cb6-86b2-57d4413a546b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateNapalm_Explosion",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Napalm",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Napalm.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateNapalm_Explosion",
+  "tags": [],
+  "resourceType": "GMScript",
 }

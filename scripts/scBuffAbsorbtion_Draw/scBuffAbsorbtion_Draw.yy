@@ -1,8 +1,12 @@
 {
-    "id": "348206bd-7d62-4f92-907a-94dafb9f8355",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffAbsorbtion_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Absorbtion",
+    "path": "folders/Scripts/Buffs_Debuffs/Buffs/Absorbtion.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffAbsorbtion_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

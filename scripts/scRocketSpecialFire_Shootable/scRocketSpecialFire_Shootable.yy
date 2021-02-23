@@ -1,8 +1,12 @@
 {
-    "id": "c8c7e7d3-26e4-45b1-8029-9b1febfbad6d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialFire_Shootable",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Fire",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Fire.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialFire_Shootable",
+  "tags": [],
+  "resourceType": "GMScript",
 }

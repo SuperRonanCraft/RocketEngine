@@ -1,8 +1,12 @@
 {
-    "id": "50157cef-7d17-487e-816d-f7e65820e0ba",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerDrawUIUltimate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Entities",
+    "path": "folders/Scripts/User Interface/Entities.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerDrawUIUltimate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

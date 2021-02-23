@@ -1,9 +1,13 @@
 ///@desc Recoil from rocket shot
 ///@arg recoil amount
+function scShootableRecoil() {
 
-var amt = argument[0];
+	var amt = argument[0];
 
-recoilMAX = amt;
+	recoilMAX = amt;
 
-if (facing == 1)
-	recoilMAX *= -1;
+	if (facing == 1)
+		recoilMAX *= -1;
+
+
+}

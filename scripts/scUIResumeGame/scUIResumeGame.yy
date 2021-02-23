@@ -1,8 +1,12 @@
 {
-    "id": "af1bfdd2-1334-40aa-8444-ddb713405383",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIResumeGame",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Menus",
+    "path": "folders/Scripts/User Interface/Menus.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIResumeGame",
+  "tags": [],
+  "resourceType": "GMScript",
 }

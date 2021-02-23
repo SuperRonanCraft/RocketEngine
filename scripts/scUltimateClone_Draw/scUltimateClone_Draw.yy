@@ -1,8 +1,12 @@
 {
-    "id": "81bef824-f3c8-4fe3-b0cf-7c7c3e43c40e",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateClone_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Clone",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Clone.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateClone_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

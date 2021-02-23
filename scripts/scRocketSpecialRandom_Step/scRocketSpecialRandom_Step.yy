@@ -1,8 +1,12 @@
 {
-    "id": "368c2e34-d88a-4f92-b25f-dbaa076e9ffa",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialRandom_Step",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Random",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/DISABLED/Random.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialRandom_Step",
+  "tags": [],
+  "resourceType": "GMScript",
 }

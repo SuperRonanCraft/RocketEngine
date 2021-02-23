@@ -1,8 +1,12 @@
 {
-    "id": "e8958ecd-db37-4420-8365-d502b8a7a409",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialIce_Shootable",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Ice",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Ice.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialIce_Shootable",
+  "tags": [],
+  "resourceType": "GMScript",
 }

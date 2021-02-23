@@ -1,1 +1,5 @@
-ds_map_destroy(orbitMap);
+function scUltimateOrbit_RocDestroy() {
+	ds_map_destroy(orbitMap);
+
+
+}

@@ -1,8 +1,12 @@
 {
-    "id": "4cdcc3df-64f1-47d1-946f-ca2c4fadc5b4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scKnockbackBounce",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "CollisionChecks",
+    "path": "folders/Scripts/CollisionChecks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scKnockbackBounce",
+  "tags": [],
+  "resourceType": "GMScript",
 }

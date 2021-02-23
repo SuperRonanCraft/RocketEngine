@@ -1,8 +1,12 @@
 {
-    "id": "cc800836-596c-48ec-882d-bd4063f75862",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRemoveFromTeam",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Entities",
+    "path": "folders/Scripts/Entities.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRemoveFromTeam",
+  "tags": [],
+  "resourceType": "GMScript",
 }

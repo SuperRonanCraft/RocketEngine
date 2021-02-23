@@ -1,8 +1,12 @@
 {
-    "id": "0b2326de-465c-4c64-839a-e40115a8c88c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateHandler",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Ultimates",
+    "path": "folders/Scripts/Tacticals/Ultimates.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateHandler",
+  "tags": [],
+  "resourceType": "GMScript",
 }

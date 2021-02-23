@@ -1,139 +1,52 @@
 {
-    "id": "5031bddf-467b-439f-b129-a1e09a131fec",
-    "modelName": "GMObject",
-    "mvc": "1.0",
-    "name": "oEnemy",
-    "eventList": [
-        {
-            "id": "a004ba6b-5d8b-4fd9-b4f0-c511f3cf621f",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "5031bddf-467b-439f-b129-a1e09a131fec"
-        },
-        {
-            "id": "7a4f7d75-9ef4-4c5c-a4ff-3081879871f0",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "5031bddf-467b-439f-b129-a1e09a131fec"
-        }
-    ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": [
-        {
-            "id": "373843ad-76e4-469f-a47f-3b2eeb248015",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "e04689cc-2747-4827-95e0-f5412b0fe4bf",
-            "propertyId": "ef38e31b-4397-4e92-90de-abcfe75f0315",
-            "value": "TEAM.RIGHT"
-        },
-        {
-            "id": "e204127d-3371-469b-9d8b-647cd30e1ea9",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "96871eac-147d-4cad-89f8-07204fe0bc56",
-            "value": "False"
-        },
-        {
-            "id": "430b78d5-7345-460b-884c-459e12e965fe",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "b149f69a-eb52-468d-aece-4884297a7332",
-            "value": "False"
-        },
-        {
-            "id": "bc97e4ae-8ce6-4ffd-a87c-c34edee20cf1",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "af6fe672-bc9c-4bd6-8b48-eb5c3babf710",
-            "value": "KEYBIND_PLAYER.NONE"
-        },
-        {
-            "id": "37b65274-08de-4915-a338-35847daf0b18",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "982681a8-84f6-4319-a147-e460f5e49935",
-            "value": "CHARACTER_ENEMY.ENEMY"
-        },
-        {
-            "id": "bb892fd6-35dd-4765-96c8-3caf68094cfe",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "3eb088d4-079b-4160-b3f0-d0616511c0c2",
-            "value": "False"
-        },
-        {
-            "id": "6e5c20cc-8935-425d-984a-95451b183271",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "2d1880f9-e96e-445d-b807-315b7b5594f4",
-            "value": "False"
-        },
-        {
-            "id": "3f8bb4dc-0379-404c-9dac-4bf04962ec01",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "00de2826-55d4-4387-8600-8d46fd76bae9",
-            "value": "False"
-        },
-        {
-            "id": "068cdfbc-929e-47ac-ace5-76f6d2798807",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "c2a36caa-a45f-4690-9e11-bd3ab8f966b7",
-            "value": "False"
-        },
-        {
-            "id": "4586df0a-1376-4e30-96df-445b27f5db7e",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "9a027f1c-acd9-44ec-bdce-869cd8d74980",
-            "value": "False"
-        },
-        {
-            "id": "c7ca91f8-c51e-42ec-bbc9-846fd4a4eebf",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-            "propertyId": "aa89b960-bb3a-4085-a535-535ed9b88465",
-            "value": "True"
-        }
-    ],
-    "parentObjectId": "c46ab419-e8ca-4d91-8287-7a3ad758dc73",
-    "persistent": false,
-    "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
-    "physicsFriction": 0.2,
-    "physicsGroup": 0,
-    "physicsKinematic": false,
-    "physicsLinearDamping": 0.1,
-    "physicsObject": false,
-    "physicsRestitution": 0.1,
-    "physicsSensor": false,
-    "physicsShape": 1,
-    "physicsShapePoints": null,
-    "physicsStartAwake": true,
-    "properties": [
-        
-    ],
-    "solid": false,
-    "spriteId": "2ac2d3f7-344c-4bfc-8c9e-86b247b23465",
-    "visible": true
+  "spriteId": {
+    "name": "sEnemy_default_idle",
+    "path": "sprites/sEnemy_default_idle/sEnemy_default_idle.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "pEntity",
+    "path": "objects/pEntity/pEntity.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"team","path":"objects/pShootable/pShootable.yy",},"objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"value":"TEAM.RIGHT","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"system_combo","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"system_ultimate","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"keys","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"KEYBIND_PLAYER.NONE","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"character","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"CHARACTER_ENEMY.ENEMY","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"display","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"track_stats","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"load_character_cache","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"auto_aim","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"system_ability","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"system_ai","path":"objects/pEntity/pEntity.yy",},"objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Enemy",
+    "path": "folders/Objects/Entities/MovingTypes/Enemy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "oEnemy",
+  "tags": [],
+  "resourceType": "GMObject",
 }

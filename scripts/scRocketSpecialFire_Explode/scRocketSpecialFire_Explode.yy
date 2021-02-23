@@ -1,8 +1,12 @@
 {
-    "id": "406b5267-371b-4e3f-9dae-0f35be661e37",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketSpecialFire_Explode",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Fire",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Fire.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketSpecialFire_Explode",
+  "tags": [],
+  "resourceType": "GMScript",
 }

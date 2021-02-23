@@ -1,1 +1,5 @@
-ds_map_destroy(archMap);
+function scRocketArching_Destroy() {
+	ds_map_destroy(archMap);
+
+
+}

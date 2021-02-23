@@ -1,8 +1,12 @@
 {
-    "id": "61a3a3c1-f3cb-46f8-a290-1ea6cb5be30a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffCooldown",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Buffs",
+    "path": "folders/Scripts/Buffs_Debuffs/Buffs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffCooldown",
+  "tags": [],
+  "resourceType": "GMScript",
 }

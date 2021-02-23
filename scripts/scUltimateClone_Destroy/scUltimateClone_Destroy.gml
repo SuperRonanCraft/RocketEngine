@@ -1,3 +1,7 @@
 /// @desc Reverse ultimate
-with (owner)
-	player_map[? "clones"]--;
+function scUltimateClone_Destroy() {
+	with (owner)
+		player_map[? "clones"]--;
+
+
+}

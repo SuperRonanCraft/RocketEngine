@@ -1,8 +1,12 @@
 {
-    "id": "54ba9aef-e374-4001-9b0e-b1fbe4a46f4d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scBuffRemove",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Buffs_Debuffs",
+    "path": "folders/Scripts/Buffs_Debuffs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scBuffRemove",
+  "tags": [],
+  "resourceType": "GMScript",
 }

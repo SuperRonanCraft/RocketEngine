@@ -1,8 +1,12 @@
 {
-    "id": "5df77b12-dd4a-4b87-a762-5e42e7f22d55",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketLightning_Draw",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Lightning",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Lightning.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketLightning_Draw",
+  "tags": [],
+  "resourceType": "GMScript",
 }

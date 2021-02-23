@@ -1,1 +1,5 @@
-ds_map_destroy(pierceMap);
+function scRocketPiercing_Destroy() {
+	ds_map_destroy(pierceMap);
+
+
+}

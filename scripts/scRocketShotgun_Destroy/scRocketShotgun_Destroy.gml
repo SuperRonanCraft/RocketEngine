@@ -1,1 +1,5 @@
-ds_map_destroy(shotgunMap);
+function scRocketShotgun_Destroy() {
+	ds_map_destroy(shotgunMap);
+
+
+}

@@ -1,7 +1,11 @@
 {
-    "id": "22a52807-56fc-47db-9b03-34f63b657e37",
-    "modelName": "GMShader",
-    "mvc": "1.0",
-    "name": "shPaletteSwap",
-    "type": 1
+  "type": 1,
+  "parent": {
+    "name": "Shaders",
+    "path": "folders/Shaders.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "shPaletteSwap",
+  "tags": [],
+  "resourceType": "GMShader",
 }

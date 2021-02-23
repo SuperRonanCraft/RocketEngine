@@ -1,8 +1,12 @@
 {
-    "id": "ea910044-8ba1-412f-b62c-58b8fac7fbea",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scWeaponProgress",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Weapons",
+    "path": "folders/Scripts/Tacticals/Weapons.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scWeaponProgress",
+  "tags": [],
+  "resourceType": "GMScript",
 }

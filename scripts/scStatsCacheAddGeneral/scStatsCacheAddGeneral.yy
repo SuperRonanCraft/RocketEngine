@@ -1,8 +1,12 @@
 {
-    "id": "a817e6c6-ab88-41c5-bb24-531cb1ba0cea",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStatsCacheAddGeneral",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stats",
+    "path": "folders/Scripts/Data Collection/Stats.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStatsCacheAddGeneral",
+  "tags": [],
+  "resourceType": "GMScript",
 }

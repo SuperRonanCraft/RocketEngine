@@ -1,8 +1,12 @@
 {
-    "id": "438c0599-45f8-42eb-a3a9-d0c30fc2629c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scParticleDistribute",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Utilities",
+    "path": "folders/Scripts/Utilities.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scParticleDistribute",
+  "tags": [],
+  "resourceType": "GMScript",
 }

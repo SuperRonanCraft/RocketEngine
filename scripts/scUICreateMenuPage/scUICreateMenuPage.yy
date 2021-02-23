@@ -1,8 +1,12 @@
 {
-    "id": "5238e325-fb37-4c36-b216-e884eaababf9",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUICreateMenuPage",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Utilities",
+    "path": "folders/Scripts/User Interface/Utilities.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUICreateMenuPage",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "819c3721-6078-47b0-91cb-c171738ea97b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scComboHandler",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Combos",
+    "path": "folders/Scripts/Entities/Interactions/Combos.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scComboHandler",
+  "tags": [],
+  "resourceType": "GMScript",
 }

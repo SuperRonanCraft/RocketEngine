@@ -1,8 +1,12 @@
 {
-    "id": "b06581ab-c385-498f-9940-64f5a039dcab",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scComboStart",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Combos",
+    "path": "folders/Scripts/Entities/Interactions/Combos.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scComboStart",
+  "tags": [],
+  "resourceType": "GMScript",
 }

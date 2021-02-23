@@ -1,8 +1,12 @@
 {
-    "id": "a84df993-b332-4674-ae79-9c4ee5be1f3f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scGenerateColor",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Generation",
+    "path": "folders/Scripts/Generation.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scGenerateColor",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "5bb371ed-9f8c-456e-a54c-4c30c87f7fea",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStatsGetType",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stats",
+    "path": "folders/Scripts/Data Collection/Stats.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStatsGetType",
+  "tags": [],
+  "resourceType": "GMScript",
 }

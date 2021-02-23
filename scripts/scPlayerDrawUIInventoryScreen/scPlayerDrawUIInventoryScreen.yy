@@ -1,8 +1,12 @@
 {
-    "id": "5cfbf016-f2ce-4c40-9b6f-6feae632e9d0",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scPlayerDrawUIInventoryScreen",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory",
+    "path": "folders/Scripts/User Interface/Entities/Inventory.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scPlayerDrawUIInventoryScreen",
+  "tags": [],
+  "resourceType": "GMScript",
 }

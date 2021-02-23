@@ -1,8 +1,12 @@
 {
-    "id": "40621780-329a-4956-8c2b-a53f0f147d23",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketBrick_Create",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Brick",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Brick.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketBrick_Create",
+  "tags": [],
+  "resourceType": "GMScript",
 }

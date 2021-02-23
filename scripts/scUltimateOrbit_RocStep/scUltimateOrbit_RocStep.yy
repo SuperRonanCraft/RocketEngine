@@ -1,8 +1,12 @@
 {
-    "id": "f0ddde64-cf5b-443a-8356-ecda24e1bf3a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUltimateOrbit_RocStep",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Orbit",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Orbit.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUltimateOrbit_RocStep",
+  "tags": [],
+  "resourceType": "GMScript",
 }

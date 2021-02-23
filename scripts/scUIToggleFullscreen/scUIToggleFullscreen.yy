@@ -1,8 +1,12 @@
 {
-    "id": "629e7bea-6edd-4695-8e76-70aed14f0001",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIToggleFullscreen",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Menus",
+    "path": "folders/Scripts/User Interface/Menus.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIToggleFullscreen",
+  "tags": [],
+  "resourceType": "GMScript",
 }

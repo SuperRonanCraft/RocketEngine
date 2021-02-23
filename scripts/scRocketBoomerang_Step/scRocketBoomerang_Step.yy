@@ -1,8 +1,12 @@
 {
-    "id": "07af92e0-8757-46f3-8f6a-24d215dda9cb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scRocketBoomerang_Step",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Boomerang",
+    "path": "folders/Scripts/Tacticals/Weapons/Rockets/Specials/Boomerang.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scRocketBoomerang_Step",
+  "tags": [],
+  "resourceType": "GMScript",
 }

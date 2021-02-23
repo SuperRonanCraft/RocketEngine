@@ -1,8 +1,12 @@
 {
-    "id": "5ac92e1d-9b27-4b23-9db0-aab665063c2f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scUIEnemyHealth",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Entities",
+    "path": "folders/Scripts/User Interface/Entities.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scUIEnemyHealth",
+  "tags": [],
+  "resourceType": "GMScript",
 }

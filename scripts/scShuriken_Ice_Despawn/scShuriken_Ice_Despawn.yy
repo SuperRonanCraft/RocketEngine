@@ -1,8 +1,12 @@
 {
-    "id": "860f6c71-1aec-4b22-9c63-324f81cf49fd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scShuriken_Ice_Despawn",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Specials",
+    "path": "folders/Scripts/Tacticals/Weapons/Shuriken/Specials.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scShuriken_Ice_Despawn",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "734efca1-08ba-450e-9d7d-ba6f79d066f3",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scGravityCollision",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "CollisionChecks",
+    "path": "folders/Scripts/CollisionChecks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scGravityCollision",
+  "tags": [],
+  "resourceType": "GMScript",
 }

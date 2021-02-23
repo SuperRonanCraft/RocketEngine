@@ -1,8 +1,12 @@
 {
-    "id": "6e1af632-6685-40a9-b0e7-653f1b415768",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStateCheck",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "States",
+    "path": "folders/Scripts/Entities/Entities/States.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStateCheck",
+  "tags": [],
+  "resourceType": "GMScript",
 }

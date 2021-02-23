@@ -1,8 +1,12 @@
 {
-    "id": "1449a1da-aeb4-44a1-b379-0bde0e8cdbd7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scStatsLoadMode",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stats",
+    "path": "folders/Scripts/Data Collection/Stats.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scStatsLoadMode",
+  "tags": [],
+  "resourceType": "GMScript",
 }
