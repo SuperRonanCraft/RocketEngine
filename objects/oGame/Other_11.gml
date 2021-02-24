@@ -1,4 +1,5 @@
 /// @desc Unpause
+if (!global.pause_possible) exit;
 SlideTransition(TRANS_MODE.UNPAUSE);
 sprite_delete(background);
 background = noone;

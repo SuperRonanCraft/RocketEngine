@@ -9,6 +9,7 @@ function SlideTransition() {
 		if (argument_count > 1)
 			target = argument[1];
 	}
+	show_debug_message("called " + string(argument[0]) + " " + string(random(10)));
 
 
 }
