@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Types",
-    "path": "folders/Scripts/Tacticals/Abilities/Types.yy",
+    "name": "Clone",
+    "path": "folders/Scripts/Tacticals/Ultimates/Types/Clone.yy",
   },
   "resourceVersion": "1.0",
   "name": "scUltimateClone",

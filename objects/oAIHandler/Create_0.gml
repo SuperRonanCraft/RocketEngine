@@ -27,7 +27,7 @@ movesp = 0;
 //Timer to react
 timer = irandom_range(120, 300);
 
-aiType = AI_TYPE.ZOMBIE;
+aiType = AI_TYPE.ONEVONE;
 aiTarget = noone;
 
 enable_last_known_coords = false;

@@ -5,7 +5,7 @@ function scUltimateClone() {
 	with (inst) {
 		var _cmap = other.player_map[? PLAYER_MAP.CHARACTER_INFO];
 		scPlayerCharacterChange(_cmap[? CHARACTER_MAP.TYPE], false);
-		if (other.player_aimode)
+		if (other.system_ai)
 			aiBrain = other.aiBrain;
 		ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = false;
 		weapon_map[? WEAPON_MAP.ENABLED] = false;

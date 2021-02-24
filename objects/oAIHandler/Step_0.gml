@@ -1,5 +1,6 @@
 /// @desc AI Ninjas 
 
+if (!instance_exists(player)) exit;
 if (!player.system_ai) exit;
 
 if(movesp == 0){
@@ -12,7 +13,7 @@ if(movesp == 0){
 
 switch (aiType) {
 	case AI_TYPE.ONEVONE:
-		/*switch (player.weapon_map[? WEAPON_MAP.TYPE]) {
+		switch (player.weapon_map[? WEAPON_MAP.TYPE]) {
 			case WEAPON_TYPE.ARROW:
 				scAI1v1Arrow();
 				break;
@@ -20,7 +21,7 @@ switch (aiType) {
 				scAI1v1Default(true);
 				break;
 		}
-		break;*/
+		break;
 	case AI_TYPE.ZOMBIE:
 		scFindAITarget(500);
 		scAICZombie(true);
