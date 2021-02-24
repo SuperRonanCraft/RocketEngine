@@ -7,10 +7,10 @@ function scRocketProgress(argument0) {
 
 	if (rocket_map[? ROCKET_MAP.TYPE] == WEAPON_ROCKET_TYPE.NONE) exit;
 	//Set the direction of the rocket
-	var dir = point_direction(x,y,aim_target_x,aim_target_y);
+	var dir = team == TEAM.LEFT ? 0 : 180;// point_direction(x,y,aim_target_x,aim_target_y);
 
-	//if (auto_aim)
-	//	dir = scAutoAim();
+	if (auto_aim || team == TEAM.NONE)
+		dir = scAutoAim();
 
 	//Rocket
 	if (map[? WEAPON_MAP.DELAY_TIME] == 0) {

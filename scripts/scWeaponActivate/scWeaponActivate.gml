@@ -6,6 +6,8 @@ function scWeaponActivate() {
 
 	var _map = argument[0];
 	var _override = argument_count > 1 ? argument[1] : false;
+	
+	//show_debug_message("Enabled? " + string(_map[? WEAPON_MAP.ENABLED]));
 
 	if ((_map[? WEAPON_MAP.ENABLED] && _map[? WEAPON_MAP.RELOAD_TIME] <= 0 && _map[? WEAPON_MAP.COOLDOWN_TIME] == 0) || _override)
 		switch (_map[? WEAPON_MAP.TYPE]) {
@@ -24,7 +26,7 @@ function scWeaponActivate() {
 				_map[? WEAPON_MAP.COOLDOWN_TIME] = arrow_map[? ARROW_MAP.COOLDOWN];
 				_map[? WEAPON_MAP.DELAY_TIME] = arrow_map[? ARROW_MAP.STARTUP];
 				//_map[? WEAPON_MAP.START_DELAY] = true;
-				break;			
+				break;
 		}
 
 

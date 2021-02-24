@@ -58,7 +58,7 @@ function scPlayerCharacterChange() {
 	player_map[? PLAYER_MAP.CHARACTER_INFO] = map;
 
 	//Load character weapon
-	scWeaponGet(map[? CHARACTER_MAP.WEAPON]);
+	weapon_map = scWeaponGet(map[? CHARACTER_MAP.WEAPON]);
 
 	//Load Character Abilities
 	scAbilityStart(map[? CHARACTER_MAP.ABILITY]);

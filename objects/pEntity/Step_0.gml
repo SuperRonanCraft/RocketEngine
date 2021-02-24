@@ -7,7 +7,7 @@ scAddToTeam(id,team);
 
 scStateCheck();
 
-scUpdateTargetReticle();
+//scUpdateTargetReticle();
 
 //--------
 //DEVMODE 

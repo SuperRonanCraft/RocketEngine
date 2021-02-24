@@ -5,8 +5,9 @@ function scWeaponProgress(argument0) {
 	var map = argument0;
 	//show_debug_message("Weapon Progress " + string(map[? WEAPON_MAP.TYPE]) + " " + string(random(5)))
 
-	if (key_shoot)
-		scWeaponActivate(weapon_map);
+	if (key_shoot) {
+		scWeaponActivate(map);
+	}
 	switch (map[? WEAPON_MAP.TYPE]) {
 		case WEAPON_TYPE.ROCKET:
 			scRocketProgress(map);

@@ -11,9 +11,10 @@ function scArrowProgress(argument0) {
 			if (map[?WEAPON_MAP.AMMO] != 0) {
 				if (arrow_map[? ARROW_MAP.SPAWN_SCRIPT] == noone) {
 					//Set the direction of the arrow
-					var dir = point_direction(x,y,aim_target_x,aim_target_y);
-					//if (auto_aim)
-					//	dir = scAutoAim();
+					var dir = team == TEAM.LEFT ? 0 : 180;// point_direction(x,y,aim_target_x,aim_target_y);
+
+					if (auto_aim || team == TEAM.NONE)
+						dir = scAutoAim();
 					facing = dir > -90 && dir <= 90 ? 1 : -1;
 					var arrow = scSpawnArrow(x,y,depth+1,dir,id,map);
 					arrow.dmg = ceil(arrow.dmg *	1.5 * ((map[? WEAPON_MAP.POWER])/100));

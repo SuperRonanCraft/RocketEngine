@@ -7,10 +7,10 @@ function scShurikenProgress(argument0) {
 	if(shuriken_map[? SHURIKEN_MAP.TYPE] == WEAPON_SHURIKEN_TYPE.NONE) exit;
 
 	//Set the direction of the shuriken
-	var dir = point_direction(x,y,aim_target_x,aim_target_y);
+	var dir = team == TEAM.LEFT ? 0 : 180;// point_direction(x,y,aim_target_x,aim_target_y);
 
-	//if (auto_aim)
-	//	dir = scAutoAim();
+	if (auto_aim || team == TEAM.NONE)
+		dir = scAutoAim();
 
 	if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 		if (map[? WEAPON_MAP.AMMO] != 0) {
