@@ -23,6 +23,7 @@ function scUltimateClone() {
 		key_map[? KEYBIND_MAP.RIGHT_GP] = _keyLeft;
 		//keyshoot = noone; //Cannot shoot
 		team = other.team; //Same team as caster
+		shootable_map[?SHOOTABLE_MAP.TEAM] = other.shootable_map[? SHOOTABLE_MAP.TEAM];
 		display = false; //No ui
 		//player_map[? PLAYER_MAP.HEALTH] = 1; //One hit kill
 		shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] = 1; //One hit kill

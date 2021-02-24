@@ -9,8 +9,8 @@ function scAbilityLoad(argument0) {
 		case ABILITY_TYPE.NONE: //nuthing
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = noone;
 			break;
-		case ABILITY_TYPE.CLONE: //Huge af cloned rocket
-			ds_map[? ABILITY_MAP.NAME] = "Mr.Huge!";
+		case ABILITY_TYPE.CLONE: //Just a clone
+			ds_map[? ABILITY_MAP.NAME] = "Pretty Guy";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateClone;
 			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
 			break;

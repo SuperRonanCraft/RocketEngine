@@ -95,9 +95,9 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.WINTER];
 			map[? ROCKET_MAP.BUFF] = [BUFFTYPE.CHILLED];
 			map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Ice;
-			map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialIce_Rocket;
-			map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialIce_Wall;
-			map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialIce_Shootable;
+			//map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialIce_Rocket;
+			//map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialIce_Wall;
+			//map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialIce_Shootable;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * vartime;
 			map[? ROCKET_MAP.KBAMT] = 20;
@@ -117,9 +117,9 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.FIRE2];
 			map[? ROCKET_MAP.BUFF] = [BUFFTYPE.BURNRUSH];
 			map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Fire;
-			map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialFire_Rocket;
-			map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialFire_Wall;
-			map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialFire_Shootable;
+			//map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialFire_Rocket;
+			//map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialFire_Wall;
+			//map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialFire_Shootable;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 4;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
 			//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.LASER;

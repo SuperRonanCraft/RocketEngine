@@ -79,7 +79,8 @@ if(slice && specialAnimation){
 		}
 		else if(standing != noone){
 			currentSprite = corpseMap[? ANIMATIONSTATE.SLICEANIMT2];	
-			
+			if(is_undefined(currentSprite))
+				currentSprite = corpseMap[? ANIMATIONSTATE.DEAD];
 			if(animationVar >= sprite_get_number(currentSprite)-1){
 				animationVar = 0;
 				hsp_real += 5*facing;

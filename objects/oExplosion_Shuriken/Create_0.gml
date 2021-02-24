@@ -12,6 +12,7 @@ image_angle = choose(0, 90, 180, 270);
 destroy = true;
 //Do damage while explosion animation is going on
 doing_damage = true;
+owner = noone;
 
 first_step = false;
 first_draw = false;
