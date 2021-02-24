@@ -22,8 +22,8 @@ function scRocketDefaults() {
 	map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM] = true; //automatically destroy instance when outside room
 	map[? ROCKET_MAP.HIT_PICKUP] = noone; //When hitting a pickup
 	//DAMAGES
-	map[? ROCKET_MAP.DAMAGE] = 1 * 4; //Base damage
-	map[? ROCKET_MAP.DAMAGE_ROCKET] = 0; //Damage by direct rocket
+	map[? ROCKET_MAP.DAMAGE] = 4; //Base damage
+	map[? ROCKET_MAP.DAMAGE_ROCKET] = 1; //Damage by direct rocket
 	map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 0; //Damage by explosion splash
 	//ROCKET EVENTS
 	map[? ROCKET_MAP.ROCKET_CREATE] = noone; //Event when a rocket is created (adds)

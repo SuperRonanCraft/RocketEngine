@@ -11,6 +11,7 @@ function scRocketGet(argument0) {
 	var map = scRocketDefaults();
 	var roc = argument0;
 	map[? ROCKET_MAP.TYPE] = roc;
+	map[? ROCKET_MAP.TIMER] = 200 * vartime;
 	var _dmg_mul = 4;
 
 	switch (roc) {
@@ -27,7 +28,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.SPEED] = 20 * varspd;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
-			map[? ROCKET_MAP.DAMAGE] = 50;
+			map[? ROCKET_MAP.DAMAGE] = 5;
 			map[? ROCKET_MAP.EXPLOSION_SCALE] = 5;
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];
 			break;

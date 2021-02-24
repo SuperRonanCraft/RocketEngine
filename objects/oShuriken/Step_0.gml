@@ -50,19 +50,22 @@ if (!deactivate && shuriken_map[? SHURIKEN_MAP.PARTICLE] != noone) {
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? shuriken_map[? SHURIKEN_MAP.PARTICLE]], shuriken_map[? SHURIKEN_MAP.PARTICLE_AMT]);
 }
 
+var _advance = global.play && !global.gameover;
+
 //Increase timer to expire
-if (timer < time)
-	timer += owner.time_dialation;	
-else if (timer == time && stuckTo != noone)
-	if (instance_exists(stuckTo)){
-		if(stuckTo.object_index != oWall)
-			event_user(0);
-		else
+if (_advance)
+	if (timer < time)
+		timer += owner.time_dialation;	
+	else if (timer == time && stuckTo != noone)
+		if (instance_exists(stuckTo)){
+			if(stuckTo.object_index != oWall)
+				event_user(0);
+			else
+				instance_destroy();
+		} else
 			instance_destroy();
-	} else
-		instance_destroy();
-else
-	event_user(0);
+	else
+		event_user(0);
 
 
 if (deactivate && stuckTo != noone)
@@ -95,8 +98,10 @@ if (instance_exists(stuckTo)){
 }
 
 //Move shuriken by hsp and vsp ALWAYS
-x += hsp * owner.time_dialation;
-y += vsp * owner.time_dialation;
+if (_advance) {
+	x += hsp * owner.time_dialation;
+	y += vsp * owner.time_dialation;
+}
 
 //Dont loop sprite stick animation
 if (!loop)

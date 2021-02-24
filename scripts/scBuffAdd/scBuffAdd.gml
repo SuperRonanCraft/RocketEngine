@@ -1,5 +1,5 @@
 /// @desc Add a buff type to a shootable
-/// @arg buff-type
+/// @arg buff-type[]
 /// @arg target
 /// @arg given-by
 /// @arg time* of buff
@@ -12,7 +12,7 @@ function scBuffAdd() {
 
 	//Add all buffs that were given
 	if (is_array(buff))
-		for (var i = 0; i < array_length_1d(buff); i++)
+		for (var i = 0; i < array_length(buff); i++)
 			scBuffApply(buff[i], targ, from, time);
 	else 
 		scBuffApply(buff, targ, from, time);

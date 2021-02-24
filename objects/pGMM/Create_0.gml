@@ -2,6 +2,7 @@
 
 global.play = false;
 global.gamemode = gamemode;
+global.gameover = false;
 
 scStatsResetStage(false);
 

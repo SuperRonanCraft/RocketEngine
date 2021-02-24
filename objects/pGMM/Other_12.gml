@@ -1,5 +1,6 @@
 /// @desc Game has ended, execute event every step event
 //Created for 1v1
+global.gameover = true;
 if (endgame_delay <= 0) {
 	//Move players slowy to the center of their team
 	for (var i = 0; i < ds_list_size(p_list); i++) {

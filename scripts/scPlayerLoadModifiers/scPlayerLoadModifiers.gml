@@ -25,7 +25,7 @@ function scPlayerLoadModifiers(argument0) {
 					scStartAI();
 				//if (global.mode_1v1_lowgravity)
 				//	grv /= 2;
-				auto_aim = true;
+				//auto_aim = true;
 			}
 			break;
 		case GAMEMODE.TARGETS:
