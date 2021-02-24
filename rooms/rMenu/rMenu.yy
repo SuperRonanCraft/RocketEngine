@@ -34,7 +34,6 @@
         {"properties":[
             {"propertyId":{"name":"damage_take","path":"objects/pShootable/pShootable.yy",},"objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":true,"inheritItemSettings":false,"x":992.0,"y":352.0,"resourceVersion":"1.0","name":"inst_63F95AB0","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oInteractionsHandler","path":"objects/oInteractionsHandler/oInteractionsHandler.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":800.0,"y":256.0,"resourceVersion":"1.0","name":"inst_5899CDD2","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Game","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tsWall","path":"tilesets/tsWall/tsWall.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":50,"SerialiseHeight":29,"TileSerialiseData":[
 19,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,18,
@@ -104,7 +103,6 @@
     {"name":"inst_1842F4FB","path":"rooms/rMenu/rMenu.yy",},
     {"name":"inst_73ABB6D2","path":"rooms/rMenu/rMenu.yy",},
     {"name":"inst_63F95AB0","path":"rooms/rMenu/rMenu.yy",},
-    {"name":"inst_5899CDD2","path":"rooms/rMenu/rMenu.yy",},
     {"name":"inst_5F4FBC50","path":"rooms/rMenu/rMenu.yy",},
   ],
   "inheritCreationOrder": false,

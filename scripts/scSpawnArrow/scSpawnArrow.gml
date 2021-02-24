@@ -26,20 +26,20 @@ function scSpawnArrow() {
 		if (i != WEAPON_MAP.MAP)
 			ds_map_set(w_map, i, map[? i]);
 		else {
-			show_debug_message("WEapon map here!");
+			//show_debug_message("WEapon map here!");
 			var new_map = ds_map_create();
 			ds_map_copy(new_map, map[? i]);
 			ds_map_set(w_map, i, new_map);
 		}
 	}
 
-	//SHURIKEN_MAP
+	//ARROW_MAP
 	//Set all the values for the two arrays given to the map, reducing programming repetition
 	var s_map = w_map[? WEAPON_MAP.MAP];
 	if (argument_count >= 8) { //Must have both keys and values
 		var keys = argument[6]
 		var values = argument[7];
-		for (var i = 0; i < array_length_1d(keys); i++)
+		for (var i = 0; i < array_length(keys); i++)
 			ds_map_set(s_map, keys[i], values[i]);
 	}
 

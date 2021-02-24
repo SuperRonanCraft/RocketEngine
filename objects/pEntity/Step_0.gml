@@ -78,7 +78,7 @@ switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 
 //Mostly meant for clones
 if (despawn && (!player_map[? PLAYER_MAP.ALIVE])) { //Despawn player object
-	if(destroy){
+	if (destroy){
 		instance_destroy();	
 	}
 	image_alpha = 0;
