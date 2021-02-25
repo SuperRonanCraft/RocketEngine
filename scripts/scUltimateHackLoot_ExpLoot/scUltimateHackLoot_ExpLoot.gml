@@ -10,7 +10,7 @@ function scUltimateHackLoot_ExpLoot(argument0) {
 			//var possible = 0;
 			//var index = 0;
 			//Pick a random rocket from the possible array
-			//var map = scRocketGet(possible[irandom_range(0, array_length_1d(possible) - 1)]);
+			//var map = scRocketGet(possible[irandom_range(0, array_length(possible) - 1)]);
 			//item_rocket = map[? ROCKET_MAP.TYPE];
 			//ds_map_destroy(map);
 			break;
@@ -29,7 +29,7 @@ function scUltimateHackLoot_ExpLoot(argument0) {
 				ds_map_destroy(map);
 			}
 			//Pick a random buff from the possible BAD buffs array
-			var ind = possible[irandom_range(0, array_length_1d(possible) - 1)];
+			var ind = possible[irandom_range(0, array_length(possible) - 1)];
 			var map = ds_map_create();
 			scBuffGet(ind, map);
 			item_buff = map[? BUFF_MAP.TYPE];

@@ -108,8 +108,8 @@ menu_special = [menu_element_type.list_buffs, menu_element_type.list_weapons, me
 var pos = RES_H - (RES_H / 8) - (RES_H / 16);
 menu_special_start_y = [pos + (RES_H / 16), pos + (RES_H / 16), pos, noone, pos + (RES_H / 16)];
 
-for (var i = 0; i < array_length_1d(menu_pages); i++)
-	for (var a = 0; a < array_length_1d(menu_special); a++) {
+for (var i = 0; i < array_length(menu_pages); i++)
+	for (var a = 0; a < array_length(menu_special); a++) {
 		var ds_grid = menu_pages[i];
 		if (ds_grid[# 1, 0] == menu_special[a]) menu_option[i] = 1; //Default selection for each special page
 		else menu_option[i] = 0; //Default selection for each page

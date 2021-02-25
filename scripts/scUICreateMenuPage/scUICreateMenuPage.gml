@@ -10,7 +10,7 @@ function scUICreateMenuPage() {
 
 	for (var i = 0; i < argument_count; i++) {
 		var array = arg[i];
-		var array_len = array_length_1d(array);
+		var array_len = array_length(array);
 		var xx = 0;
 		repeat (array_len) {
 			ds_grid_id[# xx, i] = array[xx];

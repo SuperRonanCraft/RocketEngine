@@ -4,7 +4,7 @@ var _yy = tab_y;
 var _types = [["Settings", 0], ["Buffs", 1], ["Weapons", 2], ["Misc", 3], ["Info", 4]];
 
 if (tab_open) { //Maximized
-	for (var i = 0; i < array_length_1d(_types); i++) {
+	for (var i = 0; i < array_length(_types); i++) {
 		var _scale = 0.4;
 		var _len = 0;
 		var _array = _types[i];

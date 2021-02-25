@@ -38,7 +38,7 @@ function scSpawnShuriken() {
 	if (argument_count >= 8) { //Must have both keys and values
 		var keys = argument[6]
 		var values = argument[7];
-		for (var i = 0; i < array_length_1d(keys); i++)
+		for (var i = 0; i < array_length(keys); i++)
 			ds_map_set(s_map, keys[i], values[i]);
 	}
 

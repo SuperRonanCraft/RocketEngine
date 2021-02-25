@@ -9,7 +9,7 @@ function scPlayerDrawUIWeapon(argument0, argument1, argument2, argument3, argume
 	if (!system_inventory) exit;
 
 	//----------TEST SPRITE
-	scDrawSpriteExt(RES_W - 4, RES_H - 4, sUIInventoryWeapon, 0);
+	//scDrawSpriteExt(RES_W - 4, RES_H - 4, sUIInventoryWeapon, 0);
 	//----------TEST SPRITE
 
 	var _inv_grid = inventory_map[? INVENTORY_MAP.GRID_WEAPON];
@@ -44,7 +44,7 @@ function scPlayerDrawUIWeapon(argument0, argument1, argument2, argument3, argume
 		var buffy = RES_H / 16;
 		var buffx = xpos + (team == TEAM.LEFT ? 32 : -50);
 		if (is_array(buffsid))
-			for (var i = 0; i < array_length_1d(buffsid); i++) {
+			for (var i = 0; i < array_length(buffsid); i++) {
 				var buff_map = ds_map_create();
 				scBuffGet(buffsid[i], buff_map);
 				if (buff_map[? BUFF_MAP.ENABLED]) {

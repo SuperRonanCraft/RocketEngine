@@ -74,10 +74,10 @@ function scKeybindsMove() {
 			_map[? GRAVITY_MAP.JUMP_DELAY]++;
 	
 		//Weapon
-		if (key_shoot)
-			scInventoryUse(INVENTORY_TYPE.WEAPON);//scWeaponActivate();
-		if (key_shoot_released)
-			scInventoryUse(INVENTORY_TYPE.WEAPON);//scWeaponActivate();
+		//if (key_shoot)
+		//	scWeaponActivate();
+		//if (key_shoot_released)
+		//	scWeaponActivate();
 	}
 
 	//HORIZONTAL & Friction

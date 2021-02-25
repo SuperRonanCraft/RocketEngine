@@ -16,7 +16,7 @@ switch (damage_type) {
 }
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);
 
-for (var i = 0; i < array_length_1d(value_cached); i++)
+for (var i = 0; i < array_length(value_cached); i++)
 	scDrawSpriteExt(x + ((offset * (i - 1)) * scale), y, sprite_index, value_cached[i], _c, alpha, scale, scale, angle);
 	
 //Base Type

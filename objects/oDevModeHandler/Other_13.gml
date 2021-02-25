@@ -13,7 +13,7 @@ var _w = sprite_get_width(sUISliderBar) + (tab_buf * 2);
 var _scale_o = 0.4
 var _scale = _scale_o;
 var _h = string_height("HSP") * _scale;
-var _height = ((tab_buf * 4) + (_h * 3)) * array_length_1d(_mods);
+var _height = ((tab_buf * 4) + (_h * 3)) * array_length(_mods);
 var desc = tab_map[? "players"] == noone ? "Select a Player!" : noone;
 var desc_h = desc != noone ? string_height(desc) * 0.4 : 0;
 scDrawRectRound(_xx - tab_buf, _yy, _xx + _w + tab_buf, _yy + _height + desc_h, tab_color_select, false, alpha, 8, 8);
@@ -23,7 +23,7 @@ _xx += tab_buf;
 
 //HSP MOD
 _yy += tab_buf;
-for (var i = 0; i < array_length_1d(_mods); i++) {
+for (var i = 0; i < array_length(_mods); i++) {
 	_yy += tab_buf + _h;
 	var mods = _mods[i];
 	scDrawText(_xx + (_w / 2) - tab_buf, _yy - (tab_buf + _h), mods[0], c_yellow, _scale, noone, alpha, fa_middle, fa_top);
@@ -64,7 +64,7 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 					var _map = tab_map;
 					if (_map[? "players"] != noone) {
 						var _ps = _map[? "players"];
-						for (var a = 0; a < array_length_1d(_ps); a++)
+						for (var a = 0; a < array_length(_ps); a++)
 							with (_ps[a])
 								switch (mods[1]) {
 									case "misc_hspmovemod":
@@ -107,7 +107,7 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 					var _map = tab_map;
 					if (_map[? "players"] != noone) {
 						var _ps = _map[? "players"];
-						for (var a = 0; a < array_length_1d(_ps); a++)
+						for (var a = 0; a < array_length(_ps); a++)
 							with (_ps[a])
 								switch (mods[1]) {
 									case "misc_ai":

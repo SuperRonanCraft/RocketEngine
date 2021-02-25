@@ -44,7 +44,7 @@ menu_pages_index = [menu_page.main, menu_page.modes, menu_page.online, menu_page
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_type];
 
-for (var i = 0; i < array_length_1d(menu_pages); i++)
+for (var i = 0; i < array_length(menu_pages); i++)
 	menu_option[i] = 0;
 
 //Disabled unfolding

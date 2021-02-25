@@ -1,8 +1,8 @@
 
 //RUN THIS BEFORE INHERITED EVENT
-if (global.play)
+//if (global.play)
 	//Weapon activate
-	scWeaponProgress(weapon_map);
+	//scWeaponProgress(weapon_map);
 
 event_inherited();
 

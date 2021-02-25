@@ -4,12 +4,12 @@
 var _map = tab_map;
 if (_map[? "players"] != noone) {
 	var _ps = _map[? "players"];
-	for (var i = 0; i < array_length_1d(_ps); i++) //Preview who to affect (red dot above head)
+	for (var i = 0; i < array_length(_ps); i++) //Preview who to affect (red dot above head)
 		with (_ps[i])
 			scDrawCircle(bbox_left - 10, bbox_top, 5, c_red, false, 0.5);
 	if (_map[? "apply"]) { //Apply Option
 		if (tab != -1) {
-			for (var i = 0; i < array_length_1d(_ps); i++)
+			for (var i = 0; i < array_length(_ps); i++)
 			with (_ps[i]) //Apply whatever we need in current tab
 				switch (other.tab) {
 					case 1: //BUFFS
@@ -37,16 +37,16 @@ with (oPlayer) {
 					_ps[0] = id;
 				else {
 					var found = false;
-					for (var i = 0; i < array_length_1d(_ps); i++)
+					for (var i = 0; i < array_length(_ps); i++)
 						if (_ps[i] == id) {
 							found = true; break;
 						}
 					if (!found)
-						_ps[array_length_1d(_ps)] = id;
+						_ps[array_length(_ps)] = id;
 					else {
 						var _psNEW = noone;
 						var index = 0;
-						for (var i = 0; i < array_length_1d(_ps); i++) {
+						for (var i = 0; i < array_length(_ps); i++) {
 							if (_ps[i] != id) {
 								_psNEW[index] = _ps[i];
 								index++;

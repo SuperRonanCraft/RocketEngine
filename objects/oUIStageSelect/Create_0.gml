@@ -169,7 +169,7 @@ switch (type) {
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_main];
 
-for (var i = 0; i < array_length_1d(menu_pages); i++)
+for (var i = 0; i < array_length(menu_pages); i++)
 	menu_option[i] = 0;
 
 //Disabled unfolding

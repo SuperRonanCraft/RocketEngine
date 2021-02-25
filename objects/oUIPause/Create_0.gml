@@ -20,7 +20,7 @@ menu_pages_index = [menu_page.main, menu_page.confirm, menu_page.settings, menu_
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_main, ds_confirm, ds_settings, ds_menu_keybinds];
 
-for (var i = 0; i < array_length_1d(menu_pages); i++)
+for (var i = 0; i < array_length(menu_pages); i++)
 	menu_option[i] = 0;
 
 depth -= 1; //Draw in front of transition

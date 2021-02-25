@@ -18,13 +18,13 @@ function scStatsCache() {
 	switch (type) {
 		case STATISTICS_TYPE.VALUE_GAMEMODE:
 			var mode = argument[3];
-			for (var i = 0; i < array_length_1d(keys); i++) { //Interate through each key
+			for (var i = 0; i < array_length(keys); i++) { //Interate through each key
 				var key = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, keys[i]);
 				map[? key + mode] = vals[i]; //CACHE THE VALUE
 			}
 			break;
 		case STATISTICS_TYPE.VALUE_GENERAL:
-			for (var i = 0; i < array_length_1d(keys); i++) { //Interate through each key
+			for (var i = 0; i < array_length(keys); i++) { //Interate through each key
 				var key = scStatsGetType(STATISTICS_TYPE.SECTION_GENERAL, keys[i]);
 				map[? key] = vals[i]; //CACHE THE VALUE
 			}

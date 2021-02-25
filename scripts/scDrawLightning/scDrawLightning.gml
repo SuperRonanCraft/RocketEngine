@@ -39,7 +39,7 @@ function scDrawLightning(argument0, argument1, argument2, argument3, argument4, 
 	    }
 	until i >= length
 	point[i2] = length;
-	var points = array_length_1d(point);
+	var points = array_length(point);
 
 	//draw segments
 	var i = 0;

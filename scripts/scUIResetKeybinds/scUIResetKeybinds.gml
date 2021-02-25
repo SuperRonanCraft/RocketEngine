@@ -14,7 +14,7 @@ function scUIResetKeybinds() {
 				SETTINGS.PLAYER_2_ULTIMATE, 
 				SETTINGS.PLAYER_2_ABILITY];
 
-	for (var i = 0; i < array_length_1d(keys); i++)
+	for (var i = 0; i < array_length(keys); i++)
 		scSettingsCache(keys[i], scSettingsGetType(SETTINGS_TYPE.DEFAULT, keys[i]));
 
 	/*//Player 2 keybinds

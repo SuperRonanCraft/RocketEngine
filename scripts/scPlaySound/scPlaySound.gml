@@ -21,7 +21,7 @@ function scPlaySound() {
 	//Cancel some sounds
 	if (argument_count > 2 && argument[2] != noone) {
 		var array = argument[2];
-		for (var i = 0; i < array_length_1d(array); i++)
+		for (var i = 0; i < array_length(array); i++)
 			audio_stop_sound(array[i]);
 	}
 

@@ -9,11 +9,11 @@ var _w = sprite_get_width(sUISliderBar) + (tab_buf * 2);
 var _scale_o = 0.4
 var _scale = _scale_o;
 var _h = string_height("HSP") * _scale;
-var _height = ((tab_buf * 4) + (_h * 3)) * array_length_1d(_mods);
+var _height = ((tab_buf * 4) + (_h * 3)) * array_length(_mods);
 scDrawRectRound(_xx - tab_buf, _yy, _xx + _w + tab_buf, _yy + _height, tab_color_select, false, alpha, 8, 8);
 _xx += tab_buf;
 _yy += tab_buf;
-for (var i = 0; i < array_length_1d(_mods); i++) {
+for (var i = 0; i < array_length(_mods); i++) {
 	var mods = _mods[i];
 	if (i != 0) {
 		_yy += tab_buf + _h;
@@ -89,7 +89,7 @@ for (var i = 0; i < array_length_1d(_mods); i++) {
 						var _map = tab_map;
 						if (_map[? "players"] != noone) {
 							var _ps = _map[? "players"];
-							for (var i = 0; i < array_length_1d(_ps); i++)
+							for (var i = 0; i < array_length(_ps); i++)
 								with (_ps[i])
 									gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += value;
 						}

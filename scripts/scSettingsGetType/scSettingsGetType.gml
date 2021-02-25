@@ -27,28 +27,24 @@ function scSettingsGetType(argument0, argument1) {
 				case SETTINGS.PLAYER_1_SHOOT: val = "player_1_shoot"; break;
 				case SETTINGS.PLAYER_1_ABILITY: val = "player_1_ability"; break;
 				case SETTINGS.PLAYER_1_ULTIMATE: val = "player_1_ultimate"; break;
-				case SETTINGS.PLAYER_1_INVENTORY: val = "player_1_inventory"; break;
 				case SETTINGS.PLAYER_1_LEFT_GP: val = "player_1_left_gp"; break;
 				case SETTINGS.PLAYER_1_RIGHT_GP: val = "player_1_right_gp"; break;
 				case SETTINGS.PLAYER_1_JUMP_GP: val = "player_1_jump_gp"; break;
 				case SETTINGS.PLAYER_1_SHOOT_GP: val = "player_1_shoot_gp"; break;
 				case SETTINGS.PLAYER_1_ABILITY_GP: val = "player_1_ability_gp"; break;
 				case SETTINGS.PLAYER_1_ULTIMATE_GP: val = "player_1_ultimate_gp"; break;
-				case SETTINGS.PLAYER_1_INVENTORY_GP: val = "player_1_inventory_gp"; break;
 				case SETTINGS.PLAYER_2_LEFT: val = "player_2_left"; break;
 				case SETTINGS.PLAYER_2_RIGHT: val = "player_2_right"; break;
 				case SETTINGS.PLAYER_2_JUMP: val = "player_2_jump"; break;
 				case SETTINGS.PLAYER_2_SHOOT: val = "player_2_shoot"; break;
 				case SETTINGS.PLAYER_2_ABILITY: val = "player_2_ability"; break;
 				case SETTINGS.PLAYER_2_ULTIMATE: val = "player_2_ultimate"; break;
-				case SETTINGS.PLAYER_2_INVENTORY: val = "player_2_inventory"; break;
 				case SETTINGS.PLAYER_2_LEFT_GP: val = "player_2_left_gp"; break;
 				case SETTINGS.PLAYER_2_RIGHT_GP: val = "player_2_right_gp"; break;
 				case SETTINGS.PLAYER_2_JUMP_GP: val = "player_2_jump_gp"; break;
 				case SETTINGS.PLAYER_2_SHOOT_GP: val = "player_2_shoot_gp"; break;
 				case SETTINGS.PLAYER_2_ABILITY_GP: val = "player_2_ability_gp"; break;
 				case SETTINGS.PLAYER_2_ULTIMATE_GP: val = "player_2_ultimate_gp"; break;
-				case SETTINGS.PLAYER_2_INVENTORY_GP: val = "player_2_inventory_gp"; break;
 				default: val = noone; break;
 			}
 			break;
@@ -61,14 +57,12 @@ function scSettingsGetType(argument0, argument1) {
 				case SETTINGS.PLAYER_1_SHOOT: val = ord("S"); break;
 				case SETTINGS.PLAYER_1_ABILITY: val = ord("Z"); break;
 				case SETTINGS.PLAYER_1_ULTIMATE: val = ord("Q"); break;
-				case SETTINGS.PLAYER_1_INVENTORY: val = ord("E"); break;
 				case SETTINGS.PLAYER_1_LEFT_GP: val = gp_axislh; break;
 				case SETTINGS.PLAYER_1_RIGHT_GP: val = gp_axislh; break;
 				case SETTINGS.PLAYER_1_JUMP_GP: val = gp_face1; break;
 				case SETTINGS.PLAYER_1_SHOOT_GP: val = gp_shoulderr; break;
 				case SETTINGS.PLAYER_1_ABILITY_GP: val = gp_face4; break;
 				case SETTINGS.PLAYER_1_ULTIMATE_GP: val = gp_face2; break;
-				case SETTINGS.PLAYER_1_INVENTORY_GP: val = gp_face3; break;
 				case SETTINGS.PLAYER_1_GAMEPAD: val = noone; break;
 				//PLAYER 2
 				case SETTINGS.PLAYER_2_LEFT: val = vk_left; break;
@@ -77,14 +71,12 @@ function scSettingsGetType(argument0, argument1) {
 				case SETTINGS.PLAYER_2_SHOOT: val = vk_down; break;
 				case SETTINGS.PLAYER_2_ABILITY: val = 188; break;
 				case SETTINGS.PLAYER_2_ULTIMATE: val = 190; break;
-				case SETTINGS.PLAYER_2_INVENTORY: val = vk_alt; break;
 				case SETTINGS.PLAYER_2_LEFT_GP: val = gp_axislh; break;
 				case SETTINGS.PLAYER_2_RIGHT_GP: val = gp_axislh; break;
 				case SETTINGS.PLAYER_2_JUMP_GP: val = gp_face1; break;
 				case SETTINGS.PLAYER_2_SHOOT_GP: val = gp_shoulderr; break;
 				case SETTINGS.PLAYER_2_ABILITY_GP: val = gp_face4; break;
 				case SETTINGS.PLAYER_2_ULTIMATE_GP: val = gp_face2; break;
-				case SETTINGS.PLAYER_2_INVENTORY_GP: val = gp_face3; break;
 				case SETTINGS.PLAYER_2_GAMEPAD: val = noone; break;
 				case SETTINGS.PLAYER_3_GAMEPAD: val = noone; break;
 				case SETTINGS.PLAYER_4_GAMEPAD: val = noone; break;
@@ -135,14 +127,12 @@ function scSettingsGetType(argument0, argument1) {
 		PLAYER_1_SHOOT,
 		PLAYER_1_ABILITY,
 		PLAYER_1_ULTIMATE,
-		PLAYER_1_INVENTORY,
 		PLAYER_1_LEFT_GP,
 		PLAYER_1_RIGHT_GP,
 		PLAYER_1_JUMP_GP,
 		PLAYER_1_SHOOT_GP,
 		PLAYER_1_ABILITY_GP,
 		PLAYER_1_ULTIMATE_GP,
-		PLAYER_1_INVENTORY_GP,
 		//Keybinds 2
 		PLAYER_2_LEFT,
 		PLAYER_2_RIGHT,
@@ -150,14 +140,12 @@ function scSettingsGetType(argument0, argument1) {
 		PLAYER_2_SHOOT,
 		PLAYER_2_ABILITY,
 		PLAYER_2_ULTIMATE,
-		PLAYER_2_INVENTORY,
 		PLAYER_2_LEFT_GP,
 		PLAYER_2_RIGHT_GP,
 		PLAYER_2_JUMP_GP,
 		PLAYER_2_SHOOT_GP,
 		PLAYER_2_ABILITY_GP,
 		PLAYER_2_ULTIMATE_GP,
-		PLAYER_2_INVENTORY_GP,
 		//KEEP LAST
 		SECTION
 	}

@@ -25,9 +25,9 @@ function scComboDamaged(argument0) {
 			map[? COMBO_MAP.COOLDOWN] = p.weapon_map[? WEAPON_MAP.COMBO_COOLDOWN];
 			//combo_player = other.id;
 			map[? COMBO_MAP.ENTITY] = other.id;
-			//combo_text_current = combo_text[irandom_range(0, array_length_1d(combo_text) - 1)];
+			//combo_text_current = combo_text[irandom_range(0, array_length(combo_text) - 1)];
 			var combo_text = map[? COMBO_MAP.TEXT_LIST];
-			map[? COMBO_MAP.TEXT] = combo_text[irandom_range(0, array_length_1d(combo_text) - 1)];
+			map[? COMBO_MAP.TEXT] = combo_text[irandom_range(0, array_length(combo_text) - 1)];
 			//combo_scale = clamp(combo_scale + 1, 1, 4);
 			map[? COMBO_MAP.SCALE] = clamp(map[? COMBO_MAP.SCALE] + 1, 1, map[? COMBO_MAP.SCALE_MAX]);
 			if (map[? COMBO_MAP.STREAK] > map[? COMBO_MAP.STREAK_HIGHEST]) { //Combo highest in this game

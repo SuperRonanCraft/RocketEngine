@@ -21,8 +21,8 @@ function scSpawnRocket() {
 	//ds_map_copy(r_map, argument[5]);
 	var inst = instance_create_depth(xx, yy, dep, oRocket);
 
-	show_debug_message("SIZE " + string(ds_map_size(map)));
-	show_debug_message("VALUE " + string(WEAPON_MAP.MAP));
+	//show_debug_message("SIZE " + string(ds_map_size(map)));
+	//show_debug_message("VALUE " + string(WEAPON_MAP.MAP));
 
 	for (var i = 0; i < ds_map_size(map); i++) {
 		if (i != WEAPON_MAP.MAP)
@@ -40,7 +40,7 @@ function scSpawnRocket() {
 	if (argument_count >= 8) { //Must have both keys and values
 		var keys = argument[6]
 		var values = argument[7];
-		for (var i = 0; i < array_length_1d(keys); i++)
+		for (var i = 0; i < array_length(keys); i++)
 			ds_map_set(r_map, keys[i], values[i]);
 	}
 

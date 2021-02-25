@@ -15,7 +15,7 @@ function scMenuAchievements() {
 		if (group != noone) { //We are in a group
 			var display = i;
 			var anyComplete = false;
-			for (var gr = 0; gr < array_length_1d(group); gr++) {
+			for (var gr = 0; gr < array_length(group); gr++) {
 				var val = scAchievementsGetType(ACHIEVEMENT_TYPE.VALUE, group[gr]);
 				if (val == true) {
 					display = group[gr];
@@ -30,11 +30,11 @@ function scMenuAchievements() {
 				index++;
 				if (ceil(index / (columns * rows)) != pg)
 					continue;
-				for (var gr = 0; gr < array_length_1d(group); gr++) {
+				for (var gr = 0; gr < array_length(group); gr++) {
 					if (group[gr] < i)
-						ach_before[array_length_1d(ach_before)] = group[gr];
+						ach_before[array_length(ach_before)] = group[gr];
 					else if (group[gr] > i)
-						ach_after[array_length_1d(ach_after)] = group[gr];
+						ach_after[array_length(ach_after)] = group[gr];
 				}
 			}
 		} else
@@ -56,36 +56,36 @@ function scMenuAchievements() {
 		}
 		scDrawText(rx, ry, name, c, scale_element, noone, noone, noone, fa_bottom); //Achievement Name
 		if (hovering) { //hovering and locked show progress
-			var tracking = array_length_1d(ach_after) > 0 ? 
+			var tracking = array_length(ach_after) > 0 ? 
 				scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, ach_after[0]) : 
 				scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING_DESC, i);
 			if (tracking != noone)
 				scDrawText(rx, ry, string(tracking), c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
 			else
 				scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
-			if (array_length_1d(ach_after) > 0) { //show next goal
+			if (array_length(ach_after) > 0) { //show next goal
 				desc = scAchievementsGetType(ACHIEVEMENT_TYPE.DESCRIPTION, ach_after[0]);
 				scDrawText(rx, ry + 64 + 30, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Progress
 			}
 		} else if (desc != noone)
 			scDrawText(rx, ry, desc, c, scale_description, noone, noone, noone, fa_top); //Achievement Desc
 		scDrawSpriteExt(rx - 32, ry + 25 + ryo, icon, 0); //Icon
-		if (status != noone && array_length_1d(ach_after) == 0)
+		if (status != noone && array_length(ach_after) == 0)
 			scDrawSpriteExt(rx + 32, ry + 25 + 64 + ryo, s_achievement_complete, 0); //Complete
 		//Before and after current achievement
-		if (array_length_1d(ach_before) != 0) {
+		if (array_length(ach_before) != 0) {
 			//var ach_bf_total = 0;
-			for (var ach_bf = 0; ach_bf < array_length_1d(ach_before); ach_bf++)
+			for (var ach_bf = 0; ach_bf < array_length(ach_before); ach_bf++)
 				if (ach_bf < 2)
 					scDrawSpriteExt(rx - 66 - (34 * ach_bf), ry + 25 + ryo + 16, scAchievementsGetType(ACHIEVEMENT_TYPE.ICON,
-					ach_before[array_length_1d(ach_before) - ach_bf - 1]), 0, noone, noone, 0.5, 0.5); //Icon before
+					ach_before[array_length(ach_before) - ach_bf - 1]), 0, noone, noone, 0.5, 0.5); //Icon before
 				//else
 					//ach_bf_total++;
 			//if (ach_bf_total != 0)
 				//scDrawText(rx - 120, ry + 25 + ryo + 32, "+" + string(ach_bf_total), color_element, scale_description, noone, noone, fa_middle, fa_middle);
 		}
-		if (array_length_1d(ach_after) != 0)
-			for (var ach_aft = 0; ach_aft < array_length_1d(ach_after); ach_aft++)
+		if (array_length(ach_after) != 0)
+			for (var ach_aft = 0; ach_aft < array_length(ach_after); ach_aft++)
 				if (ach_aft < 2)
 					scDrawSpriteExt(rx + 34 + (34 * ach_aft), ry + 25 + ryo + 16, s_achievement_Locked, 0, noone, noone, 0.5, 0.5); //Icon after
 		//scDrawLine(rx - 64, ry + 106, rx + 64, ry + 106, c_black, 2, 1); //Seperation line

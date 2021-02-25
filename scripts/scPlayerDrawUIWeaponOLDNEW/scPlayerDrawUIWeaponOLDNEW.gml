@@ -35,7 +35,7 @@ function scPlayerDrawUIWeaponOLDNEW(argument0, argument1, argument2, argument3, 
 		var buffy = RES_H / 16;
 		var buffx = xpos + (team == TEAM.LEFT ? 32 : -50);
 		if (is_array(buffsid))
-			for (var i = 0; i < array_length_1d(buffsid); i++) {
+			for (var i = 0; i < array_length(buffsid); i++) {
 				var buff_map = ds_map_create();
 				scBuffGet(buffsid[i], buff_map);
 				if (buff_map[? BUFF_MAP.ENABLED]) {

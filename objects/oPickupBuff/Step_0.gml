@@ -17,7 +17,7 @@ if (delay_current <= 0)
 			ds_map_destroy(map);
 		}
 		//Pick a random buff from the possible GOOD buffs array
-		var ind = possible[irandom_range(0, array_length_1d(possible) - 1)];
+		var ind = possible[irandom_range(0, array_length(possible) - 1)];
 		var map = ds_map_create();
 		scBuffGet(ind, map);
 		item = map[? BUFF_MAP.ICON];

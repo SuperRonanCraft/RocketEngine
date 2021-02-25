@@ -47,7 +47,6 @@ function scCheckDeathEffect() {
 	
 				if(scGetParent(oPlayer,deadGuy)){
 					var infected = instance_create_depth(x, y, depth, oPlayer);
-					infected.system_inventory = false;
 				}
 				else{
 					var infected = instance_create_depth(x, y, depth, oEnemy);

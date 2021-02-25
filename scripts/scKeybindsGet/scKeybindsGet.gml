@@ -34,9 +34,6 @@ function scKeybindsGet() {
 			case KEYBIND.ABILITY:
 				input = keyboard_check(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY]));
 				break;
-			case KEYBIND.INVENTORY:
-				input = keyboard_check_pressed(scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.INVENTORY]));
-				break;
 		}
 
 	var keyboard = input;
@@ -72,8 +69,6 @@ function scKeybindsGet() {
 					input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ULTIMATE_GP])); break;
 				case KEYBIND.ABILITY:
 					input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.ABILITY_GP])); break;
-				case KEYBIND.INVENTORY:
-					input = gamepad_button_check_pressed(gamepad, scSettingsGetType(SETTINGS_TYPE.VALUE, map[? KEYBIND_MAP.INVENTORY_GP])); break;
 			}
 	}
 
@@ -91,7 +86,7 @@ function scKeybindsGet() {
 
 	enum KEYBIND {
 		LEFT, RIGHT, JUMP, JUMP_RELEASE, SHOOT, 
-		SHOOT_RELEASE, ULT, ABILITY, INVENTORY
+		SHOOT_RELEASE, ULT, ABILITY
 	}
 
 

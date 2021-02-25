@@ -25,7 +25,7 @@ if (inputting) { //Are we inputting data?
 				if (mouse_check_button_pressed(mb_right))
 					if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[option], "<< ", buffer * 2, buffer, scale_element, true))
 						hinput = -1;
-					//else if (current_val != array_length_1d(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+					//else if (current_val != array_length(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
 					//	hinput = 1;
 					else
 						hinput = 1;
@@ -37,7 +37,7 @@ if (inputting) { //Are we inputting data?
 				var len = -1;
 				var current_val = ds_grid[# 4, option]
 				var current_array = ds_grid[# 2, option];
-				for (var d = 0; d < array_length_1d(current_array); d++)
+				for (var d = 0; d < array_length(current_array); d++)
 					if (string_width(current_array[d]) * scale_element > len)
 						len = string_width(current_array[d]) * scale_element;
 				len += x_buffer;
@@ -50,16 +50,16 @@ if (inputting) { //Are we inputting data?
 					rtx += (len / 2) + x_buffer;
 				if (current_val != 0 && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) //Left
 					hinput = -1;
-				else if (current_val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
+				else if (current_val != array_length(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
 					hinput = 1;
 			}
 			if (hinput != 0) {
 				//AUDIO
 				var val = ds_grid[# 4, menu_option[page]] + hinput;
-				if (val >= array_length_1d(ds_grid[# 2, menu_option[page]]))
+				if (val >= array_length(ds_grid[# 2, menu_option[page]]))
 					val = 0;
 				else if (val < 0)
-					val = array_length_1d(ds_grid[# 2, menu_option[page]]) - 1;
+					val = array_length(ds_grid[# 2, menu_option[page]]) - 1;
 				ds_grid[# 4, menu_option[page]] = val;
 				key_enter_mouse = false;
 			}
@@ -132,7 +132,7 @@ if (inputting) { //Are we inputting data?
 				if (mouse_check_button_pressed(mb_right))
 					if (current_val != 0 && scUIHovering((x1left + x2left) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
 						hinput = -1;
-					//else if (current_val != array_length_1d(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
+					//else if (current_val != array_length(current_array) - 1  && scUIHovering((x1right + x2right) / 2, start_y[option], "<< ", buffer, buffer, scale_element, true))
 					//	hinput = 1;
 					else
 						hinput = 1;
@@ -141,10 +141,10 @@ if (inputting) { //Are we inputting data?
 				//AUDIO
 				var option = menu_option[page];
 				var val = ds_grid[# 6, option] + hinput;
-				if (val >= array_length_1d(ds_grid[# 3, option]))
+				if (val >= array_length(ds_grid[# 3, option]))
 					val = 0;
 				else if (val < 0)
-					val = array_length_1d(ds_grid[# 3, option]) - 1;
+					val = array_length(ds_grid[# 3, option]) - 1;
 				if (val != ds_grid[# 6, option]) {
 					//AUDIO
 					ds_grid[# 6, option] = val;
@@ -162,7 +162,7 @@ if (inputting) { //Are we inputting data?
 		if (page_workingon == page) //Make sure we are working on the current page
 			for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 				var ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
-				for (var a = 0; a < array_length_1d(menu_special); a++)
+				for (var a = 0; a < array_length(menu_special); a++)
 					if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
 				if (!ignore && is_array(start_x) && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right)) {
 					option = i; break;} //Set the new option, break away
@@ -182,7 +182,7 @@ if (inputting) { //Are we inputting data?
 			if (option > ds_height - 1) option = 0;
 			else if (option < 0) option = ds_height - 1;
 			//Ignore special menu elements
-			for (var i = 0; i < array_length_1d(menu_special); i++)
+			for (var i = 0; i < array_length(menu_special); i++)
 				while (ds_grid[# 1, option] == menu_special[i]) { //Ignore this element, change the option
 					option += ochange;
 					if (option > ds_height - 1) option = 0;
@@ -235,7 +235,7 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 		case menu_element_type.page_transfer_script:
 			script_execute(ds_grid[# 3, menu_option[page]]);
 		case menu_element_type.page_transfer: //Change the page
-			for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
+			for (var i = 0; i < array_length(menu_pages_index); i++) {
 				if (menu_pages_index[i] != ds_grid[# 2, menu_option[page]]) continue; //Find the index of the page related to the order
 				page = i; checked = false; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
 			break;
@@ -247,7 +247,7 @@ if ((key_enter || key_enter_mouse) && ds_exists(ds_grid, ds_type_grid) && menu_o
 					var array = ds_grid[# 2, op];
 					var values = ds_grid[# 4, op];
 					var values_array = values[selection];
-					for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
+					for (var i = 0; i < array_length(array); i++) { //All menu options we are going to change
 						var menuSel = array[i];
 						var val = values_array[i];
 						ds_grid[# 4, menuSel] = val;

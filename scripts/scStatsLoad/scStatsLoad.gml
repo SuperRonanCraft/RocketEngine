@@ -14,7 +14,7 @@ function scStatsLoad() {
 			case GAMEMODE.TARGETS:
 				//Points
 				var ary = [STATISTICS_GAMEMODE.GM_TARGETS_POINTS];
-				for (var i = 0; i < array_length_1d(ary); i++) {
+				for (var i = 0; i < array_length(ary); i++) {
 					var val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, ary[i]);
 					map[? val + mode] = ini_read_real(sec + mode, val, 0);
 					show_debug_message(string(val + mode));
@@ -25,7 +25,7 @@ function scStatsLoad() {
 				//Level, checkpoint, lives, rocket
 				var ary = [STATISTICS_GAMEMODE.GM_SINGLE_LEVEL, STATISTICS_GAMEMODE.GM_SINGLE_CHECKPOINT, 
 					STATISTICS_GAMEMODE.GM_SINGLE_LIVES, STATISTICS_GAMEMODE.GM_SINGLE_ROCKET];
-				for (var i = 0; i < array_length_1d(ary); i++) {
+				for (var i = 0; i < array_length(ary); i++) {
 					var val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, ary[i]);
 					map[? val + mode] = ini_read_real(sec + mode, val, 0);
 				}
@@ -33,7 +33,7 @@ function scStatsLoad() {
 			case GAMEMODE.ONEVONE:
 				//P1 wins, P2 wins
 				var ary = [STATISTICS_GAMEMODE.GM_GENERAL_P1_WINS, STATISTICS_GAMEMODE.GM_GENERAL_P2_WINS];
-				for (var i = 0; i < array_length_1d(ary); i++) {
+				for (var i = 0; i < array_length(ary); i++) {
 					var val = scStatsGetType(STATISTICS_TYPE.SECTION_GAMEMODE, ary[i]);
 					map[? val + mode] = ini_read_real(sec + mode, val, 0);
 				}

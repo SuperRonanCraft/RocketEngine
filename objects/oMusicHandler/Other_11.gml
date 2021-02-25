@@ -3,7 +3,7 @@ var sounds = [SOUND.MUSICLEVEL_1]//[SOUND.MUSIC_1, SOUND.MUSIC_2, SOUND.MUSIC_3,
 
 //Make sure we dont play the same song again
 var dontplay = noone;
-for (var i = 0; i < array_length_1d(sounds); i++)
+for (var i = 0; i < array_length(sounds); i++)
 	if (audio_is_playing(sounds[i])) {
 		dontplay = sounds[i];
 		break;

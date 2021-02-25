@@ -43,7 +43,7 @@ for (var i = 0; i < ds_height; i++) {
 			} else if (mouse_check_button_pressed(mb_left)) { //Left button and hovering
 				var len = -1;
 				var current_array = ds_grid[# current_array_id, i];
-				for (var d = 0; d < array_length_1d(current_array); d++)
+				for (var d = 0; d < array_length(current_array); d++)
 					if (string_width(current_array[d]) * scale_element > len)
 						len = string_width(current_array[d]) * scale_element;
 				len += x_buffer;
@@ -56,15 +56,15 @@ for (var i = 0; i < ds_height; i++) {
 					rtx += (len / 2) + x_buffer;
 				if (val != 0 && scUIHoveringBox(rtx - (len / 2) - x_buffer, rty - 10, rtx - (len / 2), rty + 10, 10, 10)) //Left
 					val--;
-				else if (i == menu_option[page] || val != array_length_1d(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
+				else if (i == menu_option[page] || val != array_length(current_array) - 1 && scUIHoveringBox(rtx + (len / 2), rty - 10, rtx + (len / 2) + x_buffer, rty + 10, 10, 10)) //Right
 					val++;
 			}
 			if (val != ds_grid[# current_id, i]) {
 				//AUDIO
-				if (val >= array_length_1d(ds_grid[# current_array_id, i]))
+				if (val >= array_length(ds_grid[# current_array_id, i]))
 					val = 0;
 				else if (val < 0)
-					val = array_length_1d(ds_grid[# current_array_id, i]) - 1;
+					val = array_length(ds_grid[# current_array_id, i]) - 1;
 				ds_grid[# current_id, i] = val;
 				ds_list_add(confirm_list, i);
 				enter_change = true;
@@ -255,7 +255,7 @@ for (var i = 0; i < ds_height; i++) {
 			var available = noone;
 			for (var a = 0; a < ds_list_size(controls); a++) {
 				var found = false;
-				for (var b = 0; b < array_length_1d(pads); b++)
+				for (var b = 0; b < array_length(pads); b++)
 					if (controls[| a] == scSettingsGetType(SETTINGS_TYPE.VALUE, pads[b])) { //Is an element in controllers on the gamepad list?
 						found = true; break; } //Break out, we dont have this key available
 				if (!found)
@@ -284,7 +284,7 @@ if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_
 	if (page_workingon == page) //Make sure we are working on the current page
 		for (var i = 0; i < ds_grid_height(ds_grid); i++) {
 			var ignore = false, val = ds_grid[# 0, i], text = is_array(val) ? val[0] : val;
-			for (var a = 0; a < array_length_1d(menu_special); a++)
+			for (var a = 0; a < array_length(menu_special); a++)
 				if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
 			if (!ignore && is_array(start_x) && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right)) {
 				option = i;
@@ -305,7 +305,7 @@ if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_
 		if (option > ds_height - 1) option = 0;
 		else if (option < 0) option = ds_height - 1;
 		//Ignore special menu elements
-		for (var i = 0; i < array_length_1d(menu_special); i++)
+		for (var i = 0; i < array_length(menu_special); i++)
 			while (ds_grid[# 1, option] == menu_special[i]) { //Ignore this element, change the option
 				option += ochange;
 				if (option > ds_height - 1) option = 0;
@@ -358,7 +358,7 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 			case menu_element_type.page_transfer_script:
 				script_execute(ds_grid[# 3, page_opt]);
 			case menu_element_type.page_transfer: //Change the page
-				for (var i = 0; i < array_length_1d(menu_pages_index); i++) {
+				for (var i = 0; i < array_length(menu_pages_index); i++) {
 					if (menu_pages_index[i] != ds_grid[# 2, page_opt]) continue; //Find the index of the page related to the order
 					page = i; checked = false; if (key_enter_mouse) menu_option[page] = -1; break;} //Set new page selection to -1 if mouse was used to enter
 				break;
@@ -369,7 +369,7 @@ if ((key_enter || key_enter_mouse || enter_change) && ds_exists(ds_grid, ds_type
 					var array = ds_grid[# 2, op];
 					var values = ds_grid[# 4, op];
 					var values_array = values[selection];
-					for (var i = 0; i < array_length_1d(array); i++) { //All menu options we are going to change
+					for (var i = 0; i < array_length(array); i++) { //All menu options we are going to change
 						var menuSel = array[i];
 						var val = values_array[i];
 						ds_grid[# 4, menuSel] = val;

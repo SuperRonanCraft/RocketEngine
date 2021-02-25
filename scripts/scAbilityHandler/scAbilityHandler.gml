@@ -23,7 +23,7 @@ function scAbilityHandler() {
 
 	if (!key_ability) exit; //Not engaging ability, exit
 
-	show_debug_message("Ability!");
+	//show_debug_message("Ability!");
 
 	if (map[? ABILITY_MAP.CAST_SCRIPT] != noone) {
 		var dir = team != TEAM.NONE ? (team == TEAM.LEFT ? 0 : 180) : (facing == 1 ? 0 : 180);

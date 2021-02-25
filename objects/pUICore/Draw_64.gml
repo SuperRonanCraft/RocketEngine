@@ -10,7 +10,7 @@ if (workingon != page) { //New page, lets set it up
 	for (var i = 0; i < ds_height; i++) scale_option[i] = scale_main; //Set default size for option
 	//Centered?
 	var centering = false;
-	for (var i = 0; i < array_length_1d(menu_pages_centered); i++)
+	for (var i = 0; i < array_length(menu_pages_centered); i++)
 		if (menu_pages[page] == menu_pages_centered[i]) { centering = true; break; }
 	centered = centering;
 	//Positions
@@ -34,7 +34,7 @@ if (workingon != page) { //New page, lets set it up
 			else {index--; skips--;} //Makes the y not count up
 		}
 		//Make the buttons for special menus to spawn lower than normal
-		for (var a = 0; a < array_length_1d(menu_special); a++)
+		for (var a = 0; a < array_length(menu_special); a++)
 			if (ds_grid[# 1, 0] == menu_special[a]) {
 				var val = menu_special_start_y[a];
 				if (val != noone)
@@ -64,7 +64,7 @@ scUIUnfold(); //Unfolding event
 
 // Draw left
 if (menu_titles != noone) { //Draw Titles
-	for (var i = 0; i < array_length_1d(menu_titles); i++) {
+	for (var i = 0; i < array_length(menu_titles); i++) {
 		var title = menu_titles[i];
 		if (title[0] == menu_pages_index[page])
 			scDrawText(RES_W / 2 + RES_W / 4, RES_H / 8, title[1], c_ltgray, 1.4);
@@ -133,7 +133,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 			var current_val = ds_grid[# current_id, i], current_array = ds_grid[# current_array_id, i], c = color_element; len = -1;
 			//var c_left, c_right;
 			//Find the longest string (to center on this)
-			for (var d = 0; d < array_length_1d(current_array); d++)
+			for (var d = 0; d < array_length(current_array); d++)
 				if (string_width(current_array[d]) * scale_element > len)
 					len = string_width(current_array[d]) * scale_element;
 			len += x_buffer;
@@ -164,7 +164,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 				offset = scMovementWave(-3, 3, 1);
 				c_right = color_element_hover;
 			} else c_right = c;
-			if (current_val == array_length_1d(current_array) - 1) c_right = c_dkgray;
+			if (current_val == array_length(current_array) - 1) c_right = c_dkgray;
 			scDrawText(rtx + len / 2 + offset, rty, ">>", c_right, shift_scale, noone, noone, fa_left);
 			break;
 		case menu_element_type.slider:
@@ -266,7 +266,7 @@ for (var i = 0; i < ds_height; i++) { //Iterate through each grid of the current
 					var available = noone;
 					for (var a = 0; a < ds_list_size(controls); a++) {
 						var found = false;
-						for (var b = 0; b < array_length_1d(pads); b++)
+						for (var b = 0; b < array_length(pads); b++)
 							if (controls[| a] == scSettingsGetType(SETTINGS_TYPE.VALUE, pads[b])) { //Is an element in controllers on the gamepad list?
 								found = true; break; } //Break out, we dont have this key available
 						if (!found)
