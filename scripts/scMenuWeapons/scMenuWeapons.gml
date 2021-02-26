@@ -19,7 +19,7 @@ function scMenuWeapons() {
 			yoffset = scMovementWave(-3, 3, 1);
 			if (mouse_check_button_pressed(mb_left))
 				with (oPlayer)
-					scWeaponModify(id, i);
+					scWeaponModify(weapon_map, i);
 		}
 		scDrawText(rx, ry, name, c, scale_element); //NAME
 		draw_sprite(spr, 0, rx - 32, ry + 10 + yoffset); //ICON
@@ -32,7 +32,7 @@ function scMenuWeapons() {
 	while (amt - (((max_page + 1) * (columns * rows)) + 1) > 0)
 		max_page++;
 	scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);
-	scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "MODIFIERS", c_orange, 1.5);
+	scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 34), "MODIFIERS", c_orange, 1.5);
 
 
 }

@@ -14,7 +14,7 @@ function scPlayerDrawIU() {
 	var _team_respect = true;
 
 	scPlayerDrawUIHealth(_x, _y, _len, _hei, _team_respect, _alpha, true);
-	scPlayerDrawUIWeapon(_x + _len + _buffer_x, _y, _buffer_ab, _alpha, _team_respect);
+	//scPlayerDrawUIWeapon(_x + _len + _buffer_x, _y, _buffer_ab, _alpha, _team_respect);
 	scPlayerDrawUIAbility(_x + _len + (_buffer_x * 3) + (_buffer_ab * 4), _y, 32, _buffer_ab, _alpha, _team_respect);
 	scPlayerDrawUIUltimate(_x, _y + _hei + _buffer_y, _len, _alpha, _team_respect);
 	scPlayerDrawUIBuffs(_x, _y + _hei * 2 + _buffer_y * 2, 10, 10, 32, _alpha, _team_respect);

@@ -46,7 +46,7 @@ function scMenuBuffs() {
 		max_page++;
 	scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg + 1) + "/" + string(max_page + 1), color_element, scale_element);
 
-	scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "BUFFS", c_orange, 1.5);
+	scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 34), "BUFFS", c_orange, 1.5);
 
 
 }

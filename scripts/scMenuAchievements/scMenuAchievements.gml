@@ -96,7 +96,7 @@ function scMenuAchievements() {
 
 	scDrawText(RES_W - (RES_W / 8), RES_H - (RES_H / 8), "Page " + string(pg) + "/" + string(scAchievementsGetPages()), color_element, scale_element);
 
-	scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 32), "ACHIEVEMENTS", c_orange, 1.5);
+	scDrawText(RES_W / 2, RES_H / 8 + (RES_H / 34), "ACHIEVEMENTS", c_orange, 1.5);
 
 
 }
