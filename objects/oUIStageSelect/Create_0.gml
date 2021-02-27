@@ -71,16 +71,16 @@ switch (type) {
 		menu_pages_index = [menu_page.main, menu_page.modes];
 		break;
 	case GAMEMODE.TARGETS:
-		var rockets = 0;
+		/*var rockets = 0;
 		var roc = 0
-		for (var i = ROCKET.DEFAULT; i < ROCKET.LENGHT; i++) {
+		for (var i = WEAPON_ROCKET_TYPE.DEFAULT; i < WEAPON_ROCKET_TYPE.LENGHT; i++) {
 			var list = scRocketGet(i);
 			if (list[? ROCKET_MAP.ENABLED]) {
 				rockets[roc] = list[? ROCKET_MAP.NAME];
 				roc++;
 			}
 			ds_map_destroy(list);
-		}
+		}*/
 		ds_menu_main = scUICreateMenuPage(
 			["PLAY",		menu_element_type.script_runner,	scStageConfirm],
 			[["<< PREV", menu_centered.left],		menu_element_type.script_runner,	scStageBack],

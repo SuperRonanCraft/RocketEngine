@@ -1126,7 +1126,6 @@
     {"folderPath":"folders/Rooms/1v1.yy","order":3,"resourceVersion":"1.0","name":"1v1","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms/vTarget.yy","order":5,"resourceVersion":"1.0","name":"vTarget","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms/KnockOut.yy","order":7,"resourceVersion":"1.0","name":"KnockOut","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Rooms/KnockOut/rKnockOutSelect.yy","order":3,"resourceVersion":"1.0","name":"rKnockOutSelect","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms/Single.yy","order":9,"resourceVersion":"1.0","name":"Single","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms/Tutorial.yy","order":11,"resourceVersion":"1.0","name":"Tutorial","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms/Rumble.yy","order":13,"resourceVersion":"1.0","name":"Rumble","tags":[],"resourceType":"GMFolder",},
