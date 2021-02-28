@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sTile_Outside","path":"sprites/sTile_Outside/sTile_Outside.yy",},
     "resourceVersion": "1.3",
-    "name": "sTile_Outside",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
