@@ -50,7 +50,7 @@ if (!deactivate && shuriken_map[? SHURIKEN_MAP.PARTICLE] != noone) {
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? shuriken_map[? SHURIKEN_MAP.PARTICLE]], shuriken_map[? SHURIKEN_MAP.PARTICLE_AMT]);
 }
 
-var _advance = global.play && !global.gameover;
+var _advance = global.play || global.gameover;
 
 //Increase timer to expire
 if (_advance)

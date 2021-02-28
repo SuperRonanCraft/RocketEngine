@@ -170,7 +170,7 @@ else if(deactivate){
 	event_user(0);	
 }
 
-var _advance = global.play && !global.gameover;
+var _advance = global.play || global.gameover;
 
 if (_advance) {
 	x += hsp;
