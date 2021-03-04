@@ -7,7 +7,7 @@ function scBuffBleedout(argument0, argument1) {
 	var dsBuff = argument1;
 
 	var clock = dsBuff[? BUFF_MAP.CLOCK];
-	var dmg = 150;
+	var dmg = 15;
 
 	if (clock > dsBuff[? BUFF_MAP.TIME]) { //Remove debuff and damage player
 		part_emitter_region(global.ParticleSystem1, global.Emitter1, owner.x - 5, owner.x + 5, owner.y + 5, owner.y - 5, 

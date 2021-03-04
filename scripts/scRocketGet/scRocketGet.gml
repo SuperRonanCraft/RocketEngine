@@ -28,7 +28,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.SPEED] = 20 * varspd;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 10 * vartime;
-			map[? ROCKET_MAP.DAMAGE] = 3 * _dmg_mul;
+			map[? ROCKET_MAP.DAMAGE] = 10;
 			map[? ROCKET_MAP.EXPLOSION_SCALE] = 5;
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];
 			break;

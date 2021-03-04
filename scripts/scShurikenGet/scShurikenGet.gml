@@ -20,7 +20,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.DEFAULT;
 			map[? SHURIKEN_MAP.COOLDOWN] = 20;
 			map[? SHURIKEN_MAP.SPEED] = 20;
-			map[? SHURIKEN_MAP.DAMAGE] = 40;
+			map[? SHURIKEN_MAP.DAMAGE] = 7;
 			break;
 		case WEAPON_SHURIKEN_TYPE.ICE:
 			map[? SHURIKEN_MAP.NAME] = "Frost Star";

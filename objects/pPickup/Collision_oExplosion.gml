@@ -1,4 +1,5 @@
 /// @desc 
+/*
 if (item == noone || other.parent.team == team || hacked) exit; //Same team or no item
 
 var rocket_map = other.weapon_map[? WEAPON_MAP.MAP];

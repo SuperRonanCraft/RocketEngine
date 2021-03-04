@@ -8,7 +8,6 @@ if(!schwing && owner != noone && isPlayer && timer > 0){
 			ds_list_add(confirmList, other);
 			var dmg = 3;
 			scShootableDamage(owner, other, false, true, dmg);
-			scShootableKnockback(other,17* other.knockback_multiplier, image_xscale);
 			part_particles_create(global.ParticleSystem1,other.x,other.y,oParticleHandler.ds_part[? PARTICLES.KBHIT],1);
 		
 			oldOwner = other;

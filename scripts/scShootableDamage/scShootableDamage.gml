@@ -24,6 +24,9 @@ function scShootableDamage() {
 
 	var _base_ampedDamage = 0;
 	var _element_ampedDamage = 0;
+	
+	if(!instance_exists(damager))
+		damager = noone;
 
 	if (dmg < 0) { //Negative damage
 		scShootableHeal(damaging, abs(dmg), true);
