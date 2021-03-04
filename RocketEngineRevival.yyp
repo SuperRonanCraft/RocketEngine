@@ -792,7 +792,7 @@
     {"id":{"name":"oCrystal","path":"objects/oCrystal/oCrystal.yy",},"order":7,},
     {"id":{"name":"oShuriken","path":"objects/oShuriken/oShuriken.yy",},"order":1,},
     {"id":{"name":"oExplosion_Shuriken","path":"objects/oExplosion_Shuriken/oExplosion_Shuriken.yy",},"order":3,},
-    {"id":{"name":"oArrow","path":"objects/oArrow/oArrow.yy",},"order":7,},
+    {"id":{"name":"oArrow","path":"objects/oArrow/oArrow.yy",},"order":0,},
     {"id":{"name":"oShockwave","path":"objects/oShockwave/oShockwave.yy",},"order":9,},
     {"id":{"name":"oMelee_Bite","path":"objects/oMelee_Bite/oMelee_Bite.yy",},"order":1,},
     {"id":{"name":"oUltimateHoming","path":"objects/oUltimateHoming/oUltimateHoming.yy",},"order":1,},
@@ -1136,6 +1136,7 @@
     {"folderPath":"folders/Extensions.yy","order":23,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sequences.yy","order":1,"resourceVersion":"1.0","name":"Sequences","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Animation Curves.yy","order":1,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Weapons/Arrows.yy","order":12,"resourceVersion":"1.0","name":"Arrows","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

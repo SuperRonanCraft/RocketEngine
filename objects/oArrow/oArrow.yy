@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "Arrows",
+    "path": "folders/Objects/Weapons/Arrows.yy",
   },
   "resourceVersion": "1.0",
   "name": "oArrow",

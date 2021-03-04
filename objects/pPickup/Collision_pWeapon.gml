@@ -1,4 +1,5 @@
 /// @desc Reset timer
+/*
 if (item == noone || other.owner.team == team || hacked) exit; //Same team or no item
 
 
