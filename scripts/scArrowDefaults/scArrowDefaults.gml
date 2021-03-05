@@ -17,13 +17,13 @@ function scArrowDefaults() {
 	map[? ARROW_MAP.POWER] = 1; //base power gain
 	map[? ARROW_MAP.POWER_MAX] = 200; //base power maximum
 	map[? ARROW_MAP.RELOAD_TIME] = -1;
-	map[? ARROW_MAP.TIMER] = 125; //uptime
+	map[? ARROW_MAP.TIMER] = 225; //uptime
 	map[? ARROW_MAP.CLIP] = -1; //ammo in a clip
 	map[? ARROW_MAP.STARTUP] = 0; //delay between pressing key and shooting
 	map[? ARROW_MAP.SCALE] = 1; //size of sprite
-	map[? ARROW_MAP.SHURIKEN_AUTO_DESTROY] = false; //auto destroy on collision
-	map[? ARROW_MAP.SHURIKEN_AUTO_DESTROY_ROOM] = true; //auto destroy when out of room
-	map[? ARROW_MAP.SHURIKEN_STEP] = noone; //script to override step (including movement)
+	map[? ARROW_MAP.ARROW_AUTO_DESTROY] = false; //auto destroy on collision
+	map[? ARROW_MAP.ARROW_AUTO_DESTROY_ROOM] = true; //auto destroy when out of room
+	map[? ARROW_MAP.ARROW_STEP] = noone; //script to override step (including movement)
 	map[? ARROW_MAP.BUFF] = noone; //buff to apply
 	map[? ARROW_MAP.ROTATE] = false; //rotate the projectile
 	map[? ARROW_MAP.DEATHCAUSE] = noone; //A deathcause

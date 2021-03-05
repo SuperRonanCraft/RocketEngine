@@ -18,7 +18,7 @@ function scArrowGet(argument0) {
 	map[? ARROW_MAP.POWER_MAX] = 300; 
 	map[? ARROW_MAP.KBAMT] = 5;
 	map[? ARROW_MAP.WEIGHT] = 8;
-	map[? ARROW_MAP.DAMAGE] = 8;
+	map[? ARROW_MAP.DAMAGE] = 3;
 
 	//Custom Values
 	switch (wep) {

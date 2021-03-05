@@ -62,7 +62,7 @@ function scSpawnArrow() {
 		original_xscale = scale;
 		original_yscale = scale;
 	
-		timer = arrow_map[? ARROW_MAP.TIMER];
+		//timer = arrow_map[? ARROW_MAP.TIMER];
 		spd = arrow_map[? ARROW_MAP.SPEED];
 	
 		dmg = arrow_map[? ARROW_MAP.DAMAGE];

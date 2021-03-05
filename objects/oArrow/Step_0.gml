@@ -5,12 +5,12 @@
 
 var arrow_map = weapon_map[? WEAPON_MAP.MAP];
 var time = arrow_map[? ARROW_MAP.TIMER];
-var checkroom = arrow_map[? ARROW_MAP.SHURIKEN_AUTO_DESTROY_ROOM];
+var checkroom = arrow_map[? ARROW_MAP.ARROW_AUTO_DESTROY_ROOM];
 
 
 //If there is a special script to run, nullify all else and run it instead
-if (arrow_map[? ARROW_MAP.SHURIKEN_STEP] != noone)
-	script_execute(arrow_map[? ARROW_MAP.SHURIKEN_STEP]);
+if (arrow_map[? ARROW_MAP.ARROW_STEP] != noone)
+	script_execute(arrow_map[? ARROW_MAP.ARROW_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 
 var targetAngle = 270;
@@ -32,10 +32,11 @@ var bonusDMG = dmg;
 var bonusKB = sign(hsp) * bonusSPD/4 + kb;
 
 
+
 if(!deactivate){
 	
 	scProjectileMove(arrow_map, touching);
-
+	
 	direction = darctan2(vsp * -grv_dir,hsp);
 	image_angle = direction;
 
@@ -178,9 +179,9 @@ if (_advance) {
 }
 
 if(deactivate){
-	timer--
+	timer++
 }
-if(timer <= 0){
+if(timer >= time){
 	event_user(0);	
 }
 
