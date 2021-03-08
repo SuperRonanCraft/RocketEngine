@@ -20,7 +20,7 @@ y += vsp;
 
 
 for (var i = 0; i < ds_list_size(hitList); i++) {
-    if(instance_exists(hitList[|i].id && instance_exists(owner.id) && owner != noone && hitList[|i] == owner))
+    if(instance_exists(hitList[|i]) && instance_exists(owner) && owner != noone && hitList[|i] == owner)
 		scBuffAdd([BUFFTYPE.INVISIBLE], hitList[|i], owner);
 }
 

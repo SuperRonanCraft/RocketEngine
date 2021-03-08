@@ -26,6 +26,11 @@ if (shuriken_map[? SHURIKEN_MAP.WALL_SCRIPT] == noone){
 	
 	} else if (!deactivate && !shuriken_map[?SHURIKEN_MAP.STICK] && other.shootable || other.is_wall){
 		scSpawnParticle(x-hsp, y-vsp, spd*.6, abs(vsp) + abs(hsp), spDebris,WORLDPART_TYPE.DEBRIS);
+		deactivate = true;
+		hsp = 0;
+		vsp = 0;
+		stuckTo = other.id;
+		timer = shuriken_map[?SHURIKEN_MAP.TIMER];
 		event_user(0);
 	}
 	if (!deactivate && other.shootable || other.is_wall){

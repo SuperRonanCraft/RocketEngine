@@ -13,6 +13,7 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.NAME] = "Pretty Guy";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateClone;
 			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_clone;
 			break;
 		case ABILITY_TYPE.PORTAL: //Dodge the lasers!
 			ds_map[? ABILITY_MAP.NAME] = "Termination";
@@ -24,7 +25,7 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.NAME] = "Smoke Cloud";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilitySmokeCloud;
 			ds_map[? ABILITY_MAP.COOLDOWN] = 30;
-			ds_map[? ABILITY_MAP.SPRITE] = s_abilityIcon_Invisible;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_invis;
 			break;
 		case ABILITY_TYPE.BLOCK: //Just a block.
 			ds_map[? ABILITY_MAP.NAME] = "Blocked";

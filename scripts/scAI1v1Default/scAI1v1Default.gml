@@ -52,7 +52,7 @@ function scAI1v1Default(argument0) {
 
 	//Reset timer
 	if (timer < 0) {
-		timer = irandom_range(30, 120);	
+		timer = irandom_range(30, 60);	
 		if (!ultReady)
 			randDirection = irandom_range(0, 1);
 		else

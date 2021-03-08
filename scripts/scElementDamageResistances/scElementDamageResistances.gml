@@ -16,7 +16,7 @@ function scElementDamageResistances() {
 	    case SHOOTABLE_MAP.HEALTH_ARMOR:
 	
 			if(_damage_type == DAMAGE_ELEMENT.INFECTED){
-					multiplier *= 0.3;
+					multiplier *= 1;
 			}
 	
 	        break;
@@ -24,7 +24,7 @@ function scElementDamageResistances() {
 		default:
 	
 			if(_damage_type == DAMAGE_ELEMENT.INFECTED){
-					multiplier *= 2.0;
+					multiplier *= 1;
 			}	
 	
 			break;

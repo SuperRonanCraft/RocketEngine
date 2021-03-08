@@ -1,9 +1,9 @@
 function scRocketSpiked_Step() {
 
 	var val = 0.3 * owner.time_dialation;
-	if (direction < 90 && direction > -80)
+	if (direction < 90 || direction > 270)
 		direction -= val;
-	else if (direction > 90 && direction < 260)
+	else if (direction > 90 && direction < 270)
 		direction += val;
 
 	//Bounce on bouncepad

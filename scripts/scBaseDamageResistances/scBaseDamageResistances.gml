@@ -11,24 +11,24 @@ function scBaseDamageResistances() {
 	    case SHOOTABLE_MAP.HEALTH_SHIELD:
 	
 			if(_damage_type == DAMAGE_TYPE.SPLASH){
-					multiplier *= 1.5;
+					multiplier *= 1;
 			}		
 	
 	        break;
 	    case SHOOTABLE_MAP.HEALTH_ARMOR:
 	
 			if(_damage_type == DAMAGE_TYPE.STAB){
-					multiplier *= 0.5;
+					multiplier *= 1;
 			}
 			if(_damage_type == DAMAGE_TYPE.SPLASH){
-					multiplier *= 0.8;
+					multiplier *= 1;
 			}	
 	
 	        break;
 		case SHOOTABLE_MAP.HEALTH_BASE:
 	
 			if(_damage_type == DAMAGE_TYPE.STAB){
-					multiplier *= 1.5;
+					multiplier *= 1;
 			}	
 	
 		default:

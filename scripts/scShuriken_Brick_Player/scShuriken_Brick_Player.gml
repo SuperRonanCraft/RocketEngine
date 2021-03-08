@@ -38,6 +38,7 @@ function scShuriken_Brick_Player() {
 				if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])
 					scUltimateAddCharge(owner, DAMAGE_TYPE.DIRECT, shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 				scPlaySound(SOUND.EFFECT_HIT);
+				timer = shuriken_map[? SHURIKEN_MAP.TIMER];
 		
 			}
 
