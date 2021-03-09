@@ -20,7 +20,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.DEFAULT;
 			map[? SHURIKEN_MAP.COOLDOWN] = 40;
 			map[? SHURIKEN_MAP.SPEED] = 20;
-			map[? SHURIKEN_MAP.DAMAGE] = 7;
+			map[? SHURIKEN_MAP.DAMAGE] = 14;
 			break;
 		case WEAPON_SHURIKEN_TYPE.ICE:
 			map[? SHURIKEN_MAP.NAME] = "Frost Star";
@@ -29,7 +29,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.COOLDOWN] = 45;
 			map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.FROST];
 			map[? SHURIKEN_MAP.SPEED] = 23;
-			map[? SHURIKEN_MAP.DAMAGE] = 5;
+			map[? SHURIKEN_MAP.DAMAGE] = 10;
 			map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.FROZEN];
 			//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.ICE_SWORD;
 			map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Ice_Despawn;
@@ -44,7 +44,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.EMBER];
 			map[? SHURIKEN_MAP.COOLDOWN] = 42;
 			map[? SHURIKEN_MAP.SPEED] = 20;
-			map[? SHURIKEN_MAP.DAMAGE] = 6;
+			map[? SHURIKEN_MAP.DAMAGE] = 12;
 			//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.FIRE_SWORD;
 			map[? SHURIKEN_MAP.DEATHCAUSE] = DEATH_LIST.LASER;
 			map[? SHURIKEN_MAP.DESPAWN_SCRIPT] = scShuriken_Fire_Despawn;
@@ -58,7 +58,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.MAGNET];
 			map[? SHURIKEN_MAP.COOLDOWN] = 20;
 			map[? SHURIKEN_MAP.SPEED] = 22;
-			map[? SHURIKEN_MAP.DAMAGE] = 5;
+			map[? SHURIKEN_MAP.DAMAGE] = 10;
 			//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;
 			map[? SHURIKEN_MAP.CLIP] = 2;
 			map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
@@ -76,7 +76,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.BRICK;
 			map[? SHURIKEN_MAP.COOLDOWN] = 50;
 			map[? SHURIKEN_MAP.SPEED] = 12;
-			map[? SHURIKEN_MAP.DAMAGE] = 8;
+			map[? SHURIKEN_MAP.DAMAGE] = 16;
 			map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Brick_Player;
 			map[? SHURIKEN_MAP.STICK] = false;
 			map[? SHURIKEN_MAP.KBAMT] = 7;
@@ -103,7 +103,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.COOLDOWN] = 25;
 			map[? SHURIKEN_MAP.SPEED] = 10;
 			map[? SHURIKEN_MAP.CLIP] = 3;
-			map[? SHURIKEN_MAP.DAMAGE] = 6;
+			map[? SHURIKEN_MAP.DAMAGE] = 12;
 			map[? SHURIKEN_MAP.RELOAD_TIME] = 90;
 			//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SAND_SWORD;
 			break;
@@ -114,7 +114,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.PROJECTILE] = SHURIKEN_SPRITE.SHOTGUN;
 			map[? SHURIKEN_MAP.COOLDOWN] = 50;
 			map[? SHURIKEN_MAP.SPEED] = 20;
-			map[? SHURIKEN_MAP.DAMAGE] = 4;
+			map[? SHURIKEN_MAP.DAMAGE] = 8;
 			map[? SHURIKEN_MAP.ROTATE] = false;
 			map[? SHURIKEN_MAP.SPAWN_SCRIPT] = scShuriken_Shotgun_Spawn;
 			//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.SHOTGUN_SWORD;
@@ -128,7 +128,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.SPEED] = 25;
 			map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.SLIME]
 			map[? SHURIKEN_MAP.CLIP] = 3;
-			map[? SHURIKEN_MAP.DAMAGE] = 6;
+			map[? SHURIKEN_MAP.DAMAGE] = 12;
 			map[? SHURIKEN_MAP.KBAMT] = 0;
 			map[? SHURIKEN_MAP.RELOAD_TIME] = 40;
 			map[? SHURIKEN_MAP.PLAYER_SCRIPT] = scShuriken_Slime_Player;
@@ -144,7 +144,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.KBAMT] = 0;
 			map[? SHURIKEN_MAP.STICK] = false;
 			map[? SHURIKEN_MAP.COOLDOWN] = 45;
-			map[? SHURIKEN_MAP.DAMAGE] = 3;
+			map[? SHURIKEN_MAP.DAMAGE] = 6;
 			map[? SHURIKEN_MAP.BUFF] = [BUFFTYPE.BLEEDOUT];
 			//map[? SHURIKEN_MAP.ULTIMATE] = ULTIMATE.METAL_SWORD;
 			break;
@@ -156,7 +156,7 @@ function scShurikenGet(argument0) {
 			map[? SHURIKEN_MAP.SPEED] = 30;
 			map[? SHURIKEN_MAP.KBAMT] = 0;
 			map[? SHURIKEN_MAP.CLIP] = 2;
-			map[? SHURIKEN_MAP.DAMAGE] = 3;
+			map[? SHURIKEN_MAP.DAMAGE] = 6;
 			map[? SHURIKEN_MAP.RELOAD_TIME] = 45;
 			map[? SHURIKEN_MAP.COOLDOWN] = 25;
 			map[? SHURIKEN_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SCRAPING];

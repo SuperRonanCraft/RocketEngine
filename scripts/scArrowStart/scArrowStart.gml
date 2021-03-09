@@ -11,9 +11,9 @@ function scArrowStart(argument0, argument1) {
 	}
 
 	enum ARROW_SPRITE{
-		NONE = noone, DEFAULT = sArrow_default,ICE = sShuriken_Ice, FIRE = sShuriken_Fire, PORTAL = sShuriken_Portal, 
-		BRICK = sShuriken_Brick,  MAGNET = sShuriken_Magnet, SAND = sShuriken_Sand, SHOTGUN = sShuriken_Shotgun,
-		SLIME = sShuriken_Slime, METAL = sShuriken_Metal, ELECTRIC = sShuriken_Shock, 
+		NONE = noone, DEFAULT = sArrow_default,ICE = sArrow_ice, FIRE = sArrow_fire, PORTAL = sArrow_portal, 
+		BRICK = sArrow_brick,  MAGNET = sShuriken_Magnet, SAND = sArrow_sand, SHOTGUN = sArrow_shotgun,
+		SLIME = sArrow_slime, METAL = sArrow_metal, ELECTRIC = sArrow_shock, 
 	}
 
 	enum ARROW_MAP{
@@ -22,7 +22,7 @@ function scArrowStart(argument0, argument1) {
 		SPEED,DAMAGE,POWER, POWER_MAX,STICK,RELOAD_TIME, NAME, DESCRIPTION, TIMER, TYPE,PROJECTILE,
 		COOLDOWN,CLIP,STARTUP, SCALE, ARROW_STEP,BUFF,KBAMT, WEIGHT,
 		ARROW_AUTO_DESTROY,ARROW_AUTO_DESTROY_ROOM, PARTICLE,PARTICLE_AMT,
-		DESPAWN_SCRIPT,WALL_SCRIPT,PLAYER_SCRIPT,WEAPON_SCRIPT,	ROTATE,SPAWN_SCRIPT,SPRITE_STICK,
+		DESPAWN_SCRIPT,WALL_SCRIPT,PLAYER_SCRIPT,WEAPON_SCRIPT,	ROTATE,SPAWN_SCRIPT,SPRITE_STICK, ARROW_CREATE,
 		//ULTIMATE
 		//ULTIMATE,
 		ULTIMATE_CHARGE_GIVE,ULTIMATE_CHARGE_MULTIPLIER,

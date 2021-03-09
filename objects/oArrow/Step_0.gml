@@ -50,6 +50,9 @@ if(!deactivate){
 		var isPlayer = scGetParent(pEntity, obj);
 		//show_debug_message("isplayer " + string(isPlayer));
 		
+		if(!instance_exists(owner))
+			exit;
+		
 		if(isPlayer && !deactivate){
 			var _team = owner.team; //Owner Team
 			var _oteam = obj.team; //Entity Team
@@ -65,7 +68,13 @@ if(!deactivate){
 					//Knockback
 					obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp / 2 + bonusKB);
 					obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
-		
+				
+					//Apply buff(s)
+					for (var b = 0; b < array_length(arrow_map[?ARROW_MAP.BUFF]); b++) {
+					    var buff_array = arrow_map[? ARROW_MAP.BUFF];
+						scBuffApply(buff_array[b],obj,owner);
+					}
+					
 					//Damage player
 					if (scShootableDamage(owner, obj, false, true, dmg,noone,DAMAGE_TYPE.STAB,noone,noone)){
 						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];

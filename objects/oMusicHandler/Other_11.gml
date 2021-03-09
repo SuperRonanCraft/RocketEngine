@@ -1,5 +1,5 @@
 /// @desc start stage music
-var sounds = [SOUND.MUSICLEVEL_1]//[SOUND.MUSIC_1, SOUND.MUSIC_2, SOUND.MUSIC_3, SOUND.MUSIC_4, SOUND.MUSIC_5, SOUND.MUSIC_6];
+var sounds = [SOUND.MUSICLEVEL_1, SOUND.MUSIC_1, SOUND.MUSIC_2, SOUND.MUSIC_3, SOUND.MUSIC_4, SOUND.MUSIC_5, SOUND.MUSIC_6];
 
 //Make sure we dont play the same song again
 var dontplay = noone;

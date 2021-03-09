@@ -70,8 +70,8 @@ function scSpawnArrow() {
 		//CREATE
 	
 		/*
-		if (shuriken_map[? SHURIKEN_MAP.SHURIKEN_CREATE] != noone) //Script to run when a rocket has been created
-			script_execute(shuriken_map[? SHURIKEN_MAP.SHURIKEN_CREATE]);
+		if (arrow_map[? ARROW_MAP.ARROW_CREATE] != noone) //Script to run when a rocket has been created
+			script_execute(arrow_map[? ARROW_MAP.ARROW_CREATE]);
 		*/
 
 	}

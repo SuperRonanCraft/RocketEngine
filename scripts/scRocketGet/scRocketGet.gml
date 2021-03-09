@@ -91,14 +91,12 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.COOLDOWN] = 28 * varcd;
 			map[? ROCKET_MAP.SPEED] = 19 * varspd;
 			map[? ROCKET_MAP.TIMER] = 180 * vartime;
+			map[? ROCKET_MAP.DAMAGE] = 8;
 			map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.ICE];
 			map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ICE];
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.WINTER];
 			map[? ROCKET_MAP.BUFF] = [BUFFTYPE.CHILLED];
 			map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Ice;
-			//map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialIce_Rocket;
-			//map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialIce_Wall;
-			//map[? ROCKET_MAP.EXPLOSION_SHOOTABLE] = scRocketSpecialIce_Shootable;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * vartime;
 			map[? ROCKET_MAP.KBAMT] = 20;
@@ -112,7 +110,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FIRE;
 			map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
 			map[? ROCKET_MAP.SPEED] = 22 * varspd;
-			map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
+			map[? ROCKET_MAP.DAMAGE] = 8;
 			map[? ROCKET_MAP.TIMER] = 180 * vartime;
 			map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.EMBER];
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.FIRE2];
@@ -135,7 +133,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.SPEED] = 6 * varspd;
 			map[? ROCKET_MAP.CLIP] = 5;
 			map[? ROCKET_MAP.RELOAD_TIME] = 60 * varcd;
-			map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
+			map[? ROCKET_MAP.DAMAGE] = 9;
 			map[? ROCKET_MAP.TIMER] = 180 * vartime;
 			map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SAND];
 			map[? ROCKET_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SAND];
@@ -168,7 +166,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.SPEED] = 18 * varspd;
 			map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.SLIME];
-			map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
+			map[? ROCKET_MAP.DAMAGE] = 9;
 			map[? ROCKET_MAP.BUFF] = [BUFFTYPE.ANTIHEAL];
 			map[? ROCKET_MAP.COOLDOWN] = 27 * varcd;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
@@ -219,7 +217,7 @@ function scRocketGet(argument0) {
 		case WEAPON_ROCKET_TYPE.SPIKED:
 			map[? ROCKET_MAP.NAME] = "Spiked";
 			map[? ROCKET_MAP.DESCRIPTION] = "Plushy but deadly!";
-			map[? ROCKET_MAP.DAMAGE] = 0;
+			map[? ROCKET_MAP.DAMAGE] = 5;
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SPIKED;
 			map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
 			map[? ROCKET_MAP.SPEED] = 32 * varspd;
@@ -276,7 +274,7 @@ function scRocketGet(argument0) {
 		case WEAPON_ROCKET_TYPE.LIGHTNING:
 			map[? ROCKET_MAP.NAME] = "Lightning";
 			map[? ROCKET_MAP.DESCRIPTION] = "The power of clouds!";
-			map[? ROCKET_MAP.DAMAGE] = 1 * _dmg_mul;
+			map[? ROCKET_MAP.DAMAGE] = 10;
 			map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1 * _dmg_mul;
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
 			map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
@@ -302,6 +300,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
 			map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
 			map[? ROCKET_MAP.SPEED] = 15 * varspd;
+			map[? ROCKET_MAP.DAMAGE] = 8;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 			map[? ROCKET_MAP.ROCKET_CREATE] = scRocketShotgun_Create;
@@ -335,8 +334,9 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.NAME] = "Portal";
 			map[? ROCKET_MAP.DESCRIPTION] = "Back to the Future!";
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.TELEPORT;
-			map[? ROCKET_MAP.COOLDOWN] = 40 * varcd;
+			map[? ROCKET_MAP.COOLDOWN] = 30 * varcd;
 			map[? ROCKET_MAP.SPEED] = 18 * varspd;
+			map[? ROCKET_MAP.DAMAGE] = 8;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 5 * vartime;
 			map[? ROCKET_MAP.ROCKET_STEP] = scRocketTeleport_Step;
@@ -393,7 +393,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.NAME] = "Brick";
 			map[? ROCKET_MAP.DESCRIPTION] = "Drops like a Stone!";
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.BRICK;
-			map[? ROCKET_MAP.DAMAGE] = 3 * _dmg_mul;
+			map[? ROCKET_MAP.DAMAGE] = 15;
 			map[? ROCKET_MAP.COOLDOWN] = 48 * varcd;
 			map[? ROCKET_MAP.SPEED] = 12 * varspd;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;

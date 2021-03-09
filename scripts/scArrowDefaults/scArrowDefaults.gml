@@ -21,6 +21,7 @@ function scArrowDefaults() {
 	map[? ARROW_MAP.CLIP] = -1; //ammo in a clip
 	map[? ARROW_MAP.STARTUP] = 0; //delay between pressing key and shooting
 	map[? ARROW_MAP.SCALE] = 1; //size of sprite
+	map[? ARROW_MAP.ARROW_CREATE] = -4; //Script for when arrow is created
 	map[? ARROW_MAP.ARROW_AUTO_DESTROY] = false; //auto destroy on collision
 	map[? ARROW_MAP.ARROW_AUTO_DESTROY_ROOM] = true; //auto destroy when out of room
 	map[? ARROW_MAP.ARROW_STEP] = noone; //script to override step (including movement)
