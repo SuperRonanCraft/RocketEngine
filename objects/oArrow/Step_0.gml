@@ -113,7 +113,7 @@ if(!deactivate){
 		
 		
 		//Wall Collision
-		if(scGetParent(oWall, obj)){
+		if(arrow_map[?ARROW_MAP.WALL_COLLIDE] && scGetParent(oWall, obj)){
 			if(obj.shootable || obj.is_wall ){
 				deactivate = true;
 				event_user(1);
@@ -196,5 +196,9 @@ if(timer >= time){
 
 //Despawn if out of room.
 if (checkroom)
-	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20))
-		instance_destroy();
+	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20)){
+		if(arrow_map[? ARROW_MAP.OUT_OF_ROOM_SCRIPT] != -4)
+			script_execute(arrow_map[? ARROW_MAP.OUT_OF_ROOM_SCRIPT])
+		else
+			instance_destroy();
+	}

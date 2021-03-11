@@ -52,6 +52,8 @@ if (!standing) { //Collision
 	}
 }
 
+if(!instance_exists(trapped))
+	exit;
 with (trapped) {
 	if (shootable_map[? SHOOTABLE_MAP.HEALTH] == other.trapped_hp) {
 		player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.TRAPPED;

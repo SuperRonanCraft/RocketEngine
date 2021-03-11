@@ -757,6 +757,7 @@
     {"id":{"name":"scPlayerCharacterGetInfo","path":"scripts/scPlayerCharacterGetInfo/scPlayerCharacterGetInfo.yy",},"order":5,},
     {"id":{"name":"scPlayerCharacterGet","path":"scripts/scPlayerCharacterGet/scPlayerCharacterGet.yy",},"order":7,},
     {"id":{"name":"scPlayerCharacterPaletteChange","path":"scripts/scPlayerCharacterPaletteChange/scPlayerCharacterPaletteChange.yy",},"order":9,},
+    {"id":{"name":"scArrow_Portal_OOR","path":"scripts/scArrow_Portal_OOR/scArrow_Portal_OOR.yy",},"order":1,},
     {"id":{"name":"scPalleteSwapStart","path":"scripts/scPalleteSwapStart/scPalleteSwapStart.yy",},"order":11,},
     {"id":{"name":"scPalleteSwapReset","path":"scripts/scPalleteSwapReset/scPalleteSwapReset.yy",},"order":13,},
     {"id":{"name":"scPalleteSwapSet","path":"scripts/scPalleteSwapSet/scPalleteSwapSet.yy",},"order":15,},

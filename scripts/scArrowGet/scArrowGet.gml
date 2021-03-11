@@ -36,7 +36,7 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.POWER_MAX] = 300; 
 			map[? ARROW_MAP.KBAMT] = 5;
 			map[? ARROW_MAP.WEIGHT] = 8;
-			map[? ARROW_MAP.DAMAGE] = 3;
+			map[? ARROW_MAP.DAMAGE] = 4;
 			break;
 	    case WEAPON_ARROW_TYPE.FIRE:
 			map[? ARROW_MAP.NAME] = "Fire Arrow";
@@ -49,7 +49,7 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.POWER_MAX] = 300; 
 			map[? ARROW_MAP.KBAMT] = 5;
 			map[? ARROW_MAP.WEIGHT] = 8;
-			map[? ARROW_MAP.DAMAGE] = 2;
+			map[? ARROW_MAP.DAMAGE] = 3;
 			break;
 	    case WEAPON_ARROW_TYPE.ICE:
 			map[? ARROW_MAP.NAME] = "Ice Arrow";
@@ -62,7 +62,7 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.POWER_MAX] = 300; 
 			map[? ARROW_MAP.KBAMT] = 5;
 			map[? ARROW_MAP.WEIGHT] = 8;
-			map[? ARROW_MAP.DAMAGE] = 2;
+			map[? ARROW_MAP.DAMAGE] = 3;
 			break;
 	    case WEAPON_ARROW_TYPE.SLIME:
 			map[? ARROW_MAP.NAME] = "Slime Arrow";
@@ -81,13 +81,13 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.NAME] = "Electric Arrow";
 			map[? ARROW_MAP.DESCRIPTION] = "Shock and awe.";
 			map[? ARROW_MAP.PROJECTILE] = ARROW_SPRITE.ELECTRIC;
-			map[? ARROW_MAP.COOLDOWN] = 40;
-			map[? ARROW_MAP.SPEED] = 20;
+			map[? ARROW_MAP.COOLDOWN] = 55;
+			map[? ARROW_MAP.SPEED] = 40;
 			map[? ARROW_MAP.POWER] = 300;
 			map[? ARROW_MAP.POWER_MAX] = 100; 
 			map[? ARROW_MAP.KBAMT] = 1;
-			map[? ARROW_MAP.WEIGHT] = 20;
-			map[? ARROW_MAP.DAMAGE] = 1;
+			map[? ARROW_MAP.WEIGHT] = 10;
+			map[? ARROW_MAP.DAMAGE] = 3;
 			break;
 	    case WEAPON_ARROW_TYPE.SHOTGUN:
 			map[? ARROW_MAP.NAME] = "Multi-shot Arrow";
@@ -99,7 +99,7 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.POWER_MAX] = 300; 
 			map[? ARROW_MAP.KBAMT] = 5;
 			map[? ARROW_MAP.WEIGHT] = 8;
-			map[? ARROW_MAP.DAMAGE] = 2;
+			map[? ARROW_MAP.DAMAGE] = 1;
 			map[? ARROW_MAP.SPAWN_SCRIPT] = scArrow_Shotgun_Spawn;
 			break;
 	    case WEAPON_ARROW_TYPE.SAND:
@@ -107,7 +107,7 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.DESCRIPTION] = "Coarse and rough.";
 			map[? ARROW_MAP.PROJECTILE] = ARROW_SPRITE.SAND;
 			map[? ARROW_MAP.COOLDOWN] = 20;
-			map[? ARROW_MAP.SPEED] = 10;
+			map[? ARROW_MAP.SPEED] = 15;
 			map[? ARROW_MAP.POWER] = 300;
 			map[? ARROW_MAP.POWER_MAX] = 200; 
 			map[? ARROW_MAP.KBAMT] = 5;
@@ -126,7 +126,9 @@ function scArrowGet(argument0) {
 			map[? ARROW_MAP.POWER_MAX] = 300; 
 			map[? ARROW_MAP.KBAMT] = 5;
 			map[? ARROW_MAP.WEIGHT] = 8;
-			map[? ARROW_MAP.DAMAGE] = 3;
+			map[? ARROW_MAP.DAMAGE] = 4;
+			map[? ARROW_MAP.OUT_OF_ROOM_SCRIPT] = scArrow_Portal_OOR;
+			map[? ARROW_MAP.WALL_COLLIDE] = false;
 			break;
 	    case WEAPON_ARROW_TYPE.BRICK:
 			map[? ARROW_MAP.NAME] = "Brick Arrow";
