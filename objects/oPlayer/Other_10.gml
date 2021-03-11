@@ -6,13 +6,15 @@ if (gravity_map[? GRAVITY_MAP.STANDING]) {
 	var spd_ind = time_dialation;
 	var spd = [0.75 * spd_ind, 1.25 * spd_ind, -0.015 * spd_ind];
 	var range = 5;
-	if (gravity_map[? GRAVITY_MAP.HSP] != 0)
+	if (gravity_map[? GRAVITY_MAP.HSP] != 0) {
+		//var _img = floor(player_map[? PLAYER_MAP.ANIMATION_VAR]);
 		if (smoke_cur >= (smoke_act / time_dialation) - irandom(smoke_act / 2)) {
 			amt = irandom_range(1, 3);
 			dirs = gravity_map[? GRAVITY_MAP.HSP] < 0 ? [-5, 5] : [175, 185];
 			smoke_cur = 0;
 		} else
 			smoke_cur++;
+	}
 	if (smoke_lastvsp > 20) {
 		amt = 20;
 		dirs = [-20, 200];
