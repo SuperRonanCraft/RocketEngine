@@ -298,7 +298,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.NAME] = "Shotgun";
 			map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
-			map[? ROCKET_MAP.COOLDOWN] = 45 * varcd;
+			map[? ROCKET_MAP.COOLDOWN] = 50;
 			map[? ROCKET_MAP.SPEED] = 15 * varspd;
 			map[? ROCKET_MAP.DAMAGE] = 8;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;
@@ -344,6 +344,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.ROCKET_DESTROY] = scRocketTeleport_Destroy;
 			map[? ROCKET_MAP.ROCKET_DRAW_OVER] = scRocketTeleport_Draw;
 			map[? ROCKET_MAP.ROCKET_AUTO_DESTROY] = false;
+			map[? ROCKET_MAP.IGNORE_WALL] = true;
 			//map[? ROCKET_MAP.ULTIMATE] = ULTIMATE.PORTAL;
 			map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.PORTAL];
 			map[? ROCKET_MAP.PARTICLE_AMT] = 1;

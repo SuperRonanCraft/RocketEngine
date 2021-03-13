@@ -175,6 +175,7 @@ function scCheckDeathEffect() {
 			
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+				ds_map_copy(corpse.playerMap, deadGuy.player_map);
 				corpse.facing = deadGuy.facing;
 				corpse.friction_base = 0.8;
 				corpse.sticky = false;
@@ -194,6 +195,7 @@ function scCheckDeathEffect() {
 			
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+				ds_map_copy(corpse.playerMap, deadGuy.player_map);
 				corpse.facing = deadGuy.facing;
 				corpse.friction_base = 0.8;
 				corpse.sticky = true;

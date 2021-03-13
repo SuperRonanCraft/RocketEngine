@@ -52,6 +52,20 @@ if (!standing) { //Collision
 	}
 }
 
+
+if (standing){
+	if (trapped == noone) {
+		timer++;
+		if (timer > uptime)
+			instance_destroy();
+	} else {
+		timer_trapped++;
+		if (timer_trapped > uptime_trapped)
+			instance_destroy();
+	}
+}
+
+/*
 if(!instance_exists(trapped))
 	exit;
 with (trapped) {
@@ -62,14 +76,3 @@ with (trapped) {
 	} else
 		instance_destroy(other); //Player was shot, delete trap
 }
-
-if (standing)
-	if (trapped == noone) {
-		timer++;
-		if (timer > uptime)
-			instance_destroy();
-	} else {
-		timer_trapped++;
-		if (timer_trapped > uptime_trapped)
-			instance_destroy();
-	}

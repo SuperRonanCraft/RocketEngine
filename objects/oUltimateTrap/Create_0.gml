@@ -1,7 +1,7 @@
 /// @desc 
 
 owner = noone;
-uptime = 10 * room_speed; //Time in seconds to stay "open"
+uptime = 5 * room_speed; //Time in seconds to stay "open"
 uptime_trapped = 2 * room_speed; //Amount of time to trap someone
 
 //Movement

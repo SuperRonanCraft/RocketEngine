@@ -3,12 +3,7 @@
 if (!instance_exists(player)) exit;
 if (!player.system_ai) exit;
 
-if(movesp == 0){
-	movesp = irandom_range(4,15);	
-	if(instance_exists(player)){
-		player.gravity_map[?GRAVITY_MAP.WALK_SPEED] = movesp;
-	}
-}
+
 
 
 switch (aiType) {

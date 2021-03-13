@@ -23,8 +23,8 @@ function scCheckHealth() {
 		if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 2 && health_map[? HEALTH_MAP.FLASH_ALPHA] == 0) //Pulse health bar
 			health_map[? HEALTH_MAP.FLASH_ALPHA] = 0.75;
 		if (shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] < shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL]) {
-			if (shootable_map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] > room_speed * 2) {
-				shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] += 0.035;
+			if (shootable_map[? SHOOTABLE_MAP.TIME_SINCE_DAMAGE] > room_speed * 5) {
+				shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] += 0.01;
 				part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left -15, bbox_right+15, bbox_top-15, bbox_bottom+15, ps_shape_ellipse, ps_distr_invgaussian);
 				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SHIELD_RECHARGE], 1);
 

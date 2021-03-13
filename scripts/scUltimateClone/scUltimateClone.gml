@@ -5,8 +5,9 @@ function scUltimateClone() {
 	with (inst) {
 		var _cmap = other.player_map[? PLAYER_MAP.CHARACTER_INFO];
 		scPlayerCharacterChange(_cmap[? CHARACTER_MAP.TYPE], false);
-		if (other.system_ai)
-			aiBrain = other.aiBrain;
+		if (other.system_ai){
+			scStartAI();
+		}
 		ultimate_map[? ULTIMATE_CASTING_MAP.ENABLED] = false;
 		weapon_map[? WEAPON_MAP.ENABLED] = false;
 		ability_map[? ABILITY_MAP.ENABLED] = false;
@@ -39,6 +40,7 @@ function scUltimateClone() {
 			other.player_map[? "clones"] = 0;
 		other.player_map[? "clones"]++;
 		player_map[? PLAYER_MAP.DESTROY_SCRIPT] = scUltimateClone_Destroy;
+		player_map[?PLAYER_MAP.CHARACTER_INFO] = other.player_map[?PLAYER_MAP.CHARACTER_INFO];
 	}
 
 	if (player_map[? "clones"] != undefined)
