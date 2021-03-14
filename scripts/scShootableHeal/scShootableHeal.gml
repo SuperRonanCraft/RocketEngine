@@ -48,6 +48,15 @@ function scShootableHeal() {
 		}
 	}
 
+	var stat_hp = scStatsGetType(STATISTICS_TYPE.VALUE_GENERAL, STATISTICS_GENERAL.HEALED);
+	if (!ds_exists(stat_hp, ds_type_map)) {
+		stat_hp = ds_map_create();
+		scStatsCache(STATISTICS_TYPE.VALUE_GENERAL, [STATISTICS_GENERAL.HEALED], stat_hp);
+		stat_hp[? id] = 0;
+	} else if (ds_map_find_value(stat_hp, id) == undefined)
+		stat_hp[? id] = 0;
+	stat_hp[? id] += healed;
+	scAchievements_CustomEvent(ACHIEVEMENTS.MEDIC, stat_hp[? id]);
 	return healed;
 
 

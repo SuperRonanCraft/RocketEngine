@@ -1,4 +1,6 @@
 /// @description  
+if(!instance_exists(owner))
+	exit;
 if (!other.deactivate && other.owner != owner && timer > 0){ //Is not your rocket
 	with (other) {
 		if (target != noone)

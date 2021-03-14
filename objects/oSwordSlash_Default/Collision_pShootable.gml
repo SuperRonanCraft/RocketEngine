@@ -1,5 +1,8 @@
 /// @description  
 
+if(!instance_exists(owner))
+	exit;
+
 var isPlayer = other.object_index == oPlayer;
 ds_list_add(hitList, other);
 if(!schwing && owner != noone && isPlayer && timer > 0){
