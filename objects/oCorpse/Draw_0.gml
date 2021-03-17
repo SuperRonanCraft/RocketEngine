@@ -21,7 +21,7 @@ if(slice){
 	shader_set(shSlice);	
 }*/
 
-if(!gib && ds_exists(playerMap, ds_type_map)){
+if(ds_exists(playerMap, ds_type_map)){
 	var char_info = playerMap[? PLAYER_MAP.CHARACTER_INFO];
 	scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
 }

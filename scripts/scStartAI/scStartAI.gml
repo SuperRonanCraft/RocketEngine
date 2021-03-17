@@ -10,6 +10,7 @@ function scStartAI() {
 	aiBrain = AICore;
 	system_ai = true;
 	track_stats = false;
+	//player_map[? CHARACTER_MAP.PALETTE_INDEX] = 5;
 
 
 }

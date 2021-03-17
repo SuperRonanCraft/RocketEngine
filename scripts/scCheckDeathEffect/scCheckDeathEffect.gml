@@ -23,7 +23,7 @@ function scCheckDeathEffect() {
 				corpse.mask_index = sIceStatue;
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
-				corpse.currentSprite = deadGuy.characterSprites[?ANIMATIONSTATE.HURT];
+				corpse.currentSprite = deadGuy.characterSprites[?ANIMATIONSTATE.DEADFROZEN];
 				corpse.color = c_aqua;
 				corpse.animationVar = irandom_range(0, sprite_get_number(corpse.currentSprite) -1);
 				corpse.statue = true;
@@ -156,6 +156,7 @@ function scCheckDeathEffect() {
 					var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.GIBS];
 					for (var g = 0; g < sprite_get_number(spNum); g++) {
 					    var giblets = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(0,10), deadGuy.depth+200,oCorpse);
+						ds_map_copy(giblets.playerMap, deadGuy.player_map);
 						giblets.currentSprite = spNum;
 						giblets.animationVar = g;
 						giblets.gib = true;
