@@ -29,6 +29,11 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.COMBO: val = "combo_3"; break;
 				case ACHIEVEMENTS.PORTALS: val = "portals_4"; break;
 				case ACHIEVEMENTS.CLONES: val = "clones_2"; break;
+				case ACHIEVEMENTS.ACCUPUNCTURE: val = "accupuncture"; break;
+				case ACHIEVEMENTS.REFLECTVOLLEY: val = "reflectvolley"; break;
+				case ACHIEVEMENTS.INVISISLASH: val = "invisislash"; break;
+				case ACHIEVEMENTS.REFLECTTWICE: val = "twiceslice"; break;
+				case ACHIEVEMENTS.EXPENDABLE: val = "expendable"; break;
 				//case ACHIEVEMENTS.SPRING_SLIME: val = "spring_slime"; break;
 				case ACHIEVEMENTS.SECTION: val = "Achievements."; break;
 				default: val = noone; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
@@ -55,6 +60,11 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.COMBO: val = "Combo Beginner"; break;
 				case ACHIEVEMENTS.PORTALS: val = "Now You're Thinking!"; break;
 				case ACHIEVEMENTS.CLONES: val = "Power in Numbers"; break;
+				case ACHIEVEMENTS.ACCUPUNCTURE: val = "Acupuncture"; break;
+				case ACHIEVEMENTS.REFLECTVOLLEY: val = "Deadly Sport"; break;
+				case ACHIEVEMENTS.INVISISLASH: val = "Closer Than You Think"; break;
+				case ACHIEVEMENTS.REFLECTTWICE: val = "Twice Sliced"; break;
+				case ACHIEVEMENTS.EXPENDABLE: val = "Meant To Be Expendable"; break;
 				//case ACHIEVEMENTS.SPRING_SLIME: val = "A Spring in your Step"; break;
 				default: val = "Something important"; break;
 			}
@@ -76,6 +86,15 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.ULTIMATES_CASTED_100: val = "Cast 100 ultimates"; break;
 				case ACHIEVEMENTS.ULTIMATES_CASTED_1000: val = "Cast 1,000 ultimates"; break;
 				case ACHIEVEMENTS.ROCKETS_CHANGED_10: val = "Pickup 10 rockets"; break;
+				case ACHIEVEMENTS.ACCUPUNCTURE: val = "Stick 3 projectiles into someone at the same time"; break;
+				case ACHIEVEMENTS.MEDIC: val = "Restore 100 health in one game"; break;
+				case ACHIEVEMENTS.COMBO: val = "Land a 3+ hit combo"; break;
+				case ACHIEVEMENTS.PORTALS: val = "Have multiple portals up"; break;
+				case ACHIEVEMENTS.CLONES: val = "Control more than 1 clone at a time"; break;
+				case ACHIEVEMENTS.REFLECTVOLLEY: val = "Reflect a projectile that was reflected"; break;
+				case ACHIEVEMENTS.INVISISLASH: val = "Slice a player while invisible"; break;
+				case ACHIEVEMENTS.REFLECTTWICE: val = "Reflect 2 or more projectiles with one slice"; break;
+				case ACHIEVEMENTS.EXPENDABLE: val = "Have a clone take at least 25 damage at once"; break;
 				default: val = noone; break;
 			}
 			break;
@@ -100,7 +119,11 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.COMBO: val = s_achievement_8; break;
 				case ACHIEVEMENTS.PORTALS: val = s_achievement_9; break;
 				case ACHIEVEMENTS.CLONES: val = s_achievement_11; break;
-				//case ACHIEVEMENTS.SPRING_SLIME: val = s_achievement_11; break;
+				case ACHIEVEMENTS.ACCUPUNCTURE: val = s_achievement_10; break;
+				case ACHIEVEMENTS.REFLECTVOLLEY: val = s_achievement_12; break;
+				case ACHIEVEMENTS.INVISISLASH: val = s_achievement_13; break;
+				case ACHIEVEMENTS.REFLECTTWICE: val = s_achievement_14; break;
+				case ACHIEVEMENTS.EXPENDABLE: val = s_achievement_15; break;
 				default: val = sTargetBomb; break;
 			}
 			break;
@@ -156,17 +179,18 @@ function scAchievementsGetType(argument0, argument1) {
 					val = "Ultimates Casted: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.ULTIMATES_CASTED_10)); break;
 				case ACHIEVEMENTS.ROCKETS_CHANGED_10:
 					val = "Rockets Picked up: " + string(scAchievementsGetType(ACHIEVEMENT_TYPE.TRACKING, ACHIEVEMENTS.ROCKETS_CHANGED_10)); break;
-				case ACHIEVEMENTS.MEDIC: val = "Restore 100 health in one game"; break;
-				case ACHIEVEMENTS.COMBO: val = "Land a 3+ hit combo"; break;
-				case ACHIEVEMENTS.PORTALS: val = "Have multiple portals up"; break;
-				case ACHIEVEMENTS.CLONES: val = "Control more than one clone"; break;
 				//case ACHIEVEMENTS.SPRING_SLIME: val = "Use a spring while affected by the Slime!"; break;
 				default: val = noone; break;
 			}
 			break;
 		case ACHIEVEMENT_TYPE.GOAL:
 			switch (enu) {
-				//case ACHIEVEMENTS.SPRING_SLIME: val = true; break;
+				case ACHIEVEMENTS.ACCUPUNCTURE: val = true; break;
+				case ACHIEVEMENTS.REFLECTVOLLEY: val = true; break;
+				case ACHIEVEMENTS.INVISISLASH: val = true; break;
+				case ACHIEVEMENTS.REFLECTTWICE: val = true; break;
+				case ACHIEVEMENTS.EXPENDABLE: val = true; break;
+				
 				case ACHIEVEMENTS.CLONES: val = 2; break;
 				case ACHIEVEMENTS.PORTALS: val = 2; break;
 				//10
@@ -244,6 +268,11 @@ function scAchievementsGetType(argument0, argument1) {
 		COMBO,
 		PORTALS,
 		CLONES,
+		ACCUPUNCTURE,
+		REFLECTVOLLEY,
+		INVISISLASH,
+		REFLECTTWICE,
+		EXPENDABLE,
 		//SPRING_SLIME,
 		//Keep last
 		SECTION

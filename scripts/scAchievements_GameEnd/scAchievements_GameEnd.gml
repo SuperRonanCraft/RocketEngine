@@ -4,6 +4,7 @@ function scAchievements_GameEnd(argument0) {
 	var achs_vals = ds_list_create();
 	var map = oAchievementHandler.achieve_map;
 
+
 	var gm = argument0;
 	switch (gm) {
 		case GAMEMODE.ONEVONE:
@@ -19,5 +20,7 @@ function scAchievements_GameEnd(argument0) {
 
 	scAchievementsCache(achs, achs_vals);
 
+	//ds_list_destroy(achs);
+	//ds_list_destroy(achs_vals);
 
 }

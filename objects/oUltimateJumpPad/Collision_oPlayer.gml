@@ -18,5 +18,5 @@ with (other) {
 ds_list_add(jump_list, other.id); //Dont allow the jump till we are off this list
 
 //Achievement
-if (scBuffFind(other, BUFFTYPE.SLIME))
-	scAchievements_CustomEvent(ACHIEVEMENTS.SPRING_SLIME, true);
+//if (scBuffFind(other, BUFFTYPE.SLIME))
+	//scAchievements_CustomEvent(ACHIEVEMENTS.SPRING_SLIME, true);

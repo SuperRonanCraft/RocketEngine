@@ -174,6 +174,10 @@ function scShootableDamage() {
 				with(damaging){
 					scCheckHealth()
 				}
+				
+				if(damaging.isClone && dmg >= 25)
+					scAchievements_CustomEvent(ACHIEVEMENTS.EXPENDABLE, true);
+					
 			
 			}
 		

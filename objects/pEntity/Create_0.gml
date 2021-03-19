@@ -30,5 +30,8 @@ smoke_act = 10;
 smoke_lastvsp = 0;
 
 destroy = false;
+stuckAmount = 0;
+
+isClone = false;
 //Aim type
 //auto_aim = false;

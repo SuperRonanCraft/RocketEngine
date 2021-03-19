@@ -39,6 +39,11 @@ if (shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 					newY = other.y - newY;
 					image_speed = 0;
 					depth = other.depth - 10;
+					if(variable_instance_exists(stuckTo, "stuckAmount")){
+						other.stuckAmount++;
+						if(other.stuckAmount >= 3)
+							scAchievements_CustomEvent(ACHIEVEMENTS.ACCUPUNCTURE, true);
+					}
 				}
 				
 				//If the sprite changes on stick, change it!

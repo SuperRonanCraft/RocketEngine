@@ -6,6 +6,9 @@ function scAchievements_CustomEvent(argument0, argument1) {
 	var current_val = argument1;
 	var map = oAchievementHandler.achieve_map;
 
+	if(room == rMenu)
+		exit;
+
 	var achs = ds_list_create();
 	var achs_vals = ds_list_create();
 	//show_debug_message("CUSTOM ACHIEVEMENT EVENT!");
@@ -20,6 +23,7 @@ function scAchievements_CustomEvent(argument0, argument1) {
 		exit;
 		
 	scAchievementsCache(achs, achs_vals);
-
+	//ds_list_destroy(achs);
+	//ds_list_destroy(achs_vals);
 
 }

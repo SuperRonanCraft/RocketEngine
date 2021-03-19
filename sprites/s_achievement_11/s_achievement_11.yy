@@ -141,7 +141,7 @@
     "eventStubScript": null,
     "parent": {"name":"s_achievement_11","path":"sprites/s_achievement_11/s_achievement_11.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "s_achievement_11",
     "tags": [],
     "resourceType": "GMSequence",
   },

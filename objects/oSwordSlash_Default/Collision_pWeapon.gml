@@ -23,13 +23,25 @@ if (!other.deactivate && other.owner != owner && timer > 0){ //Is not your rocke
 		other.trueTimer = 4;
 		
 		weapon_map[?WEAPON_MAP.SPEED] += 0.5;
-		weapon_map[?WEAPON_MAP.DAMAGE] += 1;
+		weapon_map[?WEAPON_MAP.DAMAGE] *= 2;
 		timer = 0;
 		
+		if(!variable_instance_exists(id,"reflectCount"))
+			reflectCount = 0;
+		reflectCount++;
+		
 	}
+	
+	if(variable_instance_exists(other.id,"reflectCount"))
+		if(other.reflectCount >= 2)
+			scAchievements_CustomEvent(ACHIEVEMENTS.REFLECTVOLLEY, true);
 	
 	var slash = instance_create_depth(other.x,other.y,depth,oUltimateSlashEffect);
 	scPlaySound(SOUND.EFFECT_REFLECT);
 	slash.owner = id;
+	reflectHit++;
+	
+	if(reflectHit >= 2)
+		scAchievements_CustomEvent(ACHIEVEMENTS.REFLECTTWICE, true);
 
 }

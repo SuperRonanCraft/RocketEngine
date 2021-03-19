@@ -11,12 +11,17 @@ if (shuriken_map[? SHURIKEN_MAP.DESPAWN_SCRIPT] == noone) {
 	
 		image_speed = sign(randdirx);
 	
+		if(instance_exists(stuckTo)){
+			if(variable_instance_exists(stuckTo, "stuckAmount"))
+				stuckTo.stuckAmount--;
+		}
 		stuckTo = noone;
 		deactivate = true;
 	
 		debounce = true;
 		hsp = randdirx
 		vsp = randdiry;
+		
 	}
 	vsp += 1.1;
 	image_alpha -= 0.01;

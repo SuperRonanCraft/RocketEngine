@@ -18,6 +18,9 @@ if(!schwing && owner != noone && isPlayer && timer > 0){
 		
 			trueTimer = 4;
 			scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
+			
+			if(scBuffFind(owner, BUFFTYPE.INVISIBLE))
+				scAchievements_CustomEvent(ACHIEVEMENTS.INVISISLASH, true);
 		}
 	}
 }
