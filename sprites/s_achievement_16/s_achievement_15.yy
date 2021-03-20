@@ -104,8 +104,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_15/s_achievement_15.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_15/s_achievement_15.yy",},"LayerId":{"name":"969e5e5f-5e88-4a03-afdf-525f88b76888","path":"sprites/s_achievement_15/s_achievement_15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_15/s_achievement_15.yy",},"LayerId":{"name":"a4d77281-6fa7-4403-b347-6fc813339cc7","path":"sprites/s_achievement_15/s_achievement_15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_15/s_achievement_15.yy",},"LayerId":{"name":"1c61afcc-56f2-4fd0-b232-418520cd234e","path":"sprites/s_achievement_15/s_achievement_15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_15/s_achievement_15.yy",},"LayerId":{"name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","path":"sprites/s_achievement_15/s_achievement_15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_15/s_achievement_15.yy",},"LayerId":{"name":"969e5e5f-5e88-4a03-afdf-525f88b76888","path":"sprites/s_achievement_15/s_achievement_15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_achievement_15","path":"sprites/s_achievement_15/s_achievement_15.yy",},"resourceVersion":"1.0","name":"72e8c763-fce3-4b97-8114-4e381328af7b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {

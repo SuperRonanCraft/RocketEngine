@@ -34,7 +34,8 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.INVISISLASH: val = "invisislash"; break;
 				case ACHIEVEMENTS.REFLECTTWICE: val = "twiceslice"; break;
 				case ACHIEVEMENTS.EXPENDABLE: val = "expendable"; break;
-				//case ACHIEVEMENTS.SPRING_SLIME: val = "spring_slime"; break;
+				case ACHIEVEMENTS.CAUGHTINTRAP: val = "caughtintrap"; break;
+				case ACHIEVEMENTS.PORTALSHOT: val = "portalshot"; break;
 				case ACHIEVEMENTS.SECTION: val = "Achievements."; break;
 				default: val = noone; show_debug_message("NO SECTION FOR ENUM " + string(enu)); break;
 			}
@@ -65,7 +66,8 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.INVISISLASH: val = "Closer Than You Think"; break;
 				case ACHIEVEMENTS.REFLECTTWICE: val = "Twice Sliced"; break;
 				case ACHIEVEMENTS.EXPENDABLE: val = "Meant To Be Expendable"; break;
-				//case ACHIEVEMENTS.SPRING_SLIME: val = "A Spring in your Step"; break;
+				case ACHIEVEMENTS.CAUGHTINTRAP: val = "Caught Red-Footed"; break;
+				case ACHIEVEMENTS.PORTALSHOT: val = "The Twang Heard Around the World"; break;
 				default: val = "Something important"; break;
 			}
 			break;
@@ -95,6 +97,8 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.INVISISLASH: val = "Slice a player while invisible"; break;
 				case ACHIEVEMENTS.REFLECTTWICE: val = "Reflect 2 or more projectiles with one slice"; break;
 				case ACHIEVEMENTS.EXPENDABLE: val = "Have a clone take at least 25 damage at once"; break;
+				case ACHIEVEMENTS.CAUGHTINTRAP: val = "Have a trap trigger on an invisible opponent"; break;
+				case ACHIEVEMENTS.PORTALSHOT: val = "Hit a looping portal arrow"; break;
 				default: val = noone; break;
 			}
 			break;
@@ -124,6 +128,8 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.INVISISLASH: val = s_achievement_13; break;
 				case ACHIEVEMENTS.REFLECTTWICE: val = s_achievement_14; break;
 				case ACHIEVEMENTS.EXPENDABLE: val = s_achievement_15; break;
+				case ACHIEVEMENTS.CAUGHTINTRAP: val = s_achievement_16; break;
+				case ACHIEVEMENTS.PORTALSHOT: val = s_achievement_17; break;
 				default: val = sTargetBomb; break;
 			}
 			break;
@@ -190,6 +196,8 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.INVISISLASH: val = true; break;
 				case ACHIEVEMENTS.REFLECTTWICE: val = true; break;
 				case ACHIEVEMENTS.EXPENDABLE: val = true; break;
+				case ACHIEVEMENTS.CAUGHTINTRAP: val = true; break;
+				case ACHIEVEMENTS.PORTALSHOT: val = true; break;
 				
 				case ACHIEVEMENTS.CLONES: val = 2; break;
 				case ACHIEVEMENTS.PORTALS: val = 2; break;
@@ -273,6 +281,8 @@ function scAchievementsGetType(argument0, argument1) {
 		INVISISLASH,
 		REFLECTTWICE,
 		EXPENDABLE,
+		CAUGHTINTRAP,
+		PORTALSHOT,
 		//SPRING_SLIME,
 		//Keep last
 		SECTION

@@ -45,4 +45,5 @@ rotate = false;
 imgdir = irandom_range(0,359);
 facing = 1;
 
+ported = 0;
 time_dialation = 1;

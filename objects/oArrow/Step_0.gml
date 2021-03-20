@@ -75,6 +75,9 @@ if(!deactivate){
 						scBuffApply(buff_array[b],obj,owner);
 					}
 					
+					if(ported > 0)
+						scAchievements_CustomEvent(ACHIEVEMENTS.PORTALSHOT, true);
+					
 					//Damage player
 					if (scShootableDamage(owner, obj, false, true, dmg,noone,DAMAGE_TYPE.STAB,noone,noone)){
 						obj.causeOfDeath = arrow_map[? ARROW_MAP.DEATHCAUSE];
@@ -99,6 +102,11 @@ if(!deactivate){
 							newY = y - obj.y + irandom_range(-2,2);
 							deactivate = true;
 							newAngle = image_angle;
+							if(variable_instance_exists(stuckTo, "stuckAmount")){
+								stuckTo.stuckAmount++;
+								if(stuckTo.stuckAmount >= 3)
+									scAchievements_CustomEvent(ACHIEVEMENTS.ACCUPUNCTURE, true);
+							}
 						}
 						
 						else{

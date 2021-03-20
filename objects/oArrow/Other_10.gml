@@ -17,6 +17,10 @@ if (arrow_map[? ARROW_MAP.DESPAWN_SCRIPT] == noone) {
 		debounce = true;
 		hsp = randdirx
 		vsp = randdiry;
+		if(instance_exists(stuckTo)){
+			if(variable_instance_exists(stuckTo, "stuckAmount"))
+				stuckTo.stuckAmount--;
+		}
 	}
 	vsp += 2 * arrow_map[?ARROW_MAP.WEIGHT]/room_speed;
 	image_alpha -= 0.01;

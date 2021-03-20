@@ -4,7 +4,7 @@ function scArrow_Portal_OOR(){
 	if(!variable_instance_exists(id, "ported"))
 		ported = 0;
 	
-	if(ported == 0){
+	if(ported < 2){
 		if(x > room_width)
 			x = 0;
 		else if(x < 0)

@@ -10,4 +10,6 @@ if (standing && trapped == noone && other.id != owner.id) {
 	trapped_hp = other.shootable_map[? SHOOTABLE_MAP.HEALTH];
 	image_index = 2;
 	scBuffAdd(BUFFTYPE.BLEEDOUT, other, owner);
+	if(scBuffFind(trapped,BUFFTYPE.INVISIBLE))
+		scAchievements_CustomEvent(ACHIEVEMENTS.CAUGHTINTRAP, true);
 }
