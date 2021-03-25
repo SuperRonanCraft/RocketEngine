@@ -288,7 +288,8 @@ if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_
 				if (ds_grid[# 1, i] == menu_special[a]) {ignore = true; break;} //Is this element ignored?
 			if (!ignore && is_array(start_x) && scUIHovering(start_x[i], start_y[i], text, x_buffer, 10, scale_main_hovering, centered ? fa_middle : fa_right)) {
 				option = i;
-				break;} //Set the new option, break away
+				break;
+			} //Set the new option, break away
 			else option = -1;
 		}
 } else {
@@ -341,6 +342,7 @@ if (!unfolding && (device_mouse_x_to_gui(0) != mouse_x_old || device_mouse_y_to_
 //Sounds and update selection
 if (option != menu_option[page]) { //Not on the same selection
 	menu_option[page] = option; //-1 means no option
+	//show_debug_message("MENU OPTION SET TO " + string(option));
 	if (option != -1) audio_play_sound(SOUND.UI_HOVER, 5, false);
 }
 

@@ -42,6 +42,7 @@ function scUltimateClone() {
 		player_map[? PLAYER_MAP.DESTROY_SCRIPT] = scUltimateClone_Destroy;
 		player_map[?PLAYER_MAP.CHARACTER_INFO] = other.player_map[?PLAYER_MAP.CHARACTER_INFO];
 		isClone = true;
+		alarm[1] = 60;
 	}
 
 	if (player_map[? "clones"] != undefined)

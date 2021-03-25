@@ -108,6 +108,12 @@ global.mode_rumble_singleplayer = 0; //Multiplayer level
 global.score_mode_p1_wins = 0;
 global.score_mode_p2_wins = 0;
 
+//Player Memory (last character/pallet)
+global.last_character_p1 = noone;
+global.last_character_p2 = noone;
+global.last_pallet_p1 = noone;
+global.last_pallet_p2 = noone;
+
 //Set default font
 draw_set_font(fPixel);
 

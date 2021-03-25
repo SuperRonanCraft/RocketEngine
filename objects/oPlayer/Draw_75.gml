@@ -1,3 +1,3 @@
 /// @desc 
-if (display)
+if (display && room != rMenu)
 	scPlayerDrawIU();

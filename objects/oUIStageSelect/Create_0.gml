@@ -170,7 +170,7 @@ switch (type) {
 menu_pages_centered = [ds_menu_main];
 
 for (var i = 0; i < array_length(menu_pages); i++)
-	menu_option[i] = 0;
+	menu_option[i] = -1;
 
 //Disabled unfolding
 unfolding = false;

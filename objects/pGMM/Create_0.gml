@@ -73,7 +73,7 @@ menu_pages_index = [menu_page.main];
 menu_pages_centered = [ds_menu_main];
 
 for (var i = 0; i < array_length(menu_pages); i++)
-	menu_option[i] = 0;
+	menu_option[i] = -1;
 
 start_y_default = RES_H - RES_H / 4;
 

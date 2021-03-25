@@ -7,7 +7,7 @@ function scPlaySound() {
 
 	var sound = argument[0];
 	var allow_multi = argument_count > 3 ? (argument[3] != noone ? argument[3] : true) : true;
-	if (sound != noone) {
+	if (sound != noone && !(room == rMenu && sound > SOUND.UI_SELECT)) {
 		var play = true;
 		if (!allow_multi)
 			if (audio_is_playing(sound))

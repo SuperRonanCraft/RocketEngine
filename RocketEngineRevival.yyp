@@ -859,6 +859,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":1,},
     {"id":{"name":"oCameraFollow","path":"objects/oCameraFollow/oCameraFollow.yy",},"order":3,},
     {"id":{"name":"oCameraExpandable","path":"objects/oCameraExpandable/oCameraExpandable.yy",},"order":5,},
+    {"id":{"name":"scPlayerLoadPrevious","path":"scripts/scPlayerLoadPrevious/scPlayerLoadPrevious.yy",},"order":18,},
     {"id":{"name":"oTransition","path":"objects/oTransition/oTransition.yy",},"order":5,},
     {"id":{"name":"oTips","path":"objects/oTips/oTips.yy",},"order":7,},
     {"id":{"name":"oSpawn","path":"objects/oSpawn/oSpawn.yy",},"order":13,},

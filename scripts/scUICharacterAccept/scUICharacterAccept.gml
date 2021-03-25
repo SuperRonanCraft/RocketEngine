@@ -3,7 +3,16 @@ function scUICharacterAccept(argument0) {
 	var value = argument0;
 
 	ds_grid_destroy(ds_menu_main);
-	if (value == 1) { //TRUE
+	if (player.player_aimode) {
+		ds_menu_main = scUICreateMenuPage(
+			["READY",		menu_element_type.toggle_live,	scUICharacterAccept,	noone,	value, "Accept character"],
+			//[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],
+			//[["NEXT >>",	menu_centered.right],		menu_element_type.script_runner,	scUICharacterNext],
+		);
+		//char_scale_cur_max = char_scale_cur_selected;
+		selected = true;
+		scUICharacterConfirm(false);
+	} else if (value == 1) { //TRUE
 		ds_menu_main = scUICreateMenuPage(
 			["<< READY!",		menu_element_type.toggle_live,	scUICharacterAccept,	noone,	value, "Accept character"],
 			//[["<< PREV",	menu_centered.left],		menu_element_type.script_runner,	scUICharacterPrev],

@@ -20,10 +20,10 @@ buffer = 10;
 //USE '\n' TO LINE BREAK
 tip_list = scUICreateMenuPage(
 	[tip_element.sprite, sHealth, "Pickups", "Low on health?\nPickup an extra life!", 1],
-	[tip_element.sprite, sUltFrosty, "Ultimates", "Some are interactable!", 1],
+	[tip_element.sprite, sPlayer_idle, "Ultimates", "Each hero has their own ultimate.\nPick your favorite hero and\nobliterate the competition.", 1],
 	[tip_element.sprite, choose(s_abilityIcon_Invisible, s_abilityIcon_Damage, s_abilityIcon_LifeSteal, s_abilityIcon_Cooldown),
 		"Buffs", "Gain an advantage over\nothers by grabbing a buff!", 0.5],
-	[tip_element.sprite, s_modifier_fire, "Ultimates", "Each weapon modifier\nhas its own ultimate!", 1],
+	//[tip_element.sprite, s_modifier_fire, "Ultimates", "Each ", 1],
 );
 
 tip_current = irandom_range(0, ds_grid_height(tip_list) - 1); //Randomize the first tip

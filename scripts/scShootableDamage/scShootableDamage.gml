@@ -68,7 +68,7 @@ function scShootableDamage() {
 					_dmg_left -= map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 					_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_SHIELD];
 					map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
-					scPlaySound(SOUND.UI_SELECT);
+					//scPlaySound(SOUND.UI_SELECT);
 					scSpawnParticle(damaging.x, damaging.bbox_top, 10, 10, spShield, WORLDPART_TYPE.SHIELD);
 				} 
 			
@@ -145,7 +145,7 @@ function scShootableDamage() {
 				_dmg_inflicted += _dmg_left;
 			
 				part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
-				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.HEALTH_DAMAGE], _dmg_left*1.5);
+				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.HEALTH_DAMAGE], clamp(_dmg_left*1.5, 5, 100));
 			}
 		
 			dmg = _dmg_inflicted; //Total damage we just took

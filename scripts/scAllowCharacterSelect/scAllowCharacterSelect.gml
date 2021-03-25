@@ -14,6 +14,14 @@ function scAllowCharacterSelect() {
 							break;
 					}
 					player = instance_find(oPlayer, i);
+					if (player.player_aimode) { //Super HARDCODED MENU STUFF this will super break if ai stuff changes for character select
+						scUICharacterAccept(true);
+						page_workingon = page;
+						scale_option[0] = scale_main;
+						start_y[0] = start_y_default + (-(((5 - 1) / 2) * y_buffer) + (0 * y_buffer));
+						start_x[0] = start_x_default;
+						centered = true;
+					}
 					button_down = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.SHOOT]);
 					button_left = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.LEFT]);
 					button_up = scSettingsGetType(SETTINGS_TYPE.VALUE, player.key_map[? KEYBIND_MAP.JUMP]);

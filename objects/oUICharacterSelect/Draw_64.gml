@@ -114,17 +114,19 @@ if (instance_exists(player))
 		other.char_img += image_speed * time_dialation;
 		if (other.char_img >= sprite_get_number(sprite))
 			other.char_img = 0;
-		if (!other.selected) {
+		//if (!other.selected) {
 			var char = player_map[? PLAYER_MAP.CHARACTER_INFO];
 			scDrawText(other.start_x_default, other.start_y_default - 38, char[? CHARACTER_MAP.NAME], c_yellow, 0.5);
 			if (char[? CHARACTER_MAP.TYPE] != undefined) {
 				other.char_last = char[? CHARACTER_MAP.TYPE];
 				other.char_palette = char[? CHARACTER_MAP.PALETTE_INDEX];
 			}
-		}
+		//}
 	}
 
 char_x = lerp(char_x, 0, 0.1);
+if (selected)
+	char_x = 0;
 //char_x_cur = lerp(char_x_cur, 0, 0.1);
 char_scale_a = lerp(char_scale_a, char_scale_min, 0.1);
 char_scale_b = lerp(char_scale_b, char_scale_min, 0.1);

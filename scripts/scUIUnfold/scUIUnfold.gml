@@ -15,7 +15,7 @@ function scUIUnfold() {
 		}
 	} else { //Stop the event and allow mouse control
 		unfolding = false;
-		if (menu_option[page] == -1) menu_option[page] = 0;
+		if (menu_option[page] != -1) menu_option[page] = -1;
 	}
 
 

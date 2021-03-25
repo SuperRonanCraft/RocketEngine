@@ -3,6 +3,8 @@ function scPlayerLoadModifiers(argument0) {
 	//@arg player - Player we are modifying
 	var player = argument0;
 
+	var _mode = 0;
+
 	switch (global.gamemode) {
 		case GAMEMODE.ONEVONE:
 			with (player) {
@@ -19,10 +21,11 @@ function scPlayerLoadModifiers(argument0) {
 				shootable_map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] = hp;
 				scStageUltimateStart(global.mode_1v1_ultimates);
 				weapon_map[? WEAPON_MAP.ENABLED] = global.mode_1v1_weapon;
-				if (global.mode_1v1_singleplayer == 1 && team == TEAM.RIGHT)
+				if (global.mode_1v1_singleplayer == 1 && team == TEAM.RIGHT) {
 					scStartAI();
-				else if (global.mode_1v1_singleplayer == 2)
+				} else if (global.mode_1v1_singleplayer == 2)
 					scStartAI();
+				_mode = global.mode_1v1_singleplayer;
 				//if (global.mode_1v1_lowgravity)
 				//	grv /= 2;
 				//auto_aim = true;
@@ -77,6 +80,7 @@ function scPlayerLoadModifiers(argument0) {
 				else if (global.mode_rumble_singleplayer == 2)
 					scStartAI();
 				auto_aim = true;
+				_mode = global.mode_rumble_singleplayer;
 			}
 			break;
 		case GAMEMODE.DEATHMATCH:
@@ -84,6 +88,5 @@ function scPlayerLoadModifiers(argument0) {
 		default: //SINGLEPLAYER, TUTORIAL
 			break;
 	}
-
 
 }

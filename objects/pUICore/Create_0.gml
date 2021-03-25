@@ -61,7 +61,7 @@ enum menu_centered {
 //The page we are on
 page = 0;
 //The option we have selected in a page (array)
-menu_option = 0;
+menu_option = -1;
 //All the pages we have loaded in a ui (array)
 menu_pages = 0;
 //The enum id of each page (array)

@@ -25,7 +25,7 @@ ds_local = scUICreateMenuPage(
 	//[global.gamemodes[GAMEMODE.ONLINE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONLINE],		"Multiplayer",		true],
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player",		true],
 	[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],			"Duke it out!",			true],
-	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!",		true],
+	//[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!",		true],
 	//[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs...",	true],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );
@@ -111,10 +111,10 @@ menu_special_start_y = [pos + (RES_H / 16), pos + (RES_H / 16), pos, noone, pos 
 for (var i = 0; i < array_length(menu_pages); i++)
 	for (var a = 0; a < array_length(menu_special); a++) {
 		var ds_grid = menu_pages[i];
-		if (ds_grid[# 1, 0] == menu_special[a]) menu_option[i] = 1; //Default selection for each special page
-		else menu_option[i] = 0; //Default selection for each page
+		if (ds_grid[# 1, 0] == menu_special[a]) menu_option[i] = -1; //Default selection for each special page
+		else menu_option[i] = -1; //Default selection for each page
 	}
-menu_option[page] = 0;
+menu_option[page] = -1;
 
 //Unfolding animation
 unfolding = true;
