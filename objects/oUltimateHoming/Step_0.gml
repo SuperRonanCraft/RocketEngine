@@ -3,7 +3,7 @@
 x = owner.x;
 y = owner.y;
 
-if (timer % 5 == 0 && timer < room_speed)
+if (timer % 5 == 0 && timer < room_speed*1.5)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
 			irandom_range(45, 135), owner, weapon_map, [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;

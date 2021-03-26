@@ -15,6 +15,12 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_clone;
 			break;
+		case ABILITY_TYPE.BIGROCKET: //Just a big rocket
+			ds_map[? ABILITY_MAP.NAME] = "Pure Chaos";
+			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateDefault;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_bigrocket;
+			break;
 		case ABILITY_TYPE.PORTAL: //Dodge the lasers!
 			ds_map[? ABILITY_MAP.NAME] = "Termination";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityPortal;
@@ -39,10 +45,17 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.COOLDOWN] = 12;
 			ds_map[? "amt"] = 8; //amount of rockets in 90 degree cone
 			break;
+		
+		case ABILITY_TYPE.REFLECT:
+			ds_map[? ABILITY_MAP.NAME] = "Slice and dice!";
+			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateSwordDefault;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 3;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_reflect;
+			break;
 	}
 
 	enum ABILITY_TYPE {
-		CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,
+		CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,REFLECT,BIGROCKET,
 		NONE
 	}
 

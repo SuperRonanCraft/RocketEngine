@@ -92,7 +92,7 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.MEDIC: val = "Restore 100 health in one game"; break;
 				case ACHIEVEMENTS.COMBO: val = "Land a 3+ hit combo"; break;
 				case ACHIEVEMENTS.PORTALS: val = "Have multiple portals up"; break;
-				case ACHIEVEMENTS.CLONES: val = "Control more than 1 clone at a time"; break;
+				case ACHIEVEMENTS.CLONES: val = "Control more than 10 clones at a time"; break;
 				case ACHIEVEMENTS.REFLECTVOLLEY: val = "Reflect a projectile that was reflected"; break;
 				case ACHIEVEMENTS.INVISISLASH: val = "Slice a player while invisible"; break;
 				case ACHIEVEMENTS.REFLECTTWICE: val = "Reflect 2 or more projectiles with one slice"; break;
@@ -199,7 +199,7 @@ function scAchievementsGetType(argument0, argument1) {
 				case ACHIEVEMENTS.CAUGHTINTRAP: val = true; break;
 				case ACHIEVEMENTS.PORTALSHOT: val = true; break;
 				
-				case ACHIEVEMENTS.CLONES: val = 2; break;
+				case ACHIEVEMENTS.CLONES: val = 10; break;
 				case ACHIEVEMENTS.PORTALS: val = 2; break;
 				//10
 				case ACHIEVEMENTS.MEDIC: val = 100; break;

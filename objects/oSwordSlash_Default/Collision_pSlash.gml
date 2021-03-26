@@ -10,9 +10,6 @@ if(other.owner != owner){
 	scPlaySound(SOUND.EFFECT_REFLECT);
 	slash.owner = id;
 
-	owner.hsp_move += (other.owner.facing * 20);
-	owner.vsp_move -= 5;
-
 	schwing = true;
 
 }
