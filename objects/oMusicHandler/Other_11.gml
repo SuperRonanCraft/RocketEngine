@@ -9,9 +9,9 @@ for (var i = 0; i < array_length(sounds); i++)
 		break;
 	}
 var sound = sounds[0];
-//while (sound == dontplay)
-//	sound = sounds[abs(random_range(0, 0))];
+while (sound == dontplay)
+	sound = sounds[irandom_range(0, array_length(sounds) - 1)];
 audio_stop_all();
 //Play the song
-//audio_play_sound(sound, 1000, true);
+audio_play_sound(sound, 1000, true);
 current_sound = sound;

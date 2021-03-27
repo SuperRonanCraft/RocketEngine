@@ -1,5 +1,5 @@
 /// @desc Play music per room
-if (!sound_started) exit;
+//if (!sound_started) exit;
 if (room == rMenu) {
 	if (!audio_is_playing(snTitle)) {
 		audio_stop_all();
