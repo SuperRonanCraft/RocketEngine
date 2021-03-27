@@ -12,13 +12,13 @@ function scAbilityLoad(argument0) {
 		case ABILITY_TYPE.CLONE: //Just a clone
 			ds_map[? ABILITY_MAP.NAME] = "Pretty Guy";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateClone;
-			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 8;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_clone;
 			break;
 		case ABILITY_TYPE.BIGROCKET: //Just a big rocket
 			ds_map[? ABILITY_MAP.NAME] = "Pure Chaos";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateDefault;
-			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 12;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_bigrocket;
 			break;
 		case ABILITY_TYPE.PORTAL: //Dodge the lasers!
