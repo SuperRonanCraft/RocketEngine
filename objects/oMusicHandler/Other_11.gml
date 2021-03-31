@@ -15,3 +15,4 @@ audio_stop_all();
 //Play the song
 audio_play_sound(sound, 1000, true);
 current_sound = sound;
+audio_sound_gain(current_sound, global.vol_music, 0);

@@ -31,8 +31,8 @@ ds_local = scUICreateMenuPage(
 );
 
 ds_info = scUICreateMenuPage(
-	["&eSTATISTICS",	menu_element_type.page_transfer,	menu_page.stats,		"&aCheck your game stats!"],
-	["&eACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.list_achievements,	"&aGotta catch em all!"],
+	//["&eSTATISTICS",	menu_element_type.page_transfer,	menu_page.stats,		"&aCheck your game stats!"],
+	["ACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.list_achievements,	"Gotta catch em all!"],
 	["MODIFIERS",		menu_element_type.page_transfer,	menu_page.list_weapons,	"Learn about every weapon modifier!"],
 	["BUFFS",			menu_element_type.page_transfer,	menu_page.list_buffs,	"Get to know your buff!"],
 	["CONTROLS",		menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check ur keys!"],
@@ -40,14 +40,14 @@ ds_info = scUICreateMenuPage(
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );
 
-ds_stats = scUICreateMenuPage(
+/*ds_stats = scUICreateMenuPage(
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.stats,	GAMEMODE.ONEVONE],
 	[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.stats,	GAMEMODE.KNOCKOUT],
 	[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.stats,	GAMEMODE.TARGETS],
 	//[global.gamemodes[GAMEMODE.SINGLE],		menu_element_type.stats,	GAMEMODE.SINGLE],
 	["RESET",		menu_element_type.script_runner,	scStatsResetGame, "&cThis will reset all stats!"],
 	["BACK",		menu_element_type.page_transfer,	menu_page.info]
-);
+);*/
 
 ds_list_weapons = scUICreateMenuPage(
 	["",			menu_element_type.list_weapons],
@@ -92,12 +92,12 @@ ds_confirm = scUICreateMenuPage(
 //Pages of the menu
 menu_pages = [ds_menu_main, /*ds_game_type,*/ ds_local, /*ds_online,*/ ds_settings, ds_menu_audio, ds_menu_graphics,
 	ds_info, ds_list_weapons, ds_controls, ds_list_buffs,
-	ds_confirm, ds_stats, ds_list_achievements,
+	ds_confirm, /*ds_stats,*/ ds_list_achievements,
 	ds_menu_keybinds, ds_menu_keybinds_p1, ds_menu_keybinds_p2, ds_menu_controllers];
 //The page index values (must be in order)
 menu_pages_index = [menu_page.main, /*menu_page.game_type,*/ menu_page.local, /*menu_page.online,*/ menu_page.settings, menu_page.audio, menu_page.graphics,
 	menu_page.info, menu_page.list_weapons, menu_page.controls, menu_page.list_buffs,
-	menu_page.confirm, menu_page.stats, menu_page.list_achievements,
+	menu_page.confirm, /*menu_page.stats,*/ menu_page.list_achievements,
 	menu_page.keybinds, menu_page.keybinds_1, menu_page.keybinds_2, menu_page.keybinds_controller];
 //Pages that are centered and have no input side
 menu_pages_centered = [ds_menu_main, ds_local, /*ds_online,*/ ds_settings, ds_info, ds_list_weapons, ds_list_buffs, ds_controls, 
