@@ -103,6 +103,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"93e00c6f-39fc-4fc3-9727-36ae709654f5","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Napalm",
     "path": "folders/Sprites/Entities/Unique/Napalm.yy",

@@ -146,6 +146,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"90747604-c039-4a54-8398-5c6bef2111e8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Trails",
     "path": "folders/Sprites/Particles/Trails.yy",

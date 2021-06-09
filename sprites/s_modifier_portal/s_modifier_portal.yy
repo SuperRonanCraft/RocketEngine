@@ -74,6 +74,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ad80f40c-25c3-4b82-b142-039e235eadff","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"c8546bf2-a8b5-4790-a82d-4286085167c2","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Weapon Modifiers",
     "path": "folders/Sprites/Weapon Modifiers.yy",

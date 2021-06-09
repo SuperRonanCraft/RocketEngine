@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f2efc7ac-1d1a-47e5-98f4-854a17b5b0b8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Lightning",
     "path": "folders/Sprites/Entities/Unique/Lightning.yy",

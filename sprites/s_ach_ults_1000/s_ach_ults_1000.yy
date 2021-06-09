@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"a41ad8a6-5753-443b-8617-1ef766440fd1","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"999539da-8a39-4b9e-bfe6-81e99eccd2e7","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "ach_ults",
     "path": "folders/Sprites/Achievements/ach_ults.yy",

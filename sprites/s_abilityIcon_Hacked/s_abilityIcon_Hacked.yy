@@ -25,14 +25,12 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"15bbf890-4195-417e-a8e7-77e7adc6631d","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"15bbf890-4195-417e-a8e7-77e7adc6631d","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"4397eac1-8f96-4e49-b642-61a56e1ab7a1","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"15bbf890-4195-417e-a8e7-77e7adc6631d","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"b7b19a69-1b41-4d82-9fc0-cd70a112ed80","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"15bbf890-4195-417e-a8e7-77e7adc6631d","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"38808f2a-8f43-49fa-bfb6-0f6e476d0dfb","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"15bbf890-4195-417e-a8e7-77e7adc6631d","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"b7b19a69-1b41-4d82-9fc0-cd70a112ed80","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_abilityIcon_Hacked","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"15bbf890-4195-417e-a8e7-77e7adc6631d","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"cb822bb9-9855-4c18-a902-4866b06ce1cf","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cb822bb9-9855-4c18-a902-4866b06ce1cf","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"4397eac1-8f96-4e49-b642-61a56e1ab7a1","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"cb822bb9-9855-4c18-a902-4866b06ce1cf","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"b7b19a69-1b41-4d82-9fc0-cd70a112ed80","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"cb822bb9-9855-4c18-a902-4866b06ce1cf","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"38808f2a-8f43-49fa-bfb6-0f6e476d0dfb","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cb822bb9-9855-4c18-a902-4866b06ce1cf","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"LayerId":{"name":"b7b19a69-1b41-4d82-9fc0-cd70a112ed80","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_abilityIcon_Hacked","path":"sprites/s_abilityIcon_Hacked/s_abilityIcon_Hacked.yy",},"resourceVersion":"1.0","name":"cb822bb9-9855-4c18-a902-4866b06ce1cf","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -78,6 +76,7 @@
       ],"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer Group 1","resourceVersion":"1.0","name":"4397eac1-8f96-4e49-b642-61a56e1ab7a1","tags":[],"resourceType":"GMImageFolderLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b7b19a69-1b41-4d82-9fc0-cd70a112ed80","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Buff Icons",
     "path": "folders/Sprites/Buff Icons.yy",

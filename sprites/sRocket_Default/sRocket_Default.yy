@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5e70e7bc-3ec2-4e4b-93fe-7ff28b09580a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Rockets",
     "path": "folders/Sprites/Entities/Weapons/Rockets.yy",

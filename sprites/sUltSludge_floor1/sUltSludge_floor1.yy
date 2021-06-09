@@ -119,6 +119,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4af42a30-46ae-4f70-ac98-4cd3447180c3","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Sludge",
     "path": "folders/Sprites/Entities/Unique/Sludge.yy",

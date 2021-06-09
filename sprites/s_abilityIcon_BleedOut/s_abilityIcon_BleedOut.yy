@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"55a6fac7-1e8f-43cb-b40f-b9f8d24d78f6","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Buff Icons",
     "path": "folders/Sprites/Buff Icons.yy",

@@ -103,6 +103,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"07b7dbfa-f44b-4a35-87e1-736857d2e1ea","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Shuriken",
     "path": "folders/Sprites/Entities/Weapons/Shuriken.yy",

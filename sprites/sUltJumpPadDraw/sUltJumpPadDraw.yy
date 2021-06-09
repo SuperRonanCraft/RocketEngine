@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"outline (2)","resourceVersion":"1.0","name":"0c070317-7b63-49c1-8ce4-c14af2cdcdac","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"51790fad-a0e6-453c-aa95-bec2091cc624","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "JumpPad",
     "path": "folders/Sprites/Entities/Unique/JumpPad.yy",

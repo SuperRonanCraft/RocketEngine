@@ -95,6 +95,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"82a810d7-08cd-4b74-8df6-320f6dce2bc8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "PlayerAnimation_SM",
     "path": "folders/Sprites/Entities/PlayerAnimation_SM.yy",

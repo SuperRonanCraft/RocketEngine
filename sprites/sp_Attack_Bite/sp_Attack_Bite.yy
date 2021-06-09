@@ -95,6 +95,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3c86bcf3-95e2-4a3e-89d6-263014039c77","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "EnemyAttack",
     "path": "folders/Sprites/Entities/Weapons/EnemyAttack.yy",

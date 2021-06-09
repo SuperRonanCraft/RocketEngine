@@ -87,6 +87,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5191ae05-28cf-42d7-91e2-68755ba2e34a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "EnemyZombie",
     "path": "folders/Sprites/Entities/Enemies/EnemyZombie.yy",

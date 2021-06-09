@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d70d67a7-6fa8-44c4-a80c-4e5069a533ba","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Gameplay",
     "path": "folders/Sprites/Entities/Gameplay.yy",

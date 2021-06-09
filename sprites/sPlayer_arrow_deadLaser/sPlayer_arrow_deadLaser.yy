@@ -94,6 +94,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1 (2)","resourceVersion":"1.0","name":"90b3311d-067e-42cd-bca8-1111d4c8e110","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"8d84a2e5-a6c3-4df8-ad14-0c19d473b57a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "PlayerAnimation_AM",
     "path": "folders/Sprites/Entities/PlayerAnimation_AM.yy",

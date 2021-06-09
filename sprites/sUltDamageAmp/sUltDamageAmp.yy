@@ -174,6 +174,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"aa8d8557-5001-45f2-b955-39292a1d4bf6","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6eb49590-0a2d-4a01-b8eb-884f275f0bcd","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Unique",
     "path": "folders/Sprites/Entities/Unique.yy",

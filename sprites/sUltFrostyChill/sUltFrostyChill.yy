@@ -111,6 +111,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"90f0e473-2656-4d2b-bce8-b5fccb64f1f9","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Frosty",
     "path": "folders/Sprites/Entities/Unique/Frosty.yy",

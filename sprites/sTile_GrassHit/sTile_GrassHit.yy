@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":2,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"6c6eaecb-b5d2-4c6c-b291-062161867388","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6a2318b3-bb2c-4b8a-956c-43815b95a55a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Background",
     "path": "folders/Sprites/Background.yy",

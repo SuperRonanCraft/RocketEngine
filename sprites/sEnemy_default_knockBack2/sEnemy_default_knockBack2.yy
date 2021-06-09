@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2430934f-9050-4e0b-bba3-393b9bfd537d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "EnemyAnimation_Default",
     "path": "folders/Sprites/Entities/Enemies/EnemyAnimation_Default.yy",

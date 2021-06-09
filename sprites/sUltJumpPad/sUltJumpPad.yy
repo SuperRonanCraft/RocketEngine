@@ -75,6 +75,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"outline (2)","resourceVersion":"1.0","name":"36ae58af-7e3d-45aa-8dd5-aa7a431a663b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "JumpPad",
     "path": "folders/Sprites/Entities/Unique/JumpPad.yy",

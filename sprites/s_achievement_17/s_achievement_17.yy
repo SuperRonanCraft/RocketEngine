@@ -104,9 +104,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_17/s_achievement_17.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_17/s_achievement_17.yy",},"LayerId":{"name":"969e5e5f-5e88-4a03-afdf-525f88b76888","path":"sprites/s_achievement_17/s_achievement_17.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_17/s_achievement_17.yy",},"LayerId":{"name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","path":"sprites/s_achievement_17/s_achievement_17.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_17/s_achievement_17.yy",},"LayerId":{"name":"2a66eeea-7afc-47f5-9c1f-7557c9af6439","path":"sprites/s_achievement_17/s_achievement_17.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_17/s_achievement_17.yy",},"LayerId":{"name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","path":"sprites/s_achievement_17/s_achievement_17.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_achievement_17","path":"sprites/s_achievement_17/s_achievement_17.yy",},"resourceVersion":"1.0","name":"72e8c763-fce3-4b97-8114-4e381328af7b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -149,6 +148,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"2a66eeea-7afc-47f5-9c1f-7557c9af6439","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Achievements",
     "path": "folders/Sprites/Achievements.yy",

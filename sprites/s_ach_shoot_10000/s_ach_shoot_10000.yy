@@ -152,6 +152,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3","resourceVersion":"1.0","name":"94d99223-922b-4031-b565-3885ed5b646f","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"d0e4b8f2-3263-4a2e-b248-b489404f3e91","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "ach_shots",
     "path": "folders/Sprites/Achievements/ach_shots.yy",

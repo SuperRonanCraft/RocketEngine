@@ -104,13 +104,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"09a6a821-3f84-423c-b2c4-acab3dccc9a3","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"544f55ae-517d-4adc-a083-73262b22dbb7","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"28ba6bd3-4f14-40d4-95c6-990292689208","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"b0cefbbb-e8b9-49eb-b4b4-473b23794213","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"a6563b87-a954-4196-9ceb-04f6de4b2c9b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"1c61afcc-56f2-4fd0-b232-418520cd234e","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72e8c763-fce3-4b97-8114-4e381328af7b","path":"sprites/s_achievement_13/s_achievement_13.yy",},"LayerId":{"name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_achievement_13","path":"sprites/s_achievement_13/s_achievement_13.yy",},"resourceVersion":"1.0","name":"72e8c763-fce3-4b97-8114-4e381328af7b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -153,6 +148,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3","resourceVersion":"1.0","name":"1c61afcc-56f2-4fd0-b232-418520cd234e","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"5b1763ce-f731-4d2c-89c9-96c8dcfdedff","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Achievements",
     "path": "folders/Sprites/Achievements.yy",

@@ -150,6 +150,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"f3de8757-834f-4fed-b8ca-c4cde9328cba","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"eb642e6b-4066-46ca-b84a-0d59a18bbf85","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "ach_time",
     "path": "folders/Sprites/Achievements/ach_time.yy",
