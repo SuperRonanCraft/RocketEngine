@@ -50,8 +50,10 @@ if(!deactivate){
 		var isPlayer = scGetParent(pEntity, obj);
 		//show_debug_message("isplayer " + string(isPlayer));
 		
-		if(!instance_exists(owner))
+		if(!instance_exists(owner)){
+			instance_destroy();
 			exit;
+		}
 		
 		if(isPlayer && !deactivate){
 			var _team = owner.team; //Owner Team

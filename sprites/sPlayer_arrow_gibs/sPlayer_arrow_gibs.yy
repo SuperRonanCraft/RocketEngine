@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_gibs","path":"sprites/sPlayer_arrow_gibs/sPlayer_arrow_gibs.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_gibs",
     "tags": [],
     "resourceType": "GMSequence",
   },

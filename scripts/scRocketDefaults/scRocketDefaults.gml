@@ -62,6 +62,9 @@ function scRocketDefaults() {
 
 	//DEATH CAUSE
 	map[? ROCKET_MAP.DEATHCAUSE] = noone;
+	
+	//OUT OF BOUNDS
+	map[? ROCKET_MAP.GO_OOB] = false;
 
 	return map;
 

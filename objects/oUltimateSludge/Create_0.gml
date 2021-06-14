@@ -2,7 +2,7 @@
 
 owner = noone; //owner of ultimate
 
-sludge_despawn = 5 * room_speed; //Uptime of sludge
+sludge_despawn = 1 * room_speed; //Uptime of sludge
 sludge_timer = 0;
 sludge_grv = 0.6;
 sludge_hsp = 10;

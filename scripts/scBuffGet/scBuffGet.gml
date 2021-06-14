@@ -172,7 +172,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLOWMO];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLOWMO];
 			_map[? BUFF_MAP.GOOD] = false;
-			_map[? BUFF_MAP.TIME] = 12 * room_speed;
+			_map[? BUFF_MAP.TIME] = 2 * room_speed;
 			_map[? BUFF_MAP.DRAW] = scBuffSlowmo_Draw;
 			_map[? "dialation"] = 0.5; //How much to dialate time down to
 			_map[? "steps"] = ds_list_create();

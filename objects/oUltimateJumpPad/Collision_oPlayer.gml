@@ -8,12 +8,12 @@ for (var i = 0; i < ds_list_size(jump_list); i++) {
 }
 
 with (other) {
-	if (vsp_move >= 0) {
+	if (gravity_map[? GRAVITY_MAP.VSP_MOVE] >= 0) {
 		other.jump_ani = other.jump_ani_max; //Animate the jump pad
-		vsp_move = other.jump_pwr - vsp_move;
+		gravity_map[? GRAVITY_MAP.VSP_MOVE] = other.jump_pwr - gravity_map[? GRAVITY_MAP.VSP_MOVE];
 	}
 	scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE);
-	vsp_move = max(vsp_move, -32); //Maximum jump
+	gravity_map[? GRAVITY_MAP.VSP_MOVE] = max(gravity_map[? GRAVITY_MAP.VSP_MOVE], -32); //Maximum jump
 }
 ds_list_add(jump_list, other.id); //Dont allow the jump till we are off this list
 

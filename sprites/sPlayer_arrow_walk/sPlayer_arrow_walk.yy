@@ -108,7 +108,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_walk","path":"sprites/sPlayer_arrow_walk/sPlayer_arrow_walk.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_walk",
     "tags": [],
     "resourceType": "GMSequence",
   },

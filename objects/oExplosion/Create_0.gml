@@ -14,6 +14,7 @@ confirmList = ds_list_create();
 destroy = true;
 //Do damage while explosion animation is going on
 doing_damage = true;
+dmg = 0;
 
 first_step = false;
 first_draw = false;

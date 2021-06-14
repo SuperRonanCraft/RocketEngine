@@ -1,6 +1,7 @@
 /// @desc collide with rocket
 
 //If the rocket is not from the same shooter
+/*
 if (!destroy && other.owner != owner) {
 	var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 	//Custom Explosion with another rocket script?

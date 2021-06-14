@@ -27,6 +27,11 @@ function scWeaponActivate() {
 				_map[? WEAPON_MAP.DELAY_TIME] = arrow_map[? ARROW_MAP.STARTUP];
 				//_map[? WEAPON_MAP.START_DELAY] = true;
 				break;
+			case WEAPON_TYPE.POTION:
+				var potion_map = _map[? WEAPON_MAP.MAP];
+				_map[? WEAPON_MAP.COOLDOWN_TIME] = potion_map[? POTION_MAP.COOLDOWN];
+				_map[? WEAPON_MAP.DELAY_TIME] = potion_map[? POTION_MAP.STARTUP];
+				break;
 		}
 
 

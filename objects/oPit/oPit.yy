@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sPitFire",
-    "path": "sprites/sPitFire/sPitFire.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -3,7 +3,7 @@ function scShuriken_Portal_Despawn() {
 
 	if(!deactivate){
 		var xplo = instance_create_depth(x,y,depth,oExplosion_Shuriken);
-
+		//xplo.sprite_index = sexplosion_Glass;
 		xplo.owner = owner;
 		xplo.image_xscale = 1.5;
 		xplo.image_yscale = 1.5;
@@ -20,3 +20,4 @@ function scShuriken_Portal_Despawn() {
 
 
 }
+

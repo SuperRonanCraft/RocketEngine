@@ -31,6 +31,8 @@ newY = y;
 debounce = false;
 hsp = 0;
 vsp = 0;
+dmg = 0;
+first_step = false;
 
 rotate = false;
 imgdir = irandom_range(0,359);

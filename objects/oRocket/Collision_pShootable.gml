@@ -27,11 +27,11 @@ if (!destroy && _team != _oteam) //Not destroy and is not same team
 		}
 		
 		//Damage player
-		var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
+		var dmg_todo = max(dmg,weapon_map[? WEAPON_MAP.DAMAGE]);
 		//if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_ROCKET] != 0)
 		//	dmg = rocket_map[? ROCKET_MAP.DAMAGE_ROCKET];
 		
-		if (scShootableDamage(owner, other, false, true, dmg,noone,DAMAGE_TYPE.SPLASH) && isPlayer)
+		if (scShootableDamage(owner, other, false, true, dmg_todo,noone,DAMAGE_TYPE.SPLASH) && isPlayer)
 			other.causeOfDeath = rocket_map[? ROCKET_MAP.DEATHCAUSE];
 		
 		if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE])

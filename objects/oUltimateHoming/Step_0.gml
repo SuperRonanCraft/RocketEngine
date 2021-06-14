@@ -23,6 +23,8 @@ if (timer % 5 == 0 && timer <= 25)
 		if (target != noone) {
 			xx = target.x;
 			yy = target.y;
+			if(scBuffFind(target,BUFFTYPE.INVISIBLE))
+				target = noone;
 		}
 		homing = ds_map_create();
 		homing[? "target"] = target;
@@ -32,6 +34,7 @@ if (timer % 5 == 0 && timer <= 25)
 		weapon_map[? WEAPON_MAP.SPEED] = 0.1 / TIME_SPEED;
 		rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER] = noone;
 		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
+		rocket_map[? ROCKET_MAP.GO_OOB] = true;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	
 		rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];

@@ -16,6 +16,9 @@ confirmList = ds_list_create();
 //Timing variables for first step and draw event
 first_step = false;
 first_draw = false;
+hsp = 0;
+vsp = 0;
+dmg = 0;
 
 //Target variable
 target = noone;

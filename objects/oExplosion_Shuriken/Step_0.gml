@@ -17,8 +17,8 @@ if (doing_damage)
 			if (isPlayer) {
 				//scUltimateAddCharge(owner,DAMAGETYPE.DIRECT,1);
 				//Add buff or add knockback here
-				p.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (y - p.y) * .5;
-				p.gravity_map[? GRAVITY_MAP.HSP_MOVE] += (x - p.x) * .5;
+				//p.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (y - p.y) * .5;
+				//p.gravity_map[? GRAVITY_MAP.HSP_MOVE] += (x - p.x) * .5;
 			}
 		
 			//Damage shootable

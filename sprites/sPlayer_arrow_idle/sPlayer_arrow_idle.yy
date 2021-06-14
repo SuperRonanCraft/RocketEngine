@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_idle","path":"sprites/sPlayer_arrow_idle/sPlayer_arrow_idle.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_idle",
     "tags": [],
     "resourceType": "GMSequence",
   },

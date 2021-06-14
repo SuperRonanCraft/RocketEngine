@@ -52,10 +52,18 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.COOLDOWN] = 3;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_reflect;
 			break;
+		
+		case ABILITY_TYPE.JUMPPAD:
+			ds_map[? ABILITY_MAP.NAME] = "Hop and Skip!";
+			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityJumpPad;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 15;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_jumppad;
+			break;
+			
 	}
 
 	enum ABILITY_TYPE {
-		CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,REFLECT,BIGROCKET,
+		CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,REFLECT,BIGROCKET, JUMPPAD,
 		NONE
 	}
 

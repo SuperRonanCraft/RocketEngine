@@ -18,6 +18,9 @@ function scWeaponProgress(argument0) {
 		case WEAPON_TYPE.ARROW:
 			scArrowProgress(map);
 			break;
+		case WEAPON_TYPE.POTION:
+			scPotionProgress(map);
+			break;
 	}
 
 

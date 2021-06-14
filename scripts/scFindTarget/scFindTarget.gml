@@ -6,7 +6,7 @@ function scFindTarget(argument0) {
 	//Find a target
 	for (var i = instance_number(pShootable) - 1; i >= 0; i--) {
 		var inst = instance_find(pShootable, i);
-		if (inst.team != team)
+		if (inst.team != team && !scBuffFind(inst, BUFFTYPE.INVISIBLE))
 			return inst;
 	}
 

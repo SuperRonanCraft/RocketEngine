@@ -27,7 +27,7 @@ else if (timer >= time && !destroy)
 	event_user(0);
 
 if (checkroom)
-	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20) && !destroy)
+	if ((x > room_width + 20 || x < -20 || y > room_height + 20 || y < -20) && !destroy && !rocket_map[? ROCKET_MAP.GO_OOB])
 		event_user(0);
 	
 if (destroy && autodestroy)

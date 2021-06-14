@@ -66,9 +66,9 @@ if (shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 				event_user(1); //missed
 		
 			//Damage player
-			var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
+			var dmg_todo = dmg;
 		
-			if (scShootableDamage(owner, other, false, true, dmg,false,DAMAGE_TYPE.SLICE) && isPlayer)
+			if (scShootableDamage(owner, other, false, true, dmg_todo,false,DAMAGE_TYPE.SLICE) && isPlayer)
 				other.causeOfDeath = shuriken_map[? SHURIKEN_MAP.DEATHCAUSE];
 		
 			if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])

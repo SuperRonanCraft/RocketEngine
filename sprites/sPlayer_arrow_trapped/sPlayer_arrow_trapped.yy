@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_trapped","path":"sprites/sPlayer_arrow_trapped/sPlayer_arrow_trapped.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_trapped",
     "tags": [],
     "resourceType": "GMSequence",
   },

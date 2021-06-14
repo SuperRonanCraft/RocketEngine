@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_walkend","path":"sprites/sPlayer_arrow_walkend/sPlayer_arrow_walkend.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_walkend",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -1,2 +1,2 @@
-scPlayerCharacterChange(CHARACTER.ARROW);
+scPlayerCharacterChange(CHARACTER.POTION);
 scStartAI();

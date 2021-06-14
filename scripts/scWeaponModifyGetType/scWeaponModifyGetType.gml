@@ -50,11 +50,13 @@ function scWeaponModifyGetType(argument0, argument1) {
 			map[? WEAPON_MODIFIER_MAP.NAME] = "BRICK"
 			map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Better start jumping";
 			break;
+		/*
 		case WEAPON_MODIFIER.SAND: 
 			map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_sand; 
 			map[? WEAPON_MODIFIER_MAP.NAME] = "SAND"
 			map[? WEAPON_MODIFIER_MAP.DESCRIPTION] = "Slow, but deadly";
 			break;
+		*/
 		case WEAPON_MODIFIER.METAL: 
 			map[? WEAPON_MODIFIER_MAP.ICON] = s_modifier_metal; 
 			map[? WEAPON_MODIFIER_MAP.NAME] = "METAL"

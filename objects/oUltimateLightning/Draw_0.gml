@@ -9,9 +9,9 @@ repeat (striking == noone ? 5 : 2) {
 if (striking != noone) {
 	repeat (2)
 		scDrawLightning(x, y, striking.x, striking.y, irandom_range(light_branches / 2, 
-			light_branches), c_blue);
+			light_branches), c_red);
 	if (damage_cooldown_cur <= 0) {
-		scShootableDamage(owner, striking, false, false, 1, false);
+		scShootableDamage(owner, striking, false, false, dmg, false);
 		damage_cooldown_cur = damage_cooldown;
 	} else
 		damage_cooldown_cur--;

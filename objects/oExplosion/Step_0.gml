@@ -10,7 +10,7 @@ if (doing_damage)
 			
 			if (!p.shootable_map[? SHOOTABLE_MAP.CAN_INTERACT]) exit; //Do not interact with this shootable
 			var isPlayer = scGetParent(pEntity,p);
-			var dmg = weapon_map[? WEAPON_MAP.DAMAGE];
+			var dmg_todo = weapon_map[? WEAPON_MAP.DAMAGE];
 			//if (dmg != -1 && rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION] != 0)
 			///	dmg = rocket_map[? ROCKET_MAP.DAMAGE_EXPLOSION];
 			if (isPlayer) {
@@ -21,7 +21,7 @@ if (doing_damage)
 					scBuffAdd(rocket_map[? ROCKET_MAP.BUFF], hitList[| i], parent);
 			}
 			//Damage shootable
-			if(scShootableDamage(other.parent, p, false, true, dmg,noone,DAMAGE_TYPE.SPLASH,noone) && isPlayer)
+			if(scShootableDamage(other.parent, p, false, true, dmg_todo,noone,DAMAGE_TYPE.SPLASH,noone) && isPlayer)
 				p.causeOfDeath = deathCause;
 	
 			if (rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the rocket to give ult charge?

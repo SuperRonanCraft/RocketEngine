@@ -86,7 +86,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_deadLaser","path":"sprites/sPlayer_arrow_deadLaser/sPlayer_arrow_deadLaser.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_deadLaser",
     "tags": [],
     "resourceType": "GMSequence",
   },

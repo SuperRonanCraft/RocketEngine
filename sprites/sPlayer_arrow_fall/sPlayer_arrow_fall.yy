@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_fall","path":"sprites/sPlayer_arrow_fall/sPlayer_arrow_fall.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_fall",
     "tags": [],
     "resourceType": "GMSequence",
   },

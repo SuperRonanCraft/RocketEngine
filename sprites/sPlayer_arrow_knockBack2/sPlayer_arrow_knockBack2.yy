@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_arrow_knockBack2","path":"sprites/sPlayer_arrow_knockBack2/sPlayer_arrow_knockBack2.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sPlayer_arrow_knockBack2",
     "tags": [],
     "resourceType": "GMSequence",
   },
