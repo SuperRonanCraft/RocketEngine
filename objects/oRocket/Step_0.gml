@@ -13,6 +13,9 @@ var checkroom = rocket_map[? ROCKET_MAP.ROCKET_AUTO_DESTROY_ROOM];
 
 var _advance = global.play || global.gameover;
 
+if(!_advance)
+	exit;
+
 if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---

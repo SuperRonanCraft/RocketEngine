@@ -9,7 +9,9 @@ function scBuffSlowmo_Draw() {
 	var map = dsBuff[? "steps"];
 	for (var i = 0; i < ds_list_size(map); i++) {
 		var steps = map[| i];
+		scPalleteSwapSet(steps[7], steps[8]);
 		scDrawSpriteExt(steps[0], steps[1], steps[2], steps[3], noone, steps[4], steps[5], steps[6]);
+		scPalleteSwapReset();
 		steps[4] -= 0.05;
 		map[| i] = steps;
 	}

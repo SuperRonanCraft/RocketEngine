@@ -33,5 +33,6 @@ destroy = false;
 stuckAmount = 0;
 
 isClone = false;
+color_overlay = c_white;
 //Aim type
 //auto_aim = false;

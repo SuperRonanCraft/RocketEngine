@@ -31,7 +31,7 @@ if(!ds_list_empty(hitList)) {
 			if(ds_list_find_index(confirmList,entity) == -1){
 				ds_list_add(confirmList,entity);
 				scShootableDamage(owner.id,entity.id,false,false,5, noone, DAMAGE_TYPE.STAB,false,DAMAGE_ELEMENT.INFECTED);
-				scBuffApply(BUFFTYPE.FFA_DEBUFF, entity, owner);
+				//scBuffApply(BUFFTYPE.FFA_DEBUFF, entity, owner);
 			}
 		}
 		

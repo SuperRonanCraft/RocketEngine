@@ -48,7 +48,7 @@ function scDrawOtherAnimationState() {
 		var sprite = map[? PLAYER_MAP.CURRENT_SPRITE];
 		var sprite_img = floor(map[? PLAYER_MAP.ANIMATION_VAR]);
 		draw_sprite_ext(sprite, sprite_img, x, y, 
-			facing * image_xscale, image_yscale, 0, c_white, image_alpha);
+			facing * image_xscale, image_yscale, 0, color_overlay, image_alpha);
 		scFlash(map[? PLAYER_MAP.FLASH_ALPHA], map[? PLAYER_MAP.FLASH_COLOR], 
 			facing * image_xscale, image_yscale, sprite, sprite_img, x, y);
 	}

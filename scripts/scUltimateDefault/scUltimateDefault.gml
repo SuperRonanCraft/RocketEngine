@@ -8,6 +8,7 @@ function scUltimateDefault(argument0) {
 		var rocket_map = weapon_map[? WEAPON_MAP.MAP];
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;
 		rocket_map[? ROCKET_MAP.KBAMT] *= 1.5;
+		rocket_map[? ROCKET_MAP.IGNORE_WALL] = true;
 		//Explosion Size
 		rocket_map[? ROCKET_MAP.EXPLOSION_SCALE] *= 2;
 		x += lengthdir_x(rocket_map[? ROCKET_MAP.OFFSET], direction);

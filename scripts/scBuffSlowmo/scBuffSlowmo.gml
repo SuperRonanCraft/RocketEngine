@@ -39,8 +39,12 @@ function scBuffSlowmo(argument0, argument1) {
 			var steps = dsBuff[? "steps"];
 			if (dsBuff[? "steps_on"] > dsBuff[? "steps_max"])
 				dsBuff[? "steps_on"] = 0;
+				
+			var char_info = owner.player_map[? PLAYER_MAP.CHARACTER_INFO];
+			
 			ds_list_set(steps, dsBuff[? "steps_on"], [x, y, owner.player_map[? PLAYER_MAP.CURRENT_SPRITE], floor(owner.player_map[? PLAYER_MAP.ANIMATION_VAR]), 
-				1, facing * image_xscale, image_yscale]);
+				1, facing * image_xscale, image_yscale, char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]]);
+			
 			dsBuff[? "steps_on"]++;
 		}
 	}

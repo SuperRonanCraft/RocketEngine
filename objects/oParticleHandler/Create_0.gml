@@ -624,6 +624,26 @@ part_type_life(parttype,30,45);
 ds_map_add(ds_part,PARTICLES.POTION_SPLASH, parttype);
 ds_map_add(ds_part_amt, PARTICLES.POTION_SPLASH, 5);
 
+//DRIP2
+
+parttype = part_type_create();
+part_type_sprite(parttype, s_pdrip2, 0, 0, 0);
+part_type_size(parttype, 1, 1.2, 0, 0);
+part_type_life(parttype,10,30);
+part_type_alpha2(parttype,1,0);
+part_type_gravity(parttype, 0.8,270);
+ds_map_add(ds_part,PARTICLES.DRIP2, parttype);
+ds_map_add(ds_part_amt, PARTICLES.DRIP2, 1);
+
+//DRIP 1
+parttype = part_type_create();
+part_type_sprite(parttype, s_pdrip1, 1,1,0);
+part_type_size(parttype, 1,1.5,0,0);
+part_type_life(parttype, 10,20);
+part_type_death(parttype, 1, ds_part[? PARTICLES.DRIP2]);
+ds_map_add(ds_part,PARTICLES.DRIP1, parttype);
+ds_map_add(ds_part_amt, PARTICLES.DRIP1, 3);
+
 enum PARTICLES {
 	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
@@ -631,5 +651,5 @@ enum PARTICLES {
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,
 	CLEANSE, TRAIL, RELOAD, ASH, FROST, LIGHTNING, SCRAPING, SCRAPE_FLARE, METAL,
 	EXPLOSION_DEFAULT, SLIME_PAINT,SHIELD_DAMAGE,SHIELD_RECHARGE, ARMOR_DAMAGE,HEALTH_DAMAGE,
-	FFA, POTION_SPLASH,  
+	FFA, POTION_SPLASH, DRIP1, DRIP2,
 }

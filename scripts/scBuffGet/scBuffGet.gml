@@ -37,6 +37,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? "damage_cd"] = room_speed/2; //cooldown for taking damage
 			_map[? "damage_crt"] = _map[? "damage_cd"];
 			_map[? "damage"] = 1; //damage to take
+			_map[? BUFF_MAP.GOOD] = false;
 			break;
 		case BUFFTYPE.CHILLED:
 			_map[? BUFF_MAP.NAME] = "Chilled";
@@ -46,6 +47,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.WINTER];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.WINTER];
 			_map[? BUFF_MAP.TIME] = 5 * room_speed;
+			_map[? BUFF_MAP.GOOD] = false;
 			break;
 		case BUFFTYPE.COOLDOWN:
 			_map[? BUFF_MAP.NAME] = "Cooldowns";
@@ -65,6 +67,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SLIME];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SLIME];
 			_map[? BUFF_MAP.TIME] = 5 * room_speed;
+			_map[? BUFF_MAP.GOOD] = false;
 			break;
 		case BUFFTYPE.SPEED:
 			_map[? BUFF_MAP.NAME] = "Speed";
@@ -91,6 +94,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.DESCRIPTION] = "Not that way!";
 			_map[? BUFF_MAP.ICON] = BUFF_ICON.REVERSECONTROLS;
 			_map[? BUFF_MAP.STEP] = scBuffReverseControls;
+			_map[? BUFF_MAP.GOOD] = false;
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.REVERSECONTROLS];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.REVERSECONTROLS];
 			_map[? BUFF_MAP.TIME] = 3 * room_speed;
@@ -234,7 +238,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.DAMAGE_TAKEN] = scBuffAbsorbtion_Damage;
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.ABSORBTION];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.ABSORBTION];
-			_map[? BUFF_MAP.GOOD] = true;
+			_map[? BUFF_MAP.GOOD] = false;
 			_map[? BUFF_MAP.TIME] = 12 * room_speed;
 			_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.MULTIPLE];
 			_map[? "health"] = 4;
@@ -278,6 +282,8 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.TIME] = 5 * room_speed;
 			_map[? BUFF_MAP.GOOD] = true;
 			break;
+			
+		/*
 		case BUFFTYPE.FFA_DEBUFF:
 			_map[? BUFF_MAP.NAME] = "Free For All";
 			_map[? BUFF_MAP.ICON] = BUFF_ICON.FFA;
@@ -286,6 +292,33 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.GOOD] = false;
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.FFA];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.FFA];
+			break;
+		*/
+		
+		case BUFFTYPE.DOUSED:
+			_map[? BUFF_MAP.NAME] = "Doused";
+			_map[? BUFF_MAP.DESCRIPTION] = "Extremely flammable!";
+			_map[? BUFF_MAP.ICON] = BUFF_ICON.DOUSED;
+			_map[? BUFF_MAP.STEP] = scBuffDoused;
+			_map[? BUFF_MAP.TIME] = 2 * room_speed;
+			_map[? BUFF_MAP.GOOD] = false;
+			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.DRIP1];
+			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.DRIP1];
+			_map[? BUFF_MAP.STACK_INFO] = [BUFF_STACK_TYPE.MULTIPLE];
+			break;
+			
+		case BUFFTYPE.BURNING:
+			_map[? BUFF_MAP.NAME] = "Burning!";
+			_map[? BUFF_MAP.DESCRIPTION] = "You might want to look into that.";
+			_map[? BUFF_MAP.ICON] = BUFF_ICON.BURNRUSH;
+			_map[? BUFF_MAP.STEP] = scBuffBurnDoT;
+			_map[? BUFF_MAP.TIME] = 2 * room_speed;
+			_map[? BUFF_MAP.GOOD] = false;
+			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.FIRE1];
+			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.FIRE2];
+			_map[? "damage_cd"] = room_speed/4; //cooldown for taking damage
+			_map[? "damage_crt"] = _map[? "damage_cd"];
+			_map[? "damage"] = 3; //damage to take
 			break;
 		// FOR LATER TECHNOLOGICAL ADVANCES
 		/*case BUFFTYPE.CLEANSE:
@@ -324,7 +357,7 @@ function scBuffGet(argument0, argument1) {
 		ANTIHEAL = s_abilityIcon_AntiHeal, ABSORBTION = s_abilityIcon_Absorbtion,
 		LIFESTEAL = s_abilityIcon_LifeSteal, CLEANSE = s_abilityIcon_Cleanse,
 		FROZEN = s_abilityIcon_Frozen, INVISIBLE = s_abilityIcon_Invisible,
-		FFA = s_abilityIcon_FFA
+		FFA = s_abilityIcon_FFA, DOUSED = s_abilityIcon_Doused, BURNING = s_abilityIcon_BurnRush,
 	}
 
 	enum BUFFTYPE {
@@ -332,7 +365,7 @@ function scBuffGet(argument0, argument1) {
 		REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 		REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
 		ANTIHEAL, ABSORBTION, LIFESTEAL, FROZEN, //CLEANSE,
-		INVISIBLE, FFA_DEBUFF,
+		INVISIBLE, DOUSED, BURNING, //FFA_DEBUFF, 
 		//PUT LAST
 		LENGHT
 	}

@@ -7,6 +7,10 @@ var potion_map = weapon_map[? WEAPON_MAP.MAP];
 
 part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
 
+var _advance = global.play || global.gameover;
+
+if(!_advance)
+	exit
 
 //If there is a special script to run, nullify all else and run it instead
 if (potion_map[? POTION_MAP.POTION_STEP] != noone)
@@ -137,7 +141,7 @@ if (!deactivate && potion_map[? POTION_MAP.PARTICLE] != noone) {
 
 
 
-var _advance = global.play || global.gameover;
+
 
 if (_advance) {
 	x += hsp;

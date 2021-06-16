@@ -1,5 +1,6 @@
 function scRocketSpecialHomingUlt_Step() {
 	var map = homing;
+		
 	if (!instance_exists(map[? "target"]))
 		map[? "target"] = scFindTarget(owner.team);
 	with (map[? "target"]) {

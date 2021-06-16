@@ -8,12 +8,8 @@ for (var i = 0; i < ds_list_size(jump_list); i++) {
 }
 
 with (other) {
-	if (vsp >= 0) {
-		other.jump_ani = other.jump_ani_max; //Animate the jump pad
-		vsp = other.jump_pwr - vsp;
-	}
 	scPlaySound(SOUND.ULT_JUMPPAD_BOUNCE);
-	vsp = max(vsp, -32); //Maximum jump
+	vsp_real = -32;
 }
 ds_list_add(jump_list, other.id); //Dont allow the jump till we are off this list
 

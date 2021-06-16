@@ -20,8 +20,8 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.PROJECTILE] = POTION_SPRITE.FIRE;
 			map[? POTION_MAP.COOLDOWN] = 50;
 			map[? POTION_MAP.SPEED] = 10;
-			map[? POTION_MAP.DAMAGE] = 7;
-			map[? POTION_MAP.BUFF] = [BUFFTYPE.BURNRUSH];
+			map[? POTION_MAP.DAMAGE] = 8;
+			map[? POTION_MAP.BUFF] = [BUFFTYPE.DOUSED];
 			map[? POTION_MAP.PARTICLE] = PARTICLES.EMBER;
 			map[? POTION_MAP.PARTICLE_SPLASH_COLOR] = c_orange;
 			break;
@@ -31,7 +31,7 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.PROJECTILE] = POTION_SPRITE.ICE;
 			map[? POTION_MAP.COOLDOWN] = 50;
 			map[? POTION_MAP.SPEED] = 12;
-			map[? POTION_MAP.DAMAGE] = 5;
+			map[? POTION_MAP.DAMAGE] = 7;
 			map[? POTION_MAP.BUFF] = [BUFFTYPE.SLOWMO];
 			map[? POTION_MAP.PARTICLE] = PARTICLES.FROST;
 			map[? POTION_MAP.PARTICLE_SPLASH_COLOR] = c_white;
@@ -58,12 +58,12 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.PROJECTILE] = POTION_SPRITE.ELECTRIC;
 			map[? POTION_MAP.COOLDOWN] = 70;
 			map[? POTION_MAP.SPEED] = 9;
-			map[? POTION_MAP.DAMAGE] = 7;
+			map[? POTION_MAP.DAMAGE] = 9;
 			map[? POTION_MAP.PARTICLE] = PARTICLES.LIGHTNING;
 			map[? POTION_MAP.PARTICLE_SPLASH_COLOR] = c_yellow;
 			map[? POTION_MAP.WALL_COLLIDE] = true;
 			map[? POTION_MAP.WALL_SCRIPT] = scPotion_Electric_WallScript;
-			map[? POTION_MAP.DELETE_ON_HIT] = false;
+			//map[? POTION_MAP.DELETE_ON_HIT] = false;
 			break;
 			
 		case WEAPON_POTION_TYPE.BRICK:
@@ -84,7 +84,7 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.PROJECTILE] = POTION_SPRITE.METAL;
 			map[? POTION_MAP.COOLDOWN] = 30;
 			map[? POTION_MAP.SPEED] = 10;
-			map[? POTION_MAP.DAMAGE] = 8;
+			map[? POTION_MAP.DAMAGE] = 12;
 			map[? POTION_MAP.PARTICLE] = PARTICLES.SPARKLE;
 			map[? POTION_MAP.PARTICLE_SPLASH_COLOR] = c_white;
 			map[? POTION_MAP.WALL_COLLIDE] = true;
@@ -97,9 +97,9 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.PROJECTILE] = POTION_SPRITE.SHOTGUN;
 			map[? POTION_MAP.COOLDOWN] = 2;
 			map[? POTION_MAP.CLIP] = 5;
-			map[? POTION_MAP.RELOAD_TIME] = 80;
+			map[? POTION_MAP.RELOAD_TIME] = 90;
 			map[? POTION_MAP.SPEED] = 9;
-			map[? POTION_MAP.DAMAGE] = 5;
+			map[? POTION_MAP.DAMAGE] = 3;
 			map[? POTION_MAP.PARTICLE] = PARTICLES.SPEED;
 			map[? POTION_MAP.PARTICLE_SPLASH_COLOR] = c_olive;
 			break;
@@ -123,7 +123,7 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.PROJECTILE] = POTION_SPRITE.DEFAULT;
 			map[? POTION_MAP.COOLDOWN] = 40;
 			map[? POTION_MAP.SPEED] = 10;
-			map[? POTION_MAP.DAMAGE] = 10;
+			map[? POTION_MAP.DAMAGE] = 12;
 			break;
 	}
 

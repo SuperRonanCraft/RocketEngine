@@ -1,5 +1,10 @@
 /// @desc 
 
+if(!instance_exists(owner)){
+	instance_destroy();
+	exit;
+}
+
 if (!stopped) {
 	if (light_current > light_target / 2)
 		light_speed = ((light_target / light_current) - 1) * light_speed;

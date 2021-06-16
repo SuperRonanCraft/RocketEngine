@@ -5,7 +5,7 @@ function scWeaponProgress(argument0) {
 	var map = argument0;
 	//show_debug_message("Weapon Progress " + string(map[? WEAPON_MAP.TYPE]) + " " + string(random(5)))
 
-	if (key_shoot) {
+	if (key_shoot && player_map[?PLAYER_MAP.CAN_CONTROL]) {
 		scWeaponActivate(map);
 	}
 	switch (map[? WEAPON_MAP.TYPE]) {

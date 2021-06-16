@@ -1,5 +1,10 @@
 /// @desc move sludge
 
+if(!instance_exists(owner)){
+	instance_destroy();
+	exit;
+}
+
 var otherSludge = noone;
 
 if (!standing)

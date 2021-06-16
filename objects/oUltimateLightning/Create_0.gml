@@ -9,9 +9,9 @@ light_current = 0;
 
 dmg = 1;
 first_draw = false;
-timer = 1 * room_speed;
+timer = 5 * room_speed;
 stopped = false;
 damage_cooldown = 0;
-damage_cooldown = 1 * room_speed * .3;
+damage_cooldown = 1 * room_speed * .1;
 damage_cooldown_cur = 0;
 striking = noone;

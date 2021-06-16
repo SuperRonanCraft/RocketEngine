@@ -1,6 +1,6 @@
 /// @description Add to hitlist
 
-if (instance_exists(owner.id) && other.id == owner.id) exit; //Self damage, dont.. do that..
+if (instance_exists(owner) && other.id == owner.id) exit; //Self damage, dont.. do that..
 
 //Add yourself to the list of collisions the explosion checks
 if (instance_exists(owner) && global.play && owner.team != other.team)

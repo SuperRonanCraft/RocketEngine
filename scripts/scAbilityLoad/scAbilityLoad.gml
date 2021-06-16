@@ -18,11 +18,11 @@ function scAbilityLoad(argument0) {
 		case ABILITY_TYPE.BIGROCKET: //Just a big rocket
 			ds_map[? ABILITY_MAP.NAME] = "Pure Chaos";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateDefault;
-			ds_map[? ABILITY_MAP.COOLDOWN] = 12;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_bigrocket;
 			break;
-		case ABILITY_TYPE.PORTAL: //Dodge the lasers!
-			ds_map[? ABILITY_MAP.NAME] = "Termination";
+		case ABILITY_TYPE.PORTAL:
+			ds_map[? ABILITY_MAP.NAME] = "Confusion";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityPortal;
 			ds_map[? ABILITY_MAP.COOLDOWN] = 20;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_portal;
@@ -49,7 +49,7 @@ function scAbilityLoad(argument0) {
 		case ABILITY_TYPE.REFLECT:
 			ds_map[? ABILITY_MAP.NAME] = "Slice and dice!";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateSwordDefault;
-			ds_map[? ABILITY_MAP.COOLDOWN] = 3;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 2;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_reflect;
 			break;
 		

@@ -13,6 +13,11 @@ if (arrow_map[? ARROW_MAP.ARROW_STEP] != noone)
 	script_execute(arrow_map[? ARROW_MAP.ARROW_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 
+var _advance = global.play || global.gameover;
+
+if(!_advance)
+	exit;
+
 var targetAngle = 270;
 if(grv_dir == -1){
 	targetAngle = 90;
@@ -190,7 +195,6 @@ else if(deactivate){
 	event_user(0);	
 }
 
-var _advance = global.play || global.gameover;
 
 if (_advance) {
 	x += hsp;
