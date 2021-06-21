@@ -57,6 +57,23 @@ function scPlayerCharacterGetSprites(argument0) {
 			map[? ANIMATIONSTATE.DEADLASER] = sPlayer_potion_deadLaser;
 			map[? ANIMATIONSTATE.GIBS] = sPlayer_potion_gibs;
 	        break;
+	    case CHARACTER.BOMB:
+			map[? ANIMATIONSTATE.SLICE] = sEnemy_default_idle;
+	        map[? ANIMATIONSTATE.STANDING] = sEnemy_default_idle;
+			map[? ANIMATIONSTATE.SLIDING] = sEnemy_default_walkend;
+			map[? ANIMATIONSTATE.WALKING] = sEnemy_default_walk;
+			map[? ANIMATIONSTATE.RISING] = sEnemy_default_rise;
+			map[? ANIMATIONSTATE.FALLING] = sEnemy_default_fall;
+			map[? ANIMATIONSTATE.KNOCKBACK] = sEnemy_default_knockBack;
+			map[? ANIMATIONSTATE.KNOCKBACK2] = sEnemy_default_knockBack2;
+			map[? ANIMATIONSTATE.TECHED] = sEnemy_default_tech;
+			map[? ANIMATIONSTATE.DEAD] = sEnemy_default_dead1;
+			map[? ANIMATIONSTATE.DEAD2] = sEnemy_default_dead2;
+			map[? ANIMATIONSTATE.TRAPPED] = sEnemy_default_trapped;
+			map[? ANIMATIONSTATE.DEADFROZEN] = sEnemy_default_deadFrozen;
+			map[? ANIMATIONSTATE.DEADLASER] = sEnemy_default_deadLaser;
+			map[? ANIMATIONSTATE.GIBS] = sEnemy_default_gibs;
+	        break;
 	    default:
 			if (argument0 != CHARACTER.DEFAULT)
 				show_debug_message("Character " + string(argument0) + " does not exist!");

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+show_debug_message("MADE PART HANDER");
 //Particles
 global.ParticleSystem1 = part_system_create();
 part_system_depth(global.ParticleSystem1, 102);

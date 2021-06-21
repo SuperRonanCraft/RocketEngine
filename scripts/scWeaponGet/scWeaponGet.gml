@@ -69,12 +69,21 @@ function scWeaponGet() {
 			map[? WEAPON_MAP.COMBO_TYPE] = COMBO_TYPE.NO_MISS;
 			map[? WEAPON_MAP.COMBO_COOLDOWN] = 140;
 			break;
+			
+		case WEAPON_TYPE.BOMB:
+			var _type = WEAPON_BOMB_TYPE.DEFAULT;
+			if (type_sub != noone)
+				_type = type_sub;
+			scBombStart(_type, map);
+			map[? WEAPON_MAP.COMBO_TYPE] = COMBO_TYPE.KNOCKBACK;
+			map[? WEAPON_MAP.COMBO_COOLDOWN] = 50;
+			break;
 	}
 
 	return map;
 
 	enum WEAPON_TYPE {
-		NONE, ROCKET, SHURIKEN, ARROW, POTION,
+		NONE, ROCKET, SHURIKEN, ARROW, POTION, BOMB,
 	}
 
 	enum WEAPON_MAP {

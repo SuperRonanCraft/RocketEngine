@@ -18,7 +18,7 @@ function scAbilityLoad(argument0) {
 		case ABILITY_TYPE.BIGROCKET: //Just a big rocket
 			ds_map[? ABILITY_MAP.NAME] = "Pure Chaos";
 			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scUltimateDefault;
-			ds_map[? ABILITY_MAP.COOLDOWN] = 6;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 4;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_bigrocket;
 			break;
 		case ABILITY_TYPE.PORTAL:
@@ -60,10 +60,18 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_jumppad;
 			break;
 			
+		case ABILITY_TYPE.CLUSTER:
+			ds_map[? ABILITY_MAP.NAME] = "Incoming!";
+			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityCluster;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 8;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_cluster;
+			break;
+			
 	}
 
 	enum ABILITY_TYPE {
 		CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,REFLECT,BIGROCKET, JUMPPAD,
+		CLUSTER,
 		NONE
 	}
 

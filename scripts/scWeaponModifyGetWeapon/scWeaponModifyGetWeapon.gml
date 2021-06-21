@@ -68,6 +68,21 @@ function scWeaponModifyGetWeapon(argument0, argument1) {
 				case WEAPON_MODIFIER.ELECTRIC: weapon = WEAPON_POTION_TYPE.ELECTRIC; break;
 				default: weapon = noone; break;
 			}
+			
+		case WEAPON_TYPE.BOMB:
+			switch (modifier) {
+				case WEAPON_MODIFIER.DEFAULT: weapon = WEAPON_BOMB_TYPE.DEFAULT; break;
+				case WEAPON_MODIFIER.ICE: weapon = WEAPON_BOMB_TYPE.ICE; break;
+				case WEAPON_MODIFIER.FIRE: weapon =WEAPON_BOMB_TYPE.FIRE; break;
+				case WEAPON_MODIFIER.PORTAL: weapon = WEAPON_BOMB_TYPE.PORTAL; break;
+				case WEAPON_MODIFIER.SLIME: weapon =WEAPON_BOMB_TYPE.SLIME; break;
+				case WEAPON_MODIFIER.BRICK: weapon = WEAPON_BOMB_TYPE.BRICK; break;
+				//case WEAPON_MODIFIER.SAND: weapon = WEAPON_BOMB_TYPE.DEFAULT; break;
+				case WEAPON_MODIFIER.SHOTGUN: weapon = WEAPON_BOMB_TYPE.SHOTGUN; break;
+				case WEAPON_MODIFIER.METAL: weapon = WEAPON_BOMB_TYPE.METAL; break;
+				case WEAPON_MODIFIER.ELECTRIC: weapon = WEAPON_BOMB_TYPE.ELECTRIC; break;
+				default: weapon = noone; break;
+			}
 			break;
 		
 		default: weapon = noone;

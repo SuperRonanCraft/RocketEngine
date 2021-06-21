@@ -32,6 +32,11 @@ function scWeaponActivate() {
 				_map[? WEAPON_MAP.COOLDOWN_TIME] = potion_map[? POTION_MAP.COOLDOWN];
 				_map[? WEAPON_MAP.DELAY_TIME] = potion_map[? POTION_MAP.STARTUP];
 				break;
+			case WEAPON_TYPE.BOMB:
+				var bomb_map = _map[? WEAPON_MAP.MAP];
+				_map[? WEAPON_MAP.COOLDOWN_TIME] = bomb_map[? BOMB_MAP.COOLDOWN];
+				_map[? WEAPON_MAP.DELAY_TIME] = bomb_map[? BOMB_MAP.STARTUP];
+				break;
 		}
 
 

@@ -21,6 +21,9 @@ function scWeaponProgress(argument0) {
 		case WEAPON_TYPE.POTION:
 			scPotionProgress(map);
 			break;
+		case WEAPON_TYPE.BOMB:
+			scBombProgress(map);
+			break;
 	}
 
 
