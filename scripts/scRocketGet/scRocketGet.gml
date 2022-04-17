@@ -2,7 +2,7 @@
 /// @arg rocket
 function scRocketGet(argument0) {
 
-	var varspd = 0.5;
+	var varspd =1;
 	var varcd = TIME_SPEED;
 	var vartime = TIME_SPEED;
 	var varkb = TIME_SPEED;
@@ -28,8 +28,8 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.SPEED] = 20 * varspd;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 1;
 			map[? ROCKET_MAP.SHAKE_FRAMES] = 8 * vartime;
-			map[? ROCKET_MAP.DAMAGE] = 8;
-			map[? ROCKET_MAP.EXPLOSION_SCALE] = 2;
+			map[? ROCKET_MAP.DAMAGE] = 10;
+			//map[? ROCKET_MAP.EXPLOSION_SCALE] = 2;
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];
 			break;
 		

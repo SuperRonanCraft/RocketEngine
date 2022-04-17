@@ -14,7 +14,7 @@ if (doing_damage)
 			//if (dmg != -1 && bomb_map[? BOMB_MAP.DAMAGE_EXPLOSION] != 0)
 			///	dmg = bomb_map[? BOMB_MAP.DAMAGE_EXPLOSION];
 			if (isPlayer) {
-				p.gravity_map[? GRAVITY_MAP.VSP_MOVE] -= 10;
+				p.gravity_map[? GRAVITY_MAP.VSP_MOVE] -= 15;
 				//Add buff
 				if (bomb_map[? BOMB_MAP.BUFF] != noone)
 					scBuffAdd(bomb_map[? BOMB_MAP.BUFF], hitList[| i], parent);
