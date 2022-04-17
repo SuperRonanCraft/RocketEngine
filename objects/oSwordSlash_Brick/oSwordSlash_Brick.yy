@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sShuriken_Default_Ult1",
-    "path": "sprites/sShuriken_Default_Ult1/sShuriken_Default_Ult1.yy",
+    "name": "sShuriken_Brick_Ult",
+    "path": "sprites/sShuriken_Brick_Ult/sShuriken_Brick_Ult.yy",
   },
   "solid": false,
   "visible": true,

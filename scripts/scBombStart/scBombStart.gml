@@ -10,9 +10,9 @@ function scBombStart(argument0, argument1) {
 	}
 
 	enum BOMB_SPRITE {
-		NONE = noone, DEFAULT = sBomb_Default,ICE = sBomb_Default, FIRE = sBomb_Default, PORTAL = sBomb_Default, 
-		BRICK = sBomb_Default,  MAGNET = sBomb_Default, SAND = sBomb_Default, SHOTGUN = sBomb_Default,
-		SLIME = sBomb_Default, METAL = sBomb_Default, ELECTRIC = sBomb_Default, 
+		NONE = noone, DEFAULT = sBomb_Default,ICE = sBomb_Ice, FIRE = sBomb_Fire, PORTAL = sBomb_Portal, 
+		BRICK = sBomb_Brick,  MAGNET = sBomb_Default, SAND = sBomb_Default, SHOTGUN = sBomb_Shotgun,
+		SLIME = sBomb_Slime, METAL = sBomb_Metal, ELECTRIC = sBomb_Shock, 
 	}
 
 	enum BOMB_MAP {
