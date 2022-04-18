@@ -3,7 +3,7 @@ hsp = 0;
 vsp = 0;
 color = c_white;
 alpha = 1;
-
+#macro BLOCK_SIZE 32
 //scMergeWall(id);	
 
 if (!create_tiles || global.gamemode == GAMEMODE.SINGLE) exit;

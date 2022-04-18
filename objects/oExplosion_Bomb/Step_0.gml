@@ -16,11 +16,11 @@ if (doing_damage)
 			if (isPlayer) {
 				p.gravity_map[? GRAVITY_MAP.VSP_MOVE] -= 15;
 				//Add buff
-				if (bomb_map[? BOMB_MAP.BUFF] != noone)
+				if (bomb_map[? BOMB_MAP.BUFF] != noone && bomb_map[? BOMB_MAP.EXPLOSION_ADDS_BUFF])
 					scBuffAdd(bomb_map[? BOMB_MAP.BUFF], hitList[| i], parent);
 			}
 			//Damage shootable
-			if(scShootableDamage(other.parent, p, false, true, dmg_todo,noone,DAMAGE_TYPE.SPLASH,noone) && isPlayer)
+			if(scShootableDamage(other.parent, p, false, true, dmg_todo,noone,bomb_map[?BOMB_MAP.DAMAGE_TYPE],noone, bomb_map[? BOMB_MAP.DAMAGE_ELEMENT]) && isPlayer)
 				p.causeOfDeath = deathCause;
 	
 			if (bomb_map[? BOMB_MAP.ULTIMATE_CHARGE_GIVE]) //Allow the bomb to give ult charge?

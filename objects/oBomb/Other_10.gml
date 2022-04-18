@@ -5,6 +5,7 @@ xplo.sprite_index = bomb_map[? BOMB_MAP.EXPLOSION_SPRITE];
 xplo.image_speed = 1.5;
 xplo.image_xscale = bomb_map[? BOMB_MAP.EXPLOSION_SCALE];
 xplo.image_yscale = bomb_map[? BOMB_MAP.EXPLOSION_SCALE];
+xplo.deathCause = bomb_map[? BOMB_MAP.DEATHCAUSE];
 xplo.dmg = dmg;
 xplo.parent = owner;
 ds_map_copy(xplo.weapon_map, weapon_map);

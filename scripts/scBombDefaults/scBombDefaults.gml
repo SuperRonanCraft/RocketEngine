@@ -15,7 +15,7 @@ function scBombDefaults() {
 	map[? BOMB_MAP.COOLDOWN] = 5; //cooldown between shots
 	map[? BOMB_MAP.DAMAGE] = 1; //base damage
 	map[? BOMB_MAP.RELOAD_TIME] = -1;
-	map[? BOMB_MAP.TIMER] = room_speed* 3; //uptime
+	map[? BOMB_MAP.TIMER] = room_speed* 1; //uptime
 	map[? BOMB_MAP.CLIP] = -1; //ammo in a clip
 	map[? BOMB_MAP.STARTUP] = 0; //delay between pressing key and shooting
 	map[? BOMB_MAP.SCALE] = 1; //size of sprite
@@ -36,6 +36,11 @@ function scBombDefaults() {
 	map[? BOMB_MAP.SPRITE_STICK] = noone; //Change sprite on stick
 	map[? BOMB_MAP.WALL_COLLIDE] = true; //Collide with walls
 	map[? BOMB_MAP.WEIGHT] = 9.8; //How fast the entity falls
+	map[? BOMB_MAP.FRICTION] = 0.25; //Friction on collision
+	map[? BOMB_MAP.BOUNCE] = 0.5; //Height reduction on collision
+	map[? BOMB_MAP.DAMAGE_ELEMENT] = DAMAGE_ELEMENT.NONE; //Damage element to inflict
+	map[? BOMB_MAP.DAMAGE_TYPE] = DAMAGE_TYPE.SPLASH; //Damage type to inflict
+	map[? BOMB_MAP.TIMER_ACCEL] = 0.1; //Percentage of timer to add when in contact with entity on ground
 	map[? BOMB_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.DUST]; // Particle to emit
 	map[? BOMB_MAP.PARTICLE_AMT] = 1; //Number of particles to emit
 	map[? BOMB_MAP.PARTICLE_SPLASH] = oParticleHandler.ds_part[? PARTICLES.SCRAPING];//Particle to splash
@@ -48,6 +53,7 @@ function scBombDefaults() {
 	map[? BOMB_MAP.EXPLOSION_SCALE] = 3;
 	map[? BOMB_MAP.EXPLOSION_SPRITE] = sexplosionDefault;
 	map[? BOMB_MAP.EXPLOSION_STEP] = noone;
+	map[? BOMB_MAP.EXPLOSION_ADDS_BUFF] = false; //Boolean stating whether the explosion applies buff as well
 	//map[? BOMB_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability
 	map[? BOMB_MAP.ULTIMATE_CHARGE_GIVE] = true; //if weapon gives ult charge
 	map[? BOMB_MAP.ULTIMATE_CHARGE_MULTIPLIER] = 1; //multiplier of charge rate

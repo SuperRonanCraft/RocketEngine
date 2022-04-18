@@ -28,11 +28,18 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.NAME] = "Ice Bomb";
 			map[? BOMB_MAP.DESCRIPTION] = "I put ice in a bomb.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.ICE;
-			map[? BOMB_MAP.COOLDOWN] = 50;
-			map[? BOMB_MAP.SPEED] = 12;
+			map[? BOMB_MAP.COOLDOWN] = 40;
+			map[? BOMB_MAP.SPEED] = 15;
+			map[? BOMB_MAP.TIMER] = 300;
+			map[? BOMB_MAP.TIMER_ACCEL] = 0.2;
 			map[? BOMB_MAP.DAMAGE] = 7;
-			map[? BOMB_MAP.BUFF] = [BUFFTYPE.FROZEN];
+			map[? BOMB_MAP.BUFF] = [BUFFTYPE.CHILLED];
+			map[? BOMB_MAP.FRICTION] = 0.99;
+			map[? BOMB_MAP.BOUNCE] = 0.2;
 			map[? BOMB_MAP.PARTICLE] = PARTICLES.FROST;
+			map[? BOMB_MAP.DAMAGE_ELEMENT] = DAMAGE_ELEMENT.COLD;
+			map[? BOMB_MAP.DAMAGE_TYPE] = DAMAGE_TYPE.NONE;
+			map[? BOMB_MAP.DEATHCAUSE] = DEATH_LIST.FROZEN;
 			break;
 			
 		case WEAPON_BOMB_TYPE.SLIME:

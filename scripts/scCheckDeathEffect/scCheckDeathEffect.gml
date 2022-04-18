@@ -23,6 +23,7 @@ function scCheckDeathEffect() {
 				corpse.mask_index = sIceStatue;
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+				ds_map_copy(corpse.playerMap, deadGuy.player_map);
 				corpse.currentSprite = deadGuy.characterSprites[?ANIMATIONSTATE.DEADFROZEN];
 				corpse.color = c_aqua;
 				corpse.animationVar = irandom_range(0, sprite_get_number(corpse.currentSprite) -1);

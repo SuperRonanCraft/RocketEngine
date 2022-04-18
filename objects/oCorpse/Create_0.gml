@@ -46,3 +46,4 @@ animate_dur = 1;
 moving = true;
 standing = noone;
 image_speed = 0;
+
