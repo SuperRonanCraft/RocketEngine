@@ -19,10 +19,17 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.DESCRIPTION] = "I put fire in a bomb.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.FIRE;
 			map[? BOMB_MAP.COOLDOWN] = 50;
-			map[? BOMB_MAP.SPEED] = 10;
+			map[? BOMB_MAP.SPEED] = 20;
+			map[? BOMB_MAP.TIMER] = 250;
+			map[? BOMB_MAP.WEIGHT] = 16;
+			map[? BOMB_MAP.TIMER_ACCEL] = 0.2;
 			map[? BOMB_MAP.DAMAGE] = 8;
 			map[? BOMB_MAP.BUFF] = [BUFFTYPE.BURNING];
+			map[? BOMB_MAP.BOUNCE] = 0.99;
+			map[? BOMB_MAP.FRICTION] = 0.1;
 			map[? BOMB_MAP.PARTICLE] = PARTICLES.EMBER;
+			map[? BOMB_MAP.DAMAGE_ELEMENT] = DAMAGE_ELEMENT.FIRE;
+			map[? BOMB_MAP.DAMAGE_TYPE] = DAMAGE_TYPE.NONE;
 			break;
 		case WEAPON_BOMB_TYPE.ICE:
 			map[? BOMB_MAP.NAME] = "Ice Bomb";

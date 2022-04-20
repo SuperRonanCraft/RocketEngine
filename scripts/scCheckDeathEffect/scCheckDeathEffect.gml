@@ -42,7 +42,16 @@ function scCheckDeathEffect() {
 				corpse.owner = deadGuy;
 				corpse.image_speed = 0;			
 				break;
-		
+			
+			case DAMAGE_ELEMENT.FIRE:
+				var rangeToSpawn = 32;
+				part_emitter_region(global.ParticleSystem1, global.Emitter1, deadGuy.bbox_left, deadGuy.bbox_right, deadGuy.bbox_top, deadGuy.bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
+				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.ASH], rangeToSpawn);
+			
+		        for (var i = 0; i < rangeToSpawn; i++) {
+				    scSpawnParticle(x+irandom_range(-rangeToSpawn,rangeToSpawn), y + irandom_range(-rangeToSpawn,rangeToSpawn),1, deadGuy.gravity_map[? GRAVITY_MAP.HSP], spAsh, WORLDPART_TYPE.ASH);
+				}
+				break;
 		
 		    case DAMAGE_ELEMENT.INFECTED:
 	

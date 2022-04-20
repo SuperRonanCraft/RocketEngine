@@ -197,6 +197,7 @@
     {"id":{"name":"sUIGamepadBtns","path":"sprites/sUIGamepadBtns/sUIGamepadBtns.yy",},"order":9,},
     {"id":{"name":"sUIGamepadLR","path":"sprites/sUIGamepadLR/sUIGamepadLR.yy",},"order":11,},
     {"id":{"name":"sUIGamepadWii","path":"sprites/sUIGamepadWii/sUIGamepadWii.yy",},"order":13,},
+    {"id":{"name":"spAsh","path":"sprites/spAsh/spAsh.yy",},"order":12,},
     {"id":{"name":"sUIBox","path":"sprites/sUIBox/sUIBox.yy",},"order":15,},
     {"id":{"name":"sUINumbers","path":"sprites/sUINumbers/sUINumbers.yy",},"order":1,},
     {"id":{"name":"sPlayer_potion_knockBack","path":"sprites/sPlayer_potion_knockBack/sPlayer_potion_knockBack.yy",},"order":8,},

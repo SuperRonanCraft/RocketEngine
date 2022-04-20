@@ -22,7 +22,7 @@ function scBuffBurnDoT(argument0, argument1) {
 		dsBuff[? "damage_crt"]--;
 		scParticleDistribute(owner.x-30, owner.x+30, owner.y-30, owner.y+30, oParticleHandler.ds_part[? PARTICLES.FIRE1], 5);
 		if (dsBuff[? "damage_crt"] < 0) {
-			scShootableDamage(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, true, dsBuff[? "damage"], noone, DAMAGE_TYPE.SPLASH, false);
+			scShootableDamage(dsBuff[? BUFF_MAP.GIVEN_BY], owner, false, true, dsBuff[? "damage"], noone, DAMAGE_TYPE.NONE, false, DAMAGE_ELEMENT.FIRE);
 			scPlaySound(SOUND.EFFECT_SHOOT,random_range(1.3,1.5));
 
 			dsBuff[? "damage_crt"] = dsBuff[? "damage_cd"];
