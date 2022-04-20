@@ -262,7 +262,8 @@ function scShootableDamage() {
 	return lethalDamage;
 
 	enum DAMAGE_ELEMENT {
-		INFECTED, FIRE, COLD, SHOCK, MAGNET, SAND,
+		//In order of sUIElementIcons
+		INFECTED, FIRE, COLD, SHOCK, MAGNET, SAND, SLIME,
 	
 		//Last
 		NONE

@@ -63,7 +63,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 44,
-    "yorigin": 67,
+    "yorigin": 62,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_bomb_gibs","path":"sprites/sPlayer_bomb_gibs/sPlayer_bomb_gibs.yy",},

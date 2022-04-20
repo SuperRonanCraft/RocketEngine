@@ -117,6 +117,9 @@ if(!deactivate){
 				if(obj.y > y){
 					hsp *= bomb_map[? BOMB_MAP.FRICTION];
 					vsp *= bomb_map[? BOMB_MAP.BOUNCE];
+					
+					if((abs(hsp) > 1 || abs(vsp) > 1) && bomb_map[? BOMB_MAP.PARTICLE_WALL])
+						scSpawnParticle(x, y, 3, 3, spSlime, WORLDPART_TYPE.SLIME);
 				}
 				
 				

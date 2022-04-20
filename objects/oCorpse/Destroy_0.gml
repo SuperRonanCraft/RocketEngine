@@ -4,6 +4,20 @@ if(instance_exists(Wall1)){
 	instance_destroy(Wall1);	
 }
 
+if(slimed && instance_exists(killer)){
+	scSpawnParticle(x+irandom_range(-5,5),y+irandom_range(-5,5),32,1,spSlime,WORLDPART_TYPE.SLIME);
+	var _enemy = instance_create_depth(x, bbox_top, depth, oEnemy);
+	
+	with(_enemy){
+		scEnemyCharacterChange(CHARACTER_ENEMY.ZOMBIE);
+		var char_info = player_map[? PLAYER_MAP.CHARACTER_INFO];
+		char_info[? CHARACTER_MAP.PALETTE_INDEX] = 2;
+	}
+	_enemy.shootable_map[?SHOOTABLE_MAP.TEAM] = killer.team;
+	_enemy.team = _enemy.shootable_map[?SHOOTABLE_MAP.TEAM]
+	
+}
+
 if(statue){
 	var spNum = corpseMap[?ANIMATIONSTATE.GIBS];
 	for (var g = 0; g < sprite_get_number(spNum); g++) {
@@ -24,7 +38,7 @@ if(statue){
 	}
 	
 	for (var i = 0; i < irandom_range(4,15); i++) {
-	    scSpawnParticle(x+irandom_range(-5,5),y+irandom_range(-5,5),2,10,spIce,WORLDPART_TYPE.ICE);
+	    scSpawnParticle(x+irandom_range(-5,5),y+irandom_range(-5,5),10,10,spIce,WORLDPART_TYPE.ICE);
 		scPlaySound(SOUND.ULT_SHIELD_BREAK);
 	}	
 }

@@ -42,6 +42,27 @@ function scCheckDeathEffect() {
 				corpse.owner = deadGuy;
 				corpse.image_speed = 0;			
 				break;
+				
+			case DAMAGE_ELEMENT.SLIME:
+		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+200,oCorpse);
+			
+				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+				ds_map_copy(corpse.playerMap, deadGuy.player_map);
+				corpse.rotate = false;
+				corpse.facing = deadGuy.facing;
+				corpse.friction_base = 0.4;
+				corpse.bounce_coeff = 0.3;
+				corpse.sticky = false;
+				corpse.owner = deadGuy;
+				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
+				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
+				corpse.slimed = true;
+	
+			
+				corpse.owner = deadGuy;	
+				corpse.image_speed = deadGuy.image_speed;
+				corpse.killer = killerGuy;
+				break;
 			
 			case DAMAGE_ELEMENT.FIRE:
 				var rangeToSpawn = 32;

@@ -10,6 +10,17 @@ if(instance_exists(owner)) {
 	exit;
 }
 
+var _advance = global.play || global.gameover;
+
+if(!_advance){
+	image_speed = 0;
+	exit;
+}
+
+else{
+	image_speed = 0.6;	
+}
+
 
 if(floor(image_index) == 4)
 	bite = true;

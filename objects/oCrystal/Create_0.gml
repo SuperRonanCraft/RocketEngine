@@ -7,14 +7,6 @@ image_index = random_range(0.2,0.5);
 startX = x;
 startY = y;
 
-switch (crystal) {
-    case 0:
-        sprite_index = s_pcrystal1;
-        break;
-    case 1:
-        sprite_index = s_pcrystal2;
-        break;
-	case 2:
-		sprite_index = s_pcrystal3;
-		break;
-}
+sprite1 = s_pcrystal1;
+sprite2 = s_pcrystal2;
+sprite3 = s_pcrystal3;

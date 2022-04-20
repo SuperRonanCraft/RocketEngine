@@ -3,7 +3,7 @@
 if(!instance_exists(owner))
 	exit;
 
-var isPlayer = other.object_index == oPlayer;
+var isPlayer = scGetParent(pEntity, other);
 ds_list_add(hitList, other);
 if(!schwing && owner != noone && isPlayer && timer > 0){
 	if(owner != other.id){

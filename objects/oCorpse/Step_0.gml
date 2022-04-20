@@ -31,6 +31,20 @@ if(!ds_map_empty(corpseMap) && !gib && !statue && !specialAnimation){
 	}
 }
 
+//Slimed
+if(slimed){
+	if(!moving){
+		if(floor(timer) %2 == 0){
+			var crystal = instance_create_depth(x + irandom_range(-20,20),y + irandom_range(-20,20),depth-1,oCrystal);
+			crystal.owner = id;
+			crystal.startX = x - crystal.x;
+			crystal.startY = y - crystal.y;
+			crystal.sprite1 = sShuriken_Slime_Hit1;
+			crystal.sprite2 = sShuriken_Slime_Hit2;
+			crystal.sprite3 = sShuriken_Slime_Hit3;
+		}	
+	}
+}
 
 //Ice statue crystals
 if(statue){

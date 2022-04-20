@@ -35,6 +35,7 @@ alpha_reduce = 0.04;
 stuck_chance = 1 / 5;
 stuck = false;
 sticky = false;
+slimed = false;
 type = noone;
 rotate = false;
 bounce_coeff = 0.8;

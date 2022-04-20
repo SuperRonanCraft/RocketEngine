@@ -46,6 +46,7 @@ function scBombDefaults() {
 	map[? BOMB_MAP.PARTICLE_SPLASH] = oParticleHandler.ds_part[? PARTICLES.SCRAPING];//Particle to splash
 	map[? BOMB_MAP.PARTICLE_SPLASH_COLOR] = c_aqua;
 	map[? BOMB_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.EXPLOSION_DEFAULT];//Particle to explode
+	map[? BOMB_MAP.PARTICLE_WALL] = false; //Spawn particles on wall hit
 	map[? BOMB_MAP.SHAKE_MAGNITUDE] = 2;
 	map[? BOMB_MAP.SHAKE_FRAMES] = 7;
 	map[? BOMB_MAP.EXPLOSION_CREATE] = noone;

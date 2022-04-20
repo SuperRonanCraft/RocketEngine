@@ -55,7 +55,14 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.SLIME;
 			map[? BOMB_MAP.COOLDOWN] = 60;
 			map[? BOMB_MAP.SPEED] = 9;
+			map[? BOMB_MAP.TIMER] = 300;
+			map[? BOMB_MAP.PARTICLE_WALL] = oParticleHandler.ds_part[? PARTICLES.SLIME];
+			map[? BOMB_MAP.DAMAGE_ELEMENT] = DAMAGE_ELEMENT.SLIME;
+			map[? BOMB_MAP.DAMAGE_TYPE] = DAMAGE_TYPE.NONE;
 			map[? BOMB_MAP.DAMAGE] = 11;
+			map[? BOMB_MAP.FRICTION] = 0.9;
+			map[? BOMB_MAP.TIMER_ACCEL] = 0.3;
+			map[? BOMB_MAP.BOUNCE] = 0.9;
 			map[? BOMB_MAP.BUFF] = [BUFFTYPE.SLIME];
 			map[? BOMB_MAP.PARTICLE] = PARTICLES.SLIME;
 			break;

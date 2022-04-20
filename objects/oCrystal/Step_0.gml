@@ -1,4 +1,17 @@
 /// @description  
+switch (crystal) {
+    case 0:
+        sprite_index = sprite1;
+        break;
+    case 1:
+        sprite_index = sprite2;
+        break;
+	case 2:
+		sprite_index = sprite3;
+		break;
+}
+
+
 if(owner != noone){
 	if(!instance_exists(owner)){
 		instance_destroy()	

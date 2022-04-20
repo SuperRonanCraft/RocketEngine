@@ -8,7 +8,7 @@ else
 	timer -= 0.2;
 	
 
-if(timer <= 0 && !statue)
+if(timer <= 0 && !statue && !slimed)
 	image_alpha = max(image_alpha - alpha_reduce, 0);
 
 
@@ -38,7 +38,7 @@ if(slice){
 
 
 
-if (image_alpha <= 0 || (statue && timer <= 0))
+if (image_alpha <= 0 || ((statue || slimed) && timer <= 0))
 	instance_destroy(id,true);
 	
 

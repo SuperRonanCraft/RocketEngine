@@ -128,8 +128,8 @@ function scSpawnParticle(argument0, argument1, argument2, argument3, argument4, 
 			case WORLDPART_TYPE.ASH:
 			
 				with (worldPart) {
-					grv = random_range(0.05, 0.07);
-					friction_base = random_range(0.8, 1);
+					grv = random_range(1, 1);
+					friction_base = random_range(0.1, 1);
 					hsp_real = random_range(-spd/2, spd/2);
 					vsp_real = random_range(-spd/2, spd/4);
 					timer += irandom_range(120, 240);
