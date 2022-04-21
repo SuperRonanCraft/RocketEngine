@@ -36,6 +36,7 @@ function scBombDefaults() {
 	map[? BOMB_MAP.SPRITE_STICK] = noone; //Change sprite on stick
 	map[? BOMB_MAP.WALL_COLLIDE] = true; //Collide with walls
 	map[? BOMB_MAP.WEIGHT] = 9.8; //How fast the entity falls
+	map[? BOMB_MAP.RICOCHET] = false; //Bomb bounces off player
 	map[? BOMB_MAP.FRICTION] = 0.25; //Friction on collision
 	map[? BOMB_MAP.BOUNCE] = 0.5; //Height reduction on collision
 	map[? BOMB_MAP.DAMAGE_ELEMENT] = DAMAGE_ELEMENT.NONE; //Damage element to inflict

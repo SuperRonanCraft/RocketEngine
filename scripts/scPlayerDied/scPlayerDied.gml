@@ -1,7 +1,7 @@
 function scPlayerDied() {
 	if (display)
-		with (pGMM)
+		with (pGMM){
 			event_user(1);
-
+		}
 
 }

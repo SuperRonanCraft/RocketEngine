@@ -16,7 +16,7 @@ var _ydif = (_p2.y - _p1.y);
 xTo = _p1.x + (_xdif / 2);
 yTo = _p1.y + (_ydif / 2);
 
-var _buff = 128; //buffer between players and border
+var _buff = 128*5; //buffer between players and border
 if (_xdif > RES_W - _buff || _ydif > RES_H - _buff) {
 	var _ydifres = 0;
 	var _xdifres = 0;

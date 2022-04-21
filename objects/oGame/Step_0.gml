@@ -10,10 +10,10 @@ if (physics_debug) {
 		//room_goto(rServer);
 	} else {
 		with (pGMM) {
-			//instance_destroy();
-			//wait_timer = 0;
-			//wait_timer_current = 0;
-			//wait_timer_current_abs = 1;
+			instance_destroy();
+			wait_timer = 0;
+			wait_timer_current = 0;
+			wait_timer_current_abs = 1;
 		}
 		physics_debug = false;
 		global.play = true;

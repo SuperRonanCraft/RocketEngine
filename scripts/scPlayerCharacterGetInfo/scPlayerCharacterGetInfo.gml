@@ -15,6 +15,7 @@ function scPlayerCharacterGetInfo(argument0) {
 	map[? CHARACTER_MAP.ULTIMATE] = noone;
 	map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.NONE;
 	map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.NONE;
+	map[? CHARACTER_MAP.SPEED] = 8; //Default speed
 
 	switch (map[? CHARACTER_MAP.TYPE]) {
 		case CHARACTER.DEFAULT:

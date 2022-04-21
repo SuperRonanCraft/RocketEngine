@@ -11,6 +11,9 @@ scPlayerStart();
 //Load Character
 scEnemyCharacterChange(character, load_character_cache);
 
+//Reset gravity variables
+//scGravityStart();
+
 //Load keybinds
 scKeybindsSet(keys);
 

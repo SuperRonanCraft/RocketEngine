@@ -16,7 +16,7 @@ if (_map[? "players"] != noone) {
 						scBuffAdd(_map[? "buffs_type"], id, id);
 						break;
 					case 2: //WEAPONS
-						scWeaponModify(_ps[i], _map[? "weapon_type"]);
+						scWeaponModify(_ps[i].weapon_map, _map[? "weapon_type"]);
 						break;
 					case 3: //MOVEMENT
 						//Handled in Event User 4

@@ -73,8 +73,16 @@ if(!deactivate){
 					if(bomb_map[? BOMB_MAP.HIT_SCRIPT] != noone)
 						script_execute(bomb_map[? BOMB_MAP.HIT_SCRIPT]);
 					
-					
-					event_user(0);
+					if(bomb_map[? BOMB_MAP.RICOCHET]){
+						scShootableDamage(owner, obj, false, true, bomb_map[?BOMB_MAP.DAMAGE],noone,DAMAGE_TYPE.POUND,noone, bomb_map[? BOMB_MAP.DAMAGE_ELEMENT])
+						obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp);
+						obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
+						
+						hsp*=-1;
+						vsp*=-1;
+					}
+					else
+						event_user(0);
 					
 					exit;
 

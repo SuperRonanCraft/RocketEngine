@@ -212,8 +212,8 @@ function scCheckDeathEffect() {
 				corpse.friction_base = 0.8;
 				corpse.sticky = false;
 				corpse.owner = deadGuy;
-				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
-				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
+				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP] * 5;
+				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP] * 5;
 			
 	
 			

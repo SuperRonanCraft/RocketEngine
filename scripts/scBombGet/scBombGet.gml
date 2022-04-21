@@ -82,8 +82,13 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.DESCRIPTION] = "Through careful and intricate application of knowledge and expertise in my craft, I singlehandedly managed to make this brick explode.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.BRICK;
 			map[? BOMB_MAP.COOLDOWN] = 60;
-			map[? BOMB_MAP.SPEED] = 9;
+			map[? BOMB_MAP.SPEED] = 20;
+			map[? BOMB_MAP.WEIGHT] = 10;
+			map[? BOMB_MAP.TIMER] = 200;
+			map[? BOMB_MAP.FRICTION] = 0.1;
+			map[? BOMB_MAP.BOUNCE] = 0.3;
 			map[? BOMB_MAP.DAMAGE] = 15;
+			map[? BOMB_MAP.RICOCHET] = true;
 			map[? BOMB_MAP.PARTICLE] = PARTICLES.SLOWMO;
 			break;
 		

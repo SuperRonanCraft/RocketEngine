@@ -45,7 +45,7 @@ function scPlayerCharacterChange() {
 
 	//Set base movespeed
 	shootable_map[? SHOOTABLE_MAP.SPEED] = map[? CHARACTER_MAP.SPEED];
-
+	gravity_map[?GRAVITY_MAP.WALK_SPEED] = shootable_map[? SHOOTABLE_MAP.SPEED];
 	//Set base health
 	shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] = map[? CHARACTER_MAP.HEALTH_BASE];
 	shootable_map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] = map[? CHARACTER_MAP.HEALTH_BASE];

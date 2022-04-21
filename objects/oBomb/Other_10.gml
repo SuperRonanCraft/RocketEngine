@@ -34,4 +34,6 @@ with (xplo)
 
 //Delete this instance 
 scPlaySound(SOUND.EFFECT_EXP, noone, noone, true);
+
+
 instance_destroy();

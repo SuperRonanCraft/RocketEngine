@@ -14,6 +14,7 @@ function scEnemyCharacterGetInfo(argument0) {
 	map[? CHARACTER_MAP.CAN_PICK] = true;
 	map[? CHARACTER_MAP.ULTIMATE] = noone;
 	map[? CHARACTER_MAP.ABILITY] = noone;
+	map[? CHARACTER_MAP.SPEED] = 8;
 
 	switch (map[? CHARACTER_MAP.TYPE]) {
 		case CHARACTER_ENEMY.ENEMY:
@@ -29,6 +30,7 @@ function scEnemyCharacterGetInfo(argument0) {
 			map[? CHARACTER_MAP.NAME] = "Zombie";
 			//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
 			map[? CHARACTER_MAP.HEALTH_BASE] = 30;
+			map[? CHARACTER_MAP.SPEED] = 7;
 			map[? CHARACTER_MAP.PALETTE] = sPallete_zombie;
 			map[? CHARACTER_MAP.SOUND_DIE] = snZombie_Die;
 			break;
