@@ -6,7 +6,7 @@ if(!instance_exists(owner))
 var isPlayer = scGetParent(pEntity, other);
 ds_list_add(hitList, other);
 if(!schwing && owner != noone && isPlayer && timer > 0){
-	if(owner != other.id){
+	if(owner != other.id && other.team != owner.team){
 		if (ds_list_find_index(confirmList, other) == -1) { //We've never hit this player before
 			ds_list_add(confirmList, other);
 			var dmg = 25;

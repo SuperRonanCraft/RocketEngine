@@ -31,7 +31,7 @@ function scUIEnemyHealth() {
 	}
 	ds_list_destroy(_list);
 
-	scDrawText(_x + _len / 2, _y - 10, "Enemy", c_white, 0.3, c_black, _alpha, fa_middle, fa_bottom);
+	//scDrawText(_x + _len / 2, _y - 10, "Enemy", c_white, 0.3, c_black, _alpha, fa_middle, fa_bottom);
 	scPlayerDrawUIHealth(_x, _y, _len, _hei, false, _alpha, false, false);
 
 	/*var _dmgList = _hmap[? HEALTH_MAP.DAMAGE_MAP];

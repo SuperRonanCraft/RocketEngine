@@ -1,5 +1,7 @@
 /// @desc GUI for player hp, rockets and ults
 
+if(draw_health) exit;
+
 //Buff draw handler (below all)
 scBuffHandler(BUFF_EVENT.DRAW_GUI_BELOW);
 

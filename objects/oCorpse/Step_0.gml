@@ -42,6 +42,7 @@ if(slimed){
 			crystal.sprite1 = sShuriken_Slime_Hit1;
 			crystal.sprite2 = sShuriken_Slime_Hit2;
 			crystal.sprite3 = sShuriken_Slime_Hit3;
+			timer*=0.5;
 		}	
 	}
 }

@@ -15,6 +15,10 @@ scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.P
 scAnimationState();
 scPalleteSwapReset();
 
+if(draw_health){
+	scUIEnemyHealth();	
+}
+
 //Moving dust
 event_user(0);
 

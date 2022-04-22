@@ -1,8 +1,8 @@
 /// @description  
 
-if(owner != noone){
+if(instance_exists(owner) && owner != noone){
 	with(owner){
-		if(owner != noone){
+		if(instance_exists(owner) && owner != noone){
 			other.image_speed = owner.time_dialation;	
 		}
 	}

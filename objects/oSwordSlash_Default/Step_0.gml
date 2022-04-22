@@ -1,11 +1,14 @@
 /// @description  
 
 
-if(owner != noone){
+if(instance_exists(owner) && owner != noone){
 	x = owner.x;
 	y = owner.y;
 }
-
+else{
+	instance_destroy();
+	exit;
+}
 
 
 timer = timer-(owner.time_dialation);

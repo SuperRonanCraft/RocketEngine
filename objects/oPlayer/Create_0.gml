@@ -19,5 +19,6 @@ scKeybindsSet(keys);
 scComboStart();
 
 name = "Player";
+draw_health = false;
 
 first_step = false;

@@ -6,7 +6,7 @@ gib = false;
 slice = false;
 gibID = 0;
 
-timer = irandom_range(120,240);
+timer = irandom_range(120,240)*60;
 
 corpseMap = ds_map_create();
 playerMap = ds_map_create();

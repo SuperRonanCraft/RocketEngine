@@ -1,4 +1,4 @@
-/// @desc Make a player
+/// @desc Make a controlled player
 
 var test = instance_create_depth(mouse_x, mouse_y, depth, oPlayer);
 test.auto_aim = true;
@@ -12,11 +12,12 @@ else{
 }
 
 with(test){
-	scPlayerCharacterChange(irandom(CHARACTER.LENGTH-1));
-	scStartAI();	
+	scPlayerCharacterChange(irandom(CHARACTER.LENGTH-1))
+	//scStartAI();	
 }
 
-test.draw_health = true;
+//test.draw_health = true;
+oCameraFollow.follow = test;
 test.shootable_map[? SHOOTABLE_MAP.TEAM] = test.team;
 var palette = test.player_map[? PLAYER_MAP.CHARACTER_INFO];
 palette[? CHARACTER_MAP.PALETTE_INDEX] = irandom(sprite_get_width(palette[? CHARACTER_MAP.PALETTE])-1);
