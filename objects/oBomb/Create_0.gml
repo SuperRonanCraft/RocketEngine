@@ -46,6 +46,7 @@ dmg = 0;
 rotate = false;
 imgdir = irandom_range(0,359);
 facing = 1;
+Wall1 = noone;
 
 ported = 0;
 time_dialation = 1;

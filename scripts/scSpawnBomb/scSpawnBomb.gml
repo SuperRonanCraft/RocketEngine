@@ -47,9 +47,9 @@ function scSpawnBomb() {
 		owner = own;
 		weapon_map = w_map;
 		direction = dir;
-		image_angle = direction;
-		if (direction > 90 && direction < 270)
-			image_yscale *= -1;
+		//image_angle = direction;
+		//if (direction > 90 && direction < 270)
+		//	image_yscale *= -1;
 		var bomb_map = weapon_map[? WEAPON_MAP.MAP];
 		sprite_index = bomb_map[? BOMB_MAP.PROJECTILE];
 		dmg = bomb_map[? BOMB_MAP.DAMAGE];

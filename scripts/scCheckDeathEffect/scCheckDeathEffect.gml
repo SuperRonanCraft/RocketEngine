@@ -16,7 +16,7 @@ function scCheckDeathEffect() {
 		switch (status) {
 		
 			case DAMAGE_ELEMENT.COLD:
-		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+200,oCorpse);
+		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth,oCorpse);
 			
 				corpse.x = BLOCK_SIZE * (corpse.x div BLOCK_SIZE);
 				corpse.y = BLOCK_SIZE * (corpse.y div BLOCK_SIZE);
@@ -44,7 +44,7 @@ function scCheckDeathEffect() {
 				break;
 				
 			case DAMAGE_ELEMENT.SLIME:
-		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+200,oCorpse);
+		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth,oCorpse);
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
 				ds_map_copy(corpse.playerMap, deadGuy.player_map);
@@ -186,7 +186,7 @@ function scCheckDeathEffect() {
 				if(DAMAGE_TYPE.SPLASH == status && irandom_range(0,3) == 1){
 					var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.GIBS];
 					for (var g = 0; g < sprite_get_number(spNum); g++) {
-					    var giblets = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(0,10), deadGuy.depth+200,oCorpse);
+					    var giblets = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(0,10), deadGuy.depth,oCorpse);
 						ds_map_copy(giblets.playerMap, deadGuy.player_map);
 						giblets.currentSprite = spNum;
 						giblets.animationVar = g;
@@ -203,7 +203,7 @@ function scCheckDeathEffect() {
 				}
 				//Else, do:
 		    case DAMAGE_TYPE.POUND:
-		        var corpse = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth+200,oCorpse);
+		        var corpse = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth,oCorpse);
 			
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
@@ -212,8 +212,8 @@ function scCheckDeathEffect() {
 				corpse.friction_base = 0.8;
 				corpse.sticky = false;
 				corpse.owner = deadGuy;
-				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP] * 5;
-				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP] * 5;
+				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP] * 10;
+				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP] * 10;
 			
 	
 			
@@ -223,7 +223,7 @@ function scCheckDeathEffect() {
 				
 		
 		    case DAMAGE_TYPE.STAB:
-		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth+200,oCorpse);
+		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth,oCorpse);
 			
 			
 				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);

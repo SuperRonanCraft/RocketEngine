@@ -50,7 +50,7 @@ if(!deactivate){
 		
 			if((_team != _oteam || _team == TEAM.NONE) && obj.id != owner.id){
 				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.EMBER], 3);
-				vsp -= 0.1;
+				//vsp -= 0.1;
 				timer+= bomb_map[? BOMB_MAP.TIMER] * bomb_map[?BOMB_MAP.TIMER_ACCEL];
 				
 				if (!hitWall && ds_list_find_index(confirmList, obj) == -1) { //We've never hit this player before
@@ -71,19 +71,20 @@ if(!deactivate){
 					scScreenShake(25,5);
 					
 					if(bomb_map[? BOMB_MAP.HIT_SCRIPT] != noone)
-						script_execute(bomb_map[? BOMB_MAP.HIT_SCRIPT]);
-					
-					if(bomb_map[? BOMB_MAP.RICOCHET]){
-						scShootableDamage(owner, obj, false, true, bomb_map[?BOMB_MAP.DAMAGE],noone,DAMAGE_TYPE.POUND,noone, bomb_map[? BOMB_MAP.DAMAGE_ELEMENT])
-						obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp);
-						obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
+						script_execute(bomb_map[? BOMB_MAP.HIT_SCRIPT], obj);
+					else{
+						if(bomb_map[? BOMB_MAP.RICOCHET]){
+							scShootableDamage(owner, obj, false, true, bomb_map[?BOMB_MAP.DAMAGE],noone,DAMAGE_TYPE.POUND,noone, bomb_map[? BOMB_MAP.DAMAGE_ELEMENT])
+							obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp);
+							obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
 						
-						hsp*=-1;
-						vsp*=-1;
-					}
-					else
-						event_user(0);
+							hsp*=-1;
+							vsp*=-1;
+						}
+						else
+							event_user(0);
 					
+					}
 					exit;
 
 				}
@@ -94,42 +95,50 @@ if(!deactivate){
 		if(bomb_map[?BOMB_MAP.WALL_COLLIDE] && scGetParent(oWall, obj)){
 			if(obj.shootable || obj.is_wall){
 				hitWall = true;
-				if(bomb_map[? BOMB_MAP.WALL_SCRIPT] != noone)
+				if(bomb_map[? BOMB_MAP.WALL_SCRIPT] != noone){
 					script_execute(bomb_map[? BOMB_MAP.WALL_SCRIPT]);
-				
-				var attempts = 0;
-				var signCheckX = 1;
-				var signCheckY = -1;
-				var wallToCheck = noone;
-				while(attempts <= 2){
-					attempts++;
-					wallToCheck = instance_place(x+(hsp*signCheckX), y+(vsp*signCheckY), oWall);
-					if(wallToCheck == noone){
-						hsp*= signCheckX;
-						vsp*= signCheckY;
-						break;
-					}
-					else if(wallToCheck.object_index == oSeperator){
-						break
-					}
-					else if(attempts == 1){
-						signCheckX = -1;
-						signCheckY = 1;
-					}
-					else if(attempts == 2){
-						signCheckX = -1;
-						signCheckY = -1;
-					}
 				}
+				else if(!bomb_map[? BOMB_MAP.STICK]){
+					var attempts = 0;
+					var signCheckX = 1;
+					var signCheckY = -1;
+					var wallToCheck = noone;
+					while(attempts <= 2){
+						attempts++;
+						wallToCheck = instance_place(x+(hsp*signCheckX), y+(vsp*signCheckY), oWall);
+						if(wallToCheck == noone){
+							hsp*= signCheckX;
+							vsp*= signCheckY;
+							break;
+						}
+						else if(wallToCheck.object_index == oSeperator){
+							break
+						}
+						else if(attempts == 1){
+							signCheckX = -1;
+							signCheckY = 1;
+						}
+						else if(attempts == 2){
+							signCheckX = -1;
+							signCheckY = -1;
+						}
+					}
 				
-				if(obj.y > y){
-					hsp *= bomb_map[? BOMB_MAP.FRICTION];
-					vsp *= bomb_map[? BOMB_MAP.BOUNCE];
+					if(obj.y > y){
+						hsp *= bomb_map[? BOMB_MAP.FRICTION];
+						vsp *= bomb_map[? BOMB_MAP.BOUNCE];
 					
-					if((abs(hsp) > 1 || abs(vsp) > 1) && bomb_map[? BOMB_MAP.PARTICLE_WALL])
-						scSpawnParticle(x, y, 3, 3, spSlime, WORLDPART_TYPE.SLIME);
+						if((abs(hsp) > 1 || abs(vsp) > 1) && bomb_map[? BOMB_MAP.PARTICLE_WALL])
+							scSpawnParticle(x, y, 3, 3, spSlime, WORLDPART_TYPE.SLIME);
+					}
 				}
-				
+				else{
+					x+= hsp;
+					y+= vsp;
+					vsp = 0;
+					hsp = 0;
+					grv_dir = 0;
+				}
 				
 			}
 		}
@@ -164,8 +173,19 @@ if (!deactivate && bomb_map[? BOMB_MAP.PARTICLE] != noone) {
 
 
 if (_advance) {
-	x += hsp;
-	y += vsp;
+	if(stuckTo == noone){
+		x += hsp;
+		y += vsp;
+	}
+	else if(instance_exists(stuckTo)){
+		x = stuckTo.x;
+		y = stuckTo.y;
+	}
+	
+	else{
+		event_user(0);
+		exit;
+	}
 }
 
 

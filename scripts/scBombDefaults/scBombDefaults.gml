@@ -10,7 +10,7 @@ function scBombDefaults() {
 	map[? BOMB_MAP.NAME] = "default"; //Name of weapon*
 	map[? BOMB_MAP.DESCRIPTION] = "Hidden like a ninja."; //Description of weapon*
 	map[? BOMB_MAP.SPEED] = 0; //speed of weapon
-	map[? BOMB_MAP.STICK] = true; //allow wall stick
+	map[? BOMB_MAP.STICK] = false; //allow wall stick
 	map[? BOMB_MAP.TYPE] = WEAPON_BOMB_TYPE.NONE;//weapon type*
 	map[? BOMB_MAP.COOLDOWN] = 5; //cooldown between shots
 	map[? BOMB_MAP.DAMAGE] = 1; //base damage

@@ -81,10 +81,11 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.NAME] = "Brick Bomb";
 			map[? BOMB_MAP.DESCRIPTION] = "Through careful and intricate application of knowledge and expertise in my craft, I singlehandedly managed to make this brick explode.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.BRICK;
+			map[? BOMB_MAP.WALL_SCRIPT] = scBomb_Brick_WallScript;
 			map[? BOMB_MAP.COOLDOWN] = 60;
 			map[? BOMB_MAP.SPEED] = 20;
 			map[? BOMB_MAP.WEIGHT] = 10;
-			map[? BOMB_MAP.TIMER] = 200;
+			map[? BOMB_MAP.TIMER] = 500;
 			map[? BOMB_MAP.FRICTION] = 0.1;
 			map[? BOMB_MAP.BOUNCE] = 0.3;
 			map[? BOMB_MAP.DAMAGE] = 15;
@@ -97,8 +98,13 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.DESCRIPTION] = "I put spikes on a bomb.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.METAL;
 			map[? BOMB_MAP.COOLDOWN] = 30;
-			map[? BOMB_MAP.SPEED] = 10;
-			map[? BOMB_MAP.DAMAGE] = 12;
+			map[? BOMB_MAP.TIMER] = 300;
+			map[? BOMB_MAP.SPEED] = 15;
+			map[? BOMB_MAP.TIMER_ACCEL] = 1;
+			map[? BOMB_MAP.EXPLOSION_SCALE] = 1;
+			map[? BOMB_MAP.DAMAGE] = 5;
+			map[? BOMB_MAP.HIT_SCRIPT] = scBomb_Metal_HitScript;
+			map[? BOMB_MAP.STICK] = true;
 			map[? BOMB_MAP.PARTICLE] = PARTICLES.SPARKLE;
 			map[? BOMB_MAP.PARTICLE_SPLASH_COLOR] = c_white;
 			break;

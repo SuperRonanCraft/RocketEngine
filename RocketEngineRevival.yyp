@@ -583,6 +583,7 @@
     {"id":{"name":"scUltimateSwordShotgun","path":"scripts/scUltimateSwordShotgun/scUltimateSwordShotgun.yy",},"order":53,},
     {"id":{"name":"scUltimateSwordSand","path":"scripts/scUltimateSwordSand/scUltimateSwordSand.yy",},"order":55,},
     {"id":{"name":"scUltimateSwordPortal","path":"scripts/scUltimateSwordPortal/scUltimateSwordPortal.yy",},"order":57,},
+    {"id":{"name":"scBomb_Hit_Scripts","path":"scripts/scBomb_Hit_Scripts/scBomb_Hit_Scripts.yy",},"order":1,},
     {"id":{"name":"scUltimateSwordLightning","path":"scripts/scUltimateSwordLightning/scUltimateSwordLightning.yy",},"order":59,},
     {"id":{"name":"scUltimateSwordIce","path":"scripts/scUltimateSwordIce/scUltimateSwordIce.yy",},"order":61,},
     {"id":{"name":"scUltimateSwordFire","path":"scripts/scUltimateSwordFire/scUltimateSwordFire.yy",},"order":63,},
@@ -864,6 +865,7 @@
     {"id":{"name":"oTarget","path":"objects/oTarget/oTarget.yy",},"order":3,},
     {"id":{"name":"oTargetBomb","path":"objects/oTargetBomb/oTargetBomb.yy",},"order":5,},
     {"id":{"name":"oPit","path":"objects/oPit/oPit.yy",},"order":1,},
+    {"id":{"name":"scBomb_Wall_Scripts","path":"scripts/scBomb_Wall_Scripts/scBomb_Wall_Scripts.yy",},"order":0,},
     {"id":{"name":"oRocket","path":"objects/oRocket/oRocket.yy",},"order":1,},
     {"id":{"name":"oNuke","path":"objects/oNuke/oNuke.yy",},"order":1,},
     {"id":{"name":"oWallRumble","path":"objects/oWallRumble/oWallRumble.yy",},"order":3,},
@@ -1248,6 +1250,7 @@
     {"folderPath":"folders/Objects/Weapons/Bombs.yy","order":14,"resourceVersion":"1.0","name":"Bombs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Entities/Weapons/Bombs.yy","order":9,"resourceVersion":"1.0","name":"Bombs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Entities/PlayerAnimation_BM.yy","order":15,"resourceVersion":"1.0","name":"PlayerAnimation_BM","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/Tacticals/Weapons/Bombs/Specials.yy","order":6,"resourceVersion":"1.0","name":"Specials","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

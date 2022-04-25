@@ -21,7 +21,7 @@ if(slimed && instance_exists(killer)){
 if(statue){
 	var spNum = corpseMap[?ANIMATIONSTATE.GIBS];
 	for (var g = 0; g < sprite_get_number(spNum); g++) {
-		var giblets = instance_create_depth(x + irandom_range(-10,10), y + irandom_range(0,10), depth+5,oCorpse);
+		var giblets = instance_create_depth(x + irandom_range(-10,10), y + irandom_range(0,10), depth,oCorpse);
 		ds_map_copy(giblets.playerMap, playerMap);
 		giblets.currentSprite = spNum;
 		giblets.animationVar = g;

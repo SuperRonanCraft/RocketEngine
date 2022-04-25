@@ -42,7 +42,7 @@ if(slimed){
 			crystal.sprite1 = sShuriken_Slime_Hit1;
 			crystal.sprite2 = sShuriken_Slime_Hit2;
 			crystal.sprite3 = sShuriken_Slime_Hit3;
-			timer*=0.5;
+			//timer*=0.5;
 		}	
 	}
 }
@@ -64,10 +64,12 @@ if(statue){
 		x = BLOCK_SIZE * ( x div BLOCK_SIZE);
 		y = BLOCK_SIZE * ( y div BLOCK_SIZE);
 		if(Wall1 == noone && collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,pEntity,false,true) == noone){
-			Wall1 = instance_create_depth(x-BLOCK_SIZE,y-BLOCK_SIZE,depth,oWall);	
-			Wall1.visible = false;
+			Wall1 = instance_create_depth(x,y,depth,oWall);	
+			//x-= BLOCK_SIZE/2;
+			Wall1.y-=BLOCK_SIZE;
+			Wall1.image_alpha = 0.1;
 			Wall1.image_yscale = 2;
-			Wall1.image_xscale = 2;
+			Wall1.image_xscale = 1;
 		}
 	}
 }
