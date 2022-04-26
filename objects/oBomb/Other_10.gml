@@ -35,5 +35,6 @@ with (xplo)
 //Delete this instance 
 scPlaySound(SOUND.EFFECT_EXP, noone, noone, true);
 
-
+if(bomb_map[? BOMB_MAP.DESPAWN_SCRIPT] != noone)
+	script_execute(bomb_map[? BOMB_MAP.DESPAWN_SCRIPT]);
 instance_destroy();

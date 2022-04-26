@@ -86,6 +86,7 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.SPEED] = 20;
 			map[? BOMB_MAP.WEIGHT] = 10;
 			map[? BOMB_MAP.TIMER] = 500;
+			map[? BOMB_MAP.EXPLOSION_SCALE] = 0.5;
 			map[? BOMB_MAP.FRICTION] = 0.1;
 			map[? BOMB_MAP.BOUNCE] = 0.3;
 			map[? BOMB_MAP.DAMAGE] = 15;
@@ -101,11 +102,11 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.TIMER] = 300;
 			map[? BOMB_MAP.SPEED] = 15;
 			map[? BOMB_MAP.TIMER_ACCEL] = 1;
-			map[? BOMB_MAP.EXPLOSION_SCALE] = 1;
 			map[? BOMB_MAP.DAMAGE] = 5;
 			map[? BOMB_MAP.HIT_SCRIPT] = scBomb_Metal_HitScript;
 			map[? BOMB_MAP.STICK] = true;
 			map[? BOMB_MAP.PARTICLE] = PARTICLES.SPARKLE;
+			map[? BOMB_MAP.DAMAGE_TYPE] = DAMAGE_TYPE.STAB;
 			map[? BOMB_MAP.PARTICLE_SPLASH_COLOR] = c_white;
 			break;
 		
@@ -113,12 +114,13 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.NAME] = "Cluster Bomb";
 			map[? BOMB_MAP.DESCRIPTION] = "I put bombs in a bomb.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.SHOTGUN;
-			map[? BOMB_MAP.COOLDOWN] = 2;
-			map[? BOMB_MAP.CLIP] = 5;
-			map[? BOMB_MAP.RELOAD_TIME] = 90;
-			map[? BOMB_MAP.SPEED] = 9;
-			map[? BOMB_MAP.DAMAGE] = 7;
-			map[? BOMB_MAP.PARTICLE] = PARTICLES.SPEED;
+			map[? BOMB_MAP.COOLDOWN] = 30;
+			map[? BOMB_MAP.TIMER] = 100;
+			map[? BOMB_MAP.EXPLOSION_SCALE] = 1;
+			map[? BOMB_MAP.SPEED] = 13;
+			map[? BOMB_MAP.DAMAGE] = 4;
+			map[? BOMB_MAP.PARTICLE] = PARTICLES.SAND;
+			map[? BOMB_MAP.DESPAWN_SCRIPT] = scBomb_Shotgun_Despawn;
 			break;
 
 		case WEAPON_BOMB_TYPE.PORTAL:

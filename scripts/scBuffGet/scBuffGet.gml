@@ -300,7 +300,7 @@ function scBuffGet(argument0, argument1) {
 			_map[? BUFF_MAP.DESCRIPTION] = "Extremely flammable!";
 			_map[? BUFF_MAP.ICON] = BUFF_ICON.DOUSED;
 			_map[? BUFF_MAP.STEP] = scBuffDoused;
-			_map[? BUFF_MAP.TIME] = 2 * room_speed;
+			_map[? BUFF_MAP.TIME] = 4 * room_speed;
 			_map[? BUFF_MAP.GOOD] = false;
 			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.DRIP1];
 			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.DRIP1];

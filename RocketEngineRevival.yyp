@@ -88,6 +88,7 @@
     {"id":{"name":"sbrickBall","path":"sprites/sbrickBall/sbrickBall.yy",},"order":37,},
     {"id":{"name":"sBomb_Portal","path":"sprites/sBomb_Portal/sBomb_Portal.yy",},"order":4,},
     {"id":{"name":"sbrickBall_explode","path":"sprites/sbrickBall_explode/sbrickBall_explode.yy",},"order":39,},
+    {"id":{"name":"scBomb_Despawn_Scripts","path":"scripts/scBomb_Despawn_Scripts/scBomb_Despawn_Scripts.yy",},"order":2,},
     {"id":{"name":"sIceStatue","path":"sprites/sIceStatue/sIceStatue.yy",},"order":41,},
     {"id":{"name":"sNuke_Default","path":"sprites/sNuke_Default/sNuke_Default.yy",},"order":1,},
     {"id":{"name":"sRocket_Default","path":"sprites/sRocket_Default/sRocket_Default.yy",},"order":3,},

@@ -78,7 +78,7 @@ if(!deactivate){
 							obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp);
 							obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
 						
-							hsp*=-1;
+							//hsp*=-1;
 							vsp*=-1;
 						}
 						else
