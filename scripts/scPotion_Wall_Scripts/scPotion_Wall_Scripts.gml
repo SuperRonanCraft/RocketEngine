@@ -5,8 +5,8 @@ function scPotion_Portal_WallScript() {
 		var xplo = instance_create_depth(x,y,depth,oExplosion_Shuriken);
 		xplo.sprite_index = sexplosion_Glass;
 		xplo.owner = owner;
-		xplo.image_xscale = 1.5;
-		xplo.image_yscale = 1.5;
+		xplo.image_xscale = 2;
+		xplo.image_yscale = 2;
 		ds_map_copy(xplo.weapon_map, weapon_map);
 		ds_list_copy(xplo.hitList, hitList);
 		deactivate = true;

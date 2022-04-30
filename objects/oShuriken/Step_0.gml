@@ -24,10 +24,10 @@ else if (!deactivate) {
 	var spd = weapon_map[? WEAPON_MAP.SPEED];
 	
 	
-	var dir = direction;
+	direction = darctan2(-vsp, hsp);
 	
-	hsp = lengthdir_x(spd, dir);
-	vsp = lengthdir_y(spd, dir);
+	hsp = lengthdir_x(spd, direction);
+	vsp = lengthdir_y(spd, direction);
 	
 	
 		

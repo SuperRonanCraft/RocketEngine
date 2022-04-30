@@ -51,6 +51,7 @@ function scSpawnShuriken() {
 		if (direction > 90 && direction < 270)
 			image_yscale *= -1;
 		var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
+		hsp = image_yscale*shuriken_map[?SHURIKEN_MAP.SPEED];
 		sprite_index = shuriken_map[? SHURIKEN_MAP.PROJECTILE];
 		//timer = rocket_map[? ROCKET_MAP.TIMER];
 		//SCALE

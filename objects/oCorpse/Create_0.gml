@@ -16,6 +16,7 @@ animationVar = 0;
 specialAnimation = false;
 
 statue = false;
+shocked = false;
 Wall1 = noone;
 
 
@@ -46,5 +47,13 @@ animate = false;
 animate_dur = 1;
 moving = true;
 standing = noone;
+
+sliceAngle = 0;
+uv_dimensions = [];
+uv_center = [];
+
+u_sliceAngle = shader_get_uniform(shSlice, "u_angle");
+u_uv_center = shader_get_uniform(shSlice, "uv_center");
+u_uv_dimensions = shader_get_uniform(shSlice, "uv_dimensions");
 image_speed = 0;
 

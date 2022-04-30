@@ -4,6 +4,19 @@ if(instance_exists(Wall1)){
 	instance_destroy(Wall1);	
 }
 
+if(shocked && instance_exists(killer)){
+	var elec = instance_create_depth(x,y,depth,oUltimateLightning);
+	elec.owner = killer;
+	elec.stopped = true;
+	//elec.light_range /= 2;
+	elec.dmg = 5;
+	
+	for (var i = 0; i < 10; i++) {
+	    scSpawnParticle(x+irandom_range(-10,10), y + irandom_range(-10,10),1, 100, s_pdustOG, WORLDPART_TYPE.SHIELD);
+	}
+	
+}
+
 if(slimed && instance_exists(killer)){
 	scSpawnParticle(x+irandom_range(-5,5),y+irandom_range(-5,5),32,1,spSlime,WORLDPART_TYPE.SLIME);
 	var _enemy = instance_create_depth(x, bbox_top, depth, oEnemy);

@@ -8,7 +8,7 @@ function scRocketSlime_Step() {
 
 	x += lengthdir_x(weapon_map[? WEAPON_MAP.SPEED] * owner.time_dialation, direction);
 	//show_debug_message(x);
-	y = y + (5 * -cos(1.25 * (slimeClock / 5)));
+	y += (5 * -cos(1.25 * (slimeClock / 5)));
 	//show_debug_message(y);
 
 	slimeClock++;

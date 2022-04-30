@@ -64,7 +64,7 @@ function scPlayerCharacterGetInfo(argument0) {
 			map[? CHARACTER_MAP.HEALTH_BASE] = 75;
 			map[? CHARACTER_MAP.HEALTH_ARMOR] = 25;
 			map[? CHARACTER_MAP.PALETTE] = sPalette_bomb;
-			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.AMPWALL;
+			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.VORTEX;
 			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.CLUSTER;
 			break;	
 	}

@@ -43,6 +43,27 @@ function scCheckDeathEffect() {
 				corpse.image_speed = 0;			
 				break;
 				
+			case DAMAGE_ELEMENT.SHOCK:
+		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth,oCorpse);
+			
+				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+				ds_map_copy(corpse.playerMap, deadGuy.player_map);
+				corpse.rotate = false;
+				corpse.facing = deadGuy.facing;
+				corpse.friction_base = 0.4;
+				corpse.bounce_coeff = 0.3;
+				corpse.sticky = false;
+				corpse.owner = deadGuy;
+				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
+				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
+				corpse.shocked = true;
+	
+			
+				corpse.owner = deadGuy;	
+				corpse.image_speed = deadGuy.image_speed*1.1;
+				corpse.killer = killerGuy;
+				break;
+				
 			case DAMAGE_ELEMENT.SLIME:
 		        var corpse = instance_create_depth(deadGuy.x + irandom_range(-10,10), deadGuy.y + irandom_range(-10,10), deadGuy.depth,oCorpse);
 			
@@ -107,79 +128,20 @@ function scCheckDeathEffect() {
 			
 			
 			case DAMAGE_TYPE.SLICE:
-				#region
-				/*
-				var spNum = deadGuy.characterSprites[? ANIMATIONSTATE.SLICE];
+				var corpse = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth,oCorpse);
 			
-				var halfSpNum = (sprite_get_number(spNum)-1)/2;
-				var randInd = irandom_range(1, halfSpNum);
-				var confirmSlice = false;
 			
-				for (var s = 0; s < 2; s++) {
-					scSpawnParticle(deadGuy.x, deadGuy.y, 5, 5,  spBlood, WORLDPART_TYPE.BLOOD);	
-					var giblets = instance_create_depth(deadGuy.x, deadGuy.y, deadGuy.depth+200,oCorpse);
-					ds_map_copy(giblets.corpseMap, deadGuy.characterSprites);
-					confirmSlice = false;
-					if(irandom_range(0,3) == 1 && randInd+(s*halfSpNum) != 0 && randInd+(s*halfSpNum) != 3 && randInd+(s*halfSpNum) != 5){
-						confirmSlice = true;
-						giblets.specialAnimation = true;
-						giblets.gibID = randInd+(s*halfSpNum);
-						giblets.rotate = false;
-						giblets.hsp_real = 0;
-						giblets.vsp_real = 0;
-						giblets.image_speed = deadGuy.image_speed;
-						switch (randInd+(s*halfSpNum)) {
-							case 1:
-								if(deadGuy.gravity_map[?GRAVITY_MAP.STANDING]){
-									giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIML1];
-								}
-								else{
-									confirmSlice = false;	
-									giblets.specialAnimation = false;
-								}
-								break;
-							case 2:
-							    giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIMT1];
-								giblets.hsp_real = irandom_range(-10,10);
-								giblets.vsp_real = irandom_range(-15,-10);
-							    break;
-							case 4:
-								if(deadGuy.gravity_map[?GRAVITY_MAP.STANDING]){
-									giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIMR1];
-								}
-								else{
-									confirmSlice = false;	
-									giblets.specialAnimation = false;
-								}
-					        
-								break;
-							case 6:
-								if(deadGuy.gravity_map[?GRAVITY_MAP.STANDING]){
-									giblets.currentSprite = deadGuy.characterSprites[? ANIMATIONSTATE.SLICEANIMB1];
-								}
-								else{
-									confirmSlice = false;	
-									giblets.specialAnimation = false;
-								}
-							    break;
-						}
-					}
-					if(!confirmSlice){
-						giblets.currentSprite = spNum;
-						giblets.animationVar = randInd+(s*halfSpNum);
-						giblets.gib = true;
-						giblets.rotate = true;
-						giblets.hsp_real = irandom_range(-10,10);
-						giblets.vsp_real = irandom_range(-10,5);
-					}
-					giblets.slice = true;
-					giblets.owner = deadGuy;
-					giblets.sticky = false;
-					giblets.bleed = WORLDPART_TYPE.BLOOD;
-					giblets.friction_base = 1;
-				}
-				*/
-		        #endregion
+				ds_map_copy(corpse.corpseMap, deadGuy.characterSprites);
+				ds_map_copy(corpse.playerMap, deadGuy.player_map);
+				corpse.facing = deadGuy.facing;
+				corpse.friction_base = 0.8;
+				corpse.sticky = false;
+				corpse.owner = deadGuy;
+				corpse.slice = true;
+				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
+				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
+				corpse.image_speed = 0;
+				break;
 		
 			case DAMAGE_TYPE.SPLASH:
 			
@@ -214,10 +176,7 @@ function scCheckDeathEffect() {
 				corpse.owner = deadGuy;
 				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP] * 10;
 				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP] * 10;
-			
-	
-			
-				corpse.owner = deadGuy;
+
 				corpse.image_speed = deadGuy.image_speed;
 				break;
 				
@@ -234,10 +193,6 @@ function scCheckDeathEffect() {
 				corpse.owner = deadGuy;
 				corpse.hsp_real = deadGuy.gravity_map[? GRAVITY_MAP.HSP];
 				corpse.vsp_real = deadGuy.gravity_map[? GRAVITY_MAP.VSP];
-			
-			
-			
-				corpse.owner = deadGuy;
 				corpse.image_speed = deadGuy.image_speed;
 		        break;
 			

@@ -62,6 +62,7 @@ function scSpawnRocket() {
 		//timer = rocket_map[? ROCKET_MAP.TIMER];
 		//SCALE
 		var scale = rocket_map[? ROCKET_MAP.SCALE];
+		hsp = rocket_map[? ROCKET_MAP.SPEED] * image_yscale;
 		original_xscale = scale;
 		original_yscale = scale;
 		//CREATE

@@ -10,6 +10,8 @@ function scRocketShotgun_Step() {
 			var spd = 10;
 			rocket.x += lengthdir_x(spd, dir);
 			rocket.y += lengthdir_y(spd, dir);
+			rocket.hsp = lengthdir_x(spd, dir);
+			rocket.vsp = lengthdir_y(spd, dir);
 			dir += 10;
 		}
 		event_user(0); //Explode this rocket

@@ -21,7 +21,9 @@ if (rocket_map[? ROCKET_MAP.ROCKET_STEP] != noone)
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 else if (_advance) {
 	var spd = weapon_map[? WEAPON_MAP.SPEED];
+	direction = darctan2(-vsp, hsp);
 	scMovementLine(spd, direction);
+	image_angle = direction;
 }
 
 if (timer < time && _advance)
