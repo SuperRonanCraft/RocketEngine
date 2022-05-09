@@ -1,8 +1,9 @@
-function scNetworkSendHealth(argument0, argument1, argument2) {
+function scNetworkSendHealth(argument0, argument1, argument2, argument3) {
 	//Send key to server
 	///@arg base
 	///@arg armor
 	///@arg shield
+	///@arg vital
 	exit; //DISABLED
 	if (instance_exists(oClient))
 		with (oClient) {

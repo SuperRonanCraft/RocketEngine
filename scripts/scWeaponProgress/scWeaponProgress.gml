@@ -24,6 +24,9 @@ function scWeaponProgress(argument0) {
 		case WEAPON_TYPE.BOMB:
 			scBombProgress(map);
 			break;
+		case WEAPON_TYPE.BULLET:
+			scBulletProgress(map);
+			break;
 	}
 
 

@@ -37,6 +37,12 @@ function scWeaponActivate() {
 				_map[? WEAPON_MAP.COOLDOWN_TIME] = bomb_map[? BOMB_MAP.COOLDOWN];
 				_map[? WEAPON_MAP.DELAY_TIME] = bomb_map[? BOMB_MAP.STARTUP];
 				break;
+			case WEAPON_TYPE.BULLET:
+				var arrow_map = _map[? WEAPON_MAP.MAP];
+				_map[? WEAPON_MAP.COOLDOWN_TIME] = arrow_map[? BULLET_MAP.COOLDOWN];
+				_map[? WEAPON_MAP.DELAY_TIME] = arrow_map[? BULLET_MAP.STARTUP];
+				//_map[? WEAPON_MAP.START_DELAY] = true;
+				break;
 		}
 
 

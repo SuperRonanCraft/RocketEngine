@@ -12,6 +12,8 @@ switch (damage_type) {
 				_c = c_orange; break;
 			case DAMAGE_TOOK.SHIELD:
 				_c = c_aqua; break;
+			case DAMAGE_TOOK.VITAL:
+				_c = c_purple; damage_type = DAMAGE_TYPE.CRITICAL; break;
 		}
 }
 //scDrawText(x, y, value_damage, color, scale, noone, alpha, noone, noone, angle);

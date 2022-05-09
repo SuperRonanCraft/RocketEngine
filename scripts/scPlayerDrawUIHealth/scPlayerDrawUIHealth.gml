@@ -23,7 +23,7 @@ function scPlayerDrawUIHealth() {
 	//DRAW PLAYER HEALTH
 	var _map = shootable_map;
 	var _hmap = health_map;
-	var _health_max = _map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] + _map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL] + _map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL];
+	var _health_max = _map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] + _map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL] + _map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] + _map[? SHOOTABLE_MAP.HEALTH_VITAL_ORIGINAL];
 	var _offset = 0;
 	if (_map[? SHOOTABLE_MAP.HEALTH_BASE] <= 2)
 		_offset = scMovementWave(-3, 3, 1);
@@ -31,10 +31,20 @@ function scPlayerDrawUIHealth() {
 		_side = team == TEAM.LEFT ? 1 : -1;
 		_x = _side == 1 ? _hmap[? HEALTH_MAP.X] : RES_W - _hmap[? HEALTH_MAP.X];
 	}
-	var _mul = _map[? SHOOTABLE_MAP.HEALTH_BASE] / _health_max;
-	scDrawSpriteExt(_x, _y, sUIHealthNew, 0, noone, _alpha, _len * _mul * _side, _hei / _h); //Health
-	var _x2 = _x + ((_len * _mul) * _side); //Calculate next objects position
-
+	var _mul = 0;
+	var _x2 = _x;
+	if(_map[? SHOOTABLE_MAP.HEALTH_VITAL] > 0){
+		_mul = _map[? SHOOTABLE_MAP.HEALTH_VITAL] / _health_max;
+		scDrawSpriteExt(_x2, _y, sUIHealthNew, 4, noone, _alpha, _len * _mul * _side, _hei / _h); //Health
+		_x2 += ((_len * _mul) * _side); //Calculate next objects position
+	}
+	
+	if(_map[? SHOOTABLE_MAP.HEALTH_BASE] > 0){
+		_mul = _map[? SHOOTABLE_MAP.HEALTH_BASE] / _health_max;
+		scDrawSpriteExt(_x2, _y, sUIHealthNew, 0, noone, _alpha, _len * _mul * _side, _hei / _h); //Health
+		_x2 += ((_len * _mul) * _side); //Calculate next objects position
+	}
+	
 	if (_map[? SHOOTABLE_MAP.HEALTH_ARMOR] > 0) {
 		_mul = _map[? SHOOTABLE_MAP.HEALTH_ARMOR] / _health_max;
 		scDrawSpriteExt(_x2, _y, sUIHealthNew, 2, noone, _alpha, _len * _mul * _side, _hei / _h); //Armor
@@ -96,7 +106,7 @@ function scPlayerDrawUIHealth() {
 	//TEXT
 	if (_draw_health) {
 		var _health = abs(floor(_map[? SHOOTABLE_MAP.HEALTH_BASE] + _map[? SHOOTABLE_MAP.HEALTH_SHIELD] + 
-			_map[? SHOOTABLE_MAP.HEALTH_ARMOR]));
+			_map[? SHOOTABLE_MAP.HEALTH_ARMOR] + _map[? SHOOTABLE_MAP.HEALTH_VITAL]));
 		scDrawText(_x + (_len / 2) * _side, _y + (((_hei / _h) * _h) / 2), string(_health) + "/" + string(_health_max), noone, 0.5, noone, _alpha, fa_middle, fa_middle);
 	}
 	//_hmap[? HEALTH_MAP.FLASH_ALPHA] = max(_hmap[? HEALTH_MAP.FLASH_ALPHA] - _hmap[? HEALTH_MAP.FLASH_ALPHA_REDUCE], 0);

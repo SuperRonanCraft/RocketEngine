@@ -50,7 +50,7 @@ function scShootableDamage() {
 			//---------------
 			var _dmg_left = dmg;
 			var _dmg_inflicted = 0;
-			if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0) {
+			if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0 && _dmg_left > 0) {
 			
 				part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
 				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SHIELD_DAMAGE], _dmg_left);
@@ -137,23 +137,77 @@ function scShootableDamage() {
 			
 				_dmg_left = ceil(_dmg_left * multiplier);
 			
+				//All shield damage
+				if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_BASE]) {
+					_dmg_left -= map[? SHOOTABLE_MAP.HEALTH_BASE];
+					_dmg_inflicted += map[? SHOOTABLE_MAP.HEALTH_BASE];
+					map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
+					//scPlaySound(SOUND.UI_SELECT);
+					part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
+					part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.HEALTH_DAMAGE], clamp(_dmg_left*1.5, 5, 100));
 			
-				//=====================
-				map[? SHOOTABLE_MAP.HEALTH_BASE] -= _dmg_left;
-				if (_dmg_took == noone) //Took mostly health damage
-					_dmg_took = DAMAGE_TOOK.HEALTH;
-				_dmg_inflicted += _dmg_left;
+				} 
 			
-				part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
-				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.HEALTH_DAMAGE], clamp(_dmg_left*1.5, 5, 100));
+				//Partial Shield Damage
+				else {
+					map[? SHOOTABLE_MAP.HEALTH_BASE] -= _dmg_left;
+					_dmg_inflicted += _dmg_left;
+				
+					scPlaySound(SOUND.EFFECT_SHOOT);
+					_dmg_left = 0;
+				}
 			}
 		
+			if (map[? SHOOTABLE_MAP.HEALTH_VITAL] > 0) {
+				var _dmg_to_take = 0;
+			
+				//Calculate Resistances
+				var multiplier = scBaseDamageResistances(SHOOTABLE_MAP.HEALTH_VITAL, _damage_type);
+				multiplier *= scElementDamageResistances(SHOOTABLE_MAP.HEALTH_VITAL, _damage_element);
+			
+				_dmg_left = ceil(_dmg_left * multiplier);
+				//---------------------
+			
+				if (_dmg_left > map[? SHOOTABLE_MAP.HEALTH_VITAL]) {
+					_dmg_to_take = floor(_dmg_left + (map[? SHOOTABLE_MAP.HEALTH_VITAL] * map[? SHOOTABLE_MAP.VITAL_DAMAGEAMPLIFICATION]));	
+				} else {
+					_dmg_to_take = floor(_dmg_left * map[? SHOOTABLE_MAP.VITAL_DAMAGEAMPLIFICATION]);	
+				}
+			
+				var _health_left = floor(map[? SHOOTABLE_MAP.HEALTH_VITAL] - _dmg_to_take);
+				var _health_taken = map[? SHOOTABLE_MAP.HEALTH_VITAL] - _health_left;
+			
+				part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
+				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.ANTIHEAL], _dmg_left);
+			
+				if (_health_left > 0) { //Still has armor
+					map[? SHOOTABLE_MAP.HEALTH_VITAL] = _health_left;
+					scPlaySound(SOUND.EFFECT_BITE_HIT);
+					//Took mostly armor damage
+					if (_health_taken > _dmg_to_take || _health_taken > _dmg_inflicted || _dmg_to_take > _dmg_inflicted)
+						_dmg_took = DAMAGE_TOOK.VITAL;
+					_dmg_left = 0;
+				
+				} else { //Used up all armor, take the rest of dmg in health
+					scSpawnParticle(damaging.x, damaging.bbox_top, 10, 20, s_pHealthDamage, WORLDPART_TYPE.ARMOR);
+					scPlaySound(SOUND.EFFECT_DEATH);
+					map[? SHOOTABLE_MAP.HEALTH_VITAL] = 0;
+					//Took mostly armor damage
+					if (_dmg_took == noone)
+						_dmg_took = DAMAGE_TOOK.VITAL;
+					_dmg_left = abs(_health_left);
+				}
+				
+				//Damage inflicted
+				_dmg_inflicted += _dmg_to_take - _dmg_left;
+			}
 			dmg = _dmg_inflicted; //Total damage we just took
 		
 			//--------------
 			//Damage side effects
 			//--------------
-			map[? SHOOTABLE_MAP.HEALTH] = map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR]
+			map[? SHOOTABLE_MAP.HEALTH] = map[?SHOOTABLE_MAP.HEALTH_VITAL] + map[? SHOOTABLE_MAP.HEALTH_BASE] + map[? SHOOTABLE_MAP.HEALTH_SHIELD] + map[? SHOOTABLE_MAP.HEALTH_ARMOR];
+			
 			if (map[? SHOOTABLE_MAP.HEALTH] <= 0 && player_map[?PLAYER_MAP.ALIVE]) {
 				lethalDamage = true;
 			
@@ -162,6 +216,7 @@ function scShootableDamage() {
 				map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
+				map[? SHOOTABLE_MAP.HEALTH_VITAL] = 0;
 			
 				if(_damage_type != DAMAGE_TYPE.NONE && _damage_element == DAMAGE_ELEMENT.NONE){
 					scCheckDeathEffect(_damage_type,damaging,damager, true);
@@ -233,6 +288,8 @@ function scShootableDamage() {
 				_c = c_orange;
 			else if (_dmg_took == DAMAGE_TOOK.SHIELD)
 				_c = c_aqua;
+			else if (_dmg_took == DAMAGE_TOOK.VITAL)
+				_c = c_purple;
 		
 			_dmgmap[? "color"] = _c;
 			ds_list_add(health_map[? HEALTH_MAP.DAMAGE_MAP], _dmgmap);
@@ -248,7 +305,8 @@ function scShootableDamage() {
 		scNetworkSendHealth(
 			map[? SHOOTABLE_MAP.HEALTH_BASE],
 			map[? SHOOTABLE_MAP.HEALTH_ARMOR],
-			map[? SHOOTABLE_MAP.HEALTH_SHIELD]);
+			map[? SHOOTABLE_MAP.HEALTH_SHIELD],
+			map[? SHOOTABLE_MAP.HEALTH_VITAL]);
 		}
 	}
 
@@ -275,7 +333,7 @@ function scShootableDamage() {
 	}
 
 	enum DAMAGE_TOOK {
-		HEALTH, ARMOR, SHIELD
+		HEALTH, ARMOR, SHIELD, VITAL,
 	}
 
 

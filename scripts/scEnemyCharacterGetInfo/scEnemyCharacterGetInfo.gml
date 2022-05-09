@@ -5,7 +5,8 @@ function scEnemyCharacterGetInfo(argument0) {
 	var map = ds_map_create();
 	map[? CHARACTER_MAP.TYPE] = argument0;
 	//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
-	map[? CHARACTER_MAP.HEALTH_BASE] = 20; //Default health
+	map[? CHARACTER_MAP.HEALTH_BASE] = 0; //Default health
+	map[? CHARACTER_MAP.HEALTH_VITAL] = 0; //Default health
 	map[? CHARACTER_MAP.HEALTH_ARMOR] = 0; //Default health
 	map[? CHARACTER_MAP.HEALTH_SHIELD] = 0; //Default health
 	map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
@@ -20,8 +21,8 @@ function scEnemyCharacterGetInfo(argument0) {
 		case CHARACTER_ENEMY.ENEMY:
 			map[? CHARACTER_MAP.NAME] = "Enemy";
 			//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; 
-			map[? CHARACTER_MAP.HEALTH_BASE] = 10;
-			map[? CHARACTER_MAP.HEALTH_ARMOR] = 10;
+			map[? CHARACTER_MAP.HEALTH_VITAL] = 10;
+			//map[? CHARACTER_MAP.HEALTH_ARMOR] = 10;
 			map[? CHARACTER_MAP.HEALTH_SHIELD] = 20;
 			map[? CHARACTER_MAP.PALETTE] = sPallete_default;
 			map[? CHARACTER_MAP.SPEED] = 1;

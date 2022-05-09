@@ -14,7 +14,7 @@ color = c_red;
 value_cached = []; //Sprites in an array
 
 angle = 0;
-angle_change = 1;
+angle_change = 0.1;
 angle_side = choose(-1, 1);
 hsp = random_range(0, 5) * choose(-1, 1);
 alpha = 1;

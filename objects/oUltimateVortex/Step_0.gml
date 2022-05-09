@@ -156,13 +156,13 @@ if(deactivate){
 	pullingAmt = 0;
 	if(timer%5 == 0){
 		ds_list_clear(pullList);
-		//pullingAmt = collision_circle_list(x,y,pullRadius,pWeapon,false,true,pullList,false);	
+		pullingAmt = collision_circle_list(x,y,pullRadius,pWeapon,false,true,pullList,false);	
 	}
 	
 	if(pullingAmt > 0){
 		for (var i = 0; i < ds_list_size(pullList); i++) {
 			var wep = pullList[|i];
-			if(!instance_exists(wep) || wep.deactivate) exit;
+			if(!instance_exists(wep)) exit;
 		    wep.hsp += lengthdir_x(point_distance(x,y, wep.x, wep.y), point_direction(wep.x, wep.y, x, y))/pullStrength;
 			wep.vsp += lengthdir_y(point_distance(x,y, wep.x, wep.y), point_direction(wep.x, wep.y, x, y))/pullStrength;
 			

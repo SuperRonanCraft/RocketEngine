@@ -5,9 +5,10 @@ function scPlayerCharacterGetInfo(argument0) {
 	var map = ds_map_create();
 	map[? CHARACTER_MAP.TYPE] = argument0;
 	//map[? CHARACTER_MAP.WEAPON] = WEAPON.ROCKET; //Default weapon
-	map[? CHARACTER_MAP.HEALTH_BASE] = 20; //Default health
+	map[? CHARACTER_MAP.HEALTH_BASE] = 0; //Default health
 	map[? CHARACTER_MAP.HEALTH_ARMOR] = 0; //Default armor
 	map[? CHARACTER_MAP.HEALTH_SHIELD] = 0; //Default shield
+	map[? CHARACTER_MAP.HEALTH_VITAL] = 0;
 	map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
 	map[? CHARACTER_MAP.PALETTE] = noone;
 	map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
@@ -67,6 +68,17 @@ function scPlayerCharacterGetInfo(argument0) {
 			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.VORTEX;
 			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.CLUSTER;
 			break;	
+		/*
+		case CHARACTER.GUN:
+			map[? CHARACTER_MAP.NAME] = "Dell";
+			map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.BULLET;
+			map[? CHARACTER_MAP.HEALTH_BASE] = 75;
+			map[? CHARACTER_MAP.HEALTH_VITAL] = 25;
+			map[? CHARACTER_MAP.PALETTE] = sPallete_default;
+			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.VORTEX;
+			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.REFLECT;
+			break;	
+		*/
 	}
 
 	return map;

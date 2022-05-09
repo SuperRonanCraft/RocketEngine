@@ -18,7 +18,12 @@ function scShootableHeal() {
 	with (healable) {
 		var map = shootable_map;
 		for (var i = 0; i < heal; i++) {
-			if (map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_BASE]) {
+			if (map[? SHOOTABLE_MAP.HEALTH_VITAL_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_VITAL]) {
+				map[? SHOOTABLE_MAP.HEALTH_VITAL]++;
+				healed++;
+			}
+			
+			else if (map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_BASE]) {
 				map[? SHOOTABLE_MAP.HEALTH_BASE]++;
 				healed++;
 			} else if (map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] > map[? SHOOTABLE_MAP.HEALTH_ARMOR]) {

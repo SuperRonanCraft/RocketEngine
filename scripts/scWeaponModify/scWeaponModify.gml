@@ -24,6 +24,9 @@ function scWeaponModify(argument0, argument1) {
 			case WEAPON_TYPE.BOMB:
 				scBombChange(weapon, _map);
 				break;
+			case WEAPON_TYPE.BULLET:
+				scBulletChange(weapon, _map);
+				break;
 		}
 		_map[? WEAPON_MAP.MODIFIER] = _mod;
 	}

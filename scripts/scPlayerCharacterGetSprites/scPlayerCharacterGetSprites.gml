@@ -73,8 +73,25 @@ function scPlayerCharacterGetSprites(argument0) {
 			map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_bomb_deadFrozen;
 			map[? ANIMATIONSTATE.DEADLASER] = sPlayer_bomb_deadLaser;
 			map[? ANIMATIONSTATE.GIBS] = sPlayer_bomb_gibs;
+/*		case CHARACTER.GUN:
+			map[? ANIMATIONSTATE.SLICE] = sPlayer_bomb_idle;
+	        map[? ANIMATIONSTATE.STANDING] = sPlayer_bomb_idle;
+			map[? ANIMATIONSTATE.SLIDING] = sPlayer_bomb_walkend;
+			map[? ANIMATIONSTATE.WALKING] = sPlayer_bomb_walk;
+			map[? ANIMATIONSTATE.RISING] = sPlayer_bomb_rise;
+			map[? ANIMATIONSTATE.FALLING] = sPlayer_bomb_fall;
+			map[? ANIMATIONSTATE.KNOCKBACK] = sPlayer_bomb_knockBack;
+			map[? ANIMATIONSTATE.KNOCKBACK2] = sPlayer_bomb_knockBack2;
+			map[? ANIMATIONSTATE.TECHED] = sPlayer_bomb_tech;
+			map[? ANIMATIONSTATE.DEAD] = sPlayer_bomb_dead1;
+			map[? ANIMATIONSTATE.DEAD2] = sPlayer_bomb_dead2;
+			map[? ANIMATIONSTATE.TRAPPED] = sPlayer_bomb_trapped;
+			map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_bomb_deadFrozen;
+			map[? ANIMATIONSTATE.DEADLASER] = sPlayer_bomb_deadLaser;
+			map[? ANIMATIONSTATE.GIBS] = sPlayer_bomb_gibs;
 	        break;
-	    default:
+*/
+	default:
 			if (argument0 != CHARACTER.DEFAULT)
 				show_debug_message("Character " + string(argument0) + " does not exist!");
 	        map[? ANIMATIONSTATE.SLICE] = sPlayer_default_idle;
