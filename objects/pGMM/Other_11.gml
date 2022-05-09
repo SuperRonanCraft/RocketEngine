@@ -4,6 +4,7 @@
 if (endgame || room == devRoom) exit;
 
 endgame = true;
+
 //End game sound...
 with (oMusicHandler)
 	event_user(2);

@@ -73,6 +73,7 @@ function scPlayerCharacterGetSprites(argument0) {
 			map[? ANIMATIONSTATE.DEADFROZEN] = sPlayer_bomb_deadFrozen;
 			map[? ANIMATIONSTATE.DEADLASER] = sPlayer_bomb_deadLaser;
 			map[? ANIMATIONSTATE.GIBS] = sPlayer_bomb_gibs;
+			break;
 /*		case CHARACTER.GUN:
 			map[? ANIMATIONSTATE.SLICE] = sPlayer_bomb_idle;
 	        map[? ANIMATIONSTATE.STANDING] = sPlayer_bomb_idle;

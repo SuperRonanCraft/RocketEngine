@@ -18,18 +18,16 @@ function scAI1v1Default(argument0) {
 	}
 
 	//If you stand, have a 'chance' to jump
-	if (player.gravity_map[? GRAVITY_MAP.STANDING]) {
-		if (irandom_range(1, 10) == 10)
-			AIJump = true;
-	} else if (player.gravity_map[? GRAVITY_MAP.JUMP_JUMPS] < player.gravity_map[? GRAVITY_MAP.JUMP_JUMPS_MAX]) {
-		if (irandom_range(0, 50) > 48)
-				AIJump = true;
+	
+	if (irandom_range(1, 20) == 10){
+		AIJump = true;
+	
 	} else
 		AIJump = false;
 
 	//As long as you live, shoot!
 	if (_shoot)
-		if (!ultReady && player.player_map[? PLAYER_MAP.ALIVE] && irandom_range(0, 10) > 8)
+		if (!ultReady && player.player_map[? PLAYER_MAP.ALIVE] && irandom_range(0, 20) > 14)
 			AIShoot = true;	
 		else
 			AIShoot = false;
@@ -52,7 +50,7 @@ function scAI1v1Default(argument0) {
 
 	//Reset timer
 	if (timer < 0) {
-		timer = irandom_range(30, 60);	
+		timer = irandom_range(10, 20);	
 		if (!ultReady)
 			randDirection = irandom_range(0, 1);
 		else

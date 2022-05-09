@@ -84,6 +84,22 @@ function scPlayerLoadModifiers(argument0) {
 			}
 			break;
 		case GAMEMODE.DEATHMATCH:
+			with (player) {
+				var hp = shootable_map[? SHOOTABLE_MAP.HEALTH];
+				hp = 1;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] = 1;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_VITAL] = 0;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_BASE_ORIGINAL] = 1;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD_ORIGINAL] = 0;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_VITAL_ORIGINAL] = 0;
+				shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR_ORIGINAL] = 0;
+				//scStageUltimateStart(global.mode_rumble_ultimates);
+				//weapon_map[? WEAPON_MAP.ENABLED] = global.mode_1v1_weapon;
+				auto_aim = true;
+				//_mode = global.mode_rumble_singleplayer;
+			}
 			break;
 		default: //SINGLEPLAYER, TUTORIAL
 			break;

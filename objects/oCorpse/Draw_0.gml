@@ -27,7 +27,7 @@ if(slice){
 	uv_center[0] = 0.5 * uv_w + uvs[0];
 	uv_center[1] = 0.5 * uv_h + uvs[1];
 	//draw_text(bbox_right+50, bbox_top, string(sliceAngle));
-	shader_set(shSlice);	
+	//shader_set(shSlice);	
 	shader_set_uniform_f_array(u_uv_center, uv_center);
 	shader_set_uniform_f_array(u_uv_dimensions, uv_dimensions);
 	sliceAngle += 1;
@@ -52,7 +52,7 @@ if(shocked){
 
 
 if(slice){
-	shader_reset();	
+	//shader_reset();	
 }
 
 
