@@ -1,7 +1,7 @@
 ///@desc The "Slowmo" Buff
 ///@arg owner Owner of buff
 ///@arg buff Parent Buff DS Map
-function scBuffFastmo(argument0, argument1) {
+function scBuffSlowmo(argument0, argument1) {
 
 	var owner = argument0;
 	var dsBuff = argument1;

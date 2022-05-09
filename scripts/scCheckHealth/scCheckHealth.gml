@@ -4,7 +4,7 @@ function scCheckHealth() {
 	
 	//invincibility frames
 	if(iframes > 0){
-		iframes--;
+		iframes-= time_dialation;
 		shootable_map[?SHOOTABLE_MAP.CAN_INTERACT] = false;
 	}
 	else{

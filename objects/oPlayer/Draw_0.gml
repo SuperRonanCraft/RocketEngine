@@ -20,9 +20,6 @@ if(draw_health){
 }
 
 
-//invincibility draw
-if(iframes > 0)
-	draw_circle(x,y,50,false);
 
 //Moving dust
 event_user(0);

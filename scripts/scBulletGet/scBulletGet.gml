@@ -33,7 +33,7 @@ function scBulletGet(argument0) {
 			map[? BULLET_MAP.COOLDOWN] = 20;
 			map[? BULLET_MAP.WEIGHT] = 0;
 			map[? BULLET_MAP.POWER_MAX] = 300;
-			map[? BULLET_MAP.DAMAGE] = 20;
+			map[? BULLET_MAP.DAMAGE] = 10;
 			break;
 	}
 

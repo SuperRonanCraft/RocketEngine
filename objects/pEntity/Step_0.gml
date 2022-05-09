@@ -69,7 +69,7 @@ switch (player_map[? PLAYER_MAP.ANIMATION_STATE]) {
 				player_map[? PLAYER_MAP.ANIMATION_VAR] == 
 				sprite_get_number(characterSprites[? ANIMATIONSTATE.WALKING]) / 2)
 			scPlaySound(choose(SOUND.EFFECT_PLAYER_STEP_1), 
-				random_range(0.5, 0.6));
+				random_range(0.5, 0.6)*time_dialation);
 			break;
 	case ANIMATIONSTATE.TECHED:
 }

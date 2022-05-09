@@ -5,7 +5,7 @@ if (!variable_instance_exists(id, "clone_timer"))
 if (!variable_instance_exists(id, "clone_timer_max"))
 	clone_timer_max = 30;
 
-clone_timer++;
+clone_timer+= time_dialation;
 
 if (clone_timer > clone_timer_max) {
 	shootable_map[? SHOOTABLE_MAP.SHOW_DAMAGE] = false;

@@ -320,6 +320,24 @@ function scBuffGet(argument0, argument1) {
 			_map[? "damage_crt"] = _map[? "damage_cd"];
 			_map[? "damage"] = 3; //damage to take
 			break;
+			
+		case BUFFTYPE.FASTMO:
+			_map[? BUFF_MAP.NAME] = "Fastmo";
+			_map[? BUFF_MAP.DESCRIPTION] = "So fast!";
+			_map[? BUFF_MAP.ICON] = BUFF_ICON.FASTMO;
+			_map[? BUFF_MAP.STEP] = scBuffFastmo;
+			_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.SPEED];
+			_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.SPEED];
+			_map[? BUFF_MAP.GOOD] = true;
+			_map[? BUFF_MAP.TIME] = 7 * room_speed;
+			_map[? BUFF_MAP.DRAW] = scBuffSlowmo_Draw;
+			_map[? "dialation"] = 2; //How much to dialate time to
+			_map[? "steps"] = ds_list_create();
+			_map[? "steps_amt"] = 3;
+			_map[? "steps_crt"] = 0;
+			_map[? "steps_on"] = 0;
+			_map[? "steps_max"] = 7;
+			break;
 		// FOR LATER TECHNOLOGICAL ADVANCES
 		/*case BUFFTYPE.CLEANSE:
 			_map[? BUFF_MAP.NAME] = "Cleanse";
@@ -358,14 +376,15 @@ function scBuffGet(argument0, argument1) {
 		LIFESTEAL = s_abilityIcon_LifeSteal, CLEANSE = s_abilityIcon_Cleanse,
 		FROZEN = s_abilityIcon_Frozen, INVISIBLE = s_abilityIcon_Invisible,
 		FFA = s_abilityIcon_FFA, DOUSED = s_abilityIcon_Doused, BURNING = s_abilityIcon_BurnRush,
+		FASTMO = s_abilityIcon_RocketBoots,
 	}
 
 	enum BUFFTYPE {
 		BURNRUSH, CHILLED, COOLDOWN, SLIME, SPEED, LOWGRAVITY, 
 		REVERSECONTROLS, ULTCHARGE, BLEEDOUT, HACKED,
 		REVERSEGRAVITY, ROCKETBOOTS, SLOWMO, SLEEP, DAMAGE,
-		ANTIHEAL, ABSORBTION, LIFESTEAL, FROZEN, //CLEANSE,
-		INVISIBLE, DOUSED, BURNING, //FFA_DEBUFF, 
+		ANTIHEAL, ABSORBTION, LIFESTEAL, FROZEN, //FASTMO, //CLEANSE,
+		INVISIBLE, DOUSED, BURNING, FASTMO,//FFA_DEBUFF, 
 		//PUT LAST
 		LENGHT
 	}

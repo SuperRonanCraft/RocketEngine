@@ -75,7 +75,7 @@ function scPlayerCharacterGetInfo(argument0) {
 			map[? CHARACTER_MAP.HEALTH_BASE] = 75;
 			map[? CHARACTER_MAP.HEALTH_VITAL] = 25;
 			map[? CHARACTER_MAP.PALETTE] = sPallete_default;
-			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.VORTEX;
+			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.SPEEDUP;
 			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.DODGE;
 			break;	
 		
