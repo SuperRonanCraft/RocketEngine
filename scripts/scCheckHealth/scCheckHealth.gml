@@ -1,6 +1,16 @@
 ///@desc Check health state for player.
 function scCheckHealth() {
 	var map = player_map;
+	
+	//invincibility frames
+	if(iframes > 0){
+		iframes--;
+		shootable_map[?SHOOTABLE_MAP.CAN_INTERACT] = false;
+	}
+	else{
+		iframes = 0;
+		shootable_map[? SHOOTABLE_MAP.CAN_INTERACT] = true;
+	}
 
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] + shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] + shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] + shootable_map[? SHOOTABLE_MAP.HEALTH_VITAL];
 

@@ -23,7 +23,7 @@ if (!other.deactivate && other.owner != owner && timer > 0){ //Is not your rocke
 		other.trueTimer = 4;
 		
 		weapon_map[?WEAPON_MAP.SPEED] += 0.5;
-		weapon_map[?WEAPON_MAP.DAMAGE] *= 2;
+		dmg*=2;
 		timer = 0;
 		
 		if(!variable_instance_exists(id,"reflectCount"))

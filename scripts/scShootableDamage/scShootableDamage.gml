@@ -50,6 +50,9 @@ function scShootableDamage() {
 			//---------------
 			var _dmg_left = dmg;
 			var _dmg_inflicted = 0;
+			
+			if(damaging.isClone && dmg >= 25) scAchievements_CustomEvent(ACHIEVEMENTS.EXPENDABLE, true);
+			
 			if (map[? SHOOTABLE_MAP.HEALTH_SHIELD] > 0 && _dmg_left > 0) {
 			
 				part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
@@ -229,9 +232,6 @@ function scShootableDamage() {
 				with(damaging){
 					scCheckHealth()
 				}
-				
-				if(damaging.isClone && dmg >= 25)
-					scAchievements_CustomEvent(ACHIEVEMENTS.EXPENDABLE, true);
 					
 			
 			}

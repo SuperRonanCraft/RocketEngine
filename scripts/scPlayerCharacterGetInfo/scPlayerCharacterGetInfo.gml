@@ -68,7 +68,7 @@ function scPlayerCharacterGetInfo(argument0) {
 			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.VORTEX;
 			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.CLUSTER;
 			break;	
-		/*
+		
 		case CHARACTER.GUN:
 			map[? CHARACTER_MAP.NAME] = "Dell";
 			map[? CHARACTER_MAP.WEAPON] = WEAPON_TYPE.BULLET;
@@ -76,9 +76,9 @@ function scPlayerCharacterGetInfo(argument0) {
 			map[? CHARACTER_MAP.HEALTH_VITAL] = 25;
 			map[? CHARACTER_MAP.PALETTE] = sPallete_default;
 			map[? CHARACTER_MAP.ULTIMATE] = ULTIMATE_TYPE.VORTEX;
-			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.REFLECT;
+			map[? CHARACTER_MAP.ABILITY] = ABILITY_TYPE.DODGE;
 			break;	
-		*/
+		
 	}
 
 	return map;

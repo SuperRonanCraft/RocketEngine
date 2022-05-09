@@ -611,6 +611,7 @@
     {"id":{"name":"scBuffApply","path":"scripts/scBuffApply/scBuffApply.yy",},"order":7,},
     {"id":{"name":"scBuffGet","path":"scripts/scBuffGet/scBuffGet.yy",},"order":9,},
     {"id":{"name":"scBuffFind","path":"scripts/scBuffFind/scBuffFind.yy",},"order":11,},
+    {"id":{"name":"scAbilityDodge","path":"scripts/scAbilityDodge/scAbilityDodge.yy",},"order":5,},
     {"id":{"name":"scBuffRemove","path":"scripts/scBuffRemove/scBuffRemove.yy",},"order":13,},
     {"id":{"name":"scBuffBurnRush","path":"scripts/scBuffBurnRush/scBuffBurnRush.yy",},"order":1,},
     {"id":{"name":"scBuffChilled","path":"scripts/scBuffChilled/scBuffChilled.yy",},"order":3,},

@@ -13,7 +13,7 @@ function scBulletGet(argument0) {
 	map[? BULLET_MAP.DESCRIPTION] = "As basic as they come.";
 	map[? BULLET_MAP.PROJECTILE] = BULLET_SPRITE.DEFAULT;
 	map[? BULLET_MAP.COOLDOWN] = 40;
-	map[? BULLET_MAP.SPEED] = 1000;
+	map[? BULLET_MAP.SPEED] = 96;
 	map[? BULLET_MAP.POWER] = 500;
 	map[? BULLET_MAP.POWER_MAX] = 300; 
 	map[? BULLET_MAP.KBAMT] = 5;

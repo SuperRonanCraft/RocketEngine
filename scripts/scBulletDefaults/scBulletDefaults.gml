@@ -21,7 +21,7 @@ function scBulletDefaults() {
 	map[? BULLET_MAP.CLIP] = -1; //ammo in a clip
 	map[? BULLET_MAP.STARTUP] = 0; //delay between pressing key and shooting
 	map[? BULLET_MAP.SCALE] = 1; //size of sprite
-	map[? BULLET_MAP.WALL_COLLIDE] = false;
+	map[? BULLET_MAP.WALL_COLLIDE] = true; //Hits walls
 	map[? BULLET_MAP.BULLET_CREATE] = -4; //Script for when bullet is created
 	map[? BULLET_MAP.OUT_OF_ROOM_SCRIPT] = -4; //Script for when bullet is out of room
 	map[? BULLET_MAP.BULLET_AUTO_DESTROY] = false; //auto destroy on collision

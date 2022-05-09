@@ -71,7 +71,7 @@ function scPlayerCharacterChange() {
 		scNetworkSendCharacter(map[? CHARACTER_MAP.TYPE]);
 
 	enum CHARACTER {
-		DEFAULT, SWORD, ARROW, POTION, BOMB, //GUN,
+		DEFAULT, SWORD, ARROW, POTION, BOMB, GUN,
 		//KEEP LAST
 		LENGTH
 	}

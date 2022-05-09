@@ -66,12 +66,18 @@ function scAbilityLoad(argument0) {
 			ds_map[? ABILITY_MAP.COOLDOWN] = 8;
 			ds_map[? ABILITY_MAP.SPRITE] = s_ability_cluster;
 			break;
-			
+		
+		case ABILITY_TYPE.DODGE:
+			ds_map[? ABILITY_MAP.NAME] = "Every game needs a dodge roll..";
+			ds_map[? ABILITY_MAP.CAST_SCRIPT] = scAbilityDodge;
+			ds_map[? ABILITY_MAP.COOLDOWN] = 3;
+			ds_map[? ABILITY_MAP.SPRITE] = s_ability_invis;
+			break;
 	}
 
 	enum ABILITY_TYPE {
 		CLONE, PORTAL, SPRAY,BLOCK,SMOKE_CLOUD,REFLECT,BIGROCKET, JUMPPAD,
-		CLUSTER,
+		CLUSTER, DODGE,
 		NONE
 	}
 

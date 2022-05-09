@@ -74,7 +74,7 @@ function scPlayerCharacterGetSprites(argument0) {
 			map[? ANIMATIONSTATE.DEADLASER] = sPlayer_bomb_deadLaser;
 			map[? ANIMATIONSTATE.GIBS] = sPlayer_bomb_gibs;
 			break;
-/*		case CHARACTER.GUN:
+		case CHARACTER.GUN:
 			map[? ANIMATIONSTATE.SLICE] = sPlayer_bomb_idle;
 	        map[? ANIMATIONSTATE.STANDING] = sPlayer_bomb_idle;
 			map[? ANIMATIONSTATE.SLIDING] = sPlayer_bomb_walkend;
@@ -91,7 +91,7 @@ function scPlayerCharacterGetSprites(argument0) {
 			map[? ANIMATIONSTATE.DEADLASER] = sPlayer_bomb_deadLaser;
 			map[? ANIMATIONSTATE.GIBS] = sPlayer_bomb_gibs;
 	        break;
-*/
+
 	default:
 			if (argument0 != CHARACTER.DEFAULT)
 				show_debug_message("Character " + string(argument0) + " does not exist!");

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sUltMirror",
-    "path": "sprites/sUltMirror/sUltMirror.yy",
+    "name": "sBoomerang_Default",
+    "path": "sprites/sBoomerang_Default/sBoomerang_Default.yy",
   },
   "solid": false,
   "visible": true,

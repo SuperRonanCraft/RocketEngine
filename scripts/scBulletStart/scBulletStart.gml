@@ -11,7 +11,7 @@ function scBulletStart(argument0, argument1) {
 	}
 
 	enum BULLET_SPRITE{
-		NONE = noone, DEFAULT = sUltMirror,ICE = sArrow_ice, FIRE = sArrow_fire, PORTAL = sArrow_portal, 
+		NONE = noone, DEFAULT = sBoomerang_Default,ICE = sArrow_ice, FIRE = sArrow_fire, PORTAL = sArrow_portal, 
 		BRICK = sArrow_brick,  MAGNET = sShuriken_Magnet, SAND = sArrow_sand, SHOTGUN = sArrow_shotgun,
 		SLIME = sArrow_slime, METAL = sArrow_metal, ELECTRIC = sArrow_shock, 
 	}

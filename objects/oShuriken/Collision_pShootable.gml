@@ -68,7 +68,7 @@ if (shuriken_map[? SHURIKEN_MAP.PLAYER_SCRIPT] == noone) {
 			//Damage player
 			var dmg_todo = dmg;
 		
-			if (scShootableDamage(owner, other, false, true, dmg_todo,false,DAMAGE_TYPE.SLICE) && isPlayer)
+			if (scShootableDamage(owner, other, false, true, dmg_todo,false,DAMAGE_TYPE.STAB) && isPlayer)
 				other.causeOfDeath = shuriken_map[? SHURIKEN_MAP.DEATHCAUSE];
 		
 			if (shuriken_map[? SHURIKEN_MAP.ULTIMATE_CHARGE_GIVE])
