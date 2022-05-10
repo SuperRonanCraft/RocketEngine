@@ -4,3 +4,8 @@ function scUIExitToGamemodeSelect() {
 
 
 }
+
+function scUIExitToStageSelect() {
+	scUIResumeGame();
+	SlideTransition(TRANS_MODE.GOTO, global.gamemodeSRoom[global.gamemode]);
+}

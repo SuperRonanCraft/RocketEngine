@@ -24,7 +24,8 @@ ds_local = scUICreateMenuPage(
 	//[global.gamemodes[GAMEMODE.SINGLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.SINGLE],		"&cBETA, DO NOT PLAY!", true],
 	//[global.gamemodes[GAMEMODE.ONLINE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONLINE],		"Multiplayer",		true],
 	[global.gamemodes[GAMEMODE.ONEVONE],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.ONEVONE],		"Play vs. another player",		true],
-	[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],			"Duke it out!",			true],
+	[global.gamemodes[GAMEMODE.RUMBLE],		menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.RUMBLE],		"Duke it out!",			true],
+	[global.gamemodes[GAMEMODE.DEATHMATCH],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.DEATHMATCH],	"Kill em!",			true],
 	//[global.gamemodes[GAMEMODE.KNOCKOUT],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.KNOCKOUT],	"Knock them off!",		true],
 	//[global.gamemodes[GAMEMODE.TARGETS],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TARGETS],		"Shoot targets, not bombs...",	true],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]

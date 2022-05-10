@@ -8,6 +8,11 @@ if (!button_gamepad_only && button_up != noone && button_down != noone && button
 	key_up = keyboard_check_pressed(button_up);
 	key_down = keyboard_check_pressed(button_down);
 	hinput = keyboard_check_pressed(button_right) - keyboard_check_pressed(button_left);
+	if (!global.gamestartphase || global.pause || global.gameover) { //Not in a game (anyone can control the menu)
+		key_up = key_up || keyboard_check_pressed(ord("W"));
+		key_down = key_down || keyboard_check_pressed(ord("S"));
+		hinput = hinput != 0 ? hinput : keyboard_check_pressed(ord("D")) - keyboard_check_pressed(ord("A"));
+	}
 }
 var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left), enter_change = false;
 var play_sound = true;

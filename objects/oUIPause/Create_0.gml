@@ -6,10 +6,7 @@ ds_menu_main = ds_grid_create(0,0);/*scUICreateMenuPage(
 	["EXIT TO TITLE",	menu_element_type.page_transfer,	menu_page.confirm], //Confirm you wanna exit
 );*/
 
-ds_confirm = scUICreateMenuPage(
-	["CONFIRM",		menu_element_type.script_runner,	scUIExitToTitle, "Are you sure?"], //Only script that has text input
-	["CANCEL",		menu_element_type.page_transfer,	menu_page.main],
-);
+ds_confirm = ds_grid_create(0,0);
 
 //Pages of the menu
 menu_pages = [ds_menu_main, ds_confirm, ds_settings, ds_menu_audio, ds_menu_graphics, 

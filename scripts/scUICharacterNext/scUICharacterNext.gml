@@ -6,7 +6,10 @@ function scUICharacterNext() {
 		if (val < CHARACTER.LENGTH) {
 			scPlayerCharacterChange(val);
 			scPlayerLoadModifiers(id); //APPLY GAMEMODE MODIFIERS
-		}
+		}// else {
+		//	scPlayerCharacterChange(0);
+		//	scPlayerLoadModifiers(id);
+		//}
 	}
 
 
