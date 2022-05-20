@@ -282,12 +282,13 @@ function scGravityCollision() {
 	
 		if(sticky == noone){
 			map[? GRAVITY_MAP.VSP] = 0;
+			map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
 		}
 		else{
 			map[? GRAVITY_MAP.VSP] = sticky.vsp;	
+			//map[? GRAVITY_MAP.VSP_KNOCKBACK] *= -0.75;
 		}
 		map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
-		map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
 	}	
 
 	
@@ -319,9 +320,21 @@ function scGravityCollision() {
 				differenceInY = (y - bbox_top);
 				y = ceil(sticky.bbox_bottom + differenceInY) + offset;
 			}
-			map[? GRAVITY_MAP.VSP] = sticky.vsp;
-			map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
-			map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
+			
+			if(abs(map[? GRAVITY_MAP.VSP_KNOCKBACK]) <= 1){
+				map[? GRAVITY_MAP.VSP] = sticky.vsp;
+				map[? GRAVITY_MAP.VSP_MOVE] = map[? GRAVITY_MAP.VSP];
+				map[? GRAVITY_MAP.VSP_KNOCKBACK] = map[? GRAVITY_MAP.VSP];
+			}
+			else{
+				
+				//map[? GRAVITY_MAP.VSP_MOVE] *= -1;
+				//map[? GRAVITY_MAP.VSP] = map[? GRAVITY_MAP.VSP_MOVE];
+				map[? GRAVITY_MAP.VSP_KNOCKBACK] *=-0.75;
+				map[? GRAVITY_MAP.VSP] = map[? GRAVITY_MAP.VSP_KNOCKBACK];
+				
+				sticky = noone;
+			}
 		}
 
 	}

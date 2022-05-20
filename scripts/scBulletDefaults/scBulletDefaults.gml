@@ -14,6 +14,7 @@ function scBulletDefaults() {
 	map[? BULLET_MAP.TYPE] = WEAPON_BULLET_TYPE.NONE;//weapon type*
 	map[? BULLET_MAP.COOLDOWN] = 5; //cooldown between shots
 	map[? BULLET_MAP.DAMAGE] = 1; //base damage
+	map[? BULLET_MAP.RECOIL] = 1; //base recoil
 	map[? BULLET_MAP.POWER] = 1; //base power gain
 	map[? BULLET_MAP.POWER_MAX] = 200; //base power maximum
 	map[? BULLET_MAP.RELOAD_TIME] = -1;
@@ -22,6 +23,7 @@ function scBulletDefaults() {
 	map[? BULLET_MAP.STARTUP] = 0; //delay between pressing key and shooting
 	map[? BULLET_MAP.SCALE] = 1; //size of sprite
 	map[? BULLET_MAP.WALL_COLLIDE] = true; //Hits walls
+	map[? BULLET_MAP.DAMPENING] = 0.99; //Slowdown for speed
 	map[? BULLET_MAP.BULLET_CREATE] = -4; //Script for when bullet is created
 	map[? BULLET_MAP.OUT_OF_ROOM_SCRIPT] = -4; //Script for when bullet is out of room
 	map[? BULLET_MAP.BULLET_AUTO_DESTROY] = false; //auto destroy on collision
@@ -30,15 +32,18 @@ function scBulletDefaults() {
 	map[? BULLET_MAP.BUFF] = noone; //buff to apply
 	map[? BULLET_MAP.ROTATE] = false; //rotate the projectile
 	map[? BULLET_MAP.DEATHCAUSE] = noone; //A deathcause
-	map[? BULLET_MAP.KBAMT] = 2; //HSP to apply on hit
+	map[? BULLET_MAP.KBAMT] = 1; //HSP to apply on hit
 	map[? BULLET_MAP.DESPAWN_SCRIPT] = noone; //Special script to apply when destroyed
 	map[? BULLET_MAP.WALL_SCRIPT] = noone; //Special script to apply when hitting a wall
 	map[? BULLET_MAP.PLAYER_SCRIPT] = noone; //Special script to apply when hitting a pShootable object
 	map[? BULLET_MAP.WEAPON_SCRIPT] = noone; //Special script to apply when hitting a pWeapon object
 	map[? BULLET_MAP.SPAWN_SCRIPT] = noone; //Special script to apply when spawning a weapon. Overrides shoot and aim action.
 	map[? BULLET_MAP.SPRITE_STICK] = noone; //Change sprite on stick
-	map[? BULLET_MAP.WEIGHT] = 20; //weight of projectile
-
+	map[? BULLET_MAP.WEIGHT] = 0; //weight of projectile
+	map[? BULLET_MAP.DAMAGE_TYPE] = DAMAGE_TYPE.POUND;
+	map[? BULLET_MAP.DAMAGE_ELEMENT] = DAMAGE_ELEMENT.NONE;
+	//map[? BULLET_MAP.BOUNCES] = 0; //Bounces until disappear
+	
 	map[? BULLET_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
 	map[? BULLET_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 

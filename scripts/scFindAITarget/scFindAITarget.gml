@@ -70,7 +70,7 @@ function scFindAITarget() {
 			}
 			else if(aiTarget.team == player.team && player.team != TEAM.NONE){
 				aiTarget = noone;	
-				show_debug_message("On my team");
+				//show_debug_message("On my team");
 			}
 		}
 	}

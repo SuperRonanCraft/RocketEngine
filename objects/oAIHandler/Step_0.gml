@@ -21,4 +21,7 @@ switch (aiType) {
 		scFindAITarget(500);
 		scAICZombie(true);
 		break;
+	case AI_TYPE.TEST:
+		scFindAITarget(500);
+		scAITest();
 }

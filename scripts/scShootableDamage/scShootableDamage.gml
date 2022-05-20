@@ -84,7 +84,7 @@ function scShootableDamage() {
 					_dmg_left = 0;
 				}
 			
-				if (_dmg_took == noone) //Took mostly shield damage
+				//if (_dmg_took == noone) //Took mostly shield damage
 					_dmg_took = DAMAGE_TOOK.SHIELD;
 			}
 		
@@ -123,7 +123,7 @@ function scShootableDamage() {
 					scPlaySound(SOUND.ULT_SHIELD_BREAK);
 					map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
 					//Took mostly armor damage
-					if (_dmg_took == noone)
+					//if (_dmg_took == noone)
 						_dmg_took = DAMAGE_TOOK.ARMOR;
 					_dmg_left = abs(_armor_left);
 				}
@@ -196,7 +196,7 @@ function scShootableDamage() {
 					scPlaySound(SOUND.EFFECT_DEATH);
 					map[? SHOOTABLE_MAP.HEALTH_VITAL] = 0;
 					//Took mostly armor damage
-					if (_dmg_took == noone)
+					//if (_dmg_took == noone)
 						_dmg_took = DAMAGE_TOOK.VITAL;
 					_dmg_left = abs(_health_left);
 				}

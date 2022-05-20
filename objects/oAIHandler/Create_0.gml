@@ -35,5 +35,5 @@ last_known_x = 0;
 last_known_y = 0;
 
 enum AI_TYPE {
-	ONEVONE, ZOMBIE
+	ONEVONE, ZOMBIE, TEST, 
 }

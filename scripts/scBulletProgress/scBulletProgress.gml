@@ -16,13 +16,27 @@ function scBulletProgress(argument0) {
 					if (auto_aim || team == TEAM.NONE)
 						dir = scAutoAim();
 					facing = dir > -90 && dir <= 90 ? 1 : -1;
+					
+					
 					var bullet = scSpawnBullet(x,y,depth+1,dir,id,map);
-					bullet.hsp = dcos(bullet.direction) * bullet.spd;
-					//bullet.vsp = -dsin(bullet.direction) * bullet.spd;
+					
+					with(bullet){
+						if (!instance_exists(target)){
+							target = scFindTarget(owner.team);
+							if(instance_exists(target))
+								dir = point_direction(x,y,target.x,target.bbox_top);
+						}	
+						hsp = lengthdir_x(spd, dir);
+						vsp = lengthdir_y(spd, dir);
+					}
+					
+					gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] -= facing*bullet.hsp*.2 * bullet_map[? BULLET_MAP.RECOIL];
+					gravity_map[? GRAVITY_MAP.VSP_MOVE] -= facing*bullet.vsp*.2 * bullet_map[? BULLET_MAP.RECOIL];
+					
 					scPlaySound(SOUND.EFFECT_SHUR_THROW);
 					if (map[? WEAPON_MAP.AMMO] > 0)
 						map[? WEAPON_MAP.AMMO]--;
-					map[? WEAPON_MAP.POWER] = 100;
+					map[? WEAPON_MAP.POWER] = 0;
 				} else
 					script_execute(bullet_map[? BULLET_MAP.SPAWN_SCRIPT]);
 				//No statistics yet!
@@ -41,7 +55,7 @@ function scBulletProgress(argument0) {
 		map[? WEAPON_MAP.CHARGING] = false;
 	} 
 	else if (key_shoot || map[? WEAPON_MAP.DELAY_TIME] == 0) {
-		var _min = 100, _max = bullet_map[? BULLET_MAP.POWER_MAX];
+		var _min = 0, _max = bullet_map[? BULLET_MAP.POWER_MAX];
 		map[? WEAPON_MAP.POWER] += bullet_map[? BULLET_MAP.POWER] / room_speed;
 		map[? WEAPON_MAP.POWER] = clamp(map[? WEAPON_MAP.POWER], _min, _max);
 		map[? WEAPON_MAP.CHARGING] = true;

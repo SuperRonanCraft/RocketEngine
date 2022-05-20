@@ -14,7 +14,7 @@ if (!button_gamepad_only && button_up != noone && button_down != noone && button
 		hinput = hinput != 0 ? hinput : keyboard_check_pressed(ord("D")) - keyboard_check_pressed(ord("A"));
 	}
 }
-var key_enter = keyboard_check_released(vk_enter), key_enter_mouse = mouse_check_button_released(mb_left), enter_change = false;
+var key_enter = keyboard_check_released(vk_enter) || keyboard_check_released(vk_space), key_enter_mouse = mouse_check_button_released(mb_left), enter_change = false;
 var play_sound = true;
 
 if (!key_up && !key_down && hinput == 0 && !key_enter && gamepad_is_connected(button_gamepad)) { //No keys, has a controller

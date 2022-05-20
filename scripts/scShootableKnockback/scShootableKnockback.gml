@@ -23,8 +23,11 @@ function scShootableKnockback() {
 	else
 		dir = clamp(45 + diff, 45, 80);
 
-	owner.player_map[? PLAYER_MAP.CAN_CONTROL] = false;
-	owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.KNOCKBACK;
+	if(argument[1] != 0){
+		owner.player_map[? PLAYER_MAP.CAN_CONTROL] = false;
+		owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.KNOCKBACK;
+	}
+	if(argument[1] < 0) dir -=360;
 	var hval = lengthdir_x(maxH, dir), vval = lengthdir_y(maxV, dir);
 	_map[? GRAVITY_MAP.HSP_KNOCKBACK] = hval;
 	_map[? GRAVITY_MAP.VSP_KNOCKBACK] = vval;// * sign(owner.grv_dir);

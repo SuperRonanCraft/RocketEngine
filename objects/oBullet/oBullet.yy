@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBoomerang_Default",
-    "path": "sprites/sBoomerang_Default/sBoomerang_Default.yy",
+    "name": "sArrow_sand",
+    "path": "sprites/sArrow_sand/sArrow_sand.yy",
   },
   "solid": false,
   "visible": true,

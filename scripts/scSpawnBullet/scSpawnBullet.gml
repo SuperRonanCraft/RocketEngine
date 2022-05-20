@@ -47,6 +47,15 @@ function scSpawnBullet() {
 	with (inst) {
 		owner = own;
 		weapon_map = w_map;
+		
+		//Moved to progress
+		//if (!instance_exists(target)){
+		//	target = scFindTarget(owner.team);
+		//	if(instance_exists(target))
+		//		dir = point_direction(x,y,target.x,target.bbox_top);
+		//}
+		
+		
 		if (dir > 90 && dir < 270) {
 			facing = -1;
 		} 
@@ -65,6 +74,10 @@ function scSpawnBullet() {
 	
 		dmg = bullet_map[? BULLET_MAP.DAMAGE];
 		kb = bullet_map[? BULLET_MAP.KBAMT];
+		
+		hsp = lengthdir_x(spd, dir);
+		vsp = lengthdir_y(spd, dir);
+		
 		//CREATE
 	
 		/*

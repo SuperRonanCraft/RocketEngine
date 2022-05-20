@@ -1,5 +1,7 @@
 /// @desc progress a tiles hit time
 
+//scPathCreateMap();
+
 var index = 0; //The current list index, not the current id
 for (var i = index; i < ds_list_size(tile_list); i++) {
 	var map = tile_list[| index];

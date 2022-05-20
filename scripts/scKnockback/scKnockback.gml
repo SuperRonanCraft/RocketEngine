@@ -31,8 +31,8 @@ function scKnockback() {
 	}
 
 	//hsp_knockback -= 0.2 * sign(hsp_knockback);
-	if (abs(g_map[? GRAVITY_MAP.HSP_KNOCKBACK]) < 3)
-		g_map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
+	//if (abs(g_map[? GRAVITY_MAP.HSP_KNOCKBACK]) < 3)
+	//	g_map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
 
 
 }

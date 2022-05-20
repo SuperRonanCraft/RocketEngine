@@ -17,7 +17,7 @@ function scBuffFrozen(argument0, argument1) {
 	}
 
 	//If the internal clock reaches the time in seconds, expire
-	if (clock > dsBuff[? BUFF_MAP.TIME]) {
+	if (clock > dsBuff[? BUFF_MAP.TIME] || owner.player_map[? PLAYER_MAP.PLAYER_STATE] != PLAYERSTATE.FROZEN) {
 		owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.NORMAL;
 		owner.player_map[? PLAYER_MAP.ANIMATION_OVERRIDE] = false;
 		owner.friction_adj += dsBuff[? "sliding"];	

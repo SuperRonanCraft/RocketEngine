@@ -15,7 +15,7 @@ function scExplosionTiles() {
 		for (var len = 0; len < l; len++) {
 			var xval = xx + (tile_l * len);
 			if (collision_point(xval, yval, oWall, false, true)) { //Only if touching a wall
-				with (oEnvironmentHandler) {
+				with (oEnvironmentHandler){
 					var mx = tilemap_get_cell_x_at_pixel(map_id, xval, yval);
 					var my = tilemap_get_cell_y_at_pixel(map_id, xval, yval);
 					var data = tilemap_get(map_id, mx, my);

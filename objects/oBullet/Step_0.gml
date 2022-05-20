@@ -29,12 +29,7 @@ if(!deactivate){
 	vsp += (bullet_map[? BULLET_MAP.WEIGHT] * grv_dir)/room_speed;
 }
 
-var bonusSPD = abs(hsp)+abs(vsp);
-if(bonusSPD >= bullet_map[?BULLET_MAP.SPEED] *  ((bullet_map[? BULLET_MAP.POWER_MAX])/100)){
-	fullPower = true;	
-}
-var bonusDMG = dmg;
-var bonusKB = bonusSPD*.1;
+
 
 
 
@@ -42,8 +37,6 @@ if(!deactivate){
 	
 	scProjectileMove(bullet_map, touching);
 	
-	direction = darctan2(vsp * -grv_dir,hsp);
-	image_angle = direction;
 
 	for (var i = 0; i < ds_list_size(touching); i++) {
     
@@ -80,12 +73,18 @@ if(!deactivate){
 					
 					
 					//Damage player
-					if (scShootableDamage(owner, obj, false, true, dmg,noone,DAMAGE_TYPE.STAB,noone,noone)){
+					if (scShootableDamage(owner, obj, false, true, dmg,noone,bullet_map[? BULLET_MAP.DAMAGE_TYPE],noone,bullet_map[? BULLET_MAP.DAMAGE_ELEMENT])){
 						obj.causeOfDeath = bullet_map[? BULLET_MAP.DEATHCAUSE];
 						
 					}
-					//scShootableKnockback(obj, 10, point_direction(owner.x, owner.y, obj.x, obj.y));
-		
+					
+					if(!obj.gravity_map[?GRAVITY_MAP.STANDING])
+						scShootableKnockback(obj, bullet_map[?BULLET_MAP.KBAMT]*0.5*(abs(hsp) + abs(vsp)), point_direction(owner.x, owner.y, obj.x, obj.y));
+					else{
+						obj.gravity_map[?GRAVITY_MAP.HSP_MOVE_MOD] += hsp;
+						obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += vsp;
+					}
+					
 					if (bullet_map[? BULLET_MAP.ULTIMATE_CHARGE_GIVE])
 						scUltimateAddCharge(owner, DAMAGE_TYPE.DIRECT, bullet_map[? BULLET_MAP.ULTIMATE_CHARGE_MULTIPLIER]); //Add direct ult charge
 					scPlaySound(SOUND.EFFECT_SHUR_PLAYER);
@@ -103,8 +102,8 @@ if(!deactivate){
 		
 		
 		//Wall Collision
-		if(bullet_map[?BULLET_MAP.WALL_COLLIDE] && scGetParent(oWall, obj)){
-			if(obj.shootable || obj.is_wall ){
+		if(timer > 5 && bullet_map[?BULLET_MAP.WALL_COLLIDE] && scGetParent(oWall, obj)){
+			if(obj.shootable || obj.is_wall){
 				deactivate = true;
 				event_user(1);
 				event_user(0);
@@ -155,11 +154,20 @@ else if(deactivate){
 if (_advance) {
 	x += hsp;
 	y += vsp;
+	
+	hsp *= bullet_map[? BULLET_MAP.DAMPENING];
+	vsp *= bullet_map[? BULLET_MAP.DAMPENING];
+	
+	direction = darctan2(-vsp, hsp);
+	image_angle = direction;
 }
 
-if(deactivate){
-	timer++
-}
+if(abs(hsp) < 1 && abs(vsp) < 1)
+	event_user(0);
+
+
+timer++
+
 if(timer >= time){
 	event_user(0);	
 }

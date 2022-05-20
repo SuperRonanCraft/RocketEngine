@@ -24,7 +24,7 @@ if(slimed && instance_exists(killer)){
 	with(_enemy){
 		scEnemyCharacterChange(CHARACTER_ENEMY.ZOMBIE);
 		var char_info = player_map[? PLAYER_MAP.CHARACTER_INFO];
-		char_info[? CHARACTER_MAP.PALETTE_INDEX] = 2;
+		char_info[? CHARACTER_MAP.PALETTE_INDEX] = 1;
 	}
 	_enemy.shootable_map[?SHOOTABLE_MAP.TEAM] = killer.team;
 	_enemy.team = _enemy.shootable_map[?SHOOTABLE_MAP.TEAM]
