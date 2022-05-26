@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_gibs","path":"sprites/sPlayer_sword_gibs/sPlayer_sword_gibs.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_gibs",
     "tags": [],
     "resourceType": "GMSequence",
   },

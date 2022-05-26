@@ -76,7 +76,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_trapped","path":"sprites/sPlayer_sword_trapped/sPlayer_sword_trapped.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_trapped",
     "tags": [],
     "resourceType": "GMSequence",
   },

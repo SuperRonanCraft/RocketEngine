@@ -67,7 +67,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 45,
-    "yorigin": 59,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_tech","path":"sprites/sPlayer_potion_tech/sPlayer_potion_tech.yy",},

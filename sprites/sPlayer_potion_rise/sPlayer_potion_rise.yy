@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 45,
-    "yorigin": 60,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_rise","path":"sprites/sPlayer_potion_rise/sPlayer_potion_rise.yy",},

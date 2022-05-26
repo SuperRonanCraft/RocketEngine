@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_deadFrozen","path":"sprites/sPlayer_sword_deadFrozen/sPlayer_sword_deadFrozen.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_deadFrozen",
     "tags": [],
     "resourceType": "GMSequence",
   },

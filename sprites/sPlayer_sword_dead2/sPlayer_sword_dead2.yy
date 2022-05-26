@@ -112,7 +112,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_dead2","path":"sprites/sPlayer_sword_dead2/sPlayer_sword_dead2.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_dead2",
     "tags": [],
     "resourceType": "GMSequence",
   },

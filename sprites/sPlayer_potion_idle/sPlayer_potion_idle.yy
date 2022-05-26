@@ -83,7 +83,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 44,
-    "yorigin": 67,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_idle","path":"sprites/sPlayer_potion_idle/sPlayer_potion_idle.yy",},

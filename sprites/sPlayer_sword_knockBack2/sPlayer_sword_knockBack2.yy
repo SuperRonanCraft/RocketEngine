@@ -80,7 +80,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_knockBack2","path":"sprites/sPlayer_sword_knockBack2/sPlayer_sword_knockBack2.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_knockBack2",
     "tags": [],
     "resourceType": "GMSequence",
   },

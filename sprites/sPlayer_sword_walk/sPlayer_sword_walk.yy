@@ -144,7 +144,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_walk","path":"sprites/sPlayer_sword_walk/sPlayer_sword_walk.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_walk",
     "tags": [],
     "resourceType": "GMSequence",
   },

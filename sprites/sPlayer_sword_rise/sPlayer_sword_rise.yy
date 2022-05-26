@@ -76,7 +76,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_rise","path":"sprites/sPlayer_sword_rise/sPlayer_sword_rise.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_rise",
     "tags": [],
     "resourceType": "GMSequence",
   },

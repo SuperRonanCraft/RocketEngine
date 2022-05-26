@@ -1,15 +1,20 @@
 /// @desc Single Player gamemode started
 
 event_inherited();
+kick_timer_abs = room_speed;
 
-with (instance_create_depth(0, 0, depth, oCameraFollow))
-	follow = oPlayer;
+
+mainPlayer = oPlayer;
+
+with (instance_create_depth(0, 0, depth, oCameraExpandable))
+	follow = other.mainPlayer;
 
 global.play = true;
 
 player_checkpoint = 0; //Index of checkpoint
 player_hp = 0;
 player_rocket = noone;
+scAllowCharacterSelect(); //Character selector allowed
 /*
 if (!scStatsGetType(STATISTICS_TYPE.VALUE_GAMEMODE, STATISTICS_GAMEMODE.GM_SINGLE_NEWGAME, gamemode))
 	with (oPlayer) {
@@ -50,6 +55,7 @@ start_y_default = RES_H - RES_H / 4;
 
 //Disabled unfolding
 unfolding = false;
+
 
 //Apply Modifiers
 event_user(10);

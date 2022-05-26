@@ -163,7 +163,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 44,
-    "yorigin": 69,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_walk","path":"sprites/sPlayer_potion_walk/sPlayer_potion_walk.yy",},

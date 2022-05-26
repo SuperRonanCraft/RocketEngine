@@ -71,7 +71,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 44,
-    "yorigin": 66,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_walkend","path":"sprites/sPlayer_potion_walkend/sPlayer_potion_walkend.yy",},

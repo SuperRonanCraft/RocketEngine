@@ -76,7 +76,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_fall","path":"sprites/sPlayer_sword_fall/sPlayer_sword_fall.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_fall",
     "tags": [],
     "resourceType": "GMSequence",
   },

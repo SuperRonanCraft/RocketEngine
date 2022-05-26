@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_deadLaser","path":"sprites/sPlayer_sword_deadLaser/sPlayer_sword_deadLaser.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_deadLaser",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -76,7 +76,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_tech","path":"sprites/sPlayer_sword_tech/sPlayer_sword_tech.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_tech",
     "tags": [],
     "resourceType": "GMSequence",
   },

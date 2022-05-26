@@ -91,7 +91,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 46,
-    "yorigin": 45,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_deadLaser","path":"sprites/sPlayer_potion_deadLaser/sPlayer_potion_deadLaser.yy",},

@@ -88,7 +88,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_idle","path":"sprites/sPlayer_sword_idle/sPlayer_sword_idle.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_idle",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 47,
-    "yorigin": 62,
+    "yorigin": 65,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayer_potion_knockBack","path":"sprites/sPlayer_potion_knockBack/sPlayer_potion_knockBack.yy",},

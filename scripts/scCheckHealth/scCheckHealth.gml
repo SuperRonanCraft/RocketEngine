@@ -11,10 +11,10 @@ function scCheckHealth() {
 		iframes = 0;
 		shootable_map[? SHOOTABLE_MAP.CAN_INTERACT] = true;
 	}
-
+	
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] + shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] + shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] + shootable_map[? SHOOTABLE_MAP.HEALTH_VITAL];
 
-	if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 && map[? PLAYER_MAP.ALIVE]) {
+	if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 || !map[? PLAYER_MAP.ALIVE]) {
 	
 		var charMap = map[?PLAYER_MAP.CHARACTER_INFO];
 	

@@ -96,7 +96,7 @@
     "eventStubScript": null,
     "parent": {"name":"sPlayer_sword_dead1","path":"sprites/sPlayer_sword_dead1/sPlayer_sword_dead1.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "sPlayer_sword_dead1",
     "tags": [],
     "resourceType": "GMSequence",
   },
