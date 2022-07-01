@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "sPlayer_default_idle",
     "path": "sprites/sPlayer_default_idle/sPlayer_default_idle.yy",

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTile_Outside",
-    "path": "sprites/sTile_Outside/sTile_Outside.yy",
+    "name": "sTile_OutsidePLT2x16",
+    "path": "sprites/sTile_OutsidePLT2x16/sTile_OutsidePLT2x16.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,

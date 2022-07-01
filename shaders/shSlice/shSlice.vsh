@@ -7,7 +7,7 @@ attribute vec4 in_Colour;                    // (r,g,b,a)
 attribute vec2 in_TextureCoord;              // (u,v)
 
 varying vec2 v_vTexcoord;
-//varying vec2 v_vPosition;
+varying vec2 v_vPosition;
 varying vec4 v_vColour;
 
 
@@ -19,5 +19,5 @@ void main()
 	//v_vFragUV = (v_vTexcoord - uv_center) / uv_dimensions;
     v_vColour = in_Colour;
     v_vTexcoord = in_TextureCoord;
-	//v_vPosition = in_Position.xy;
+	
 }

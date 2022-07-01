@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.21,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/agEffects",
   },
   "soundFile": "snUltJumppad",
-  "duration": 1.30500007,
+  "duration": 1.3050001,
   "parent": {
     "name": "Ultimates",
     "path": "folders/Sounds/Effects/Weapons/Ultimates.yy",

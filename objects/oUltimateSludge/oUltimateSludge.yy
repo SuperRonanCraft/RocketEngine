@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "sUltSludge_fly1",
     "path": "sprites/sUltSludge_fly1/sUltSludge_fly1.yy",

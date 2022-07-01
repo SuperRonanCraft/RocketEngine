@@ -20,6 +20,8 @@ scAnimationState();
 
 scPalleteSwapReset();
 
+shader_reset();
+
 //Moving dust
 event_user(0);
 

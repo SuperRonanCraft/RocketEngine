@@ -1,4 +1,7 @@
 {
+  "ConfigValues": {
+    "Single": {"option_windows_texture_page":"2048x2048",},
+  },
   "option_windows_display_name": "RocketMan 3.0 BETA",
   "option_windows_executable_name": "${project_name}",
   "option_windows_version": "1.0.0.0",

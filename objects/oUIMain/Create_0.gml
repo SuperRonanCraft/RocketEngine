@@ -36,7 +36,7 @@ ds_info = scUICreateMenuPage(
 	["ACHIEVEMENTS",	menu_element_type.page_transfer,	menu_page.list_achievements,	"Gotta catch em all!"],
 	["MODIFIERS",		menu_element_type.page_transfer,	menu_page.list_weapons,	"Learn about every weapon modifier!"],
 	["BUFFS",			menu_element_type.page_transfer,	menu_page.list_buffs,	"Get to know your buff!"],
-	["CONTROLS",		menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check ur keys!"],
+	["CONTROLS",		menu_element_type.page_transfer,	menu_page.controls,		"Can't aim? Check your keys!"],
 	//[global.gamemodes[GAMEMODE.TUTORIAL],	menu_element_type.goto_room,	global.gamemodeSRoom[GAMEMODE.TUTORIAL],	"Learn how to play!"],
 	["BACK",			menu_element_type.page_transfer,	menu_page.main]
 );

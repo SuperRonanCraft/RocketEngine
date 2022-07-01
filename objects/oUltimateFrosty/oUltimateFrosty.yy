@@ -1,10 +1,8 @@
 {
-  "spriteId": {
-    "name": "sUltFrosty",
-    "path": "sprites/sUltFrosty/sUltFrosty.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

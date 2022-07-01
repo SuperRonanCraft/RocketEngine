@@ -1,2 +1,0 @@
-scPlayerCharacterChange(CHARACTER.SWORD);
-scStartAI();

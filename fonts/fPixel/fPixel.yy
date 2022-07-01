@@ -3,6 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 0,
   "pointRounding": 0,
+  "applyKerning": 0,
   "fontName": "Joystix",
   "styleName": "Monospace",
   "size": 24.0,
@@ -20,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 2,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":27,"h":40,"character":32,"shift":27,"offset":0,},
     "33": {"x":2,"y":128,"w":16,"h":40,"character":33,"shift":27,"offset":5,},

@@ -35,5 +35,14 @@ stuckAmount = 0;
 iframes = 0;
 isClone = false;
 color_overlay = c_white;
+
+sliceAngle = 0;
+uv_dimensions = [];
+uv_center = [];
+
+//u_uv_center = shader_get_uniform(shslice, "uv_center");
+//u_uv_dimensions = shader_get_uniform(shslice, "uv_dimensions");
+
+
 //Aim type
 //auto_aim = false;

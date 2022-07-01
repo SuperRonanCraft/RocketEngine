@@ -23,7 +23,7 @@ function scShootableKnockback() {
 	else
 		dir = clamp(45 + diff, 45, 80);
 
-	if(argument[1] != 0){
+	if(argument[1] != 0 && owner.player_map[?PLAYER_MAP.ALIVE]){
 		owner.player_map[? PLAYER_MAP.CAN_CONTROL] = false;
 		owner.player_map[? PLAYER_MAP.PLAYER_STATE] = PLAYERSTATE.KNOCKBACK;
 	}

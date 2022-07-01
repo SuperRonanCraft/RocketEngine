@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 2,
   "volume": 0.33,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/agEffects",
   },
   "soundFile": "snHover",
-  "duration": 1.21996593,
+  "duration": 1.2199659,
   "parent": {
     "name": "UserInterface",
     "path": "folders/Sounds/UserInterface.yy",

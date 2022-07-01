@@ -1,1 +1,1 @@
-enemiesBoss = [CHARACTER.DEFAULT];
+enemiesBoss = [CHARACTER.SWORD];

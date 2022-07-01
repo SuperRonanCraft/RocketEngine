@@ -1,10 +1,8 @@
 {
-  "spriteId": {
-    "name": "sUltShield",
-    "path": "sprites/sUltShield/sUltShield.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

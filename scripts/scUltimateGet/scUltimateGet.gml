@@ -240,13 +240,22 @@ function scUltimateGet(argument0, argument1) {
 			ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateSpeedUp;
 			ds_map[? ULTIMATE_MAP.CAST_TIME] = 5;
 			break;
+		
+		case ULTIMATE_TYPE.DUPEWALL:
+			ds_map[? ULTIMATE_MAP.NAME] = "Spontaneous Duplication!";
+			ds_map[? ULTIMATE_MAP.CASTED_SCRIPT] = scUltimateAmpWall;
+			ds_map[? ULTIMATE_MAP.SCRIPT_CASTING_DRAW] = scUltimateAmpWall_Draw;
+			ds_map[? "size"] = 6; //yscale of wall
+			ds_map[? "dis"] = 50; //distance between player and wall
+			ds_map[? "ult"] = oUltimateAmpWall;
+			break;
 	}
 
 	enum ULTIMATE_TYPE {
 		DEFAULT, BARRAGE, SPRAY, HUGEEXPLOSION, CLONE,
 		MIRROR, HOMING, LASER, TRAP, MAGNET, SLUDGE, NAPALM, LIGHTNING_ORB,
 		SLOWMO, SLEEPDART, PORTAL, BRICKWALL, AMPWALL, TURRET,
-		ORBIT, HACKLOOT, JUMPPAD, FROSTY, VORTEX, SPEEDUP,
+		ORBIT, HACKLOOT, JUMPPAD, FROSTY, VORTEX, SPEEDUP, DUPEWALL,
 	
 		//SWORD ULTS
 		DEFAULT_SWORD,ICE_SWORD,FIRE_SWORD,LIGHTNING_SWORD,PORTAL_SWORD,SAND_SWORD,

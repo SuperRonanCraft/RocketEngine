@@ -3,7 +3,7 @@
 event_inherited();
 kick_timer_abs = room_speed;
 
-
+win = false;
 mainPlayer = oPlayer;
 
 with (instance_create_depth(0, 0, depth, oCameraExpandable))

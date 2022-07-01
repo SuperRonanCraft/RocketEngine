@@ -14,7 +14,7 @@ function scCheckHealth() {
 	
 	shootable_map[? SHOOTABLE_MAP.HEALTH] = shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] + shootable_map[? SHOOTABLE_MAP.HEALTH_ARMOR] + shootable_map[? SHOOTABLE_MAP.HEALTH_SHIELD] + shootable_map[? SHOOTABLE_MAP.HEALTH_VITAL];
 
-	if (shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 || !map[? PLAYER_MAP.ALIVE]) {
+	if ((shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0 || !map[? PLAYER_MAP.ALIVE]) && map[? PLAYER_MAP.PLAYER_STATE] != PLAYERSTATE.DEAD) {
 	
 		var charMap = map[?PLAYER_MAP.CHARACTER_INFO];
 	

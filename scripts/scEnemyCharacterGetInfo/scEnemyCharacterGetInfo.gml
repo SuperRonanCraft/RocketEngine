@@ -11,7 +11,7 @@ function scEnemyCharacterGetInfo(argument0) {
 	map[? CHARACTER_MAP.HEALTH_SHIELD] = 0; //Default health
 	map[? CHARACTER_MAP.NAME] = "Bob"; //Default name
 	map[? CHARACTER_MAP.PALETTE] = noone;
-	map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
+	map[? CHARACTER_MAP.PALETTE_INDEX] = 1;
 	map[? CHARACTER_MAP.CAN_PICK] = true;
 	map[? CHARACTER_MAP.ULTIMATE] = noone;
 	map[? CHARACTER_MAP.ABILITY] = noone;

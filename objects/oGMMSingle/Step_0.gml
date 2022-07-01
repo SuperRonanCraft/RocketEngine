@@ -12,7 +12,7 @@ if (timer_enabled && !endgame)
 			event_user(0);
 	}
 //End of game event
-if (endgame) {
+if (endgame && !win) {
 	event_user(2);
 	if (endgame_delay <= 0)
 		event_inherited(); //Navigate UI
@@ -21,6 +21,10 @@ if (endgame) {
 		kick_timer--;
 	if (kick_timer_abs <= 0 && kick_execute)
 		SlideTransition(TRANS_MODE.GOTO, room);
+}
+
+else if(endgame && win){
+	SlideTransition(TRANS_MODE.GOTO, room_next(room));
 }
 
 for (var i = 0; i < instance_number(pEntity); i++) {

@@ -39,7 +39,7 @@ function scArrowDefaults() {
 	map[? ARROW_MAP.SPRITE_STICK] = noone; //Change sprite on stick
 	map[? ARROW_MAP.WEIGHT] = 20; //weight of projectile
 
-	map[? ARROW_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.SPEED];; // Particle to emit
+	map[? ARROW_MAP.PARTICLE] = oParticleHandler.ds_part[?PARTICLES.DUST];; // Particle to emit
 	map[? ARROW_MAP.PARTICLE_AMT] = 3; //Number of particles to emit
 
 	//map[? ARROW_MAP.ULTIMATE] = ULTIMATE.DEFAULT_SWORD;//weapon's ultimate ability

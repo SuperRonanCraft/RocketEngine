@@ -41,7 +41,7 @@ function scPlayerCharacterChange() {
 
 
 	if (map[? CHARACTER_MAP.PALETTE_INDEX] >= sprite_get_width(map[? CHARACTER_MAP.PALETTE])) //Shader safety
-		map[? CHARACTER_MAP.PALETTE_INDEX] = 0;
+		map[? CHARACTER_MAP.PALETTE_INDEX] = 1;
 
 	//Set base movespeed
 	shootable_map[? SHOOTABLE_MAP.SPEED] = map[? CHARACTER_MAP.SPEED];

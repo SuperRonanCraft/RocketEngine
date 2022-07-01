@@ -65,7 +65,7 @@ else if (char_last != noone) {
 			var _xx = start_x_default - (char_x_offset + char_x) + (view_under ? 0 : (RES_H / 4) * view_side);
 			var _yy = start_y_default + (view_under ? RES_H / 6 : 0);
 			draw_sprite_ext(sprite, 0, _xx, _yy, 
-				char_scale_b * char_dir, char_scale_b, 0, c_white, 0.6);
+				char_scale_b * char_dir, char_scale_b, 0, c_black, 0.6);
 			//Destroy the draw char map
 			ds_map_destroy(char_anim_map);
 		}
@@ -83,7 +83,7 @@ else if (char_last != noone) {
 			var _xx = start_x_default + (char_x_offset - char_x) + (view_under ? 0 : (RES_H / 4) * view_side);
 			var _yy = start_y_default + (view_under ? RES_H / 6 : 0);
 			draw_sprite_ext(sprite, 0, _xx, _yy, 
-				char_scale_a * char_dir, char_scale_a, 0, c_white, 0.6);
+				char_scale_a * char_dir, char_scale_a, 0, c_black, 0.6);
 			//Destroy the draw char map
 			ds_map_destroy(char_anim_map);
 		}

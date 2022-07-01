@@ -15,6 +15,8 @@ scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.P
 scAnimationState();
 scPalleteSwapReset();
 
+shader_reset();
+
 if(draw_health){
 	scUIEnemyHealth();	
 }

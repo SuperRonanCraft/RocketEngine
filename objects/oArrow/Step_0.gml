@@ -36,12 +36,13 @@ if(bonusSPD >= arrow_map[?ARROW_MAP.SPEED] *  ((arrow_map[? ARROW_MAP.POWER_MAX]
 var bonusDMG = dmg;
 var bonusKB = sign(hsp) * bonusSPD/4 + kb;
 
+part_emitter_region(global.ParticleSystem1, global.Emitter1, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_ellipse, ps_distr_gaussian);
 
 
 if(!deactivate){
 	
 	scProjectileMove(arrow_map, touching);
-	
+	part_emitter_burst(global.ParticleSystem1, global.Emitter1, arrow_map[?ARROW_MAP.PARTICLE], 3);
 	direction = darctan2(vsp * -grv_dir,hsp);
 	image_angle = direction;
 

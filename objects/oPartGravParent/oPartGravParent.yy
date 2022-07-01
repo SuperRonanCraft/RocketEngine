@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spBlood",
     "path": "sprites/spBlood/spBlood.yy",
