@@ -45,7 +45,7 @@ function scFindAITarget() {
 	if(aiTarget == noone){
 		for (var i = irandom_range(0,ds_list_size(teamToOppose)-1); i < ds_list_size(teamToOppose); i++) {
 			var entity = teamToOppose[|i];
-			if(instance_exists(entity)){
+			if(entity != undefined && instance_exists(entity)){
 				if(entity.id != player.id && entity.player_map[?PLAYER_MAP.ALIVE]
 					&& point_distance(player.x,player.y,entity.x,entity.y) < range
 					&& (player.team == TEAM.NONE || entity.team != player.team)){
