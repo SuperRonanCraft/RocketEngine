@@ -14,7 +14,7 @@ else{
 timer = timer-(owner.time_dialation);
 trueTimer--;
 
-if(timer <= 0 && image_index == image_number-1){
+if(timer <= 0 || image_index == image_number-1){
 	if(ds_list_empty(confirmList)){
 		with (owner)
 			scComboMiss();		

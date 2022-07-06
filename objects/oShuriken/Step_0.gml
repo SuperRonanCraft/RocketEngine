@@ -99,8 +99,8 @@ if (instance_exists(stuckTo)){
 
 //Move shuriken by hsp and vsp ALWAYS
 if (_advance) {
-	x += hsp;
-	y += vsp;
+	x += hsp*owner.time_dialation;
+	y += vsp*owner.time_dialation;
 }
 
 //Dont loop sprite stick animation

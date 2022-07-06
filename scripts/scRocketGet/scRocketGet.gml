@@ -109,12 +109,12 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.DESCRIPTION] = "Hot like lava";
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.FIRE;
 			map[? ROCKET_MAP.COOLDOWN] = 25 * varcd;
-			map[? ROCKET_MAP.SPEED] = 22 * varspd;
-			map[? ROCKET_MAP.DAMAGE] = 8;
+			map[? ROCKET_MAP.SPEED] = 9;
+			map[? ROCKET_MAP.DAMAGE] = 3;
 			map[? ROCKET_MAP.TIMER] = 180 * vartime;
 			map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.EMBER];
 			map[? ROCKET_MAP.PARTICLE_EXPLOSION] = oParticleHandler.ds_part[? PARTICLES.FIRE2];
-			map[? ROCKET_MAP.BUFF] = [BUFFTYPE.BURNRUSH];
+			map[? ROCKET_MAP.BUFF] = [BUFFTYPE.BURNING];
 			map[? ROCKET_MAP.EXPLOSION_SPRITE] = sexplosion_Fire;
 			//map[? ROCKET_MAP.EXPLOSION_ROCKET] = scRocketSpecialFire_Rocket;
 			//map[? ROCKET_MAP.EXPLOSION_WALL] = scRocketSpecialFire_Wall;

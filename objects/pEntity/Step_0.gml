@@ -1,6 +1,8 @@
 /// @desc Stuff
 if (!global.play) exit;
 
+time_dialation = global.time_dilation;
+
 //scPlayerHandler(PLAYER_EVENT.STEP);
 
 scAddToTeam(id,team);

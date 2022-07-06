@@ -21,7 +21,7 @@ function scGravityStep() {
 	map[? GRAVITY_MAP.HSP_PUSH] = 0;
 	map[? GRAVITY_MAP.VSP_PUSH] = 0;
 
-	time_dialation = 1;
+	//time_dialation = 1;
 
 
 }

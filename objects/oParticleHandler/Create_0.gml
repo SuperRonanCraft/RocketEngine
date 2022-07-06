@@ -136,6 +136,34 @@ ds_map_add(ds_part_amt, PARTICLES.SMOKE3, 5 * amt);
 
 parttype = part_type_create();
 part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.10,1,-0.01,0);
+part_type_scale(parttype,1,1);
+part_type_color1(parttype, c_white);
+part_type_speed(parttype,1,1,0,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0.01,90);
+part_type_blend(parttype,false);
+part_type_life(parttype,40,60);
+
+ds_map_add(ds_part, PARTICLES.SMOKE4, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SMOKE4, 5 * amt);
+
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_square);
+part_type_size(parttype,0.10,1,-0.01,0);
+part_type_scale(parttype,1,1);
+part_type_color1(parttype, c_gray);
+part_type_speed(parttype,1,1,0,0);
+part_type_direction(parttype,0,359,0,0);
+part_type_gravity(parttype,0.01,90);
+part_type_blend(parttype,false);
+part_type_life(parttype,40,60);
+
+ds_map_add(ds_part, PARTICLES.SMOKE5, parttype);
+ds_map_add(ds_part_amt, PARTICLES.SMOKE5, 5 * amt);
+
+parttype = part_type_create();
+part_type_shape(parttype,pt_shape_square);
 part_type_size(parttype,0.10,0.10,0,0);
 part_type_scale(parttype,1,1);
 part_type_color1(parttype,7451122);
@@ -645,7 +673,7 @@ ds_map_add(ds_part,PARTICLES.DRIP1, parttype);
 ds_map_add(ds_part_amt, PARTICLES.DRIP1, 3);
 
 enum PARTICLES {
-	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SAND,
+	WINTER, ICE, SPARKLE, FIRE1, FIRE2, FIRE3, EMBER, SMOKE1, SMOKE2, SMOKE3, SMOKE4, SMOKE5, SAND,
 	SLIME, SPEED, LOWGRAVITY, REVERSECONTROLS, ULTCHARGE, KBSMOKE,
 	KBHIT, TECH, TEST, MAGNET, PULL, BLEED, HACK, REVERSEGRAVITY, BLEEDEXPLOSION,
 	SLOWMO, PEACE, SLEEP, PORTAL, DUST, DAMAGE, ANTIHEAL, ABSORBTION, LIFESTEAL,

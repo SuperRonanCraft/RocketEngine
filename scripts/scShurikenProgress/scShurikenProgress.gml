@@ -32,9 +32,9 @@ function scShurikenProgress(argument0) {
 	}
 
 	//Cooldown
-	map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - 1);
+	map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - time_dialation);
 	if (map[? WEAPON_MAP.DELAY_TIME] == -1)
-		map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - 1);
+		map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - time_dialation);
 	
 
 	//Reload
@@ -43,7 +43,7 @@ function scShurikenProgress(argument0) {
 			map[? WEAPON_MAP.AMMO] = shuriken_map[? SHURIKEN_MAP.CLIP];
 			map[? WEAPON_MAP.RELOAD_TIME] = 0;
 		} else
-			map[? WEAPON_MAP.RELOAD_TIME]++;
+			map[? WEAPON_MAP.RELOAD_TIME]+= time_dialation;
 
 
 }

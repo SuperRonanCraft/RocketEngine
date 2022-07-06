@@ -4,8 +4,13 @@ if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_EXTRA] != noone)
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_UNDER]);
 if (sprite_index != noone) {
+	if(owner != undefined && instance_exists(owner)){
+		var char_info = owner.player_map[? PLAYER_MAP.CHARACTER_INFO];
+		scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
+	}
 	scDrawSpriteExt(x, y, sprite_index, image_index, noone, image_alpha, image_xscale, image_yscale, image_angle + scMovementWave(-5, 5, 1/2));
 	//draw_self();
+	scPalleteSwapReset();
 }
 if (rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER] != noone)
 	script_execute(rocket_map[? ROCKET_MAP.ROCKET_DRAW_OVER]);

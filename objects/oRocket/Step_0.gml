@@ -27,7 +27,7 @@ else if (_advance) {
 }
 
 if (timer < time && _advance)
-	timer++;
+	timer+=owner.time_dialation;
 else if (timer >= time && !destroy)
 	event_user(0);
 

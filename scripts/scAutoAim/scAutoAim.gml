@@ -14,6 +14,8 @@ function scAutoAim() {
 			}
 		}
 	}*/
+	return facing == 1 ? 0 : 180; //AUTO AIM FOR PARTY
+	
 	var obj = scFindTarget(team);
 
 	if (obj != noone && obj != id)

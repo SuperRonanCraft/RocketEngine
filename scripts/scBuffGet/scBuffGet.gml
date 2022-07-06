@@ -280,7 +280,7 @@ function scBuffGet(argument0, argument1) {
 			//_map[? BUFF_MAP.PARTICLE] = oParticleHandler.ds_part[? PARTICLES.FROST];
 			//_map[? BUFF_MAP.PARTICLE_AMT] = oParticleHandler.ds_part_amt[? PARTICLES.FROST];
 			_map[? BUFF_MAP.TIME] = 5 * room_speed;
-			_map[? BUFF_MAP.GOOD] = true;
+			_map[? BUFF_MAP.GOOD] = false;
 			break;
 			
 		/*

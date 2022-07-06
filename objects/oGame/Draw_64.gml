@@ -19,3 +19,5 @@ if (global.debug) { //Debug activated
 	var scale = 0.5, yy = RES_H - 20;
 	scDrawText(5, yy, text, c_white, scale, c_black, noone, fa_left, fa_bottom);
 }
+var scale = 0.5, yy = RES_H - 20;
+//scDrawText(5, yy, global.time_dilation, c_white, scale, c_black, noone, fa_left, fa_bottom);

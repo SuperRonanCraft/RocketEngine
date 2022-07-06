@@ -1,4 +1,8 @@
-/// @description  
+/// @description
+
+time_dialation = global.time_dilation;
+
+flashTimer -= time_dialation;
 
 standing = instance_place(x,bbox_bottom+5,oWall);
 
@@ -25,7 +29,8 @@ if(!ds_map_empty(corpseMap) && !gib && !statue && !specialAnimation){
 	}
 	if(standing != noone)
 		animationVar+= image_speed;
-	
+	else
+		animationVar += image_speed*0.1;
 	if(animationVar > sprite_get_number(currentSprite)-1){
 		animationVar = sprite_get_number(currentSprite)-1;	
 	}

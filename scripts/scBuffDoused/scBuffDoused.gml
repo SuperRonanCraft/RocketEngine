@@ -18,7 +18,7 @@ function scBuffDoused(argument0, argument1) {
 	} else {
 		color_overlay = c_olive;
 		//Remove if they die
-		if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] <= 0)
+		if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0)
 			dsBuff[? BUFF_MAP.CLOCK] = dsBuff[? BUFF_MAP.TIME];
 		
 		if(dsBuff[? BUFF_MAP.CLOCK] % 8 == 0)

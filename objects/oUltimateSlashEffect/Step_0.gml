@@ -12,6 +12,6 @@ if(instance_exists(owner) && owner != noone){
 if(image_speed > 1)
 	image_speed = 1;
 
-if(image_index == image_number-1){
+if(image_index >= image_number-1){
 	instance_destroy();	
 }

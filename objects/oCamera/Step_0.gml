@@ -22,7 +22,7 @@ else if (respect_room_top)
 //if (full) exit;
 //x += random_range(-shake_remain, shake_remain);
 //y += random_range(-shake_remain, shake_remain);
-shake_remain = max(0, shake_remain - ((1 / shake_lenght) * shake_magnitude));
+shake_remain = max(0, shake_remain - (		 (((1 / shake_lenght) * shake_magnitude))));
 
 //Update camera
 if (!full)

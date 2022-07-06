@@ -52,7 +52,8 @@ sliceAngle = 0;
 uv_dimensions = [];
 uv_center = [];
 
-
+flashTimer = 30;
+flashColor = c_red;
 //u_sliceAngle = shader_get_uniform(shSlice, "u_angle");
 u_uv_center = shader_get_uniform(shslice, "uv_center");
 u_uv_dimensions = shader_get_uniform(shslice, "uv_dimensions");

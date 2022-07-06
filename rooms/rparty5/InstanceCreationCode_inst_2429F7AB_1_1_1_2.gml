@@ -1,0 +1,1 @@
+scPlayerCharacterChange(CHARACTER.SWORD);

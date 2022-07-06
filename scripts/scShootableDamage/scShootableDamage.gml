@@ -215,7 +215,7 @@ function scShootableDamage() {
 				lethalDamage = true;
 			
 			
-				scSpawnParticle(damaging.x, damaging.y, 10, 20, spBlood, WORLDPART_TYPE.BLOOD);
+				scSpawnParticle(damaging.x, damaging.y, 100, 20, spBlood, WORLDPART_TYPE.BLOOD);
 				map[? SHOOTABLE_MAP.HEALTH_BASE] = 0;
 				map[? SHOOTABLE_MAP.HEALTH_SHIELD] = 0;
 				map[? SHOOTABLE_MAP.HEALTH_ARMOR] = 0;
@@ -271,6 +271,7 @@ function scShootableDamage() {
 		//Do this no matter if damage is being inflicted on us or not
 		if (isPlayer) {
 			player_map[? PLAYER_MAP.FLASH_ALPHA] = 1;
+			player_map[? PLAYER_MAP.FLASH_COLOR] = c_white;
 			//Blood
 			if (damager != noone && combo)
 				scComboDamaged(damager);

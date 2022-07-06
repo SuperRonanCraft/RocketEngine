@@ -62,7 +62,7 @@ global.weapon_info = true;
 //global.menu_color_hover_act = c_orange;
 
 enum TEAM {
-	NONE, LEFT, RIGHT
+	NONE, LEFT, RIGHT, UP, DOWN, LENGTH,
 }
 
 //Team Declaration
@@ -134,3 +134,6 @@ physics_debug = false;
 global.network_connected = false;
 global.network_name = sNameGet();
 global.network_ip = "127.0.0.1";
+
+global.time_dilation = 1;
+global.time_dilation_target = 1;

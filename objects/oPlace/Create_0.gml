@@ -1,2 +1,0 @@
-/// @description  
-timer = 2;

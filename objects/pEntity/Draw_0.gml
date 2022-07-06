@@ -11,8 +11,8 @@ scUltimateHandlerDraw();
 scComboDraw();
 
 //Animate the player in their current state
-var char_info = player_map[? PLAYER_MAP.CHARACTER_INFO];
-scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
+//var char_info = player_map[? PLAYER_MAP.CHARACTER_INFO];
+//scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
 
 
 scAnimationState();

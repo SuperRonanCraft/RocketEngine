@@ -16,7 +16,7 @@ function scBuffBurnDoT(argument0, argument1) {
 		scBuffRemove(owner, dsBuff);
 	} else {
 		//Create a new item in the DS Map so that it isn't saved to the object
-		if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH_BASE] <= 0)
+		if (owner.shootable_map[? SHOOTABLE_MAP.HEALTH] <= 0)
 			dsBuff[? BUFF_MAP.CLOCK] = dsBuff[? BUFF_MAP.TIME];
 		
 		dsBuff[? "damage_crt"]--;

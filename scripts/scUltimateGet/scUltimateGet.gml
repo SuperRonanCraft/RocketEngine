@@ -165,7 +165,7 @@ function scUltimateGet(argument0, argument1) {
 			ds_map[? "dis"] = 80;
 			ds_map[? "hei"] = -32;
 			ds_map[? "obj"] = oUltimateFrosty;
-			ds_map[? "spr"] = sUltFrosty;
+			//ds_map[? "spr"] = sUltFrosty;
 			ds_map[? "scl"] = 1;
 			break;
 		

@@ -26,6 +26,10 @@ function scCheckTech() {
 			
 			g_map[? GRAVITY_MAP.VSP_KNOCKBACK] = 0;
 			g_map[? GRAVITY_MAP.HSP_KNOCKBACK] = 0;
+			
+			iframes += 10;
+			player_map[?PLAYER_MAP.FLASH_ALPHA] = 1;
+			player_map[?PLAYER_MAP.FLASH_COLOR] = c_yellow;
 		
 			scPlaySound(SOUND.EFFECT_PLAYER_TECH);
 		}

@@ -27,16 +27,18 @@ function scKeybindsMove() {
 	if (!player_map[? PLAYER_MAP.ALIVE] || !player_map[? PLAYER_MAP.CAN_CONTROL])
 		move = 0;
 	
-	
+	var switchFacing = false;
 	controlling = move;
 	var _map = gravity_map;
 	//Check if can control
 	if (player_map[? PLAYER_MAP.CAN_CONTROL]) {
-	
+		
 		//Direction
-		if (move != 0)
+		if (move != 0){
+			if(facing != sign(move)) switchFacing = true;
 			facing = sign(move);
-	
+			
+		}
 		//Friction
 
 		//Vertical
@@ -82,9 +84,9 @@ function scKeybindsMove() {
 
 	//HORIZONTAL & Friction
 
-	if (_map[? GRAVITY_MAP.HSP_MOVE_MOD] == 0 && move != 0)
+	if (!switchFacing && _map[? GRAVITY_MAP.HSP_MOVE_MOD] == 0 && move != 0)
 		_map[? GRAVITY_MAP.HSP_MOVE] = ((_map[? GRAVITY_MAP.WALK_SPEED] + _map[? GRAVITY_MAP.WALK_SPEED_MOD]) * move);
-	else if (_map[? GRAVITY_MAP.HSP_MOVE_MOD] != 0 && move != 0)
+	else if (!switchFacing && _map[? GRAVITY_MAP.HSP_MOVE_MOD] != 0 && move != 0)
 		_map[? GRAVITY_MAP.HSP_MOVE] = ((_map[? GRAVITY_MAP.WALK_SPEED] + _map[? GRAVITY_MAP.WALK_SPEED_MOD]) * move) + (_map[? GRAVITY_MAP.HSP_MOVE_MOD]);
 	else if (_map[? GRAVITY_MAP.HSP_MOVE_MOD] != 0)
 		_map[? GRAVITY_MAP.HSP_MOVE] = _map[? GRAVITY_MAP.HSP_MOVE_MOD];

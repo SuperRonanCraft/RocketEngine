@@ -6,6 +6,14 @@ function scPlayerDied() {
 	else{
 		if(instance_exists(oGMMDeathmatch))
 			oGMMDeathmatch.chars--;
+		else{//Party mode
+			global.time_dilation_target = 0.1;
+			scScreenShake(50,60);
+			if(instance_number(oPlayer) <= 2){
+				//oTransition.timer = 60;
+				SlideTransition(TRANS_MODE.GOTO,room_next(room))	
+			}
+		}
 	}
 
 }

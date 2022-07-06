@@ -3,7 +3,8 @@
 x = owner.x;
 y = owner.y;
 
-if (timer % 5 == 0 && timer <= 25)
+//if (floor(timer) % 5 == 0 && timer <= 25)
+repeat(10)
 	with (scSpawnRocket(x + irandom_range(-20, 20), y + irandom_range(-20, 20), depth,
 			irandom_range(45, 135), owner, weapon_map, [ROCKET_MAP.SCALE], [1])) {
 		/*owner = other.owner;
@@ -37,9 +38,9 @@ if (timer % 5 == 0 && timer <= 25)
 		rocket_map[? ROCKET_MAP.GO_OOB] = true;
 		rocket_map[? ROCKET_MAP.ROCKET_STEP] = scRocketSpecialHomingUlt_Step;
 		rocket_map[? ROCKET_MAP.ULTIMATE_CHARGE_GIVE] = false;	
-		rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.KBSMOKE];
+		rocket_map[? ROCKET_MAP.PARTICLE_TRAIL] = oParticleHandler.ds_part[? PARTICLES.DUST];
 	}
 
-if (timer > (room_speed * 2))
+//if (timer > (room_speed * 2))
 	instance_destroy();	
-timer++;
+timer+=owner.time_dialation;

@@ -26,7 +26,7 @@ function scGravityStart() {
 	map[? GRAVITY_MAP.VSP_MOVE] = 0;
 	map[? GRAVITY_MAP.HSP_MOVE_MOD] = 0; //Movement added (not reset)
 	//Weapon Controlled
-	map[? GRAVITY_MAP.FRICTION] = 0.9;
+	map[? GRAVITY_MAP.FRICTION] = 0;
 	map[? GRAVITY_MAP.FRICTION_MULTI] = 0;
 	//Buffs n stuff (reset per step)
 	map[? GRAVITY_MAP.HSP_PUSH] = 0;

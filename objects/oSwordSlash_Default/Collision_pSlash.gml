@@ -5,7 +5,7 @@ ds_list_add(hitList, other);
 if(!instance_exists(owner))
 	exit;
 
-if(other.owner != owner){
+if(other.owner != owner && owner.team != other.owner.team){
 	var slash = instance_create_depth(other.x,other.y,depth,oUltimateSlashEffect);
 	scPlaySound(SOUND.EFFECT_REFLECT);
 	slash.owner = id;

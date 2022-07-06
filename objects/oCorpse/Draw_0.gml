@@ -40,12 +40,15 @@ if(ds_exists(playerMap, ds_type_map)){
 	scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
 }
 
-draw_sprite_ext(currentSprite,floor(animationVar),x,_y,facing,image_yscale,angle,color,image_alpha);
 
+draw_sprite_ext(currentSprite,floor(animationVar),x,_y,facing,image_yscale,angle,color,image_alpha);
+scFlash(flashTimer/30, flashColor, facing, 1, currentSprite, floor(animationVar),x,_y,angle);
 
 scPalleteSwapReset();
 
 if(shocked){
+	flashTimer*=-1;
+	flashColor = c_white;
 	scDrawLightning(irandom_range(x-10,x+10), irandom_range(y-5, y+5), irandom_range(x-20, x+20), irandom_range(y-10,  y+10), max(0,10-timer), c_white);	
 	
 }

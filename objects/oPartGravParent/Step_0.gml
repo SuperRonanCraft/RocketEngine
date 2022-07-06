@@ -2,6 +2,8 @@
 
 if (stuck || !moving) exit; //stuck to a wall?
 
+time_dialation = global.time_dilation;
+
 var offset = 1;
 if (instance_place(x, y + (offset + grv), oWall) == noone)
 	vsp_real = clamp(vsp_real + (grv * time_dialation), -32, 32);

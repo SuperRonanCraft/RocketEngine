@@ -1,16 +1,20 @@
 /// @desc Progress Transitions
+timer--; //unaffected by time dilation
+
 if (mode == TRANS_MODE.OFF) exit;
 if (mode == TRANS_MODE.INTRO || mode == TRANS_MODE.UNPAUSE)
 	percent = max(0, percent - max((percent / (10 * TIME_SPEED)), 0.0005));
 else
 	percent = min(1, percent +  max(((1 - percent) / (10 * TIME_SPEED)), 0.01));
 //What to do after animation is done either filling or leaving
-if (percent == 1 || percent == 0)
+
+if ((percent == 1 || percent == 0))
 	switch (mode) {
 		case TRANS_MODE.GOTO:
 			mode = TRANS_MODE.INTRO;
 			global.pause_possible = true;
 			room_goto(target);
+			show_debug_message("transition to " + room_get_name(target) + " room");
 			break;
 		case TRANS_MODE.RESTART:
 			mode = TRANS_MODE.INTRO;

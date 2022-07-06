@@ -6,6 +6,7 @@
 		scDrawText(RES_W / 2, RES_H / 2, wait_timer_text, wait_timer_color, 
 			wait_timer_scale * 2, noone, noone, fa_middle, fa_middle); //Count down timer
 	//Bar
+	/*
 	var xpos = RES_W / 2;
 	var ypos = 18;
 	var w = sprite_get_width(sTimerBar) * (timer_current / timer); //Target
@@ -18,9 +19,11 @@
 	scDrawSpriteExt(xpos, ypos, sTimerBar, 1, c_white, 0.8); //Timer bar without color
 	//Time
 	scDrawText(RES_W / 2, 25, string(timer_current), c_black, 1, c_ltgray);
+	*/
 //}
 
 //Game end draw events
+/*
 if (endgame) {
 	//Game has ended
 	scDrawText(RES_W / 2, RES_H / 2, "GAME OVER!", c_red, 2);

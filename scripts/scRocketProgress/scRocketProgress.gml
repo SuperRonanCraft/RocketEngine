@@ -28,9 +28,9 @@ function scRocketProgress(argument0) {
 	}
 
 	//Cooldown
-	map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - 1);
+	map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - time_dialation);
 	if (map[? WEAPON_MAP.DELAY_TIME] == -1)
-		map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - 1);
+		map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - time_dialation);
 	//current_recoil = max(0, floor(current_recoil * 0.8));
 
 	//Reload
@@ -39,7 +39,7 @@ function scRocketProgress(argument0) {
 			map[? WEAPON_MAP.AMMO] = rocket_map[? ROCKET_MAP.CLIP];
 			map[? WEAPON_MAP.RELOAD_TIME] = 0;
 		} else
-			map[? WEAPON_MAP.RELOAD_TIME]++;
+			map[? WEAPON_MAP.RELOAD_TIME]+=time_dialation;
 
 
 }

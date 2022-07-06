@@ -1,5 +1,5 @@
 /// @desc Wait delay before starting stage, if allowed to play, call countdown delay every second
-if (timer_enabled && !endgame)
+if (timer_enabled && !endgame && room != rPartyStart)
 	if (wait_timer_current >= 0) {
 		wait_timer_current_abs--;
 		if (wait_timer_current_abs == 0) {
@@ -23,11 +23,13 @@ if (timer_enabled && !endgame)
 			timer_room = room_speed;
 		else 
 			timer_room--;
-		if (timer_room == 0)
+		if (timer_room == 0 && room != rPartyStart)
 			event_user(0);
 	}
 //End of game event
 if (endgame) {
+	SlideTransition(TRANS_MODE.GOTO, room_next(room));
+	/*
 	event_user(2);
 	if (endgame_delay <= 0)
 		event_inherited(); //Navigate UI
@@ -35,5 +37,15 @@ if (endgame) {
 	if (kick_timer_abs mod room_speed == 0)
 		kick_timer--;
 	if (kick_timer_abs <= 0 && kick_execute)
-		SlideTransition(TRANS_MODE.GOTO, global.gamemodeSRoom[gamemode]);
+		SlideTransition(TRANS_MODE.GOTO, room_goto_next());
+	*/
+}
+	
+if(room == rPartyStart){
+	global.play = true;
+	timer_enabled = false;
+}
+
+for (var i = 0; i < instance_number(pEntity); i++) {
+    if(instance_find(pEntity,i).y > room_height*2) instance_find(pEntity,i).player_map[? PLAYER_MAP.ALIVE] = false;
 }

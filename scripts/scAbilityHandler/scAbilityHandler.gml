@@ -14,7 +14,7 @@ function scAbilityHandler() {
 	if (!map[? ABILITY_MAP.ENABLED] || !player_map[? PLAYER_MAP.CAN_CONTROL] || map[? ABILITY_MAP.TYPE] == ABILITY_TYPE.NONE) exit; //Is the system even enabled?
 
 	if (map[? ABILITY_MAP.CURRENT_TIME] > 0) { //Decrease cooldown, exit
-		map[? ABILITY_MAP.CURRENT_TIME]--;
+		map[? ABILITY_MAP.CURRENT_TIME]-= time_dialation;
 		exit;
 	}
 

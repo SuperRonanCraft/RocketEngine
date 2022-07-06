@@ -1,7 +1,7 @@
 /// @desc 
 
 if (timer > 0)
-	timer--;
+	timer-= time_dialation;
 else if (timer > -1)
 	image_alpha = max(image_alpha - alpha_reduce, 0);
 

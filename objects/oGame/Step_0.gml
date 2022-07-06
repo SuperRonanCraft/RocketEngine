@@ -21,6 +21,11 @@ if (physics_debug) {
 	}
 }
 
+if(global.time_dilation != global.time_dilation_target){
+	global.time_dilation = lerp(global.time_dilation,global.time_dilation_target,0.1);	
+}
+else
+	global.time_dilation_target = 1;
 
 //Controller Pause (Select)
 for (var i = 0; i < ds_list_size(controllers); i++)

@@ -47,6 +47,12 @@ function scDrawNormalAnimationState() {
 		map[? PLAYER_MAP.ANIMATION_VAR] += image_speed * time_dialation;
 		var sprite = map[? PLAYER_MAP.CURRENT_SPRITE];
 		var sprite_img = floor(map[? PLAYER_MAP.ANIMATION_VAR]);
+		scFlashOutl(1, c_white, 
+			facing * image_xscale*1.1, image_yscale*1.1, sprite, sprite_img, x, y);
+		
+		var char_info = player_map[? PLAYER_MAP.CHARACTER_INFO];
+		scPalleteSwapSet(char_info[? CHARACTER_MAP.PALETTE], char_info[? CHARACTER_MAP.PALETTE_INDEX]);
+		
 		draw_sprite_ext(sprite, sprite_img, x, y, 
 			facing * image_xscale, image_yscale, 0, color_overlay, image_alpha);
 		scFlash(map[? PLAYER_MAP.FLASH_ALPHA], map[? PLAYER_MAP.FLASH_COLOR], 
