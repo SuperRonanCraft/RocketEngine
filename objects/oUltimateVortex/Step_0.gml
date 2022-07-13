@@ -10,7 +10,10 @@ var targetAngle = 270;
 if(grv_dir == -1){
 	targetAngle = 90;
 }
-
+if(owner != undefined && !instance_exists(owner)){
+	instance_destroy();
+	exit;
+}
 
 if(!deactivate){
 	
@@ -147,14 +150,14 @@ else if(deactivate){
 
 
 if (_advance) {
-	x += hsp;
-	y += vsp;
+	x += hsp*owner.time_dialation;
+	y += vsp*owner.time_dialation;
 }
 
 if(deactivate){
-	timer--;
+	timer-=owner.time_dialation;
 	pullingAmt = 0;
-	if(timer%5 == 0){
+	if(floor(timer%5) == 0){
 		ds_list_clear(pullList);
 		pullingAmt = collision_circle_list(x,y,pullRadius,pWeapon,false,true,pullList,false);	
 	}
@@ -163,8 +166,8 @@ if(deactivate){
 		for (var i = 0; i < ds_list_size(pullList); i++) {
 			var wep = pullList[|i];
 			if(!instance_exists(wep)) exit;
-		    wep.hsp += lengthdir_x(point_distance(x,y, wep.x, wep.y), point_direction(wep.x, wep.y, x, y))/pullStrength;
-			wep.vsp += lengthdir_y(point_distance(x,y, wep.x, wep.y), point_direction(wep.x, wep.y, x, y))/pullStrength;
+		    wep.hsp += owner.time_dialation*lengthdir_x(point_distance(x,y, wep.x, wep.y), point_direction(wep.x, wep.y, x, y))/pullStrength;
+			wep.vsp += owner.time_dialation*lengthdir_y(point_distance(x,y, wep.x, wep.y), point_direction(wep.x, wep.y, x, y))/pullStrength;
 			
 			part_particles_create(global.ParticleSystem1, wep.x, wep.y, oParticleHandler.ds_part[? PARTICLES.MAGNET], 1);
 		}	

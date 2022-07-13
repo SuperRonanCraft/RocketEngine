@@ -31,25 +31,25 @@ function scArrowProgress(argument0) {
 				//No statistics yet!
 			}
 		//Cooldown
-		map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - 1);
+		map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - time_dialation);
 		if (map[? WEAPON_MAP.DELAY_TIME] == -1)
-			map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - 1);
+			map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - time_dialation);
 		//Reload
 		if (map[? WEAPON_MAP.AMMO] == 0)
 			if (map[? WEAPON_MAP.RELOAD_TIME] > arrow_map[? ARROW_MAP.RELOAD_TIME]) {
 				map[? WEAPON_MAP.AMMO] = arrow_map[? ARROW_MAP.CLIP];
 				map[? WEAPON_MAP.RELOAD_TIME] = 0;
 			} else
-				map[? WEAPON_MAP.RELOAD_TIME]++;
+				map[? WEAPON_MAP.RELOAD_TIME]+= time_dialation;
 		map[? WEAPON_MAP.CHARGING] = false;
 	} else if (map[? WEAPON_MAP.DELAY_TIME] == 0) {
 		var _min = 100, _max = arrow_map[? ARROW_MAP.POWER_MAX];
-		map[? WEAPON_MAP.POWER] += arrow_map[? ARROW_MAP.POWER] / room_speed;
+		map[? WEAPON_MAP.POWER] += time_dialation*(arrow_map[? ARROW_MAP.POWER] / room_speed);
 		map[? WEAPON_MAP.POWER] = clamp(map[? WEAPON_MAP.POWER], _min, _max);
 		map[? WEAPON_MAP.CHARGING] = true;
 		map[? WEAPON_MAP.CHARGE] = (map[? WEAPON_MAP.POWER] - _min) / (_max - _min);
 		if (map[? WEAPON_MAP.POWER] >= _max)
-			map[? WEAPON_MAP.COOLDOWN_TIME]--; //Cancel out, shoot arrow
+			map[? WEAPON_MAP.COOLDOWN_TIME]-= time_dialation; //Cancel out, shoot arrow
 	}
 
 

@@ -113,7 +113,8 @@ function scPotionGet(argument0) {
 			map[? POTION_MAP.DAMAGE] = 9;
 			map[? POTION_MAP.PARTICLE] = PARTICLES.MAGNET;
 			map[? POTION_MAP.PARTICLE_SPLASH_COLOR] = c_fuchsia;
-			map[? POTION_MAP.HIT_SCRIPT] = scPotion_Portal_HitScript;
+			map[? POTION_MAP.WEIGHT] = 0.5;
+			//map[? POTION_MAP.HIT_SCRIPT] = scPotion_Portal_HitScript;
 			break;
 
 	    case WEAPON_POTION_TYPE.DEFAULT:

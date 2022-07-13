@@ -1,7 +1,5 @@
 {
-  "ConfigValues": {
-    "Single": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
-  },
+  "ConfigValues": {},
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,

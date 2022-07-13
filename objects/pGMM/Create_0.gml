@@ -40,6 +40,12 @@ tie = false;
 p_list = ds_list_create();
 
 with (oPlayer) {
+	if(global.changeChars){
+		character_map = player_map[?PLAYER_MAP.CHARACTER_INFO];
+		cur_palette = character_map[?CHARACTER_MAP.PALETTE_INDEX];
+		scPlayerCharacterChange(irandom(CHARACTER.LENGTH-1));
+		character_map[? CHARACTER_MAP.PALETTE_INDEX] = cur_palette;
+	}
 	ds_list_add(other.p_list, self); //For every oPlayer, add players to the p_list
 	scPlayerLoadModifiers(id); //Load modifiers
 }

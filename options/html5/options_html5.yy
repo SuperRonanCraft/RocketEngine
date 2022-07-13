@@ -1,4 +1,5 @@
 {
+  "ConfigValues": {},
   "option_html5_browser_title": "Created with GameMaker",
   "option_html5_version": "1.0.0.0",
   "option_html5_foldername": "html5game",

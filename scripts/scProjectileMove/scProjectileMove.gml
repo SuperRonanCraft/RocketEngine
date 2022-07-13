@@ -6,8 +6,8 @@ function scProjectileMove() {
 	var map = argument[0];
 	var touching = argument[1];
 
-	var _hsp = hsp*time_dialation;
-	var _vsp = vsp*time_dialation;
+	var _hsp = hsp*owner.time_dialation;
+	var _vsp = vsp*owner.time_dialation;
 
 	var x_change = _hsp;
 	var y_change = _vsp;

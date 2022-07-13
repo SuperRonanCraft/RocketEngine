@@ -12,6 +12,11 @@ var _advance = global.play || global.gameover;
 if(!_advance)
 	exit
 
+if (owner != undefined && !instance_exists(owner)) {
+	instance_destroy();
+	exit;
+}
+
 //If there is a special script to run, nullify all else and run it instead
 if (potion_map[? POTION_MAP.POTION_STEP] != noone)
 	script_execute(potion_map[? POTION_MAP.POTION_STEP]);
@@ -28,7 +33,7 @@ if(!deactivate){
 	
 	scProjectileMove(potion_map, touching);
 	
-	image_angle += hsp;
+	image_angle += hsp*owner.time_dialation;
 
 	for (var i = 0; i < ds_list_size(touching); i++) {
     
@@ -124,10 +129,11 @@ if(!deactivate){
 if (!deactivate && potion_map[? POTION_MAP.PARTICLE] != noone) {
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? potion_map[? POTION_MAP.PARTICLE]], potion_map[? POTION_MAP.PARTICLE_AMT]);
 	
-	timer++;
+	timer+=owner.time_dialation;
 	
-	if(timer == 90){
+	if(floor(timer) == 90){
 		dmg *= 1.5;
+		timer+=owner.time_dialation;
 	}
 	else if(timer > 90){
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.ANTIHEAL], 1);	
@@ -144,8 +150,8 @@ if (!deactivate && potion_map[? POTION_MAP.PARTICLE] != noone) {
 
 
 if (_advance) {
-	x += hsp;
-	y += vsp;
+	x += hsp*owner.time_dialation;
+	y += vsp*owner.time_dialation;
 }
 
 

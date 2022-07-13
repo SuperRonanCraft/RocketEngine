@@ -1,7 +1,5 @@
 {
-  "ConfigValues": {
-    "Single": {"textureGroupId":"{\"name\":\"Background\",\"path\":\"texturegroups/Background\"}",},
-  },
+  "ConfigValues": {},
   "spriteId": {
     "name": "sTile_Palette1",
     "path": "sprites/sTile_Palette1/sTile_Palette1.yy",

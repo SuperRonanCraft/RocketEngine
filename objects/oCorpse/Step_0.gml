@@ -28,9 +28,9 @@ if(!ds_map_empty(corpseMap) && !gib && !statue && !specialAnimation){
 		currentSprite = corpseMap[? ANIMATIONSTATE.DEAD2];	
 	}
 	if(standing != noone)
-		animationVar+= image_speed;
+		animationVar+= global.time_dilation*image_speed;
 	else
-		animationVar += image_speed*0.1;
+		animationVar += global.time_dilation*image_speed*0.1;
 	if(animationVar > sprite_get_number(currentSprite)-1){
 		animationVar = sprite_get_number(currentSprite)-1;	
 	}

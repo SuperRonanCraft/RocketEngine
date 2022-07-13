@@ -18,7 +18,7 @@ global.pause_possible = true;
 global.pause_onfocus = true;
 global.gamemode_select = false; //Set to false every main menu load (sets to load up gamemode select not main page)
 global.gameover = false;
-
+global.changeChars = false; //Change character to a random one after a loop
 global.gamestartphase = false;
 
 //Gamemodes
@@ -137,3 +137,6 @@ global.network_ip = "127.0.0.1";
 
 global.time_dilation = 1;
 global.time_dilation_target = 1;
+#macro CONFIG "default"
+#macro HTML:CONFIG "html"
+

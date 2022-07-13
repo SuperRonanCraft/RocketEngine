@@ -17,6 +17,11 @@ var _advance = global.play || global.gameover;
 
 if(!_advance)
 	exit;
+	
+if (owner != undefined && !instance_exists(owner)) {
+	instance_destroy();
+	exit;
+}
 
 var targetAngle = 270;
 if(grv_dir == -1){
@@ -26,7 +31,7 @@ if(grv_dir == -1){
 
 
 if(!deactivate){
-	vsp += (arrow_map[? ARROW_MAP.WEIGHT] * grv_dir)/room_speed;
+	vsp += owner.time_dialation*((arrow_map[? ARROW_MAP.WEIGHT] * grv_dir)/room_speed);
 }
 
 var bonusSPD = abs(hsp)+abs(vsp);
@@ -198,12 +203,12 @@ else if(deactivate){
 
 
 if (_advance) {
-	x += hsp;
-	y += vsp;
+	x += hsp*owner.time_dialation;
+	y += vsp*owner.time_dialation;
 }
 
 if(deactivate){
-	timer++
+	timer+= owner.time_dialation;
 }
 if(timer >= time){
 	event_user(0);	

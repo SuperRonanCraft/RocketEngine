@@ -7,7 +7,7 @@ var shuriken_map = weapon_map[? WEAPON_MAP.MAP];
 var time = shuriken_map[? SHURIKEN_MAP.TIMER];
 var checkroom = shuriken_map[? SHURIKEN_MAP.SHURIKEN_AUTO_DESTROY_ROOM];
 
-if (!instance_exists(owner)) {
+if (owner != undefined && !instance_exists(owner)) {
 	instance_destroy();
 	exit;
 }

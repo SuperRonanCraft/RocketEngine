@@ -35,9 +35,9 @@ function scBombProgress(argument0) {
 	}
 
 	//Cooldown
-	map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - 1);
+	map[? WEAPON_MAP.DELAY_TIME] = max(-1, map[? WEAPON_MAP.DELAY_TIME] - time_dialation);
 	if (map[? WEAPON_MAP.DELAY_TIME] == -1)
-		map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - 1);
+		map[? WEAPON_MAP.COOLDOWN_TIME] = max(0, map[? WEAPON_MAP.COOLDOWN_TIME] - time_dialation);
 	
 
 	//Reload
@@ -46,7 +46,7 @@ function scBombProgress(argument0) {
 			map[? WEAPON_MAP.AMMO] = bomb_map[? BOMB_MAP.CLIP];
 			map[? WEAPON_MAP.RELOAD_TIME] = 0;
 		} else
-			map[? WEAPON_MAP.RELOAD_TIME]++;
+			map[? WEAPON_MAP.RELOAD_TIME]+= time_dialation;
 
 
 }

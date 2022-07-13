@@ -277,6 +277,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.DAMAGE] = 10;
 			map[? ROCKET_MAP.DAMAGE_EXPLOSION] = 1 * _dmg_mul;
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.LIGHTNING;
+			map[? ROCKET_MAP.EXPLOSION_SCALE] = 1;
 			map[? ROCKET_MAP.COOLDOWN] = 35 * varcd;
 			map[? ROCKET_MAP.SPEED] = 18 * varspd;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 3;
@@ -299,7 +300,7 @@ function scRocketGet(argument0) {
 			map[? ROCKET_MAP.DESCRIPTION] = "Tired of missing?";
 			map[? ROCKET_MAP.PROJECTILE] = ROCKET_SPRITE.SHOTGUN;
 			map[? ROCKET_MAP.COOLDOWN] = 50;
-			map[? ROCKET_MAP.EXPLOSION_SCALE] = 2;
+			map[? ROCKET_MAP.EXPLOSION_SCALE] = 1;
 			map[? ROCKET_MAP.SPEED] = 8;
 			map[? ROCKET_MAP.DAMAGE] = 8;
 			map[? ROCKET_MAP.SHAKE_MAGNITUDE] = 2;

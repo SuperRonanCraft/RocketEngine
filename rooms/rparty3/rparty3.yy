@@ -43,12 +43,7 @@
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Players","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"pGMM","path":"objects/pGMM/pGMM.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1536.0,"y":128.0,"resourceVersion":"1.0","name":"inst_44BA9715_1","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"shuffle_on","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":704.0,"y":256.0,"resourceVersion":"1.0","name":"inst_11D0E768","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"shuffle_on","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":928.0,"y":256.0,"resourceVersion":"1.0","name":"inst_5B7C5A2E","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oPickupWeapon","path":"objects/oPickupWeapon/oPickupWeapon.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":800.0,"y":288.0,"resourceVersion":"1.0","name":"inst_14F984CD","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Game","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tsOut","path":"tilesets/tsOut/tsOut.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":50,"SerialiseHeight":29,"TileSerialiseData":[
 47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,
@@ -167,8 +162,7 @@
     {"name":"inst_4400B4BF","path":"rooms/rParty3/rParty3.yy",},
     {"name":"inst_64FE176E","path":"rooms/rParty3/rParty3.yy",},
     {"name":"inst_6B080191","path":"rooms/rParty3/rParty3.yy",},
-    {"name":"inst_11D0E768","path":"rooms/rParty3/rParty3.yy",},
-    {"name":"inst_5B7C5A2E","path":"rooms/rParty3/rParty3.yy",},
+    {"name":"inst_14F984CD","path":"rooms/rParty3/rParty3.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -149,8 +149,8 @@ function scBombGet(argument0) {
 			map[? BOMB_MAP.NAME] = "Bomb";
 			map[? BOMB_MAP.DESCRIPTION] = "My favorite.";
 			map[? BOMB_MAP.PROJECTILE] = BOMB_SPRITE.DEFAULT;
-			map[? BOMB_MAP.COOLDOWN] = 40;
-			map[? BOMB_MAP.TIMER] = 250;
+			map[? BOMB_MAP.COOLDOWN] = 60;
+			map[? BOMB_MAP.TIMER] = 150;
 			map[? BOMB_MAP.SPEED] = 15;
 			map[? BOMB_MAP.DAMAGE] = 12;
 			break;

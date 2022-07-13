@@ -20,7 +20,7 @@ if(!debounce){
 			stuckTo.stuckAmount--;
 	}
 }
-vsp += 2 * 5/room_speed;
+vsp += owner.time_dialation*(2 * 5/room_speed);
 image_alpha -= 0.01;
 image_angle += hsp;
 	

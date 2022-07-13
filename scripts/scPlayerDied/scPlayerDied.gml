@@ -11,7 +11,12 @@ function scPlayerDied() {
 			scScreenShake(50,60);
 			if(instance_number(oPlayer) <= 2){
 				//oTransition.timer = 60;
-				SlideTransition(TRANS_MODE.GOTO,room_next(room))	
+				if(room != rParty11)
+					SlideTransition(TRANS_MODE.GOTO,room_next(room))	
+				else{
+					SlideTransition(TRANS_MODE.GOTO,rParty1);
+					global.changeChars = true;
+				}
 			}
 		}
 	}

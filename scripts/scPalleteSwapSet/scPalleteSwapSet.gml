@@ -2,7 +2,7 @@
 /// @param palette_sprite_index
 /// @param palette_index
 function scPalleteSwapSet(argument0, argument1) {
-
+	if(CONFIG == "html") exit;
 	var _pal_sprite = argument0;
 	var _pal_index = argument1;
 

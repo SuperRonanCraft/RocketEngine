@@ -17,10 +17,13 @@ if (bomb_map[? BOMB_MAP.BOMB_STEP] != noone)
 	script_execute(bomb_map[? BOMB_MAP.BOMB_STEP]);
 	//---===NO MAP REQUESTS AFTER THIS LINE===---
 
-
+if(owner != undefined && !instance_exists(owner)){
+	instance_destroy(); 
+	exit;
+}
 
 if(!deactivate){
-	vsp += (bomb_map[? BOMB_MAP.WEIGHT] * grv_dir)/room_speed;
+	vsp += owner.time_dialation*((bomb_map[? BOMB_MAP.WEIGHT] * grv_dir)/room_speed);
 }
 
 
@@ -51,7 +54,7 @@ if(!deactivate){
 			if((_team != _oteam || _team == TEAM.NONE) && obj.id != owner.id){
 				part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.EMBER], 3);
 				//vsp -= 0.1;
-				timer+= bomb_map[? BOMB_MAP.TIMER] * bomb_map[?BOMB_MAP.TIMER_ACCEL];
+				timer+= owner.time_dialation*(bomb_map[? BOMB_MAP.TIMER] * bomb_map[?BOMB_MAP.TIMER_ACCEL]);
 				
 				if (!hitWall && ds_list_find_index(confirmList, obj) == -1) { //We've never hit this player before
 					ds_list_add(confirmList, obj);
@@ -75,8 +78,8 @@ if(!deactivate){
 					else{
 						if(bomb_map[? BOMB_MAP.RICOCHET]){
 							scShootableDamage(owner, obj, false, true, bomb_map[?BOMB_MAP.DAMAGE],noone,DAMAGE_TYPE.POUND,noone, bomb_map[? BOMB_MAP.DAMAGE_ELEMENT])
-							obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += (hsp);
-							obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += (vsp);
+							obj.gravity_map[? GRAVITY_MAP.HSP_MOVE_MOD] += owner.time_dialation*(hsp);
+							obj.gravity_map[? GRAVITY_MAP.VSP_MOVE] += owner.time_dialation*(vsp);
 						
 							//hsp*=-1;
 							vsp*=-1;
@@ -105,7 +108,7 @@ if(!deactivate){
 					var wallToCheck = noone;
 					while(attempts <= 2){
 						attempts++;
-						wallToCheck = instance_place(x+(hsp*signCheckX), y+(vsp*signCheckY), oWall);
+						wallToCheck = instance_place(x+(hsp*signCheckX*owner.time_dialation), y+(vsp*signCheckY*owner.time_dialation), oWall);
 						if(wallToCheck == noone){
 							hsp*= signCheckX;
 							vsp*= signCheckY;
@@ -125,8 +128,8 @@ if(!deactivate){
 					}
 				
 					if(obj.y > y){
-						hsp *= bomb_map[? BOMB_MAP.FRICTION];
-						vsp *= bomb_map[? BOMB_MAP.BOUNCE];
+						hsp *= owner.time_dialation*bomb_map[? BOMB_MAP.FRICTION];
+						vsp *= owner.time_dialation*bomb_map[? BOMB_MAP.BOUNCE];
 					
 						if((abs(hsp) > 1 || abs(vsp) > 1) && bomb_map[? BOMB_MAP.PARTICLE_WALL])
 							scSpawnParticle(x, y, 3, 3, spDebris, WORLDPART_TYPE.DEBRIS);
@@ -149,14 +152,14 @@ if(!deactivate){
 
 if (!deactivate && bomb_map[? BOMB_MAP.PARTICLE] != noone) {
 	
-	if(!hitWall)
-		color_overlay = c_orange;
-	else
-		color_overlay = c_white;
+	//if(!hitWall)
+	//	color_overlay = c_orange;
+	//else
+	//	color_overlay = c_white;
 		
 	part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? bomb_map[? BOMB_MAP.PARTICLE]], bomb_map[? BOMB_MAP.PARTICLE_AMT]);
 	
-	timer++;
+	timer+=owner.time_dialation;
 	
 	if(timer > bomb_map[?BOMB_MAP.TIMER]*0.75){
 		part_emitter_burst(global.ParticleSystem1, global.Emitter1, oParticleHandler.ds_part[? PARTICLES.SMOKE2], 2);
@@ -174,8 +177,8 @@ if (!deactivate && bomb_map[? BOMB_MAP.PARTICLE] != noone) {
 
 if (_advance) {
 	if(stuckTo == noone){
-		x += hsp;
-		y += vsp;
+		x += hsp*owner.time_dialation;
+		y += vsp*owner.time_dialation;
 	}
 	else if(instance_exists(stuckTo)){
 		x = stuckTo.x;
